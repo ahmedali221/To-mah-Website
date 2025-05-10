@@ -9,7 +9,7 @@ const Contact = () => {
 					<div className="flex flex-col items-center w-full">
 						<div className="h-[600px] w-4/5 overflow-hidden">
 							<img
-								src="https://rolanda.qodeinteractive.com/wp-content/uploads/2024/08/main-home-img-4.jpg"
+								src="https://tomah.sa/uploads/products/8.jpg"
 								alt="Location"
 								className="attachment-full size-full w-full h-full object-cover"
 								style={{ borderRadius: "50em 50em 0 0" }}
@@ -56,7 +56,7 @@ const Contact = () => {
 					<div className="flex flex-col items-center w-full">
 						<div className="h-[600px] w-4/5 overflow-hidden">
 							<img
-								src="https://rolanda.qodeinteractive.com/wp-content/uploads/2024/10/contact-img-1.jpg"
+								src="https://tomah.sa/uploads/products/9.jpg"
 								alt="Restaurant"
 								className="attachment-full size-full w-full h-full object-cover"
 								style={{ borderRadius: "50em 50em" }}
@@ -95,8 +95,7 @@ const Contact = () => {
 						style={{ border: 0, margin: 0, padding: 0 }}
 						allowFullScreen=""
 						loading="lazy"
-						referrerPolicy="no-referrer-when-downgrade"
-					></iframe>
+						referrerPolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 			</div>
 		</div>
