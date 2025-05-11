@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Shakshuka",
+    "desc": "Eggs poached in a spicy tomato and pepper sauce, served with fresh bread.",
+    "image": "/assets/menu/shakshuka.jpg",
+    "category": "breakfast",
+    "calories": 350
+  },
+  {
+    "name": "Foul Mudammas",
+    "desc": "Stewed fava beans with olive oil, lemon, and spices. Served with pita.",
+    "image": "/assets/menu/foul.jpg",
+    "category": "breakfast",
+    "calories": 280
+  },
+  {
+    "name": "Chicken Kabsa",
+    "desc": "Traditional Saudi rice dish with spiced chicken, vegetables, and nuts.",
+    "image": "/assets/menu/kabsa.jpg",
+    "category": "lunch",
+    "calories": 650
+  },
+  {
+    "name": "Lamb Mandi",
+    "desc": "Tender lamb cooked with fragrant rice and a blend of Arabic spices.",
+    "image": "/assets/menu/mandi.jpg",
+    "category": "dinner",
+    "calories": 720
+  },
+  {
+    "name": "Sambousek",
+    "desc": "Crispy pastry filled with spiced meat or cheese.",
+    "image": "/assets/menu/sambousek.jpg",
+    "category": "appetizers",
+    "calories": 120
+  },
+  {
+    "name": "Hummus",
+    "desc": "Creamy chickpea dip with tahini, olive oil, and lemon.",
+    "image": "/assets/menu/hummus.jpg",
+    "category": "appetizers",
+    "calories": 180
+  },
+  {
+    "name": "Kunafa",
+    "desc": "Sweet cheese pastry soaked in syrup, topped with pistachios.",
+    "image": "/assets/menu/kunafa.jpg",
+    "category": "desserts",
+    "calories": 400
+  },
+  {
+    "name": "Baklava",
+    "desc": "Layers of filo pastry, nuts, and honey syrup.",
+    "image": "/assets/menu/baklava.jpg",
+    "category": "desserts",
+    "calories": 250
+  },
+  {
+    "name": "Family Combo",
+    "desc": "Kabsa, Mandi, Sambousek, Hummus, and Kunafa. Serves 4.",
+    "image": "/assets/menu/family_combo.jpg",
+    "category": "combo",
+    "calories": 2100
+  },
+  {
+    "name": "Lunch Combo",
+    "desc": "Chicken Kabsa, Sambousek, and a soft drink.",
+    "image": "/assets/menu/lunch_combo.jpg",
+    "category": "combo",
+    "calories": 950
+  }
+]
