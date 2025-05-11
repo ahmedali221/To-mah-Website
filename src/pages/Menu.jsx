@@ -139,7 +139,58 @@ function Menu() {
             </div>
           </div>
         ))}
+
+
+        {/* test */}
+        <div className="card bg-base-100 w-65  group overflow-hidden">
+          <figure className="relative transition-transform duration-300 group-hover:scale-105">
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              alt="Shoes"
+              className="w-full  h-100"
+            />
+
+
+            <button className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+      bg-black text-white px-6 py-3  text-base w-40
+      flex items-center gap-2 
+      opacity-0 group-hover:opacity-100 
+      transition-all duration-300 z-10
+      hover:bg-gray-800 hover:text-lg" >
+              {/* <span className="hidden  group-hover:inline  transition-opacity duration-300 text-yellow">*
+              </span> */}
+              ADD TO CART
+            </button>
+          </figure>
+
+          <div className="card-body">
+            <h2 className="card-title uppercase">
+              card title
+              {/* <div className="badge badge-secondary">NEW</div> */}
+            </h2>
+
+
+            <p className="text-lg font-semibold text-black flex items-center gap-1">
+              <span className="text-lg font-semibold text-gray-500">SR.</span> 199
+            </p>
+            {/* <p>
+            A card component has a figure, a body part, and inside body there are title and actions parts
+          </p> */}
+            {/* <div className="card-actions justify-end">
+              <div className="badge badge-outline">Fashion</div>
+              <div className="badge badge-outline">Products</div>
+            </div> */}
+          </div>
+        </div>
+
+
+        
       </div>
+
+
+
+
+
 
       {/* Toast Notification */}
       <div
