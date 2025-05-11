@@ -1,88 +1,62 @@
-import { Link } from 'react-router-dom';
+import logo from '../assets/logo.webp';
 
 function Footer() {
   return (
-  <>
-  <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
-  <nav>
-    <h6 className="footer-title">Services</h6>
-    <a className="link link-hover">Branding</a>
-    <a className="link link-hover">Design</a>
-    <a className="link link-hover">Marketing</a>
-    <a className="link link-hover">Advertisement</a>
-  </nav>
-  <nav>
-    <h6 className="footer-title">Company</h6>
-    <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
-    <a className="link link-hover">Jobs</a>
-    <a className="link link-hover">Press kit</a>
-  </nav>
-  <nav>
-    <h6 className="footer-title">Legal</h6>
-    <a className="link link-hover">Terms of use</a>
-    <a className="link link-hover">Privacy policy</a>
-    <a className="link link-hover">Cookie policy</a>
-  </nav>
-</footer>
-<footer className="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">
-  <aside className="grid-flow-col items-center">
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      fillRule="evenodd"
-      clipRule="evenodd"
-      className="fill-current">
-      <path
-        d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
-    </svg>
-    <p>
-      ACME Industries Ltd.
-      <br />
-      Providing reliable tech since 1992
-    </p>
-  </aside>
-  <nav className="md:place-self-center md:justify-self-end">
-    <div className="grid grid-flow-col gap-4">
-      <a>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          className="fill-current">
-          <path
-            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-        </svg>
-      </a>
-      <a>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          className="fill-current">
-          <path
-            d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-        </svg>
-      </a>
-      <a>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          className="fill-current">
-          <path
-            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-        </svg>
-      </a>
-    </div>
-  </nav>
-</footer>
-  </>
+    <>
+      <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+        <nav>
+          <h6 className="footer-title">Services</h6>
+          <a className="link link-hover">Branding</a>
+          <a className="link link-hover">Design</a>
+          <a className="link link-hover">Marketing</a>
+          <a className="link link-hover">Advertisement</a>
+        </nav>
+        <nav>
+          <h6 className="footer-title">Company</h6>
+          <a className="link link-hover" href="https://www.tripadvisor.com/Restaurant_Review-g298551-d28445172-Reviews-To_mah_Restaurant-Medina_Al_Madinah_Province.html" target="_blank" rel="noopener noreferrer">TripAdvisor</a>
+          <a className="link link-hover" href="https://www.youtube.com/channel/UCLXAOmq4QkfUtHgD6dV_ryA" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a className="link link-hover" href="https://www.google.com/maps/place/%D8%B7%D9%8C%D8%B9%D9%85%D8%A9%E2%80%AD/@24.4402965,39.6629878,17z/data=!3m1!4b1!4m6!3m5!1s0x15bd95535e8cfba3:0x6c20f3e111d4579b!8m2!3d24.4402965!4d39.6629878!16s%2Fg%2F11ln_x5kwh?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Google Maps</a>
+          <a className="link link-hover" href="https://linktr.ee/Tomah.sa?ltsid=ff5d7851-1331-4983-a8a8-66214bceee5f" target="_blank" rel="noopener noreferrer">Official Linktree</a>
+        </nav>
+        <nav>
+          <h6 className="footer-title">Legal</h6>
+          <a className="link link-hover">Terms of use</a>
+          <a className="link link-hover">Privacy policy</a>
+          <a className="link link-hover">Cookie policy</a>
+        </nav>
+      </footer>
+      <footer className="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">
+        <aside className="grid-flow-col items-center">
+          <img src={logo} alt="To'mah Logo" className="w-10 h-10 rounded-full mr-2" />
+          <p>
+            To'mah Restaurant<br />
+            Authentic Hejazi Cuisine
+          </p>
+        </aside>
+        <nav className="md:place-self-center md:justify-self-end">
+          <div className="grid grid-flow-col gap-4">
+            <a href="https://www.instagram.com/tomah.sa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="fill-current"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.34 3.608 1.314.974.974 1.252 2.241 1.314 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.34 2.633-1.314 3.608-.974.974-2.241 1.252-3.608 1.314-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.34-3.608-1.314-.974-.974-1.252-2.241-1.314-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.34-2.633 1.314-3.608C4.521 2.573 5.788 2.295 7.154 2.233 8.42 2.175 8.8 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.131 4.659.414 3.678 1.395 2.697 2.376 2.414 3.488 2.355 4.769 2.297 6.049 2.284 6.459 2.284 12s.013 5.951.071 7.231c.059 1.281.342 2.393 1.323 3.374.981.981 2.093 1.264 3.374 1.323C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.281-.059 2.393-.342 3.374-1.323.981-.981 1.264-2.093 1.323-3.374.058-1.28.071-1.69.071-7.231s-.013-5.951-.071-7.231c-.059-1.281-.342-2.393-1.323-3.374-.981-.981-2.093-1.264-3.374-1.323C15.668.013 15.259 0 12 0z"/><path d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@tomah_sa" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="fill-current"><path d="M12.004 2.003c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zm2.5 13.5c0 1.38-1.12 2.5-2.5 2.5s-2.5-1.12-2.5-2.5c0-1.38 1.12-2.5 2.5-2.5.276 0 .5-.224.5-.5v-4c0-.276-.224-.5-.5-.5s-.5.224-.5.5v3.535c-1.14.232-2 1.242-2 2.465 0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5c0-.276-.224-.5-.5-.5s-.5.224-.5.5z"/></svg>
+            </a>
+            <a href="https://www.snapchat.com/add/tomah.sa" target="_blank" rel="noopener noreferrer" aria-label="Snapchat">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="fill-current"><path d="M12 2C6.477 2 2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10c0-5.523-4.477-10-10-10zm0 18c-4.411 0-8-3.589-8-8 0-4.411 3.589-8 8-8s8 3.589 8 8c0 4.411-3.589 8-8 8zm3.293-6.707a1 1 0 0 0-1.414 0l-.293.293V13a1 1 0 1 0-2 0v.586l-.293-.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l2-2a1 1 0 0 0 0-1.414zm-6.586 0a1 1 0 0 0 0 1.414l2 2a1 1 0 0 0 1.414 0l2-2a1 1 0 0 0-1.414-1.414l-.293.293V13a1 1 0 1 0-2 0v.586l-.293-.293a1 1 0 0 0-1.414 0z"/></svg>
+            </a>
+            <a href="https://x.com/Tomah_sa" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="fill-current"><path d="M22.46 5.924c-.793.352-1.644.59-2.538.697a4.48 4.48 0 0 0 1.963-2.475 8.94 8.94 0 0 1-2.828 1.082 4.48 4.48 0 0 0-7.636 4.086A12.72 12.72 0 0 1 3.11 4.868a4.48 4.48 0 0 0 1.388 5.973 4.47 4.47 0 0 1-2.03-.561v.057a4.48 4.48 0 0 0 3.594 4.393 4.48 4.48 0 0 1-2.025.077 4.48 4.48 0 0 0 4.18 3.11A8.98 8.98 0 0 1 2 19.54a12.72 12.72 0 0 0 6.88 2.017c8.26 0 12.78-6.84 12.78-12.78 0-.195-.004-.39-.013-.583A9.14 9.14 0 0 0 24 4.59a8.94 8.94 0 0 1-2.54.697z"/></svg>
+            </a>
+            <a href="https://web.facebook.com/profile.php?id=61563929756017&_rdc=1&_rdr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="fill-current"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.326 24H12.82v-9.294H9.692v-3.622h3.127V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/></svg>
+            </a>
+            <a href="https://linktr.ee/Tomah.sa?ltsid=ff5d7851-1331-4983-a8a8-66214bceee5f" target="_blank" rel="noopener noreferrer" aria-label="Linktree">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="fill-current"><path d="M12 2C6.477 2 2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10c0-5.523-4.477-10-10-10zm0 18c-4.411 0-8-3.589-8-8 0-4.411 3.589-8 8-8s8 3.589 8 8c0 4.411-3.589 8-8 8zm1-13h-2v6h2V7zm0 8h-2v2h2v-2z"/></svg>
+            </a>
+          </div>
+        </nav>
+      </footer>
+    </>
   );
 }
 

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ShoppingCartIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useCart } from '../context/CartContext';
 import { useTheme } from '../context/ThemeContext';
+import logo from '../assets/logo.webp'; // Replace with your actual log
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +17,16 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-primary">To'mah</Link>
+            <div className="avatar mr-2">
+              <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <img
+                  src={logo}
+                  alt="Logo"
+                />
+              </div>
+            </div>
+            <Link to="/" className="text-2xl font-bold ">To'mah - طُعمة
+</Link>
           </div>
 
           {/* Desktop Navigation */}

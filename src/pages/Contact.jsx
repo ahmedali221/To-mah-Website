@@ -88,12 +88,12 @@ const Contact = () => {
 					</div>
 				</div>
 
-				<div className="w-screen relative -mx-4 lg:-mx-8">
+				<div className="w-full relative mt-8">
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d907.8191101387397!2d39.66079837538592!3d24.440296477707634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bd95535e8cfba3%3A0x6c20f3e111d4579b!2z2LfZjdi52YXYqQ!5e0!3m2!1sar!2ssa!4v1704899987654!5m2!1sar!2ssa"
-						className="w-full h-[400px] rounded-3xl overflow-hidden"
+						className="w-full h-[600px] rounded-3xl overflow-hidden"
 						style={{ border: 0, margin: 0, padding: 0 }}
-						allowFullScreen=""
+						allowFullScreen="true"
 						loading="lazy"
 						referrerPolicy="no-referrer-when-downgrade"></iframe>
 				</div>

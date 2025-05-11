@@ -10,7 +10,7 @@ import Contact from './pages/Contact';
 import Menu from './pages/Menu';
 import Cart from './pages/Cart';
 import { CartProvider } from './context/CartContext';
-import { ThemeProvider, useTheme } from './context/ThemeContext';
+import { ThemeProvider } from './context/ThemeContext';
 
 
 
