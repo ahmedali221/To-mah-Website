@@ -38,7 +38,7 @@ function Home() {
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold">Welcome to To'mah</h1>
             <p className="mb-5">Experience the finest dining with our carefully crafted dishes and exceptional service.</p>
-            <Link to="/menu" className="btn btn-primary">View Menu</Link>
+            <Link to="/menu" className="btn ">View Menu</Link>
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@ function Home() {
                 <p>{dish.description}</p>
                 <div className="card-actions justify-between items-center mt-4">
                   <span className="text-lg font-semibold">${dish.price}</span>
-                  <Link to="/menu" className="btn btn-primary btn-sm">Order Now</Link>
+                  <Link to="/menu" className="btn  btn-sm">Order Now</Link>
                 </div>
               </div>
             </div>
@@ -88,7 +88,7 @@ function Home() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
               <p className="mb-6">Discover the perfect blend of tradition and innovation at To'mah. Our passionate chefs create memorable dining experiences with the finest ingredients and authentic recipes.</p>
-              <Link to="/about" className="btn btn-primary">Learn More</Link>
+              <Link to="/about" className="btn ">Learn More</Link>
             </div>
             <div className="aspect-w-16 aspect-h-9">
               <img
