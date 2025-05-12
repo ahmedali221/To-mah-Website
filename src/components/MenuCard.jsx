@@ -28,8 +28,6 @@ export default function MenuCard({
             );
         });
 
-
-
         if (filters.sortBy) {
             filtered.sort((a, b) => {
                 if (filters.sortBy === 'price-asc') return a.price - b.price;
@@ -44,7 +42,7 @@ export default function MenuCard({
         setCurrentPage(1);
     }, [filters, setCurrentPage, searchQuery]);
 
-    const itemsPerPage = 9;
+    const itemsPerPage = 6; // Reduced from 9 to show fewer items per page since new layout takes more vertical space
     const startIndex = (currentPage - 1) * itemsPerPage;
     const paginatedProducts = filteredProducts.slice(startIndex, startIndex + itemsPerPage);
     const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
@@ -54,15 +52,11 @@ export default function MenuCard({
     };
 
     return (
-        <main className="w-full  mx-auto
-               sm:w-11/12 sm:p-6
-               md:w-5/6 md:p-8
-               lg:w-4/5 lg:p-10
-               xl:w-3/4 xl:p-12
-               2xl:w-2/3 2xl:p-14">
-            <div className="flex justify-between items-center mb-4">
-
-                <p className="text-lg text-gray-600">Showing {startIndex + 1}-{Math.min(startIndex + itemsPerPage, filteredProducts.length)} of {filteredProducts.length} results</p>
+        <main className="w-full mx-auto px-4">
+            <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
+                <p className="text-lg text-gray-600 mb-3 sm:mb-0">
+                    Showing {startIndex + 1}-{Math.min(startIndex + itemsPerPage, filteredProducts.length)} of {filteredProducts.length} results
+                </p>
                 <div className="relative">
                     <select
                         value={filters.sortBy}
@@ -82,64 +76,105 @@ export default function MenuCard({
             </div>
 
             {paginatedProducts.length === 0 ? (
-                <p>No products found.</p>
+                <div className="text-center py-10">
+                    <p className="text-xl text-gray-600">No products found.</p>
+                </div>
             ) : (
-                <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 ">
+                <div className="space-y-6">
                     {paginatedProducts.map(product => (
-                        <li key={product.id}>
-                            <div className="card bg-base-100 group overflow-hidden">
-                                <figure className="relative transition-transform duration-300 group-hover:scale-105">
+                        <div key={product.id} className="card bg-base-100 shadow-md overflow-hidden group">
+                            <div className="grid grid-cols-1 md:grid-cols-2">
+                                {/* Image section (left side) */}
+                                <div className="relative overflow-hidden h-64 md:h-full">
                                     <img
                                         src={product.image}
                                         alt={product.name_en}
-                                        className="w-90 h-90 object-cover"
+                                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer"
                                         onClick={() => onViewDetails(product)}
                                     />
-                                    <button
-                                        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-                                            bg-black text-white px-6 py-3 text-base w-40
-                                            flex items-center justify-center gap-2
-                                            opacity-0 group-hover:opacity-100
-                                            transition-all duration-300 z-10
-                                            hover:bg-gray-800 hover:text-lg"
-                                        onClick={() => onAddToCart(product)}
-                                    >
-                                        ADD TO CART
-                                    </button>
-                                </figure>
-                                <div className="card-body p-4">
-                                    <h2 className="card-title uppercase text-lg font-semibold">
+                                    <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                                        <button
+                                            className="bg-black text-white px-6 py-3 text-base
+                                                  flex items-center justify-center gap-2
+                                                  transform translate-y-4 group-hover:translate-y-0
+                                                  transition-all duration-300 z-10
+                                                  hover:bg-gray-800"
+                                            onClick={() => onAddToCart(product)}
+                                        >
+                                            ADD TO CART
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                {/* Content section (right side) */}
+                                <div className="p-6 flex flex-col justify-center">
+                                    <h2 className="card-title uppercase text-xl font-semibold mb-2">
                                         {product.name_en}
                                     </h2>
-                                    <h3 className="card-title  text-lg font-semibold">
+                                    <h3 className="text-lg font-medium text-gray-700 mb-4">
                                         {product.desc_en}
                                     </h3>
-                                    <p className="text-lg font-semibold text-black flex items-center gap-1">
-                                        <span className="text-lg font-semibold text-gray-500">SR.</span> {product.price}
+                                    <div className="flex items-center mb-4">
+                                        <div className="flex items-center">
+                                            {Array.from({ length: 5 }).map((_, i) => (
+                                                <svg 
+                                                    key={i}
+                                                    className={`w-5 h-5 ${i < product.rating ? 'text-yellow-400' : 'text-gray-300'}`}
+                                                    xmlns="http://www.w3.org/2000/svg" 
+                                                    viewBox="0 0 20 20" 
+                                                    fill="currentColor"
+                                                >
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                            ))}
+                                        </div>
+                                        <span className="ml-2 text-gray-600">({product.rating})</span>
+                                    </div>
+                                    <p className="text-2xl font-bold text-black flex items-center gap-1 mb-4">
+                                        <span className="text-lg font-semibold text-gray-500">SR.</span> {product.price.toFixed(2)}
                                     </p>
-                                    {/* you can add more details here*/}
+                                    {product.available ? (
+                                        <span className="text-green-600 font-medium mb-4">Available</span>
+                                    ) : (
+                                        <span className="text-red-600 font-medium mb-4">Unavailable</span>
+                                    )}
+                                    <div className="flex space-x-4 mt-2">
+                                        <button
+                                            onClick={() => onViewDetails(product)}
+                                            className="px-4 py-2 border border-black text-black hover:bg-black hover:text-white transition-colors duration-300"
+                                        >
+                                            View Details
+                                        </button>
+                                        <button
+                                            onClick={() => onAddToCart(product)}
+                                            className="px-4 py-2 bg-black text-white hover:bg-gray-800 transition-colors duration-300"
+                                            disabled={!product.available}
+                                        >
+                                            Add to Cart
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                        </li>
+                        </div>
                     ))}
-                </ul>
+                </div>
             )}
 
-            <div className="mt-6 flex justify-center items-center space-x-4">
+            <div className="mt-10 mb-6 flex justify-center items-center space-x-4">
                 <button
                     onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                     disabled={currentPage === 1}
-                    className="px-3 py-1 bg-gray-200 rounded disabled:opacity-50"
+                    className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition-colors"
                 >
-                    Prev
+                    Previous
                 </button>
 
-                <span>Page {currentPage} of {totalPages}</span>
+                <span className="text-lg">Page {currentPage} of {totalPages}</span>
 
                 <button
                     onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
-                    disabled={currentPage === totalPages}
-                    className="px-3 py-1 bg-gray-200 rounded disabled:opacity-50"
+                    disabled={currentPage === totalPages || totalPages === 0}
+                    className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition-colors"
                 >
                     Next
                 </button>

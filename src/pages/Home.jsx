@@ -3,11 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import productsData from '../service/data';
 import image from '../assets/AboutImages/image.png';
+
 function Home() {
-  // const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
 
-  // Function to get random meals
   const getRandomMeals = (num) => {
     const shuffled = [...productsData].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, num);
@@ -17,6 +16,7 @@ function Home() {
 
   return (
     <div>
+      {/* Hero Banner */}
       <div
         className="hero min-h-[90vh] animate-fade-in"
         style={{
@@ -33,21 +33,6 @@ function Home() {
           </div>
         </div>
       </div>
-      {/* Search Section */}
-      {/* <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-        <div className="relative max-w-xl mx-auto">
-          <div className="flex items-center border rounded-lg p-2 bg-base-200">
-            <MagnifyingGlassIcon className="h-5 w-5 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search our menu..."
-              className="ml-2 w-full bg-transparent border-none focus:outline-none"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </div>
-        </div>
-      </div> */}
 
       {/* Featured Dishes */}
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 animate-slide-up">
@@ -73,6 +58,23 @@ function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Customer Testimonials */}
+      <div className="bg-gray-100 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12">Customer Testimonials</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <p className="text-lg italic">"The food was absolutely wonderful, from preparation to presentation, very pleasing."</p>
+              <p className="mt-4 text-right font-bold">- John Doe</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <p className="text-lg italic">"The ambiance and service were exceptional. Highly recommend this restaurant!"</p>
+              <p className="mt-4 text-right font-bold">- Jane Smith</p>
+            </div>
+          </div>
         </div>
       </div>
 
