@@ -1,0 +1,25 @@
+---
+ID: 15
+Name (AR): توتوه كريم الكراميل
+Name (EN): Cream Caramel
+Description (AR): كريم كراميل مطبوخ في الفرن وتقدم باردة بصوص السكر المكرمل.
+Description (EN): Oven baked cream caramel, served cold with caramelized sugar sauce.
+Category (AR): حلويات
+Category (EN): desserts
+Calories: 403
+Price: 20
+Rating: // القيمة غير واضحة في الصورة
+Available: true // نفترض إنه متوفر
+Trendy: false // يعتبر حلوى تقليدية
+Prep Time (AR): // يعتمد على الوصفة
+Prep Time (EN): // Depends on the recipe
+Cook Time (AR): // يعتمد على الوصفة (خبز في الفرن)
+Cook Time (EN): // Depends on the recipe (baking in oven)
+Difficulty (AR): متوسط
+Difficulty (EN): medium
+Ingredients (AR): حليب, كريمة, سكر, بيض, فانيليا
+Ingredients (EN): milk, cream, sugar, eggs, vanilla
+Servings: 1
+Notes (AR): تقدم باردة.
+Notes (EN): Served cold.
+---

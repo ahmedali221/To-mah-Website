@@ -1,0 +1,25 @@
+---
+ID: 10
+Name (AR): بيض مقلي
+Name (EN): Fried Eggs
+Description (AR): بيض الطيبين.
+Description (EN): For the good ones.
+Category (AR): فطار
+Category (EN): breakfast
+Calories: // القيمة غير واضحة في الصورة (تعتمد على عدد البيض والزيت)
+Price: 17
+Rating: // القيمة غير واضحة في الصورة
+Available: true // نفترض إنه متوفر
+Trendy: false // يعتبر طبق فطار أساسي
+Prep Time (AR): 2 دقائق
+Prep Time (EN): 2 minutes
+Cook Time (AR): 5 دقائق
+Cook Time (EN): 5 minutes
+Difficulty (AR): سهل
+Difficulty (EN): easy
+Ingredients (AR): بيض, زيت/زبدة, ملح, فلفل, بقدونس/كزبرة (للتزيين)
+Ingredients (EN): eggs, oil/butter, salt, pepper, parsley/coriander (for garnish)
+Servings: 1
+Notes (AR): طبق فطار بسيط ولذيذ.
+Notes (EN): Simple and delicious breakfast dish.
+---

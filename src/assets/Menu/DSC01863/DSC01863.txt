@@ -1,0 +1,25 @@
+---
+ID: 22
+Name (AR): سمبوسك مثلث اللحم
+Name (EN): Triangular Meat Samosa
+Description (AR): ٤ قطع مثلث لحم محشوة باللحم والبيض بالخلطة المدينية.
+Description (EN): 4 triangular pieces of meat stuffed with meat and eggs in the Madini mixture.
+Category (AR): مقبلات, معجنات
+Category (EN): appetizers, pastries
+Calories: 355
+Price: 15
+Rating: // القيمة غير واضحة في الصورة
+Available: true // نفترض إنه متوفر
+Trendy: false // تعتبر من المقبلات التقليدية
+Prep Time (AR): 20 دقيقة
+Prep Time (EN): 20 minutes
+Cook Time (AR): 20 دقيقة (قلي أو خبز)
+Cook Time (EN): 20 minutes (frying or baking)
+Difficulty (AR): متوسط
+Difficulty (EN): medium
+Ingredients (AR): عجينة سمبوسك, لحم مفروم, بيض, بصل, بهارات مدينية, زيت للقلي/للخبز, طماطم (في الصلصة), فلفل (في الصلصة)
+Ingredients (EN): sambousek pastry, minced meat, eggs, onion, Madini spices, oil for frying/baking, tomatoes (in sauce), peppers (in sauce)
+Servings: 1 (4 قطع)
+Notes (AR): سمبوسك بالخلطة المدينية المميزة.
+Notes (EN): Samosa with a special Madini mixture.
+---

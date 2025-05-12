@@ -1,0 +1,25 @@
+---
+ID: 18
+Name (AR): أم علي
+Name (EN): Um Ali
+Description (AR): حلو الرقاق بالحليب مع المكسرات المحمصة وتقدم على طاولة ساخنة.
+Description (EN): Desert made of roqaq with milk and roasted nuts served hot.
+Category (AR): حلويات
+Category (EN): desserts
+Calories: 873
+Price: 20
+Rating: // القيمة غير واضحة في الصورة
+Available: true // نفترض إنه متوفر
+Trendy: true // تعتبر من الحلويات الشرقية المشهورة
+Prep Time (AR): // يعتمد على التحضير
+Prep Time (EN): // Depends on preparation
+Cook Time (AR): // يعتمد على الخبز في الفرن
+Cook Time (EN): // Depends on baking in the oven
+Difficulty (AR): متوسط
+Difficulty (EN): medium
+Ingredients (AR): رقاق, حليب, قشطة, سكر, مكسرات مشكلة (لوز, فستق, زبيب), جوز هند (محتمل), فانيليا (محتمل)
+Ingredients (EN): roqaq, milk, cream, sugar, mixed nuts (almonds, pistachios, raisins), coconut (likely), vanilla (likely)
+Servings: 1
+Notes (AR): تقدم ساخنة.
+Notes (EN): Served hot.
+---

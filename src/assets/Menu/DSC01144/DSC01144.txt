@@ -1,0 +1,25 @@
+---
+ID: 12
+Name (AR): كبدة سوق الطباخة
+Name (EN): Cook's Market Liver
+Description (AR): كبدة مشوحة بالخضار على نار عالية وتقدم بخبز أسمر وقطع الليمون والطحينة.
+Description (EN): Liver fried with vegetables over high heat, served with whole-grain bread, lemon wedges, and tahini.
+Category (AR): فطار, أطباق رئيسية
+Category (EN): breakfast, main dishes
+Calories: // القيمة غير واضحة في الصورة (تعتمد على الكمية والمكونات)
+Price: 30
+Rating: // القيمة غير واضحة في الصورة
+Available: true // نفترض إنه متوفر
+Trendy: true // تعتبر من الأطباق الشعبية
+Prep Time (AR): 10 دقائق
+Prep Time (EN): 10 minutes
+Cook Time (AR): 15 دقائق
+Cook Time (EN): 15 minutes
+Difficulty (AR): سهل
+Difficulty (EN): easy
+Ingredients (AR): كبدة, بصل, فلفل, طماطم, زيت, بهارات, خبز أسمر, ليمون, طحينة
+Ingredients (EN): liver, onions, peppers, tomatoes, oil, spices, whole-grain bread, lemon, tahini
+Servings: 1
+Notes (AR): تقدم ساخنة مع الخبز والليمون والطحينة.
+Notes (EN): Served hot with bread, lemon, and tahini.
+---

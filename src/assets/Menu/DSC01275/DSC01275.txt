@@ -1,0 +1,25 @@
+---
+ID: 13
+Name (AR): عيش حب
+Name (EN): Whole Grain Bread
+Description (AR): خبز مصنوع من الحبوب الكاملة.
+Description (EN): Bread made from whole grains.
+Category (AR): مخبوزات
+Category (EN): bakery
+Calories: // القيمة غير واضحة في الصورة (تختلف حسب الحجم والنوع)
+Price: 5
+Rating: // القيمة غير واضحة في الصورة
+Available: true // نفترض إنه متوفر
+Trendy: false // يعتبر أساسي مش تريندي
+Prep Time (AR): 0 // جاهز للأكل
+Prep Time (EN): 0
+Cook Time (AR): // تم خبزه بالفعل
+Cook Time (EN): // Already baked
+Difficulty (AR): سهل
+Difficulty (EN): easy
+Ingredients (AR): دقيق حبوب كاملة, ماء, خميرة, ملح (محتمل)
+Ingredients (EN): whole grain flour, water, yeast, salt (likely)
+Servings: // يعتمد على عدد الأرغفة
+Notes (AR): خبز صحي ومغذي.
+Notes (EN): Healthy and nutritious bread.
+---

@@ -1,0 +1,25 @@
+---
+ID: 6
+Name (AR): جبنة صفراء بالباذنجان
+Name (EN): Yellow Cheese with Eggplant
+Description (AR): خليط الجبنة التشيدر والباذنجان المقلي بصوص لا يقاوم.
+Description (EN): A blend of cheddar cheese and fried eggplant with an irresistible sauce.
+Category (AR): مقبلات
+Category (EN): appetizers
+Calories: 110
+Price: 20
+Rating: // القيمة غير واضحة في الصورة
+Available: true // نفترض إنه متوفر
+Trendy: false // ممكن يكون طبق جانبي عادي
+Prep Time (AR): // يعتمد على التجهيز والقلي
+Prep Time (EN): // Depends on preparation and frying
+Cook Time (AR): // قلي الباذنجان
+Cook Time (EN): // Frying the eggplant
+Difficulty (AR): سهل إلى متوسط
+Difficulty (EN): easy to medium
+Ingredients (AR): جبنة تشيدر, باذنجان, زيت للقلي, صوص (محتمل: بقدونس, نعناع, ثوم, زيت زيتون, فلفل أحمر)
+Ingredients (EN): cheddar cheese, eggplant, oil for frying, sauce (likely: parsley, mint, garlic, olive oil, red pepper)
+Servings: 1
+Notes (AR): يقدم كطبق جانبي أو مقبلات.
+Notes (EN): Served as a side dish or appetizer.
+---

@@ -1,0 +1,25 @@
+---
+ID: 17
+Name (AR): طرمبة
+Name (EN): Tarmbeh
+Description (AR): طرمبة أو بلح الشام بالآيس كريم والشوكولاتة والفستق.
+Description (EN): Tarmbeh or Balah Al-Sham with ice cream, chocolate and pistachios.
+Category (AR): حلويات
+Category (EN): desserts
+Calories: 455
+Price: 20
+Rating: // القيمة غير واضحة في الصورة
+Available: true // نفترض إنه متوفر
+Trendy: true // تعتبر من الحلويات الشرقية المشهورة
+Prep Time (AR): // يعتمد على التحضير
+Prep Time (EN): // Depends on preparation
+Cook Time (AR): // قلي
+Cook Time (EN): // Frying
+Difficulty (AR): متوسط
+Difficulty (EN): medium
+Ingredients (AR): دقيق, نشا, بيض, زيت, شيرة, آيس كريم, شوكولاتة, فستق حلبي
+Ingredients (EN): flour, starch, eggs, oil, syrup, ice cream, chocolate, pistachios
+Servings: 1
+Notes (AR): تقدم مع الآيس كريم والشوكولاتة والفستق.
+Notes (EN): Served with ice cream, chocolate, and pistachios.
+---

@@ -1,0 +1,25 @@
+---
+ID: 4
+Name (AR): عسل وقشطة
+Name (EN): Honey and clotted cream
+Description (AR): خلطة العسل والقشطة ورشة الفستق.
+Description (EN): Qeshta and honey mix with pistachio.
+Category (AR): فطار, حلويات
+Category (EN): breakfast, desserts
+Calories: 328
+Price: 17
+Rating: // القيمة غير واضحة في الصورة
+Available: true // نفترض إنه متوفر
+Trendy: false // يعتبر طبق تقليدي
+Prep Time (AR): 5 دقائق // تحضير بسيط
+Prep Time (EN): 5 minutes
+Cook Time (AR): 0 // لا تحتاج طهي
+Cook Time (EN): 0
+Difficulty (AR): سهل
+Difficulty (EN): easy
+Ingredients (AR): قشطة بلدي, عسل, فستق حلبي
+Ingredients (EN): clotted cream (qeshta), honey, pistachios
+Servings: 1
+Notes (AR): تقدم كوجبة فطار أو حلوى خفيفة.
+Notes (EN): Served as a breakfast dish or light dessert.
+---
