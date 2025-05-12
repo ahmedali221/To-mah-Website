@@ -1,0 +1,13 @@
+{
+	"welcome": "Welcome to To'mah Restaurant",
+	"description": "Explore our delicious menu and enjoy a great dining experience",
+	"navbar": {
+        "brand":"To'mah",
+		"home": "Home",
+		"about": "About",
+		"partners": "Partners",
+		"contact": "Contact",
+		"menu": "Menu",
+		"cart": "Cart"
+	}
+}

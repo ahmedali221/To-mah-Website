@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useCart } from '../context/CartContext';
+import { useNavigate } from 'react-router-dom';
 
 function Cart() {
   const { cartItems, removeFromCart, updateQuantity, clearCart, getCartTotal } = useCart();
@@ -8,6 +9,7 @@ function Cart() {
     phone: ''
   });
   const [showCheckoutForm, setShowCheckoutForm] = useState(false);
+  const navigate = useNavigate();
 
   const handleQuantityChange = (itemId, newQuantity) => {
     if (newQuantity < 1) {
@@ -19,7 +21,6 @@ function Cart() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically integrate with a payment processor
     alert('Order placed successfully! (Demo only)');
     clearCart();
     setShowCheckoutForm(false);
@@ -100,7 +101,7 @@ function Cart() {
             <div className="card-actions justify-end mt-4">
               <button
                 className="btn btn-primary"
-                onClick={() => setShowCheckoutForm(true)}
+                onClick={() => navigate('/payment')}
               >
                 Proceed to Checkout
               </button>
