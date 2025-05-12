@@ -14,9 +14,44 @@ import logo from "../assets/logo.webp";
 function Navbar({ changeLanguage }) {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const { cartItems } = useCart();
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
 
 	const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+
+	const LanguageToggle = ({ isMobile = false }) => {
+		const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
+
+		const handleLanguageChange = (lang) => {
+			changeLanguage(lang);
+			setCurrentLanguage(lang);
+			if (isMobile) {
+				setIsMenuOpen(false);
+			}
+		};
+
+		const buttonClasses =
+			"px-3 py-1 text-sm rounded-full shadow-md " +
+			"transition-all duration-300 ease-in-out transform " +
+			"hover:scale-105 active:scale-95 focus:outline-none";
+
+		return (
+			<div className={`flex space-x-2 ${isMobile ? "px-3 py-2" : ""}`}>
+				{currentLanguage === "en" ? (
+					<button
+						onClick={() => handleLanguageChange("ar")}
+						className={`${buttonClasses} bg-blue-500 text-white hover:bg-blue-600`}>
+						English
+					</button>
+				) : (
+					<button
+						onClick={() => handleLanguageChange("en")}
+						className={`${buttonClasses} bg-green-500 text-white hover:bg-green-600`}>
+						عربي
+					</button>
+				)}
+			</div>
+		);
+	};
 
 	return (
 		<nav className="bg-base-100 shadow-lg sticky top-0 z-50">
@@ -59,18 +94,7 @@ function Navbar({ changeLanguage }) {
 							)}
 						</Link>
 						{/* أزرار تغيير اللغة للـ Desktop */}
-						<div className="flex space-x-2">
-							<button
-								onClick={() => changeLanguage("en")}
-								className="text-sm hover:text-primary">
-								English
-							</button>
-							<button
-								onClick={() => changeLanguage("ar")}
-								className="text-sm hover:text-primary">
-								عربي
-							</button>
-						</div>
+						<LanguageToggle />
 					</div>
 
 					{/* Mobile Navigation Button */}
@@ -130,25 +154,7 @@ function Navbar({ changeLanguage }) {
 							onClick={() => setIsMenuOpen(false)}>
 							{t("navbar.contact")}
 						</Link>
-						{/* أزرار تغيير اللغة للـ Mobile */}
-						<div className="px-3 py-2 flex space-x-2">
-							<button
-								onClick={() => {
-									changeLanguage("en");
-									setIsMenuOpen(false);
-								}}
-								className="text-sm hover:text-primary">
-								English
-							</button>
-							<button
-								onClick={() => {
-									changeLanguage("ar");
-									setIsMenuOpen(false);
-								}}
-								className="text-sm hover:text-primary">
-								العربية
-							</button>
-						</div>
+						<LanguageToggle isMobile={true} />
 					</div>
 				</div>
 			)}
