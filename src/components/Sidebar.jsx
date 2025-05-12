@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import productsData from '../service/data';
 
-
 const initialFilters = {
   category: '',
   brand: '',
@@ -49,56 +48,44 @@ export default function Sidebar({ filters, setFilters }) {
 
   const handleCategoryClick = (category_en) => {
     updateFilter('category', category_en === 'All' ? '' : category_en);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handlePriceInputChange = (event) => {
     const value = parseInt(event.target.value, 10);
     const type = event.target.name;
-    setPriceRange(prevRange => ({ ...prevRange, [type]: value }));
-
+    setPriceRange((prevRange) => ({ ...prevRange, [type]: value }));
   };
 
   const handleApplyPriceFilter = () => {
-    setFilters(prevFilters => ({
+    setFilters((prevFilters) => ({
       ...prevFilters,
       minPrice: priceRange.min,
       maxPrice: priceRange.max,
     }));
-    // show the reset button when action done to the price slider
-    if (priceRange.min > 0 || priceRange.max < Infinity) {
-      setShowResetButton(true);
-    } else {
-      setShowResetButton(false);
-    }
-    console.log('Price filter applied:', priceRange.min, '-', priceRange.max);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setShowResetButton(true);
   };
 
   const handleResetFilters = () => {
     setFilters(initialFilters);
-    setPriceRange({ min: 0, max: Infinity });
+    setPriceRange({ min: minProductPrice, max: maxProductPrice });
     setShowResetButton(false);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // give the limitation's price
-  const minPrice = Math.min(...productsData.map(p => p.price));
-  const maxPrice = Math.max(...productsData.map(p => p.price));
-
   return (
-    <aside className="w-full p-5 bg-white shadow ">
-      {/*Categories section*/}
-      <div className="mb-6">
-        <h3 className="font-bold text-lg mb-3">CATEGORIES</h3>
-        <ul className="space-y-2">
+    <aside className="w-full p-6 bg-white shadow-lg rounded-lg sticky top-4">
+      {/* Categories */}
+      <div className="mb-8">
+        <h3 className="font-bold text-xl mb-4 text-gray-800 border-b pb-2">CATEGORIES</h3>
+        <ul className="space-y-3">
           {availableCategories.map((category_en, index) => (
             <li key={index}>
               <button
                 onClick={() => handleCategoryClick(category_en)}
-                className={`block text-sm cursor-pointer 
-                    ${filters.category === (category_en === 'All' ? '' : category_en) ?
-                    'text-black-500 font-bold text-2xl shadow-lg' : 'text-gray-700'}`}
+                className={`block w-full text-left px-4 py-2 rounded-lg transition-all ${
+                  filters.category === (category_en === 'All' ? '' : category_en)
+                    ? 'bg-primary text-white'
+                    : 'hover:bg-gray-100 text-gray-700'
+                }`}
               >
                 {category_en}
               </button>
@@ -130,47 +117,45 @@ export default function Sidebar({ filters, setFilters }) {
         </ul>
       </div>
 
-      {/* price filter*/}
+      {/* Price Filter */}
       <div className="mb-6">
-        <h3 className="font-bold text-lg mb-3">FILTER BY PRICE</h3>
-        <div className="mb-3">
-          <div className="flex items-center justify-between text-sm text-gray-600 mb-1">
-            <span>${minPrice}</span>
-            <span>${maxPrice}</span>
+        <h3 className="font-bold text-xl mb-4 text-gray-800 border-b pb-2">FILTER BY PRICE</h3>
+        <div className="mb-4">
+          <div className="flex items-center justify-between text-sm text-gray-600 mb-2">
+            <span>${minProductPrice}</span>
+            <span>${maxProductPrice}</span>
           </div>
           <input
             type="range"
-            className="w-full"
-            min={minPrice}
-            max={maxPrice}
-            value={priceRange.max === Infinity ? maxPrice : priceRange.max}
+            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+            min={minProductPrice}
+            max={maxProductPrice}
+            value={priceRange.max}
             name="max"
             onChange={handlePriceInputChange}
           />
-          <div className="flex items-center justify-between text-sm text-gray-600 mt-1">
-            <span>Min: ${minPrice}</span>
-            <span>Max: ${priceRange.max === Infinity ? maxPrice : priceRange.max}</span>
+          <div className="flex items-center justify-between text-sm text-gray-600 mt-2">
+            <span>Min: ${priceRange.min}</span>
+            <span>Max: ${priceRange.max}</span>
           </div>
         </div>
-        {/* apply & reset buttons*/}
-        <div className="flex space-x-2">
+        <div className="flex space-x-3">
           <button
             onClick={handleApplyPriceFilter}
-            className="bg-black text-white py-2 px-4 rounded hover:bg-gray-800 text-sm"
+            className="flex-1 bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary-dark transition font-medium"
           >
             APPLY
           </button>
           {showResetButton && (
             <button
               onClick={handleResetFilters}
-              className="bg-gray-300 text-gray-700 py-2 px-4 rounded hover:bg-gray-400 text-sm"
+              className="flex-1 bg-gray-200 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-300 transition font-medium"
             >
               RESET
             </button>
           )}
         </div>
       </div>
-
     </aside>
   );
 }

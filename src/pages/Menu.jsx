@@ -4,24 +4,16 @@ import HeroSection from '../components/HeroSection';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import productsData from '../service/data';
-import HeroSection from '../components/HeroSection';
-import productsData from '../service/data';
 
 function Menu() {
-  const minPrice = Math.min(...productsData.map(p => p.price));
-  const maxPrice = Math.max(...productsData.map(p => p.price));
-
   const [filters, setFilters] = useState({
     category: '',
     brand: '',
     available: '',
     minPrice: 0,
     maxPrice: Math.max(...productsData.map(p => p.price)),
-    minPrice: minPrice,
-    maxPrice: maxPrice,
     minRating: 0,
     search: '',
-    search: '', // 
     sortBy: '',
   });
 
