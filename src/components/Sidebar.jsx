@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import productsData from '../service/data'; // استورد بيانات المنتجات
+import productsData from '../service/data';
 
-// تعريف القيم الابتدائية للفلاتر
+
 const initialFilters = {
     category: '',
     brand: '',
