@@ -81,11 +81,10 @@ export default function Sidebar({ filters, setFilters }) {
             <li key={index}>
               <button
                 onClick={() => handleCategoryClick(category_en)}
-                className={`block w-full text-left px-4 py-2 rounded-lg transition-all ${
-                  filters.category === (category_en === 'All' ? '' : category_en)
+                className={`block w-full text-left px-4 py-2 rounded-lg transition-all ${filters.category === (category_en === 'All' ? '' : category_en)
                     ? 'bg-primary text-white'
                     : 'hover:bg-gray-100 text-gray-700'
-                }`}
+                  }`}
               >
                 {category_en}
               </button>
