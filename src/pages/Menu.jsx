@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useCart } from '../context/CartContext';
-
+import { Link } from 'react-router-dom';
 function Menu() {
   const { addToCart } = useCart();
   const [searchQuery, setSearchQuery] = useState('');
@@ -132,6 +132,12 @@ function Menu() {
                       >
                         Add to Cart
                       </button>
+                      <Link 
+                        to={`/menu/${item.id}`}
+                        state={{ meal: item }}
+                      >
+                        View Details
+                      </Link>
                     </div>
                   </div>
                 </div>

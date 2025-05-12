@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import Menu from "./pages/Menu";
 import Cart from "./pages/Cart";
 import Payment from "./pages/Payment";
+import MealDetails from "./pages/MealDetails";
 import { CartProvider } from "./context/CartContext";
 import { ThemeProvider } from "./context/ThemeContext";
 
@@ -39,6 +40,7 @@ function App() {
               <Route path="/partners" element={<Partners />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/menu" element={<Menu />} />
+              <Route path="/menu/:id" element={<MealDetails />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/payment" element={<Payment />} />
             </Routes>
