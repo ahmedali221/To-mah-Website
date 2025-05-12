@@ -30,7 +30,7 @@ function App() {
     <Router>
       <ThemeProvider>
         <CartProvider>
-          <div className="min-h-screen flex flex-col"></div>
+          <div className="flex flex-col"></div>
           <Navbar changeLanguage={changeLanguage} />
           <main className="flex-grow">
             <Routes>
