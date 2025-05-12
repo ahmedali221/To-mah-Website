@@ -48,12 +48,14 @@ export default function Sidebar({ filters, setFilters }) {
 
     const handleCategoryClick = (category_en) => {
         updateFilter('category', category_en === 'All' ? '' : category_en);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     const handlePriceInputChange = (event) => {
         const value = parseInt(event.target.value, 10);
         const type = event.target.name;
         setPriceRange(prevRange => ({ ...prevRange, [type]: value }));
+
     };
 
     const handleApplyPriceFilter = () => {
@@ -69,12 +71,14 @@ export default function Sidebar({ filters, setFilters }) {
             setShowResetButton(false);
         }
         console.log('Price filter applied:', priceRange.min, '-', priceRange.max);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     const handleResetFilters = () => {
         setFilters(initialFilters);
         setPriceRange({ min: 0, max: Infinity });
         setShowResetButton(false);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     // give the limitation's price
@@ -91,7 +95,9 @@ export default function Sidebar({ filters, setFilters }) {
                         <li key={index}>
                             <button
                                 onClick={() => handleCategoryClick(category_en)}
-                                className={`block text-sm hover:text-blue-500 cursor-pointer ${filters.category_en === (category_en === 'All' ? '' : category_en) ? 'font-semibold' : ''}`}
+                                className={`block text-sm cursor-pointer 
+                    ${filters.category === (category_en === 'All' ? '' : category_en) ?
+                                        'text-black-500 font-bold text-2xl shadow-lg' : 'text-gray-700'}`}
                             >
                                 {category_en}
                             </button>
