@@ -4,14 +4,19 @@ import HeroSection from '../components/HeroSection';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import productsData from '../service/data';
+import Sidebar from '../components/Sidebar';
 
 function Menu() {
+
+  const minPrice = Math.min(...productsData.map(p => p.price));
+  const maxPrice = Math.max(...productsData.map(p => p.price));
+
   const [filters, setFilters] = useState({
     category: '',
     brand: '',
     available: '',
-    minPrice: 0,
-    maxPrice: Math.max(...productsData.map(p => p.price)),
+    minPrice: minPrice,
+    maxPrice: maxPrice,
     minRating: 0,
     search: '',
     sortBy: '',
@@ -48,20 +53,33 @@ function Menu() {
     return matchesCategory && matchesPrice && matchesSearch;
   });
 
+  // onViewDetails = { handleViewDetails }
+  // onAddToCart = { handleAddToCart }
+  // products = { filteredProducts }
+
+
   return (
     <div className="min-h-screen">
-      <HeroSection setSearchQuery={handleSearchQueryChange} />
-      <div className="px-4 py-8">
-        <MenuCard
-          filters={filters}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-          setFilters={setFilters}
-          searchQuery={searchQuery}
-          onViewDetails={handleViewDetails}
-          onAddToCart={handleAddToCart}
-          products={filteredProducts} // Pass only filtered products
-        />
+      <HeroSection setSearchQuery={handleSearchQueryChange} /> {/* تمرير الدالة لـ HeroSection */}
+      <div className="flex flex-col md:flex-row">
+        {/* product card */}
+        <div className="flex-grow p-4 order-first md:order-none">
+          <MenuCard
+            filters={filters}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            setFilters={setFilters}
+            searchQuery={searchQuery} // تمرير قيمة البحث لـ MenuCard
+            onViewDetails={handleViewDetails}
+            onAddToCart={handleAddToCart}
+            products={filteredProducts}
+          />
+        </div>
+
+        {/* sidebar */}
+        <div className="w-full md:w-1/3 lg:w-[50%] xl:w-[50%] p-4 bg-white shadow-md">
+          <Sidebar filters={filters} setFilters={setFilters} />
+        </div>
       </div>
     </div>
   );

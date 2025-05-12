@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import productsData from '../service/data';
 
-export default function MenuCard({ 
-    filters, 
-    currentPage, 
-    setCurrentPage, 
-    setFilters, 
+export default function MenuCard({
+    filters,
+    currentPage,
+    setCurrentPage,
+    setFilters,
     searchQuery,
     onViewDetails,
     onAddToCart
@@ -21,9 +21,11 @@ export default function MenuCard({
                 product.price >= filters.minPrice &&
                 product.price <= filters.maxPrice &&
                 product.rating >= filters.minRating &&
-                product.name_en.toLowerCase().includes(searchQuery.toLowerCase()) || // البحث بالانجليزي
-                (product.name_ar && product.name_ar.toLowerCase().includes(searchQuery.toLowerCase()))) // البحث بالعربي (مع التأكد من وجود name_ar)
-
+                (
+                    product.name_en.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    (product.name_ar && product.name_ar.toLowerCase().includes(searchQuery.toLowerCase()))
+                )
+            );
         });
 
 
@@ -93,7 +95,7 @@ export default function MenuCard({
                                         className="w-90 h-90 object-cover"
                                         onClick={() => onViewDetails(product)}
                                     />
-                                    <button 
+                                    <button
                                         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
                                             bg-black text-white px-6 py-3 text-base w-40
                                             flex items-center justify-center gap-2
