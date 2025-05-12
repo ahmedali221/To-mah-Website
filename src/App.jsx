@@ -9,10 +9,9 @@ import Partners from './pages/Partners';
 import Contact from './pages/Contact';
 import Menu from './pages/Menu';
 import Cart from './pages/Cart';
+import Payment from './pages/Payment'; // Add this import
 import { CartProvider } from './context/CartContext';
 import { ThemeProvider } from './context/ThemeContext';
-
-
 
 function App() {
   return (
@@ -29,6 +28,7 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/menu" element={<Menu />} />
                 <Route path="/cart" element={<Cart />} />
+                <Route path="/payment" element={<Payment />} /> {/* Add this route */}
               </Routes>
             </main>
             <Footer />
