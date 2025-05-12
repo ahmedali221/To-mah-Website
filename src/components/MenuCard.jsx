@@ -21,9 +21,11 @@ export default function MenuCard({
                 product.price >= filters.minPrice &&
                 product.price <= filters.maxPrice &&
                 product.rating >= filters.minRating &&
-                product.name_en.toLowerCase().includes(searchQuery.toLowerCase()) || // البحث بالانجليزي
-                (product.name_ar && product.name_ar.toLowerCase().includes(searchQuery.toLowerCase()))) // البحث بالعربي (مع التأكد من وجود name_ar)
-
+                (
+                    product.name_en.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    (product.name_ar && product.name_ar.toLowerCase().includes(searchQuery.toLowerCase()))
+                )
+            );
         });
 
 
