@@ -1,13 +1,18 @@
-import React ,{useState } from "react";
+
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "./About.css";
+import { useNavigate } from "react-router-dom";
+import intro from "../assets/AboutImages/intro.mp4";
+import rev1 from '../assets/AboutImages/TripAdvisor.jpg'
+import rev2 from '../assets/AboutImages/tiktok.jpg'
+import rev3 from '../assets/AboutImages/User.jpg'
 import img1 from "/src/assets/AboutImages/img1.jpg";
 import img2 from "/src/assets/AboutImages/img2.jpg";
 import cover from "/src/assets/AboutImages/COVER.jpg";
-import ch1 from "/src/assets/AboutImages/team-img-5.jpg";
-import ch2 from "/src/assets/AboutImages/team-img-6.jpg";
 import logo from "/src/assets/AboutImages/TO'MAH.jpg";
 import loc from "/src/assets/AboutImages/restaurantt.jpg";
+import decor2 from "../assets/AboutImages/download.jpeg"
 import g1 from "/src/assets/AboutImages/G1.jpg";
 import g2 from "/src/assets/AboutImages/G2.jpg";
 import g3 from "/src/assets/AboutImages/G3.jpg";
@@ -15,29 +20,51 @@ import g4 from "/src/assets/AboutImages/G4.jpg";
 import g5 from "/src/assets/AboutImages/G5.jpg";
 import g6 from "/src/assets/AboutImages/G6.jpg";
 import g7 from "/src/assets/AboutImages/G7.jpg";
+import g8 from "/src/assets/AboutImages/G8.jpg";
+import g9 from "/src/assets/AboutImages/G9.jpg";
+import g10 from "/src/assets/AboutImages/G10.jpg";
 
 const About = () => {
-
   const [isPlaying, setIsPlaying] = useState(false);
+  const navigate = useNavigate();
+
+
+  const galleryImages = [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10];
+
 
   const testimonials = [
     {
-      img: "/src/assets/AboutImages/team-img-5.jpg",
-      text: "COMMODO DUIS DOLOR PROIN LUCTUS ELIT VEHICULA. POSUERE LEO VENENATIS MOLLIS HAC PLATEA PORTA DIS CONSEQUAT ULLAMC0RPER.",
-      name: "Cindy, Food influencer",
+      img: rev1,
+      text: "Probably the most authentic Saudi dining experience I've ever had. Everything was perfect, and the service was outstanding. A must-visit.",
+      name: "TripAdvisor Review",
     },
     {
-      img: "/src/assets/AboutImages/team-img-6.jpg",
-      text: "VIVAMUS ELEMENTUM LIGULA EU LOREM CONSECTETUR, VITAE LACINIA ANTE FACILISIS. IN EUISMOD NUNC SEM.",
-      name: "Liam, Chef",
+      img: rev2,
+      text: "The only restaurant all locals love. It’s always packed, and for a reason. The food is excellent and truly worth the hype.",
+      name: "TikTok user review",
     },
     {
-      img: "/src/assets/AboutImages/gallery-img-3.jpg",
-      text: "DUIS TRISTIQUE NULLA SIT AMET CONVALLIS TEMPOR. NAM SED ANTE QUIS VELIT PORTTITOR CONDIMENTUM.",
-      name: "Emma, Blogger",
+      img: rev1,
+      text: "Exploring a wonderful dining experience at To’mah — a beautiful blend of heritage, hospitality, and flavor.",
+      name: "Foodie TikTok video",
+    },
+    {
+      img: rev3,
+      text: "A special experience in Medina.",
+      name: "Yousef Al-Jarrah",
+    },
+    {
+      img: rev3,
+      text: "Enjoy a welcoming atmosphere that tells the stories of the Tomah family, who take pride in offering authentic flavors that reflect a deep history and a rich cultural legacy.",
+      name: "HiHome Experience",
+    },
+    {
+      img: rev3,
+      text: "Experience the rich flavors of Al Madinah at To'mah Restaurant, where every dish reflects traditional recipes and authentic Madani heritage.",
+      name: "Visit Saudi Official Website",
     },
   ];
-  
+
   const settings = {
     dots: true,
     infinite: true,
@@ -47,77 +74,79 @@ const About = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
-  }
+  };
 
   return (
     <div className="about-us-page">
       {/* OUR STORY SECTION */}
       <section className="our-story">
         <div className="story-images">
-          <img
-            src={img1}
-            alt="Dish Left"
-          />
+          <img src={img1} alt="Dish Left" />
         </div>
         <div className="story-text">
           <h2>OUR STORY</h2>
-          <p className="stars">***</p>
+          <p className="stars">*</p>
           <p>
-             flavors of traditional Hejazi cuisine in a modern and inviting setting.
-              What began as a dream to revive authentic Saudi dishes with a contemporary twist, quickly grew into a beloved destination for those seeking warmth, heritage, and exceptional taste. 
-              At To’mah, every dish tells a story — a story of home, culture, and unforgettable flavor.
+            flavors of traditional Hejazi cuisine in a modern and inviting
+            setting. What began as a dream to revive authentic Saudi dishes with
+            a contemporary twist, quickly grew into a beloved destination for
+            those seeking warmth, heritage, and exceptional taste. At To’mah,
+            every dish tells a story — a story of home, culture, and
+            unforgettable flavor.
           </p>
-          <p className="signature">طٌعمة</p>
+          <p className="signature">طُعمة</p>
         </div>
         <div className="story-images">
-          <img
-            src={img2}
-            alt="Dish Right"
-          />
+          <img src={img2} alt="Dish Right" />
         </div>
       </section>
 
       {/* VIDEO BANNER SECTION */}
       <section className="full-width-video">
-      <div className="video-thumbnail" onClick={() => setIsPlaying(true)}>
-        <img
-          src={cover}
-          alt="Video Cover"
-        />
-        <button className="play-btn">▶</button>
-      </div>
-
-      {isPlaying && (
-        <div className="video-modal">
-          <div className="video-content">
-            <button className="close-btn" onClick={() => setIsPlaying(false)}>✖</button>
-            <iframe
-              src="https://player.vimeo.com/video/304107062?autoplay=1&title=0&byline=0&portrait=0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              title="Restaurant Video"
-            ></iframe>
-          </div>
+        <div className="video-thumbnail" onClick={() => setIsPlaying(true)}>
+          <img src={cover} alt="Video Cover" />
+          <button className="play-btn" aria-label="Play Video">▶</button>
         </div>
-      )}
-    </section>
-
-
-      {/* TEAM OF EXPERTS */}
-      <section className="team">
-        <h2>TEAM OF EXPERTS</h2>
-        <p>Quasi dolores nisi officiis cupiditate quo olupats nam voluptatem</p>
-        <div className="team-members">
-          <div className="member">
-            <img src={ch1} alt="Gracie" />
-            <h3>GRACIE HOWARD</h3>
-            <p>Expediter</p>
+        {isPlaying && (
+          <div className="video-modal">
+            <div className="video-content">
+              <button className="close-btn" onClick={() => setIsPlaying(false)}>
+                ✖
+              </button>
+              <video
+                src={intro}
+                autoPlay
+                controls
+                muted
+                playsInline
+                className="local-video"
+              ></video>
+            </div>
           </div>
-          <div className="member">
-            <img src={ch2} alt="Phoebe" />
-            <h3>PHOEBE BRUCE</h3>
-            <p>Butcher Chef</p>
-          </div>
+        )}
+      </section>
+
+      {/* VALUES SECTION */}
+      <section className="values">
+        <h2>OUR VALUES</h2>
+        <div className="values-cards">
+          <div className="value-card">Hospitality & Warmth</div>
+          <div className="value-card">Authenticity</div>
+          <div className="value-card">Community Support</div>
+          <div className="value-card">Cultural Preservation</div>
+        </div>
+      </section>
+
+      {/* DECOR & AMBIANCE SECTION */}
+      <section className="decor">
+        <h2>OUR AMBIANCE</h2>
+        <p>
+          Inspired by the historic homes of Medina, our decor features over
+          100-year-old doors, traditional fabrics, volcanic stones, and local
+          plants that create an atmosphere of heritage and nostalgia.
+        </p>
+        <div className="decor-gallery">
+          <img src={decor2} alt="Decor 2" />
         </div>
       </section>
 
@@ -125,43 +154,49 @@ const About = () => {
       <section className="special-menu">
         <div className="menu-left">
           <img src={logo} alt="Special Dish" className="special-dish-img" />
-          <h2>SPECIAL MENU</h2>
         </div>
         <div className="menu-right">
-          <img src={loc} alt="Restaurant Interior"className="special-dish-img" />
+          <img
+            src={loc}
+            alt="Restaurant Interior"
+            className="special-dish-img"
+          />
         </div>
       </section>
 
       {/* TESTIMONIAL */}
       <section className="testimonial-slider">
-      <Slider {...settings}>
-        {testimonials.map((item, index) => (
-          <div className="testimonial" key={index}>
-            <img className="user-pic" src={item.img} alt={item.name} />
-            <p>{item.text}</p>
-            <span>{item.name}</span>
-          </div>
-        ))}
-      </Slider>
-    </section>
+        <h2>Reviws</h2>
+        <Slider {...settings}>
+          {testimonials.map((item, index) => (
+            <div className="testimonial" key={index}>
+              <img className="user-pic" src={item.img} alt={item.name} />
+              <p>{item.text}</p>
+              <span>{item.name}</span>
+            </div>
+          ))}
+        </Slider>
+      </section>
 
       {/* GALLERY */}
-<section className="gallery">
-  <div className="gallery-track">
-    {[...Array(2)].map((_, i) => (
-      <React.Fragment key={i}>
-        <img src={g1} alt="gallery" />
-        <img src={g2} alt="gallery" />
-        <img src={g3} alt="gallery" />
-        <img src={g4} alt="gallery" />
-        <img src={g5} alt="gallery" />
-        <img src={g6} alt="gallery" />
-        <img src={g7} alt="gallery" />
-      </React.Fragment>
-    ))}
-  </div>
-</section>
+      <section className="gallery">
+        <div className="gallery-track">
+          {galleryImages.concat(galleryImages).map((img, index) => (
+            <img key={index} src={img} alt="gallery" />
+          ))}
+        </div>
+      </section>
 
+
+      {/* CTA SECTION */}
+      <section className="cta">
+        <h2>WHY VISIT TO'MAH?</h2>
+        <p>
+          Experience more than just food — experience tradition, warmth, and a
+          piece of Medina's soul.
+        </p>
+        <button className="cta-btn" onClick={() => navigate("/menu")}>Explore Menu</button>
+      </section>
     </div>
   );
 };
