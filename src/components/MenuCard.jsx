@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import productsData from '../service/data';
 
-export default function MenuCard({ filters, currentPage, setCurrentPage, setFilters, searchQuery }) {
+export default function MenuCard({ 
+    filters, 
+    currentPage, 
+    setCurrentPage, 
+    setFilters, 
+    searchQuery,
+    onViewDetails,
+    onAddToCart
+}) {
     const [filteredProducts, setFilteredProducts] = useState([]);
 
     useEffect(() => {
@@ -74,22 +82,25 @@ export default function MenuCard({ filters, currentPage, setCurrentPage, setFilt
             {paginatedProducts.length === 0 ? (
                 <p>No products found.</p>
             ) : (
-                <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 "> {/*edit grid-cols */}
+                <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 ">
                     {paginatedProducts.map(product => (
                         <li key={product.id}>
-                            <div className="card bg-base-100 group overflow-hidden  ">
+                            <div className="card bg-base-100 group overflow-hidden">
                                 <figure className="relative transition-transform duration-300 group-hover:scale-105">
                                     <img
                                         src={product.image}
                                         alt={product.name_en}
                                         className="w-90 h-90 object-cover"
+                                        onClick={() => onViewDetails(product)}
                                     />
-                                    <button className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-                                        bg-black text-white px-6 py-3 text-base w-40
-                                        flex items-center justify-center gap-2
-                                        opacity-0 group-hover:opacity-100
-                                        transition-all duration-300 z-10
-                                        hover:bg-gray-800 hover:text-lg"
+                                    <button 
+                                        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+                                            bg-black text-white px-6 py-3 text-base w-40
+                                            flex items-center justify-center gap-2
+                                            opacity-0 group-hover:opacity-100
+                                            transition-all duration-300 z-10
+                                            hover:bg-gray-800 hover:text-lg"
+                                        onClick={() => onAddToCart(product)}
                                     >
                                         ADD TO CART
                                     </button>

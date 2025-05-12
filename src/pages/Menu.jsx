@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import Sidebar from '../components/Sidebar';
 import MenuCard from '../components/MenuCard';
-import HeroSection from '../components/HeroSection'; // تأكد إنك مستورد HeroSection
+import HeroSection from '../components/HeroSection';
+import { useNavigate } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
+import productsData from '../service/data';
 
 function Menu() {
   const [filters, setFilters] = useState({
@@ -9,40 +11,57 @@ function Menu() {
     brand: '',
     available: '',
     minPrice: 0,
-    maxPrice: 10000,
+    maxPrice: Math.max(...productsData.map(p => p.price)),
     minRating: 0,
-    search: '', // حالة جديدة لتخزين قيمة البحث (هنستخدمها مؤقتًا أو ممكن نربطها بـ filters على طول)
+    search: '',
     sortBy: '',
   });
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchQuery, setSearchQuery] = useState(''); // حالة لتخزين قيمة البحث من HeroSection
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
+  const { addToCart } = useCart();
 
-  // دالة لتحديث حالة البحث
   const handleSearchQueryChange = (query) => {
-    setSearchQuery(query); // تحديث حالة البحث
-    setCurrentPage(1); // إعادة تعيين الصفحة عند البحث
+    setSearchQuery(query);
+    setCurrentPage(1);
   };
+
+  const handleViewDetails = (product) => {
+    navigate('/menu/' + product.id, { state: { meal: product } });
+  };
+
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    // Optional: add toast notification
+  };
+
+  // Filter products based on search and basic filters
+  const filteredProducts = productsData.filter((product) => {
+    const matchesCategory = filters.category === '' || product.category_en === filters.category;
+    const matchesPrice =
+      product.price >= filters.minPrice && product.price <= filters.maxPrice;
+    const matchesSearch =
+      searchQuery === '' ||
+      product.name_en.toLowerCase().includes(searchQuery.toLowerCase());
+
+    return matchesCategory && matchesPrice && matchesSearch;
+  });
 
   return (
     <div className="min-h-screen">
-      <HeroSection setSearchQuery={handleSearchQueryChange} /> {/* تمرير الدالة لـ HeroSection */}
-      <div className="flex flex-col md:flex-row">
-        {/* product card */}
-        <div className="flex-grow p-4 order-first md:order-none">
-          <MenuCard
-            filters={filters}
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
-            setFilters={setFilters}
-            searchQuery={searchQuery} // تمرير قيمة البحث لـ MenuCard
-          />
-        </div>
-
-        {/* sidebar */}
-        <div className="w-full md:w-1/3 lg:w-[50%] xl:w-[50%] p-4 bg-white shadow-md">
-          <Sidebar filters={filters} setFilters={setFilters} />
-        </div>
+      <HeroSection setSearchQuery={handleSearchQueryChange} />
+      <div className="px-4 py-8">
+        <MenuCard
+          filters={filters}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          setFilters={setFilters}
+          searchQuery={searchQuery}
+          onViewDetails={handleViewDetails}
+          onAddToCart={handleAddToCart}
+          products={filteredProducts} // Pass only filtered products
+        />
       </div>
     </div>
   );
