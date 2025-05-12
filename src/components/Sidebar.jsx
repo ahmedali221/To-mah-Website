@@ -140,7 +140,7 @@ export default function Sidebar({ filters, setFilters }) {
                         onChange={handlePriceInputChange}
                     />
                     <div className="flex items-center justify-between text-sm text-gray-600 mt-1">
-                        <span>Min: ${priceRange.min}</span>
+                        <span>Min: ${minPrice}</span>
                         <span>Max: ${priceRange.max === Infinity ? maxPrice : priceRange.max}</span>
                     </div>
                 </div>

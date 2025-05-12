@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import MenuCard from '../components/MenuCard';
-import HeroSection from '../components/HeroSection'; // تأكد إنك مستورد HeroSection
+import HeroSection from '../components/HeroSection';
+import productsData from '../service/data';
 
 function Menu() {
+  const minPrice = Math.min(...productsData.map(p => p.price));
+  const maxPrice = Math.max(...productsData.map(p => p.price));
+
   const [filters, setFilters] = useState({
     category: '',
     brand: '',
     available: '',
-    minPrice: 0,
-    maxPrice: 10000,
+    minPrice: minPrice,
+    maxPrice: maxPrice,
     minRating: 0,
-    search: '', // حالة جديدة لتخزين قيمة البحث (هنستخدمها مؤقتًا أو ممكن نربطها بـ filters على طول)
+    search: '', // 
     sortBy: '',
   });
 
