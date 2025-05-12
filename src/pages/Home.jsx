@@ -1,33 +1,19 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import productsData from '../service/data';
 
 function Home() {
   const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
 
-  const featuredDishes = [
-    {
-      id: 1,
-      name: 'Pure Unsweetened Acai Puree',
-      description: 'Fresh acai puree topped with granola, fruits, and honey',
-      image: 'https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=500',
-      price: 12.99
-    },
-    {
-      id: 2,
-      name: 'Truffle Pasta',
-      description: 'Ceps, Parmesan, Alba Truffle, Mixed Greens',
-      image: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=500',
-      price: 24.99
-    },
-    {
-      id: 3,
-      name: 'Signature Burger',
-      description: 'Angus beef patty, Cheddar cheese, Lettuce, Tomato',
-      image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500',
-      price: 18.99
-    }
-  ];
+  // Function to get random meals
+  const getRandomMeals = (num) => {
+    const shuffled = [...productsData].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, num);
+  };
+
+  const featuredDishes = getRandomMeals(3);
 
   return (
     <div>
@@ -66,14 +52,19 @@ function Home() {
           {featuredDishes.map((dish) => (
             <div key={dish.id} className="card bg-base-100 shadow-xl">
               <figure>
-                <img src={dish.image} alt={dish.name} className="w-full h-48 object-cover" />
+                <img src={dish.image} alt={dish.name_en} className="w-full h-48 object-cover" />
               </figure>
               <div className="card-body">
-                <h3 className="card-title">{dish.name}</h3>
-                <p>{dish.description}</p>
+                <h3 className="card-title">{dish.name_en}</h3>
+                <p>{dish.desc_en}</p>
                 <div className="card-actions justify-between items-center mt-4">
                   <span className="text-lg font-semibold">${dish.price}</span>
-                  <Link to="/menu" className="btn  btn-sm">Order Now</Link>
+                  <button
+                    onClick={() => navigate(`/menu/${dish.id}`, { state: { meal: dish } })}
+                    className="btn btn-sm"
+                  >
+                    Order Now
+                  </button>
                 </div>
               </div>
             </div>
