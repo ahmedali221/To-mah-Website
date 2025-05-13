@@ -1,4 +1,4 @@
-import React ,{useState } from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "./About.css";
 import img1 from "/src/assets/AboutImages/img1.jpg";
@@ -37,7 +37,7 @@ const About = () => {
       name: "Emma, Blogger",
     },
   ];
-  
+
   const settings = {
     dots: true,
     infinite: true,
@@ -63,9 +63,9 @@ const About = () => {
           <h2>OUR STORY</h2>
           <p className="stars">***</p>
           <p>
-             flavors of traditional Hejazi cuisine in a modern and inviting setting.
-              What began as a dream to revive authentic Saudi dishes with a contemporary twist, quickly grew into a beloved destination for those seeking warmth, heritage, and exceptional taste. 
-              At To’mah, every dish tells a story — a story of home, culture, and unforgettable flavor.
+            flavors of traditional Hejazi cuisine in a modern and inviting setting.
+            What began as a dream to revive authentic Saudi dishes with a contemporary twist, quickly grew into a beloved destination for those seeking warmth, heritage, and exceptional taste.
+            At To’mah, every dish tells a story — a story of home, culture, and unforgettable flavor.
           </p>
           <p className="signature">طٌعمة</p>
         </div>
@@ -79,28 +79,28 @@ const About = () => {
 
       {/* VIDEO BANNER SECTION */}
       <section className="full-width-video">
-      <div className="video-thumbnail" onClick={() => setIsPlaying(true)}>
-        <img
-          src={cover}
-          alt="Video Cover"
-        />
-        <button className="play-btn">▶</button>
-      </div>
-
-      {isPlaying && (
-        <div className="video-modal">
-          <div className="video-content">
-            <button className="close-btn" onClick={() => setIsPlaying(false)}>✖</button>
-            <iframe
-              src="https://player.vimeo.com/video/304107062?autoplay=1&title=0&byline=0&portrait=0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              title="Restaurant Video"
-            ></iframe>
-          </div>
+        <div className="video-thumbnail" onClick={() => setIsPlaying(true)}>
+          <img
+            src={cover}
+            alt="Video Cover"
+          />
+          <button className="play-btn">▶</button>
         </div>
-      )}
-    </section>
+
+        {isPlaying && (
+          <div className="video-modal">
+            <div className="video-content">
+              <button className="close-btn" onClick={() => setIsPlaying(false)}>✖</button>
+              <iframe
+                src="https://drive.google.com/file/d/1jChnk1oTnvamExjqEXgg7ABQbKGxa-JI/view"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                title="Restaurant Video"
+              ></iframe>
+            </div>
+          </div>
+        )}
+      </section>
 
 
       {/* TEAM OF EXPERTS */}
@@ -128,39 +128,39 @@ const About = () => {
           <h2>SPECIAL MENU</h2>
         </div>
         <div className="menu-right">
-          <img src={loc} alt="Restaurant Interior"className="special-dish-img" />
+          <img src={loc} alt="Restaurant Interior" className="special-dish-img" />
         </div>
       </section>
 
       {/* TESTIMONIAL */}
       <section className="testimonial-slider">
-      <Slider {...settings}>
-        {testimonials.map((item, index) => (
-          <div className="testimonial" key={index}>
-            <img className="user-pic" src={item.img} alt={item.name} />
-            <p>{item.text}</p>
-            <span>{item.name}</span>
-          </div>
-        ))}
-      </Slider>
-    </section>
+        <Slider {...settings}>
+          {testimonials.map((item, index) => (
+            <div className="testimonial" key={index}>
+              <img className="user-pic" src={item.img} alt={item.name} />
+              <p>{item.text}</p>
+              <span>{item.name}</span>
+            </div>
+          ))}
+        </Slider>
+      </section>
 
       {/* GALLERY */}
-<section className="gallery">
-  <div className="gallery-track">
-    {[...Array(2)].map((_, i) => (
-      <React.Fragment key={i}>
-        <img src={g1} alt="gallery" />
-        <img src={g2} alt="gallery" />
-        <img src={g3} alt="gallery" />
-        <img src={g4} alt="gallery" />
-        <img src={g5} alt="gallery" />
-        <img src={g6} alt="gallery" />
-        <img src={g7} alt="gallery" />
-      </React.Fragment>
-    ))}
-  </div>
-</section>
+      <section className="gallery">
+        <div className="gallery-track">
+          {[...Array(2)].map((_, i) => (
+            <React.Fragment key={i}>
+              <img src={g1} alt="gallery" />
+              <img src={g2} alt="gallery" />
+              <img src={g3} alt="gallery" />
+              <img src={g4} alt="gallery" />
+              <img src={g5} alt="gallery" />
+              <img src={g6} alt="gallery" />
+              <img src={g7} alt="gallery" />
+            </React.Fragment>
+          ))}
+        </div>
+      </section>
 
     </div>
   );
