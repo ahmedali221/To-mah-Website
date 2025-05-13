@@ -180,6 +180,12 @@
 	},
 	
   "home": {
+	"menu":{"title":"Introduced Our Menu"},
+	"chefs": {
+    "title": "Meet Our Chefs",
+    "description": "Our talented chefs bring authentic flavors to every dish."
+  },
+ 
     "hero": {
       "title": "Welcome to To'mah Restaurant",
       "subtitle": "Authentic Saudi Cuisine",

@@ -1,26 +1,93 @@
+/* Base body styles */
 body {
     font-family: 'Merienda', cursive;
-    /* For headings */
-    font-family: 'Aref Ruqaa', sans-serif;
-    /* For Arabic text */
+    background: #f8f9fc;
+    color: #101828;
+    font-size: 18px;
+    transition: background 0.3s, color 0.3s;
 }
 
+/* Arabic-specific styles */
+body[dir="rtl"], html[dir="rtl"] body {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 21px;
+    background: #f0f2f7;
+    color: #1d2939;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merienda', cursive;
+    color: #101828;
+}
+
+/* Arabic headings */
+body[dir="rtl"] h1,
+body[dir="rtl"] h2,
+body[dir="rtl"] h3,
+body[dir="rtl"] h4,
+body[dir="rtl"] h5,
+body[dir="rtl"] h6 {
+    font-family: 'Aref Ruqaa', serif;
+    color: #101828;
+}
+
+/* Links */
+a {
+    color: #344054;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #101828;
+}
+
+/* Buttons */
+button, .shop-button {
+    background: #344054;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Merienda', cursive;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+}
+button:hover, .shop-button:hover {
+    background: #101828;
+    color: #f8f9fc;
+}
+
+/* Hero section */
 .hero {
-    background: linear-gradient(rgba(62, 39, 35, 0.7), rgba(62, 39, 35, 0.7)),
+    background: linear-gradient(rgba(52, 64, 84, 0.8), rgba(16, 24, 40, 0.9)),
         url('cafe-image.jpg');
     background-size: cover;
-    color: white;
+    color: #f8f9fc;
     text-align: center;
     padding: 100px 20px;
 }
 
-.shop-button {
-    background: #A67C52;
-    /* Coffee brown */
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 25px;
-    /* Rounded edges */
-    font-family: 'Merienda', cursive;
+/* Card backgrounds */
+.bg-white, .bg-slate-50 {
+    background: #f8f9fc !important;
+}
+
+/* Utility classes for blue-gray palette */
+.text-primary { color: #344054 !important; }
+.text-primary-dark { color: #101828 !important; }
+.bg-primary { background-color: #344054 !important; }
+.bg-primary-dark { background-color: #101828 !important; }
+.bg-primary-light { background-color: #f0f2f7 !important; }
+.bg-primary-lightest { background-color: #f8f9fc !important; }
+
+/* Accent colors for contrast */
+.text-accent { color: #667085 !important; }
+.bg-accent { background-color: #667085 !important; }
+.border-accent { border-color: #667085 !important; }
+
+/* Responsive font size for Arabic */
+@media (max-width: 600px) {
+    body[dir="rtl"], html[dir="rtl"] body {
+        font-size: 19px;
+    }
 }

@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import Slider from "react-slick";
-import "./About.css";
 import intro from "../assets/AboutImages/intro.mp4";
 import rev1 from "../assets/AboutImages/TripAdvisor.jpg";
 import rev2 from "../assets/AboutImages/tiktok.jpg";
@@ -119,7 +118,7 @@ const About = () => {
 	}, []);
 
 	return (
-		<div dir={i18n.language === "ar" ? "rtl" : "ltr"} className="bg-slate-50">
+		<div dir={i18n.language === "ar" ? "rtl" : "ltr"} className="bg-slate-50 ">
 			{/* OUR STORY SECTION */}
 			<section className="py-16 bg-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -325,18 +324,32 @@ const About = () => {
 
 			{/* GALLERY SECTION */}
 			<section className="py-16 bg-white overflow-hidden">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="flex space-x-4 animate-scroll">
+				<div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+					<Slider
+						slidesToShow={4}
+						slidesToScroll={1}
+						infinite={true}
+						autoplay={true}
+						autoplaySpeed={2000}
+						arrows={false}
+						responsive={[
+							{ breakpoint: 1280, settings: { slidesToShow: 3 } },
+							{ breakpoint: 1024, settings: { slidesToShow: 2 } },
+							{ breakpoint: 640, settings: { slidesToShow: 1 } }
+						]}
+					>
 						{galleryImages.concat(galleryImages).map((img, index) => (
-							<div key={index} className="flex-shrink-0 w-72 h-48 rounded-lg overflow-hidden shadow-lg">
-								<img 
-									src={img} 
-									alt={t("about.gallery.image_alt")} 
-									className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-								/>
+							<div key={index} className="px-2">
+								<div className="w-full h-48 rounded-lg overflow-hidden shadow-lg">
+									<img
+										src={img}
+										alt={t("about.gallery.image_alt")}
+										className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+									/>
+								</div>
 							</div>
 						))}
-					</div>
+					</Slider>
 				</div>
 			</section>
 

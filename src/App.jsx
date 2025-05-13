@@ -31,8 +31,13 @@ function App() {
     <Router>
       <ThemeProvider>
         <CartProvider>
-          <Navbar changeLanguage={changeLanguage} />
-          <main className="flex-grow bg-amber-200">
+          {/* Fixed Navbar */}
+          <div className="fixed top-0 left-0 w-full z-50 h-16 bg-base-100 shadow">
+            <Navbar changeLanguage={changeLanguage} />
+          </div>
+
+          {/* Page Content with Top Padding */}
+          <main className="flex-grow mt-10">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -44,6 +49,7 @@ function App() {
               <Route path="/payment" element={<Payment />} />
             </Routes>
           </main>
+
           <Footer />
         </CartProvider>
       </ThemeProvider>

@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import HeroSection from "../components/HeroSection";
+import location from "../assets/location.png";
 
 const ContactPage = () => {
   const [visible, setVisible] = useState(false);
@@ -65,13 +67,13 @@ const ContactPage = () => {
 
   return (
     <div 
-      style={{ backgroundColor: "#fdf8f4" }} 
       className={`min-h-screen transition-opacity duration-700 ease-in-out ${visible ? 'opacity-100' : 'opacity-0'}`}>
       <div className="container mx-auto px-4 py-16">
+        {/* <HeroSection image={location}/> */}
         {/* Hero Title with Animation */}
         <div className={`text-center mb-16 transition-all duration-1000 delay-300 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <h1 className="text-4xl md:text-5xl font-serif font-light mb-4">Contact Us</h1>
-          <div className="w-24 h-1 bg-amber-600 mx-auto"></div>
+          <div className="w-24 h-1 mx-auto"></div>
           <p className="mt-6 text-gray-600 max-w-2xl mx-auto">We'd love to hear from you. Visit our restaurant, make a reservation, or send us a message.</p>
         </div>
 

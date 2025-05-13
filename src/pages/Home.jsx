@@ -6,6 +6,10 @@ import { Link, useNavigate } from "react-router-dom";
 import productsData from "../service/data";
 import image from "../assets/AboutImages/s1.jpg";
 import image2 from "../assets/AboutImages/s2.jpg";
+import goals from "../assets/goals.png";
+import vision from "../assets/vision.png";
+import about from "../assets/about.png";
+import menu from "../assets/menu.png";
 import image3 from "../assets/AboutImages/s3.jpg";
 import HeroSection from "../components/HeroSection";
 import { 
@@ -18,7 +22,7 @@ import {
   ClockIcon,
   ShieldCheckIcon,
   TruckIcon,
-  ChatBubbleLeftRightIcon
+  
 } from '@heroicons/react/24/outline';
 
 function Home() {
@@ -43,7 +47,7 @@ function Home() {
   const featuredDishes = getRandomMeals(3);
 
   return (
-    <div dir={i18n.language === "ar" ? "rtl" : "ltr"} className="bg-slate-50">
+    <div dir={i18n.language === "ar" ? "rtl" : "ltr"} className="main-bg">
    {/* Hero Banner Slider */}
 <div className="relative w-full h-screen overflow-hidden">
   {/* Slides */}
@@ -63,14 +67,14 @@ function Home() {
   {/* Navigation Arrows */}
   <button
     onClick={() => setCurrentSlide(prev => (prev === 0 ? heroImages.length - 1 : prev - 1))}
-    className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 text-white p-2 rounded-full z-10 hover:bg-black/50"
+    className="absolute left-4 top-1/2 -translate-y-1/2 nav-arrow"
     aria-label="Previous slide"
   >
     &lt;
   </button>
   <button
-    onClick={() => setCurrentSlide(prev => (prev + 1) % heroImages.length)}
-    className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 text-white p-2 rounded-full z-10 hover:bg-black/50"
+ c    onClick={() => setCurrentSlide(prev => (prev + 1) % heroImages.length)}
+    className="absolute right-4 top-1/2 -translate-y-1/2 nav-arrow"
     aria-label="Next slide"
   >
     &gt;
@@ -129,26 +133,95 @@ function Home() {
         </div>
       </section>
 
-      {/* Our Vision & Goals */}
+
+
+{/* Our Vision & Goals */}
+<section className="py-16 bg-gradient-to-b">
+  <div className="max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-16">
+    <h2 className="text-4xl font-bold text-center mb-16 relative">
+      <span className="relative px-8">
+        {t("home.vision.title")}
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
+      </span>
+    </h2>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Text Content */}
+      <div className="order-2 lg:order-1">
+        <div className="space-y-8">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0 bg-white rounded-lg p-3 shadow-md">
+              <GlobeAltIcon className="w-8 h-8" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-2">{t("home.vision.heritage.title")}</h3>
+              <p className="text-gray-600">{t("home.vision.heritage.description")}</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0 bg-white rounded-lg p-3 shadow-md">
+              <LightBulbIcon className="w-8 h-8" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-2">{t("home.vision.innovation.title")}</h3>
+              <p className="text-gray-600">{t("home.vision.innovation.description")}</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0 bg-white rounded-lg p-3 shadow-md">
+              <UserGroupIcon className="w-8 h-8" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-2">{t("home.vision.community.title")}</h3>
+              <p className="text-gray-600">{t("home.vision.community.description")}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Stacked Images - Updated with larger sizes, object-contain, and removed borders */}
+      <div className="order-1 lg:order-2 flex justify-center relative min-h-[500px]">
+        <div className="relative w-full max-w-2xl h-[500px]">
+          <img
+            src={goals}
+            alt={t("home.vision.image_alt")}
+            className="rounded-lg shadow-2xl w-full h-full object-contain absolute top-0 left-0 z-10"
+            style={{ boxShadow: "0 10px 40px rgba(0,0,0,0.15)" }}
+          />
+          <img
+            src={vision}
+            alt={t("home.vision.image_alt")}
+            className="rounded-lg shadow-xl w-4/5 h-4/5 object-contain absolute bottom-0 right-0 z-20 translate-x-16 translate-y-16"
+            style={{ boxShadow: "0 6px 24px rgba(0,0,0,0.10)" }}
+          />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-white rounded-lg p-4 shadow-xl z-30 min-w-[160px]">
+            <div className="text-2xl font-bold">{t("home.vision.years")}</div>
+            <div className="text-sm text-gray-600">{t("home.vision.experience")}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      {/* Our Menu */}
       <section className="py-16 bg-gradient-to-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-16 relative">
             <span className="relative px-8">
-              {t("home.vision.title")}
+              {t("home.menu.title")}
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
             </span>
           </h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="order-1 lg:order-2">
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 bg-white rounded-lg p-3 shadow-md">
                     <GlobeAltIcon className="w-8 h-8" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">{t("home.vision.heritage.title")}</h3>
-                    <p className="text-gray-600">{t("home.vision.heritage.description")}</p>
+                    <h3 className="text-xl font-bold mb-2">{t("home.chefs.title")}</h3>
+                    <p className="text-gray-600">{t("home.chefs.description")}</p>
                   </div>
                 </div>
                 
@@ -174,10 +247,10 @@ function Home() {
               </div>
             </div>
             
-            <div className="order-1 lg:order-2">
+            <div className="order-2 lg:order-1">
               <div className="relative">
                 <img
-                  src={image2} 
+                  src={menu} 
                   alt={t("home.vision.image_alt")}
                   className="rounded-lg shadow-2xl w-full h-auto"
                 />
@@ -188,6 +261,9 @@ function Home() {
               </div>
             </div>
           </div>
+        
+          
+        
         </div>
       </section>
 
@@ -255,7 +331,7 @@ function Home() {
             </div>
             <div className="relative">
               <img
-                src={image3}
+                src={about}
                 alt={t("home.about.image_alt")}
                 className="rounded-xl shadow-2xl object-cover"
               />
