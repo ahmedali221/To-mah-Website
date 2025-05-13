@@ -228,6 +228,7 @@
 	},
 	"menu": {
 		"show_filters": "إظهار الفلاتر",
+		"all_categories": "جميع الفئات",
 		"hide_filters": "إخفاء الفلاتر",
 		"filters": "الفلاتر"
 	},
