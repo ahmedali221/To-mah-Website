@@ -40,13 +40,13 @@ function Navbar({ changeLanguage }) {
 					<button
 						onClick={() => handleLanguageChange("ar")}
 						className={`${buttonClasses} bg-blue-500 text-white hover:bg-blue-600`}>
-						English
+						{t("navbar.language_toggle.arabic")}
 					</button>
 				) : (
 					<button
 						onClick={() => handleLanguageChange("en")}
 						className={`${buttonClasses} bg-green-500 text-white hover:bg-green-600`}>
-						عربي
+						{t("navbar.language_toggle.english")}
 					</button>
 				)}
 			</div>
@@ -54,7 +54,9 @@ function Navbar({ changeLanguage }) {
 	};
 
 	return (
-		<nav className="bg-base-100 shadow-lg sticky top-0 z-50">
+		<nav
+			className="bg-base-100 shadow-lg sticky top-0 z-50"
+			dir={i18n.language === "ar" ? "rtl" : "ltr"}>
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex justify-between h-16">
 					<div className="flex items-center">
@@ -64,11 +66,10 @@ function Navbar({ changeLanguage }) {
 							</div>
 						</div>
 						<Link to="/" className="text-2xl font-bold">
-							{t("navbar.brand")} {/* ترجمة اسم العلامة التجارية */}
+							{t("navbar.brand")}
 						</Link>
 					</div>
 
-					{/* Desktop Navigation */}
 					<div className="hidden md:flex items-center space-x-8">
 						<Link to="/" className="hover:text-primary">
 							{t("navbar.home")}
@@ -93,11 +94,9 @@ function Navbar({ changeLanguage }) {
 								</span>
 							)}
 						</Link>
-						{/* أزرار تغيير اللغة للـ Desktop */}
 						<LanguageToggle />
 					</div>
 
-					{/* Mobile Navigation Button */}
 					<div className="md:hidden flex items-center">
 						<Link to="/cart" className="relative mr-4">
 							<ShoppingCartIcon className="h-6 w-6" />
@@ -120,7 +119,6 @@ function Navbar({ changeLanguage }) {
 				</div>
 			</div>
 
-			{/* Mobile Navigation Menu */}
 			{isMenuOpen && (
 				<div className="md:hidden">
 					<div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">

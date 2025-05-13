@@ -1,8 +1,15 @@
+/** @format */
+
+import { useTranslation } from "react-i18next";
 import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
+	const { t, i18n } = useTranslation();
+
 	return (
-		<div style={{ backgroundColor: "#fdf8f4", padding: "4rem 0" }}>
+		<div
+			style={{ backgroundColor: "#fdf8f4", padding: "4rem 0" }}
+			dir={i18n.language === "ar" ? "rtl" : "ltr"}>
 			<div className="container mx-auto px-4">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12 relative max-w-6xl mx-auto">
 					{/* First Column */}
@@ -10,7 +17,7 @@ const Contact = () => {
 						<div className="h-[600px] w-4/5 overflow-hidden">
 							<img
 								src="https://tomah.sa/uploads/products/8.jpg"
-								alt="Location"
+								alt={t("contact.location_image_alt")}
 								className="attachment-full size-full w-full h-full object-cover"
 								style={{ borderRadius: "50em 50em 0 0" }}
 								loading="lazy"
@@ -19,7 +26,7 @@ const Contact = () => {
 						</div>
 						<div className="w-4/5 text-center">
 							<h3 className="text-3xl font-serif italic font-light mt-8 mb-6">
-								Location
+								{t("contact.location_title")}
 							</h3>
 							<p className="text-center font-light tracking-wide leading-relaxed text-gray-700">
 								<span className="block">
@@ -28,21 +35,20 @@ const Contact = () => {
 										target="_blank"
 										rel="noopener noreferrer"
 										className="hover:text-gray-900 transition-colors duration-300">
-										<span className="text-black text-lg  block mb-3">
-											طٌعمة، DMAJ8018
+										<span className="text-black text-lg block mb-3">
+											{t("contact.address_line1")}
 										</span>
 										<span className="text-black text-lg block mb-2">
-											5153 King Abdullah Branch Rd, حي مهزور, 8018, Madinah
-											42319
+											{t("contact.address_line2")}
 										</span>
 										<span className="text-black text-base block mb-4">
-											المدينة المنورة 42210، المملكة العربية السعودية
+											{t("contact.address_line3")}
 										</span>
 									</a>
 									<a
 										href="tel:+966583250000"
-										className="text-xl  text-black block mt-4 hover:text-gray-700 transition-colors duration-300">
-										+966 58 325 0000
+										className="text-xl text-black block mt-4 hover:text-gray-700 transition-colors duration-300">
+										{t("contact.phone")}
 									</a>
 								</span>
 							</p>
@@ -57,7 +63,7 @@ const Contact = () => {
 						<div className="h-[600px] w-4/5 overflow-hidden">
 							<img
 								src="https://tomah.sa/uploads/products/9.jpg"
-								alt="Restaurant"
+								alt={t("contact.restaurant_image_alt")}
 								className="attachment-full size-full w-full h-full object-cover"
 								style={{ borderRadius: "50em 50em" }}
 								loading="lazy"
@@ -66,22 +72,34 @@ const Contact = () => {
 						</div>
 						<div className="w-4/5 text-center">
 							<h3 className="text-3xl font-serif italic font-light mt-8 mb-6">
-								Working Hours
+								{t("contact.hours_title")}
 							</h3>
 							<p className="text-center font-light tracking-wide leading-relaxed">
 								<span className="block mb-4">
-									<span className="text-gray-800">Saturday & Sunday</span>
+									<span className="text-gray-800">
+										{t("contact.hours_weekend")}
+									</span>
 									<br />
-									<span className="text-sm text-gray-600">Reservations</span>
+									<span className="text-sm text-gray-600">
+										{t("contact.hours_reservations")}
+									</span>
 									<br />
-									<span className="italic">12:00 pm - 1:30 pm</span>
+									<span className="italic">
+										{t("contact.hours_weekend_time")}
+									</span>
 								</span>
 								<span className="block">
-									<span className="text-gray-800">Thursday to Sunday</span>
+									<span className="text-gray-800">
+										{t("contact.hours_weekdays")}
+									</span>
 									<br />
-									<span className="text-sm text-gray-600">Reservations</span>
+									<span className="text-sm text-gray-600">
+										{t("contact.hours_reservations")}
+									</span>
 									<br />
-									<span className="italic">6:00 pm - 8:45 pm</span>
+									<span className="italic">
+										{t("contact.hours_weekdays_time")}
+									</span>
 								</span>
 							</p>
 						</div>
