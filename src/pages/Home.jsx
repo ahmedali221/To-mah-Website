@@ -4,13 +4,13 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import productsData from "../service/data";
-import image from "../assets/AboutImages/s1.jpg";
-import image2 from "../assets/AboutImages/s2.jpg";
+import image from "../assets/AboutImages/S1.jpg";
+import image2 from "../assets/AboutImages/S2.jpg";
 import goals from "../assets/goals.png";
 import vision from "../assets/vision.png";
 import about from "../assets/about.png";
 import menu from "../assets/menu.png";
-import image3 from "../assets/AboutImages/s3.jpg";
+import image3 from "../assets/AboutImages/S3.jpg";
 import HeroSection from "../components/HeroSection";
 import { 
   HeartIcon, 
