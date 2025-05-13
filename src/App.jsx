@@ -31,9 +31,8 @@ function App() {
     <Router>
       <ThemeProvider>
         <CartProvider>
-          <div className="flex flex-col"></div>
           <Navbar changeLanguage={changeLanguage} />
-          <main className="flex-grow">
+          <main className="flex-grow bg-amber-200">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />

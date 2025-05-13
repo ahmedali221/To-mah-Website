@@ -7,17 +7,16 @@ export default function HeroSection({ setSearchQuery, image }) {
 	const [localSearchQuery, setLocalSearchQuery] = useState("");
 	const { t, i18n } = useTranslation();
 
-
 	return (
 		<div
-			className="w-full h-screen bg-cover bg-center bg-no-repeat relative flex items-center justify-center text-white"
+			className="w-full h-screen relative flex items-center justify-center text-white pt-16"
 			style={{
 				backgroundImage: `url(${image})`,
-				backgroundBlendMode: "overlay",
-				backgroundColor: "rgba(0, 0, 0, 0.5)",
+				backgroundSize: "cover", // Changed to cover for full width stretch
+				backgroundRepeat: "no-repeat",
+				backgroundAttachment: "fixed" // Optional: creates parallax effect
 			}}
 			dir={i18n.language === "ar" ? "rtl" : "ltr"}>
-			
 		</div>
 	);
 }

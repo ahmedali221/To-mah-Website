@@ -1,0 +1,26 @@
+body {
+    font-family: 'Merienda', cursive;
+    /* For headings */
+    font-family: 'Aref Ruqaa', sans-serif;
+    /* For Arabic text */
+}
+
+.hero {
+    background: linear-gradient(rgba(62, 39, 35, 0.7), rgba(62, 39, 35, 0.7)),
+        url('cafe-image.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.shop-button {
+    background: #A67C52;
+    /* Coffee brown */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    /* Rounded edges */
+    font-family: 'Merienda', cursive;
+}

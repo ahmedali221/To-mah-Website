@@ -178,34 +178,97 @@
 		"hours_weekdays_time": "6:00 pm - 8:45 pm",
 		"restaurant_image_alt": "Restaurant Image"
 	},
-	"home": {
-		"hero": {
-			"description": "Experience the finest dining with our carefully crafted dishes and exceptional service.",
-			"button": "View Menu"
-		},
-		"featured": {
-			"title": "Featured Dishes",
-			"order_button": "Order Now"
-		},
-		"testimonials": {
-			"title": "Customer Testimonials",
-			"0": {
-				"text": "The food was absolutely wonderful, from preparation to presentation, very pleasing.",
-				"name": "John Doe"
-			},
-			"1": {
-				"text": "The ambiance and service were exceptional. Highly recommend this restaurant!",
-				"name": "Jane Smith"
-			}
-		},
-		"about": {
-			"title": "Our Story",
-			"description": "Discover the perfect blend of tradition and innovation at To'mah. Our passionate chefs create memorable dining experiences with the finest ingredients and authentic recipes.",
-			"button": "Learn More",
-			"image_alt": "Restaurant Interior"
-		},
-		"currency": "SR"
-	},
+	
+  "home": {
+    "hero": {
+      "title": "Welcome to To'mah Restaurant",
+      "subtitle": "Authentic Saudi Cuisine",
+      "cta": "Browse Our Menu",
+      "description": "Experience the finest dining with our carefully crafted dishes and exceptional service.",
+      "button": "View Menu"
+    },
+    "values": {
+      "title": "Our Philosophy",
+      "quality": {
+        "title": "Authentic Taste",
+        "description": "Each dish captures the authentic flavors of our city's traditional cuisine, made with fresh ingredients and time-honored cooking techniques."
+      },
+      "tradition": {
+        "title": "Elegant Atmosphere",
+        "description": "Our restaurant emulates a heritage ambiance that immerses you in tranquility and comfort, creating a historically rich environment steeped in tradition."
+      },
+      "service": {
+        "title": "Tu'mah Experience",
+        "description": "Food from the city that carries a special meaning - not just a meal, but a connection to our cultural heritage and community values."
+      }
+    },
+    "vision": {
+      "title": "Our Vision & Goals",
+      "heritage": {
+        "title": "Cultural Heritage",
+        "description": "Preserving and sharing our rich culinary traditions"
+      },
+      "innovation": {
+        "title": "Modern Innovation",
+        "description": "Blending traditional flavors with contemporary presentation"
+      },
+      "community": {
+        "title": "Community Focus",
+        "description": "Creating a welcoming space for all our guests"
+      },
+      "image_alt": "Restaurant Vision Image",
+      "years": "Est. 2010",
+      "experience": "Years of Excellence"
+    },
+    "features": {
+      "title": "Why Choose Us",
+      "quality": {
+        "title": "Premium Quality",
+        "description": "Only the finest ingredients make it to your plate"
+      },
+      "service": {
+        "title": "Expert Service",
+        "description": "Professional and attentive staff at your service"
+      },
+      "hygiene": {
+        "title": "Perfect Hygiene",
+        "description": "Maintaining the highest standards of cleanliness"
+      },
+      "delivery": {
+        "title": "Fast Delivery",
+        "description": "Quick and reliable delivery to your doorstep"
+      }
+    },
+    "cta": {
+      "title": "Experience the Taste of Tradition Today",
+      "description": "Join us for an unforgettable culinary journey through our city's rich food heritage",
+      "menu_button": "Browse Our Menu",
+      "order_button": "Order Now"
+    },
+    "featured": {
+      "title": "Featured Dishes",
+      "order_button": "Order Now"
+    },
+    "testimonials": {
+      "title": "Customer Testimonials",
+      "0": {
+        "text": "The food was absolutely wonderful, from preparation to presentation, very pleasing.",
+        "name": "John Doe"
+      },
+      "1": {
+        "text": "The ambiance and service were exceptional. Highly recommend this restaurant!",
+        "name": "Jane Smith"
+      }
+    },
+    "about": {
+      "title": "Our Story",
+      "description": "Discover the perfect blend of tradition and innovation at To'mah. Our passionate chefs create memorable dining experiences with the finest ingredients and authentic recipes.",
+      "button": "Learn More",
+      "image_alt": "Restaurant Interior"
+    },
+    "currency": "SR"
+  
+},
 	"meal_details": {
 		"loading": "Loading...",
 		"back": "Back to Menu",
@@ -239,9 +302,7 @@
 		"testimonials": {
 			"title": "What Our Partners Say"
 		},
-		"suppliers": {
-			"title": "Our Trusted Suppliers"
-		},
+	
 		"cta": {
 			"title": "Become a Partner",
 			"description": "We're always looking to collaborate with quality suppliers and influential personalities who share our passion for exceptional food and service.",
@@ -337,4 +398,8 @@
 		"pay_button": "Pay {total} SR",
 		"place_order_button": "Place Order (Pay {total} SR on Delivery)"
 	}
+
 }
+
+ 
+

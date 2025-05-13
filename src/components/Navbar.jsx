@@ -1,163 +1,241 @@
 /** @format */
-
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import {
-	ShoppingCartIcon,
-	Bars3Icon,
-	XMarkIcon,
+  ShoppingCartIcon,
+  Bars3Icon,
+  XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { useCart } from "../context/CartContext";
 import { useTranslation } from "react-i18next";
 import logo from "../assets/logo.webp";
 
 function Navbar({ changeLanguage }) {
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const { cartItems } = useCart();
-	const { t, i18n } = useTranslation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { cartItems } = useCart();
+  const { t, i18n } = useTranslation();
+  const location = useLocation();
 
-	const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
-	const LanguageToggle = ({ isMobile = false }) => {
-		const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-		const handleLanguageChange = (lang) => {
-			changeLanguage(lang);
-			setCurrentLanguage(lang);
-			if (isMobile) {
-				setIsMenuOpen(false);
-			}
-		};
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
 
-		const buttonClasses =
-			"px-3 py-1 text-sm rounded-full shadow-md " +
-			"transition-all duration-300 ease-in-out transform " +
-			"hover:scale-105 active:scale-95 focus:outline-none";
+  const LanguageToggle = ({ isMobile = false }) => {
+    const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
-		return (
-			<div className={`flex space-x-2 ${isMobile ? "px-3 py-2" : ""}`}>
-				{currentLanguage === "en" ? (
-					<button
-						onClick={() => handleLanguageChange("ar")}
-						className={`${buttonClasses} bg-blue-500 text-white hover:bg-blue-600`}>
-						{t("navbar.language_toggle.arabic")}
-					</button>
-				) : (
-					<button
-						onClick={() => handleLanguageChange("en")}
-						className={`${buttonClasses} bg-green-500 text-white hover:bg-green-600`}>
-						{t("navbar.language_toggle.english")}
-					</button>
-				)}
-			</div>
-		);
-	};
+    const handleLanguageChange = (lang) => {
+      changeLanguage(lang);
+      setCurrentLanguage(lang);
+      if (isMobile) setIsMenuOpen(false);
+    };
 
-	return (
-		<nav
-			className="bg-base-100 shadow-lg sticky top-0 z-50"
-			dir={i18n.language === "ar" ? "rtl" : "ltr"}>
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="flex justify-between h-16">
-					<div className="flex items-center">
-						<div className="avatar mr-2">
-							<div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-								<img src={logo} alt="Logo" />
-							</div>
-						</div>
-						<Link to="/" className="text-2xl font-bold">
-							{t("navbar.brand")}
-						</Link>
-					</div>
+    const buttonClasses = `px-3 py-1 text-sm rounded-full shadow-md transition-all duration-300 ${
+      scrolled 
+        ? "bg-amber-600 hover:bg-amber-700 text-white" 
+        : "bg-white bg-opacity-90 hover:bg-opacity-100 text-amber-800"
+    }`;
 
-					<div className="hidden md:flex items-center space-x-8">
-						<Link to="/" className="hover:text-primary">
-							{t("navbar.home")}
-						</Link>
-						<Link to="/about" className="hover:text-primary">
-							{t("navbar.about")}
-						</Link>
-						<Link to="/menu" className="hover:text-primary">
-							{t("navbar.menu")}
-						</Link>
-						<Link to="/partners" className="hover:text-primary">
-							{t("navbar.partners")}
-						</Link>
-						<Link to="/contact" className="hover:text-primary">
-							{t("navbar.contact")}
-						</Link>
-						<Link to="/cart" className="relative">
-							<ShoppingCartIcon className="h-6 w-6 hover:text-primary" />
-							{totalItems > 0 && (
-								<span className="absolute -top-2 -right-2 bg-primary text-white rounded-full h-5 w-5 flex items-center justify-center text-xs">
-									{totalItems}
-								</span>
-							)}
-						</Link>
-						<LanguageToggle />
-					</div>
+    return (
+      <div className={`flex space-x-2 ${isMobile ? "px-3 py-2" : ""}`}>
+        {currentLanguage === "en" ? (
+          <button
+            onClick={() => handleLanguageChange("ar")}
+            className={buttonClasses}
+          >
+            {t("navbar.language_toggle.arabic")}
+          </button>
+        ) : (
+          <button
+            onClick={() => handleLanguageChange("en")}
+            className={buttonClasses}
+          >
+            {t("navbar.language_toggle.english")}
+          </button>
+        )}
+      </div>
+    );
+  };
 
-					<div className="md:hidden flex items-center">
-						<Link to="/cart" className="relative mr-4">
-							<ShoppingCartIcon className="h-6 w-6" />
-							{totalItems > 0 && (
-								<span className="absolute -top-2 -right-2 bg-primary text-white rounded-full h-5 w-5 flex items-center justify-center text-xs">
-									{totalItems}
-								</span>
-							)}
-						</Link>
-						<button
-							onClick={() => setIsMenuOpen(!isMenuOpen)}
-							className="inline-flex items-center justify-center p-2 rounded-md hover:text-primary focus:outline-none">
-							{isMenuOpen ? (
-								<XMarkIcon className="h-6 w-6" />
-							) : (
-								<Bars3Icon className="h-6 w-6" />
-							)}
-						</button>
-					</div>
-				</div>
-			</div>
+  const isActive = (path) => {
+    return location.pathname === path 
+      ? scrolled 
+        ? "text-amber-600 font-medium" 
+        : "text-amber-300 font-medium"
+      : scrolled 
+        ? "text-gray-700 hover:text-amber-600" 
+        : "text-white hover:text-amber-300";
+  };
 
-			{isMenuOpen && (
-				<div className="md:hidden">
-					<div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-						<Link
-							to="/"
-							className="block px-3 py-2 rounded-md hover:bg-primary hover:text-white"
-							onClick={() => setIsMenuOpen(false)}>
-							{t("navbar.home")}
-						</Link>
-						<Link
-							to="/about"
-							className="block px-3 py-2 rounded-md hover:bg-primary hover:text-white"
-							onClick={() => setIsMenuOpen(false)}>
-							{t("navbar.about")}
-						</Link>
-						<Link
-							to="/menu"
-							className="block px-3 py-2 rounded-md hover:bg-primary hover:text-white"
-							onClick={() => setIsMenuOpen(false)}>
-							{t("navbar.menu")}
-						</Link>
-						<Link
-							to="/partners"
-							className="block px-3 py-2 rounded-md hover:bg-primary hover:text-white"
-							onClick={() => setIsMenuOpen(false)}>
-							{t("navbar.partners")}
-						</Link>
-						<Link
-							to="/contact"
-							className="block px-3 py-2 rounded-md hover:bg-primary hover:text-white"
-							onClick={() => setIsMenuOpen(false)}>
-							{t("navbar.contact")}
-						</Link>
-						<LanguageToggle isMobile={true} />
-					</div>
-				</div>
-			)}
-		</nav>
-	);
+  return (
+    <nav
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white shadow-md py-2"
+          : "bg-transparent py-4"
+      }`}
+      dir={i18n.language === "ar" ? "rtl" : "ltr"}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link to="/" className="flex items-center space-x-2">
+              <div className={`w-12 h-12 rounded-full overflow-hidden border-2 transition-colors ${
+                scrolled ? "border-amber-600" : "border-amber-300"
+              }`}>
+                <img 
+                  src={logo} 
+                  alt="To'mah Logo" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <span className={`text-2xl font-bold transition-colors ${
+                scrolled ? "text-gray-800" : "text-white"
+              } hidden sm:block`}>
+                {t("navbar.brand")}
+              </span>
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link 
+              to="/" 
+              className={`nav-link relative py-2 transition-colors ${isActive("/")}`}
+            >
+              {t("navbar.home")}
+            </Link>
+            <Link 
+              to="/about" 
+              className={`nav-link relative py-2 transition-colors ${isActive("/about")}`}
+            >
+              {t("navbar.about")}
+            </Link>
+            <Link 
+              to="/menu" 
+              className={`nav-link relative py-2 transition-colors ${isActive("/menu")}`}
+            >
+              {t("navbar.menu")}
+            </Link>
+            <Link 
+              to="/partners" 
+              className={`nav-link relative py-2 transition-colors ${isActive("/partners")}`}
+            >
+              {t("navbar.partners")}
+            </Link>
+            <Link 
+              to="/contact" 
+              className={`nav-link relative py-2 transition-colors ${isActive("/contact")}`}
+            >
+              {t("navbar.contact")}
+            </Link>
+            <Link to="/cart" className="relative p-2 group">
+              <ShoppingCartIcon className={`h-6 w-6 transition-colors ${
+                scrolled 
+                  ? "text-gray-700 group-hover:text-amber-600" 
+                  : "text-white group-hover:text-amber-300"
+              }`} />
+              {totalItems > 0 && (
+                <span className={`absolute -top-1 -right-1 rounded-full h-5 w-5 flex items-center justify-center text-xs ${
+                  scrolled ? "bg-amber-600 text-white" : "bg-amber-300 text-amber-900"
+                }`}>
+                  {totalItems}
+                </span>
+              )}
+            </Link>
+            <LanguageToggle />
+          </div>
+
+          {/* Mobile Navigation */}
+          <div className="md:hidden flex items-center">
+            <Link to="/cart" className="relative mr-4 p-2">
+              <ShoppingCartIcon className={`h-6 w-6 ${
+                scrolled ? "text-gray-700" : "text-white"
+              }`} />
+              {totalItems > 0 && (
+                <span className={`absolute -top-1 -right-1 rounded-full h-5 w-5 flex items-center justify-center text-xs ${
+                  scrolled ? "bg-amber-600 text-white" : "bg-amber-300 text-amber-900"
+                }`}>
+                  {totalItems}
+                </span>
+              )}
+            </Link>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className={`p-2 rounded-md transition-colors ${
+                scrolled ? "text-gray-700 hover:text-amber-600" : "text-white hover:text-amber-300"
+              }`}
+            >
+              {isMenuOpen ? (
+                <XMarkIcon className="h-6 w-6" />
+              ) : (
+                <Bars3Icon className="h-6 w-6" />
+              )}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div 
+        className={`md:hidden absolute w-full bg-white shadow-lg transition-all duration-300 ease-in-out overflow-hidden ${
+          isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-4 py-3 space-y-2">
+          <Link
+            to="/"
+            className={`block px-3 py-2 rounded-md hover:bg-amber-50 transition-colors ${
+              location.pathname === "/" ? "text-amber-600 font-medium" : "text-gray-700"
+            }`}>
+            {t("navbar.home")}
+          </Link>
+          <Link
+            to="/about"
+            className={`block px-3 py-2 rounded-md hover:bg-amber-50 transition-colors ${
+              location.pathname === "/about" ? "text-amber-600 font-medium" : "text-gray-700"
+            }`}>
+            {t("navbar.about")}
+          </Link>
+          <Link
+            to="/menu"
+            className={`block px-3 py-2 rounded-md hover:bg-amber-50 transition-colors ${
+              location.pathname === "/menu" ? "text-amber-600 font-medium" : "text-gray-700"
+            }`}>
+            {t("navbar.menu")}
+          </Link>
+          <Link
+            to="/partners"
+            className={`block px-3 py-2 rounded-md hover:bg-amber-50 transition-colors ${
+              location.pathname === "/partners" ? "text-amber-600 font-medium" : "text-gray-700"
+            }`}>
+            {t("navbar.partners")}
+          </Link>
+          <Link
+            to="/contact"
+            className={`block px-3 py-2 rounded-md hover:bg-amber-50 transition-colors ${
+              location.pathname === "/contact" ? "text-amber-600 font-medium" : "text-gray-700"
+            }`}>
+            {t("navbar.contact")}
+          </Link>
+          <div className="pt-2 border-t border-gray-200">
+            <LanguageToggle isMobile={true} />
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
 }
 
 export default Navbar;
