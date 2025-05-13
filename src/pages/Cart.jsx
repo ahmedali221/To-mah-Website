@@ -8,10 +8,7 @@ import { useNavigate } from "react-router-dom";
 function Cart() {
 	const { cartItems, removeFromCart, updateQuantity, clearCart, getCartTotal } =
 		useCart();
-	const [deliveryInfo, setDeliveryInfo] = useState({
-		address: "",
-		phone: "",
-	});
+	const [deliveryInfo, setDeliveryInfo] = useState({ address: "", phone: "" });
 	const [showCheckoutForm, setShowCheckoutForm] = useState(false);
 	const navigate = useNavigate();
 	const { t, i18n } = useTranslation();
@@ -26,7 +23,7 @@ function Cart() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		alert(t("cart.order_success")); // Demo alert translated
+		alert(t("cart.order_success"));
 		clearCart();
 		setShowCheckoutForm(false);
 		setDeliveryInfo({ address: "", phone: "" });
@@ -51,8 +48,6 @@ function Cart() {
 			dir={i18n.language === "ar" ? "rtl" : "ltr"}>
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<h1 className="text-4xl font-bold mb-8">{t("cart.title")}</h1>
-
-				{/* Cart Items */}
 				<div className="grid grid-cols-1 gap-6 mb-8">
 					{cartItems.map((item) => (
 						<div
@@ -61,24 +56,20 @@ function Cart() {
 							<figure className="lg:w-48">
 								<img
 									src={item.image}
-									alt={
-										i18n.language === "ar" && item.name_ar
-											? item.name_ar
-											: item.name
-									}
+									alt={i18n.language === "ar" ? item.name_ar : item.name_en}
 									className="h-full w-full object-cover"
 								/>
 							</figure>
 							<div className="card-body">
 								<h2 className="card-title">
-									{i18n.language === "ar" && item.name_ar
-										? item.name_ar
-										: item.name}
+									{i18n.language === "ar" ? item.name_ar : item.name_en}
 								</h2>
+								<p>{i18n.language === "ar" ? item.desc_ar : item.desc_en}</p>
 								<p>
-									{i18n.language === "ar" && item.description_ar
-										? item.description_ar
-										: item.description}
+									{t("meal_details.ingredients")}:{" "}
+									{i18n.language === "ar"
+										? item.ingredients_ar.join(", ")
+										: item.ingredients_en.join(", ")}
 								</p>
 								<div className="flex justify-between items-center">
 									<div className="flex items-center space-x-4">
@@ -114,8 +105,6 @@ function Cart() {
 						</div>
 					))}
 				</div>
-
-				{/* Cart Summary */}
 				<div className="card bg-base-100 shadow-xl mb-8">
 					<div className="card-body">
 						<h2 className="card-title">{t("cart.summary")}</h2>
@@ -134,8 +123,6 @@ function Cart() {
 						</div>
 					</div>
 				</div>
-
-				{/* Checkout Form */}
 				{showCheckoutForm && (
 					<div className="card bg-base-100 shadow-xl">
 						<div className="card-body">
@@ -158,7 +145,6 @@ function Cart() {
 										}
 										required></textarea>
 								</div>
-
 								<div>
 									<label className="label">
 										<span className="label-text">{t("cart.phone_label")}</span>
@@ -176,7 +162,6 @@ function Cart() {
 										required
 									/>
 								</div>
-
 								<div className="card-actions justify-end">
 									<button type="submit" className="btn btn-primary">
 										{t("cart.place_order")}

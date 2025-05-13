@@ -15,6 +15,17 @@ function Menu() {
 	const minPrice = Math.min(...productsData.map((p) => p.price));
 	const maxPrice = Math.max(...productsData.map((p) => p.price));
 
+	// Extract unique categories based on language
+	const categories = [
+		...new Set(
+			productsData.map((product) =>
+				i18n.language === "ar" && product.category_ar
+					? product.category_ar
+					: product.category_en
+			)
+		),
+	];
+
 	const [filters, setFilters] = useState({
 		category: "",
 		brand: "",
@@ -101,7 +112,11 @@ function Menu() {
 							<h2 className="text-xl font-bold mb-4 uppercase">
 								{t("menu.filters")}
 							</h2>
-							<Sidebar filters={filters} setFilters={setFilters} />
+							<Sidebar
+								filters={filters}
+								setFilters={setFilters}
+								categories={categories}
+							/>
 						</div>
 					</div>
 

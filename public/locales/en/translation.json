@@ -291,6 +291,7 @@
 	},
 	"menu": {
 		"show_filters": "Show Filters",
+		"all_categories": "All Categories",
 		"hide_filters": "Hide Filters",
 		"filters": "Filters"
 	},
