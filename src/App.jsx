@@ -37,7 +37,7 @@ function App() {
           </div>
 
           {/* Page Content with Top Padding */}
-          <main className="flex-grow mt-10">
+          <main className="flex-grow mt-16">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />

@@ -29,6 +29,7 @@ function Home() {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [visible, setVisible] = useState(false);
 
   const heroImages = [image, image2, image3];
   
@@ -37,6 +38,10 @@ function Home() {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length);
     }, 5000);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    setVisible(true);
   }, []);
 
   const getRandomMeals = (num) => {
@@ -67,14 +72,14 @@ function Home() {
   {/* Navigation Arrows */}
   <button
     onClick={() => setCurrentSlide(prev => (prev === 0 ? heroImages.length - 1 : prev - 1))}
-    className="absolute left-4 top-1/2 -translate-y-1/2 nav-arrow"
+    className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center z-20 transition-all duration-300"
     aria-label="Previous slide"
   >
     &lt;
   </button>
   <button
- c    onClick={() => setCurrentSlide(prev => (prev + 1) % heroImages.length)}
-    className="absolute right-4 top-1/2 -translate-y-1/2 nav-arrow"
+    onClick={() => setCurrentSlide(prev => (prev + 1) % heroImages.length)}
+    className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center z-20 transition-all duration-300"
     aria-label="Next slide"
   >
     &gt;
@@ -133,8 +138,6 @@ function Home() {
         </div>
       </section>
 
-
-
 {/* Our Vision & Goals */}
 <section className="py-16 bg-gradient-to-b">
   <div className="max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-16">
@@ -177,9 +180,9 @@ function Home() {
           </div>
         </div>
       </div>
-      {/* Stacked Images - Updated with larger sizes, object-contain, and removed borders */}
-      <div className="order-1 lg:order-2 flex justify-center relative min-h-[500px]">
-        <div className="relative w-full max-w-2xl h-[500px]">
+      {/* Stacked Images - Updated with responsive adjustments */}
+      <div className="order-1 lg:order-2 flex justify-center relative min-h-[300px] md:min-h-[400px] lg:min-h-[500px]">
+        <div className="relative w-full max-w-md md:max-w-lg lg:max-w-2xl h-[300px] md:h-[400px] lg:h-[500px]">
           <img
             src={goals}
             alt={t("home.vision.image_alt")}
@@ -189,19 +192,18 @@ function Home() {
           <img
             src={vision}
             alt={t("home.vision.image_alt")}
-            className="rounded-lg shadow-xl w-4/5 h-4/5 object-contain absolute bottom-0 right-0 z-20 translate-x-16 translate-y-16"
+            className="rounded-lg shadow-xl w-4/5 h-4/5 object-contain absolute bottom-0 right-0 z-20 translate-x-8 md:translate-x-12 lg:translate-x-16 translate-y-8 md:translate-y-12 lg:translate-y-16"
             style={{ boxShadow: "0 6px 24px rgba(0,0,0,0.10)" }}
           />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-white rounded-lg p-4 shadow-xl z-30 min-w-[160px]">
-            <div className="text-2xl font-bold">{t("home.vision.years")}</div>
-            <div className="text-sm text-gray-600">{t("home.vision.experience")}</div>
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-white rounded-lg p-4 shadow-xl z-30 min-w-[120px] md:min-w-[160px]">
+            <div className="text-xl md:text-2xl font-bold">{t("home.vision.years")}</div>
+            <div className="text-xs md:text-sm text-gray-600">{t("home.vision.experience")}</div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
       {/* Our Menu */}
       <section className="py-16 bg-gradient-to-b">
@@ -254,16 +256,13 @@ function Home() {
                   alt={t("home.vision.image_alt")}
                   className="rounded-lg shadow-2xl w-full h-auto"
                 />
-                <div className="absolute -bottom-8 -right-8 bg-white rounded-lg p-4 shadow-xl">
-                  <div className="text-2xl font-bold">{t("home.vision.years")}</div>
-                  <div className="text-sm text-gray-600">{t("home.vision.experience")}</div>
+                <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -right-4 sm:-right-6 md:-right-8 bg-white rounded-lg p-3 sm:p-4 shadow-xl">
+                  <div className="text-lg sm:text-xl md:text-2xl font-bold">{t("home.vision.years")}</div>
+                  <div className="text-xs sm:text-sm text-gray-600">{t("home.vision.experience")}</div>
                 </div>
               </div>
             </div>
           </div>
-        
-          
-        
         </div>
       </section>
 
@@ -325,7 +324,7 @@ function Home() {
                 </span>
               </h2>
               <p className="mb-6 text-gray-600 text-lg leading-relaxed">{t("home.about.description")}</p>
-              <Link to="/about" className="btn  px-8">
+              <Link to="/about" className="btn px-8">
                 {t("home.about.button")}
               </Link>
             </div>
@@ -335,9 +334,9 @@ function Home() {
                 alt={t("home.about.image_alt")}
                 className="rounded-xl shadow-2xl object-cover"
               />
-              <div className="absolute -bottom-6 -left-6  text-white p-4 rounded-lg">
-                <p className="text-lg font-bold">Est. 2010</p>
-                <p>Serving Authentic Cuisine</p>
+              <div className="absolute -bottom-4 sm:-bottom-6 -left-4 sm:-left-6 text-white p-3 sm:p-4 rounded-lg">
+                <p className="text-base sm:text-lg font-bold">Est. 2010</p>
+                <p className="text-sm">Serving Authentic Cuisine</p>
               </div>
             </div>
           </div>
@@ -345,12 +344,12 @@ function Home() {
       </div>
       
       {/* Call to Action */}
-      <section className="py-16 ">
+      <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience the Taste of Tradition Today</h2>
-          <p className="text-lg mb-8">Join us for an unforgettable culinary journey through our city's rich food heritage</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Experience the Taste of Tradition Today</h2>
+          <p className="text-base sm:text-lg mb-8">Join us for an unforgettable culinary journey through our city's rich food heritage</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/menu" className="btn bg-white  hover:bg-gray-100 border-none">
+            <Link to="/menu" className="btn bg-white hover:bg-gray-100 border-none">
               Browse Our Menu
             </Link>
             <Link to="/contact" className="btn bg-transparent border-white hover:bg-white/10">

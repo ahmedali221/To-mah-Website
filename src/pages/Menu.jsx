@@ -157,7 +157,7 @@ function Menu() {
       </section>
 
       {/* Menu Content */}
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-2 sm:px-4 py-4 sm:py-8">
         {/* Mobile filter toggle button */}
         <button
           className={`md:hidden w-full py-3 mb-4 bg-black text-white flex justify-center items-center transition-all duration-700 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
