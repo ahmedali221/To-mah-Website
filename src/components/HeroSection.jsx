@@ -13,6 +13,7 @@ export default function HeroSection({ setSearchQuery, image }) {
     style={{
         backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0) 60%), url(${image})`,
         backgroundSize: "100% 100%",
+        minHeight: "100vh", // Add this line to set a minimum height for the herosection div
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "scroll",
         backgroundPosition: "center center",
