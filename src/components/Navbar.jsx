@@ -106,6 +106,43 @@ function Navbar({ changeLanguage }) {
 
 					{/* Desktop Navigation */}
 					<div className="hidden md:flex items-center space-x-8">
+						{/* Pages Dropdown as Text Link */}
+						<div className="relative group">
+							<span className={`block px-4 py-2 text-primary hover:text-primary transition"} group`}>
+								{t("navbar.pages")}
+								<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+							</span>
+							<div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 transition-all duration-300 z-40 pointer-events-none group-hover:pointer-events-auto">
+								<Link to="/" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.home")}</Link>
+								<Link to="/about" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.about")}</Link>
+								<Link to="/menu" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.menu")}</Link>
+								<Link to="/partners" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.partners")}</Link>
+								<Link to="/contact" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.contact")}</Link>
+							</div>
+						</div>
+
+						{/* Our Websites Dropdown as Text Link, Full Width */}
+						<div className="relative group">
+							<span className={`block px-4 py-2 text-primary hover:text-primary transition"} group`}>
+								{t("navbar.our_websites")}
+								<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+							</span>
+							<div className="fixed left-0 right-0 mt-2 bg-white rounded-b-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 transition-all duration-300 z-40 pointer-events-none group-hover:pointer-events-auto w-screen">
+								<div className="flex flex-row justify-center space-x-8 px-8 py-6">
+									{/* Example website 1 */}
+									<a href="https://website1.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center hover:scale-105 transition-transform duration-200">
+										<img src="/assets/website1.png" alt="Website 1" className="w-16 h-16 rounded-lg shadow mb-2"/>
+										<span className="text-sm font-medium text-gray-700">Website 1</span>
+									</a>
+									{/* Example website 2 */}
+									<a href="https://website2.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center hover:scale-105 transition-transform duration-200">
+										<img src="/assets/website2.png" alt="Website 2" className="w-16 h-16 rounded-lg shadow mb-2"/>
+										<span className="text-sm font-medium text-gray-700">Website 2</span>
+									</a>
+									{/* Add more websites as needed */}
+								</div>
+							</div>
+						</div>
 						<Link 
 							to="/" 
 							className={`nav-link relative py-2 transition-colors duration-300 hover:text-primary ${isActive("/")} group`}
@@ -185,7 +222,7 @@ function Navbar({ changeLanguage }) {
 
 					{/* Mobile Navigation */}
 					<div className="md:hidden flex items-center">
-						<Link to="/cart" className="relative mr-4 p-2">
+						<Link to="/cart" className="relative mr-4 p-2 color-primary">
 							<ShoppingCartIcon className="h-6 w-6" />
 							{totalItems > 0 && (
 								<span className="absolute -top-1 -right-1 bg-primary text-white rounded-full h-5 w-5 flex items-center justify-center text-xs">

@@ -1,6 +1,6 @@
 /* Base body styles */
 body {
-  font-family: 'Merienda', cursive;
+  font-family: 'Roboto', ;
   background: #f8f9fc;
   color: #101828;
   font-size: 16px;
@@ -398,12 +398,12 @@ button:hover,
     font-size: 2rem;
     line-height: 1.2;
   }
-  
+
   .hero-content p {
     font-size: 1rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     gap: 1rem;
@@ -430,19 +430,19 @@ button:hover,
   .menu-card {
     padding: 0.75rem;
   }
-  
+
   .menu-card-image {
     height: 150px;
   }
-  
+
   .menu-card-content h3 {
     font-size: 1.1rem;
   }
-  
+
   .menu-card-price {
     font-size: 1rem;
   }
-  
+
   .menu-card-actions {
     flex-direction: column;
     gap: 0.5rem;
@@ -586,13 +586,13 @@ a,
 
 /* RTL-specific responsive adjustments */
 @media (max-width: 768px) {
-body[dir="rtl"] .space-x-4 > * + * {
-margin-right: 0.5rem;
-margin-left: 0;
-}
+  body[dir="rtl"] .space-x-4>*+* {
+    margin-right: 0.5rem;
+    margin-left: 0;
+  }
 
-body[dir="rtl"] .md\:space-x-6 > * + * {
-margin-right: 0.75rem;
-margin-left: 0;
-}
+  body[dir="rtl"] .md\:space-x-6>*+* {
+    margin-right: 0.75rem;
+    margin-left: 0;
+  }
 }
