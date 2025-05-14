@@ -12,8 +12,8 @@ import about from "../assets/about.png";
 import menu from "../assets/menu.png";
 import image3 from "../assets/AboutImages/S3.jpg";
 import HeroSection from "../components/HeroSection";
-import { 
-  HeartIcon, 
+import {
+  HeartIcon,
   SparklesIcon,
   StarIcon,
   UserGroupIcon,
@@ -22,7 +22,7 @@ import {
   ClockIcon,
   ShieldCheckIcon,
   TruckIcon,
-  
+
 } from '@heroicons/react/24/outline';
 
 function Home() {
@@ -31,7 +31,7 @@ function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const heroImages = [image, image2, image3];
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length);
@@ -48,52 +48,50 @@ function Home() {
 
   return (
     <div dir={i18n.language === "ar" ? "rtl" : "ltr"} className="main-bg">
-   {/* Hero Banner Slider */}
-<div className="relative w-full h-screen overflow-hidden">
-  {/* Slides */}
-  <div className="relative w-full h-full">
-    {heroImages.map((img, index) => (
-      <div
-        key={index}
-        className={`absolute inset-0 transition-opacity duration-1000 ${
-          index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
-      >
-        <HeroSection image={img} />
+      {/* Hero Banner Slider */}
+      <div className="relative w-full h-screen overflow-hidden ">
+        {/* Slides */}
+        <div className="relative w-full h-full">
+          {heroImages.map((img, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                }`}
+            >
+              <HeroSection image={img} />
+            </div>
+          ))}
+        </div>
+
+        {/* Navigation Arrows */}
+        <button
+          onClick={() => setCurrentSlide(prev => (prev === 0 ? heroImages.length - 1 : prev - 1))}
+          className="absolute left-4 top-1/2 -translate-y-1/2 nav-arrow"
+          aria-label="Previous slide"
+        >
+          &lt;
+        </button>
+        <button
+          c onClick={() => setCurrentSlide(prev => (prev + 1) % heroImages.length)}
+          className="absolute right-4 top-1/2 -translate-y-1/2 nav-arrow"
+          aria-label="Next slide"
+        >
+          &gt;
+        </button>
+
+        {/* Slide Indicators */}
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all ${index === currentSlide ? 'bg-white w-6' : 'bg-white/50'
+                }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
-
-  {/* Navigation Arrows */}
-  <button
-    onClick={() => setCurrentSlide(prev => (prev === 0 ? heroImages.length - 1 : prev - 1))}
-    className="absolute left-4 top-1/2 -translate-y-1/2 nav-arrow"
-    aria-label="Previous slide"
-  >
-    &lt;
-  </button>
-  <button
- c    onClick={() => setCurrentSlide(prev => (prev + 1) % heroImages.length)}
-    className="absolute right-4 top-1/2 -translate-y-1/2 nav-arrow"
-    aria-label="Next slide"
-  >
-    &gt;
-  </button>
-
-  {/* Slide Indicators */}
-  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
-    {heroImages.map((_, index) => (
-      <button
-        key={index}
-        onClick={() => setCurrentSlide(index)}
-        className={`w-3 h-3 rounded-full transition-all ${
-          index === currentSlide ? 'bg-white w-6' : 'bg-white/50'
-        }`}
-        aria-label={`Go to slide ${index + 1}`}
-      />
-    ))}
-  </div>
-</div>
 
       {/* Our Philosophy Section */}
       <section className="py-16 bg-white">
@@ -104,7 +102,7 @@ function Home() {
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
             </span>
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6">
@@ -113,7 +111,7 @@ function Home() {
               <h3 className="text-xl font-bold mb-3">{t("home.values.quality.title")}</h3>
               <p className="text-gray-600">{t("home.values.quality.description")}</p>
             </div>
-            
+
             <div className="flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <SparklesIcon className="w-8 h-8" />
@@ -121,7 +119,7 @@ function Home() {
               <h3 className="text-xl font-bold mb-3">{t("home.values.tradition.title")}</h3>
               <p className="text-gray-600">{t("home.values.tradition.description")}</p>
             </div>
-            
+
             <div className="flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <StarIcon className="w-8 h-8" />
@@ -135,96 +133,28 @@ function Home() {
 
 
 
-{/* Our Vision & Goals */}
-<section className="py-16 bg-gradient-to-b">
-  <div className="max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-16">
-    <h2 className="text-4xl font-bold text-center mb-16 relative">
-      <span className="relative px-8">
-        {t("home.vision.title")}
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
-      </span>
-    </h2>
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-      {/* Text Content */}
-      <div className="order-2 lg:order-1">
-        <div className="space-y-8">
-          <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 bg-white rounded-lg p-3 shadow-md">
-              <GlobeAltIcon className="w-8 h-8" />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-2">{t("home.vision.heritage.title")}</h3>
-              <p className="text-gray-600">{t("home.vision.heritage.description")}</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 bg-white rounded-lg p-3 shadow-md">
-              <LightBulbIcon className="w-8 h-8" />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-2">{t("home.vision.innovation.title")}</h3>
-              <p className="text-gray-600">{t("home.vision.innovation.description")}</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 bg-white rounded-lg p-3 shadow-md">
-              <UserGroupIcon className="w-8 h-8" />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-2">{t("home.vision.community.title")}</h3>
-              <p className="text-gray-600">{t("home.vision.community.description")}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Stacked Images - Updated with larger sizes, object-contain, and removed borders */}
-      <div className="order-1 lg:order-2 flex justify-center relative min-h-[500px]">
-        <div className="relative w-full max-w-2xl h-[500px]">
-          <img
-            src={goals}
-            alt={t("home.vision.image_alt")}
-            className="rounded-lg shadow-2xl w-full h-full object-contain absolute top-0 left-0 z-10"
-            style={{ boxShadow: "0 10px 40px rgba(0,0,0,0.15)" }}
-          />
-          <img
-            src={vision}
-            alt={t("home.vision.image_alt")}
-            className="rounded-lg shadow-xl w-4/5 h-4/5 object-contain absolute bottom-0 right-0 z-20 translate-x-16 translate-y-16"
-            style={{ boxShadow: "0 6px 24px rgba(0,0,0,0.10)" }}
-          />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-white rounded-lg p-4 shadow-xl z-30 min-w-[160px]">
-            <div className="text-2xl font-bold">{t("home.vision.years")}</div>
-            <div className="text-sm text-gray-600">{t("home.vision.experience")}</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-      {/* Our Menu */}
+      {/* Our Vision & Goals */}
       <section className="py-16 bg-gradient-to-b">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-16">
           <h2 className="text-4xl font-bold text-center mb-16 relative">
             <span className="relative px-8">
-              {t("home.menu.title")}
+              {t("home.vision.title")}
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
             </span>
           </h2>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="order-1 lg:order-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Text Content */}
+            <div className="order-2 lg:order-1">
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 bg-white rounded-lg p-3 shadow-md">
                     <GlobeAltIcon className="w-8 h-8" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">{t("home.chefs.title")}</h3>
-                    <p className="text-gray-600">{t("home.chefs.description")}</p>
+                    <h3 className="text-xl font-bold mb-2">{t("home.vision.heritage.title")}</h3>
+                    <p className="text-gray-600">{t("home.vision.heritage.description")}</p>
                   </div>
                 </div>
-                
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 bg-white rounded-lg p-3 shadow-md">
                     <LightBulbIcon className="w-8 h-8" />
@@ -234,7 +164,6 @@ function Home() {
                     <p className="text-gray-600">{t("home.vision.innovation.description")}</p>
                   </div>
                 </div>
-                
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 bg-white rounded-lg p-3 shadow-md">
                     <UserGroupIcon className="w-8 h-8" />
@@ -246,11 +175,80 @@ function Home() {
                 </div>
               </div>
             </div>
-            
+            {/* Stacked Images - Updated with larger sizes, object-contain, and removed borders */}
+            <div className="order-1 lg:order-2 flex justify-center relative min-h-[500px]">
+              <div className="relative w-full max-w-2xl h-[500px]">
+                <img
+                  src={goals}
+                  alt={t("home.vision.image_alt")}
+                  className="rounded-lg shadow-2xl w-full h-full object-contain absolute top-0 left-0 z-10"
+                  style={{ boxShadow: "0 10px 40px rgba(0,0,0,0.15)" }}
+                />
+                <img
+                  src={vision}
+                  alt={t("home.vision.image_alt")}
+                  className="rounded-lg shadow-xl w-4/5 h-4/5 object-contain absolute bottom-0 right-0 z-20 translate-x-16 translate-y-16"
+                  style={{ boxShadow: "0 6px 24px rgba(0,0,0,0.10)" }}
+                />
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-white rounded-lg p-4 shadow-xl z-30 min-w-[160px]">
+                  <div className="text-2xl font-bold">{t("home.vision.years")}</div>
+                  <div className="text-sm text-gray-600">{t("home.vision.experience")}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Our Menu */}
+      <section className="py-16 bg-gradient-to-b">
+        <h2 className="text-4xl font-bold text-center mb-16 relative">
+          <span className="relative px-8">
+            {t("home.menu.title")}
+            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
+          </span>
+        </h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="order-1 lg:order-2">
+              <div className="space-y-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 bg-white rounded-lg p-3 shadow-md">
+                    <GlobeAltIcon className="w-8 h-8" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">{t("home.chefs.title")}</h3>
+                    <p className="text-gray-600">{t("home.chefs.description")}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 bg-white rounded-lg p-3 shadow-md">
+                    <LightBulbIcon className="w-8 h-8" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">{t("home.vision.innovation.title")}</h3>
+                    <p className="text-gray-600">{t("home.vision.innovation.description")}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 bg-white rounded-lg p-3 shadow-md">
+                    <UserGroupIcon className="w-8 h-8" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">{t("home.vision.community.title")}</h3>
+                    <p className="text-gray-600">{t("home.vision.community.description")}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="order-2 lg:order-1">
               <div className="relative">
                 <img
-                  src={menu} 
+                  src={menu}
                   alt={t("home.vision.image_alt")}
                   className="rounded-lg shadow-2xl w-full h-auto"
                 />
@@ -261,9 +259,9 @@ function Home() {
               </div>
             </div>
           </div>
-        
-          
-        
+
+
+
         </div>
       </section>
 
@@ -276,7 +274,7 @@ function Home() {
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
             </span>
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -285,7 +283,7 @@ function Home() {
               <h3 className="text-xl font-bold mb-2">{t("home.features.quality.title")}</h3>
               <p className="text-gray-600">{t("home.features.quality.description")}</p>
             </div>
-            
+
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <ClockIcon className="h-8 w-8" />
@@ -293,7 +291,7 @@ function Home() {
               <h3 className="text-xl font-bold mb-2">{t("home.features.service.title")}</h3>
               <p className="text-gray-600">{t("home.features.service.description")}</p>
             </div>
-            
+
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <ShieldCheckIcon className="h-8 w-8" />
@@ -301,7 +299,7 @@ function Home() {
               <h3 className="text-xl font-bold mb-2">{t("home.features.hygiene.title")}</h3>
               <p className="text-gray-600">{t("home.features.hygiene.description")}</p>
             </div>
-            
+
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TruckIcon className="h-8 w-8" />
@@ -343,7 +341,7 @@ function Home() {
           </div>
         </div>
       </div>
-      
+
       {/* Call to Action */}
       <section className="py-16 ">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
@@ -354,7 +352,7 @@ function Home() {
               Browse Our Menu
             </Link>
             <Link to="/contact" className="btn bg-transparent border-white hover:bg-white/10">
-             Order Now
+              Order Now
             </Link>
           </div>
         </div>

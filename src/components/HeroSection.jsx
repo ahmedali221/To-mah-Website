@@ -9,14 +9,24 @@ export default function HeroSection({ setSearchQuery, image }) {
 
 	return (
 		<div
-			className="w-full h-screen relative flex items-center justify-center text-white pt-16"
-			style={{
-				backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0) 60%), url(${image})`,
-				backgroundSize: "cover",
-				backgroundRepeat: "no-repeat",
-				backgroundAttachment: "fixed",
-			}}
-			dir={i18n.language === "ar" ? "rtl" : "ltr"}>
+			className="relative w-full h-screen flex items-center justify-center pt-16"
+			dir={i18n.language === "ar" ? "rtl" : "ltr"}
+		>
+
+			<img
+				src={image}
+				alt="hero"
+				className="absolute inset-0 w-full h-full object-contain z-0 transform sm:scale-x-100 md:scale-x-110 lg:scale-x-120" // زيادة الحجم فقط في الشاشات الكبيرة
+			/>
+
+
+			<div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-transparent z-10" />
+
+
+			<div className="relative z-20 text-white">
+
+				<h1 className="text-4xl font-bold">{t("hero.title")}</h1>
+			</div>
 		</div>
 	);
 }
