@@ -81,7 +81,7 @@ const ContactPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 relative max-w-6xl mx-auto">
           {/* First Column */}
           <div className={`flex flex-col items-center w-full transition-all duration-1000 delay-500 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
-            <div className="h-64 md:h-96 w-4/5 overflow-hidden relative">
+            <div className="h-48 sm:h-64 md:h-96 w-full sm:w-4/5 overflow-hidden relative">
               <img
 								src="https://tomah.sa/uploads/products/8.jpg"
                 alt={t("contact.location_image_alt")}

@@ -8,21 +8,21 @@ function Partners() {
       id: 1,
       name_key: "partners.partners.0.name",
       role_key: "partners.partners.0.role",
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400',
+      image: 'https://imgs.search.brave.com/fbxInw05M6mkNEHaT64Qm3dNEzTIVXrwCD4lxk4ve3A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE3LzM0LzY3/LzM2MF9GXzIxNzM0/Njc4Ml83WHBDVHQ4/YkxOSnF2VkFhRFpK/d3Zaam0wZXBRbWo2/ai5qcGc',
       testimonial_key: "partners.partners.0.testimonial"
     },
     {
       id: 2,
       name_key: "partners.partners.1.name",
       role_key: "partners.partners.1.role",
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400',
+      image: 'https://imgs.search.brave.com/fbxInw05M6mkNEHaT64Qm3dNEzTIVXrwCD4lxk4ve3A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE3LzM0LzY3/LzM2MF9GXzIxNzM0/Njc4Ml83WHBDVHQ4/YkxOSnF2VkFhRFpK/d3Zaam0wZXBRbWo2/ai5qcGc',
       testimonial_key: "partners.partners.1.testimonial"
     },
     {
       id: 3,
       name_key: "partners.partners.2.name",
       role_key: "partners.partners.2.role",
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
+      image: 'https://imgs.search.brave.com/fbxInw05M6mkNEHaT64Qm3dNEzTIVXrwCD4lxk4ve3A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE3LzM0LzY3/LzM2MF9GXzIxNzM0/Njc4Ml83WHBDVHQ4/YkxOSnF2VkFhRFpK/d3Zaam0wZXBRbWo2/ai5qcGc',
       testimonial_key: "partners.partners.2.testimonial"
     }
   ]);
@@ -32,21 +32,21 @@ function Partners() {
       id: 1,
       name_key: "partners.suppliers.0.name",
       type_key: "partners.suppliers.0.type",
-      image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400',
+      image: 'https://imgs.search.brave.com/fbxInw05M6mkNEHaT64Qm3dNEzTIVXrwCD4lxk4ve3A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE3LzM0LzY3/LzM2MF9GXzIxNzM0/Njc4Ml83WHBDVHQ4/YkxOSnF2VkFhRFpK/d3Zaam0wZXBRbWo2/ai5qcGc',
       description_key: "partners.suppliers.0.description"
     },
     {
       id: 2,
       name_key: "partners.suppliers.1.name",
       type_key: "partners.suppliers.1.type",
-      image: 'https://images.unsplash.com/photo-1551189014-fe516aed0e9e?w=400',
+      image: 'https://imgs.search.brave.com/fbxInw05M6mkNEHaT64Qm3dNEzTIVXrwCD4lxk4ve3A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE3LzM0LzY3/LzM2MF9GXzIxNzM0/Njc4Ml83WHBDVHQ4/YkxOSnF2VkFhRFpK/d3Zaam0wZXBRbWo2/ai5qcGc',
       description_key: "partners.suppliers.1.description"
     },
     {
       id: 3,
       name_key: "partners.suppliers.2.name",
       type_key: "partners.suppliers.2.type",
-      image: 'https://images.unsplash.com/photo-1579684947550-22e945225d9a?w=400',
+      image: 'https://imgs.search.brave.com/fbxInw05M6mkNEHaT64Qm3dNEzTIVXrwCD4lxk4ve3A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE3LzM0LzY3/LzM2MF9GXzIxNzM0/Njc4Ml83WHBDVHQ4/YkxOSnF2VkFhRFpK/d3Zaam0wZXBRbWo2/ai5qcGc',
       description_key: "partners.suppliers.2.description"
     }
   ]);

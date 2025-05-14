@@ -2,6 +2,8 @@
 	"navbar": {
 		"brand": "طُعمة",
 		"home": "الرئيسية",
+				"pages":"الصفحات",
+		"our_websites":"تصفح موقعنا",
 		"about": "من نحن",
 		"menu": "القائمة",
 		"partners": "الشركاء",
@@ -233,7 +235,7 @@
         "description": "خلق مساحة ترحيبية لجميع ضيوفنا"
       },
       "image_alt": "صورة رؤية المطعم",
-      "years": "تأسس 2010",
+      "years": "تأسس 2024",
       "experience": "سنوات من التميز"
     },
     "features": {
@@ -305,11 +307,14 @@
 		"currency": "ر.س",
 		"toast": "تمت إضافة العنصر إلى السلة!"
 	},
-	"menu": {
-		"show_filters": "إظهار الفلاتر",
-		"hide_filters": "إخفاء الفلاتر",
-		"filters": "الفلاتر"
-	},
+  "menu": {
+    "search_placeholder": "ابحث في قائمتنا...",
+    "search_title": "ابحث عن طبقك المفضل",
+    "search_description": "تصفح تشكيلتنا اللذيذة من المأكولات السعودية التقليدية",
+    "show_filters": "إظهار الفلاتر",
+    "hide_filters": "إخفاء الفلاتر",
+    "filters": "الفلاتر"
+  },
 	"partners": {
 		"hero": {
 			"title": "شركاؤنا",

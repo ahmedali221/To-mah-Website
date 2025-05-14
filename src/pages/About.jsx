@@ -118,7 +118,7 @@ const About = () => {
 	}, []);
 
 	return (
-		<div dir={i18n.language === "ar" ? "rtl" : "ltr"} className="bg-slate-50 ">
+		<div dir={i18n.language === "ar" ? "rtl" : "ltr"} className="bg-slate-50 overflow-x-hidden">
 			{/* OUR STORY SECTION */}
 			<section className="py-16 bg-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

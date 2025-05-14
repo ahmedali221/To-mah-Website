@@ -1,6 +1,8 @@
 {
 	"navbar": {
 		"brand": "To'mah",
+		"pages":"Pages",
+		"our_websites":"Our Websites",
 		"home": "Home",
 		"about": "About",
 		"menu": "Menu",
@@ -223,7 +225,7 @@
         "description": "Creating a welcoming space for all our guests"
       },
       "image_alt": "Restaurant Vision Image",
-      "years": "Est. 2010",
+      "years": "Est. 2024",
       "experience": "Years of Excellence"
     },
     "features": {
@@ -296,6 +298,9 @@
 		"toast": "Item added to cart!"
 	},
 	"menu": {
+		"search_placeholder": "Search our menu...",
+		"search_title": "Find Your Favorite Dish",
+		"search_description": "Browse our delicious selection of traditional Saudi cuisine",
 		"show_filters": "Show Filters",
 		"hide_filters": "Hide Filters",
 		"filters": "Filters"

@@ -104,9 +104,26 @@ function Menu() {
 
   return (
     <div className="bg-gray-50" dir={i18n.language === "ar" ? "rtl" : "ltr"}>
-      {/* Hero Section with Animation */}
-      <div className={`transition-opacity duration-700 ${visible ? 'opacity-100' : 'opacity-0'}`}>
-        <HeroSection setSearchQuery={handleSearchQueryChange} image={MenuHero} />
+      {/* Decorated Search Section */}
+      <div className="bg-gradient-to-r from-gray-900 to-gray-800 py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="relative">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => handleSearchQueryChange(e.target.value)}
+              placeholder={t("menu.search_placeholder")}
+              className="w-full px-6 py-4 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 text-lg"
+            />
+            <button
+              className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white rounded-full p-3 transition-all duration-300"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* Menu Introduction */}
@@ -157,7 +174,7 @@ function Menu() {
       </section>
 
       {/* Menu Content */}
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-2 sm:px-4 py-4 sm:py-8">
         {/* Mobile filter toggle button */}
         <button
           className={`md:hidden w-full py-3 mb-4 bg-black text-white flex justify-center items-center transition-all duration-700 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
