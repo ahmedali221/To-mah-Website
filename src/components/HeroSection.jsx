@@ -9,14 +9,13 @@ export default function HeroSection({ setSearchQuery, image }) {
 
 	return (
 		<div
-    className="w-full min-h-[50vh] md:min-h-[70vh] lg:min-h-[90vh] relative flex items-center justify-center text-white pt-16"
+    className="w-full h-screen relative flex items-center justify-center text-white pt-16"
     style={{
         backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0) 60%), url(${image})`,
-        backgroundSize: "contain",
+        backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "scroll",
         backgroundPosition: "center center",
-        minHeight: "calc(100vh - 4rem)", // Changed to viewport-based height
     }}
     dir={i18n.language === "ar" ? "rtl" : "ltr"}>
     <div className="container mx-auto px-4 text-center z-10">
