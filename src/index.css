@@ -51,7 +51,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Merienda', cursive;
+  font-family: 'Roboto ', ;
   color: #101828;
 }
 
@@ -84,7 +84,6 @@ button,
   padding: 12px 30px;
   border: none;
   border-radius: 25px;
-  font-family: 'Merienda', cursive;
   font-size: 1rem;
   transition: background 0.2s, color 0.2s;
 }

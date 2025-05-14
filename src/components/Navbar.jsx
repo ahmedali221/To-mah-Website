@@ -208,7 +208,7 @@ function Navbar({ changeLanguage }) {
 							}`}></span>}
 						</Link>
 						<Link to="/cart" className="relative p-2 group">
-							<ShoppingCartIcon className={`h-6 w-6 transition-colors duration-300 ${
+							<ShoppingCartIcon className={`h-6 w-6 text-primary-dark duration-300 ${
 								scrolled ? "text-primary-dark group-hover:text-primary" : "text-white group-hover:text-white/80"
 							}`} />
 							{totalItems > 0 && (
