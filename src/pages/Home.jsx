@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import productsData from "../service/data";
-import image from "../assets/AboutImages/S1.jpg";
-import image2 from "../assets/AboutImages/S2.jpg";
+import image from "../assets/Slider1.jpeg";
+import image2 from "../assets/Slider7.jpeg";
+import image3 from "../assets/Slider4.jpeg"
+import logo from "../assets/logot.png"
+
 import goals from "../assets/goals.png";
 import vision from "../assets/vision.png";
 import about from "../assets/about.png";
-import image3 from "../assets/AboutImages/S3.jpg";
 import cover from "/src/assets/AboutImages/COVER.jpg"; // Added cover image import
 import intro from "../assets/AboutImages/intro.mp4"; // Added video import
 import HeroSection from "../components/HeroSection";
@@ -79,52 +81,58 @@ function Home() {
 
   return (
     <div dir={i18n.language === "ar" ? "rtl" : "ltr"} className="main-bg">
-      {/* Hero Banner Slider */}
-      <div className="relative w-full h-[70vh] md:h-[80vh] lg:h-[90vh] overflow-hidden">
-        {/* Slides */}
-        <div className="relative w-full h-full">
-          {heroImages.map((img, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'
-              }`}
-            >
-              <HeroSection image={img} />
-            </div>
-          ))}
-        </div>
-
-        {/* Navigation Arrows */}
-        <button
-          onClick={() => setCurrentSlide(prev => (prev === 0 ? heroImages.length - 1 : prev - 1))}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center z-20 transition-all duration-300"
-          aria-label="Previous slide"
+  {/* Hero Banner Slider */}
+  <div className="relative w-full h-[70vh] md:h-[80vh] lg:h-[90vh] overflow-hidden">
+    {/* Slides */}
+    <div className="relative w-full h-full">
+      {heroImages.map((img, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          }`}
         >
-          &lt;
-        </button>
-        <button
-          onClick={() => setCurrentSlide(prev => (prev + 1) % heroImages.length)}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center z-20 transition-all duration-300"
-          aria-label="Next slide"
-        >
-          &gt;
-        </button>
-
-        {/* Slide Indicators */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
-          {heroImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                index === currentSlide ? 'bg-white w-6' : 'bg-white/50'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+          <HeroSection image={img} />
+          {/* Logo Image on top of each slide */}
+          <div className="absolute top-1/7 left-1/2 -translate-x-1/2 z-10">
+            <img src={logo} alt="Logo" className="w-100 h-auto" />
+          </div>
         </div>
-      </div>
+      ))}
+    </div>
+
+    {/* Navigation Arrows */}
+    <button
+      onClick={() => setCurrentSlide(prev => (prev === 0 ? heroImages.length - 1 : prev - 1))}
+      className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center z-20 transition-all duration-300"
+      aria-label="Previous slide"
+    >
+      &lt;
+    </button>
+    <button
+      onClick={() => setCurrentSlide(prev => (prev + 1) % heroImages.length)}
+      className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center z-20 transition-all duration-300"
+      aria-label="Next slide"
+    >
+      &gt;
+    </button>
+
+    {/* Slide Indicators */}
+    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+      {heroImages.map((_, index) => (
+        <button
+          key={index}
+          onClick={() => setCurrentSlide(index)}
+          className={`w-1 h-1 rounded-full transition-all ${
+            index === currentSlide ? 'bg-white w-1' : 'bg-white/50'
+          }`}
+          aria-label={`Go to slide ${index + 1}`}
+        />
+      ))}
+    </div>
+  </div>
+
+
 
       {/* About Section */}
       <div className="bg-white py-12 md:py-16 animate-fade-in">
