@@ -101,9 +101,9 @@ function Home() {
 </div>
 
       {/* Our Philosophy Section */}
-      <section className="py-16 bg-white">
+      <section className="py-8 md:py-16 bg-white"> {/* Added mobile padding */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-16 relative">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16 relative"> {/* Adjusted mobile font size */}
             <span className="relative px-8">
               {t("home.values.title")}
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
@@ -139,9 +139,9 @@ function Home() {
       </section>
 
 {/* Our Vision & Goals */}
-<section className="py-16 bg-gradient-to-b">
+<section className="py-8 md:py-16 bg-gradient-to-b"> {/* Added mobile padding */}
   <div className="max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-16">
-    <h2 className="text-4xl font-bold text-center mb-16 relative">
+    <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16 relative"> {/* Adjusted mobile font size */}
       <span className="relative px-8">
         {t("home.vision.title")}
         <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
@@ -206,8 +206,8 @@ function Home() {
 </section>
 
       {/* Our Menu */}
-      <section className="py-16 bg-gradient-to-b">
-          <h2 className="text-4xl font-bold text-center mb-16 relative">
+      <section className="py-8 md:py-16 bg-gradient-to-b"> {/* Added mobile padding */}
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16 relative"> {/* Adjusted mobile font size */}
             <span className="relative px-8">
               {t("home.menu.title")}
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
@@ -267,9 +267,9 @@ function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-8 md:py-16 bg-slate-50"> {/* Added mobile padding */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-16 relative">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16 relative"> {/* Adjusted mobile font size */}
             <span className="relative px-8">
               {t("home.features.title")}
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
@@ -313,7 +313,7 @@ function Home() {
       </section>
 
       {/* About Section */}
-      <div className="bg-white py-16 animate-fade-in">
+      <div className="bg-white py-8 md:py-16 animate-fade-in"> {/* Added mobile padding */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>

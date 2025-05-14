@@ -15,6 +15,7 @@ export default function HeroSection({ setSearchQuery, image }) {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "scroll",
+        minHeight: "calc(100vh - 4rem)", // Changed to viewport-based height
     }}
     dir={i18n.language === "ar" ? "rtl" : "ltr"}>
     <div className="container mx-auto px-4 text-center z-10">
