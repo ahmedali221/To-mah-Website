@@ -78,6 +78,7 @@
 		"page": "Page {current} of {total}"
 	},
 	"sidebar": {
+	
 		"reset_filters": "Reset All Filters",
 		"categories": "Categories",
 		"price_filter": "Filter by Price",
@@ -166,6 +167,14 @@
 		"order_success": "Order placed successfully! (Demo only)"
 	},
 	"contact": {
+		"title": "Contact Us",
+  "form_title": "Send Us a Message",
+  "form_name": "Your Name",
+  "form_email": "Your Email",
+  "form_phone": "Your Phone",
+  "form_message": "Your Message",
+  "form_button": "Send Message",
+  "form_success": "Thank you! Your message has been sent.",
 		"location_title": "Location",
 		"location_image_alt": "Location Image",
 		"address_line1": "طُعمة, DMAJ8018",
@@ -178,7 +187,11 @@
 		"hours_reservations": "Reservations",
 		"hours_weekend_time": "12:00 pm - 1:30 pm",
 		"hours_weekdays_time": "6:00 pm - 8:45 pm",
-		"restaurant_image_alt": "Restaurant Image"
+		"restaurant_image_alt": "Restaurant Image",
+		  "hours_breakfast": "Breakfast: 6:00 am - 1:00 pm",
+    "hours_lunch": "Lunch: 1:00 pm - 6:00 pm",
+    "hours_dinner": "Dinner: 6:00 pm - 12:00 am"
+  
 	},
 	
   "home": {
@@ -303,7 +316,8 @@
 		"search_description": "Browse our delicious selection of traditional Saudi cuisine",
 		"show_filters": "Show Filters",
 		"hide_filters": "Hide Filters",
-		"filters": "Filters"
+		"filters": "Filters",
+		"menu_card.next":"Next"
 	},
 	"partners": {
 		"hero": {
@@ -397,7 +411,7 @@
 		"error_address": "Please enter your address.",
 		"error_city": "Please enter your city.",
 		"error_phone": "Please enter a contact number.",
-		"error_phone_delivery": "Please enter a contact number for delivery.",
+		"error_phone_delivery": "Please enter a valid phone number for delivery",
 		"error_name_on_card": "Please enter the name on card.",
 		"error_card_number": "Please enter a valid 16-digit card number.",
 		"error_expiry": "Please enter a valid expiry date (MM/YY).",

@@ -163,9 +163,21 @@
 		"address_label": "عنوان التوصيل",
 		"phone_label": "رقم الهاتف",
 		"place_order": "تقديم الطلب",
-		"order_success": "تم تقديم الطلب بنجاح! (للعرض فقط)"
+		"order_success": "تم تقديم الطلب بنجاح! (للعرض فقط)",
+		 "back": "رجوع",
+    "subtitle": "راجع طلبك",
+    "subtotal": "المجموع الفرعي",
+    "delivery_fee": "رسوم التوصيل"
 	},
 	"contact": {
+		 "title": "تواصل معنا",
+  "form_title": "أرسل لنا رسالة",
+  "form_name": "اسمك",
+  "form_email": "بريدك الإلكتروني",
+  "form_phone": "رقم هاتفك",
+  "form_message": "رسالتك",
+  "form_button": "إرسال الرسالة",
+  "form_success": "شكرًا لك! تم إرسال رسالتك.",
 		"location_title": "الموقع",
 		"location_image_alt": "صورة الموقع",
 		"address_line1": "طُعمة، DMAJ8018",
@@ -178,7 +190,10 @@
 		"hours_reservations": "الحجوزات",
 		"hours_weekend_time": "12:00 م - 1:30 م",
 		"hours_weekdays_time": "6:00 م - 8:45 م",
-		"restaurant_image_alt": "صورة المطعم"
+		"restaurant_image_alt": "صورة المطعم",
+		 "hours_breakfast": "الإفطار: ٦:٠٠ ص - ١:٠٠ م",
+    "hours_lunch": "الغداء: ١:٠٠ م - ٦:٠٠ م",
+    "hours_dinner": "العشاء: ٦:٠٠ م - ١٢:٠٠ ص"
 	},
 
   "home": {
@@ -313,7 +328,12 @@
     "search_description": "تصفح تشكيلتنا اللذيذة من المأكولات السعودية التقليدية",
     "show_filters": "إظهار الفلاتر",
     "hide_filters": "إخفاء الفلاتر",
-    "filters": "الفلاتر"
+    "filters": "الفلاتر",
+    "filters": "الفلاتر",
+    "show_filters": "إظهار الفلاتر",
+    "hide_filters": "إخفاء الفلاتر",
+			"menu_card.next":"التالي"
+
   },
 	"partners": {
 		"hero": {

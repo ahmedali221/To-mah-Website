@@ -27,14 +27,9 @@ import g10 from "/src/assets/AboutImages/G10.jpg";
 import { 
   HeartIcon, 
   SparklesIcon,
-  StarIcon,
   UserGroupIcon,
   GlobeAltIcon,
-  LightBulbIcon,
-  ClockIcon,
-  ShieldCheckIcon,
-  TruckIcon,
-  ChatBubbleLeftRightIcon
+
 } from '@heroicons/react/24/outline';
 
 const About = () => {
@@ -259,13 +254,7 @@ const About = () => {
 					
 					<p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">{t("about.ambiance.description")}</p>
 					
-					<div className={`transition-all duration-1000 ${isVisible['ambiance-section'] ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-						<img 
-							src={decor2} 
-							alt={t("about.ambiance.image_alt")} 
-							className="rounded-lg shadow-2xl w-full h-auto object-cover max-h-96 mx-auto"
-						/>
-					</div>
+					
 				</div>
 			</section>
 

@@ -1,6 +1,6 @@
+
 import { useState, useEffect } from "react";
-import HeroSection from "../components/HeroSection";
-import location from "../assets/location.png";
+import { useTranslation } from 'react-i18next';
 
 const ContactPage = () => {
   const [visible, setVisible] = useState(false);
@@ -11,39 +11,12 @@ const ContactPage = () => {
     phone: '',
     message: ''
   });
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     // Trigger animations after component mounts
     setVisible(true);
   }, []);
-
-  // Simulate translation function
-  const t = (key) => {
-    const translations = {
-      "contact.location_title": "Visit Our Restaurant",
-      "contact.location_image_alt": "Restaurant Interior",
-      "contact.restaurant_image_alt": "Restaurant Dishes",
-      "contact.address_line1": "5153 King Abdullah Branch Rd",
-      "contact.address_line2": "Madinah 42319",
-      "contact.address_line3": "Saudi Arabia",
-      "contact.phone": "+966 58 325 0000",
-      "contact.hours_title": "Opening Hours",
-      "contact.hours_weekend": "Weekend (Thu-Sat)",
-      "contact.hours_weekdays": "Weekdays (Sun-Wed)",
-      "contact.hours_reservations": "Reservations Recommended",
-      "contact.hours_weekend_time": "12:00 PM - 11:30 PM",
-      "contact.hours_weekdays_time": "12:00 PM - 10:30 PM",
-      "contact.form_title": "Send Us a Message",
-      "contact.form_name": "Your Name",
-      "contact.form_email": "Your Email",
-      "contact.form_phone": "Your Phone",
-      "contact.form_message": "Your Message",
-      "contact.form_button": "Send Message",
-      "contact.form_success": "Thank you! Your message has been sent."
-    };
-    
-    return translations[key] || key;
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -65,16 +38,21 @@ const ContactPage = () => {
     }, 2000);
   };
 
+  // Check if current language is RTL (Arabic)
+  const isRTL = i18n.language === 'ar';
+
   return (
     <div 
-      className={`min-h-screen transition-opacity duration-700 ease-in-out ${visible ? 'opacity-100' : 'opacity-0'}`}>
+      className={`min-h-screen transition-opacity duration-700 ease-in-out ${visible ? 'opacity-100' : 'opacity-0'}`}
+      dir={isRTL ? 'rtl' : 'ltr'}>
       <div className="container mx-auto px-4 py-16">
-        {/* <HeroSection image={location}/> */}
         {/* Hero Title with Animation */}
         <div className={`text-center mb-16 transition-all duration-1000 delay-300 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <h1 className="text-4xl md:text-5xl font-serif font-light mb-4">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-serif font-light mb-4">{t("contact.title")}</h1>
           <div className="w-24 h-1 mx-auto"></div>
-          <p className="mt-6 text-gray-600 max-w-2xl mx-auto">We'd love to hear from you. Visit our restaurant, make a reservation, or send us a message.</p>
+          <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
+            {isRTL ? 'يسعدنا سماع منك. قم بزيارة مطعمنا، أو احجز، أو أرسل لنا رسالة.' : "We'd love to hear from you. Visit our restaurant, make a reservation, or send us a message."}
+          </p>
         </div>
 
         {/* Main Columns */}
@@ -83,7 +61,7 @@ const ContactPage = () => {
           <div className={`flex flex-col items-center w-full transition-all duration-1000 delay-500 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
             <div className="h-48 sm:h-64 md:h-96 w-full sm:w-4/5 overflow-hidden relative">
               <img
-								src="https://tomah.sa/uploads/products/8.jpg"
+                src="https://tomah.sa/uploads/products/8.jpg"
                 alt={t("contact.location_image_alt")}
                 className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
                 style={{ borderRadius: "50em 50em 0 0" }}
@@ -111,11 +89,13 @@ const ContactPage = () => {
                       {t("contact.address_line3")}
                     </span>
                   </a>
-                  <a
-                    href="tel:+966583250000"
-                    className="text-xl text-black block mt-4 hover:text-amber-600 transition-colors duration-300 transform hover:scale-105 transition-transform duration-300">
-                    {t("contact.phone")}
-                  </a>
+                <a
+  href="https://wa.me/966583250000"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-xl text-black block mt-4 hover:text-amber-600 transition-colors duration-300 transform hover:scale-105 transition-transform duration-300">
+  {t("contact.phone")}
+</a>
                 </span>
               </div>
             </div>
@@ -128,46 +108,31 @@ const ContactPage = () => {
           <div className={`flex flex-col items-center w-full transition-all duration-1000 delay-700 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
             <div className="h-64 md:h-96 w-4/5 overflow-hidden relative">
               <img
-								src="https://tomah.sa/uploads/products/9.jpg"
+                src="https://tomah.sa/uploads/products/9.jpg"
                 alt={t("contact.restaurant_image_alt")}
                 className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
                 style={{ borderRadius: "50em 50em" }}
               />
               <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             </div>
-            <div className="w-4/5 text-center">
-              <h3 className="text-3xl font-serif italic font-light mt-8 mb-6 transform transition-transform duration-500 hover:translate-y-1">
-                {t("contact.hours_title")}
-              </h3>
-              <div className="text-center font-light tracking-wide leading-relaxed">
-                <span className="block mb-4 hover:text-gray-900 transition-all duration-300">
-                  <span className="text-gray-800">
-                    {t("contact.hours_weekend")}
-                  </span>
-                  <br />
-                  <span className="text-sm text-gray-600">
-                    {t("contact.hours_reservations")}
-                  </span>
-                  <br />
-                  <span className="italic">
-                    {t("contact.hours_weekend_time")}
-                  </span>
-                </span>
-                <span className="block hover:text-gray-900 transition-all duration-300">
-                  <span className="text-gray-800">
-                    {t("contact.hours_weekdays")}
-                  </span>
-                  <br />
-                  <span className="text-sm text-gray-600">
-                    {t("contact.hours_reservations")}
-                  </span>
-                  <br />
-                  <span className="italic">
-                    {t("contact.hours_weekdays_time")}
-                  </span>
-                </span>
-              </div>
-            </div>
+           <div className="text-center font-light tracking-wide leading-relaxed">
+  <span className="block mb-4 hover:text-gray-900 transition-all duration-300">
+    <span className="text-gray-800">{t("contact.hours_weekend")}</span><br />
+    <span className="text-sm text-gray-600">{t("contact.hours_reservations")}</span><br />
+    <span className="italic">{t("contact.hours_weekend_time")}</span>
+  </span>
+  <span className="block hover:text-gray-900 transition-all duration-300">
+    <span className="text-gray-800">{t("contact.hours_weekdays")}</span><br />
+    <span className="text-sm text-gray-600">{t("contact.hours_reservations")}</span><br />
+    <span className="italic">{t("contact.hours_weekdays_time")}</span>
+  </span>
+  <div className="mt-4">
+    <span className="block text-gray-800">{t("contact.hours_breakfast")}</span>
+    <span className="block text-gray-800">{t("contact.hours_lunch")}</span>
+    <span className="block text-gray-800">{t("contact.hours_dinner")}</span>
+  </div>
+  </div>
+
           </div>
         </div>
 
@@ -191,7 +156,7 @@ const ContactPage = () => {
                     required
                     className="w-full border-b border-gray-300 py-2 px-2 focus:outline-none focus:border-amber-600 transition-all duration-300 bg-transparent"
                   />
-                  <label className={`absolute left-2 transition-all duration-300 ${formData.name ? 'text-xs -top-6 text-amber-600' : 'top-2'} group-focus-within:text-xs group-focus-within:-top-6 group-focus-within:text-amber-600`}>
+                  <label className={`absolute ${isRTL ? 'right-2' : 'left-2'} transition-all duration-300 ${formData.name ? 'text-xs -top-6 text-amber-600' : 'top-2'} group-focus-within:text-xs group-focus-within:-top-6 group-focus-within:text-amber-600`}>
                     {t("contact.form_name")}
                   </label>
                 </div>
@@ -204,7 +169,7 @@ const ContactPage = () => {
                     required
                     className="w-full border-b border-gray-300 py-2 px-2 focus:outline-none focus:border-amber-600 transition-all duration-300 bg-transparent"
                   />
-                  <label className={`absolute left-2 transition-all duration-300 ${formData.email ? 'text-xs -top-6 text-amber-600' : 'top-2'} group-focus-within:text-xs group-focus-within:-top-6 group-focus-within:text-amber-600`}>
+                  <label className={`absolute ${isRTL ? 'right-2' : 'left-2'} transition-all duration-300 ${formData.email ? 'text-xs -top-6 text-amber-600' : 'top-2'} group-focus-within:text-xs group-focus-within:-top-6 group-focus-within:text-amber-600`}>
                     {t("contact.form_email")}
                   </label>
                 </div>
@@ -219,7 +184,7 @@ const ContactPage = () => {
                   required
                   className="w-full border-b border-gray-300 py-2 px-2 focus:outline-none focus:border-amber-600 transition-all duration-300 bg-transparent"
                 />
-                <label className={`absolute left-2 transition-all duration-300 ${formData.phone ? 'text-xs -top-6 text-amber-600' : 'top-2'} group-focus-within:text-xs group-focus-within:-top-6 group-focus-within:text-amber-600`}>
+                <label className={`absolute ${isRTL ? 'right-2' : 'left-2'} transition-all duration-300 ${formData.phone ? 'text-xs -top-6 text-amber-600' : 'top-2'} group-focus-within:text-xs group-focus-within:-top-6 group-focus-within:text-amber-600`}>
                   {t("contact.form_phone")}
                 </label>
               </div>
@@ -233,7 +198,7 @@ const ContactPage = () => {
                   rows="4"
                   className="w-full border-b border-gray-300 py-2 px-2 focus:outline-none focus:border-amber-600 transition-all duration-300 bg-transparent resize-none"
                 ></textarea>
-                <label className={`absolute left-2 transition-all duration-300 ${formData.message ? 'text-xs -top-6 text-amber-600' : 'top-2'} group-focus-within:text-xs group-focus-within:-top-6 group-focus-within:text-amber-600`}>
+                <label className={`absolute ${isRTL ? 'right-2' : 'left-2'} transition-all duration-300 ${formData.message ? 'text-xs -top-6 text-amber-600' : 'top-2'} group-focus-within:text-xs group-focus-within:-top-6 group-focus-within:text-amber-600`}>
                   {t("contact.form_message")}
                 </label>
               </div>
@@ -260,8 +225,8 @@ const ContactPage = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade">
           </iframe>
-          <div className="absolute bottom-6 left-6 bg-white p-4 rounded-lg shadow-xl transform transition-transform duration-500 hover:scale-105">
-            <h4 className="font-bold text-lg mb-1">Our Location</h4>
+          <div className={`absolute bottom-6 ${isRTL ? 'right-6' : 'left-6'} bg-white p-4 rounded-lg shadow-xl transform transition-transform duration-500 hover:scale-105`}>
+            <h4 className="font-bold text-lg mb-1">{isRTL ? 'موقعنا' : 'Our Location'}</h4>
             <p className="text-sm text-gray-600">{t("contact.address_line1")}, {t("contact.address_line2")}</p>
           </div>
         </div>
