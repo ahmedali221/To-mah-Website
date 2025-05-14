@@ -8,35 +8,35 @@ function Footer() {
 	const { t, i18n } = useTranslation();
 
 	return (
-		<footer dir={i18n.language === "ar" ? "rtl" : "ltr"}>
+		<footer dir={i18n.language === "ar" ? "rtl" : "ltr"} className="footer-wrapper">
 			{/* Main Footer */}
-			<div className="bg-gray-900 text-white">
+			<div className="bg-primary-dark text-white">
 				<div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 						{/* Brand Column */}
-						<div className="space-y-6">
+						<div className="space-y-6 footer-brand">
 							<div className="flex items-center space-x-3">
 								<img
 									src={logo}
 									alt="To'mah Logo"
-									className="w-12 h-12 rounded-full object-cover border-2 border-amber-500"
+									className="w-12 h-12 rounded-full object-cover border-2 border-amber-500 footer-logo"
 								/>
-								<span className="text-2xl font-bold">{t("navbar.brand")}</span>
+								<span className="text-2xl font-bold text-white">{t("navbar.brand")}</span>
 							</div>
-							<p className="text-gray-300 max-w-xs">
+							<p className="text-gray-300 max-w-xs font-merienda footer-description">
 								{t("footer.aside.description")}
 							</p>
 							<div className="pt-2">
-								<h3 className="text-lg font-semibold mb-4">
+								<h3 className="text-lg font-semibold mb-4 text-white footer-heading">
 									{t("footer.follow_us")}
 								</h3>
-								<div className="flex space-x-4">
+								<div className="flex space-x-4 footer-social-icons">
 									<a
 										href="https://www.instagram.com/tomah.sa/"
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label="Instagram"
-										className="text-gray-300 hover:text-amber-500 transition-colors">
+										className="social-icon">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											width="24"
@@ -52,14 +52,14 @@ function Footer() {
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label="TikTok"
-										className="text-gray-300 hover:text-amber-500 transition-colors">
+										className="social-icon">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											width="24"
 											height="24"
 											fill="currentColor"
 											className="fill-current">
-											<path d="M12.004 2.003c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zm2.5 13.5c0 1.38-1.12 2.5-2.5 2.5s-2.5-1.12-2.5-2.5c0-1.38 1.12-2.5 2.5-2.5.276 0 .5-.224.5-.5v-4c0-.276-.224-.5-.5-.5s-.5.224-.5.5v3.535c-1.14.232-2 1.242-2 2.465 0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5c0-.276-.224-.5-.5-.5s-.5.224-.5.5z" />
+											<path d="M12.004 2.003c-5.523 0-10 4.477-10 10s4.477 10 10 10-4.477 10-10-4.477-10-10-10zm2.5 13.5c0 1.38-1.12 2.5-2.5 2.5s-2.5-1.12-2.5-2.5c0-1.38 1.12-2.5 2.5-2.5.276 0 .5-.224.5-.5v-4c0-.276-.224-.5-.5-.5s-.5.224-.5.5v3.535c-1.14.232-2 1.242-2 2.465 0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5c0-.276-.224-.5-.5-.5s-.5.224-.5.5z" />
 										</svg>
 									</a>
 									<a
@@ -67,7 +67,7 @@ function Footer() {
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label="X (Twitter)"
-										className="text-gray-300 hover:text-amber-500 transition-colors">
+										className="social-icon">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											width="24"
@@ -82,7 +82,7 @@ function Footer() {
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label="Facebook"
-										className="text-gray-300 hover:text-amber-500 transition-colors">
+										className="social-icon">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											width="24"
@@ -97,33 +97,33 @@ function Footer() {
 						</div>
 
 						{/* Quick Links */}
-						<div>
-							<h3 className="text-lg font-semibold mb-4">
+						<div className="footer-links-column">
+							<h3 className="text-lg font-semibold mb-4 text-white footer-heading">
 								{t("footer.quick_links")}
 							</h3>
-							<ul className="space-y-2">
+							<ul className="space-y-2 footer-links">
 								<li>
-									<Link to="/" className="text-gray-300 hover:text-amber-500 transition-colors">
+									<Link to="/" className="footer-link">
 										{t("navbar.home")}
 									</Link>
 								</li>
 								<li>
-									<Link to="/about" className="text-gray-300 hover:text-amber-500 transition-colors">
+									<Link to="/about" className="footer-link">
 										{t("navbar.about")}
 									</Link>
 								</li>
 								<li>
-									<Link to="/menu" className="text-gray-300 hover:text-amber-500 transition-colors">
+									<Link to="/menu" className="footer-link">
 										{t("navbar.menu")}
 									</Link>
 								</li>
 								<li>
-									<Link to="/partners" className="text-gray-300 hover:text-amber-500 transition-colors">
+									<Link to="/partners" className="footer-link">
 										{t("navbar.partners")}
 									</Link>
 								</li>
 								<li>
-									<Link to="/contact" className="text-gray-300 hover:text-amber-500 transition-colors">
+									<Link to="/contact" className="footer-link">
 										{t("navbar.contact")}
 									</Link>
 								</li>
@@ -131,28 +131,28 @@ function Footer() {
 						</div>
 
 						{/* Services */}
-						<div>
-							<h3 className="text-lg font-semibold mb-4">
+						<div className="footer-links-column">
+							<h3 className="text-lg font-semibold mb-4 text-white footer-heading">
 								{t("footer.services_title")}
 							</h3>
-							<ul className="space-y-2">
+							<ul className="space-y-2 footer-links">
 								<li>
-									<a className="text-gray-300 hover:text-amber-500 transition-colors">
+									<a className="footer-link">
 										{t("footer.services.branding")}
 									</a>
 								</li>
 								<li>
-									<a className="text-gray-300 hover:text-amber-500 transition-colors">
+									<a className="footer-link">
 										{t("footer.services.design")}
 									</a>
 								</li>
 								<li>
-									<a className="text-gray-300 hover:text-amber-500 transition-colors">
+									<a className="footer-link">
 										{t("footer.services.marketing")}
 									</a>
 								</li>
 								<li>
-									<a className="text-gray-300 hover:text-amber-500 transition-colors">
+									<a className="footer-link">
 										{t("footer.services.advertisement")}
 									</a>
 								</li>
@@ -160,14 +160,14 @@ function Footer() {
 						</div>
 
 						{/* Company */}
-						<div>
-							<h3 className="text-lg font-semibold mb-4">
+						<div className="footer-links-column">
+							<h3 className="text-lg font-semibold mb-4 text-white footer-heading">
 								{t("footer.company_title")}
 							</h3>
-							<ul className="space-y-2">
+							<ul className="space-y-2 footer-links">
 								<li>
 									<a
-										className="text-gray-300 hover:text-amber-500 transition-colors"
+										className="footer-link"
 										href="https://www.tripadvisor.com/Restaurant_Review-g298551-d28445172-Reviews-To_mah_Restaurant-Medina_Al_Madinah_Province.html"
 										target="_blank"
 										rel="noopener noreferrer">
@@ -176,7 +176,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className="text-gray-300 hover:text-amber-500 transition-colors"
+										className="footer-link"
 										href="https://www.youtube.com/channel/UCLXAOmq4QkfUtHgD6dV_ryA"
 										target="_blank"
 										rel="noopener noreferrer">
@@ -185,7 +185,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className="text-gray-300 hover:text-amber-500 transition-colors"
+										className="footer-link"
 										href="https://www.google.com/maps/place/%D8%B7%D9%8C%D8%B9%D9%85%D8%A9%E2%80%AD/@24.4402965,39.6629878,17z/data=!3m1!4b1!4m6!3m5!1s0x15bd95535e8cfba3:0x6c20f3e111d4579b!8m2!3d24.4402965!4d39.6629878!16s%2Fg%2F11ln_x5kwh?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
 										target="_blank"
 										rel="noopener noreferrer">
@@ -194,7 +194,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										className="text-gray-300 hover:text-amber-500 transition-colors"
+										className="footer-link"
 										href="https://linktr.ee/Tomah.sa?ltsid=ff5d7851-1331-4983-a8a8-66214bceee5f"
 										target="_blank"
 										rel="noopener noreferrer">
@@ -208,20 +208,20 @@ function Footer() {
 			</div>
 
 			{/* Bottom Footer */}
-			<div className="bg-gray-950 text-gray-400 py-6">
+			<div className="bg-primary text-gray-300 py-6">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="flex flex-col md:flex-row justify-between items-center">
 						<div className="mb-4 md:mb-0">
-							<p>© {new Date().getFullYear()} To'mah Restaurant. {t("footer.rights")}</p>
+							<p className="font-merienda footer-copyright">© {new Date().getFullYear()} To'mah Restaurant. {t("footer.rights")}</p>
 						</div>
-						<div className="flex space-x-6">
-							<a className="hover:text-amber-500 transition-colors">
+						<div className="flex space-x-6 footer-legal-links">
+							<a className="footer-legal-link">
 								{t("footer.legal.terms")}
 							</a>
-							<a className="hover:text-amber-500 transition-colors">
+							<a className="footer-legal-link">
 								{t("footer.legal.privacy")}
 							</a>
-							<a className="hover:text-amber-500 transition-colors">
+							<a className="footer-legal-link">
 								{t("footer.legal.cookie")}
 							</a>
 						</div>

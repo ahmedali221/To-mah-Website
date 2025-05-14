@@ -90,40 +90,45 @@ export default function Sidebar({ filters, setFilters }) {
 
 	return (
 		<aside
-			className="w-full bg-white rounded-lg"
+			className="w-full p-3 bg-white rounded-lg shadow-lg border border-gray-100"
 			dir={i18n.language === "ar" ? "rtl" : "ltr"}>
 			{(filters.category !== "" ||
 				filters.minPrice > 0 ||
 				filters.maxPrice < Infinity) && (
-				<div className="p-4 border-b border-gray-100">
-					<button
-						onClick={handleResetFilters}
-						className="w-full py-2 px-4 bg-gray-100 text-gray-700 rounded flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							className="h-4 w-4"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor">
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								strokeWidth={2}
-								d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-							/>
-						</svg>
-						{t("sidebar.reset_filters")}
-					</button>
-				</div>
+			<div className="p-4 border-b border-gray-100">
+				<button
+					onClick={handleResetFilters}
+					className="w-full py-2.5 px-4 bg-amber-600 text-white rounded-lg flex items-center justify-center gap-2 hover:bg-amber-700 transition-all duration-300 shadow-sm">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						className="h-4 w-4"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor">
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth={2}
+							d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+						/>
+					</svg>
+					{t("sidebar.reset_filters")}
+				</button>
+			</div>
 			)}
 
-			<div className="border-b border-gray-100">
+			<div className="border-b border-gray-100 hover:bg-gray-50 transition-colors duration-300">
 				<button
-					className="flex justify-between items-center w-full p-4 text-left font-bold"
+					className="flex justify-between items-center w-full p-4 text-left font-bold text-gray-800"
 					onClick={() => toggleSection("categories")}>
-					<span>{t("sidebar.categories")}</span>
+					<span className="flex items-center gap-2">
+						<svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
+						{t("sidebar.categories")}
+					</span>
 					<svg
-						className={`w-4 h-4 transition-transform ${
+						className={`w-4 h-4 transition-transform duration-300 ${
 							expandedSection === "categories" ? "transform rotate-180" : ""
 						}`}
 						xmlns="http://www.w3.org/2000/svg"
@@ -138,19 +143,18 @@ export default function Sidebar({ filters, setFilters }) {
 				</button>
 
 				{expandedSection === "categories" && (
-					<div className="p-4 pt-0">
-						<ul className="space-y-3">
+					<div className="p-4 pt-4">
+						<ul className="space-y-2">
 							{availableCategories.map((category_en, index) => {
 								const isActive =
-									filters.category ===
-									(category_en === "All" ? "" : category_en);
+									filters.category === (category_en === "All" ? "" : category_en);
 								return (
 									<li key={index}>
 										<button
 											onClick={() => handleCategoryClick(category_en)}
-											className={`w-full text-left py-1 px-2 rounded transition-colors ${
+											className={`w-full text-left py-2 px-3 rounded-lg transition-all duration-300 ${
 												isActive
-													? "bg-black text-white font-medium"
+													? "bg-amber-600 text-white font-medium shadow-sm"
 													: "text-gray-700 hover:bg-gray-100"
 											}`}>
 											{category_en}
@@ -178,13 +182,18 @@ export default function Sidebar({ filters, setFilters }) {
 				)}
 			</div>
 
-			<div className="border-b border-gray-100">
+			<div className="border-b border-gray-100 hover:bg-gray-50 transition-colors duration-300">
 				<button
-					className="flex justify-between items-center w-full p-4 text-left font-bold"
+					className="flex justify-between items-center w-full p-4 text-left font-bold text-gray-800"
 					onClick={() => toggleSection("price")}>
-					<span>{t("sidebar.price_filter")}</span>
+					<span className="flex items-center gap-2">
+						<svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+						</svg>
+						{t("sidebar.price_filter")}
+					</span>
 					<svg
-						className={`w-4 h-4 transition-transform ${
+						className={`w-4 h-4 transition-transform duration-300 ${
 							expandedSection === "price" ? "transform rotate-180" : ""
 						}`}
 						xmlns="http://www.w3.org/2000/svg"
@@ -199,11 +208,11 @@ export default function Sidebar({ filters, setFilters }) {
 				</button>
 
 				{expandedSection === "price" && (
-					<div className="p-4 pt-0">
+					<div className="p-4 pt-4">
 						<div className="mb-6">
 							<div className="flex items-center justify-between text-sm text-gray-600 mb-2">
 								<span className="font-medium">{t("sidebar.price_range")}</span>
-								<span className="bg-gray-100 px-2 py-1 rounded">
+								<span className="bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-sm font-medium">
 									{t("sidebar.currency")} {minPrice} - {t("sidebar.currency")}{" "}
 									{priceRange.max === Infinity ? maxPrice : priceRange.max}
 								</span>
@@ -211,7 +220,7 @@ export default function Sidebar({ filters, setFilters }) {
 
 							<input
 								type="range"
-								className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+								className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-amber-600"
 								min={minPrice}
 								max={maxPrice}
 								value={priceRange.max === Infinity ? maxPrice : priceRange.max}
@@ -219,7 +228,7 @@ export default function Sidebar({ filters, setFilters }) {
 								onChange={handlePriceInputChange}
 							/>
 
-							<div className="flex justify-between text-xs text-gray-500 mt-1">
+							<div className="flex justify-between text-xs text-gray-500 mt-2">
 								<span>
 									{t("sidebar.currency")} {minPrice}
 								</span>
@@ -231,20 +240,25 @@ export default function Sidebar({ filters, setFilters }) {
 
 						<button
 							onClick={handleApplyPriceFilter}
-							className="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition-colors">
+							className="w-full bg-amber-600 text-white py-2.5 px-4 rounded-lg hover:bg-amber-700 transition-all duration-300 shadow-sm">
 							{t("sidebar.apply_filter")}
 						</button>
 					</div>
 				)}
 			</div>
 
-			<div>
+			<div className="hover:bg-gray-50 transition-colors duration-300">
 				<button
-					className="flex justify-between items-center w-full p-4 text-left font-bold"
+					className="flex justify-between items-center w-full p-4 text-left font-bold text-gray-800"
 					onClick={() => toggleSection("popular")}>
-					<span>{t("sidebar.popular_items")}</span>
+					<span className="flex items-center gap-2">
+						<svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+						</svg>
+						{t("sidebar.popular_items")}
+					</span>
 					<svg
-						className={`w-4 h-4 transition-transform ${
+						className={`w-4 h-4 transition-transform duration-300 ${
 							expandedSection === "popular" ? "transform rotate-180" : ""
 						}`}
 						xmlns="http://www.w3.org/2000/svg"
@@ -259,14 +273,14 @@ export default function Sidebar({ filters, setFilters }) {
 				</button>
 
 				{expandedSection === "popular" && (
-					<div className="p-4 pt-0">
+					<div className="p-4 pt-4">
 						<ul className="space-y-4">
 							{popularProducts.length > 0 ? (
 								popularProducts.map((product, index) => (
 									<li
 										key={index}
-										className="flex items-center space-x-3 group p-2 hover:bg-gray-50 rounded transition-colors">
-										<div className="w-16 h-16 overflow-hidden rounded bg-gray-100">
+										className="flex items-center space-x-3 group p-2 hover:bg-white rounded-lg transition-all duration-300 cursor-pointer">
+										<div className="w-16 h-16 overflow-hidden rounded-lg bg-gray-100 shadow-sm">
 											<img
 												src={product.image}
 												alt={product.name}
@@ -274,10 +288,10 @@ export default function Sidebar({ filters, setFilters }) {
 											/>
 										</div>
 										<div className="flex-1">
-											<p className="font-medium text-gray-800 line-clamp-1">
+											<p className="font-medium text-gray-800 line-clamp-1 group-hover:text-amber-600 transition-colors duration-300">
 												{product.name}
 											</p>
-											<p className="text-black font-bold mt-1">
+											<p className="text-amber-600 font-bold mt-1">
 												{t("sidebar.currency")} {product.price.toFixed(2)}
 											</p>
 										</div>

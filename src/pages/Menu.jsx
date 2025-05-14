@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import MenuCard from "../components/MenuCard";
 import HeroSection from "../components/HeroSection";
@@ -9,6 +9,12 @@ import { useCart } from "../context/CartContext";
 import productsData from "../service/data";
 import Sidebar from "../components/Sidebar";
 import MenuHero from "../assets/AboutImages/menu.png";
+import { 
+  SparklesIcon,
+  StarIcon,
+  HeartIcon,
+  ClockIcon
+} from '@heroicons/react/24/outline';
 
 function Menu() {
   const { t, i18n } = useTranslation();
@@ -37,7 +43,7 @@ function Menu() {
 
   const handleSearchQueryChange = (query) => {
     setSearchQuery(query);
-    setCurrentPage(1); // Reset to first page when search changes
+    setCurrentPage(1); 
   };
 
   const handleViewDetails = (product) => {
@@ -90,14 +96,71 @@ function Menu() {
     }
   };
 
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setVisible(true);
+  }, []);
+
   return (
     <div className="bg-gray-50" dir={i18n.language === "ar" ? "rtl" : "ltr"}>
-      <HeroSection setSearchQuery={handleSearchQueryChange} image={MenuHero} />
+      {/* Hero Section with Animation */}
+      <div className={`transition-opacity duration-700 ${visible ? 'opacity-100' : 'opacity-0'}`}>
+        <HeroSection setSearchQuery={handleSearchQueryChange} image={MenuHero} />
+      </div>
 
+      {/* Menu Introduction */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 transition-all duration-1000 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}">
+            <h2 className="text-4xl font-bold mb-6 relative">
+              <span className="relative px-8">
+                {t("home.menu.title")}
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
+              </span>
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
+              <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <SparklesIcon className="h-8 w-8" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">{t("home.features.quality.title")}</h3>
+                <p className="text-gray-600">{t("home.features.quality.description")}</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <StarIcon className="h-8 w-8" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">{t("home.values.service.title")}</h3>
+                <p className="text-gray-600">{t("home.values.service.description")}</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <HeartIcon className="h-8 w-8" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">{t("home.values.quality.title")}</h3>
+                <p className="text-gray-600">{t("home.values.quality.description")}</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <ClockIcon className="h-8 w-8" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">{t("home.features.delivery.title")}</h3>
+                <p className="text-gray-600">{t("home.features.delivery.description")}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Menu Content */}
       <div className="container mx-auto px-4 py-8">
         {/* Mobile filter toggle button */}
         <button
-          className="md:hidden w-full py-3 mb-4 bg-black text-white flex justify-center items-center"
+          className={`md:hidden w-full py-3 mb-4 bg-black text-white flex justify-center items-center transition-all duration-700 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
           onClick={() => setShowFilters(!showFilters)}>
           {showFilters ? t("menu.hide_filters") : t("menu.show_filters")}
           <svg
@@ -116,12 +179,14 @@ function Menu() {
         </button>
 
         <div className="flex flex-col md:flex-row md:gap-8">
-          {/* Sidebar */}
+          {/* Sidebar with Animation */}
           <div
             className={`
               md:w-1/4 md:block 
               ${showFilters ? "block" : "hidden"} 
               bg-white shadow-md rounded-lg overflow-hidden mb-6 md:mb-0
+              transition-all duration-1000 transform
+              ${visible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}
             `}>
             <div className="p-5">
               <h2 className="text-xl font-bold mb-4 uppercase">
@@ -131,8 +196,8 @@ function Menu() {
             </div>
           </div>
 
-          {/* Main content area - MenuCard */}
-          <div className="md:w-3/4">
+          {/* Main content area - MenuCard with Animation */}
+          <div className={`md:w-3/4 transition-all duration-1000 delay-300 transform ${visible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
             <MenuCard
               filters={filters}
               currentPage={currentPage}
@@ -143,8 +208,6 @@ function Menu() {
               onAddToCart={handleAddToCart}
               products={paginatedProducts}
             />
-            
-         
           </div>
         </div>
       </div>
