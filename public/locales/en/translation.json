@@ -59,26 +59,31 @@
 		"search_placeholder": "Search in our Menu..."
 	},
 	"menu_card": {
-		"showing": "Showing {start}-{end} of {total} results",
-		"sort": {
-			"default": "Default sorting",
-			"price_asc": "Price: Low to High",
-			"price_desc": "Price: High to Low",
-			"rating_asc": "Rating: Low to High",
-			"rating_desc": "Rating: High to Low"
-		},
-		"no_products": "No products found",
-		"add_to_cart": "Add to Cart",
-		"view_details": "View Details",
-		"available": "Available",
-		"unavailable": "Unavailable",
-		"currency": "SR",
-		"previous": "Previous",
-		"next": "Next",
-		"page": "Page {current} of {total}"
+		  "showing": "Showing {{start}}-{{end}} of {{total}} results",
+		  "sort": {
+      "default": "Default sorting",
+      "price_asc": "Price: Low to High",
+      "price_desc": "Price: High to Low",
+      "rating_asc": "Rating: Low to High",
+      "rating_desc": "Rating: High to Low"
+    },
+    "previous": "Previous",
+    "next": "Next",
+    "add_to_cart": "Add to Cart",
+    "view_details": "View Details",
+    "available": "Available",
+    "unavailable": "Unavailable",
+    "currency": "SR",
+    "no_products": "No products found"
+	},
+	"popular_meals":{
+		    "title": "Popular Meals"
+
 	},
 	"sidebar": {
-	
+	    "all_categories": "All",
+		"min_price":"From",
+		"max_price":"To",
 		"reset_filters": "Reset All Filters",
 		"categories": "Categories",
 		"price_filter": "Filter by Price",
@@ -310,15 +315,16 @@
 		"currency": "SR",
 		"toast": "Item added to cart!"
 	},
-	"menu": {
-		"search_placeholder": "Search our menu...",
-		"search_title": "Find Your Favorite Dish",
-		"search_description": "Browse our delicious selection of traditional Saudi cuisine",
-		"show_filters": "Show Filters",
-		"hide_filters": "Hide Filters",
-		"filters": "Filters",
-		"menu_card.next":"Next"
-	},
+	
+  "menu": {
+    "title": "Our Menu",
+    "search_placeholder": "Search in our Menu...",
+    "filters": "Filters",
+    "show_filters": "Show Filters",
+    "hide_filters": "Hide Filters",
+    "page": "Page {{current}} of {{total}}"
+  },
+  
 	"partners": {
 		"hero": {
 			"title": "Our Partners",

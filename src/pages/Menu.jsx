@@ -3,18 +3,18 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import MenuCard from "../components/MenuCard";
-import HeroSection from "../components/HeroSection";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import productsData from "../service/data";
 import Sidebar from "../components/Sidebar";
-import MenuHero from "../assets/AboutImages/menu.png";
 import { 
   SparklesIcon,
   StarIcon,
   HeartIcon,
   ClockIcon,
-  XMarkIcon
+  XMarkIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon
 } from '@heroicons/react/24/outline';
 
 function Menu() {
@@ -55,7 +55,6 @@ function Menu() {
 
   const handleAddToCart = (product) => {
     addToCart(product);
-    // Optional: add toast notification
   };
 
   const handleImageClick = (product) => {
@@ -129,6 +128,10 @@ function Menu() {
     }
   };
 
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
   const handleSortChange = (event) => {
     setFilters({ ...filters, sortBy: event.target.value });
   };
@@ -138,6 +141,44 @@ function Menu() {
   useEffect(() => {
     setVisible(true);
   }, []);
+
+  // Function to generate pagination range
+  const getPaginationRange = () => {
+    const totalNumbers = 5; // Number of page numbers to show
+    const totalBlocks = totalNumbers + 2; // Total blocks including ellipsis
+    
+    if (totalPages > totalBlocks) {
+      const startPage = Math.max(2, currentPage - 1);
+      const endPage = Math.min(totalPages - 1, currentPage + 1);
+      
+      let pages = [];
+      
+      // Always show first page
+      pages.push(1);
+      
+      // Show ellipsis if needed after first page
+      if (startPage > 2) {
+        pages.push('...');
+      }
+      
+      // Show middle range
+      for (let i = startPage; i <= endPage; i++) {
+        pages.push(i);
+      }
+      
+      // Show ellipsis if needed before last page
+      if (endPage < totalPages - 1) {
+        pages.push('...');
+      }
+      
+      // Always show last page
+      pages.push(totalPages);
+      
+      return pages;
+    }
+    
+    return Array.from({ length: totalPages }, (_, i) => i + 1);
+  };
 
   return (
     <div className="bg-gray-50" dir={i18n.language === "ar" ? "rtl" : "ltr"}>
@@ -258,7 +299,7 @@ function Menu() {
                 {t("menu_card.showing", {
                   start: filteredProducts.length > 0 ? (currentPage - 1) * ITEMS_PER_PAGE + 1 : 0,
                   end: Math.min(currentPage * ITEMS_PER_PAGE, filteredProducts.length),
-                  total: filteredProducts.length,
+                  total: filteredProducts.length
                 })}
               </p>
               <div className="relative">
@@ -270,9 +311,7 @@ function Menu() {
                   <option value="price-asc">{t("menu_card.sort.price_asc")}</option>
                   <option value="price-desc">{t("menu_card.sort.price_desc")}</option>
                   <option value="rating-asc">{t("menu_card.sort.rating_asc")}</option>
-                  <option value="rating-desc">
-                    {t("menu_card.sort.rating_desc")}
-                  </option>
+                  <option value="rating-desc">{t("menu_card.sort.rating_desc")}</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                   <svg
@@ -291,27 +330,60 @@ function Menu() {
               onAddToCart={handleAddToCart}
               onImageClick={handleImageClick}
             />
+            
+           {/* Pagination controls */}
+{totalPages > 1 && (
+  <div className="mt-10 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4 px-4">
+    <div className="text-sm text-gray-600">
+      {t("menu.page", {
+        current: currentPage,
+        total: totalPages
+      })}
+    </div>
+    
+    <div className="flex items-center gap-1">
+      <button
+        onClick={handlePrevPage}
+        disabled={currentPage === 1}
+        className={`p-2 rounded-md ${currentPage === 1 ? 'text-gray-400 cursor-not-allowed' : 'text-gray-700 hover:bg-gray-100'}`}
+        aria-label={t("menu_card.previous")}
+      >
+        <ChevronLeftIcon className="h-5 w-5" />
+      </button>
 
-            {/* Pagination Controls */}
-            <div className="mt-10 mb-6 flex justify-center items-center space-x-4">
+      <div className="flex items-center gap-1">
+        {getPaginationRange().map((page, index) => (
+          <React.Fragment key={index}>
+            {page === '...' ? (
+              <span className="px-3 py-1 text-gray-500">...</span>
+            ) : (
               <button
-                onClick={handlePrevPage}
-                disabled={currentPage === 1}
-                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition-colors">
-                {t("menu_card.previous")}
+                onClick={() => handlePageChange(page)}
+                className={`w-10 h-10 flex items-center justify-center rounded-md text-sm font-medium ${
+                  currentPage === page
+                    ? "bg-blue-500 text-white shadow-md" // Updated active page style
+                    : "text-gray-700 hover:bg-gray-100"
+                }`}
+                aria-label={t("menu.page_number", { number: page })}
+              >
+                {page}
               </button>
+            )}
+          </React.Fragment>
+        ))}
+      </div>
 
-              <span className="text-lg">
-                {t("menu_card.page", { current: currentPage, total: totalPages || 1 })}
-              </span>
-
-              <button
-                onClick={handleNextPage}
-                disabled={currentPage === totalPages || totalPages === 0}
-                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition-colors">
-                {t("menu_card.next")}
-              </button>
-            </div>
+      <button
+        onClick={handleNextPage}
+        disabled={currentPage === totalPages || totalPages === 0}
+        className={`p-2 rounded-md ${currentPage === totalPages || totalPages === 0 ? 'text-gray-400 cursor-not-allowed' : 'text-gray-700 hover:bg-gray-100'}`}
+        aria-label={t("menu_card.next")}
+      >
+        <ChevronRightIcon className="h-5 w-5" />
+      </button>
+    </div>
+  </div>
+)}
           </div>
         </div>
       </div>
@@ -335,7 +407,6 @@ function Menu() {
                 className="max-h-full max-w-full object-contain" 
               />
             </div>
-     
           </div>
         </div>
       )}
@@ -343,4 +414,4 @@ function Menu() {
   );
 }
 
-export default Menu;
+export default Menu;  

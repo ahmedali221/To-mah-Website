@@ -58,26 +58,31 @@
 		"title": "قائمتنا",
 		"search_placeholder": "ابحث في قائمتنا..."
 	},
-	"menu_card": {
-		"showing": "عرض {start} إلى {end} من {total} نتيجة",
-		"sort": {
-			"default": "الترتيب الافتراضي",
-			"price_asc": "السعر: من الأقل إلى الأعلى",
-			"price_desc": "السعر: من الأعلى إلى الأقل",
-			"rating_asc": "التقييم: من الأقل إلى الأعلى",
-			"rating_desc": "التقييم: من الأعلى إلى الأقل"
-		},
-		"no_products": "لم يتم العثور على منتجات",
-		"add_to_cart": "أضف إلى السلة",
-		"view_details": "عرض التفاصيل",
-		"available": "متوفر",
-		"unavailable": "غير متوفر",
-		"currency": "ر.س",
-		"previous": "السابق",
-		"next": "التالي",
-		"page": "الصفحة {current} من {total}"
-	},
+	 "menu_card": {
+		 "showing": "عرض {{start}} إلى {{end}} من {{total}} نتيجة",
+    "sort": {
+      "default": "الترتيب الافتراضي",
+      "price_asc": "السعر: من الأقل إلى الأعلى",
+      "price_desc": "السعر: من الأعلى إلى الأقل",
+      "rating_asc": "التقييم: من الأقل إلى الأعلى",
+      "rating_desc": "التقييم: من الأعلى إلى الأقل"
+    },
+    "previous": "السابق",
+    "next": "التالي",
+    "add_to_cart": "أضف إلى السلة",
+    "view_details": "عرض التفاصيل",
+    "available": "متوفر",
+    "unavailable": "غير متوفر",
+    "currency": "ر.س",
+    "no_products": "لم يتم العثور على منتجات"
+  },
+"popular_meals": {
+    "title": "الوجبات الشعبية"
+  },
 	"sidebar": {
+		    "all_categories": "الكل",	
+"min_price":"من",
+		"max_price":"إلى",
 		"reset_filters": "إعادة تعيين جميع الفلاتر",
 		"categories": "الفئات",
 		"price_filter": "تصفية حسب السعر",
@@ -180,16 +185,16 @@
   "form_success": "شكرًا لك! تم إرسال رسالتك.",
 		"location_title": "الموقع",
 		"location_image_alt": "صورة الموقع",
-		"address_line1": "طُعمة، DMAJ8018",
-		"address_line2": "5153 طريق الملك عبدالله الفرعي، حي مهزور، 8018، المدينة المنورة 42319",
-		"address_line3": "المدينة المنورة 42210، المملكة العربية السعودية",
-		"phone": "+966 58 325 0000",
+		"address_line1": "طُعمة، DMAJ٨٠١٨",
+"address_line2": "٥١٥٣ طريق الملك عبدالله الفرعي، حي مهزور، ٨٠١٨، المدينة المنورة ٤٢٣١٩",
+"address_line3": "المدينة المنورة ٤٢٢١٠، المملكة العربية السعودية",
+"phone": "+٩٦٦ ٥٨ ٣٢٥ ٠٠٠٠",
 		"hours_title": "ساعات العمل",
 		"hours_weekend": "السبت والأحد",
 		"hours_weekdays": "الخميس إلى الأحد",
 		"hours_reservations": "الحجوزات",
-		"hours_weekend_time": "12:00 م - 1:30 م",
-		"hours_weekdays_time": "6:00 م - 8:45 م",
+		"hours_weekend_time": "١٢:٠٠ م - ١:٣٠ م",
+		"hours_weekdays_time": "٦:٠٠ م - ٨:٤٥ م",
 		"restaurant_image_alt": "صورة المطعم",
 		 "hours_breakfast": "الإفطار: ٦:٠٠ ص - ١:٠٠ م",
     "hours_lunch": "الغداء: ١:٠٠ م - ٦:٠٠ م",
@@ -322,18 +327,13 @@
 		"currency": "ر.س",
 		"toast": "تمت إضافة العنصر إلى السلة!"
 	},
-  "menu": {
+ "menu": {
+    "title": "قائمتنا",
     "search_placeholder": "ابحث في قائمتنا...",
-    "search_title": "ابحث عن طبقك المفضل",
-    "search_description": "تصفح تشكيلتنا اللذيذة من المأكولات السعودية التقليدية",
-    "show_filters": "إظهار الفلاتر",
-    "hide_filters": "إخفاء الفلاتر",
-    "filters": "الفلاتر",
     "filters": "الفلاتر",
     "show_filters": "إظهار الفلاتر",
     "hide_filters": "إخفاء الفلاتر",
-			"menu_card.next":"التالي"
-
+    "page": "الصفحة {{current}} من {{total}}"
   },
 	"partners": {
 		"hero": {
