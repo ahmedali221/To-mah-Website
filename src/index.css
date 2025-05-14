@@ -1,0 +1,320 @@
+/* Base body styles */
+body {
+    font-family: 'Merienda', cursive;
+    background: #f8f9fc;
+    color: #101828;
+    font-size: 18px;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Arabic-specific styles */
+body[dir="rtl"], html[dir="rtl"] body {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 21px;
+    background: #f0f2f7;
+    color: #1d2939;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merienda', cursive;
+    color: #101828;
+}
+
+/* Arabic headings */
+body[dir="rtl"] h1,
+body[dir="rtl"] h2,
+body[dir="rtl"] h3,
+body[dir="rtl"] h4,
+body[dir="rtl"] h5,
+body[dir="rtl"] h6 {
+    font-family: 'Aref Ruqaa', serif;
+    color: #101828;
+}
+
+/* Links */
+a {
+    color: #344054;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #101828;
+}
+
+/* Buttons */
+button, .shop-button {
+    background: #344054;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Merienda', cursive;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+}
+button:hover, .shop-button:hover {
+    background: #101828;
+    color: #f8f9fc;
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(rgba(52, 64, 84, 0.8), rgba(16, 24, 40, 0.9)),
+        url('cafe-image.jpg');
+    background-size: cover;
+    color: #f8f9fc;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Card backgrounds */
+.bg-white, .bg-slate-50 {
+    background: #f8f9fc !important;
+}
+
+/* Utility classes for blue-gray palette */
+.text-primary { color: #344054 !important; }
+.text-primary-dark { color: #101828 !important; }
+.bg-primary { background-color: #344054 !important; }
+.bg-primary-dark { background-color: #101828 !important; }
+.bg-primary-light { background-color: #f0f2f7 !important; }
+.bg-primary-lightest { background-color: #f8f9fc !important; }
+
+/* Accent colors for contrast */
+.text-accent { color: #667085 !important; }
+.bg-accent { background-color: #667085 !important; }
+.border-accent { border-color: #667085 !important; }
+
+/* Responsive font size for Arabic */
+@media (max-width: 600px) {
+    body[dir="rtl"], html[dir="rtl"] body {
+        font-size: 19px;
+    }
+}
+
+/* Footer Styles */
+.footer-wrapper {
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.footer-brand {
+    transition: transform 0.3s ease;
+}
+
+.footer-brand:hover {
+    transform: translateY(-5px);
+}
+
+.footer-logo {
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.footer-description {
+    line-height: 1.6;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.footer-description:hover {
+    opacity: 1;
+}
+
+.footer-heading {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #D4AF37;
+    transition: width 0.3s ease;
+}
+
+.footer-heading:hover::after {
+    width: 60px;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.social-icon {
+    color: #f0f2f7;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+    color: white;
+    background-color: #D4AF37;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.footer-links-column {
+    transition: transform 0.3s ease;
+}
+
+.footer-links-column:hover {
+    transform: translateY(-5px);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-link {
+    color: #f0f2f7;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    padding-left: 0;
+}
+
+.footer-link::before {
+    content: '›';
+    position: absolute;
+    left: -15px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    color: white;
+    opacity: 1;
+    padding-left: 15px;
+}
+
+.footer-link:hover::before {
+    opacity: 1;
+    left: 0;
+}
+
+.footer-copyright {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-copyright:hover {
+    opacity: 1;
+}
+
+.footer-legal-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-legal-link {
+    color: #f0f2f7;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer-legal-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.footer-legal-link:hover {
+    color: white;
+    opacity: 1;
+}
+
+.footer-legal-link:hover::after {
+    width: 100%;
+}
+
+/* RTL specific footer styles */
+[dir="rtl"] .footer-heading::after {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .footer-link {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+[dir="rtl"] .footer-link::before {
+    content: '‹';
+    left: auto;
+    right: -15px;
+}
+
+[dir="rtl"] .footer-link:hover {
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+[dir="rtl"] .footer-link:hover::before {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .footer-legal-link::after {
+    left: auto;
+    right: 0;
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+    .footer-social-icons {
+        justify-content: center;
+    }
+    
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    [dir="rtl"] .footer-heading::after {
+        right: 50%;
+        transform: translateX(50%);
+    }
+    
+    .footer-links {
+        text-align: center;
+    }
+    
+    .footer-link::before {
+        display: none;
+    }
+    
+    .footer-link:hover {
+        padding-left: 0;
+        transform: translateY(-2px);
+    }
+    
+    [dir="rtl"] .footer-link:hover {
+        padding-right: 0;
+        transform: translateY(-2px);
+    }
+}

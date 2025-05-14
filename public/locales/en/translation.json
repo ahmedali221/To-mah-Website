@@ -1,13 +1,411 @@
 {
-	"welcome": "Welcome to To'mah Restaurant",
-	"description": "Explore our delicious menu and enjoy a great dining experience",
 	"navbar": {
-        "brand":"To'mah",
+		"brand": "To'mah",
 		"home": "Home",
 		"about": "About",
+		"menu": "Menu",
 		"partners": "Partners",
 		"contact": "Contact",
-		"menu": "Menu",
-		"cart": "Cart"
+		"language_toggle": {
+			"arabic": "Arabic",
+			"english": "English"
+		}
+	},
+	"contact_form": {
+		"title": "Contact Us",
+		"description": "We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.",
+		"name_label": "Name",
+		"name_placeholder": "Your name",
+		"email_label": "Email",
+		"email_placeholder": "Your email",
+		"phone_label": "Phone",
+		"phone_placeholder": "Your phone number",
+		"message_label": "Message",
+		"message_placeholder": "Your message",
+		"send_button": "Send Message",
+		"sending_button": "Sending...",
+		"success_message": "Your message has been sent successfully!",
+		"error_message": "There was an error sending your message. Please try again later."
+	},
+	"footer": {
+		"services_title": "Services",
+		"services": {
+			"branding": "Branding",
+			"design": "Design",
+			"marketing": "Marketing",
+			"advertisement": "Advertisement"
+		},
+		"company_title": "Company",
+		"company": {
+			"tripadvisor": "TripAdvisor",
+			"youtube": "YouTube",
+			"google_maps": "Google Maps",
+			"linktree": "Official Linktree"
+		},
+		"legal_title": "Legal",
+		"legal": {
+			"terms": "Terms of use",
+			"privacy": "Privacy policy",
+			"cookie": "Cookie policy"
+		},
+		"aside": {
+			"description": "To'mah Restaurant\nAuthentic Hejazi Cuisine"
+		}
+	},
+	"hero_section": {
+		"title": "Our Menu",
+		"search_placeholder": "Search in our Menu..."
+	},
+	"menu_card": {
+		"showing": "Showing {start}-{end} of {total} results",
+		"sort": {
+			"default": "Default sorting",
+			"price_asc": "Price: Low to High",
+			"price_desc": "Price: High to Low",
+			"rating_asc": "Rating: Low to High",
+			"rating_desc": "Rating: High to Low"
+		},
+		"no_products": "No products found",
+		"add_to_cart": "Add to Cart",
+		"view_details": "View Details",
+		"available": "Available",
+		"unavailable": "Unavailable",
+		"currency": "SR",
+		"previous": "Previous",
+		"next": "Next",
+		"page": "Page {current} of {total}"
+	},
+	"sidebar": {
+		"reset_filters": "Reset All Filters",
+		"categories": "Categories",
+		"price_filter": "Filter by Price",
+		"price_range": "Range:",
+		"apply_filter": "Apply Filter",
+		"popular_items": "Popular Items",
+		"no_popular_products": "No popular products available",
+		"currency": "SR"
+	},
+	"about": {
+		"story": {
+			"title": "Our Story",
+			"description": "flavors of traditional Hejazi cuisine in a modern and inviting setting. What began as a dream to revive authentic Saudi dishes with a contemporary twist, quickly grew into a beloved destination for those seeking warmth, heritage, and exceptional taste. At To’mah, every dish tells a story — a story of home, culture, and unforgettable flavor.",
+			"signature": "طُعمة",
+			"image_alt_left": "Dish Left",
+			"image_alt_right": "Dish Right"
+		},
+		"video": {
+			"cover_alt": "Video Cover",
+			"play_button": "Play Video"
+		},
+		"values": {
+			"title": "Our Values",
+			"hospitality": "Hospitality & Warmth",
+			"authenticity": "Authenticity",
+			"community": "Community Support",
+			"culture": "Cultural Preservation"
+		},
+		"ambiance": {
+			"title": "Our Ambiance",
+			"description": "Inspired by the historic homes of Medina, our decor features over 100-year-old doors, traditional fabrics, volcanic stones, and local plants that create an atmosphere of heritage and nostalgia.",
+			"image_alt": "Restaurant Decor"
+		},
+		"special_menu": {
+			"logo_alt": "To'mah Logo",
+			"interior_alt": "Restaurant Interior"
+		},
+		"testimonials": {
+			"title": "Reviews",
+			"0": {
+				"text": "Probably the most authentic Saudi dining experience I've ever had. Everything was perfect, and the service was outstanding. A must-visit.",
+				"name": "TripAdvisor Review"
+			},
+			"1": {
+				"text": "The only restaurant all locals love. It’s always packed, and for a reason. The food is excellent and truly worth the hype.",
+				"name": "TikTok user review"
+			},
+			"2": {
+				"text": "Exploring a wonderful dining experience at To’mah — a beautiful blend of heritage, hospitality, and flavor.",
+				"name": "Foodie TikTok video"
+			},
+			"3": {
+				"text": "A special experience in Medina.",
+				"name": "Yousef Al-Jarrah"
+			},
+			"4": {
+				"text": "Enjoy a welcoming atmosphere that tells the stories of the Tomah family, who take pride in offering authentic flavors that reflect a deep history and a rich cultural legacy.",
+				"name": "HiHome Experience"
+			},
+			"5": {
+				"text": "Experience the rich flavors of Al Madinah at To'mah Restaurant, where every dish reflects traditional recipes and authentic Madani heritage.",
+				"name": "Visit Saudi Official Website"
+			}
+		},
+		"gallery": {
+			"image_alt": "Gallery Image"
+		},
+		"cta": {
+			"title": "Why Visit To'mah?",
+			"description": "Experience more than just food — experience tradition, warmth, and a piece of Medina's soul.",
+			"button": "Explore Menu"
+		}
+	},
+	"cart": {
+		"title": "Your Cart",
+		"empty": "Your cart is empty",
+		"remove": "Remove",
+		"checkout": "Proceed to Checkout",
+		"summary": "Order Summary",
+		"total": "Total:",
+		"currency": "SR",
+		"delivery_title": "Delivery Information",
+		"address_label": "Delivery Address",
+		"phone_label": "Phone Number",
+		"place_order": "Place Order",
+		"order_success": "Order placed successfully! (Demo only)"
+	},
+	"contact": {
+		"location_title": "Location",
+		"location_image_alt": "Location Image",
+		"address_line1": "طُعمة, DMAJ8018",
+		"address_line2": "5153 King Abdullah Branch Rd, Mahzur, 8018, Madinah 42319",
+		"address_line3": "Madinah 42210, Saudi Arabia",
+		"phone": "+966 58 325 0000",
+		"hours_title": "Working Hours",
+		"hours_weekend": "Saturday & Sunday",
+		"hours_weekdays": "Thursday to Sunday",
+		"hours_reservations": "Reservations",
+		"hours_weekend_time": "12:00 pm - 1:30 pm",
+		"hours_weekdays_time": "6:00 pm - 8:45 pm",
+		"restaurant_image_alt": "Restaurant Image"
+	},
+	
+  "home": {
+	"menu":{"title":"Introduced Our Menu"},
+	"chefs": {
+    "title": "Meet Our Chefs",
+    "description": "Our talented chefs bring authentic flavors to every dish."
+  },
+ 
+    "hero": {
+      "title": "Welcome to To'mah Restaurant",
+      "subtitle": "Authentic Saudi Cuisine",
+      "cta": "Browse Our Menu",
+      "description": "Experience the finest dining with our carefully crafted dishes and exceptional service.",
+      "button": "View Menu"
+    },
+    "values": {
+      "title": "Our Philosophy",
+      "quality": {
+        "title": "Authentic Taste",
+        "description": "Each dish captures the authentic flavors of our city's traditional cuisine, made with fresh ingredients and time-honored cooking techniques."
+      },
+      "tradition": {
+        "title": "Elegant Atmosphere",
+        "description": "Our restaurant emulates a heritage ambiance that immerses you in tranquility and comfort, creating a historically rich environment steeped in tradition."
+      },
+      "service": {
+        "title": "Tu'mah Experience",
+        "description": "Food from the city that carries a special meaning - not just a meal, but a connection to our cultural heritage and community values."
+      }
+    },
+    "vision": {
+      "title": "Our Vision & Goals",
+      "heritage": {
+        "title": "Cultural Heritage",
+        "description": "Preserving and sharing our rich culinary traditions"
+      },
+      "innovation": {
+        "title": "Modern Innovation",
+        "description": "Blending traditional flavors with contemporary presentation"
+      },
+      "community": {
+        "title": "Community Focus",
+        "description": "Creating a welcoming space for all our guests"
+      },
+      "image_alt": "Restaurant Vision Image",
+      "years": "Est. 2010",
+      "experience": "Years of Excellence"
+    },
+    "features": {
+      "title": "Why Choose Us",
+      "quality": {
+        "title": "Premium Quality",
+        "description": "Only the finest ingredients make it to your plate"
+      },
+      "service": {
+        "title": "Expert Service",
+        "description": "Professional and attentive staff at your service"
+      },
+      "hygiene": {
+        "title": "Perfect Hygiene",
+        "description": "Maintaining the highest standards of cleanliness"
+      },
+      "delivery": {
+        "title": "Fast Delivery",
+        "description": "Quick and reliable delivery to your doorstep"
+      }
+    },
+    "cta": {
+      "title": "Experience the Taste of Tradition Today",
+      "description": "Join us for an unforgettable culinary journey through our city's rich food heritage",
+      "menu_button": "Browse Our Menu",
+      "order_button": "Order Now"
+    },
+    "featured": {
+      "title": "Featured Dishes",
+      "order_button": "Order Now"
+    },
+    "testimonials": {
+      "title": "Customer Testimonials",
+      "0": {
+        "text": "The food was absolutely wonderful, from preparation to presentation, very pleasing.",
+        "name": "John Doe"
+      },
+      "1": {
+        "text": "The ambiance and service were exceptional. Highly recommend this restaurant!",
+        "name": "Jane Smith"
+      }
+    },
+    "about": {
+      "title": "Our Story",
+      "description": "Discover the perfect blend of tradition and innovation at To'mah. Our passionate chefs create memorable dining experiences with the finest ingredients and authentic recipes.",
+      "button": "Learn More",
+      "image_alt": "Restaurant Interior"
+    },
+    "currency": "SR"
+  
+},
+	"meal_details": {
+		"loading": "Loading...",
+		"back": "Back to Menu",
+		"quick_facts": "Quick Facts",
+		"prep_time": "Preparation Time",
+		"calories": "Calories",
+		"kcal": "kcal",
+		"difficulty": "Difficulty",
+		"servings": "Servings",
+		"vegetarian": "Vegetarian",
+		"vegan": "Vegan",
+		"na": "N/A",
+		"yes": "Yes",
+		"no": "No",
+		"ingredients": "Ingredients",
+		"notes": "Notes",
+		"add_to_cart": "Add to Cart",
+		"currency": "SR",
+		"toast": "Item added to cart!"
+	},
+	"menu": {
+		"show_filters": "Show Filters",
+		"hide_filters": "Hide Filters",
+		"filters": "Filters"
+	},
+	"partners": {
+		"hero": {
+			"title": "Our Partners",
+			"description": "We collaborate with the finest suppliers and work alongside talented individuals to bring you an exceptional dining experience."
+		},
+		"testimonials": {
+			"title": "What Our Partners Say"
+		},
+	
+		"cta": {
+			"title": "Become a Partner",
+			"description": "We're always looking to collaborate with quality suppliers and influential personalities who share our passion for exceptional food and service.",
+			"button": "Contact Us for Partnership"
+		},
+		"partners": [
+			{
+				"name": "Cindy",
+				"role": "Food Influencer",
+				"testimonial": "Commodo duis dolor proin luctus elit vehicula. Posuere leo venenatis mollis hac platea porta dis consequat ullamcorper."
+			},
+			{
+				"name": "Lillie Gilman",
+				"role": "Photographer",
+				"testimonial": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur sunt in culpa qui officia."
+			},
+			{
+				"name": "Neil Rosas",
+				"role": "Vlogger",
+				"testimonial": "Pharetra amet eget dolor facilisis morbi molestie? Venenatis semper ornare feugiat consectetur elit cubilia sit velit."
+			}
+		],
+		"suppliers": [
+			{
+				"name": "Fresh Farms Co.",
+				"type": "Organic Produce",
+				"description": "Providing fresh, organic vegetables and fruits directly from local farms."
+			},
+			{
+				"name": "Premium Meats",
+				"type": "Quality Meats",
+				"description": "Supplying high-quality, ethically sourced meats for our signature dishes."
+			},
+			{
+				"name": "Ocean Fresh",
+				"type": "Seafood",
+				"description": "Delivering the freshest seafood from sustainable sources daily."
+			}
+		]
+	},
+	"payment": {
+		"title": "Payment",
+		"complete_order": "Complete Your Order",
+		"order_summary": "Order Summary",
+		"payment_method": "Payment Method",
+		"card": "Credit/Debit Card",
+		"delivery": "Pay on Delivery",
+		"full_name": "Full Name",
+		"full_name_placeholder": "John Doe",
+		"phone": "Phone Number",
+		"phone_placeholder": "+1 234 567 8900",
+		"address": "Address",
+		"address_placeholder": "Street address",
+		"city": "City",
+		"city_placeholder": "City",
+		"postal_code": "Postal Code",
+		"postal_code_placeholder": "Postal code",
+		"locate_me": "Locate Me",
+		"locating": "Locating...",
+		"card_info": "Card Information",
+		"name_on_card": "Name on Card",
+		"name_on_card_placeholder": "John Smith",
+		"card_number": "Card Number",
+		"card_number_placeholder": "1234 5678 9012 3456",
+		"expiry": "Expiry Date",
+		"expiry_placeholder": "MM/YY",
+		"cvv": "CVV",
+		"cvv_placeholder": "123",
+		"delivery_instructions": "Delivery Instructions",
+		"delivery_instructions_placeholder": "Any special instructions for delivery?",
+		"delivery_note": "You'll pay with cash, card, or mobile payment when your order arrives.",
+		"empty_cart": "Your cart is empty",
+		"quantity": "Qty: {count}",
+		"currency": "SR",
+		"total": "Total",
+		"current_location": "Current Location",
+		"near_location": "Near {lat}, {lng}",
+		"error_location": "Could not detect location. Please enter manually.",
+		"error_geolocation": "Geolocation is not supported by your browser.",
+		"error_full_name": "Please enter your full name.",
+		"error_address": "Please enter your address.",
+		"error_city": "Please enter your city.",
+		"error_phone": "Please enter a contact number.",
+		"error_phone_delivery": "Please enter a contact number for delivery.",
+		"error_name_on_card": "Please enter the name on card.",
+		"error_card_number": "Please enter a valid 16-digit card number.",
+		"error_expiry": "Please enter a valid expiry date (MM/YY).",
+		"error_cvv": "Please enter a valid CVV (3 or 4 digits).",
+		"error_general": "An error occurred. Please try again.",
+		"success_card": "Payment processed successfully!",
+		"success_delivery": "Order placed successfully! Pay on delivery.",
+		"processing": "Processing...",
+		"pay_button": "Pay {total} SR",
+		"place_order_button": "Place Order (Pay {total} SR on Delivery)"
 	}
+
 }
+
+ 
+
