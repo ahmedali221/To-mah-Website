@@ -13,7 +13,8 @@ import {
   SparklesIcon,
   StarIcon,
   HeartIcon,
-  ClockIcon
+  ClockIcon,
+  XMarkIcon
 } from '@heroicons/react/24/outline';
 
 function Menu() {
@@ -35,11 +36,13 @@ function Menu() {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [showFilters, setShowFilters] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
   const navigate = useNavigate();
   const { addToCart } = useCart();
 
   // Number of items to load per page
-  const ITEMS_PER_PAGE = 10;
+  const ITEMS_PER_PAGE = 6;
 
   const handleSearchQueryChange = (query) => {
     setSearchQuery(query);
@@ -55,9 +58,19 @@ function Menu() {
     // Optional: add toast notification
   };
 
+  const handleImageClick = (product) => {
+    setSelectedImage(product);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedImage(null);
+  };
+
   // Memoize filtered products to avoid recalculating on every render
   const filteredProducts = useMemo(() => {
-    return productsData.filter((product) => {
+    let filtered = productsData.filter((product) => {
       const matchesCategory =
         filters.category === "" ||
         (i18n.language === "ar" && product.category_ar
@@ -70,9 +83,29 @@ function Menu() {
         (i18n.language === "ar" && product.name_ar
           ? product.name_ar.toLowerCase().includes(searchQuery.toLowerCase())
           : product.name_en.toLowerCase().includes(searchQuery.toLowerCase()));
+      const matchesBrand = 
+        filters.brand === "" || product.brand === filters.brand;
+      const matchesAvailable = 
+        filters.available === "" || String(product.available) === filters.available;
+      const matchesRating = 
+        product.rating >= filters.minRating;
 
-      return matchesCategory && matchesPrice && matchesSearch;
+      return matchesCategory && matchesPrice && matchesSearch && 
+             matchesBrand && matchesAvailable && matchesRating;
     });
+
+    // Apply sorting
+    if (filters.sortBy) {
+      filtered.sort((a, b) => {
+        if (filters.sortBy === "price-asc") return a.price - b.price;
+        if (filters.sortBy === "price-desc") return b.price - a.price;
+        if (filters.sortBy === "rating-asc") return a.rating - b.rating;
+        if (filters.sortBy === "rating-desc") return b.rating - a.rating;
+        return 0;
+      });
+    }
+
+    return filtered;
   }, [filters, searchQuery, i18n.language]);
 
   // Calculate paginated products
@@ -94,6 +127,10 @@ function Menu() {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
     }
+  };
+
+  const handleSortChange = (event) => {
+    setFilters({ ...filters, sortBy: event.target.value });
   };
 
   const [visible, setVisible] = useState(false);
@@ -215,19 +252,93 @@ function Menu() {
 
           {/* Main content area - MenuCard with Animation */}
           <div className={`md:w-3/4 transition-all duration-1000 delay-300 transform ${visible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
+            {/* Sort dropdown */}
+            <div className="flex flex-col sm:flex-row justify-between items-center mb-6 px-4">
+              <p className="text-lg text-gray-600 mb-3 sm:mb-0">
+                {t("menu_card.showing", {
+                  start: filteredProducts.length > 0 ? (currentPage - 1) * ITEMS_PER_PAGE + 1 : 0,
+                  end: Math.min(currentPage * ITEMS_PER_PAGE, filteredProducts.length),
+                  total: filteredProducts.length,
+                })}
+              </p>
+              <div className="relative">
+                <select
+                  value={filters.sortBy}
+                  onChange={handleSortChange}
+                  className="appearance-none border rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                  <option value="">{t("menu_card.sort.default")}</option>
+                  <option value="price-asc">{t("menu_card.sort.price_asc")}</option>
+                  <option value="price-desc">{t("menu_card.sort.price_desc")}</option>
+                  <option value="rating-asc">{t("menu_card.sort.rating_asc")}</option>
+                  <option value="rating-desc">
+                    {t("menu_card.sort.rating_desc")}
+                  </option>
+                </select>
+                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg
+                    className="fill-current h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
             <MenuCard
-              filters={filters}
-              currentPage={currentPage}
-              setCurrentPage={setCurrentPage}
-              setFilters={setFilters}
-              searchQuery={searchQuery}
+              products={paginatedProducts}
               onViewDetails={handleViewDetails}
               onAddToCart={handleAddToCart}
-              products={paginatedProducts}
+              onImageClick={handleImageClick}
             />
+
+            {/* Pagination Controls */}
+            <div className="mt-10 mb-6 flex justify-center items-center space-x-4">
+              <button
+                onClick={handlePrevPage}
+                disabled={currentPage === 1}
+                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition-colors">
+                {t("menu_card.previous")}
+              </button>
+
+              <span className="text-lg">
+                {t("menu_card.page", { current: currentPage, total: totalPages || 1 })}
+              </span>
+
+              <button
+                onClick={handleNextPage}
+                disabled={currentPage === totalPages || totalPages === 0}
+                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition-colors">
+                {t("menu_card.next")}
+              </button>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Image Modal */}
+      {modalOpen && selectedImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+          <div className="relative bg-white rounded-lg max-w-4xl w-full overflow-hidden">
+            <button 
+              onClick={closeModal}
+              className="absolute top-4 right-4 p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition-colors z-10"
+            >
+              <XMarkIcon className="h-6 w-6 text-gray-800" />
+            </button>
+                
+            {/* Full-height image container */}
+            <div className="flex-grow flex items-center justify-center h-full overflow-hidden">
+              <img 
+                src={selectedImage.image} 
+                alt={i18n.language === "ar" && selectedImage.name_ar ? selectedImage.name_ar : selectedImage.name_en}
+                className="max-h-full max-w-full object-contain" 
+              />
+            </div>
+     
+          </div>
+        </div>
+      )}
     </div>
   );
 }
