@@ -375,6 +375,8 @@
 		]
 	},
 	"payment": {
+						"quantity":"{{count}}",
+
 		"title": "Payment",
 		"complete_order": "Complete Your Order",
 		"order_summary": "Order Summary",
@@ -406,7 +408,7 @@
 		"delivery_instructions_placeholder": "Any special instructions for delivery?",
 		"delivery_note": "You'll pay with cash, card, or mobile payment when your order arrives.",
 		"empty_cart": "Your cart is empty",
-		"quantity": "Qty: {count}",
+		"quantity": "Qty: {{count}}",
 		"currency": "SR",
 		"total": "Total",
 		"current_location": "Current Location",

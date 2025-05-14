@@ -387,6 +387,8 @@
 		]
 	},
 	"payment": {
+				"quantity": "الكمية: {{count}}",
+
 		"title": "الدفع",
 		"complete_order": "إتمام طلبك",
 		"order_summary": "ملخص الطلب",
