@@ -387,8 +387,7 @@
 		]
 	},
 	"payment": {
-				"quantity": "الكمية: {{count}}",
-
+		"quantity": "الكمية: {{count}}",
 		"title": "الدفع",
 		"complete_order": "إتمام طلبك",
 		"order_summary": "ملخص الطلب",
@@ -420,7 +419,6 @@
 		"delivery_instructions_placeholder": "أي تعليمات خاصة للتوصيل؟",
 		"delivery_note": "ستدفع نقدًا، ببطاقة، أو عبر الدفع الإلكتروني عند استلام طلبك.",
 		"empty_cart": "سلة التسوق فارغة",
-		"quantity": "الكمية: {count}",
 		"currency": "ر.س",
 		"total": "الإجمالي",
 		"current_location": "الموقع الحالي",

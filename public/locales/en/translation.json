@@ -375,8 +375,7 @@
 		]
 	},
 	"payment": {
-						"quantity":"{{count}}",
-
+"quantity": "Qty: {{count}}",
 		"title": "Payment",
 		"complete_order": "Complete Your Order",
 		"order_summary": "Order Summary",
