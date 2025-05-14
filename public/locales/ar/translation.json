@@ -305,11 +305,14 @@
 		"currency": "ر.س",
 		"toast": "تمت إضافة العنصر إلى السلة!"
 	},
-	"menu": {
-		"show_filters": "إظهار الفلاتر",
-		"hide_filters": "إخفاء الفلاتر",
-		"filters": "الفلاتر"
-	},
+  "menu": {
+    "search_placeholder": "ابحث في قائمتنا...",
+    "search_title": "ابحث عن طبقك المفضل",
+    "search_description": "تصفح تشكيلتنا اللذيذة من المأكولات السعودية التقليدية",
+    "show_filters": "إظهار الفلاتر",
+    "hide_filters": "إخفاء الفلاتر",
+    "filters": "الفلاتر"
+  },
 	"partners": {
 		"hero": {
 			"title": "شركاؤنا",

@@ -296,6 +296,9 @@
 		"toast": "Item added to cart!"
 	},
 	"menu": {
+		"search_placeholder": "Search our menu...",
+		"search_title": "Find Your Favorite Dish",
+		"search_description": "Browse our delicious selection of traditional Saudi cuisine",
 		"show_filters": "Show Filters",
 		"hide_filters": "Hide Filters",
 		"filters": "Filters"

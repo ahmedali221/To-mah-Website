@@ -19,7 +19,7 @@ export default function HeroSection({ setSearchQuery, image }) {
         backgroundPosition: "center center",
     }}
     dir={i18n.language === "ar" ? "rtl" : "ltr"}>
-    <div className="container mx-auto px-4 text-center z-10">
+    {/* <div className="container mx-auto px-4 text-center z-10">
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 animate-fade-in">
         {t("home.hero.title")}
       </h1>
@@ -49,7 +49,7 @@ export default function HeroSection({ setSearchQuery, image }) {
           </div>
         </div>
       )}
-    </div>
+    </div> */}
 </div>
 	);
 }
