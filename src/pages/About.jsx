@@ -23,7 +23,7 @@ import g6 from "/src/assets/AboutImages/G6.jpg";
 import g7 from "/src/assets/AboutImages/G7.jpg";
 import g8 from "/src/assets/AboutImages/G8.jpg";
 import g9 from "/src/assets/AboutImages/G9.jpg";
-import g10 from "/src/assets/AboutImages/G10.jpg";
+// import g10 from "/src/assets/AboutImages/G10.jpg";
 import { 
   HeartIcon, 
   SparklesIcon,
@@ -38,7 +38,7 @@ const About = () => {
 	const navigate = useNavigate();
 	const { t, i18n } = useTranslation();
 
-	const galleryImages = [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10];
+	const galleryImages = [g1, g2, g3, g4, g5, g6, g7, g8, g9];
 
 	const testimonials = [
 		{
@@ -135,7 +135,7 @@ const About = () => {
 						
 						<div className="animate-on-scroll" id="story-text">
 							<div className={`text-center space-y-4 transition-all duration-1000 delay-300 ${isVisible['story-text'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-								<p className="text-amber-600 font-bold text-xl">*</p>
+								<p className="text-amber-600 font-bold text-xl">***</p>
 								<p className="text-gray-600 leading-relaxed">{t("about.story.description")}</p>
 								<p className="text-2xl font-bold mt-6 font-serif">{t("about.story.signature")}</p>
 							</div>
@@ -329,7 +329,7 @@ const About = () => {
 					>
 						{galleryImages.concat(galleryImages).map((img, index) => (
 							<div key={index} className="px-2">
-								<div className="w-full h-48 rounded-lg overflow-hidden shadow-lg">
+								<div className="w-full h-62 rounded-lg overflow-hidden shadow-lg">
 									<img
 										src={img}
 										alt={t("about.gallery.image_alt")}
