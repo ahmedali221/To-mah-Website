@@ -10,6 +10,9 @@ import {
 import { useCart } from "../context/CartContext";
 import { useTranslation } from "react-i18next";
 import logo from "../assets/logo.webp";
+import Restaurant from "../assets/Window.jpeg";
+import Reserve from "../assets/LogoLight.jpeg";
+
 
 function Navbar({ changeLanguage }) {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -130,14 +133,14 @@ function Navbar({ changeLanguage }) {
 							<div className="fixed left-0 right-0 mt-2 bg-white rounded-b-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 transition-all duration-300 z-40 pointer-events-none group-hover:pointer-events-auto w-screen">
 								<div className="flex flex-row justify-center space-x-8 px-8 py-6">
 									{/* Example website 1 */}
-									<a href="https://website1.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center hover:scale-105 transition-transform duration-200">
-										<img src="/assets/website1.png" alt="Website 1" className="w-16 h-16 rounded-lg shadow mb-2"/>
-										<span className="text-sm font-medium text-gray-700">Website 1</span>
+									<a href="https://tomah.netlify.app/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center hover:scale-105 transition-transform duration-200">
+										<img src={Restaurant} alt="Website 1" className="w-[400px] max-h-[300px] object-cover rounded-lg shadow mb-2"/>
+										<span className="text-sm font-medium text-gray-700">To3ma Restaurant </span>
 									</a>
 									{/* Example website 2 */}
-									<a href="https://website2.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center hover:scale-105 transition-transform duration-200">
-										<img src="/assets/website2.png" alt="Website 2" className="w-16 h-16 rounded-lg shadow mb-2"/>
-										<span className="text-sm font-medium text-gray-700">Website 2</span>
+									<a href="https://tomah.sa/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center hover:scale-105 transition-transform duration-200">
+										<img src={Reserve} alt="Website 2" className="w-[400px] max-h-[300px] rounded-lg shadow mb-2"/>
+										<span className="text-sm font-medium text-gray-700">To'mah Reserve </span>
 									</a>
 									{/* Add more websites as needed */}
 								</div>
@@ -208,7 +211,7 @@ function Navbar({ changeLanguage }) {
 							}`}></span>}
 						</Link>
 						<Link to="/cart" className="relative p-2 group">
-							<ShoppingCartIcon className={`h-6 w-6 transition-colors duration-300 ${
+							<ShoppingCartIcon className={`h-6 w-6 text-primary-dark duration-300 ${
 								scrolled ? "text-primary-dark group-hover:text-primary" : "text-white group-hover:text-white/80"
 							}`} />
 							{totalItems > 0 && (
