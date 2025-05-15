@@ -15,8 +15,14 @@ export default function MenuCard({
 }) {
 	const [filteredProducts, setFilteredProducts] = useState([]);
 	const { t, i18n } = useTranslation();
+	// === Added for Modal Preview ===
+	const [modalImage, setModalImage] = useState(null);
+	const closeModal = () => setModalImage(null);
+	// === End Added ===
+
 
 	useEffect(() => {
+
 		let filtered = productsData.filter((product) => {
 			return (
 				(filters.category === "" || product.category_en === filters.category) &&
@@ -44,6 +50,8 @@ export default function MenuCard({
 
 		setFilteredProducts(filtered);
 		setCurrentPage(1);
+
+
 	}, [filters, setCurrentPage, searchQuery]);
 
 	const itemsPerPage = 6;
@@ -58,10 +66,66 @@ export default function MenuCard({
 		setFilters({ ...filters, sortBy: event.target.value });
 	};
 
+	// === Added for Modal Preview ===
+	// const [modalImage, setModalImage] = useState(null);
+	// // const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
+	// const openModal = (imageUrl
+	// 	,
+	// 	// event
+	// ) => {
+	// 	setModalImage(imageUrl);
+	// 	// const rect = event.target.getBoundingClientRect();
+	// 	// setModalPosition({ top: rect.top + window.scrollY, left: rect.left + window.scrollX });
+	// };
+	// const closeModal = () => setModalImage(null);
+
+	// === End Added ===
+
 	return (
 		<main
 			className="w-full mx-auto px-4"
 			dir={i18n.language === "ar" ? "rtl" : "ltr"}>
+
+			{/* === Modal for Fullscreen Image Preview === */}
+			{/* {modalImage && (
+                <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 flex items-center justify-center">
+                    <div className="relative max-w-screen-lg max-h-screen-lg bg-white rounded-md shadow-lg p-4">
+                        <img
+                            src={modalImage}
+                            alt="preview"
+                            className="w-full h-auto object-contain"
+                        />
+                        <button
+                            onClick={closeModal}
+                            className="absolute top-2 right-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        >
+                            {t("menu_card.close") || "Close"}
+                        </button>
+                    </div>
+                </div>
+            )} */}
+			{/* === End Modal === */}
+
+			{/* === Modal for Fullscreen Image Preview === */}
+			{modalImage && (
+				<div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center animate-fadeIn">
+					<div className="relative w-full h-full flex items-center justify-center">
+						<img
+							src={modalImage}
+							alt="preview"
+							className="object-cover w-full h-full transition-transform duration-500 ease-in-out scale-100"
+						/>
+						<button
+							onClick={closeModal}
+							className="absolute top-5 right-5 text-white bg-red-600 hover:bg-red-700 rounded-full px-4 py-2 z-50 shadow-md text-lg"
+						>
+							{t("menu_card.close")}
+						</button>
+					</div>
+				</div>
+			)}
+			{/* === End Modal === */}
+
 			<div className="flex flex-col sm:flex-row justify-between items-center mb-6">
 				<p className="text-lg text-gray-600 mb-3 sm:mb-0">
 					{t("menu_card.showing", {
@@ -94,107 +158,131 @@ export default function MenuCard({
 				</div>
 			</div>
 
-			{paginatedProducts.length === 0 ? (
-				<div className="text-center py-10">
-					<p className="text-xl text-gray-600">{t("menu_card.no_products")}</p>
-				</div>
-			) : (
-				<div className="space-y-6">
-					{paginatedProducts.map((product) => (
-						<div
-							key={product.id}
-							className="card bg-base-100 shadow-md overflow-hidden group">
-							<div className="grid grid-cols-1 md:grid-cols-2">
-								<div className="relative overflow-hidden h-64 md:h-full">
-									<img
-										src={product.image}
-										alt={
-											i18n.language === "ar" && product.name_ar
-												? product.name_ar
-												: product.name_en
-										}
-										className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer"
-										onClick={() => onViewDetails(product)}
-									/>
-									<div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-										<button
-											className="bg-black text-white px-6 py-3 text-base
-                                                  flex items-center justify-center gap-2
-                                                  transform translate-y-4 group-hover:translate-y-0
-                                                  transition-all duration-300 z-10
-                                                  hover:bg-gray-800"
-											onClick={() => onAddToCart(product)}>
-											{t("menu_card.add_to_cart")}
-										</button>
-									</div>
-								</div>
+			{
+				paginatedProducts.length === 0 ? (
+					<div className="text-center py-10">
+						<p className="text-xl text-gray-600">{t("menu_card.no_products")}</p>
+					</div>
+				) : (
+					<div className="space-y-6">
+						{paginatedProducts.map((product) => (
+							<div
+								key={product.id}
+								className="card bg-base-100 shadow-md overflow-hidden group">
+								<div className="grid grid-cols-1 md:grid-cols-2">
+									<div
+										// className="relative overflow-hidden h-64 md:h-full"
+										className="relative overflow-hidden h-64 md:h-full group"
+									>
+										<img
+											src={product.image}
+											alt={
+												i18n.language === "ar" && product.name_ar
+													? product.name_ar
+													: product.name_en
+											}
+											// className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer"
+											className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer"
+											// === Modified click to open modal ===
+											// onClick={() => {
+											// 	console.log('Image clicked:', product.image);  // تحقق مما إذا كانت الصورة تم تحديدها
+											// 	// openModal(product.image, event);  // سيقوم هذا بتحديث حالة الصورة في المودال
+											// }}
+											onClick={() => setModalImage(product.image)} // <<< فتح الصورة في مودال
 
-								<div className="p-6 flex flex-col justify-center">
-									<h2 className="card-title uppercase text-xl font-semibold mb-2">
-										{i18n.language === "ar" && product.name_ar
-											? product.name_ar
-											: product.name_en}
-									</h2>
-									<h3 className="text-lg font-medium text-gray-700 mb-4">
-										{i18n.language === "ar" && product.desc_ar
-											? product.desc_ar
-											: product.desc_en}
-									</h3>
-									<div className="flex items-center mb-4">
-										<div className="flex items-center">
-											{Array.from({ length: 5 }).map((_, i) => (
-												<svg
-													key={i}
-													className={`w-5 h-5 ${
-														i < product.rating
+										/>
+										<div
+											// className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300"
+											// className="absolute inset-0 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300"
+											className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+              w-[152px] h-[48px] /* أو أبعاد مقاربة لزرارك */
+              opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300"
+										>
+											<button
+												// className="bg-black text-white px-6 py-3 text-base
+												//       flex items-center justify-center gap-2
+												//       transform translate-y-4 group-hover:translate-y-0
+												//       transition-all duration-300 z-10
+												//       hover:bg-gray-800"
+
+												className="bg-black text-white px-6 py-3 text-base
+                  flex items-center justify-center gap-2
+                  transform translate-y-4 group-hover:translate-y-0
+                  transition-all duration-300 z-10
+                  hover:bg-gray-800"
+
+												onClick={() => onAddToCart(product)}>
+												{t("menu_card.add_to_cart")}
+											</button>
+										</div>
+									</div>
+
+									<div className="p-6 flex flex-col justify-center">
+										<h2 className="card-title uppercase text-xl font-semibold mb-2">
+											{i18n.language === "ar" && product.name_ar
+												? product.name_ar
+												: product.name_en}
+										</h2>
+										<h3 className="text-lg font-medium text-gray-700 mb-4">
+											{i18n.language === "ar" && product.desc_ar
+												? product.desc_ar
+												: product.desc_en}
+										</h3>
+										<div className="flex items-center mb-4">
+											<div className="flex items-center">
+												{Array.from({ length: 5 }).map((_, i) => (
+													<svg
+														key={i}
+														className={`w-5 h-5 ${i < product.rating
 															? "text-yellow-400"
 															: "text-gray-300"
-													}`}
-													xmlns="http://www.w3.org/2000/svg"
-													viewBox="0 0 20 20"
-													fill="currentColor">
-													<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-												</svg>
-											))}
+															}`}
+														xmlns="http://www.w3.org/2000/svg"
+														viewBox="0 0 20 20"
+														fill="currentColor">
+														<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+													</svg>
+												))}
+											</div>
+											<span className="ml-2 text-gray-600">
+												({product.rating})
+											</span>
 										</div>
-										<span className="ml-2 text-gray-600">
-											({product.rating})
-										</span>
-									</div>
-									<p className="text-2xl font-bold text-black flex items-center gap-1 mb-4">
-										<span className="text-lg font-semibold text-gray-500">
-											{t("menu_card.currency")}
-										</span>{" "}
-										{product.price.toFixed(2)}
-									</p>
-									{product.available ? (
-										<span className="text-green-600 font-medium mb-4">
-											{t("menu_card.available")}
-										</span>
-									) : (
-										<span className="text-red-600 font-medium mb-4">
-											{t("menu_card.unavailable")}
-										</span>
-									)}
-									<div className="flex space-x-4 mt-2">
-										<button
-											onClick={() => onViewDetails(product)}
-											className="px-4 py-2 border border-black text-black hover:bg-black hover:text-white transition-colors duration-300">
-											{t("menu_card.view_details")}
-										</button>
-										<button
-											onClick={() => onAddToCart(product)}
-											className="px-4 py-2 bg-black text-white hover:bg-gray-800 transition-colors duration-300"
-											disabled={!product.available}>
-											{t("menu_card.add_to_cart")}
-										</button>
+										<p className="text-2xl font-bold text-black flex items-center gap-1 mb-4">
+											<span className="text-lg font-semibold text-gray-500">
+												{t("menu_card.currency")}
+											</span>{" "}
+											{product.price.toFixed(2)}
+										</p>
+										{product.available ? (
+											<span className="text-green-600 font-medium mb-4">
+												{t("menu_card.available")}
+											</span>
+										) : (
+											<span className="text-red-600 font-medium mb-4">
+												{t("menu_card.unavailable")}
+											</span>
+										)}
+										<div className="flex space-x-4 mt-2">
+											<button
+												onClick={() => onViewDetails(product)}
+												className="px-4 py-2 border border-black text-black hover:bg-black hover:text-white transition-colors duration-300">
+												{t("menu_card.view_details")}
+											</button>
+											<button
+												onClick={() => onAddToCart(product)}
+												className="px-4 py-2 bg-black text-white hover:bg-gray-800 transition-colors duration-300"
+												disabled={!product.available}>
+												{t("menu_card.add_to_cart")}
+											</button>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					))}
-				</div>
-			)}
+						))}
+					</div>
+				)
+			}
 
 			<div className="mt-10 mb-6 flex justify-center items-center space-x-4">
 				<button
@@ -217,6 +305,6 @@ export default function MenuCard({
 					{t("menu_card.next")}
 				</button>
 			</div>
-		</main>
+		</main >
 	);
 }
