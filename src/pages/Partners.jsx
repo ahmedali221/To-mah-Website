@@ -1,84 +1,83 @@
 import { useState } from 'react';
+import { useTranslation } from "react-i18next";
 
 function Partners() {
+  const { t, i18n } = useTranslation();
   const [partners] = useState([
     {
       id: 1,
-      name: 'Cindy',
-      role: 'Food Influencer',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400',
-      testimonial: 'Commodo duis dolor proin luctus elit vehicula. Posuere leo venenatis mollis hac platea porta dis consequat ullamcorper.'
+      name_key: "partners.partners.0.name",
+      role_key: "partners.partners.0.role",
+      image: 'https://imgs.search.brave.com/fbxInw05M6mkNEHaT64Qm3dNEzTIVXrwCD4lxk4ve3A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE3LzM0LzY3/LzM2MF9GXzIxNzM0/Njc4Ml83WHBDVHQ4/YkxOSnF2VkFhRFpK/d3Zaam0wZXBRbWo2/ai5qcGc',
+      testimonial_key: "partners.partners.0.testimonial"
     },
     {
       id: 2,
-      name: 'Lillie Gilman',
-      role: 'Photographer',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400',
-      testimonial: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur sunt in culpa qui officia.'
+      name_key: "partners.partners.1.name",
+      role_key: "partners.partners.1.role",
+      image: 'https://imgs.search.brave.com/fbxInw05M6mkNEHaT64Qm3dNEzTIVXrwCD4lxk4ve3A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE3LzM0LzY3/LzM2MF9GXzIxNzM0/Njc4Ml83WHBDVHQ4/YkxOSnF2VkFhRFpK/d3Zaam0wZXBRbWo2/ai5qcGc',
+      testimonial_key: "partners.partners.1.testimonial"
     },
     {
       id: 3,
-      name: 'Neil Rosas',
-      role: 'Vlogger',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
-      testimonial: 'Pharetra amet eget dolor facilisis morbi molestie? Venenatis semper ornare feugiat consectetur elit cubilia sit velit.'
+      name_key: "partners.partners.2.name",
+      role_key: "partners.partners.2.role",
+      image: 'https://imgs.search.brave.com/fbxInw05M6mkNEHaT64Qm3dNEzTIVXrwCD4lxk4ve3A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE3LzM0LzY3/LzM2MF9GXzIxNzM0/Njc4Ml83WHBDVHQ4/YkxOSnF2VkFhRFpK/d3Zaam0wZXBRbWo2/ai5qcGc',
+      testimonial_key: "partners.partners.2.testimonial"
     }
   ]);
 
   const [suppliers] = useState([
     {
       id: 1,
-      name: 'Fresh Farms Co.',
-      type: 'Organic Produce',
-      image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400',
-      description: 'Providing fresh, organic vegetables and fruits directly from local farms.'
+      name_key: "partners.suppliers.0.name",
+      type_key: "partners.suppliers.0.type",
+      image: 'https://imgs.search.brave.com/fbxInw05M6mkNEHaT64Qm3dNEzTIVXrwCD4lxk4ve3A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE3LzM0LzY3/LzM2MF9GXzIxNzM0/Njc4Ml83WHBDVHQ4/YkxOSnF2VkFhRFpK/d3Zaam0wZXBRbWo2/ai5qcGc',
+      description_key: "partners.suppliers.0.description"
     },
     {
       id: 2,
-      name: 'Premium Meats',
-      type: 'Quality Meats',
-      image: 'https://images.unsplash.com/photo-1551189014-fe516aed0e9e?w=400',
-      description: 'Supplying high-quality, ethically sourced meats for our signature dishes.'
+      name_key: "partners.suppliers.1.name",
+      type_key: "partners.suppliers.1.type",
+      image: 'https://imgs.search.brave.com/fbxInw05M6mkNEHaT64Qm3dNEzTIVXrwCD4lxk4ve3A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE3LzM0LzY3/LzM2MF9GXzIxNzM0/Njc4Ml83WHBDVHQ4/YkxOSnF2VkFhRFpK/d3Zaam0wZXBRbWo2/ai5qcGc',
+      description_key: "partners.suppliers.1.description"
     },
     {
       id: 3,
-      name: 'Ocean Fresh',
-      type: 'Seafood',
-      image: 'https://images.unsplash.com/photo-1579684947550-22e945225d9a?w=400',
-      description: 'Delivering the freshest seafood from sustainable sources daily.'
+      name_key: "partners.suppliers.2.name",
+      type_key: "partners.suppliers.2.type",
+      image: 'https://imgs.search.brave.com/fbxInw05M6mkNEHaT64Qm3dNEzTIVXrwCD4lxk4ve3A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE3LzM0LzY3/LzM2MF9GXzIxNzM0/Njc4Ml83WHBDVHQ4/YkxOSnF2VkFhRFpK/d3Zaam0wZXBRbWo2/ai5qcGc',
+      description_key: "partners.suppliers.2.description"
     }
   ]);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" dir={i18n.language === "ar" ? "rtl" : "ltr"}>
       {/* Hero Section */}
       <div className="bg-base-200 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-center mb-8">Our Partners</h1>
-          <p className="text-center max-w-3xl mx-auto">
-            We collaborate with the finest suppliers and work alongside talented individuals
-            to bring you an exceptional dining experience.
-          </p>
+          <h1 className="text-4xl font-bold text-center mb-8">{t("partners.hero.title")}</h1>
+          <p className="text-center max-w-3xl mx-auto">{t("partners.hero.description")}</p>
         </div>
       </div>
 
       {/* Testimonials Section */}
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12">What Our Partners Say</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">{t("partners.testimonials.title")}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {partners.map((partner) => (
             <div key={partner.id} className="card bg-base-100 shadow-xl">
               <figure className="px-10 pt-10">
                 <img
                   src={partner.image}
-                  alt={partner.name}
+                  alt={t(partner.name_key)}
                   className="rounded-full w-32 h-32 object-cover"
                 />
               </figure>
               <div className="card-body items-center text-center">
-                <h3 className="card-title">{partner.name}</h3>
-                <p className="text-sm text-primary">{partner.role}</p>
-                <p className="mt-4">{partner.testimonial}</p>
+                <h3 className="card-title">{t(partner.name_key)}</h3>
+                <p className="text-sm text-primary">{t(partner.role_key)}</p>
+                <p className="mt-4">{t(partner.testimonial_key)}</p>
               </div>
             </div>
           ))}
@@ -88,21 +87,21 @@ function Partners() {
       {/* Suppliers Section */}
       <div className="bg-base-200 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Trusted Suppliers</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">{t("partners.suppliers.title")}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {suppliers.map((supplier) => (
               <div key={supplier.id} className="card bg-base-100 shadow-xl">
                 <figure>
                   <img
                     src={supplier.image}
-                    alt={supplier.name}
+                    alt={t(supplier.name_key)}
                     className="w-full h-48 object-cover"
                   />
                 </figure>
                 <div className="card-body">
-                  <h3 className="card-title">{supplier.name}</h3>
-                  <p className="text-sm text-primary">{supplier.type}</p>
-                  <p className="mt-4">{supplier.description}</p>
+                  <h3 className="card-title">{t(supplier.name_key)}</h3>
+                  <p className="text-sm text-primary">{t(supplier.type_key)}</p>
+                  <p className="mt-4">{t(supplier.description_key)}</p>
                 </div>
               </div>
             ))}
@@ -113,14 +112,9 @@ function Partners() {
       {/* Partnership CTA */}
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-6">Become a Partner</h2>
-          <p className="max-w-2xl mx-auto mb-8">
-            We're always looking to collaborate with quality suppliers and influential
-            personalities who share our passion for exceptional food and service.
-          </p>
-          <button className="btn btn-primary">
-            Contact Us for Partnership
-          </button>
+          <h2 className="text-3xl font-bold mb-6">{t("partners.cta.title")}</h2>
+          <p className="max-w-2xl mx-auto mb-8">{t("partners.cta.description")}</p>
+          <button className="btn btn-primary">{t("partners.cta.button")}</button>
         </div>
       </div>
     </div>

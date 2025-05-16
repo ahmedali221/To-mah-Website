@@ -1,105 +1,238 @@
-/** @format */
 
-const Contact = () => {
-	return (
-		<div style={{ backgroundColor: "#fdf8f4", padding: "4rem 0" }}>
-			<div className="container mx-auto px-4">
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12 relative max-w-6xl mx-auto">
-					{/* First Column */}
-					<div className="flex flex-col items-center w-full">
-						<div className="h-[600px] w-4/5 overflow-hidden">
-							<img
-								src="https://tomah.sa/uploads/products/8.jpg"
-								alt="Location"
-								className="attachment-full size-full w-full h-full object-cover"
-								style={{ borderRadius: "50em 50em 0 0" }}
-								loading="lazy"
-								decoding="async"
-							/>
-						</div>
-						<div className="w-4/5 text-center">
-							<h3 className="text-3xl font-serif italic font-light mt-8 mb-6">
-								Location
-							</h3>
-							<p className="text-center font-light tracking-wide leading-relaxed text-gray-700">
-								<span className="block">
-									<a
-										href="https://www.google.com/maps/search/?api=1&query=DMAJ8018,+5153+King+Abdullah+Branch+Rd,+Madinah+42319,+Saudi+Arabia"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="hover:text-gray-900 transition-colors duration-300">
-										<span className="text-black text-lg  block mb-3">
-											طٌعمة، DMAJ8018
-										</span>
-										<span className="text-black text-lg block mb-2">
-											5153 King Abdullah Branch Rd, حي مهزور, 8018, Madinah
-											42319
-										</span>
-										<span className="text-black text-base block mb-4">
-											المدينة المنورة 42210، المملكة العربية السعودية
-										</span>
-									</a>
-									<a
-										href="tel:+966583250000"
-										className="text-xl  text-black block mt-4 hover:text-gray-700 transition-colors duration-300">
-										+966 58 325 0000
-									</a>
-								</span>
-							</p>
-						</div>
-					</div>
+import { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 
-					{/* Vertical Line Divider */}
-					<div className="hidden md:block absolute left-1/2 top-[20%] bottom-[20%] w-px bg-gray-300 transform -translate-x-1/2"></div>
+const ContactPage = () => {
+  const [visible, setVisible] = useState(false);
+  const [activeForm, setActiveForm] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const { t, i18n } = useTranslation();
 
-					{/* Second Column */}
-					<div className="flex flex-col items-center w-full">
-						<div className="h-[600px] w-4/5 overflow-hidden">
-							<img
-								src="https://tomah.sa/uploads/products/9.jpg"
-								alt="Restaurant"
-								className="attachment-full size-full w-full h-full object-cover"
-								style={{ borderRadius: "50em 50em" }}
-								loading="lazy"
-								decoding="async"
-							/>
-						</div>
-						<div className="w-4/5 text-center">
-							<h3 className="text-3xl font-serif italic font-light mt-8 mb-6">
-								Working Hours
-							</h3>
-							<p className="text-center font-light tracking-wide leading-relaxed">
-								<span className="block mb-4">
-									<span className="text-gray-800">Saturday & Sunday</span>
-									<br />
-									<span className="text-sm text-gray-600">Reservations</span>
-									<br />
-									<span className="italic">12:00 pm - 1:30 pm</span>
-								</span>
-								<span className="block">
-									<span className="text-gray-800">Thursday to Sunday</span>
-									<br />
-									<span className="text-sm text-gray-600">Reservations</span>
-									<br />
-									<span className="italic">6:00 pm - 8:45 pm</span>
-								</span>
-							</p>
-						</div>
-					</div>
-				</div>
+  useEffect(() => {
+    // Trigger animations after component mounts
+    setVisible(true);
+  }, []);
 
-				<div className="w-full relative mt-8">
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d907.8191101387397!2d39.66079837538592!3d24.440296477707634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bd95535e8cfba3%3A0x6c20f3e111d4579b!2z2LfZjdi52YXYqQ!5e0!3m2!1sar!2ssa!4v1704899987654!5m2!1sar!2ssa"
-						className="w-full h-[600px] rounded-3xl overflow-hidden"
-						style={{ border: 0, margin: 0, padding: 0 }}
-						allowFullScreen="true"
-						loading="lazy"
-						referrerPolicy="no-referrer-when-downgrade"></iframe>
-				</div>
-			</div>
-		</div>
-	);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setActiveForm(true);
+    // Simulating form submission
+    setTimeout(() => {
+      setActiveForm(false);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+    }, 2000);
+  };
+
+  // Check if current language is RTL (Arabic)
+  const isRTL = i18n.language === 'ar';
+
+  return (
+    <div 
+      className={`min-h-screen transition-opacity duration-700 ease-in-out ${visible ? 'opacity-100' : 'opacity-0'}`}
+      dir={isRTL ? 'rtl' : 'ltr'}>
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Title with Animation */}
+        <div className={`text-center mb-16 transition-all duration-1000 delay-300 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <h1 className="text-4xl md:text-5xl font-serif font-light mb-4">{t("contact.title")}</h1>
+          <div className="w-24 h-1 mx-auto"></div>
+          <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
+            {isRTL ? 'يسعدنا سماع منك. قم بزيارة مطعمنا، أو احجز، أو أرسل لنا رسالة.' : "We'd love to hear from you. Visit our restaurant, make a reservation, or send us a message."}
+          </p>
+        </div>
+
+        {/* Main Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 relative max-w-6xl mx-auto">
+          {/* First Column */}
+          <div className={`flex flex-col items-center w-full transition-all duration-1000 delay-500 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
+            <div className="h-48 sm:h-64 md:h-96 w-full sm:w-4/5 overflow-hidden relative">
+              <img
+                src="https://tomah.sa/uploads/products/8.jpg"
+                alt={t("contact.location_image_alt")}
+                className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
+                style={{ borderRadius: "50em 50em 0 0" }}
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+            <div className="w-4/5 text-center">
+              <h3 className="text-3xl font-serif italic font-light mt-8 mb-6 transform transition-transform duration-500 hover:translate-y-1">
+                {t("contact.location_title")}
+              </h3>
+              <div className="text-center font-light tracking-wide leading-relaxed text-gray-700">
+                <span className="block hover:text-gray-900 transition-all duration-300">
+                  <a
+                    href="https://www.google.com/maps"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-amber-600 transition-colors duration-300">
+                    <span className="text-black text-lg block mb-3">
+                      {t("contact.address_line1")}
+                    </span>
+                    <span className="text-black text-lg block mb-2">
+                      {t("contact.address_line2")}
+                    </span>
+                    <span className="text-black text-base block mb-4">
+                      {t("contact.address_line3")}
+                    </span>
+                  </a>
+                <a
+  href="https://wa.me/966583250000"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-xl text-black block mt-4 hover:text-amber-600 transition-colors duration-300 transform hover:scale-105 transition-transform duration-300">
+  {t("contact.phone")}
+</a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Vertical Line Divider */}
+          <div className="hidden md:block absolute left-1/2 top-[20%] bottom-[20%] w-px bg-gray-300 transform -translate-x-1/2"></div>
+
+          {/* Second Column */}
+          <div className={`flex flex-col items-center w-full transition-all duration-1000 delay-700 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
+            <div className="h-64 md:h-96 w-4/5 overflow-hidden relative">
+              <img
+                src="https://tomah.sa/uploads/products/9.jpg"
+                alt={t("contact.restaurant_image_alt")}
+                className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
+                style={{ borderRadius: "50em 50em" }}
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+           <div className="text-center font-light tracking-wide leading-relaxed">
+  <span className="block mb-4 hover:text-gray-900 transition-all duration-300">
+    <span className="text-gray-800">{t("contact.hours_weekend")}</span><br />
+    <span className="text-sm text-gray-600">{t("contact.hours_reservations")}</span><br />
+    <span className="italic">{t("contact.hours_weekend_time")}</span>
+  </span>
+  <span className="block hover:text-gray-900 transition-all duration-300">
+    <span className="text-gray-800">{t("contact.hours_weekdays")}</span><br />
+    <span className="text-sm text-gray-600">{t("contact.hours_reservations")}</span><br />
+    <span className="italic">{t("contact.hours_weekdays_time")}</span>
+  </span>
+  <div className="mt-4">
+    <span className="block text-gray-800">{t("contact.hours_breakfast")}</span>
+    <span className="block text-gray-800">{t("contact.hours_lunch")}</span>
+    <span className="block text-gray-800">{t("contact.hours_dinner")}</span>
+  </div>
+  </div>
+
+          </div>
+        </div>
+
+        {/* Contact Form */}
+        <div className={`max-w-2xl mx-auto mb-16 bg-white rounded-xl shadow-lg p-8 transition-all duration-1000 delay-900 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
+          <h3 className="text-3xl font-serif italic font-light mb-8 text-center">{t("contact.form_title")}</h3>
+          
+          {activeForm ? (
+            <div className="text-center py-12 text-green-600 text-xl animate-pulse">
+              {t("contact.form_success")}
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="relative group">
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full border-b border-gray-300 py-2 px-2 focus:outline-none focus:border-amber-600 transition-all duration-300 bg-transparent"
+                  />
+                  <label className={`absolute ${isRTL ? 'right-2' : 'left-2'} transition-all duration-300 ${formData.name ? 'text-xs -top-6 text-amber-600' : 'top-2'} group-focus-within:text-xs group-focus-within:-top-6 group-focus-within:text-amber-600`}>
+                    {t("contact.form_name")}
+                  </label>
+                </div>
+                <div className="relative group">
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full border-b border-gray-300 py-2 px-2 focus:outline-none focus:border-amber-600 transition-all duration-300 bg-transparent"
+                  />
+                  <label className={`absolute ${isRTL ? 'right-2' : 'left-2'} transition-all duration-300 ${formData.email ? 'text-xs -top-6 text-amber-600' : 'top-2'} group-focus-within:text-xs group-focus-within:-top-6 group-focus-within:text-amber-600`}>
+                    {t("contact.form_email")}
+                  </label>
+                </div>
+              </div>
+              
+              <div className="relative group">
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  className="w-full border-b border-gray-300 py-2 px-2 focus:outline-none focus:border-amber-600 transition-all duration-300 bg-transparent"
+                />
+                <label className={`absolute ${isRTL ? 'right-2' : 'left-2'} transition-all duration-300 ${formData.phone ? 'text-xs -top-6 text-amber-600' : 'top-2'} group-focus-within:text-xs group-focus-within:-top-6 group-focus-within:text-amber-600`}>
+                  {t("contact.form_phone")}
+                </label>
+              </div>
+              
+              <div className="relative group">
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows="4"
+                  className="w-full border-b border-gray-300 py-2 px-2 focus:outline-none focus:border-amber-600 transition-all duration-300 bg-transparent resize-none"
+                ></textarea>
+                <label className={`absolute ${isRTL ? 'right-2' : 'left-2'} transition-all duration-300 ${formData.message ? 'text-xs -top-6 text-amber-600' : 'top-2'} group-focus-within:text-xs group-focus-within:-top-6 group-focus-within:text-amber-600`}>
+                  {t("contact.form_message")}
+                </label>
+              </div>
+              
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="bg-amber-600 text-white px-8 py-3 rounded-full hover:bg-amber-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50"
+                >
+                  {t("contact.form_button")}
+                </button>
+              </div>
+            </form>
+          )}
+        </div>
+
+        {/* Google Map */}
+        <div className={`w-full relative mb-8 transition-all duration-1000 delay-1000 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d907.8191101387397!2d39.66079837538592!3d24.440296477707634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bd95535e8cfba3%3A0x6c20f3e111d4579b!2z2LfZjdi52YXYqQ!5e0!3m2!1sar!2ssa!4v1704899987654!5m2!1sar!2ssa"
+            className="w-full h-96 md:h-128 rounded-3xl overflow-hidden shadow-lg"
+            style={{ border: 0, margin: 0, padding: 0 }}
+            allowFullScreen="true"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div className={`absolute bottom-6 ${isRTL ? 'right-6' : 'left-6'} bg-white p-4 rounded-lg shadow-xl transform transition-transform duration-500 hover:scale-105`}>
+            <h4 className="font-bold text-lg mb-1">{isRTL ? 'موقعنا' : 'Our Location'}</h4>
+            <p className="text-sm text-gray-600">{t("contact.address_line1")}, {t("contact.address_line2")}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default Contact;
+export default ContactPage;

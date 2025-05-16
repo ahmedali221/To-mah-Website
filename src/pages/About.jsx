@@ -1,13 +1,19 @@
-import React ,{useState } from "react";
+/** @format */
+
+import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { Link, useNavigate } from "react-router-dom";
 import Slider from "react-slick";
-import "./About.css";
+import intro from "../assets/AboutImages/intro.mp4";
+import rev1 from "../assets/AboutImages/TripAdvisor.jpg";
+import rev2 from "../assets/AboutImages/tiktok.jpg";
+import rev3 from "../assets/AboutImages/User.jpg";
 import img1 from "/src/assets/AboutImages/img1.jpg";
 import img2 from "/src/assets/AboutImages/img2.jpg";
 import cover from "/src/assets/AboutImages/COVER.jpg";
-import ch1 from "/src/assets/AboutImages/team-img-5.jpg";
-import ch2 from "/src/assets/AboutImages/team-img-6.jpg";
 import logo from "/src/assets/AboutImages/TO'MAH.jpg";
 import loc from "/src/assets/AboutImages/restaurantt.jpg";
+import decor2 from "../assets/AboutImages/download.jpeg";
 import g1 from "/src/assets/AboutImages/G1.jpg";
 import g2 from "/src/assets/AboutImages/G2.jpg";
 import g3 from "/src/assets/AboutImages/G3.jpg";
@@ -15,300 +21,345 @@ import g4 from "/src/assets/AboutImages/G4.jpg";
 import g5 from "/src/assets/AboutImages/G5.jpg";
 import g6 from "/src/assets/AboutImages/G6.jpg";
 import g7 from "/src/assets/AboutImages/G7.jpg";
+import g8 from "/src/assets/AboutImages/G8.jpg";
+import g9 from "/src/assets/AboutImages/G9.jpg";
+// import g10 from "/src/assets/AboutImages/G10.jpg";
+import { 
+  HeartIcon, 
+  SparklesIcon,
+  UserGroupIcon,
+  GlobeAltIcon,
+
+} from '@heroicons/react/24/outline';
 
 const About = () => {
+	const [isPlaying, setIsPlaying] = useState(false);
+	const [isVisible, setIsVisible] = useState({});
+	const navigate = useNavigate();
+	const { t, i18n } = useTranslation();
 
-  const [isPlaying, setIsPlaying] = useState(false);
+	const galleryImages = [g1, g2, g3, g4, g5, g6, g7, g8, g9];
 
-  const testimonials = [
-    {
-      img: "/src/assets/AboutImages/team-img-5.jpg",
-      text: "COMMODO DUIS DOLOR PROIN LUCTUS ELIT VEHICULA. POSUERE LEO VENENATIS MOLLIS HAC PLATEA PORTA DIS CONSEQUAT ULLAMC0RPER.",
-      name: "Cindy, Food influencer",
-    },
-    {
-      img: "/src/assets/AboutImages/team-img-6.jpg",
-      text: "VIVAMUS ELEMENTUM LIGULA EU LOREM CONSECTETUR, VITAE LACINIA ANTE FACILISIS. IN EUISMOD NUNC SEM.",
-      name: "Liam, Chef",
-    },
-    {
-      img: "/src/assets/AboutImages/gallery-img-3.jpg",
-      text: "DUIS TRISTIQUE NULLA SIT AMET CONVALLIS TEMPOR. NAM SED ANTE QUIS VELIT PORTTITOR CONDIMENTUM.",
-      name: "Emma, Blogger",
-    },
-  ];
-  
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    arrows: false,
-  }
+	const testimonials = [
+		{
+			img: rev1,
+			text: t("about.testimonials.0.text"),
+			name: t("about.testimonials.0.name"),
+		},
+		{
+			img: rev2,
+			text: t("about.testimonials.1.text"),
+			name: t("about.testimonials.1.name"),
+		},
+		{
+			img: rev1,
+			text: t("about.testimonials.2.text"),
+			name: t("about.testimonials.2.name"),
+		},
+		{
+			img: rev3,
+			text: t("about.testimonials.3.text"),
+			name: t("about.testimonials.3.name"),
+		},
+		{
+			img: rev3,
+			text: t("about.testimonials.4.text"),
+			name: t("about.testimonials.4.name"),
+		},
+		{
+			img: rev3,
+			text: t("about.testimonials.5.text"),
+			name: t("about.testimonials.5.name"),
+		},
+	];
 
-  return (
-    <div className="about-us-page">
-      {/* OUR STORY SECTION */}
-      <section className="our-story">
-        <div className="story-images">
-          <img
-            src={img1}
-            alt="Dish Left"
-          />
-        </div>
-        <div className="story-text">
-          <h2>OUR STORY</h2>
-          <p className="stars">***</p>
-          <p>
-             flavors of traditional Hejazi cuisine in a modern and inviting setting.
-              What began as a dream to revive authentic Saudi dishes with a contemporary twist, quickly grew into a beloved destination for those seeking warmth, heritage, and exceptional taste. 
-              At To’mah, every dish tells a story — a story of home, culture, and unforgettable flavor.
-          </p>
-          <p className="signature">طٌعمة</p>
-        </div>
-        <div className="story-images">
-          <img
-            src={img2}
-            alt="Dish Right"
-          />
-        </div>
-      </section>
+	const settings = {
+		dots: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 3000,
+		arrows: false,
+	};
+	
+	// Intersection Observer for scroll animations
+	useEffect(() => {
+		const observerOptions = {
+			root: null,
+			rootMargin: '0px',
+			threshold: 0.1
+		};
+		
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					setIsVisible(prev => ({ ...prev, [entry.target.id]: true }));
+				}
+			});
+		}, observerOptions);
+		
+		const sections = document.querySelectorAll('.animate-on-scroll');
+		sections.forEach(section => {
+			observer.observe(section);
+		});
+		
+		return () => {
+			sections.forEach(section => {
+				observer.unobserve(section);
+			});
+		};
+	}, []);
 
-      {/* VIDEO BANNER SECTION */}
-      <section className="full-width-video">
-      <div className="video-thumbnail" onClick={() => setIsPlaying(true)}>
-        <img
-          src={cover}
-          alt="Video Cover"
-        />
-        <button className="play-btn">▶</button>
-      </div>
+	return (
+		<div dir={i18n.language === "ar" ? "rtl" : "ltr"} className="bg-slate-50 overflow-x-hidden">
+			{/* OUR STORY SECTION */}
+			<section className="py-16 bg-white">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<h2 className="text-4xl font-bold text-center mb-16 relative">
+						<span className="relative px-8">
+							{t("about.story.title")}
+							<span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
+						</span>
+					</h2>
+					
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+						<div className="animate-on-scroll" id="story-img-1">
+							<img 
+								src={img1} 
+								alt={t("about.story.image_alt_left")} 
+								className={`rounded-lg shadow-xl w-full h-auto transform transition-all duration-1000 ${isVisible['story-img-1'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+							/>
+						</div>
+						
+						<div className="animate-on-scroll" id="story-text">
+							<div className={`text-center space-y-4 transition-all duration-1000 delay-300 ${isVisible['story-text'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+								<p className="text-amber-600 font-bold text-xl">***</p>
+								<p className="text-gray-600 leading-relaxed">{t("about.story.description")}</p>
+								<p className="text-2xl font-bold mt-6 font-serif">{t("about.story.signature")}</p>
+							</div>
+						</div>
+						
+						<div className="animate-on-scroll" id="story-img-2">
+							<img 
+								src={img2} 
+								alt={t("about.story.image_alt_right")} 
+								className={`rounded-lg shadow-xl w-full h-auto transform transition-all duration-1000 delay-500 ${isVisible['story-img-2'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
 
-      {isPlaying && (
-        <div className="video-modal">
-          <div className="video-content">
-            <button className="close-btn" onClick={() => setIsPlaying(false)}>✖</button>
-            <iframe
-              src="https://player.vimeo.com/video/304107062?autoplay=1&title=0&byline=0&portrait=0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              title="Restaurant Video"
-            ></iframe>
-          </div>
-        </div>
-      )}
-    </section>
+			{/* VIDEO BANNER SECTION */}
+			<section className="py-16 bg-gradient-to-b from-white to-slate-50">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="relative rounded-xl overflow-hidden shadow-2xl animate-on-scroll" id="video-section">
+						<div 
+							className={`transition-all duration-1000 ${isVisible['video-section'] ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+							onClick={() => setIsPlaying(true)}
+						>
+							<img 
+								src={cover} 
+								alt={t("about.video.cover_alt")} 
+								className="w-full h-auto object-cover"
+							/>
+							<button
+								className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black/30 text-white p-6 rounded-full z-10 hover:bg-black/50 transition-all"
+								aria-label={t("about.video.play_button")}
+							>
+								<svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+								</svg>
+							</button>
+						</div>
+					</div>
+					
+					{isPlaying && (
+						<div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+							<div className="relative w-full max-w-4xl mx-auto">
+								<button 
+									className="absolute -top-12 right-0 text-white text-3xl hover:text-gray-300 transition-colors"
+									onClick={() => setIsPlaying(false)}
+								>
+									✕
+								</button>
+								<div className="aspect-w-16 aspect-h-9">
+									<video
+										src={intro}
+										autoPlay
+										controls
+										className="w-full h-full rounded-lg"
+									></video>
+								</div>
+							</div>
+						</div>
+					)}
+				</div>
+			</section>
 
+			{/* VALUES SECTION */}
+			<section className="py-16 bg-white animate-on-scroll" id="values-section">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<h2 className="text-4xl font-bold text-center mb-16 relative">
+						<span className="relative px-8">
+							{t("about.values.title")}
+							<span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
+						</span>
+					</h2>
+					
+					<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+						<div className={`flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 bg-white transform ${isVisible['values-section'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{transitionDelay: '100ms'}}>
+							<div className="w-16 h-16 rounded-full flex items-center justify-center mb-6">
+								<HeartIcon className="w-8 h-8" />
+							</div>
+							<h3 className="text-xl font-bold mb-3">{t("about.values.hospitality")}</h3>
+						</div>
+						
+						<div className={`flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 bg-white transform ${isVisible['values-section'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{transitionDelay: '200ms'}}>
+							<div className="w-16 h-16 rounded-full flex items-center justify-center mb-6">
+								<SparklesIcon className="w-8 h-8" />
+							</div>
+							<h3 className="text-xl font-bold mb-3">{t("about.values.authenticity")}</h3>
+						</div>
+						
+						<div className={`flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 bg-white transform ${isVisible['values-section'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{transitionDelay: '300ms'}}>
+							<div className="w-16 h-16 rounded-full flex items-center justify-center mb-6">
+								<UserGroupIcon className="w-8 h-8" />
+							</div>
+							<h3 className="text-xl font-bold mb-3">{t("about.values.community")}</h3>
+						</div>
+						
+						<div className={`flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 bg-white transform ${isVisible['values-section'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{transitionDelay: '400ms'}}>
+							<div className="w-16 h-16 rounded-full flex items-center justify-center mb-6">
+								<GlobeAltIcon className="w-8 h-8" />
+							</div>
+							<h3 className="text-xl font-bold mb-3">{t("about.values.culture")}</h3>
+						</div>
+					</div>
+				</div>
+			</section>
 
-      {/* TEAM OF EXPERTS */}
-      <section className="team">
-        <h2>TEAM OF EXPERTS</h2>
-        <p>Quasi dolores nisi officiis cupiditate quo olupats nam voluptatem</p>
-        <div className="team-members">
-          <div className="member">
-            <img src={ch1} alt="Gracie" />
-            <h3>GRACIE HOWARD</h3>
-            <p>Expediter</p>
-          </div>
-          <div className="member">
-            <img src={ch2} alt="Phoebe" />
-            <h3>PHOEBE BRUCE</h3>
-            <p>Butcher Chef</p>
-          </div>
-        </div>
-      </section>
+			{/* AMBIANCE SECTION */}
+			<section className="py-16 bg-slate-50 animate-on-scroll" id="ambiance-section">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<h2 className="text-4xl font-bold text-center mb-8 relative">
+						<span className="relative px-8">
+							{t("about.ambiance.title")}
+							<span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
+						</span>
+					</h2>
+					
+					<p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">{t("about.ambiance.description")}</p>
+					
+					
+				</div>
+			</section>
 
-      {/* SPECIAL MENU */}
-      <section className="special-menu">
-        <div className="menu-left">
-          <img src={logo} alt="Special Dish" className="special-dish-img" />
-          <h2>SPECIAL MENU</h2>
-        </div>
-        <div className="menu-right">
-          <img src={loc} alt="Restaurant Interior"className="special-dish-img" />
-        </div>
-      </section>
+			{/* SPECIAL MENU SECTION */}
+			<section className="py-16 bg-white animate-on-scroll" id="special-menu-section">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+						<div className={`transition-all duration-1000 ${isVisible['special-menu-section'] ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
+							<img
+								src={logo}
+								alt={t("about.special_menu.logo_alt")}
+								className="rounded-lg shadow-2xl w-full h-auto"
+							/>
+						</div>
+						
+						<div className={`transition-all duration-1000 delay-300 ${isVisible['special-menu-section'] ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
+							<img
+								src={loc}
+								alt={t("about.special_menu.interior_alt")}
+								className="rounded-lg shadow-2xl w-full h-auto"
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
 
-      {/* TESTIMONIAL */}
-      <section className="testimonial-slider">
-      <Slider {...settings}>
-        {testimonials.map((item, index) => (
-          <div className="testimonial" key={index}>
-            <img className="user-pic" src={item.img} alt={item.name} />
-            <p>{item.text}</p>
-            <span>{item.name}</span>
-          </div>
-        ))}
-      </Slider>
-    </section>
+			{/* TESTIMONIAL SECTION */}
+			<section className="py-16 bg-slate-50 animate-on-scroll" id="testimonial-section">
+				<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+					<h2 className="text-4xl font-bold text-center mb-16 relative">
+						<span className="relative px-8">
+							{t("about.testimonials.title")}
+							<span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
+						</span>
+					</h2>
+					
+					<div className={`bg-white rounded-xl shadow-lg p-8 transition-all duration-1000 ${isVisible['testimonial-section'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+						<Slider {...settings}>
+							{testimonials.map((item, index) => (
+								<div className="text-center px-8" key={index}>
+									<div className="w-20 h-20 mx-auto mb-6 overflow-hidden rounded-full">
+										<img 
+											className="w-full h-full object-cover" 
+											src={item.img} 
+											alt={item.name} 
+										/>
+									</div>
+									<p className="text-gray-600 italic mb-4">"{item.text}"</p>
+									<p className="font-bold">{item.name}</p>
+								</div>
+							))}
+						</Slider>
+					</div>
+				</div>
+			</section>
 
-      {/* GALLERY */}
-<section className="gallery">
-  <div className="gallery-track">
-    {[...Array(2)].map((_, i) => (
-      <React.Fragment key={i}>
-        <img src={g1} alt="gallery" />
-        <img src={g2} alt="gallery" />
-        <img src={g3} alt="gallery" />
-        <img src={g4} alt="gallery" />
-        <img src={g5} alt="gallery" />
-        <img src={g6} alt="gallery" />
-        <img src={g7} alt="gallery" />
-      </React.Fragment>
-    ))}
-  </div>
-</section>
+			{/* GALLERY SECTION */}
+			<section className="py-16 bg-white overflow-hidden">
+				<div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+					<Slider
+						slidesToShow={4}
+						slidesToScroll={1}
+						infinite={true}
+						autoplay={true}
+						autoplaySpeed={2000}
+						arrows={false}
+						responsive={[
+							{ breakpoint: 1280, settings: { slidesToShow: 3 } },
+							{ breakpoint: 1024, settings: { slidesToShow: 2 } },
+							{ breakpoint: 640, settings: { slidesToShow: 1 } }
+						]}
+					>
+						{galleryImages.concat(galleryImages).map((img, index) => (
+							<div key={index} className="px-2">
+								<div className="w-full h-62 rounded-lg overflow-hidden shadow-lg">
+									<img
+										src={img}
+										alt={t("about.gallery.image_alt")}
+										className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+									/>
+								</div>
+							</div>
+						))}
+					</Slider>
+				</div>
+			</section>
 
-    </div>
-  );
+			{/* CTA SECTION */}
+			<section className="py-16 bg-gradient-to-r from-amber-600 to-amber-800 text-white animate-on-scroll" id="cta-section">
+				<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+					<h2 className={`text-3xl md:text-4xl font-bold mb-4 transition-all duration-1000 ${isVisible['cta-section'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+						{t("about.cta.title")}
+					</h2>
+					<p className={`text-lg mb-8 transition-all duration-1000 delay-200 ${isVisible['cta-section'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+						{t("about.cta.description")}
+					</p>
+					<div className={`transition-all duration-1000 delay-400 ${isVisible['cta-section'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+						<Link to="/menu" className="btn bg-white text-amber-800 hover:bg-gray-100 border-none px-8 py-3 rounded-full font-bold">
+							{t("about.cta.button")}
+						</Link>
+					</div>
+				</div>
+			</section>
+		</div>
+	);
 };
 
 export default About;
-
-// import React from "react";
-
-// function About() {
-//   const values = [
-//     {
-//       title: "Quality",
-//       icon: "M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.171-.879-1.171-2.303 0-3.182C10.536 7.719 11.768 7.5 12 7.5c1.277 0 2.555.439 3.5 1.318",
-//       description: "We source only the finest ingredients to ensure exceptional quality in every dish."
-//     },
-//     {
-//       title: "Passion",
-//       icon: "M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z",
-//       description: "Our team's passion for culinary excellence drives everything we do."
-//     },
-//     {
-//       title: "Service",
-//       icon: "M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z",
-//       description: "We're committed to providing exceptional service to every guest."
-//     }
-//   ];
-
-//   return (
-//     <div className="min-h-screen bg-gradient-to-b from-base-100 to-base-200">
-//       {/* Hero Section */}
-//       <div className="relative bg-primary/10 py-24 overflow-hidden">
-//         <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-3 gap-4 opacity-10">
-//           {[...Array(12)].map((_, i) => (
-//             <div key={i} className="h-32 bg-primary/20 rounded-lg transform rotate-12"></div>
-//           ))}
-//         </div>
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-//           <h1 className="text-5xl font-bold text-center mb-8 text-primary animate-fade-in">
-//             About To'mah
-//           </h1>
-//           <p className="text-center max-w-3xl mx-auto text-lg leading-relaxed animate-slide-up">
-//             Welcome to To'mah, where culinary excellence meets warm hospitality.
-//             Our restaurant brings together traditional flavors and modern techniques
-//             to create an unforgettable dining experience.
-//           </p>
-//         </div>
-//       </div>
-
-//       {/* Story Section */}
-//       <div className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-//           <div className="space-y-6">
-//             <h2 className="text-4xl font-bold mb-6 text-primary">Our Story</h2>
-//             <div className="prose prose-lg">
-//               <p className="text-base-content/80 leading-relaxed">
-//                 Founded in 2020, To'mah has quickly become a cornerstone of the local
-//                 culinary scene. Our commitment to quality ingredients and exceptional
-//                 service has earned us a reputation as one of the city's premier dining
-//                 destinations.
-//               </p>
-//               <p className="text-base-content/80 leading-relaxed">
-//                 Our team of passionate chefs draws inspiration from global cuisines
-//                 while maintaining a strong connection to local flavors and traditions.
-//                 Every dish is carefully crafted to provide our guests with a memorable
-//                 dining experience.
-//               </p>
-//             </div>
-//           </div>
-//           <div className="group">
-//             <div className="relative overflow-hidden rounded-2xl shadow-xl transform transition-transform hover:scale-105 duration-300">
-//               <img
-//                 src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=800"
-//                 alt="Restaurant interior"
-//                 className="w-full h-[500px] object-cover"
-//               />
-//               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Values Section */}
-//       <div className="bg-base-200/50 py-24">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//           <h2 className="text-4xl font-bold text-center mb-16 text-primary">Our Values</h2>
-//           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-//             {values.map((value, index) => (
-//               <div key={index} className="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-//                 <div className="card-body items-center text-center p-8">
-//                   <div className="bg-primary text-primary-content rounded-full w-20 h-20 flex items-center justify-center mb-6 transform transition-transform hover:scale-110 duration-300">
-//                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
-//                       <path strokeLinecap="round" strokeLinejoin="round" d={value.icon} />
-//                     </svg>
-//                   </div>
-//                   <h3 className="card-title text-2xl font-bold mb-4">{value.title}</h3>
-//                   <p className="text-base-content/70">{value.description}</p>
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Location Section */}
-//       <div className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
-//         <h2 className="text-4xl font-bold text-center mb-16 text-primary">Find Us</h2>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-//           <div className="card bg-base-100 shadow-xl p-8">
-//             <div className="space-y-8">
-//               <div>
-//                 <h3 className="text-2xl font-bold mb-4 text-primary">Location</h3>
-//                 <div className="space-y-2 text-base-content/70">
-//                   <p>123 Restaurant Street</p>
-//                   <p>City, State 12345</p>
-//                   <p>United States</p>
-//                 </div>
-//               </div>
-//               <div>
-//                 <h3 className="text-2xl font-bold mb-4 text-primary">Hours</h3>
-//                 <div className="space-y-2 text-base-content/70">
-//                   <p>Monday - Friday: 11:00 AM - 10:00 PM</p>
-//                   <p>Saturday: 10:00 AM - 11:00 PM</p>
-//                   <p>Sunday: 10:00 AM - 9:00 PM</p>
-//                 </div>
-//               </div>
-//               <div>
-//                 <h3 className="text-2xl font-bold mb-4 text-primary">Contact</h3>
-//                 <div className="space-y-2 text-base-content/70">
-//                   <p>Phone: (123) 456-7890</p>
-//                   <p>Email: info@tomah.com</p>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//           {/* Static Map Image or Placeholder */}
-//           <div className="card bg-base-100 shadow-xl overflow-hidden h-[500px] flex items-center justify-center">
-//             <img
-//               src="https://maps.googleapis.com/maps/api/staticmap?center=51.505,-0.09&zoom=13&size=600x400&markers=color:red%7C51.505,-0.09&key=YOUR_API_KEY"
-//               alt="Map location"
-//               className="w-full h-full object-cover"
-//               onError={e => { e.target.src = 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600'; }}
-//             />
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default About;
