@@ -1,0 +1,25 @@
+---
+ID: MABSHOUR-BEEF // كود مميز لمبشور اللحم
+Name (AR): مبشور اللحم
+Name (EN): Mabshoor "Minced" Beef
+Description (AR): استمتع بلحم مفروم مشوي على السيخ مع تشكيلة من الخضار المشوية الطازجة، ويقدم مع سلطة منعشة. وجبة شهية وغنية بالنكهات المشوية، مثالية لمحبي اللحوم والخضروات.
+Description (EN): Indulge in minced beef grilled on skewers with a selection of fresh grilled vegetables, served with a refreshing salad. A delicious meal rich in grilled flavors, perfect for meat and vegetable lovers.
+Category (AR): أطباق رئيسية, لحوم مشوية
+Category (EN): Main Dishes, Grilled Meats
+Calories: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Price: 73 // السعر بالريال زي ما مكتوب
+Rating: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Available: true // نفترض إنه متوفر
+Trendy: // ممكن تحدد لو هو طبق جديد أو شعبي
+Prep Time (AR): // يرجى إضافة وقت التحضير لو تعرفه
+Prep Time (EN): // Please add prep time if you know it
+Cook Time (AR): // يرجى إضافة وقت الطهي لو تعرفه
+Cook Time (EN): // Please add cook time if you know it
+Difficulty (AR): متوسط // فيه شغل في تتبيل اللحم وشويه
+Difficulty (EN): medium
+Ingredients (AR): لحم مفروم, بصل, بهارات, خضار مشوية (طماطم, فلفل, ...), سلطة
+Ingredients (EN): minced beef, onion, spices, grilled vegetables (tomatoes, peppers, ...), salad
+Servings: 1 // وجبة رئيسية لشخص واحد
+Notes (AR): طعم اللحم المشوي مع نكهة البهارات والخضار الطازجة. وجبة صحية ولذيذة ومغذية.
+Notes (EN): The taste of grilled meat with the flavor of spices and fresh vegetables. A healthy, delicious, and nutritious meal.
+---

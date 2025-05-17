@@ -1,0 +1,25 @@
+---
+ID: 28
+Name (AR): ساندويتش لحمة راس
+Name (EN): Mutton Head Sandwich
+Description (AR): قطع من لحم الرأس المشوي بالبهارات الجافة ومحشية في خبز البر وتقدم مع صوص الطحينة والخل والدقس.
+Description (EN): Grilled mutton head beef with dried spices in grain bread and served with tahini sauce, dakos, and vinaigrette.
+Category (AR): ساندوتشات
+Category (EN): sandwiches
+Calories: // القيمة غير واضحة في الصورة
+Price: 20
+Rating: // القيمة غير واضحة في الصورة
+Available: true // نفترض إنه متوفر
+Trendy: false // غالباً مش تريندي
+Prep Time (AR): // القيمة غير واضحة في الصورة
+Prep Time (EN): // Value not clear in the image
+Cook Time (AR): // القيمة غير واضحة في الصورة (يعتمد على طريقة طهي لحم الرأس)
+Cook Time (EN): // Value not clear in the image (depends on cooking method of mutton head)
+Difficulty (AR): متوسط إلى صعب // يعتمد على تحضير لحم الرأس
+Difficulty (EN): medium to hard
+Ingredients (AR): خبز أسمر/بلدي, لحم رأس, بهارات جافة, طحينة, خل, دقس
+Ingredients (EN): grain bread/local bread, mutton head, dried spices, tahini sauce, vinegar, daqoos
+Servings: 1
+Notes (AR): طبق تقليدي.
+Notes (EN): Traditional dish.
+---

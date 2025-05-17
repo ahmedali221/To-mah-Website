@@ -1,0 +1,25 @@
+---
+ID: TAHINI-KEBAB // كود مميز لكباب بالطحينة
+Name (AR): كباب الطحينة
+Name (EN): Tahini Kebab
+Description (AR): استمتع بالكباب المميز المشوي على الفحم والمغطى بصوص الطحينة الغني واللذيذ. وجبة شهية وغنية بالنكهات المشوية والطحينة المميزة.
+Description (EN): Indulge in special kebab grilled over charcoal and topped with rich and delicious tahini sauce. A delicious meal rich in grilled flavors and distinctive tahini.
+Category (AR): أطباق رئيسية, كباب
+Category (EN): Main Dishes, Kebab
+Calories: 343
+Price: 73 // السعر بالريال زي ما مكتوب
+Rating: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Available: true // نفترض إنه متوفر
+Trendy: // ممكن تحدد لو هو طبق جديد أو شعبي
+Prep Time (AR): // يرجى إضافة وقت التحضير لو تعرفه
+Prep Time (EN): // Please add prep time if you know it
+Cook Time (AR): // يرجى إضافة وقت الطهي لو تعرفه
+Cook Time (EN): // Please add cook time if you know it
+Difficulty (AR): سهل
+Difficulty (EN): easy
+Ingredients (AR): لحم مفروم أو قطع, بهارات, طحينة, ليمون, خضروات للتزيين
+Ingredients (EN): minced meat or pieces, spices, tahini, lemon, vegetables for garnish
+Servings: 1 // غالبًا بيكون طبق لشخص واحد
+Notes (AR): طعم الكباب المشوي مع صوص الطحينة الغني. مزيج فريد ولذيذ يستحق التجربة.
+Notes (EN): The taste of grilled kebab with rich tahini sauce. A unique and delicious combination worth trying.
+---

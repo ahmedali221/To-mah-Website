@@ -1,0 +1,24 @@
+ID: 19
+Name (AR): فرموزة زينب (لحم)
+Name (EN): Zainab Fermoza (Meat)
+Description (AR): طبقات من العجين الرقيق الهش محشوة بخلطة اللحم الخاصة وتقدم مع اللازا.
+Description (EN): Layers of thin, crispy dough filled with a special meat mixture and served with Laza.
+Category (AR): مقبلات, معجنات
+Category (EN): appetizers, pastries
+Calories: 454
+Price: 15
+Rating: // القيمة غير واضحة في الصورة
+Available: true // نفترض إنه متوفر
+Trendy: false // تعتبر من المعجنات التقليدية
+Prep Time (AR): 20 دقيقة
+Prep Time (EN): 20 minutes
+Cook Time (AR): 25 دقيقة (خبز أو قلي)
+Cook Time (EN): 25 minutes (baking or frying)
+Difficulty (AR): متوسط
+Difficulty (EN): medium
+Ingredients (AR): دقيق, لحم مفروم, بصل, بهارات, زيت, سمسم, طماطم (في اللازا), فلفل حار (في اللازا)
+Ingredients (EN): flour, minced meat, onion, spices, oil, sesame seeds, tomatoes (in Laza), chili (in Laza)
+Servings: 1 (4 قطع)
+Notes (AR): تقدم ساخنة مع صلصة اللازا الحارة.
+Notes (EN): Served hot with spicy Laza sauce.
+---

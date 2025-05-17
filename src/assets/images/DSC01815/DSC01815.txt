@@ -1,0 +1,25 @@
+---
+ID: 20
+Name (AR): سمبوسك سجائر الجبنة البيضاء
+Name (EN): White Cheese Rolls
+Description (AR): ٤ قطع عجين رول محشوة بالجبنة البلدي.
+Description (EN): 4 pieces of rolls filled with Baladi cheese.
+Category (AR): مقبلات, معجنات
+Category (EN): appetizers, pastries
+Calories: 332
+Price: 15
+Rating: // القيمة غير واضحة في الصورة
+Available: true // نفترض إنه متوفر
+Trendy: false // تعتبر من المقبلات التقليدية
+Prep Time (AR): 15 دقيقة
+Prep Time (EN): 15 minutes
+Cook Time (AR): 20 دقيقة (قلي أو خبز)
+Cook Time (EN): 20 minutes (frying or baking)
+Difficulty (AR): سهل
+Difficulty (EN): easy
+Ingredients (AR): عجينة سمبوسك, جبنة بلدي, بقدونس, زيت للقلي/للخبز, طماطم (في الصلصة), فلفل (في الصلصة)
+Ingredients (EN): sambousek pastry, Baladi cheese, parsley, oil for frying/baking, tomatoes (in sauce), peppers (in sauce)
+Servings: 1 (4 قطع)
+Notes (AR): تقدم ساخنة مع صلصة.
+Notes (EN): Served hot with sauce.
+---

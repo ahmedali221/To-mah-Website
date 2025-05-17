@@ -1,0 +1,25 @@
+---
+ID: 21
+Name (AR): بريك ملفوف
+Name (EN): Rolled Borek
+Description (AR): بريك متبتب زي أهل المدينة.
+Description (EN): Your break is as steady as the people of The Madinah.
+Category (AR): معجنات, فطار
+Category (EN): pastries, breakfast
+Calories: 265
+Price: 20
+Rating: // القيمة غير واضحة في الصورة
+Available: true // نفترض إنه متوفر
+Trendy: false // يعتبر من المعجنات التقليدية
+Prep Time (AR): 20 دقيقة
+Prep Time (EN): 20 minutes
+Cook Time (AR): 30-40 دقيقة (خبز)
+Cook Time (EN): 30-40 minutes (baking)
+Difficulty (AR): متوسط
+Difficulty (EN): medium
+Ingredients (AR): دقيق, زبدة/زيت, حليب/زبادي, جبنة (محتمل), لحم مفروم (محتمل), بيض (للوجه), بقدونس
+Ingredients (EN): flour, butter/oil, milk/yogurt, cheese (likely), minced meat (likely), egg (for glazing), parsley
+Servings: 1
+Notes (AR): معجنات شهية ومغذية.
+Notes (EN): Delicious and nutritious pastry.
+---

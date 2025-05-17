@@ -1,0 +1,25 @@
+---
+ID: 3 // ممكن تغير الرقم ده لو ده مش تالت منتج عندك
+Name (AR): منتو فتو
+Name (EN): Mantu Futo
+Description (AR): استمتع بأربع قطع من المنتو الشهي، محشوة بحشوة لذيذة ومغطاة برشة من الكمون العطري والفلفل الأسود الحار. طبق تقليدي أصيل بنكهة مميزة تأخذك في رحلة إلى عالم من المذاقات الشرقية.
+Description (EN): Indulge in four pieces of delicious Mantu, filled with a savory stuffing and topped with a sprinkle of aromatic cumin and spicy black pepper. An authentic traditional dish with a distinctive flavor that takes you on a journey to the world of Eastern tastes.
+Category (AR): مقبلات, أطباق جانبية
+Category (EN): Appetizers, Side Dishes
+Calories: 268
+Price: 15 // السعر بالريال زي ما مكتوب
+Rating: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Available: true // نفترض إنه متوفر
+Trendy: // ممكن تحدد لو هو طبق جديد أو شعبي
+Prep Time (AR): // يرجى إضافة وقت التحضير لو تعرفه
+Prep Time (EN): // Please add prep time if you know it
+Cook Time (AR): // يرجى إضافة وقت الطهي لو تعرفه
+Cook Time (EN): // Please add cook time if you know it
+Difficulty (AR): متوسط // غالبًا بيكون فيه شوية شغل
+Difficulty (EN): medium
+Ingredients (AR): دقيق, لحم مفروم, بصل, بهارات, كمون, فلفل أسود
+Ingredients (EN): flour, minced meat, onion, spices, cumin, black pepper
+Servings: 1 // أربع قطع ممكن تعتبر وجبة لشخص
+Notes (AR): طعم غني بالتوابل ورائحة لا تقاوم. يقدم ساخنًا مع صوص (حسب الرغبة).
+Notes (EN): A flavor rich in spices and an irresistible aroma. Served hot with sauce (optional).
+---

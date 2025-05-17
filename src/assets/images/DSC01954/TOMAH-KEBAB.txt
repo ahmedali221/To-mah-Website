@@ -1,0 +1,25 @@
+---
+ID: TOMAH-KEBAB // كود مميز لكباب طعمة
+Name (AR): كباب طعمة
+Name (EN): To'mah Kebab
+Description (AR): استمتع بالكباب الفاخر والمميز المقدم مع المكسرات الشهية وصوص الطحينة الغني. وجبة ملكية غنية بالنكهات الفاخرة والمكونات الطازجة.
+Description (EN): Indulge in premium special kebab served with delicious nuts and rich tahini sauce. A royal meal rich in luxurious flavors and fresh ingredients.
+Category (AR): أطباق رئيسية, كباب
+Category (EN): Main Dishes, Kebab
+Calories: 343
+Price: 73 // السعر بالريال زي ما مكتوب
+Rating: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Available: true // نفترض إنه متوفر
+Trendy: // ممكن تحدد لو هو طبق جديد أو شعبي
+Prep Time (AR): // يرجى إضافة وقت التحضير لو تعرفه
+Prep Time (EN): // Please add prep time if you know it
+Cook Time (AR): // يرجى إضافة وقت الطهي لو تعرفه
+Cook Time (EN): // Please add cook time if you know it
+Difficulty (AR): متوسط // فيه شغل في تحضير الكباب والصوص والمكسرات
+Difficulty (EN): medium
+Ingredients (AR): لحم مفروم أو قطع, بصل, بهارات خاصة, مكسرات (لوز, صنوبر, ...), طحينة, ليمون, خضروات للتزيين
+Ingredients (EN): minced meat or pieces, onion, special spices, nuts (almonds, pine nuts, ...), tahini, lemon, vegetables for garnish
+Servings: 1 // غالبًا بيكون طبق لشخص واحد
+Notes (AR): طعم الكباب الفاخر مع قرمشة المكسرات الغنية وصوص الطحينة المميز. تجربة طعام استثنائية ومذاق لا يُنسى.
+Notes (EN): The taste of premium kebab with the rich crunch of nuts and distinctive tahini sauce. An exceptional dining experience and an unforgettable taste.
+---
