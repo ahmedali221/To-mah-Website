@@ -1,0 +1,25 @@
+---
+ID: GAMAH-RICE // كود مميز لرز جماعة
+Name (AR): رز جماعة
+Name (EN): Gama'h Rice
+Description (AR): استمتع بطبق من الرز المطبوخ باللحم أو الدجاج مع الحمص وخلطة ليندا الخاصة بطعم السمن الأصيل. يقدم هذا الطبق الشهي مع قطع من الجزر الشرائح وصوص الطحينة بالخيار والمخلل الأهواز ليمنحك وجبة عائلية دافئة وغنية بالنكهات المتنوعة.
+Description (EN): Indulge in a plate of rice cooked with meat or chicken, chickpeas, and Linda's special ghee blend with an authentic ghee flavor. This delicious dish is served with sliced carrots, tahini sauce with cucumber, and pickled ahwaz carrots to give you a warm family meal rich in diverse flavors.
+Category (AR): أطباق رئيسية, أرز, لحوم, دجاج
+Category (EN): Main Dishes, Rice, Meat, Chicken
+Calories: 138
+Price: 97 // السعر بالريال زي ما مكتوب
+Rating: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Available: true // نفترض إنه متوفر
+Trendy: // ممكن تحدد لو هو طبق جديد أو شعبي
+Prep Time (AR): // يرجى إضافة وقت التحضير لو تعرفه
+Prep Time (EN): // Please add prep time if you know it
+Cook Time (AR): // يرجى إضافة وقت الطهي لو تعرفه
+Cook Time (EN): // Please add cook time if you know it
+Difficulty (AR): متوسط // فيه شغل في طهي الرز واللحم أو الدجاج وتحضير الصوصات
+Difficulty (EN): medium
+Ingredients (AR): أرز, لحم أو دجاج, حمص, سمن, جزر, طحينة, خيار, مخلل, بهارات خاصة
+Ingredients (EN): rice, meat or chicken, chickpeas, ghee, carrots, tahini, cucumber, pickles, special spices
+Servings: 2-3 // وجبة عائلية تكفي أكثر من شخص
+Notes (AR): طعم الجماعة ولمة العيلة في طبق واحد. وجبة دافئة وغنية تجمع بين النكهات الأصيلة والمقبلات المنعشة.
+Notes (EN): The taste of togetherness and family gatherings in one dish. A warm and rich meal that combines authentic flavors with refreshing appetizers.
+---

@@ -1,0 +1,25 @@
+---
+ID: CHICKEN-MUQALQAL // كود مميز لمقلقل دجاج
+Name (AR): مقلقل الدجاج
+Name (EN): Chicken Muqalqal
+Description (AR): استمتع بقطع صدور دجاج مشوحة بالخضار الطازجة والبهارات الخاصة. وجبة شهية وخفيفة وغنية بالنكهات المميزة.
+Description (EN): Indulge in chicken breast sautéed with fresh vegetables and special spices. A delicious and light meal rich in distinctive flavors.
+Category (AR): أطباق رئيسية, دجاج
+Category (EN): Main Dishes, Chicken
+Calories: 479
+Price: 30 // السعر بالريال زي ما مكتوب
+Rating: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Available: true // نفترض إنه متوفر
+Trendy: // ممكن تحدد لو هو طبق جديد أو شعبي
+Prep Time (AR): // يرجى إضافة وقت التحضير لو تعرفه
+Prep Time (EN): // Please add prep time if you know it
+Cook Time (AR): // يرجى إضافة وقت الطهي لو تعرفه
+Cook Time (EN): // Please add cook time if you know it
+Difficulty (AR): سهل
+Difficulty (EN): easy
+Ingredients (AR): صدور دجاج, بصل, طماطم, فلفل, بهارات خاصة
+Ingredients (EN): chicken breasts, onion, tomatoes, peppers, special spices
+Servings: 1 // غالبًا بيكون طبق لشخص واحد
+Notes (AR): طعم الدجاج الطري مع الخضار المشوحة والبهارات العطرية. وجبة سريعة ولذيذة ومغذية.
+Notes (EN): The taste of tender chicken with sautéed vegetables and aromatic spices. A quick, delicious, and nutritious meal.
+---

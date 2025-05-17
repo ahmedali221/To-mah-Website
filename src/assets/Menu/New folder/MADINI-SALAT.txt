@@ -1,0 +1,25 @@
+---
+ID: MADINI-SALAT // كود مميز لسلات أهل المدينة
+Name (AR): سلات أهل المدينة
+Name (EN): Madini Salat
+Description (AR): استمتع بقطع لحم طرية مطبوخة بالبصل والثوم على نار هادئة، وتقدم مع خبز الحب والرز المديني. وجبة شهية وغنية بالنكهات التقليدية والمميزة لأهل المدينة.
+Description (EN): Indulge in tender beef chunks slow-cooked with onion and garlic, served with grain bread and Madini rice. A delicious meal rich in the traditional and distinctive flavors of the city's locals.
+Category (AR): أطباق رئيسية, لحوم, أرز
+Category (EN): Main Dishes, Meat, Rice
+Calories: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Price: 45 // السعر بالريال زي ما مكتوب
+Rating: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Available: true // نفترض إنه متوفر
+Trendy: true // واضح إنه من أطباق أهل المدينة المميزة
+Prep Time (AR): // يرجى إضافة وقت التحضير لو تعرفه
+Prep Time (EN): // Please add prep time if you know it
+Cook Time (AR): طويل // غالبًا الطبخ على نار هادئة بياخد وقت
+Cook Time (EN): long
+Difficulty (AR): متوسط // فيه شغل في الطبخ على نار هادئة
+Difficulty (EN): medium
+Ingredients (AR): قطع لحم, بصل, ثوم, بهارات خاصة, خبز حب, رز مديني
+Ingredients (EN): beef chunks, onion, garlic, special spices, grain bread, Madini rice
+Servings: 1 // غالبًا بيكون طبق لشخص واحد
+Notes (AR): طعم اللحم الطري المطهو ببطء مع الرز المديني وخبز الحب الطازج. وجبة دافئة وغنية بالنكهات الأصيلة.
+Notes (EN): The taste of tender, slow-cooked meat with Madini rice and fresh grain bread. A warm and rich meal with authentic flavors.
+---

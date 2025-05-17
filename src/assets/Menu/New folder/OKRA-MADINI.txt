@@ -1,0 +1,25 @@
+---
+ID: OKRA-MADINI // كود مميز لمخدوم بامية
+Name (AR): مخدوم بامية
+Name (EN): Okra
+Description (AR): استمتع ببامية مدينية مطبوخة بقطع اللحم الطرية، وتقدم بخبز الحب والرز المديني. وجبة شهية وغنية بالنكهات التقليدية والمميزة لأهل المدينة.
+Description (EN): Indulge in Madini okra cooked with tender beef chunks, served with grain bread and Madini rice. A delicious meal rich in the traditional and distinctive flavors of the city's locals.
+Category (AR): أطباق رئيسية, خضروات, أرز, لحوم
+Category (EN): Main Dishes, Vegetables, Rice, Meat
+Calories: 243
+Price: 20 // السعر بالريال زي ما مكتوب
+Rating: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Available: true // نفترض إنه متوفر
+Trendy: true // واضح إنه من أطباق أهل المدينة المميزة
+Prep Time (AR): // يرجى إضافة وقت التحضير لو تعرفه
+Prep Time (EN): // Please add prep time if you know it
+Cook Time (AR): طويل // غالبًا طبخ البامية بياخد وقت
+Cook Time (EN): long
+Difficulty (AR): متوسط // فيه شغل في تحضير البامية واللحم
+Difficulty (EN): medium
+Ingredients (AR): بامية, لحم, بصل, طماطم, بهارات خاصة, خبز حب, رز مديني
+Ingredients (EN): okra, beef, onion, tomatoes, special spices, grain bread, Madini rice
+Servings: 1 // غالبًا بيكون طبق لشخص واحد
+Notes (AR): طعم البامية المطبوخة على الطريقة المدينية مع اللحم الطري والرز وخبز الحب الطازج. وجبة دافئة وغنية بالنكهات الأصيلة.
+Notes (EN): The taste of okra cooked in the Madini style with tender beef, rice, and fresh grain bread. A warm and rich meal with authentic flavors.
+---

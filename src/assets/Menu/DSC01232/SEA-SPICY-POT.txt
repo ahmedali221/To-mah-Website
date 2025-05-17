@@ -1,0 +1,25 @@
+---
+ID: SEA-SPICY-POT // كود مميز لبطاطس حارة البحر
+Name (AR): بطاطس حارة البحر
+Name (EN): Sea Spicy Chips
+Description (AR): استمتع بأصابع البطاطس الطازجة المقلية والمقدمة مع تشكيلة مميزة من الصوصات: صوص الثوم الكريمي، طحينة السمسم الغنية، دقوس الأخضر الحار، وسلطة الحمر المنعشة. وجبة جانبية مثالية لعشاق النكهات الحارة والمتنوعة.
+Description (EN): Enjoy fresh potato fries served with a distinctive selection of sauces: creamy garlic sauce, rich sesame tahini, spicy green dakos, and refreshing homr salad. A perfect side dish for lovers of hot and diverse flavors.
+Category (AR): مقبلات, أطباق جانبية
+Category (EN): Appetizers, Side Dishes
+Calories: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Price: 12 // السعر بالريال زي ما مكتوب
+Rating: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Available: true // نفترض إنه متوفر
+Trendy: // ممكن تحدد لو هو طبق جديد أو شعبي
+Prep Time (AR): // يرجى إضافة وقت التحضير لو تعرفه
+Prep Time (EN): // Please add prep time if you know it
+Cook Time (AR): // يرجى إضافة وقت الطهي لو تعرفه
+Cook Time (EN): // Please add cook time if you know it
+Difficulty (AR): سهل
+Difficulty (EN): easy
+Ingredients (AR): بطاطس, زيت قلي, ثوم, طحينة, فلفل حار, تمر هندي, بهارات
+Ingredients (EN): potatoes, frying oil, garlic, tahini, chili peppers, tamarind, spices
+Servings: 1-2 // يعتمد على حجم الطبق
+Notes (AR): مزيج من القرمشة والحرارة والانتعاش في كل قضمة. تجربة صوصات فريدة تكمل لذة البطاطس.
+Notes (EN): A combination of crispiness, heat, and freshness in every bite. A unique sauce experience that complements the deliciousness of the potatoes.
+---

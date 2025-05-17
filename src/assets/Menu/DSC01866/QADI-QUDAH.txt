@@ -1,0 +1,25 @@
+---
+ID: QADI-QUDAH // كود مميز لقاضي قاضي
+Name (AR): قاضي قاضي
+Name (EN): Qadi al Qudah
+Description (AR): استمتع بكرات اللحم الأشهر والأكثر شعبية في أطباق أهل المدينة! هذه الكرات اللذيذة محضرة بوصفة خاصة ومميزة لتمنحك طعماً لا يُنسى. طبق لا يقاوم يفضله الجميع.
+Description (EN): Enjoy the most famous and popular meatballs in the dishes of the city's locals! These delicious balls are prepared with a special and distinctive recipe to give you an unforgettable taste. An irresistible dish favored by everyone.
+Category (AR): مقبلات, أطباق مميزة
+Category (EN): Appetizers, Special Dishes
+Calories: 271
+Price: 15 // السعر بالريال زي ما مكتوب
+Rating: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Available: true // نفترض إنه متوفر
+Trendy: true // واضح إنه طبق شعبي ومميز
+Prep Time (AR): // يرجى إضافة وقت التحضير لو تعرفه
+Prep Time (EN): // Please add prep time if you know it
+Cook Time (AR): // يرجى إضافة وقت الطهي لو تعرفه
+Cook Time (EN): // Please add cook time if you know it
+Difficulty (AR): متوسط // فيه شغل في تحضير الكرات والصلصة
+Difficulty (EN): medium
+Ingredients (AR): لحم مفروم, بصل, بهارات خاصة, أعشاب
+Ingredients (EN): minced meat, onion, special spices, herbs
+Servings: 1 // غالبًا بيكون طبق لشخص واحد
+Notes (AR): طعم أصيل وشهرة واسعة تجعل منه الاختيار الأمثل في كل مرة. يقدم ساخناً مع صوص مميز.
+Notes (EN): Authentic taste and wide popularity make it the perfect choice every time. Served hot with a special sauce.
+---

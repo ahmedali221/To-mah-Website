@@ -1,0 +1,25 @@
+---
+ID: SAMOSA-MIX-CHEESE // كود مميز لسمبوسك طعمة بالجبنة
+Name (AR): سمبوسك طعمة
+Name (EN): Samosa Mix Cheese
+Description (AR): استمتع بمذاق فريد مع سمبوسك طعمة، رقائق مقرمشة محشوة بخليط من الأجبان اللذيذة على طريقة أهل المدينة. وجبة خفيفة شهية أو مقبل مميز يرضي جميع الأذواق.
+Description (EN): Enjoy a unique taste with Samosa Mix Cheese, crispy dough filled with a delicious blend of cheeses in the Madini style. A tasty light meal or a distinctive appetizer that satisfies all tastes.
+Category (AR): مقبلات, معجنات
+Category (EN): Appetizers, Pastries
+Calories: 342
+Price: 17 // السعر بالريال زي ما مكتوب
+Rating: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Available: true // نفترض إنه متوفر
+Trendy: // ممكن تحدد لو هو طبق جديد أو شعبي
+Prep Time (AR): // يرجى إضافة وقت التحضير لو تعرفه
+Prep Time (EN): // Please add prep time if you know it
+Cook Time (AR): // يرجى إضافة وقت الطهي لو تعرفه
+Cook Time (EN): // Please add cook time if you know it
+Difficulty (AR): سهل
+Difficulty (EN): easy
+Ingredients (AR): دقيق, خليط أجبان (شيدر, موزاريلا, ...), بهارات
+Ingredients (EN): flour, cheese mix (cheddar, mozzarella, ...), spices
+Servings: // عدد القطع مش واضح في الصورة - يرجى إضافته لو تعرفه
+Notes (AR): قرمشة لا تقاوم وحشوة جبنة غنية بالنكهة. يقدم ساخناً كوجبة خفيفة أو مقبل.
+Notes (EN): Irresistible crispiness and a cheese filling rich in flavor. Served hot as a snack or appetizer.
+---

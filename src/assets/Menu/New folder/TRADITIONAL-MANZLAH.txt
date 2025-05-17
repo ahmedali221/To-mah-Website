@@ -1,0 +1,25 @@
+---
+ID: TRADITIONAL-MANZLAH // كود مميز لمنزلة على الأصول
+Name (AR): منزلة على الأصول
+Name (EN): Traditional Manzlah
+Description (AR): استمتع بقطع اللحم الطرية مع مرقة الطحينة المسبكة. وجبة تقليدية وغنية بالنكهات الأصيلة.
+Description (EN): Indulge in tender beef chunks with rich and flavorful tahini gravy. A traditional meal rich in authentic flavors.
+Category (AR): أطباق رئيسية, لحوم
+Category (EN): Main Dishes, Meat
+Calories: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Price: 45 // السعر بالريال زي ما مكتوب
+Rating: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Available: true // نفترض إنه متوفر
+Trendy: // ممكن تحدد لو هو طبق جديد أو شعبي
+Prep Time (AR): // يرجى إضافة وقت التحضير لو تعرفه
+Prep Time (EN): // Please add prep time if you know it
+Cook Time (AR): طويل // غالبًا الطبخ على نار هادئة بياخد وقت
+Cook Time (EN): long
+Difficulty (AR): متوسط // فيه شغل في تتبيل اللحم وتحضير المرقة
+Difficulty (EN): medium
+Ingredients (AR): قطع لحم, طحينة, بصل, ثوم, بهارات خاصة
+Ingredients (EN): beef chunks, tahini, onion, garlic, special spices
+Servings: 1 // غالبًا بيكون طبق لشخص واحد
+Notes (AR): طعم اللحم الطري مع مرقة الطحينة الغنية والمسبكة. وجبة دافئة ومغذية ومناسبة لمحبي الأكلات التقليدية.
+Notes (EN): The taste of tender beef with rich and thickened tahini gravy. A warm and nutritious meal suitable for lovers of traditional dishes.
+---

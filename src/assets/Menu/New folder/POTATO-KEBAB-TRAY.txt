@@ -1,0 +1,25 @@
+---
+ID: POTATO-KEBAB-TRAY // كود مميز لصينية كباب بالبطاطس
+Name (AR): صينية الكباب بالبطاطس
+Name (EN): Potato Kebab Tray
+Description (AR): استمتع بصينية مخصوصة من البطاطس والكباب المشوي بالفرن، وتقدم مع الرز المديني الشهي وصوص الدقس الحار. وجبة عائلية شهية وغنية بالنكهات المتنوعة.
+Description (EN): Indulge in a special tray of potatoes and kebab grilled in the oven, served with delicious Madini rice and spicy dakos sauce. A delicious family meal rich in diverse flavors.
+Category (AR): أطباق رئيسية, صواني, كباب, بطاطس, أرز
+Category (EN): Main Dishes, Trays, Kebab, Potatoes, Rice
+Calories: 289
+Price: 27 // السعر بالريال زي ما مكتوب
+Rating: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Available: true // نفترض إنه متوفر
+Trendy: // ممكن تحدد لو هي صينية جديدة أو شعبية
+Prep Time (AR): // يرجى إضافة وقت التحضير لو تعرفه
+Prep Time (EN): // Please add prep time if you know it
+Cook Time (AR): متوسط // فيه شغل في تحضير الكباب والبطاطس وشويهم
+Cook Time (EN): medium
+Difficulty (AR): متوسط // فيه شغل في تحضير الكباب والبطاطس
+Difficulty (EN): medium
+Ingredients (AR): كباب, بطاطس, بصل, طماطم, فلفل, بهارات خاصة, رز مديني, دقس
+Ingredients (EN): kebab, potatoes, onion, tomatoes, peppers, special spices, Madini rice, dakos
+Servings: 2-3 // صينية تكفي أكثر من شخص
+Notes (AR): طعم الكباب المشوي مع البطاطس والخضار والرز المديني الشهي. وجبة متكاملة ولذيذة ومغذية تجمع بين كل الأصناف اللي نحبها.
+Notes (EN): The taste of grilled kebab with potatoes, vegetables, and delicious Madini rice. A complete, delicious, and nutritious meal that combines all the favorites.
+---

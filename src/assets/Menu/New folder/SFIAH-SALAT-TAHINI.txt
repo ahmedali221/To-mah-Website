@@ -1,0 +1,25 @@
+---
+ID: SFIAH-SALAT-TAHINI // كود مميز لصفيحة سلات بالطحينة
+Name (AR): صفايح سلات بالطحينة
+Name (EN): Sfiah Salat with Tahini
+Description (AR): استمتع بسلات المدينة والطحينة كلام خطير! معجنات طازجة وشهية محشوة بحشوة مميزة ومغطاة بالطحينة اللذيذة.
+Description (EN): Enjoy Madini Salat with Tahini, a seriously amazing combination! Fresh and tasty pastries filled with a special filling and topped with delicious tahini.
+Category (AR): مقبلات, معجنات
+Category (EN): Appetizers, Pastries
+Calories: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Price: 12 // السعر بالريال زي ما مكتوب
+Rating: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Available: true // نفترض إنه متوفر
+Trendy: true // واضح إنه طبق مميز
+Prep Time (AR): // يرجى إضافة وقت التحضير لو تعرفه
+Prep Time (EN): // Please add prep time if you know it
+Cook Time (AR): // يرجى إضافة وقت الطهي لو تعرفه
+Cook Time (EN): // Please add cook time if you know it
+Difficulty (AR): سهل
+Difficulty (EN): easy
+Ingredients (AR): دقيق, لحم مفروم أو دجاج, طحينة, بصل, بهارات
+Ingredients (EN): flour, minced meat or chicken, tahini, onion, spices
+Servings: 1 // غالبًا بتكون قطعة واحدة
+Notes (AR): طعم السلات المميز مع الطحينة الغنية. مزيج فريد ولذيذ يستحق التجربة.
+Notes (EN): The distinctive taste of Salat with rich tahini. A unique and delicious combination worth trying.
+---

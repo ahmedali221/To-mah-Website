@@ -1,0 +1,25 @@
+---
+ID: KABULI-MADINI // كود مميز لرز المدينة الكابلي
+Name (AR): رز المدينة الكابلي المشهور
+Name (EN): Kabuli Madini Rice
+Description (AR): استمتع بطبق من الرز باللحم المنكه بقشر البرتقال والزعفران مع كشنة البطاطس الحامض الخاصة. يقدم هذا الطبق الشهير مع سلطة اللبن وسلطة حارة ليمنحك تجربة طعام فريدة وغنية بالنكهات المتنوعة.
+Description (EN): Indulge in a plate of meat rice flavored with orange zest and saffron, served with a special sour potato kashneh. This famous dish is accompanied by yogurt salad and spicy salad to give you a unique dining experience rich in diverse flavors.
+Category (AR): أطباق رئيسية, أرز, لحوم
+Category (EN): Main Dishes, Rice, Meat
+Calories: 1876
+Price: 97 // السعر بالريال زي ما مكتوب
+Rating: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Available: true // نفترض إنه متوفر
+Trendy: true // واضح إنه طبق مشهور
+Prep Time (AR): // يرجى إضافة وقت التحضير لو تعرفه
+Prep Time (EN): // Please add prep time if you know it
+Cook Time (AR): // يرجى إضافة وقت الطهي لو تعرفه
+Cook Time (EN): // Please add cook time if you know it
+Difficulty (AR): متوسط // فيه شغل في تتبيل اللحم وتحضير الكشنة
+Difficulty (EN): medium
+Ingredients (AR): أرز, لحم, قشر برتقال, زعفران, بطاطس, بهارات خاصة, لبن, فلفل حار, خضروات
+Ingredients (EN): rice, meat, orange zest, saffron, potatoes, special spices, yogurt, chili peppers, vegetables
+Servings: 1-2 // وجبة رئيسية لشخص أو ممكن تكفي شخصين
+Notes (AR): مزيج فريد من النكهات الحلوة والحامضة والحارة في طبق واحد. تجربة طعام لا تُنسى ومذاق شهير يفضله الكثيرون.
+Notes (EN): A unique blend of sweet, sour, and spicy flavors in one dish. An unforgettable dining experience and a famous taste favored by many.
+---

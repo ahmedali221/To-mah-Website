@@ -1,0 +1,25 @@
+---
+ID: GRILLED-CHICKEN // كود مميز لدجاج شواية
+Name (AR): دجاج شواية
+Name (EN): Grilled Chicken
+Description (AR): استمتع بوجبة شهية تتكون من رز بخاري معد بطريقة مميزة وقطعة من الدجاج المشوي والمتبل ببهارات طعمة الخاصة. يقدم هذا الطبق مع أطباق جانبية متنوعة لتجربة طعام متكاملة ولذيذة.
+Description (EN): Indulge in a delicious meal consisting of Bukhari rice prepared in a special way and a piece of grilled chicken seasoned with TO'MAH's signature spices. This dish is served with a variety of side dishes for a complete and tasty dining experience.
+Category (AR): أطباق رئيسية, أرز, دجاج مشوي
+Category (EN): Main Dishes, Rice, Grilled Chicken
+Calories: 465
+Price: 38 // السعر بالريال زي ما مكتوب
+Rating: // القيمة غير واضحة في الصورة - يرجى إضافتها لو تعرفها
+Available: true // نفترض إنه متوفر
+Trendy: // ممكن تحدد لو هو طبق جديد أو شعبي
+Prep Time (AR): // يرجى إضافة وقت التحضير لو تعرفه
+Prep Time (EN): // Please add prep time if you know it
+Cook Time (AR): // يرجى إضافة وقت الطهي لو تعرفه
+Cook Time (EN): // Please add cook time if you know it
+Difficulty (AR): متوسط // فيه شغل في تتبيل الدجاج وشويه
+Difficulty (EN): medium
+Ingredients (AR): أرز بخاري, دجاج, بهارات خاصة, أطباق جانبية (حسب المتوفر)
+Ingredients (EN): Bukhari rice, chicken, special spices, side dishes (as available)
+Servings: 1 // وجبة رئيسية لشخص واحد
+Notes (AR): طعم البهارات المميزة للدجاج المشوي مع الرز البخاري الشهي. وجبة متكاملة ومغذية تناسب جميع الأوقات.
+Notes (EN): The distinctive flavor of the grilled chicken's special spices with the delicious Bukhari rice. A complete and nutritious meal suitable for all times.
+---
