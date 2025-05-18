@@ -28,6 +28,7 @@
 		"error_message": "There was an error sending your message. Please try again later."
 	},
 	"footer": {
+		"rights": "© 2025 To'mah Restaurant. All rights reserved.",
 		"services_title": "Services",
 		"services": {
 			"branding": "Branding",
