@@ -1,39 +1,36 @@
-import img1 from "../../assets/Menu/pages1-6/DSC00924.jpg"; //
-import img2 from "../../assets/Menu/pages1-6/DSC00970.jpg"; //
-import img3 from "../../assets/Menu/pages1-6/DSC00965.jpg"; //
-import img4 from "../../assets/Menu/pages1-6/DSC00962.jpg"; //
-// import img5 from "../../assets/Menu/pages1-6/";
-import img6 from "../../assets/Menu/pages1-6/DSC00840.jpg"; //
-import img7 from "../../assets/Menu/pages1-6/DSC00973.jpg"; //
-import img8 from "../../assets/Menu/pages1-6/DSC01527.jpg"; //
-import img9 from "../../assets/Menu/pages1-6/DSC00794.jpg"; //
-import img10 from "../../assets/Menu/pages1-6/DSC00764.jpg"; //
-import img11 from "../../assets/Menu/pages1-6/DSC00829.jpg"; //
-import img12 from "../../assets/Menu/pages1-6/DSC00840.jpg"; //
-import img13 from "../../assets/Menu/pages1-6/DSC00865.jpg"; //
-import img14 from "../../assets/Menu/pages1-6/DSC00875.jpg"; //
-import img15 from "../../assets/Menu/pages1-6/DSC00993.jpg"; //
-import img16 from "../../assets/Menu/pages1-6/DSC01010.jpg"; //
-import img17 from "../../assets/Menu/pages1-6/DSC01012.jpg"; //
-import img18 from "../../assets/Menu/pages1-6/DSC01035.jpg"; //
-import img19 from "../../assets/Menu/pages1-6/DSC01024.jpg"; //
-import img20 from "../../assets/Menu/pages1-6/DSC01115.jpg"; //
-import img21 from "../../assets/Menu/pages1-6/DSC01102.jpg"; //
-import img22 from "../../assets/Menu/pages1-6/DSC01083.jpg"; //
-import img23 from "../../assets/Menu/pages1-6/DSC01144.jpg"; //
-import img24 from "../../assets/Menu/pages1-6/DSC01134.jpg"; //
-// import img25 from "../../assets/Menu/pages1-6";
-// import img26 from "../../assets/Menu/pages1-6";
-import img27 from "../../assets/Menu/pages1-6/DSC01141.jpg"; //
-// import img28 from "../../assets/Menu/pages1-6";
-// import img29 from "../../assets/Menu/pages1-6";
-import img30 from "../../assets/Menu/pages1-6/DSC01281.jpg"; //
-import img31 from "../../assets/Menu/pages1-6/DSC01292.jpg"; //
-import img32 from "../../assets/Menu/pages1-6/DSC01289.jpg"; //
-import img33 from "../../assets/Menu/pages1-6/DSC01286.jpg"; //
-import img34 from "../../assets/Menu/pages1-6/DSC01283.jpg"; //
-import img35 from "../../assets/Menu/pages1-6/DSC01296.jpg"; //
-import img36 from "../../assets/Menu/pages1-6/DSC01276.jpg"; //
+import img1 from "../../assets/Menu/pages1-6/DSC00924.jpg";
+import img2 from "../../assets/Menu/pages1-6/DSC00970.jpg";
+import img3 from "../../assets/Menu/pages1-6/DSC00965.jpg";
+import img4 from "../../assets/Menu/pages1-6/DSC00962.jpg";
+import img6 from "../../assets/Menu/pages1-6/DSC00840.jpg";
+import img7 from "../../assets/Menu/pages1-6/DSC00973.jpg";
+import img8 from "../../assets/Menu/pages1-6/DSC01527.jpg";
+import img9 from "../../assets/Menu/pages1-6/DSC00794.jpg";
+import img10 from "../../assets/Menu/pages1-6/DSC00764.jpg";
+import img11 from "../../assets/Menu/pages1-6/DSC00829.jpg";
+import img12 from "../../assets/Menu/pages1-6/DSC00840.jpg";
+import img13 from "../../assets/Menu/pages1-6/DSC00865.jpg";
+import img14 from "../../assets/Menu/pages1-6/DSC00875.jpg";
+import img15 from "../../assets/Menu/pages1-6/DSC00993.jpg";
+import img16 from "../../assets/Menu/pages1-6/DSC01010.jpg";
+import img17 from "../../assets/Menu/pages1-6/DSC01012.jpg";
+import img18 from "../../assets/Menu/pages1-6/DSC01035.jpg";
+import img19 from "../../assets/Menu/pages1-6/DSC01024.jpg";
+import img20 from "../../assets/Menu/pages1-6/DSC01115.jpg";
+import img21 from "../../assets/Menu/pages1-6/DSC01102.jpg";
+import img22 from "../../assets/Menu/pages1-6/DSC01083.jpg";
+import img23 from "../../assets/Menu/pages1-6/DSC01144.jpg";
+import img24 from "../../assets/Menu/pages1-6/DSC01134.jpg";
+
+import img27 from "../../assets/Menu/pages1-6/DSC01141.jpg";
+
+import img30 from "../../assets/Menu/pages1-6/DSC01281.jpg";
+import img31 from "../../assets/Menu/pages1-6/DSC01292.jpg";
+import img32 from "../../assets/Menu/pages1-6/DSC01289.jpg";
+import img33 from "../../assets/Menu/pages1-6/DSC01286.jpg";
+import img34 from "../../assets/Menu/pages1-6/DSC01283.jpg";
+import img35 from "../../assets/Menu/pages1-6/DSC01296.jpg";
+import img36 from "../../assets/Menu/pages1-6/DSC01276.jpg";
 
 const productsData = [
   {
