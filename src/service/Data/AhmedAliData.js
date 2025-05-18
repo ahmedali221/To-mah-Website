@@ -1,108 +1,19 @@
+import image19_1 from "../../assets/Menu/19-25/19-1.JPG";
+import image19_2 from "../../assets/Menu/19-25/19-2.JPG";
+import image19_3 from "../../assets/Menu/19-25/19-3.JPG";
+import image19_4 from "../../assets/Menu/19-25/19-4.JPG";
+import image19_5 from "../../assets/Menu/19-25/19-5.JPG";
+
+import image21_3 from "../../assets/Menu/19-25/21-3.JPG";
+import image21_4 from "../../assets/Menu/19-25/21-4.JPG";
+import image21_5 from "../../assets/Menu/19-25/21-5.JPG";
+import image21_6 from "../../assets/Menu/19-25/21-6.JPG";
+import image21_7 from "../../assets/Menu/19-25/21-7.JPG";
+
 const productsData = [
   {
-    id: "1",
-    image: null,
-    meal_name_en: "Madini Collagen",
-    description_en:
-      "2 pieces of boiled lamb feet served with bread and lemon garlic mix",
-    price: "27 ريال",
-    meal_name_ar: "كوارع (رجول غنم المدينية)",
-    description_ar:
-      "قطعتين من كوارع الغنم المسلوقة تقدم مع الخبز وخليط الثوم والليمون",
-    calories: null,
-    category_en: "to'mah special dishes",
-    category_ar: "أخبار صحون طعمة المميزة",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "2",
-    image: null,
-    meal_name_en: "Potato Kebab Tray",
-    description_en:
-      "Special tray of potatoes and kebab served with Madini rice and dakos",
-    price: "27 ريال",
-    meal_name_ar: "صينية الشايب بالبطاطس",
-    description_ar: "صينية بطاطس مع الكباب، يقدم مع الرز المديني والدقوس",
-    calories: "289 calories",
-    category_en: "to'mah special dishes",
-    category_ar: "أخبار صحون طعمة المميزة",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "3",
-    image: null,
-    meal_name_en: "Sfiah Cheese Moussaka",
-    description_en: "Moussaka with mozzarella cheese",
-    price: "12 ريال",
-    meal_name_ar: "صفيحة مصقعة بالجبن",
-    description_ar: "مقلقة مقلية بالجبن الموتزاريلا",
-    calories: null,
-    category_en: "sfiah & sandwiches",
-    category_ar: "أخبار صفيحات وساندويش",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "4",
-    image: null,
-    meal_name_en: "Sfiah Salat with Tahini",
-    description_en: "Special Madini salat with tahini",
-    price: "12 ريال",
-    meal_name_ar: "صفيحة سلات بالطحينة",
-    description_ar: "سلات مديني خاصة مع الطحينة",
-    calories: null,
-    category_en: "sfiah & sandwiches",
-    category_ar: "أخبار صفيحات وساندويش",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "5",
-    image: null,
-    meal_name_en: "Sfiah White Cheese with Halva",
-    description_en: "Cheese and halva mix topped with pistachios",
-    price: "12 ريال",
-    meal_name_ar: "صفيحة جبنة بيضاء بالحلاوة",
-    description_ar: "جبنة بيضاء ممزوجة بالحلاوة ومزينة بالفستق",
-    calories: null,
-    category_en: "sfiah & sandwiches",
-    category_ar: "أخبار صفيحات وساندويش",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "6",
-    image: null,
-    meal_name_en: "Grilled Samoli Sandwich",
-    description_en: "Grilled samoli sandwich stuffed with tahini sauce",
-    price: "10 ريال",
-    meal_name_ar: "ساندويتش سامولي شواية",
-    description_ar: "ساندويتش سامولي مشوي ومحشو بصلصة الطحينة",
-    calories: null,
-    category_en: "sfiah & sandwiches",
-    category_ar: "أخبار صفيحات وساندويش",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "7",
-    image: null,
-    meal_name_en: "Fries Samoli Sandwich",
-    description_en: "Samoli sandwich stuffed with fries and tahini sauce",
-    price: "10 ريال",
-    meal_name_ar: "ساندويتش سامولي بطاطس",
-    description_ar: "ساندويتش سامولي محشو بالبطاطس وصلصة الطحينة",
-    calories: null,
-    category_en: "sfiah & sandwiches",
-    category_ar: "أخبار صفيحات وساندويش",
-    available: true,
-    trendy: false,
-  },
-  {
     id: "8",
-    image: null,
+    image: image19_1,
     meal_name_en: "Cheese Liver",
     description_en: "Fresh liver with rice bread and cheese cuts",
     price: "20 ريال",
@@ -116,7 +27,7 @@ const productsData = [
   },
   {
     id: "9",
-    image: null,
+    image: image19_2,
     meal_name_en: "White Cheese with Tomatoes and Mint",
     description_en: "White cheese with tomatoes and Moroccan mint",
     price: "15 ريال",
@@ -130,7 +41,7 @@ const productsData = [
   },
   {
     id: "10",
-    image: null,
+    image: image19_3,
     meal_name_en: "Fattoot of Souq Al-Shamiya",
     description_en:
       "Halloumi cheese with sun-dried tomatoes stuffed in fatoot bread, with black seeds and more!",
@@ -146,8 +57,8 @@ const productsData = [
   },
   {
     id: "11",
-    image: null,
-    meal_name_en: "City Salad Sandwich",
+    image: image19_4,
+    meal_name_en: "City Salat Sandwich",
     description_en:
       "Madini salad stuffed in soft bread with pomegranate molasses",
     price: "25 ريال",
@@ -161,7 +72,7 @@ const productsData = [
   },
   {
     id: "12",
-    image: null,
+    image: image19_5,
     meal_name_en: "Mutton Head Sandwich",
     description_en: "Mutton head meat with tahini sauce and cucumber slices",
     price: "20 ريال",
@@ -359,7 +270,7 @@ const productsData = [
   },
   {
     id: "26",
-    image: null,
+    image: image21_3,
     meal_name_en: "Roqaq Al-Aguat",
     description_en:
       "Crispy Roqaq Dough Filled With Pistachios And Cream And Served With Ice Cream",
@@ -374,7 +285,7 @@ const productsData = [
   },
   {
     id: "27",
-    image: null,
+    image: image21_4,
     meal_name_en: "Cream Caramel",
     description_en:
       "Oven Baked Cream caramel served cold caramelized sugar sauce",
@@ -390,7 +301,7 @@ const productsData = [
   },
   {
     id: "28",
-    image: null,
+    image: image21_5,
     meal_name_en: "Um Ali",
     description_en:
       "Dessert made of roqaq with milk and roasted nuts served hot",
@@ -405,7 +316,7 @@ const productsData = [
   },
   {
     id: "29",
-    image: null,
+    image: image21_6,
     meal_name_en: "Rice Pudding",
     description_en: "Rice and milk pudding served cold with toasted almonds",
     price: "17 ريال",
@@ -419,7 +330,7 @@ const productsData = [
   },
   {
     id: "30",
-    image: null,
+    image: image21_7,
     meal_name_en: "Tarmbeh",
     description_en:
       "Tarmbeh or Balah Al-Sham with ice cream, chocolate and pistachios",
