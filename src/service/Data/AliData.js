@@ -1,38 +1,10 @@
-import img1 from "../assets/images/products/1.jpg";
-import img2 from "../assets/images/products/2.jpg";
-import img3 from "../assets/images/products/3.jpg";
-import img4 from "../assets/images/products/4.jpg";
-import img5 from "../assets/images/products/5.jpg";
-import img6 from "../assets/images/products/6.jpg";
-import img7 from "../assets/images/products/7.jpg";
-import img8 from "../assets/images/products/8.jpg";
-import img9 from "../assets/images/products/9.jpg";
-import img10 from "../assets/images/products/10.jpg";
-import img11 from "../assets/images/products/11.jpg";
-import img12 from "../assets/images/products/12.jpg";
-import img13 from "../assets/images/products/13.jpg";
-import img14 from "../assets/images/products/14.jpg";
-import img15 from "../assets/images/products/15.jpg";
-import img16 from "../assets/images/products/16.jpg";
-import img17 from "../assets/images/products/17.jpg";
-import img18 from "../assets/images/products/18.jpg";
-import img19 from "../assets/images/products/19.jpg";
-import img20 from "../assets/images/products/20.jpg";
-import img21 from "../assets/images/products/21.jpg";
-import img22 from "../assets/images/products/22.jpg";
-import img23 from "../assets/images/products/23.jpg";
-import img24 from "../assets/images/products/24.jpg";
-import img25 from "../assets/images/products/25.jpg";
-import img26 from "../assets/images/products/26.jpg";
-import img27 from "../assets/images/products/27.jpg";
-import img28 from "../assets/images/products/28.jpg";
-import img29 from "../assets/images/products/29.jpg";
-import img30 from "../assets/images/products/30.jpg";
-import img31 from "../assets/images/products/31.jpg";
-import img32 from "../assets/images/products/32.jpg";
-import img33 from "../assets/images/products/33.jpg";
-import img34 from "../assets/images/products/34.jpg";
-import img35 from "../assets/images/products/35.jpg";
+import image7_1 from "../../assets/Menu/7-12/7-1.JPG";
+import image7_2 from "../../assets/Menu/7-12/7-2.JPG";
+import image7_3 from "../../assets/Menu/7-12/7-3.JPG";
+import image7_4 from "../../assets/Menu/7-12/7-4.JPG";
+import image12_3 from "../../assets/Menu/7-12/8-3.JPG";
+import image12_5 from "../../assets/Menu/7-12/8-5.JPG";
+import image12_6 from "../../assets/Menu/7-12/8-6.JPG";
 const productsData = [
   //page7
   {
@@ -48,7 +20,7 @@ const productsData = [
     category_ar: "أخبار الفطور",
     available: true,
     trendy: false,
-    image: img1,
+    image: image7_1,
   },
   {
     meal_name_en: "Bread Basket",
@@ -61,7 +33,7 @@ const productsData = [
     category_ar: "أخبار الفطور",
     available: true,
     trendy: false,
-    image: img2,
+    image: image7_2,
   },
   {
     meal_name_en: "Areeka Al-Sih",
@@ -76,7 +48,7 @@ const productsData = [
     category_ar: "حلي وعلى النيي صلي",
     available: true,
     trendy: false,
-    image: img3,
+    image: image7_3,
   },
   {
     meal_name_en: "Ma'soub Bakr",
@@ -91,7 +63,7 @@ const productsData = [
     category_ar: "حلي وعلى النيي صلي",
     available: true,
     trendy: false,
-    image: img4,
+    image: image7_4,
   },
   {
     meal_name_en: "Labnya & Harrisa",
@@ -104,7 +76,7 @@ const productsData = [
     category_ar: "حلي وعلى النيي صلي",
     available: true,
     trendy: false,
-    image: img5,
+    image: null,
   },
   //page8
   {
@@ -120,7 +92,7 @@ const productsData = [
     category_ar: "أخبار الفطور",
     available: true,
     trendy: false,
-    image: img6,
+    image: null,
   },
   //page9
   {
@@ -134,7 +106,7 @@ const productsData = [
     category_ar: "أخبار التسالي",
     available: true,
     trendy: false,
-    image: img7,
+    image: null,
   },
   {
     meal_name_en: "Hamam Albir",
@@ -147,7 +119,7 @@ const productsData = [
     category_ar: "أخبار التسالي",
     available: true,
     trendy: false,
-    image: img8,
+    image: null,
   },
   {
     meal_name_en: "Mushabak",
@@ -160,7 +132,7 @@ const productsData = [
     category_ar: "أخبار التسالي",
     available: true,
     trendy: false,
-    image: img9,
+    image: null,
   },
   {
     meal_name_en: "Hijazi Chips + Tammarind Sauce",
@@ -173,7 +145,7 @@ const productsData = [
     category_ar: "أخبار التسالي",
     available: true,
     trendy: false,
-    image: img10,
+    image: null,
   },
   {
     meal_name_en: "Grain Soup",
@@ -186,7 +158,7 @@ const productsData = [
     category_ar: "أخبار الشوربة",
     available: true,
     trendy: false,
-    image: img11,
+    image: null,
   },
   {
     meal_name_en: "shkamba soup",
@@ -200,7 +172,7 @@ const productsData = [
     category_ar: "أخبار الشوربة",
     available: true,
     trendy: false,
-    image: img12,
+    image: null,
   },
   {
     meal_name_en: "Mint Hummus",
@@ -213,7 +185,7 @@ const productsData = [
     category_ar: "أخبار السلطات و المقبلات الباردة",
     available: true,
     trendy: false,
-    image: img13,
+    image: null,
   },
   //page10
   {
@@ -227,7 +199,7 @@ const productsData = [
     category_ar: "أخبار السلطات والمقبلات الباردة",
     available: true,
     trendy: false,
-    image: img14,
+    image: null,
   },
   {
     meal_name_en: "Madini Okra Fattah",
@@ -240,7 +212,7 @@ const productsData = [
     category_ar: "أخبار السلطات والمقبلات الباردة",
     available: true,
     trendy: false,
-    image: img15,
+    image: null,
   },
   {
     meal_name_en: "Hwa Fattah",
@@ -253,7 +225,7 @@ const productsData = [
     category_ar: "أخبار السلطات والمقبلات الباردة",
     available: true,
     trendy: false,
-    image: img16,
+    image: null,
   },
   {
     meal_name_en: "To'mah Fattah",
@@ -266,7 +238,7 @@ const productsData = [
     category_ar: "أخبار السلطات والمقبلات الباردة",
     available: true,
     trendy: false,
-    image: img17,
+    image: null,
   },
   {
     meal_name_en: "Tahini with Veggies and Eggplant",
@@ -280,7 +252,7 @@ const productsData = [
     category_ar: "أخبار السلطات والمقبلات الباردة",
     available: true,
     trendy: false,
-    image: img18,
+    image: null,
   },
   {
     meal_name_en: "Madini Veggies with Pomegranate Molasses and Spicy Pepper",
@@ -293,7 +265,7 @@ const productsData = [
     category_ar: "أخبار السلطات والمقبلات الباردة",
     available: true,
     trendy: false,
-    image: img19,
+    image: null,
   },
   {
     meal_name_en: "Al-Oula Salad",
@@ -308,7 +280,7 @@ const productsData = [
     category_ar: "أخبار السلطات والمقبلات الباردة",
     available: true,
     trendy: false,
-    image: img20,
+    image: null,
   },
   {
     meal_name_en: "To'mah Salad",
@@ -323,7 +295,7 @@ const productsData = [
     category_ar: "أخبار السلطات والمقبلات الباردة",
     available: true,
     trendy: false,
-    image: img21,
+    image: null,
   },
   //page11
   {
@@ -337,7 +309,7 @@ const productsData = [
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: img22,
+    image: null,
   },
   {
     meal_name_en: "Tahini Salad with Onion",
@@ -350,7 +322,7 @@ const productsData = [
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: img23,
+    image: null,
   },
   {
     meal_name_en: "Tahini Salad with Roasted Tomatoes",
@@ -363,7 +335,7 @@ const productsData = [
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: img24,
+    image: null,
   },
   {
     meal_name_en: "Plain Tahini Salad",
@@ -378,7 +350,7 @@ const productsData = [
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: img25,
+    image: null,
   },
   {
     meal_name_en: "Yogurt Salad",
@@ -391,7 +363,7 @@ const productsData = [
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: img26,
+    image: null,
   },
   {
     meal_name_en: "Carrot Achard",
@@ -404,7 +376,7 @@ const productsData = [
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: img27,
+    image: null,
   },
   {
     meal_name_en: "Homr Tammarind Sauce",
@@ -417,7 +389,7 @@ const productsData = [
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: img28,
+    image: null,
   },
   {
     meal_name_en: "Spicy Dakos",
@@ -430,7 +402,7 @@ const productsData = [
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: img29,
+    image: null,
   },
   //page12
   {
@@ -444,7 +416,7 @@ const productsData = [
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: img30,
+    image: null,
   },
   {
     meal_name_en: "To'mah Fresh Peppers",
@@ -457,7 +429,7 @@ const productsData = [
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: img31,
+    image: null,
   },
   {
     meal_name_en: "Madini Borek Pan",
@@ -470,7 +442,7 @@ const productsData = [
     category_ar: "أخبار معجنات",
     available: true,
     trendy: false,
-    image: img32,
+    image: image12_3,
   },
   {
     meal_name_en: "Mantu Fattah",
@@ -485,7 +457,7 @@ const productsData = [
     category_ar: "أخبار معجنات",
     available: true,
     trendy: false,
-    image: img33,
+    image: null,
   },
   {
     meal_name_en: "Triangular Meat Samosa",
@@ -499,7 +471,7 @@ const productsData = [
     category_ar: "أخبار معجنات",
     available: true,
     trendy: false,
-    image: img34,
+    image: image12_5,
   },
   {
     meal_name_en: "White Cheese Rolls",
@@ -512,7 +484,7 @@ const productsData = [
     category_ar: "أخبار معجنات",
     available: true,
     trendy: false,
-    image: img35,
+    image: image12_6,
   },
 ];
 

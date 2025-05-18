@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+// Import the normalized data with unique IDs
 import productsData from "../service/data";
 
 const initialFilters = {
@@ -25,30 +26,33 @@ export default function Sidebar({ filters, setFilters }) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
   };
 
+  // Use the normalized data with unique IDs
+  const allProductsData = productsData;
+
   // Get category names based on language
   const availableCategories = [
     t("sidebar.all_categories"),
-    ...new Set(productsData.map((product) =>
+    ...new Set(allProductsData.map((product) =>
       i18n.language === "ar" && product.category_ar
         ? product.category_ar
         : capitalizeFirstLetter(product.category_en)
     )),
   ];
 
-  const popularProducts = productsData
+  const popularProducts = allProductsData
     .filter((product) => product.trendy === true)
     .map((product) => ({
       id: product.id,
-      name: i18n.language === "ar" && product.name_ar
-        ? product.name_ar
-        : capitalizeFirstLetter(product.name_en),
+      name: i18n.language === "ar" && product.meal_name_ar
+        ? product.meal_name_ar
+        : capitalizeFirstLetter(product.meal_name_en),
       price: product.price,
       image: product.image,
     }));
 
   useEffect(() => {
-    const min = Math.min(...productsData.map((p) => p.price));
-    const max = Math.max(...productsData.map((p) => p.price));
+    const min = Math.min(...allProductsData.map((p) => parseFloat(p.price) || 0));
+    const max = Math.max(...allProductsData.map((p) => parseFloat(p.price) || 100));
     setPriceRange({
       min: filters.minPrice || min,
       max: filters.maxPrice === Infinity ? max : filters.maxPrice
@@ -325,7 +329,6 @@ export default function Sidebar({ filters, setFilters }) {
             <ul className="space-y-4">
               {popularProducts.length > 0 ? (
                 popularProducts.map((product, index) => (
-                  // ... existing code ...
                   <li
                     key={index}
                     className={`flex items-center p-2 hover:bg-white rounded-lg transition-all duration-300 cursor-pointer group ${i18n.language === "ar" ? "space-x-reverse gap-3" : "space-x-3 gap-3"}`}
@@ -346,7 +349,6 @@ export default function Sidebar({ filters, setFilters }) {
                       </p>
                     </div>
                   </li>
-                  // ... existing code ...
                 ))
               ) : (
                 <li className="text-gray-500 text-center py-4">

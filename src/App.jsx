@@ -70,7 +70,7 @@ function PopularMeals({ isOpen, onClose }) {
                   {i18n.language === "ar" && meal.name_ar ? meal.name_ar : meal.name_en}
                 </h3>
                 <p className="text-primary-dark font-bold mt-1">
-                  {meal.price.toFixed(2)} {t("sidebar.currency")}
+                  {typeof meal.price === 'number' ? meal.price.toFixed(2) : meal.price} {t("sidebar.currency")}
                 </p>
               </div>
               <button

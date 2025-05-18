@@ -1,63 +1,7 @@
-import img1 from "../assets/images/products/111.jpg";
-import img2 from "../assets/images/products/112.jpg";
-import img3 from "../assets/images/products/113.jpg";
-import img4 from "../assets/images/products/114.jpg";
-import img5 from "../assets/images/products/115.jpg";
-import img6 from "../assets/images/products/116.jpg";
-import img7 from "../assets/images/products/117.jpg";
-import img8 from "../assets/images/products/118.jpg";
-import img9 from "../assets/images/products/119.jpg";
-import img10 from "../assets/images/products/120.jpg";
-import img11 from "../assets/images/products/121.jpg";
-import img12 from "../assets/images/products/122.jpg";
-import img13 from "../assets/images/products/123.jpg";
-import img14 from "../assets/images/products/124.jpg";
-import img15 from "../assets/images/products/125.jpg";
-import img16 from "../assets/images/products/126.jpg";
-import img17 from "../assets/images/products/127.jpg";
-import img18 from "../assets/images/products/128.jpg";
-import img19 from "../assets/images/products/129.jpg";
-import img20 from "../assets/images/products/130.jpg";
-import img21 from "../assets/images/products/131.jpg";
-import img22 from "../assets/images/products/132.jpg";
-import img23 from "../assets/images/products/133.jpg";
-import img24 from "../assets/images/products/134.jpg";
-import img25 from "../assets/images/products/135.jpg";
-import img26 from "../assets/images/products/136.jpg";
-import img27 from "../assets/images/products/137.jpg";
-import img28 from "../assets/images/products/138.jpg";
-import img29 from "../assets/images/products/139.jpg";
-import img30 from "../assets/images/products/140.jpg";
-import img31 from "../assets/images/products/141.jpg";
-import img32 from "../assets/images/products/142.jpg";
-import img33 from "../assets/images/products/143.jpg";
-import img34 from "../assets/images/products/144.jpg";
-import img35 from "../assets/images/products/145.jpg";
-import img36 from "../assets/images/products/146.jpg";
-import img37 from "../assets/images/products/147.jpg";
-import img38 from "../assets/images/products/148.jpg";
-import img39 from "../assets/images/products/149.jpg";
-import img40 from "../assets/images/products/150.jpg";
-import img41 from "../assets/images/products/151.jpg";
-import img42 from "../assets/images/products/152.jpg";
-import img43 from "../assets/images/products/153.jpg";
-import img44 from "../assets/images/products/154.jpg";
-import img45 from "../assets/images/products/155.jpg";
-import img46 from "../assets/images/products/156.jpg";
-import img47 from "../assets/images/products/157.jpg";
-import img48 from "../assets/images/products/158.jpg";
-import img49 from "../assets/images/products/159.jpg";
-import img50 from "../assets/images/products/160.jpg";
-import img51 from "../assets/images/products/161.jpg";
-import img52 from "../assets/images/products/162.jpg";
-import img53 from "../assets/images/products/163.jpg";
-import img54 from "../assets/images/products/164.jpg";
-import img55 from "../assets/images/products/165.jpg";
-
 const productsData = [
   {
     id: "1",
-    image: img1,
+    image: null,
     meal_name_en: "Madini Collagen",
     description_en:
       "2 pieces of boiled lamb feet served with bread and lemon garlic mix",
@@ -65,7 +9,7 @@ const productsData = [
     meal_name_ar: "كوارع (رجول غنم المدينية)",
     description_ar:
       "قطعتين من كوارع الغنم المسلوقة تقدم مع الخبز وخليط الثوم والليمون",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "to'mah special dishes",
     category_ar: "أخبار صحون طعمة المميزة",
     available: true,
@@ -73,14 +17,14 @@ const productsData = [
   },
   {
     id: "2",
-    image: img2,
+    image: null,
     meal_name_en: "Potato Kebab Tray",
     description_en:
       "Special tray of potatoes and kebab served with Madini rice and dakos",
     price: "27 ريال",
     meal_name_ar: "صينية الشايب بالبطاطس",
     description_ar: "صينية بطاطس مع الكباب، يقدم مع الرز المديني والدقوس",
-    calories: "289 سعر حراري",
+    calories: "289 calories",
     category_en: "to'mah special dishes",
     category_ar: "أخبار صحون طعمة المميزة",
     available: true,
@@ -88,13 +32,13 @@ const productsData = [
   },
   {
     id: "3",
-    image: img3,
+    image: null,
     meal_name_en: "Sfiah Cheese Moussaka",
     description_en: "Moussaka with mozzarella cheese",
     price: "12 ريال",
     meal_name_ar: "صفيحة مصقعة بالجبن",
     description_ar: "مقلقة مقلية بالجبن الموتزاريلا",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "sfiah & sandwiches",
     category_ar: "أخبار صفيحات وساندويش",
     available: true,
@@ -102,13 +46,13 @@ const productsData = [
   },
   {
     id: "4",
-    image: img4,
+    image: null,
     meal_name_en: "Sfiah Salat with Tahini",
     description_en: "Special Madini salat with tahini",
     price: "12 ريال",
     meal_name_ar: "صفيحة سلات بالطحينة",
     description_ar: "سلات مديني خاصة مع الطحينة",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "sfiah & sandwiches",
     category_ar: "أخبار صفيحات وساندويش",
     available: true,
@@ -116,13 +60,13 @@ const productsData = [
   },
   {
     id: "5",
-    image: img5,
+    image: null,
     meal_name_en: "Sfiah White Cheese with Halva",
     description_en: "Cheese and halva mix topped with pistachios",
     price: "12 ريال",
     meal_name_ar: "صفيحة جبنة بيضاء بالحلاوة",
     description_ar: "جبنة بيضاء ممزوجة بالحلاوة ومزينة بالفستق",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "sfiah & sandwiches",
     category_ar: "أخبار صفيحات وساندويش",
     available: true,
@@ -130,13 +74,13 @@ const productsData = [
   },
   {
     id: "6",
-    image: img6,
+    image: null,
     meal_name_en: "Grilled Samoli Sandwich",
     description_en: "Grilled samoli sandwich stuffed with tahini sauce",
     price: "10 ريال",
     meal_name_ar: "ساندويتش سامولي شواية",
     description_ar: "ساندويتش سامولي مشوي ومحشو بصلصة الطحينة",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "sfiah & sandwiches",
     category_ar: "أخبار صفيحات وساندويش",
     available: true,
@@ -144,13 +88,13 @@ const productsData = [
   },
   {
     id: "7",
-    image: img7,
+    image: null,
     meal_name_en: "Fries Samoli Sandwich",
     description_en: "Samoli sandwich stuffed with fries and tahini sauce",
     price: "10 ريال",
     meal_name_ar: "ساندويتش سامولي بطاطس",
     description_ar: "ساندويتش سامولي محشو بالبطاطس وصلصة الطحينة",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "sfiah & sandwiches",
     category_ar: "أخبار صفيحات وساندويش",
     available: true,
@@ -158,13 +102,13 @@ const productsData = [
   },
   {
     id: "8",
-    image: img8,
+    image: null,
     meal_name_en: "Cheese Liver",
     description_en: "Fresh liver with rice bread and cheese cuts",
     price: "20 ريال",
     meal_name_ar: "كبدة بالجبنة",
     description_ar: "كبدة طازجة مع خبز الرز وقطع الجبنة",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "surek sandwich",
     category_ar: "ساندويتش شورك",
     available: true,
@@ -172,13 +116,13 @@ const productsData = [
   },
   {
     id: "9",
-    image: img9,
+    image: null,
     meal_name_en: "White Cheese with Tomatoes and Mint",
     description_en: "White cheese with tomatoes and Moroccan mint",
     price: "15 ريال",
     meal_name_ar: "جبنة بيضاء، طماطم، نعناع",
     description_ar: "جبنة بيضاء مع الطماطم والنعناع المغربي",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "surek sandwich",
     category_ar: "ساندويتش شورك",
     available: true,
@@ -186,7 +130,7 @@ const productsData = [
   },
   {
     id: "10",
-    image: img10,
+    image: null,
     meal_name_en: "Fattoot of Souq Al-Shamiya",
     description_en:
       "Halloumi cheese with sun-dried tomatoes stuffed in fatoot bread, with black seeds and more!",
@@ -194,7 +138,7 @@ const productsData = [
     meal_name_ar: "فتوت سوق الشامية",
     description_ar:
       "جبنة حلوم مع الطماطم المجففة محشوة في خبز الفتوت، وبذور البركة والمزيد",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "fatoott sandwich",
     category_ar: "ساندويتش فتوت",
     available: true,
@@ -202,14 +146,14 @@ const productsData = [
   },
   {
     id: "11",
-    image: img11,
+    image: null,
     meal_name_en: "City Salad Sandwich",
     description_en:
       "Madini salad stuffed in soft bread with pomegranate molasses",
     price: "25 ريال",
     meal_name_ar: "ساندويتش سلات المدينة",
     description_ar: "سلات المدينة محشوة في خبز طري مع دبس الرمان",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "grain bread sandwich",
     category_ar: "ساندويتش عيش البر",
     available: true,
@@ -217,13 +161,13 @@ const productsData = [
   },
   {
     id: "12",
-    image: img12,
+    image: null,
     meal_name_en: "Mutton Head Sandwich",
     description_en: "Mutton head meat with tahini sauce and cucumber slices",
     price: "20 ريال",
     meal_name_ar: "ساندويتش لحمة راس",
     description_ar: "لحم رأس مع صلصة الطحينة وشرائح الخيار",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "grain bread sandwich",
     category_ar: "ساندويتش عيش البر",
     available: true,
@@ -231,13 +175,13 @@ const productsData = [
   },
   {
     id: "13",
-    image: img13,
+    image: null,
     meal_name_en: "Whole Grain Bread",
     description_en: "",
     price: "5 ريال",
     meal_name_ar: "عيش حب",
     description_ar: "",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "fresh bakeries",
     category_ar: "أخبار المخبوزات الطازة",
     available: true,
@@ -245,13 +189,13 @@ const productsData = [
   },
   {
     id: "14",
-    image: img14,
+    image: null,
     meal_name_en: "White Bread",
     description_en: "",
     price: "5 ريال",
     meal_name_ar: "عيش أبيض",
     description_ar: "",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "fresh bakeries",
     category_ar: "أخبار المخبوزات الطازة",
     available: true,
@@ -259,13 +203,13 @@ const productsData = [
   },
   {
     id: "15",
-    image: img15,
+    image: null,
     meal_name_en: "Salty Rusk",
     description_en: "",
     price: "13 ريال",
     meal_name_ar: "شابورة مالحة",
     description_ar: "",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "wrapped bakeries",
     category_ar: "أخبار مخبوزات مغلفة",
     available: true,
@@ -273,13 +217,13 @@ const productsData = [
   },
   {
     id: "16",
-    image: img16,
+    image: null,
     meal_name_en: "Duqqa Rusk",
     description_en: "",
     price: "13 ريال",
     meal_name_ar: "شابورة الدقة",
     description_ar: "",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "wrapped bakeries",
     category_ar: "أخبار مخبوزات مغلفة",
     available: true,
@@ -287,13 +231,13 @@ const productsData = [
   },
   {
     id: "17",
-    image: img17,
+    image: null,
     meal_name_en: "Milk Biscuits",
     description_en: "",
     price: "13 ريال",
     meal_name_ar: "بسكويت الحليب",
     description_ar: "",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "wrapped bakeries",
     category_ar: "أخبار مخبوزات مغلفة",
     available: true,
@@ -301,13 +245,13 @@ const productsData = [
   },
   {
     id: "18",
-    image: img18,
+    image: null,
     meal_name_en: "Ghoriba",
     description_en: "",
     price: "13 ريال",
     meal_name_ar: "غريبة",
     description_ar: "",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "wrapped bakeries",
     category_ar: "أخبار مخبوزات مغلفة",
     available: true,
@@ -315,13 +259,13 @@ const productsData = [
   },
   {
     id: "19",
-    image: img19,
+    image: null,
     meal_name_en: "Sweet Rusk",
     description_en: "",
     price: "13 ريال",
     meal_name_ar: "شابورة حلوة",
     description_ar: "",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "wrapped bakeries",
     category_ar: "أخبار مخبوزات مغلفة",
     available: true,
@@ -329,13 +273,13 @@ const productsData = [
   },
   {
     id: "20",
-    image: img20,
+    image: null,
     meal_name_en: "Sesame Biscuits",
     description_en: "",
     price: "13 ريال",
     meal_name_ar: "بسكويت السمسم",
     description_ar: "",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "wrapped bakeries",
     category_ar: "أخبار مخبوزات مغلفة",
     available: true,
@@ -343,13 +287,13 @@ const productsData = [
   },
   {
     id: "21",
-    image: img21,
+    image: null,
     meal_name_en: "Mini Rusk",
     description_en: "",
     price: "13 ريال",
     meal_name_ar: "ميني شابورة",
     description_ar: "",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "wrapped bakeries",
     category_ar: "أخبار مخبوزات مغلفة",
     available: true,
@@ -357,13 +301,13 @@ const productsData = [
   },
   {
     id: "22",
-    image: img22,
+    image: null,
     meal_name_en: "Ta’tema Rusk",
     description_en: "",
     price: "5 ريال",
     meal_name_ar: "شابورة التعتيمة",
     description_ar: "",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "wrapped bakeries",
     category_ar: "أخبار مخبوزات مغلفة",
     available: true,
@@ -371,13 +315,13 @@ const productsData = [
   },
   {
     id: "23",
-    image: img23,
+    image: null,
     meal_name_en: "Marengue / Hwa Eggs",
     description_en: "",
     price: "5 ريال",
     meal_name_ar: "مارينج بيض الهوا",
     description_ar: "",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "wrapped bakeries",
     category_ar: "أخبار مخبوزات مغلفة",
     available: true,
@@ -385,7 +329,7 @@ const productsData = [
   },
   {
     id: "24",
-    image: img24,
+    image: null,
     meal_name_en: "Sit Al-Beit Kunafa",
     description_en:
       "Soft kunafa with baladi cheese made and served in Sit Al-Beit style. Served with sugar syrup mixed with rose water.",
@@ -393,7 +337,7 @@ const productsData = [
     meal_name_ar: "طاوة كنافة ست البيت",
     description_ar:
       "كنافة ناعمة بالجبنة البلدية على طريقة ست البيت، تقدم مع قطر السكر مخلوطة بماء الورد",
-    calories: "504 سعر حراري",
+    calories: "504 calories",
     category_en: "desserts",
     category_ar: "أخبار الحلويات",
     available: true,
@@ -401,13 +345,13 @@ const productsData = [
   },
   {
     id: "25",
-    image: img25,
+    image: null,
     meal_name_en: "Am Khalil’s Saqdana",
     description_en: "Higazi Desert Made Of Sago Pearls And Milk",
     price: "20 ريال",
     meal_name_ar: "أم خليل الخاصة",
     description_ar: "طبق حجازي شهير يحضر بالساقو و الحليب",
-    calories: "481 سعر حراري",
+    calories: "481 calories",
     category_en: "desserts",
     category_ar: "أخبار الحلويات",
     available: true,
@@ -415,14 +359,14 @@ const productsData = [
   },
   {
     id: "26",
-    image: img26,
+    image: null,
     meal_name_en: "Roqaq Al-Aguat",
     description_en:
       "Crispy Roqaq Dough Filled With Pistachios And Cream And Served With Ice Cream",
     price: "25 ريال",
     meal_name_ar: "رقاق الأعوات",
     description_ar: "طبقات رقيقة من العجين المحشو بالقشطة الحلوة والشيرة",
-    calories: "479 سعر حراري",
+    calories: "479 calories",
     category_en: "desserts",
     category_ar: "أخبار الحلويات",
     available: true,
@@ -430,7 +374,7 @@ const productsData = [
   },
   {
     id: "27",
-    image: img27,
+    image: null,
     meal_name_en: "Cream Caramel",
     description_en:
       "Oven Baked Cream caramel served cold caramelized sugar sauce",
@@ -438,7 +382,7 @@ const productsData = [
     meal_name_ar: "توتوة كريم الكراميل",
     description_ar:
       " كريم كراميل مطبوخ في الفرن و تقدم باردة بصوص السكر المكرمل",
-    calories: "403 سعر حراري",
+    calories: "403 calories",
     category_en: "desserts",
     category_ar: "أخبار الحلويات",
     available: true,
@@ -446,14 +390,14 @@ const productsData = [
   },
   {
     id: "28",
-    image: img28,
+    image: null,
     meal_name_en: "Um Ali",
     description_en:
       "Dessert made of roqaq with milk and roasted nuts served hot",
     price: "20 ريال",
     meal_name_ar: "أم علي",
     description_ar: "حلى الرقاق بالحليب والمكسرات المحمصة يقدم ساخن",
-    calories: "873 سعر حراري",
+    calories: "873 calories",
     category_en: "desserts",
     category_ar: "أخبار الحلويات",
     available: true,
@@ -461,13 +405,13 @@ const productsData = [
   },
   {
     id: "29",
-    image: img29,
+    image: null,
     meal_name_en: "Rice Pudding",
     description_en: "Rice and milk pudding served cold with toasted almonds",
     price: "17 ريال",
     meal_name_ar: "مهلبية الأرز",
     description_ar: "مهلبية الأرز بالحليب، تقدم باردة مع اللوز المحمص",
-    calories: "405 سعر حراري",
+    calories: "405 calories",
     category_en: "desserts",
     category_ar: "أخبار الحلويات",
     available: true,
@@ -475,14 +419,14 @@ const productsData = [
   },
   {
     id: "30",
-    image: img30,
+    image: null,
     meal_name_en: "Tarmbeh",
     description_en:
       "Tarmbeh or Balah Al-Sham with ice cream, chocolate and pistachios",
     price: "20 ريال",
     meal_name_ar: "طرمبة",
     description_ar: "طرمبة أو بلح الشام مع الآيس كريم، الشوكولاتة، والفستق",
-    calories: "455 سعر حراري",
+    calories: "455 calories",
     category_en: "desserts",
     category_ar: "أخبار الحلويات",
     available: true,
@@ -490,13 +434,13 @@ const productsData = [
   },
   {
     id: "31",
-    image: img31,
+    image: null,
     meal_name_en: "Kudrit Kader",
     description_en: "Cream caramel & cake mix",
     price: "20 ريال",
     meal_name_ar: "قدرة قادر",
     description_ar: "كريم كراميل وكعكة ممزوجة",
-    calories: "306 سعر حراري",
+    calories: "306 calories",
     category_en: "desserts",
     category_ar: "أخبار الحلويات",
     available: true,
@@ -504,13 +448,13 @@ const productsData = [
   },
   {
     id: "32",
-    image: img32,
+    image: null,
     meal_name_en: "Sahlab",
     description_en: "The popular Madini winter drink",
     price: "17 ريال",
     meal_name_ar: "السحلب",
     description_ar: "مشروب الشتاء الشهير في المدينة",
-    calories: "343 سعر حراري",
+    calories: "343 calories",
     category_en: "hot drinks",
     category_ar: "أخبار المشروبات الساخنة",
     available: true,
@@ -518,13 +462,13 @@ const productsData = [
   },
   {
     id: "33",
-    image: img33,
+    image: null,
     meal_name_en: "Almond Coffee",
     description_en: "Coffee with milk and almonds sweetened with sugar",
     price: "17 ريال",
     meal_name_ar: "قهوة اللوز / قهوة خثيب",
     description_ar: "قهوة بالحليب واللوز محلاة بالسكر",
-    calories: "343 سعر حراري",
+    calories: "343 calories",
     category_en: "hot drinks",
     category_ar: "أخبار المشروبات الساخنة",
     available: true,
@@ -532,13 +476,13 @@ const productsData = [
   },
   {
     id: "34",
-    image: img34,
+    image: null,
     meal_name_en: "Saudi Coffee",
     description_en: "The famous Arabic coffee",
     price: "27 ريال",
     meal_name_ar: "قهوة سعودية",
     description_ar: "القهوة العربية الشهيرة",
-    calories: "343 سعر حراري",
+    calories: "343 calories",
     category_en: "hot drinks",
     category_ar: "أخبار المشروبات الساخنة",
     available: true,
@@ -546,13 +490,13 @@ const productsData = [
   },
   {
     id: "35",
-    image: img35,
+    image: null,
     meal_name_en: "Harah Mix Tea",
     description_en: "Red tea boiled with mint and Madini rose",
     price: "15 ريال",
     meal_name_ar: "شاي مشكل الحارة",
     description_ar: "شاي أحمر مغلي مع النعناع والورد المديني",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "hot drinks",
     category_ar: "أخبار المشروبات الساخنة",
     available: true,
@@ -560,13 +504,13 @@ const productsData = [
   },
   {
     id: "36",
-    image: img36,
+    image: null,
     meal_name_en: "Flavored Tea",
     description_en: "Red tea with Madini flavors",
     price: "15 ريال",
     meal_name_ar: "شاي معطر",
     description_ar: "شاي أحمر مديني معطر بنكهات المدينة",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "hot drinks",
     category_ar: "أخبار المشروبات الساخنة",
     available: true,
@@ -574,13 +518,13 @@ const productsData = [
   },
   {
     id: "37",
-    image: img37,
+    image: null,
     meal_name_en: "Marjoram Tea with Mint",
     description_en: "Marjoram tea pot with mint",
     price: "20 ريال",
     meal_name_ar: "شاي النعناع الدوش",
     description_ar: "شاي المردقوش مع النعناع",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "hot drinks",
     category_ar: "أخبار المشروبات الساخنة",
     available: true,
@@ -588,13 +532,13 @@ const productsData = [
   },
   {
     id: "38",
-    image: img38,
+    image: null,
     meal_name_en: "Milk Tea",
     description_en: "Red tea pot with fresh milk",
     price: "17 ريال",
     meal_name_ar: "شاي حليب",
     description_ar: "شاي أحمر بالحليب مع خلطة مدينية خاصة",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "hot drinks",
     category_ar: "أخبار المشروبات",
     available: true,
@@ -602,13 +546,13 @@ const productsData = [
   },
   {
     id: "39",
-    image: img39,
+    image: null,
     meal_name_en: "Red Tea",
     description_en: "Red tea with Madini mint",
     price: "15 ريال",
     meal_name_ar: "شاي أحمر",
     description_ar: "شاي أحمر (سادة) بالنعناع المديني",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "hot drinks",
     category_ar: "أخبار المشروبات",
     available: true,
@@ -616,13 +560,13 @@ const productsData = [
   },
   {
     id: "40",
-    image: img40,
+    image: null,
     meal_name_en: "Green Tea",
     description_en: "Green tea pot with Madini mint",
     price: "20 ريال",
     meal_name_ar: "شاي أخضر",
     description_ar: "شاي أخضر بالنعناع المديني",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "hot drinks",
     category_ar: "أخبار المشروبات",
     available: true,
@@ -630,13 +574,13 @@ const productsData = [
   },
   {
     id: "41",
-    image: img41,
+    image: null,
     meal_name_en: "Vimto",
     description_en: "Vimto mix with Madini mint and lemon",
     price: "14 ريال",
     meal_name_ar: "شربت فيمتو",
     description_ar: "فيمتو بالنعناع والليمون المديني",
-    calories: "343 سعر حراري",
+    calories: "343 calories",
     category_en: "cold drinks",
     category_ar: "مشروبات باردة",
     available: true,
@@ -644,13 +588,13 @@ const productsData = [
   },
   {
     id: "42",
-    image: img42,
+    image: null,
     meal_name_en: "Sobia",
     description_en: "Refreshing sobia slash",
     price: "14 ريال",
     meal_name_ar: "سوبيا",
     description_ar: "مشروب السوبيا المنعش",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "cold drinks",
     category_ar: "مشروبات باردة",
     available: true,
@@ -658,13 +602,13 @@ const productsData = [
   },
   {
     id: "43",
-    image: img43,
+    image: null,
     meal_name_en: "Raisins",
     description_en: "Power slash with energy",
     price: "14 ريال",
     meal_name_ar: "زبيب",
     description_ar: "مشروب الزبيب الطاقي المنعش",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "cold drinks",
     category_ar: "مشروبات باردة",
     available: true,
@@ -672,13 +616,13 @@ const productsData = [
   },
   {
     id: "44",
-    image: img44,
+    image: null,
     meal_name_en: "Qamar al-Din",
     description_en: "Qamar al-Din slash with orange juice",
     price: "14 ريال",
     meal_name_ar: "قمر الدين",
     description_ar: "قمر الدين مع عصير البرتقال",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "cold drinks",
     category_ar: "مشروبات باردة",
     available: true,
@@ -686,13 +630,13 @@ const productsData = [
   },
   {
     id: "45",
-    image: img45,
+    image: null,
     meal_name_en: "Hibiscus",
     description_en: "Special slash with Madini flavors",
     price: "14 ريال",
     meal_name_ar: "كركديه",
     description_ar: "سلاش خاص بنكهة المدينية",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "cold drinks",
     category_ar: "أخبار المشروبات",
     available: true,
@@ -700,13 +644,13 @@ const productsData = [
   },
   {
     id: "46",
-    image: img46,
+    image: null,
     meal_name_en: "Madini Ajwa",
     description_en: "Madini dates served cold with milk",
     price: "20 ريال",
     meal_name_ar: "عجوة المدينه",
     description_ar: "تمر العجوة المديني بالتبريد، يقدم مع حليب",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "cold drinks",
     category_ar: "أخبار المشروبات",
     available: true,
@@ -714,13 +658,13 @@ const productsData = [
   },
   {
     id: "47",
-    image: img47,
+    image: null,
     meal_name_en: "Fresh Orange",
     description_en: "Fresh Oula orange juice",
     price: "14 ريال",
     meal_name_ar: "برتقال طازة",
     description_ar: "برتقال طازة من مزارع العلا المحلي",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "cold drinks",
     category_ar: "أخبار المشروبات",
     available: true,
@@ -728,13 +672,13 @@ const productsData = [
   },
   {
     id: "48",
-    image: img48,
+    image: null,
     meal_name_en: "Lemon Mint",
     description_en: "Lemon with mint",
     price: "20 ريال",
     meal_name_ar: "ليمون نعناع",
     description_ar: "ليمون مع النعناع",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "cold drinks",
     category_ar: "أخبار المشروبات",
     available: true,
@@ -742,13 +686,13 @@ const productsData = [
   },
   {
     id: "49",
-    image: img49,
+    image: null,
     meal_name_en: "Soft Drinks",
     description_en: "Assorted soft drinks",
     price: "7 ريال",
     meal_name_ar: "مشروبات غازية",
     description_ar: "مشروبات غازية متنوعة",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "cold drinks",
     category_ar: "أخبار المشروبات",
     available: true,
@@ -756,7 +700,7 @@ const productsData = [
   },
   {
     id: "50",
-    image: img50,
+    image: null,
     meal_name_en: "To'mah Special Tray",
     description_en:
       "A balanced tray of To'mah food, served with special rice, madini rice, chicken muqalqal, two types of sambosa, dakos, salad, liver, madini molokhia, tamma eggs, labneh, falafel, foul, pickles, cheese, and more.",
@@ -764,7 +708,7 @@ const productsData = [
     meal_name_ar: "تسيي طعمة الفاخر",
     description_ar:
       "صينية متكاملة من أطباق طعمة تقدم مع رز خاص، رز مديني، مقلقل دجاج، نوعين من السمبوسة، دقوس، سلطة، كبدة، ملوخية مدينية، بيض طما، لبنة، فلافل، فول، مخللات، جبن والمزيد",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "to'mah feasts",
     category_ar: "أخبار عزائم طعمة",
     available: true,
@@ -772,7 +716,7 @@ const productsData = [
   },
   {
     id: "51",
-    image: img51,
+    image: null,
     meal_name_en: "Invite me",
     description_en:
       "Serves 5 people. Includes salad, two types of rice with chicken of your choice, dessert, and drinks.",
@@ -780,7 +724,7 @@ const productsData = [
     meal_name_ar: "اعزمني",
     description_ar:
       "يخدم ٥ أشخاص. ١/ سلطة، ٢/ نوعين من الرز مع دجاج من اختيارك، ٣/ حلى، ٤/ مشروبات",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "to'mah feasts",
     category_ar: "أخبار عزائم طعمة",
     available: true,
@@ -788,7 +732,7 @@ const productsData = [
   },
   {
     id: "52",
-    image: img52,
+    image: null,
     meal_name_en: "Lunch Meal",
     description_en:
       "1 person. Includes salad, madini rice, ½ chicken, cheese samosa, cream caramel, and soft drink.",
@@ -796,7 +740,7 @@ const productsData = [
     meal_name_ar: "غداء العمل",
     description_ar:
       "يخدم شخص واحد. ١/ سلطة، ٢/ رز مديني، ٣/ نصف دجاجة، ٤/ سمبوسة جبن، ٥/ كريم كراميل، ٦/ مشروب غازي",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "to'mah feasts",
     category_ar: "أخبار عزائم طعمة",
     available: true,
@@ -804,7 +748,7 @@ const productsData = [
   },
   {
     id: "53",
-    image: img53,
+    image: null,
     meal_name_en: "Tour Meals",
     description_en:
       "1 person. Includes salad, chicken, dakos, 1 samosa, and soft drink.",
@@ -812,7 +756,7 @@ const productsData = [
     meal_name_ar: "وجبة شراحات السياحة",
     description_ar:
       "يخدم شخص واحد. ١/ سلطة، ٢/ دجاج، ٣/ دقوس، ٤/ سمبوسة، ٥/ مشروب غازي",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "to'mah feasts",
     category_ar: "أخبار عزائم طعمة",
     available: true,
@@ -820,13 +764,13 @@ const productsData = [
   },
   {
     id: "54",
-    image: img54,
+    image: null,
     meal_name_en: "Ta’tma Buffet",
     description_en: "All breakfast menu",
     price: "150 ريال",
     meal_name_ar: "بوفيه تعتمة",
     description_ar: "كامل قائمة الفطور",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "to'mah feasts",
     category_ar: "أخبار عزائم طعمة",
     available: true,
@@ -834,13 +778,13 @@ const productsData = [
   },
   {
     id: "55",
-    image: img55,
+    image: null,
     meal_name_en: "Lunch/ Dinner Buffet",
     description_en: "All lunch menu + bakeries",
     price: "175 ريال",
     meal_name_ar: "بوفيه غداء / عشاء",
     description_ar: "كامل قائمة الغداء بالإضافة للمخبوزات",
-    calories: "0 سعر حراري",
+    calories: null,
     category_en: "to'mah feasts",
     category_ar: "أخبار عزائم طعمة",
     available: true,

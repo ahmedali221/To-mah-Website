@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import MenuCard from "../components/MenuCard";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+// Import the normalized data with unique IDs
 import productsData from "../service/data";
 import Sidebar from "../components/Sidebar";
 import {
@@ -19,8 +20,12 @@ import {
 
 function Menu() {
   const { t, i18n } = useTranslation();
-  const minPrice = Math.min(...productsData.map((p) => p.price));
-  const maxPrice = Math.max(...productsData.map((p) => p.price));
+  
+  // No need to combine data here as we're using the normalized data
+  // with unique IDs from data.js
+  
+  const minPrice = Math.min(...productsData.map((p) => parseFloat(p.price) || 0));
+  const maxPrice = Math.max(...productsData.map((p) => parseFloat(p.price) || 100));
 
   const [filters, setFilters] = useState({
     category: "",
@@ -420,4 +425,4 @@ function Menu() {
   );
 }
 
-export default Menu;  
+export default Menu;

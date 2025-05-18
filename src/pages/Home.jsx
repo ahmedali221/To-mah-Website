@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
-import productsData from "../service/data";
 import image from "../assets/Slider1.jpeg";
 import image2 from "../assets/Slider7.jpeg";
 import image3 from "../assets/Slider4.jpeg"
@@ -72,12 +71,7 @@ function Home() {
     };
   }, []);
 
-  const getRandomMeals = (num) => {
-    const shuffled = [...productsData].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, num);
-  };
 
-  const featuredDishes = getRandomMeals(3);
 
   return (
     <div dir={i18n.language === "ar" ? "rtl" : "ltr"} className="main-bg">
