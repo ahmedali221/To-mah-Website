@@ -32,17 +32,17 @@ const normalizedProducts = productsWithIds.map(product => {
     }
   }
 
-  // Clean calories - remove the word "calories" if present
+  // Clean calories - ensure it's just the numeric value
   let calories = product.calories;
   if (typeof calories === 'string' && calories) {
-    // Extract just the numeric part if it contains "calories"
+    // Extract just the numeric part
     const caloriesMatch = calories.match(/(\d+)/);
     if (caloriesMatch) {
       calories = caloriesMatch[1];
     }
   }
 
-  // Ensure all products have consistent property names
+  // Return the normalized product
   return {
     ...product,
     price: price,
