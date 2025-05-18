@@ -1,19 +1,20 @@
 
-import img1 from "../assets/Menu/DSC01782/DSC01782.JPG";
-import img2 from "../assets/Menu/DSC02159/DSC02159.JPG";
-import img3 from "../assets/Menu/DSC02166/DSC02166.JPG";
+import img1 from "../../assets/Menu/pages13-18/DSC01782.JPG";
+import img2 from "../../assets/Menu/pages13-18/DSC02159.JPG";
+import img3 from "../../assets/Menu/pages13-18/DSC02166.JPG";
 
-import img4 from "../assets/Menu/DSC01791/DSC01791.JPG";
-import img5 from "../assets/Menu/DSC01232/DSC01232.JPG";
-import img6 from "../assets/Menu/DSC01866/DSC01866.JPG";
-import img7 from "../assets/Menu/DSC01863/DSC01863.JPG";
-import img8 from "../assets/Menu/DSC01937/DSC01937.JPG";
-import img9 from "../assets/Menu/DSC01902/DSC01902.JPG";
-import img10 from "../assets/Menu/DSC01929/DSC01929.JPG";
-import img11 from "../assets/Menu/DSC01885/DSC01885.JPG";
-import img12 from "../assets/Menu/DSC01921/DSC01921.JPG";
-import img13 from "../assets/Menu/DSC01954/DSC01954.JPG";
-import img14 from "../assets/Menu/DSC01946/DSC01946.JPG";
+import img4 from "../../assets/Menu/pages13-18/DSC01791.JPG";
+import img5 from "../../assets/Menu/pages13-18/DSC01232.JPG";
+import img6 from "../../assets/Menu/pages13-18/DSC01866.JPG";
+import img7 from "../../assets/Menu/pages13-18/DSC01863.JPG";
+import img8 from "../../assets/Menu/pages13-18/DSC01937.JPG";
+import img9 from "../../assets/Menu/pages13-18/DSC01902.JPG";
+import img10 from "../../assets/Menu/pages13-18/DSC01929.JPG";
+import img11 from "../../assets/Menu/pages13-18/DSC01885.JPG";
+import img12 from "../../assets/Menu/pages13-18/DSC01921.JPG";
+import img13 from "../../assets/Menu/pages13-18/DSC01954.JPG";
+import img14 from "../../assets/Menu/pages13-18/DSC01946.JPG";
+import img15 from "../../assets/Menu/pages13-18/DSC01852.JPG";
 
 const productsData = [
   {
@@ -625,18 +626,20 @@ const productsData = [
   },
   {
     id: "44",
-    meal_name_en: "Am Khalil's Saqdana",
-    meal_name_ar: "سقدانة عم خليل",
-    description_en: "Hijazi dessert made of sago pearls and milk.",
-    description_ar: "طبق حجازي شهير يحضر بالساجو والحليب.",
-    image: "img-saqdana",
-    category_en: "Desserts",
-    category_ar: "حلويات",
-    calories: "481 سعر حراري",
+    meal_name_en: "Rolled Borek",
+    meal_name_ar: "بريك ملفوف",
+    description_en:
+      "A traditional pastry from Madinah, featuring flaky dough layers filled with a savory mixture, rolled and baked to perfection.",
+    description_ar:
+      "معجنات تقليدية من المدينة، تتكون من طبقات عجين هشة محشوة بخليط لذيذ، ملفوفة ومخبوزة حتى الكمال.",
+    image: img15,
+    category_en: "pastry basket",
+    category_ar: "سلة معجنات",
+    calories: "265 سعر حراري",
     price: "20 ريال",
     available: true,
-    trendy: true,
-  },
+    trendy: false,
+  }
   //the end of pages from 13 to 18 "40 ريال"s
 ];
 
