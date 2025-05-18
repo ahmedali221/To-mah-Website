@@ -2,9 +2,9 @@ import image7_1 from "../../assets/7-12/7-1.JPG";
 import image7_2 from "../../assets/7-12/7-2.JPG";
 import image7_3 from "../../assets/7-12/7-3.JPG";
 import image7_4 from "../../assets/7-12/7-4.JPG";
-import image12_3 from "../../assets/8-12/12-3.JPG";
-import image12_5 from "../../assets/8-12/8-5.JPG";
-import image12_6 from "../../assets/8-12/8-6.JPG";
+import image12_3 from "../../assets/7-12/12-3.JPG";
+import image12_5 from "../../assets/7-12/12-5.JPG";
+import image12_6 from "../../assets/7-12/12-6.JPG";
 const productsData = [
   //page7
   {
