@@ -1,10 +1,10 @@
-import image7_1 from "../../assets/7-12/7-1.JPG";
-import image7_2 from "../../assets/7-12/7-2.JPG";
-import image7_3 from "../../assets/7-12/7-3.JPG";
-import image7_4 from "../../assets/7-12/7-4.JPG";
-import image12_3 from "../../assets/7-12/12-3.JPG";
-import image12_5 from "../../assets/7-12/12-5.JPG";
-import image12_6 from "../../assets/7-12/12-6.JPG";
+import image7_1 from "../../assets/Menu/7-12/7-1.JPG";
+import image7_2 from "../../assets/Menu/7-12/7-2.JPG";
+import image7_3 from "../../assets/Menu/7-12/7-3.JPG";
+import image7_4 from "../../assets/Menu/7-12/7-4.JPG";
+import image12_3 from "../../assets/Menu/7-12/8-3.JPG";
+import image12_5 from "../../assets/Menu/7-12/8-5.JPG";
+import image12_6 from "../../assets/Menu/7-12/8-6.JPG";
 const productsData = [
   //page7
   {
@@ -76,7 +76,7 @@ const productsData = [
     category_ar: "حلي وعلى النيي صلي",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   //page8
   {
@@ -92,7 +92,7 @@ const productsData = [
     category_ar: "أخبار الفطور",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   //page9
   {
@@ -101,12 +101,12 @@ const productsData = [
     price: "15 ريال",
     meal_name_ar: "البليلة",
     description_ar: null,
-    calories: "168 سعر حراري",
+    calories: "168",
     category_en: "Snacks",
     category_ar: "أخبار التسالي",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Hamam Albir",
@@ -114,12 +114,12 @@ const productsData = [
     price: "17 ريال",
     meal_name_ar: "حمام البر",
     description_ar: null,
-    calories: "353 سعر حراري",
+    calories: "353",
     category_en: "Snacks",
     category_ar: "أخبار التسالي",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Mushabak",
@@ -127,12 +127,12 @@ const productsData = [
     price: "17 ريال",
     meal_name_ar: "مشبك",
     description_ar: null,
-    calories: "390 سعر حراري",
+    calories: "390",
     category_en: "Snacks",
     category_ar: "أخبار التسالي",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Hijazi Chips + Tammarind Sauce",
@@ -140,12 +140,12 @@ const productsData = [
     price: "17 ريال",
     meal_name_ar: "كريبو + سلطة الحمر",
     description_ar: "شطة وسلطة الحمر ",
-    calories: "332 سعر حراري",
+    calories: "332",
     category_en: "Snacks",
     category_ar: "أخبار التسالي",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Grain Soup",
@@ -158,7 +158,7 @@ const productsData = [
     category_ar: "أخبار الشوربة",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "shkamba soup",
@@ -172,7 +172,7 @@ const productsData = [
     category_ar: "أخبار الشوربة",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Mint Hummus",
@@ -185,7 +185,7 @@ const productsData = [
     category_ar: "أخبار السلطات و المقبلات الباردة",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   //page10
   {
@@ -199,7 +199,7 @@ const productsData = [
     category_ar: "أخبار السلطات والمقبلات الباردة",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Madini Okra Fattah",
@@ -212,7 +212,7 @@ const productsData = [
     category_ar: "أخبار السلطات والمقبلات الباردة",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Hwa Fattah",
@@ -225,7 +225,7 @@ const productsData = [
     category_ar: "أخبار السلطات والمقبلات الباردة",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "To'mah Fattah",
@@ -238,7 +238,7 @@ const productsData = [
     category_ar: "أخبار السلطات والمقبلات الباردة",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Tahini with Veggies and Eggplant",
@@ -252,7 +252,7 @@ const productsData = [
     category_ar: "أخبار السلطات والمقبلات الباردة",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Madini Veggies with Pomegranate Molasses and Spicy Pepper",
@@ -265,7 +265,7 @@ const productsData = [
     category_ar: "أخبار السلطات والمقبلات الباردة",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Al-Oula Salad",
@@ -280,7 +280,7 @@ const productsData = [
     category_ar: "أخبار السلطات والمقبلات الباردة",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "To'mah Salad",
@@ -295,7 +295,7 @@ const productsData = [
     category_ar: "أخبار السلطات والمقبلات الباردة",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   //page11
   {
@@ -309,7 +309,7 @@ const productsData = [
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Tahini Salad with Onion",
@@ -322,7 +322,7 @@ const productsData = [
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Tahini Salad with Roasted Tomatoes",
@@ -335,7 +335,7 @@ const productsData = [
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Plain Tahini Salad",
@@ -350,7 +350,7 @@ const productsData = [
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Yogurt Salad",
@@ -363,7 +363,7 @@ const productsData = [
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Carrot Achard",
@@ -376,7 +376,7 @@ const productsData = [
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Homr Tammarind Sauce",
@@ -389,7 +389,7 @@ const productsData = [
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Spicy Dakos",
@@ -397,12 +397,12 @@ const productsData = [
     price: "7 ريال",
     meal_name_ar: "دقس حار",
     description_ar: "خلطة طمامط بالبقدونس والفلفل الحار",
-    calories: "343 سعر حراري",
+    calories: "343",
     category_en: "To'mah Sides (Pickles)",
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   //page12
   {
@@ -411,12 +411,12 @@ const productsData = [
     price: "7 ريال",
     meal_name_ar: "دقوس بارد",
     description_ar: "خلطة الطماطم بالبقدونس",
-    calories: "343 سعر حراري",
+    calories: "343",
     category_en: "To'mah Sides (Pickles)",
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "To'mah Fresh Peppers",
@@ -424,12 +424,12 @@ const productsData = [
     price: "7 ريال",
     meal_name_ar: "فلفل طعمة طازج",
     description_ar: "فلفل طازج والليمون وزيت زيتون، وبقدونس",
-    calories: "343 سعر حراري",
+    calories: "343",
     category_en: "To'mah Sides (Pickles)",
     category_ar: "أخبار محموسات طعمة (المخللات والصلصات)",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Madini Borek Pan",
@@ -437,7 +437,7 @@ const productsData = [
     price: "20 ريال",
     meal_name_ar: "طاوة بريك مدني",
     description_ar: "طاوة بريك باللحم المفروم الطازج من فرن طُعمة",
-    calories: "535 سعر حراري",
+    calories: "535",
     category_en: "Pastries Menu",
     category_ar: "أخبار معجنات",
     available: true,
@@ -452,12 +452,12 @@ const productsData = [
     meal_name_ar: "فتة منتو",
     description_ar:
       "قطع منتو باللحم مع لبن الزبادي مرشوشة بصوص الطماطم والكزبرة ",
-    calories: "377 سعر حراري",
+    calories: "377",
     category_en: "Pastries Menu",
     category_ar: "أخبار معجنات",
     available: true,
     trendy: false,
-    image: null ,
+    image: null,
   },
   {
     meal_name_en: "Triangular Meat Samosa",
@@ -466,7 +466,7 @@ const productsData = [
     price: "15 ريال",
     meal_name_ar: "سمبوسة مثلث اللحم",
     description_ar: "4 قطع مثلث اللحم محشوة باللحم والبيض بالخلطة المدينية ",
-    calories: "355 سعر حراري",
+    calories: "355",
     category_en: "Pastries Menu",
     category_ar: "أخبار معجنات",
     available: true,
@@ -479,7 +479,7 @@ const productsData = [
     price: "15 ريال",
     meal_name_ar: "سمبوسك سجاير الجبنة البيضاء ",
     description_ar: "٤ قطع عجين رول محشوة بالجبنة البلدي",
-    calories: "332 سعر حراري",
+    calories: "332",
     category_en: "Pastries Menu",
     category_ar: "أخبار معجنات",
     available: true,

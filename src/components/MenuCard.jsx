@@ -26,19 +26,21 @@ export default function MenuCard({
             <div
               key={product.id}
               className="card bg-base-100 shadow-md overflow-hidden group">
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="relative overflow-hidden h-64 md:h-full">
-                  <img
-                    src={product.image}
-                    alt={
-                      i18n.language === "ar" && product.name_ar
-                        ? product.name_ar
-                        : product.name_en
-                    }
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer"
-                    onClick={() => onImageClick(product)}
-                  />
-                </div>
+              <div className={`grid grid-cols-1 ${product.image ? 'md:grid-cols-2' : ''}`}>
+                {product.image && (
+                  <div className="relative overflow-hidden h-64 md:h-full">
+                    <img
+                      src={product.image}
+                      alt={
+                        i18n.language === "ar" && product.name_ar
+                          ? product.name_ar
+                          : product.name_en
+                      }
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer"
+                      onClick={() => onImageClick(product)}
+                    />
+                  </div>
+                )}
 
                 <div className="p-6 flex flex-col justify-center">
                   <h2 className="card-title uppercase text-xl font-semibold mb-2">

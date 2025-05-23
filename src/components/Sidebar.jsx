@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+// Import the normalized data with unique IDs
 import productsData from "../service/data";
 
 const initialFilters = {
@@ -27,35 +28,38 @@ export default function Sidebar({ filters, setFilters }) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
   };
 
+  // Use the normalized data with unique IDs
+  const allProductsData = productsData;
+
   // Get category names based on language
   const availableCategories = [
     t("sidebar.all_categories"),
-    ...new Set(productsData.map((product) => 
-      i18n.language === "ar" && product.category_ar 
-        ? product.category_ar 
+    ...new Set(allProductsData.map((product) =>
+      i18n.language === "ar" && product.category_ar
+        ? product.category_ar
         : capitalizeFirstLetter(product.category_en)
     )),
   ];
 
-  const popularProducts = productsData
+  const popularProducts = allProductsData
     .filter((product) => product.trendy === true)
     .map((product) => ({
       id: product.id,
-      name: i18n.language === "ar" && product.name_ar 
-        ? product.name_ar 
-        : capitalizeFirstLetter(product.name_en),
+      name: i18n.language === "ar" && product.meal_name_ar
+        ? product.meal_name_ar
+        : capitalizeFirstLetter(product.meal_name_en),
       price: product.price,
       image: product.image,
     }));
 
   useEffect(() => {
-    const min = Math.min(...productsData.map((p) => p.price));
-    const max = Math.max(...productsData.map((p) => p.price));
-    setPriceRange({ 
+    const min = Math.min(...allProductsData.map((p) => parseFloat(p.price) || 0));
+    const max = Math.max(...allProductsData.map((p) => parseFloat(p.price) || 100));
+    setPriceRange({
       min: filters.minPrice || min,
       max: filters.maxPrice === Infinity ? max : filters.maxPrice
     });
-    
+
     if (filters.minPrice === 0 && filters.maxPrice === Infinity) {
       setShowResetButton(false);
     }
@@ -116,29 +120,29 @@ export default function Sidebar({ filters, setFilters }) {
       {(filters.category !== "" ||
         filters.minPrice > 0 ||
         filters.maxPrice < Infinity) && (
-        <div className="p-4 border-b border-gray-100">
-          <button
-            onClick={handleResetFilters}
-            className="w-full py-2.5 px-4 bg-amber-600 text-white rounded-lg flex items-center justify-center gap-2 hover:bg-amber-700 transition-all duration-300 shadow-sm"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          <div className="p-4 border-b border-gray-100">
+            <button
+              onClick={handleResetFilters}
+              className="w-full py-2.5 px-4 bg-amber-600 text-white rounded-lg flex items-center justify-center gap-2 hover:bg-amber-700 transition-all duration-300 shadow-sm"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-              />
-            </svg>
-            {t("sidebar.reset_filters")}
-          </button>
-        </div>
-      )}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                />
+              </svg>
+              {t("sidebar.reset_filters")}
+            </button>
+          </div>
+        )}
 
       {/* Categories Section */}
       <div className="border-b border-gray-100 hover:bg-gray-50 transition-colors duration-300">
@@ -153,9 +157,8 @@ export default function Sidebar({ filters, setFilters }) {
             {t("sidebar.categories")}
           </span>
           <svg
-            className={`w-4 h-4 transition-transform duration-300 ${
-              expandedSection === "categories" ? "transform rotate-180" : ""
-            }`}
+            className={`w-4 h-4 transition-transform duration-300 ${expandedSection === "categories" ? "transform rotate-180" : ""
+              }`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
@@ -175,14 +178,13 @@ export default function Sidebar({ filters, setFilters }) {
                 const isActive = isCategoryActive(category);
                 return (
                   <li key={index}>
-                   <button
-  onClick={() => handleCategoryClick(category)}
-  className={`w-full text-left py-2 px-3 rounded-lg transition-all duration-300 ${
-    isActive
-      ? "bg-amber-600 text-white font-medium shadow-sm"
-      : "text-gray-700 hover:bg-gray-100"
-  } ${i18n.language === "ar" ? "text-right" : "text-left"}`}  // Add this line
->
+                    <button
+                      onClick={() => handleCategoryClick(category)}
+                      className={`w-full text-left py-2 px-3 rounded-lg transition-all duration-300 ${isActive
+                        ? "bg-amber-600 text-white font-medium shadow-sm"
+                        : "text-gray-700 hover:bg-gray-100"
+                        } ${i18n.language === "ar" ? "text-right" : "text-left"}`}  // Add this line
+                    >
                       {category}
                       {isActive && (
                         <span className={`${i18n.language === "ar" ? "float-left" : "float-right"}`}>
@@ -222,9 +224,8 @@ export default function Sidebar({ filters, setFilters }) {
             {t("sidebar.price_filter")}
           </span>
           <svg
-            className={`w-4 h-4 transition-transform duration-300 ${
-              expandedSection === "price" ? "transform rotate-180" : ""
-            }`}
+            className={`w-4 h-4 transition-transform duration-300 ${expandedSection === "price" ? "transform rotate-180" : ""
+              }`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
@@ -311,9 +312,8 @@ export default function Sidebar({ filters, setFilters }) {
             {t("sidebar.popular_items")}
           </span>
           <svg
-            className={`w-4 h-4 transition-transform duration-300 ${
-              expandedSection === "popular" ? "transform rotate-180" : ""
-            }`}
+            className={`w-4 h-4 transition-transform duration-300 ${expandedSection === "popular" ? "transform rotate-180" : ""
+              }`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
@@ -331,28 +331,26 @@ export default function Sidebar({ filters, setFilters }) {
             <ul className="space-y-4">
               {popularProducts.length > 0 ? (
                 popularProducts.map((product, index) => (
-                // ... existing code ...
-<li
-  key={index}
-  className={`flex items-center p-2 hover:bg-white rounded-lg transition-all duration-300 cursor-pointer group ${i18n.language === "ar" ? "space-x-reverse gap-3" : "space-x-3 gap-3"}`}
->
-  <div className="w-16 h-16 overflow-hidden rounded-lg bg-gray-100 shadow-sm">
-    <img
-      src={product.image}
-      alt={product.name}
-      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-    />
-  </div>
-  <div className="flex-1">
-    <p className="font-medium text-gray-800 line-clamp-1 group-hover:text-amber-600 transition-colors duration-300">
-      {product.name}
-    </p>
-    <p className="text-primary-dark font-bold mt-1">
-      {product.price.toFixed(2)} {t("sidebar.currency")}
-    </p>
-  </div>
-</li>
-// ... existing code ...
+                  <li
+                    key={index}
+                    className={`flex items-center p-2 hover:bg-white rounded-lg transition-all duration-300 cursor-pointer group ${i18n.language === "ar" ? "space-x-reverse gap-3" : "space-x-3 gap-3"}`}
+                  >
+                    <div className="w-16 h-16 overflow-hidden rounded-lg bg-gray-100 shadow-sm">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-medium text-gray-800 line-clamp-1 group-hover:text-amber-600 transition-colors duration-300">
+                        {product.name}
+                      </p>
+                      <p className="text-primary-dark font-bold mt-1">
+                        {product.price.toFixed(2)} {t("sidebar.currency")}
+                      </p>
+                    </div>
+                  </li>
                 ))
               ) : (
                 <li className="text-gray-500 text-center py-4">

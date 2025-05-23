@@ -58,19 +58,21 @@ function PopularMeals({ isOpen, onClose }) {
                 i18n.language === "ar" ? "flex-row-reverse gap-3" : "gap-3"
               } border border-gray-100 hover:shadow-md`}
             >
-              <div className="w-20 h-20 overflow-hidden rounded-lg bg-gray-100 shadow-sm">
-                <img
-                  src={meal.image}
-                  alt={i18n.language === "ar" && meal.name_ar ? meal.name_ar : meal.name_en}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
+              {meal.image && (
+                <div className="w-20 h-20 overflow-hidden rounded-lg bg-gray-100 shadow-sm">
+                  <img
+                    src={meal.image}
+                    alt={i18n.language === "ar" && meal.name_ar ? meal.name_ar : meal.name_en}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+              )}
               <div className={`flex-1 ${i18n.language === "ar" ? "text-right" : "text-left"}`}>
                 <h3 className="font-medium text-gray-800 line-clamp-1 group-hover:text-primary transition-colors duration-300">
                   {i18n.language === "ar" && meal.name_ar ? meal.name_ar : meal.name_en}
                 </h3>
                 <p className="text-primary-dark font-bold mt-1">
-                  {meal.price.toFixed(2)} {t("sidebar.currency")}
+                  {typeof meal.price === 'number' ? meal.price.toFixed(2) : meal.price} {t("sidebar.currency")}
                 </p>
               </div>
               <button
