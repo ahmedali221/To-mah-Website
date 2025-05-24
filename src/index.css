@@ -1,6 +1,6 @@
 /* Base body styles */
 body {
-  font-family: 'Roboto', ;
+  font-family: "Roboto";
   background: #f8f9fc;
   color: #101828;
   font-size: 16px;
@@ -30,14 +30,13 @@ img {
 /* Arabic-specific styles */
 body[dir="rtl"],
 html[dir="rtl"] body {
-  font-family: 'Aref Ruqaa', serif;
+  font-family: "Aref Ruqaa", serif;
   font-size: 18px;
   background: #f0f2f7;
   color: #1d2939;
 }
 
 @media (min-width: 768px) {
-
   body[dir="rtl"],
   html[dir="rtl"] body {
     font-size: 21px;
@@ -51,7 +50,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto ', ;
+  font-family: "Roboto ";
   color: #101828;
 }
 
@@ -62,7 +61,7 @@ body[dir="rtl"] h3,
 body[dir="rtl"] h4,
 body[dir="rtl"] h5,
 body[dir="rtl"] h6 {
-  font-family: 'Aref Ruqaa', serif;
+  font-family: "Aref Ruqaa", serif;
   color: #101828;
 }
 
@@ -97,7 +96,7 @@ button:hover,
 /* Hero section */
 .hero {
   background: linear-gradient(rgba(52, 64, 84, 0.8), rgba(16, 24, 40, 0.9)),
-    url('cafe-image.jpg');
+    url("cafe-image.jpg");
   background-size: cover;
   color: #f8f9fc;
   text-align: center;
@@ -150,7 +149,6 @@ button:hover,
 
 /* Responsive font size for Arabic */
 @media (max-width: 600px) {
-
   body[dir="rtl"],
   html[dir="rtl"] body {
     font-size: 19px;
@@ -197,13 +195,13 @@ button:hover,
 }
 
 .footer-heading::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 40px;
   height: 2px;
-  background-color: #D4AF37;
+  background-color: #d4af37;
   transition: width 0.3s ease;
 }
 
@@ -230,7 +228,7 @@ button:hover,
 
 .social-icon:hover {
   color: white;
-  background-color: #D4AF37;
+  background-color: #d4af37;
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -258,7 +256,7 @@ button:hover,
 }
 
 .footer-link::before {
-  content: '›';
+  content: "›";
   position: absolute;
   left: -15px;
   opacity: 0;
@@ -298,7 +296,7 @@ button:hover,
 }
 
 .footer-legal-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -3px;
   left: 0;
@@ -329,7 +327,7 @@ button:hover,
 }
 
 [dir="rtl"] .footer-link::before {
-  content: '‹';
+  content: "‹";
   left: auto;
   right: -15px;
 }
@@ -585,13 +583,30 @@ a,
 
 /* RTL-specific responsive adjustments */
 @media (max-width: 768px) {
-  body[dir="rtl"] .space-x-4>*+* {
+  body[dir="rtl"] .space-x-4 > * + * {
     margin-right: 0.5rem;
     margin-left: 0;
   }
 
-  body[dir="rtl"] .md\:space-x-6>*+* {
+  body[dir="rtl"] .md\:space-x-6 > * + * {
     margin-right: 0.75rem;
     margin-left: 0;
   }
+}
+
+.book-a-table-button {
+  background-color: #f8f8f8;
+  color: #000000; /* لون النص أسود */
+  border: 1px solid #000000; /* إطار أسود رفيع */
+  padding: 10px 20px; /* مسافة داخلية (padding) لجعل الزرار أكبر قليلاً */
+  text-transform: uppercase; /* تحويل النص لأحرف كبيرة (uppercase) */
+  font-family: sans-serif; /* خط عام بدون زوائد (ممكن تختار خط معين لو عندك) */
+  font-size: 16px; /* حجم الخط (ممكن تعدله) */
+  cursor: pointer; /* تغيير شكل المؤشر ليد عند المرور فوق الزرار */
+  transition: background-color 0.3s ease; /* تأثير انتقال سلس لتغيير لون الخلفية عند الـ hover */
+  border-radius: 0%;
+}
+
+.book-a-table-button:hover {
+  background-color: #e0e0e0; /* لون أفتح عند مرور الماوس (hover) */
 }
