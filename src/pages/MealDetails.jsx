@@ -83,7 +83,7 @@ function MealDetails() {
 		
 		try {
 			return typeof price === 'number' ? price.toFixed(2) : price.toString();
-		} catch (e) {
+		} catch {
 			return price.toString();
 		}
 	};
@@ -93,6 +93,7 @@ function MealDetails() {
 			className="min-h-screen py-16 bg-slate-50 transition-opacity duration-700 ease-in-out"
 			dir={i18n.language === "ar" ? "rtl" : "ltr"}>
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
 				{/* Back button */}
 				<div className={`mb-8 transition-all duration-700 transform ${visible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
 					<button 
@@ -225,7 +226,6 @@ function MealDetails() {
 								</p>
 							)}
 						</div>
-
 						<div className="divider"></div>
 
 						{/* Ingredients - Only show if ingredients exist */}
@@ -260,16 +260,9 @@ function MealDetails() {
 								<h2 className="text-2xl font-bold mb-4 text-amber-600">
 									{t("meal_details.notes")}
 								</h2>
-								{meal.notes_en && (
-									<p className="text-lg">
-										{i18n.language === "ar" && meal.notes_ar
-											? meal.notes_ar
-											: meal.notes_en}
-									</p>
-								)}
-								{meal.notes && (
-									<p className="text-lg mt-2 text-gray-600">{meal.notes}</p>
-								)}
+								<p className="text-lg">
+									{i18n.language === "ar" ? meal.notes_ar : meal.notes_en}
+								</p>
 							</div>
 						)}
 
@@ -286,12 +279,10 @@ function MealDetails() {
 						)}
 					</div>
 				</div>
-			</div>
-
-			{/* Toast Notification */}
-			<div id="toast" className="toast toast-end hidden">
-				<div className="alert alert-success">
-					<span>{t("meal_details.toast")}</span>
+				<div id="toast" className="toast toast-end hidden">
+					<div className="alert alert-success">
+						<span>{t("meal_details.toast")}</span>
+					</div>
 				</div>
 			</div>
 		</div>

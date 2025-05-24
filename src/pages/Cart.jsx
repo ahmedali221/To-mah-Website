@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { XMarkIcon, PlusIcon, MinusIcon, ArrowLeftIcon, ShoppingBagIcon, TruckIcon, CreditCardIcon } from "@heroicons/react/24/outline";
 
 function Cart() {
+
   const { cartItems, removeFromCart, updateQuantity, clearCart, getCartTotal } = useCart();
   const [deliveryInfo, setDeliveryInfo] = useState({
     address: "",

@@ -295,6 +295,7 @@ function Menu() {
               transition-all duration-1000 transform
               ${visible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}
             `}>
+
             <div className="p-5">
               <h2 className="text-xl font-bold mb-4 uppercase">
                 {t("menu.filters")}
@@ -302,7 +303,6 @@ function Menu() {
               <Sidebar filters={filters} setFilters={setFilters} />
             </div>
           </div>
-
           {/* Main content area - MenuCard with Animation */}
           <div className={`md:w-3/4 transition-all duration-1000 delay-300 transform ${visible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
             {/* Sort dropdown */}

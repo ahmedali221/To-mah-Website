@@ -14,11 +14,13 @@ const initialFilters = {
   sortBy: "",
 };
 
+
 export default function Sidebar({ filters, setFilters }) {
   const [priceRange, setPriceRange] = useState({ min: 0, max: Infinity });
   const [, setShowResetButton] = useState(false);
   const [expandedSection, setExpandedSection] = useState("categories");
   const { t, i18n } = useTranslation();
+
 
   // Helper function to capitalize first letter
   const capitalizeFirstLetter = (string) => {
