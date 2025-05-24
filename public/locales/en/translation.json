@@ -11,7 +11,9 @@
 		"language_toggle": {
 			"arabic": "Arabic",
 			"english": "English"
-		}
+		},
+		"cart_with_count": "CART({{count}})",
+		"bookingTable":"Book A Table"
 	},
 	"contact_form": {
 		"title": "Contact Us",

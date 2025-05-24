@@ -105,7 +105,7 @@ function Navbar({ changeLanguage }) {
 					</Link> */}
 					<Link to="/cart" className="flex items-center text-black hover:text-gray-700 transition duration-300 ease-in-out">
 						<ShoppingBagIcon className="h-6 w-6 mr-2" />
-						<span className="font-normal text-base">CART({totalItems})</span>
+						<span className="font-normal text-base">{t('navbar.cart_with_count', { count: totalItems })}</span>
 					</Link>
 
 
@@ -232,9 +232,10 @@ function Navbar({ changeLanguage }) {
 						<LanguageToggle />
 					</div>
 
+					{/* Book A Table button/link with i18n */}
 					<a href="https://tomah.sa/"
 						className="book-a-table-button">
-						BOOK A TABLE
+						{t('navbar.bookingTable')}
 					</a>
 
 
@@ -248,7 +249,7 @@ function Navbar({ changeLanguage }) {
 								</span>
 							)}
 						</Link> */}
-						
+
 						<button
 							onClick={() => setIsMenuOpen(!isMenuOpen)}
 							className="p-2 rounded-md text-primary-dark hover:text-primary focus:outline-none transition-colors duration-300">
