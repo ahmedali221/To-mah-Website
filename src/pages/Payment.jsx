@@ -249,10 +249,10 @@ const Payment = () => {
   </div>
   <div className="flex-1">
     <h3 className="text-gray-800 font-medium">
-      {i18n.language === "ar" && item.name_ar ? item.name_ar : item.name}
+      {i18n.language === "ar" && item.name_ar ? item.name_ar : item.name_en}
     </h3>
     <p className="text-gray-600 text-sm">
-      {t("payment.quantity", { count: item.quantity })}
+      {t("payment.quantity", { count: 2 })}
     </p>
   </div>
   <div className="text-gray-800 font-medium">
