@@ -34,7 +34,7 @@ export default function AboutAndVideoSection() {
           </p>
           <Link 
             to="/about" 
-            className="inline-block px-8 py-3 text-sm md:text-base bg-black text-white rounded-md hover:bg-gray-800 transition-colors duration-300"
+            className="inline-block px-8 py-3 text-sm md:text-base bg-gray-200 rounded-md hover:bg-gray-500 hover:text-red transition-colors duration-300"
           >
             {t("home.about.button")}
           </Link>

@@ -84,7 +84,7 @@ function Navbar({ changeLanguage }) {
 
 	return (
 		<nav
-			className={` w-full top-0 z-50 transition-all duration-500 ${scrolled
+			className={`sticky w-full top-0 z-50 transition-all duration-500 ${scrolled
 				? "bg-white shadow-md py-2"
 				: "bg-white/50 backdrop-blur-sm py-6"
 				}`}
@@ -101,7 +101,7 @@ function Navbar({ changeLanguage }) {
 
 
 					{/* Desktop Navigation */}
-					<div className="hidden md:flex items-center space-x-22 mx-8">
+					<div className="hidden md:flex items-center space-x-8 mx-8">
 						{/* home */}
 						<Link
 							to="/"

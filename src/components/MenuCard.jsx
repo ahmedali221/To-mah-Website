@@ -24,7 +24,7 @@ export default function MenuCard({
           {products.map((product) => (
             <div
               key={product.id}
-              className="group relative bg-white overflow-hidden rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="group relative bg-white overflow-hidden rounded-lg  shadow-md hover:shadow-lg transition-shadow duration-300"
             >
               {/* Clickable area for navigation (everything except button) */}
               <div
@@ -32,17 +32,18 @@ export default function MenuCard({
                 onClick={() => onViewDetails(product)}
               >
                 {/* Image Container */}
-                <div className="h-64 overflow-hidden bg-gray-100 rounded-lg relative">
+                <div className="h-100 overflow-hidden bg-gray-100 rounded-lg relative">
                   {product.image ? (
-                    <img
-                      src={product.image}
-                      alt={
-                        i18n.language === "ar" && product.name_ar
-                          ? product.name_ar
-                          : product.name_en
-                      }
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
+               <img
+               
+  src={product.image}
+  alt={
+    i18n.language === "ar" && product.name_ar
+      ? product.name_ar
+      : product.name_en
+  }
+  className="h-full w-full object-scale-down transition-transform duration-500 group-hover:scale-105"
+/>
                   ) : (
                     <div className="w-full h-full bg-gray-200 flex items-center justify-center">
                       <span className="text-gray-400 text-lg">{t("menu_card.no_image")}</span>
@@ -72,7 +73,7 @@ export default function MenuCard({
                 </div>
 
                 {/* Product Info */}
-                <div className="pt-4 pb-2">
+                <div className="p-4 ">
                   {/* Title */}
                   <h2 className="text-lg font-semibold mb-1 text-gray-900">
                     {i18n.language === "ar" && product.name_ar
