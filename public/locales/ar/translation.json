@@ -11,7 +11,9 @@
 		"language_toggle": {
 			"arabic": "العربية",
 			"english": "الإنجليزية"
-		}
+		},
+		"cart_with_count": "السلة ({{count}})",
+		"bookingTable":"احجز طاولة"
 	},
 	"contact_form": {
 		"title": "تواصل معنا",
