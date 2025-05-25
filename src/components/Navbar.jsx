@@ -84,25 +84,16 @@ function Navbar({ changeLanguage }) {
 
 	return (
 		<nav
-			className={`fixed w-full top-0 z-50 transition-all duration-500 ${scrolled
+			className={` w-full top-0 z-50 transition-all duration-500 ${scrolled
 				? "bg-white shadow-md py-2"
 				: "bg-white/50 backdrop-blur-sm py-6"
 				}`}
 			dir={i18n.language === "ar" ? "rtl" : "ltr"}>
 
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div className=" mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex justify-between items-center">
 
-					{/* cart */}
-					{/* <Link to="/cart" className="relative p-2 group">
-						<ShoppingCartIcon className={`h-6 w-6 text-primary-dark duration-300 ${scrolled ? "text-primary-dark group-hover:text-primary" : "text-white group-hover:text-white/80"
-							}`} />
-						{totalItems > 0 && (
-							<span className="absolute -top-1 -right-1 bg-primary text-white rounded-full h-5 w-5 flex items-center justify-center text-xs">
-								{totalItems}
-							</span>
-						)}
-					</Link> */}
+
 					<Link to="/cart" className="flex items-center text-black hover:text-gray-700 transition duration-300 ease-in-out">
 						<ShoppingBagIcon className="h-6 w-6 mr-2" />
 						<span className="font-normal text-base">{t('navbar.cart_with_count', { count: totalItems })}</span>
@@ -110,8 +101,7 @@ function Navbar({ changeLanguage }) {
 
 
 					{/* Desktop Navigation */}
-					<div className="hidden md:flex items-center space-x-8 mx-">
-
+					<div className="hidden md:flex items-center space-x-22 mx-8">
 						{/* home */}
 						<Link
 							to="/"
@@ -135,31 +125,9 @@ function Navbar({ changeLanguage }) {
 								}`}></span>}
 						</Link>
 
-						{/* Our Websites Dropdown as Text Link, Full Width */}
-						{/* <div className="relative group">
-							<span className={`block px-4 py-2 text-primary hover:text-primary transition"} group`}>
-								{t("navbar.our_websites")}
-								<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-							</span>
-							<div className="fixed left-0 right-0 mt-2 bg-white rounded-b-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 transition-all duration-300 z-40 pointer-events-none group-hover:pointer-events-auto w-screen">
-								<div className="flex flex-row justify-center space-x-8 px-8 py-6">
-									<a href="https://tomah.netlify.app/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center hover:scale-105 transition-transform duration-200">
-										<img src={Restaurant} alt="Website 1" className="w-[400px] max-h-[300px] object-cover rounded-lg shadow mb-2" />
-										<span className="text-sm font-medium text-gray-700">To3ma Restaurant </span>
-									</a>
-								
-									<a href="https://tomah.sa/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center hover:scale-105 transition-transform duration-200">
-										<img src={Reserve} alt="Website 2" className="w-[400px] max-h-[300px] rounded-lg shadow mb-2" />
-										<span className="text-sm font-medium text-gray-700">To'mah Reserve </span>
-									</a>
-							
-								</div>
-							</div>
-						</div> */}
-
 						{/* Pages Dropdown as Text Link */}
 						<div className="relative group uppercase">
-							<span className={`block px-4 py-2 text-primary hover:text-primary transition"} group`}>
+							<span className={`block px-4 py-2 text-primary hover:text-primary transition group`}>
 								{t("navbar.pages")}
 								<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
 							</span>
@@ -174,7 +142,7 @@ function Navbar({ changeLanguage }) {
 
 						{/* Logo */}
 						<div className="flex items-center">
-							<Link to="/" className="flex items-center space-x-2">
+							<Link to="/" className="flex items-center space-x-8">
 								<div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary">
 									<img
 										src={logo}
@@ -202,19 +170,6 @@ function Navbar({ changeLanguage }) {
 							{location.pathname === "/about" && <span className={`absolute bottom-0 left-0 w-full h-0.5 ${scrolled ? "bg-primary-dark" : "bg-white"
 								}`}></span>}
 						</Link>
-
-						{/* partners */}
-						{/* <Link
-							to="/partners"
-							className={`uppercase nav-link relative py-2 transition-colors duration-300 ${scrolled ? "hover:text-primary" : "text-white hover:text-white/80"
-								} ${isActive("/partners")} group`}
-						>
-							{t("navbar.partners")}
-							<span className={`absolute bottom-0 left-0 w-0 h-0.5 ${scrolled ? "bg-primary" : "bg-white"
-								} transition-all duration-300 group-hover:w-full`}></span>
-							{location.pathname === "/partners" && <span className={`absolute bottom-0 left-0 w-full h-0.5 ${scrolled ? "bg-primary-dark" : "bg-white"
-								}`}></span>}
-						</Link> */}
 
 						{/* contact */}
 						<Link

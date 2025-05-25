@@ -20,10 +20,10 @@ import {
 
 function Menu() {
   const { t, i18n } = useTranslation();
-  
+
   // No need to combine data here as we're using the normalized data
   // with unique IDs from data.js
-  
+
   const minPrice = Math.min(...productsData.map((p) => parseFloat(p.price) || 0));
   const maxPrice = Math.max(...productsData.map((p) => parseFloat(p.price) || 100));
 
@@ -47,7 +47,7 @@ function Menu() {
   const { addToCart } = useCart();
 
   // Number of items to load per page
-  const ITEMS_PER_PAGE = 6;
+  const ITEMS_PER_PAGE = 12;
 
   const handleSearchQueryChange = (query) => {
     setSearchQuery(query);

@@ -7,7 +7,6 @@ export default function MenuCard({
   products,
   onViewDetails,
   onAddToCart,
-  onImageClick
 }) {
   const { t, i18n } = useTranslation();
 
@@ -15,20 +14,26 @@ export default function MenuCard({
     <main
       className="w-full mx-auto px-4"
       dir={i18n.language === "ar" ? "rtl" : "ltr"}>
-      
+
       {products.length === 0 ? (
         <div className="text-center py-10">
           <p className="text-xl text-gray-600">{t("menu_card.no_products")}</p>
         </div>
       ) : (
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product) => (
             <div
               key={product.id}
-              className="card bg-base-100 shadow-md overflow-hidden group">
-              <div className={`grid grid-cols-1 ${product.image ? 'md:grid-cols-2' : ''}`}>
-                {product.image && (
-                  <div className="relative overflow-hidden h-64 md:h-full">
+              className="group relative bg-white overflow-hidden rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+              {/* Clickable area for navigation (everything except button) */}
+              <div
+                className="cursor-pointer"
+                onClick={() => onViewDetails(product)}
+              >
+                {/* Image Container */}
+                <div className="h-64 overflow-hidden bg-gray-100 rounded-lg relative">
+                  {product.image ? (
                     <img
                       src={product.image}
                       alt={
@@ -36,72 +41,58 @@ export default function MenuCard({
                           ? product.name_ar
                           : product.name_en
                       }
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer"
-                      onClick={() => onImageClick(product)}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                  </div>
-                )}
+                  ) : (
+                    <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                      <span className="text-gray-400 text-lg">{t("menu_card.no_image")}</span>
+                    </div>
+                  )}
 
-                <div className="p-6 flex flex-col justify-center">
-                  <h2 className="card-title uppercase text-xl font-semibold mb-2">
+                  {/* Availability Badge */}
+                  {!product.available && (
+                    <div className="absolute top-4 left-4 bg-red-500 text-white px-2 py-1 text-xs font-medium rounded">
+                      {t("menu_card.unavailable")}
+                    </div>
+                  )}
+
+                  {/* Add to Cart Button - Shows on Hover */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center pointer-events-none">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onAddToCart(product);
+                      }}
+                      className="pointer-events-auto bg-black text-white px-4 py-2 text-sm font-medium uppercase tracking-wider rounded shadow transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-white disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed"
+                      disabled={!product.available}
+                    >
+                      {t("menu_card.add_to_cart")}
+                    </button>
+                  </div>
+                </div>
+
+                {/* Product Info */}
+                <div className="pt-4 pb-2">
+                  {/* Title */}
+                  <h2 className="text-lg font-semibold mb-1 text-gray-900">
                     {i18n.language === "ar" && product.name_ar
                       ? product.name_ar
                       : product.name_en}
                   </h2>
-                  <h3 className="text-lg font-medium text-gray-700 mb-4">
-                    {i18n.language === "ar" && product.desc_ar
-                      ? product.desc_ar
-                      : product.desc_en}
-                  </h3>
-                  <div className="flex items-center mb-4">
-                    <div className="flex items-center">
-                      {Array.from({ length: 5 }).map((_, i) => (
-                        <svg
-                          key={i}
-                          className={`w-5 h-5 ${
-                            i < product.rating
-                              ? "text-yellow-400"
-                              : "text-gray-300"
-                          }`}
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
-                    </div>
-                    <span className="ml-2 text-gray-600">
-                      ({product.rating})
-                    </span>
-                  </div>
-                  <p className="text-2xl font-bold text-black flex items-center gap-1 mb-4">
-                    <span className="text-lg font-semibold text-gray-500">
-                      {t("menu_card.currency")}
-                    </span>{" "}
-                    {product.price.toFixed(2)}
+
+                  {/* Price */}
+                  <p className="text-lg font-medium text-gray-800">
+                    {t("menu_card.currency")}{product.price.toFixed(0)}
                   </p>
-                  {product.available ? (
-                    <span className="text-green-600 font-medium mb-4">
-                      {t("menu_card.available")}
-                    </span>
-                  ) : (
-                    <span className="text-red-600 font-medium mb-4">
-                      {t("menu_card.unavailable")}
-                    </span>
+
+                  {/* Description (optional) */}
+                  {product.description && (
+                    <p className="text-sm text-gray-500 mt-2 line-clamp-2">
+                      {i18n.language === "ar" && product.description_ar
+                        ? product.description_ar
+                        : product.description_en}
+                    </p>
                   )}
-                  <div className="flex space-x-4 mt-2">
-                    <button
-                      onClick={() => onViewDetails(product)}
-                      className="px-4 py-2 border border-black text-black hover:bg-black hover:text-white transition-colors duration-300">
-                      {t("menu_card.view_details")}
-                    </button>
-                    <button
-                      onClick={() => onAddToCart(product)}
-                      className="px-4 py-2 bg-black text-white hover:bg-gray-800 transition-colors duration-300"
-                      disabled={!product.available}>
-                      {t("menu_card.add_to_cart")}
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>

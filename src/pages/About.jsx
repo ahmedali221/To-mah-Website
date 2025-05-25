@@ -24,11 +24,11 @@ import g7 from "/src/assets/AboutImages/G7.jpg";
 import g8 from "/src/assets/AboutImages/G8.jpg";
 import g9 from "/src/assets/AboutImages/G9.jpg";
 // import g10 from "/src/assets/AboutImages/G10.jpg";
-import { 
-  HeartIcon, 
-  SparklesIcon,
-  UserGroupIcon,
-  GlobeAltIcon,
+import {
+	HeartIcon,
+	SparklesIcon,
+	UserGroupIcon,
+	GlobeAltIcon,
 
 } from '@heroicons/react/24/outline';
 
@@ -83,7 +83,7 @@ const About = () => {
 		autoplaySpeed: 3000,
 		arrows: false,
 	};
-	
+
 	// Intersection Observer for scroll animations
 	useEffect(() => {
 		const observerOptions = {
@@ -91,7 +91,7 @@ const About = () => {
 			rootMargin: '0px',
 			threshold: 0.1
 		};
-		
+
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
@@ -99,12 +99,12 @@ const About = () => {
 				}
 			});
 		}, observerOptions);
-		
+
 		const sections = document.querySelectorAll('.animate-on-scroll');
 		sections.forEach(section => {
 			observer.observe(section);
 		});
-		
+
 		return () => {
 			sections.forEach(section => {
 				observer.unobserve(section);
@@ -123,16 +123,16 @@ const About = () => {
 							<span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
 						</span>
 					</h2>
-					
+
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
 						<div className="animate-on-scroll" id="story-img-1">
-							<img 
-								src={img1} 
-								alt={t("about.story.image_alt_left")} 
+							<img
+								src={img1}
+								alt={t("about.story.image_alt_left")}
 								className={`rounded-lg shadow-xl w-full h-auto transform transition-all duration-1000 ${isVisible['story-img-1'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
 							/>
 						</div>
-						
+
 						<div className="animate-on-scroll" id="story-text">
 							<div className={`text-center space-y-4 transition-all duration-1000 delay-300 ${isVisible['story-text'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
 								<p className="text-amber-600 font-bold text-xl">***</p>
@@ -140,11 +140,11 @@ const About = () => {
 								<p className="text-2xl font-bold mt-6 font-serif">{t("about.story.signature")}</p>
 							</div>
 						</div>
-						
+
 						<div className="animate-on-scroll" id="story-img-2">
-							<img 
-								src={img2} 
-								alt={t("about.story.image_alt_right")} 
+							<img
+								src={img2}
+								alt={t("about.story.image_alt_right")}
 								className={`rounded-lg shadow-xl w-full h-auto transform transition-all duration-1000 delay-500 ${isVisible['story-img-2'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
 							/>
 						</div>
@@ -156,13 +156,13 @@ const About = () => {
 			<section className="py-16 bg-gradient-to-b from-white to-slate-50">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="relative rounded-xl overflow-hidden shadow-2xl animate-on-scroll" id="video-section">
-						<div 
+						<div
 							className={`transition-all duration-1000 ${isVisible['video-section'] ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
 							onClick={() => setIsPlaying(true)}
 						>
-							<img 
-								src={cover} 
-								alt={t("about.video.cover_alt")} 
+							<img
+								src={cover}
+								alt={t("about.video.cover_alt")}
 								className="w-full h-auto object-cover"
 							/>
 							<button
@@ -176,11 +176,11 @@ const About = () => {
 							</button>
 						</div>
 					</div>
-					
+
 					{isPlaying && (
 						<div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
 							<div className="relative w-full max-w-4xl mx-auto">
-								<button 
+								<button
 									className="absolute -top-12 right-0 text-white text-3xl hover:text-gray-300 transition-colors"
 									onClick={() => setIsPlaying(false)}
 								>
@@ -209,30 +209,30 @@ const About = () => {
 							<span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
 						</span>
 					</h2>
-					
+
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-						<div className={`flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 bg-white transform ${isVisible['values-section'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{transitionDelay: '100ms'}}>
+						<div className={`flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 bg-white transform ${isVisible['values-section'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '100ms' }}>
 							<div className="w-16 h-16 rounded-full flex items-center justify-center mb-6">
 								<HeartIcon className="w-8 h-8" />
 							</div>
 							<h3 className="text-xl font-bold mb-3">{t("about.values.hospitality")}</h3>
 						</div>
-						
-						<div className={`flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 bg-white transform ${isVisible['values-section'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{transitionDelay: '200ms'}}>
+
+						<div className={`flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 bg-white transform ${isVisible['values-section'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '200ms' }}>
 							<div className="w-16 h-16 rounded-full flex items-center justify-center mb-6">
 								<SparklesIcon className="w-8 h-8" />
 							</div>
 							<h3 className="text-xl font-bold mb-3">{t("about.values.authenticity")}</h3>
 						</div>
-						
-						<div className={`flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 bg-white transform ${isVisible['values-section'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{transitionDelay: '300ms'}}>
+
+						<div className={`flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 bg-white transform ${isVisible['values-section'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '300ms' }}>
 							<div className="w-16 h-16 rounded-full flex items-center justify-center mb-6">
 								<UserGroupIcon className="w-8 h-8" />
 							</div>
 							<h3 className="text-xl font-bold mb-3">{t("about.values.community")}</h3>
 						</div>
-						
-						<div className={`flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 bg-white transform ${isVisible['values-section'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{transitionDelay: '400ms'}}>
+
+						<div className={`flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 bg-white transform ${isVisible['values-section'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '400ms' }}>
 							<div className="w-16 h-16 rounded-full flex items-center justify-center mb-6">
 								<GlobeAltIcon className="w-8 h-8" />
 							</div>
@@ -251,10 +251,10 @@ const About = () => {
 							<span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
 						</span>
 					</h2>
-					
+
 					<p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">{t("about.ambiance.description")}</p>
-					
-					
+
+
 				</div>
 			</section>
 
@@ -269,7 +269,7 @@ const About = () => {
 								className="rounded-lg shadow-2xl w-full h-auto"
 							/>
 						</div>
-						
+
 						<div className={`transition-all duration-1000 delay-300 ${isVisible['special-menu-section'] ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
 							<img
 								src={loc}
@@ -290,16 +290,16 @@ const About = () => {
 							<span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
 						</span>
 					</h2>
-					
+
 					<div className={`bg-white rounded-xl shadow-lg p-8 transition-all duration-1000 ${isVisible['testimonial-section'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
 						<Slider {...settings}>
 							{testimonials.map((item, index) => (
 								<div className="text-center px-8" key={index}>
 									<div className="w-20 h-20 mx-auto mb-6 overflow-hidden rounded-full">
-										<img 
-											className="w-full h-full object-cover" 
-											src={item.img} 
-											alt={item.name} 
+										<img
+											className="w-full h-full object-cover"
+											src={item.img}
+											alt={item.name}
 										/>
 									</div>
 									<p className="text-gray-600 italic mb-4">"{item.text}"</p>

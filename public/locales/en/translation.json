@@ -431,9 +431,63 @@
 		"processing": "Processing...",
 		"pay_button": "Pay {total} SR",
 		"place_order_button": "Place Order (Pay {total} SR on Delivery)"
-	}
+	},
+	"menu_showcase": {
+  "order_now": "Order Now",
+  "order_now_desc": "Discover our seasonal specials and chef’s recommendations",
+  "add_to_cart": "Add to cart",
+  "experience_title": "Experience the Taste of Authenticity",
+  "experience_desc": "From traditional flavors to modern twists, our dishes are crafted to delight your senses.",
+  "book_table": "BOOK A TABLE",
+  "grilled_menu": "GRILLED TE'AMA MENU",
+  "beef_joints": "BEEF JOINTS",
+  "beef_joints_desc": "Indulge in grilled beef joints served with rich tahini sauce. A delicious meal rich in protein and authentic grilled flavors.",
+  "tomah_kebab": "TO'MAH KEBAB",
+  "tomah_kebab_desc": "Indulge in premium special kebab served with delicious nuts and rich tahini sauce. A royal meal rich in luxurious flavors and fresh ingredients.",
+  "tahini_kebab": "Tahini Kebab",
+  "tahini_kebab_desc": "Indulge in special kebab grilled over charcoal and topped with rich and delicious tahini sauce. A delicious meal rich in grilled flavors and distinctive tahini.",
+  "dessert_menu": "DESSERT MENU",
+  "roqaq": "ROQAQ AL-AGUAT",
+  "roqaq_desc": "Crispy Roqaq Dough Filled With Pistachios And Cream And Served With Ice Cream",
+  "cream_caramel": "CREAM CARAMEL",
+  "cream_caramel_desc": "Oven Baked Cream caramel served cold caramelized sugar sauce",
+  "um_ali": "UM ALI",
+  "um_ali_desc": "Dessert made of roqaq with milk and roasted nuts served hot"
+},
+	"gallery": {
+		"image_alt": "Gallery Image"
+	},
+	"cta": {
+		"title": "Why Visit To'mah?",
+		"description": "Experience more than just food — experience tradition, warmth, and a piece of Medina's soul.",
+		"button": "Explore Menu"
+	},
+	"categories": {
+  "appetizers": "Appetizers",
+  "main_dishes": "Main Dishes",
+  "desserts": "Desserts",
+  "drinks": "Drinks",
+  "salads": "Salads",
+  "grills": "Grills",
+  "pasta": "Pasta",
+  "snacks": "Snacks"
+},
+"gallery_and_category": {
+  "title": "RESTAURANT TO'MAH",
+  "dish_alt": "Dish {{number}}"
+},
+"people_section": {
+  "title": "Meet Our Owners & Chefs",
+  "owner_title": "Sarah Al-Tomah",
+  "owner_desc": "Founder & Owner. Passionate about authentic flavors and hospitality.",
+  "owner2_title": "Ali Al-Tomah",
+  "owner2_desc": "Co-Owner. Dedicated to quality and customer satisfaction.",
+  "chef_title": "Chef Mohammed",
+  "chef_desc": "Head Chef. Expert in traditional and modern cuisine."
+},
+"toamahBanner": "To'amah, Al Madina People Restaurant"
 
 }
 
- 
+
 

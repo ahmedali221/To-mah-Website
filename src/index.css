@@ -37,6 +37,7 @@ html[dir="rtl"] body {
 }
 
 @media (min-width: 768px) {
+
   body[dir="rtl"],
   html[dir="rtl"] body {
     font-size: 21px;
@@ -149,6 +150,7 @@ button:hover,
 
 /* Responsive font size for Arabic */
 @media (max-width: 600px) {
+
   body[dir="rtl"],
   html[dir="rtl"] body {
     font-size: 19px;
@@ -583,12 +585,12 @@ a,
 
 /* RTL-specific responsive adjustments */
 @media (max-width: 768px) {
-  body[dir="rtl"] .space-x-4 > * + * {
+  body[dir="rtl"] .space-x-4>*+* {
     margin-right: 0.5rem;
     margin-left: 0;
   }
 
-  body[dir="rtl"] .md\:space-x-6 > * + * {
+  body[dir="rtl"] .md\:space-x-6>*+* {
     margin-right: 0.75rem;
     margin-left: 0;
   }
@@ -596,17 +598,26 @@ a,
 
 .book-a-table-button {
   background-color: #f8f8f8;
-  color: #000000; /* لون النص أسود */
-  border: 1px solid #000000; /* إطار أسود رفيع */
-  padding: 10px 20px; /* مسافة داخلية (padding) لجعل الزرار أكبر قليلاً */
-  text-transform: uppercase; /* تحويل النص لأحرف كبيرة (uppercase) */
-  font-family: sans-serif; /* خط عام بدون زوائد (ممكن تختار خط معين لو عندك) */
-  font-size: 16px; /* حجم الخط (ممكن تعدله) */
-  cursor: pointer; /* تغيير شكل المؤشر ليد عند المرور فوق الزرار */
-  transition: background-color 0.3s ease; /* تأثير انتقال سلس لتغيير لون الخلفية عند الـ hover */
+  color: #000000;
+  /* لون النص أسود */
+  border: 1px solid #000000;
+  /* إطار أسود رفيع */
+  padding: 10px 20px;
+  /* مسافة داخلية (padding) لجعل الزرار أكبر قليلاً */
+  text-transform: uppercase;
+  /* تحويل النص لأحرف كبيرة (uppercase) */
+  font-family: sans-serif;
+  /* خط عام بدون زوائد (ممكن تختار خط معين لو عندك) */
+  font-size: 16px;
+  /* حجم الخط (ممكن تعدله) */
+  cursor: pointer;
+  /* تغيير شكل المؤشر ليد عند المرور فوق الزرار */
+  transition: background-color 0.3s ease;
+  /* تأثير انتقال سلس لتغيير لون الخلفية عند الـ hover */
   border-radius: 0%;
 }
 
 .book-a-table-button:hover {
-  background-color: #e0e0e0; /* لون أفتح عند مرور الماوس (hover) */
+  background-color: #e0e0e0;
+  /* لون أفتح عند مرور الماوس (hover) */
 }
