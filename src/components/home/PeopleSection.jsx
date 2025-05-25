@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import SectionWrapper from "./SectionWrapper";
 import owner from "../../assets/owner.jpg";
 import owner2 from "../../assets/owner2.jpg";
 import cheif from "../../assets/cheif.jpg";
