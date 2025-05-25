@@ -1,5 +1,5 @@
 // components/VisionAndPhilosophy.jsx
-import SectionWrapper from "./SectionWrapper";
+import SectionWrapper from "./sectionWrapper";
 import goals from "../../assets/goals.png";
 import vision from "../../assets/vision.png";
 import {

@@ -1,5 +1,5 @@
 // components/MenuShowcase.jsx
-import SectionWrapper from "./SectionWrapper";
+import SectionWrapper from "./sectionWrapper";
 import meal1 from "../../assets/meal1.JPG";
 import meal2 from "../../assets/meal2.JPG";
 import meal3 from "../../assets/meal3.JPG";
