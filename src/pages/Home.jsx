@@ -4,10 +4,9 @@ import PeopleSection from "../components/home/PeopleSection";
 import MenuShowcase from "../components/home/MenuShowcase";
 import GalleryAndCategoryScroll from "../components/home/GalleryAndCategoryScroll";
 import VisionAndPhilosophy from "../components/home/VisionAndPhilosophy";
-import HeroSlider from "../components/home/HeroSlider";
+import HeroSlider from "../components/home/heroSlider";
 import { useTranslation } from "react-i18next";
 
-// import VisitUsSection from "../components/home/VisitUsSection";
 
 export default function Home() {
   const { t } = useTranslation();
