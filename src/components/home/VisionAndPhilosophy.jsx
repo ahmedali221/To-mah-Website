@@ -1,6 +1,6 @@
 // components/VisionAndPhilosophy.jsx
 import SectionWrapper from "./sectionWrapper";
-import goals from "../../assets/Window.jpeg";
+import goals from "../../assets/vision.jpg";
 import vision from "../../assets/reserve.jpg";
 import {
   HeartIcon, SparklesIcon, StarIcon, UserGroupIcon,
@@ -58,12 +58,12 @@ export default function VisionAndPhilosophy() {
                 className="rounded-lg shadow-2xl w-full h-50 object-contain absolute top-0 left-0 z-10"
                 style={{ boxShadow: "0 10px 40px rgba(0,0,0,0.15)" }}
               />
-              <img
+              {/* <img
                 src={vision}
                 alt={t("home.vision.image_alt")}
                 className="rounded-lg shadow-xl w-4/5 h-4/5 object-contain absolute bottom-0 right-0 z-20 translate-x-4 md:translate-x-8 lg:translate-x-12 translate-y-4 md:translate-y-8 lg:translate-y-12"
                 style={{ boxShadow: "0 6px 24px rgba(0,0,0,0.10)" }}
-              />
+              /> */}
             </div>
           </div>
         </div>

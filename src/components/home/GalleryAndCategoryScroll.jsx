@@ -3,8 +3,8 @@ import img1 from "../../assets/gallery/first.jpg";
 import img2 from "../../assets/gallery/second.jpg";
 import img3 from "../../assets/gallery/third.jpg";
 import img4 from "../../assets/gallery/forth.jpg";
-import img5 from "../../assets/5.jpg";
-import img6 from "../../assets/6.jpg";
+import img5 from "../../assets/AboutImages/زوار مطعم طعمه/رئيس جامعة الملك عبدالله _ البروفيسور إدوارد بيرن.jpg";
+import img6 from "../../assets/AboutImages/زوار مطعم طعمه/م بندر عبدالله الراجحي شركة متين .jpg";
 import { useTranslation } from "react-i18next";
 
 const categories = [
