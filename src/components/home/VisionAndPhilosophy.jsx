@@ -1,6 +1,6 @@
 // components/VisionAndPhilosophy.jsx
 import SectionWrapper from "./sectionWrapper";
-import goals from "../../assets/window.jpeg";
+import goals from "../../assets/Window.jpeg";
 import vision from "../../assets/reserve.jpg";
 import {
   HeartIcon, SparklesIcon, StarIcon, UserGroupIcon,
