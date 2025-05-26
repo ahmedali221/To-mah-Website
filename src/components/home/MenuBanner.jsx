@@ -25,8 +25,8 @@ export default function MenuBanner() {
 
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
         <motion.h2
-          className="text-2xl md:text-4xl font-bold mb-6"
-          initial={{ y: -30, opacity: 0 }}
+          className="text-2xl md:text-4xl  mb-6 text-white "
+          initial={{ y: -30, opacity: 1 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.6 }}

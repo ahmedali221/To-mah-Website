@@ -102,6 +102,21 @@ function Navbar({ changeLanguage }) {
 
 					{/* Desktop Navigation */}
 					<div className="hidden md:flex items-center space-x-8 mx-8">
+						{/* Pages Dropdown as Text Link */}
+						<div className="relative group uppercase">
+							<span className={`block px-4 py-2 text-primary hover:text-primary transition group`}>
+								{t("navbar.pages")}
+								<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+							</span>
+							<div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 transition-all duration-300 z-40 pointer-events-none group-hover:pointer-events-auto">
+								<Link to="/" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.home")}</Link>
+								<Link to="/about" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.about")}</Link>
+								<Link to="/menu" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.menu")}</Link>
+								<Link to="/partners" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.partners")}</Link>
+								<Link to="/contact" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.contact")}</Link>
+							</div>
+						</div>
+
 						{/* home */}
 						<Link
 							to="/"
@@ -125,20 +140,7 @@ function Navbar({ changeLanguage }) {
 								}`}></span>}
 						</Link>
 
-						{/* Pages Dropdown as Text Link */}
-						<div className="relative group uppercase">
-							<span className={`block px-4 py-2 text-primary hover:text-primary transition group`}>
-								{t("navbar.pages")}
-								<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-							</span>
-							<div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 transition-all duration-300 z-40 pointer-events-none group-hover:pointer-events-auto">
-								<Link to="/" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.home")}</Link>
-								<Link to="/about" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.about")}</Link>
-								<Link to="/menu" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.menu")}</Link>
-								<Link to="/partners" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.partners")}</Link>
-								<Link to="/contact" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.contact")}</Link>
-							</div>
-						</div>
+
 
 						{/* Logo */}
 						<div className="flex items-center">
@@ -150,9 +152,7 @@ function Navbar({ changeLanguage }) {
 										className="w-full h-full object-cover"
 									/>
 								</div>
-								<span className="text-3xl font-bold text-primary-dark hidden sm:block uppercase">
-									{t("navbar.brand")}
-								</span>
+
 							</Link>
 						</div>
 

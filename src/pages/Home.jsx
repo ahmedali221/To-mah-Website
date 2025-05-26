@@ -14,10 +14,10 @@ export default function Home() {
   return (
     <div className="main-bg">
       <HeroSlider />
-      <div className="bg-transparent overflow-hidden border-y border-gray-200">
+      <div className="bg-white overflow-hidden border-y border-gray-200">
         <div className="w-full h-14 flex items-center">
           <div className="whitespace-nowrap animate-scroll-single px-4">
-            <div className="text-2xl font-bold text-gray-900 tracking-wide"> {/* Larger font */}
+            <div className="text-2xl font-stretch-expanded text-gray-900 tracking-wide"> {/* Larger font */}
               {t(`toamahBanner`)}
             </div>
           </div>
@@ -43,10 +43,10 @@ export default function Home() {
       </div>
       <AboutAndVideoSection />
       <MenuBanner />
-      <PeopleSection />
       <MenuShowcase />
       <GalleryAndCategoryScroll />
       <VisionAndPhilosophy />
+      <PeopleSection />
     </div>
   );
 }

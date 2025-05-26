@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import owner from "../../assets/owner.jpg";
 import owner2 from "../../assets/owner2.jpg";
-import cheif from "../../assets/cheif.jpg";
+import cheif from "../../assets/team.jpg";
 
 export default function PeopleSection() {
   const { t } = useTranslation();
@@ -42,7 +42,7 @@ export default function PeopleSection() {
               <img
                 src={card.image}
                 alt={card.title}
-                className="w-40 h-40 mx-auto rounded-full object-cover shadow-lg mb-4 border-2 border-white"
+                className="w-60 h-40 mx-auto rounded-full object-cover shadow-lg mb-4 border-2 border-white"
               />
               <h3 className="text-2xl font-bold">{card.title}</h3>
               <p className="text-gray-500 text-xl mt-2 text-center">

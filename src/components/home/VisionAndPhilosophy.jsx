@@ -1,7 +1,7 @@
 // components/VisionAndPhilosophy.jsx
 import SectionWrapper from "./sectionWrapper";
-import goals from "../../assets/goals.png";
-import vision from "../../assets/vision.png";
+import goals from "../../assets/window.jpeg";
+import vision from "../../assets/reserve.jpg";
 import {
   HeartIcon, SparklesIcon, StarIcon, UserGroupIcon,
   GlobeAltIcon, LightBulbIcon, ClockIcon, ShieldCheckIcon, TruckIcon
@@ -14,7 +14,7 @@ export default function VisionAndPhilosophy() {
   return (
     <>
       {/* Vision & Goals */}
-      <SectionWrapper className="bg-transaprent">
+      <SectionWrapper className="bg-transaprent mb-25">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 relative">
           <span className="relative px-8">{t("home.vision.title")}</span>
         </h2>
@@ -51,11 +51,11 @@ export default function VisionAndPhilosophy() {
           </div>
           {/* Images */}
           <div className="order-2 lg:order-1 mt-8 lg:mt-0 flex justify-center relative h-64 sm:h-80 md:h-96 lg:h-[30rem]">
-            <div className="relative w-full h-full">
+            <div className="relative w-full lg:h-[30rem]">
               <img
                 src={goals}
                 alt={t("home.vision.image_alt")}
-                className="rounded-lg shadow-2xl w-full h-full object-contain absolute top-0 left-0 z-10"
+                className="rounded-lg shadow-2xl w-full h-50 object-contain absolute top-0 left-0 z-10"
                 style={{ boxShadow: "0 10px 40px rgba(0,0,0,0.15)" }}
               />
               <img
@@ -69,40 +69,10 @@ export default function VisionAndPhilosophy() {
         </div>
       </SectionWrapper>
 
-      {/* Philosophy Section */}
+      {/* Philosophy Section (now shows Features cards) */}
       <SectionWrapper className="bg-transaprent ">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 relative">
           <span className="relative px-8">{t("home.values.title")}</span>
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl bg-white">
-            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4">
-              <HeartIcon className="w-6 h-6 md:w-8 md:h-8" />
-            </div>
-            <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.values.quality.title")}</h3>
-            <p className="text-gray-600 text-sm md:text-base">{t("home.values.quality.description")}</p>
-          </div>
-          <div className="flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl bg-white">
-            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4">
-              <SparklesIcon className="w-6 h-6 md:w-8 md:h-8" />
-            </div>
-            <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.values.tradition.title")}</h3>
-            <p className="text-gray-600 text-sm md:text-base">{t("home.values.tradition.description")}</p>
-          </div>
-          <div className="flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl bg-white">
-            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4">
-              <StarIcon className="w-6 h-6 md:w-8 md:h-8" />
-            </div>
-            <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.values.service.title")}</h3>
-            <p className="text-gray-600 text-sm md:text-base">{t("home.values.service.description")}</p>
-          </div>
-        </div>
-      </SectionWrapper>
-
-      {/* Features Section */}
-      <SectionWrapper className="bg-transaprent">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 relative">
-          <span className="relative px-8">{t("home.features.title")}</span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-white p-4 rounded-xl shadow-md text-center">
@@ -132,6 +102,36 @@ export default function VisionAndPhilosophy() {
             </div>
             <h3 className="text-lg md:text-xl font-bold mb-1">{t("home.features.delivery.title")}</h3>
             <p className="text-gray-600 text-sm md:text-base">{t("home.features.delivery.description")}</p>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Features Section (now shows Philosophy cards) */}
+      <SectionWrapper className="bg-transaprent">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 relative">
+          <span className="relative px-8">{t("home.features.title")}</span>
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl bg-white">
+            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4">
+              <HeartIcon className="w-6 h-6 md:w-8 md:h-8" />
+            </div>
+            <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.values.quality.title")}</h3>
+            <p className="text-gray-600 text-sm md:text-base">{t("home.values.quality.description")}</p>
+          </div>
+          <div className="flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl bg-white">
+            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4">
+              <SparklesIcon className="w-6 h-6 md:w-8 md:h-8" />
+            </div>
+            <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.values.tradition.title")}</h3>
+            <p className="text-gray-600 text-sm md:text-base">{t("home.values.tradition.description")}</p>
+          </div>
+          <div className="flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl bg-white">
+            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4">
+              <StarIcon className="w-6 h-6 md:w-8 md:h-8" />
+            </div>
+            <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.values.service.title")}</h3>
+            <p className="text-gray-600 text-sm md:text-base">{t("home.values.service.description")}</p>
           </div>
         </div>
       </SectionWrapper>

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionWrapper from "./sectionWrapper";
 import about from "../../assets/about.png";
+import story from "../../assets/Story2.jpg";
 import cover from "../../assets/AboutImages/COVER.jpg";
 import intro from "../../assets/AboutImages/intro.mp4";
 import { useTranslation } from "react-i18next";
@@ -11,7 +12,7 @@ import { Link } from "react-router-dom";
 export default function AboutAndVideoSection() {
   const { t } = useTranslation();
   const [isPlaying, setIsPlaying] = useState(false);
-  
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
@@ -32,27 +33,27 @@ export default function AboutAndVideoSection() {
           <p className="mb-6 text-gray-600 text-base md:text-lg leading-relaxed">
             {t("home.about.description")}
           </p>
-          <Link 
-            to="/about" 
+          <Link
+            to="/about"
             className="inline-block px-8 py-3 text-sm md:text-base bg-gray-200 rounded-md hover:bg-gray-500 hover:text-red transition-colors duration-300"
           >
             {t("home.about.button")}
           </Link>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="relative mt-8 md:mt-0"
           initial={{ opacity: 0, scale: 0.9, rotate: -5 }}
           whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <img 
-            src={about} 
-            alt="about" 
-            className="rounded-full shadow-2xl w-full h-auto" 
+          <img
+            src={story}
+            alt="about"
+            className="rounded-full shadow-2xl w-full h-80 md:w-96 md:h-96 object-cover"
           />
-          <motion.div 
+          <motion.div
             className="absolute -bottom-2 -left-2 text-white p-3 rounded-lg bg-black/70"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -65,25 +66,25 @@ export default function AboutAndVideoSection() {
           </motion.div>
         </motion.div>
       </div>
-      
+
       {/* Video Banner */}
-      <motion.div 
+      <motion.div
         className="mt-16"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.7, delay: 0.3 }}
       >
-        <motion.div 
-          className="relative rounded-xl overflow-hidden shadow-2xl cursor-pointer max-w-4xl mx-auto" 
+        <motion.div
+          className="relative rounded-xl overflow-hidden shadow-2xl cursor-pointer max-w-4xl mx-auto"
           onClick={() => setIsPlaying(true)}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.3 }}
         >
-          <img 
-            src={cover} 
-            alt={t("home.video.cover_alt", "Video Cover")} 
-            className="w-full h-auto object-cover" 
+          <img
+            src={cover}
+            alt={t("home.video.cover_alt", "Video Cover")}
+            className="w-full h-auto object-cover"
           />
           <motion.button
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black/30 text-white p-6 rounded-full z-10 hover:bg-black/50 transition-all"
@@ -99,16 +100,16 @@ export default function AboutAndVideoSection() {
             </svg>
           </motion.button>
         </motion.div>
-        
+
         {/* Modal */}
         {isPlaying && (
-          <motion.div 
+          <motion.div
             className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <motion.div 
+            <motion.div
               className="relative w-full max-w-5xl mx-auto px-4"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}

@@ -1,10 +1,9 @@
 // components/MenuShowcase.jsx
 import SectionWrapper from "./sectionWrapper";
 import meal1 from "../../assets/meal1.JPG";
-import meal2 from "../../assets/meal2.JPG";
 import meal3 from "../../assets/meal3.JPG";
 import meal4 from "../../assets/meal4.JPG";
-import view from "../../assets/wall.jpeg";
+import view from "../../assets/reserve2.jpg";
 import products from "../../service/data"; // Adjust the path if needed
 import { useTranslation } from "react-i18next";
 
@@ -69,7 +68,7 @@ export default function MenuShowcase() {
                 </p>
                 <a
                   href="https://tomah.sa/"
-                  className="group relative inline-flex items-center justify-center bg-black text-white px-6 py-3 text-lg font-semibold transition duration-300 hover:bg-gray-800"
+                  className="group relative inline-flex items-center justify-center bg-primary text-white px-6 py-3 text-lg font-semibold transition duration-300 hover:bg-gray-800"
                 >
                   <span className="absolute right-3 text-yellow-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     *
@@ -108,7 +107,7 @@ export default function MenuShowcase() {
                 </p>
                 <a
                   href="https://tomah.sa/"
-                  className="group relative inline-flex items-center justify-center bg-black text-white px-6 py-3 text-lg font-semibold transition duration-300 hover:bg-gray-800"
+                  className="group relative inline-flex items-center justify-center  px-6 py-3 text-lg font-semibold transition duration-300 hover:bg-gray-800"
                 >
                   <span className="absolute left-3 text-yellow-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     *
@@ -123,183 +122,183 @@ export default function MenuShowcase() {
         </div>
       </SectionWrapper>
 
-{/* Grilled Menu Section */}
-<SectionWrapper className="bg-transparent">
-  <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-    {isArabic ? (
-      <>
-        {/* Image - Right side for Arabic (swapped) */}
-        <div className="order-2 md:order-2">
-          <img
-            src={meal4}
-            alt="Grilled food"
-            className="w-full h-auto max-h-96 object-cover rounded-full shadow-lg"
-          />
-        </div>
-        {/* Content - Left side for Arabic (swapped) */}
-        <div className="order-1 md:order-1 text-center md:text-right">
-          <h2 className="text-5xl font-extrabold mb-10">{t("menu_showcase.grilled_menu")}</h2>
-          
-          {/* === REVERSED ORDER === */}
-          <div className="mb-8">
-            <div className="flex items-center justify-center md:justify-end gap-2 mb-2">
-              <span className="font-semibold">{`73 ${t("menu_card.currency")}`}</span>
-              <span className="h-0.5 w-12 bg-yellow-500"></span>
-              <h3 className="text-xl font-semibold text-black">{t("menu_showcase.tahini_kebab")}</h3>
-            </div>
-            <p className="text-gray-700">{t("menu_showcase.tahini_kebab_desc")}</p>
-          </div>
-          <div className="mb-8">
-            <div className="flex items-center justify-center md:justify-end gap-2 mb-2">
-              <span className="font-semibold">{`73 ${t("menu_card.currency")}`}</span>
-              <span className="h-0.5 w-12 bg-yellow-500"></span>
-              <h3 className="text-xl font-semibold text-black">{t("menu_showcase.tomah_kebab")}</h3>
-            </div>
-            <p className="text-gray-700">{t("menu_showcase.tomah_kebab_desc")}</p>
-          </div>
-          <div className="mb-6">
-            <div className="flex items-center justify-center md:justify-end gap-2 mb-2">
-              <span className="font-semibold">{`75 ${t("menu_card.currency")}`}</span>
-              <span className="h-0.5 w-12 bg-yellow-500"></span>
-              <h3 className="text-xl font-semibold text-black">{t("menu_showcase.beef_joints")}</h3>
-            </div>
-            <p className="text-gray-700">{t("menu_showcase.beef_joints_desc")}</p>
-          </div>
-        </div>
-      </>
-    ) : (
-      <>
-        {/* Image - Left side for English (swapped) */}
-        <div>
-          <img
-            src={meal4}
-            alt="Grilled food"
-            className="w-full h-auto max-h-96 object-cover rounded-full shadow-lg"
-          />
-        </div>
-        {/* Content - Right side for English (swapped) */}
-        <div className="text-center md:text-left">
-          <h2 className="text-5xl font-extrabold mb-10">{t("menu_showcase.grilled_menu")}</h2>
-          
-          {/* === REVERSED ORDER === */}
-          <div className="mb-8">
-            <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-              <h3 className="text-xl font-semibold text-black">{t("menu_showcase.tahini_kebab")}</h3>
-              <span className="h-0.5 w-12 bg-yellow-500"></span>
-              <span className="font-semibold">{`73 ${t("menu_card.currency")}`}</span>
-            </div>
-            <p className="text-gray-700">{t("menu_showcase.tahini_kebab_desc")}</p>
-          </div>
-          <div className="mb-8">
-            <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-              <h3 className="text-xl font-semibold text-black">{t("menu_showcase.tomah_kebab")}</h3>
-              <span className="h-0.5 w-12 bg-yellow-500"></span>
-              <span className="font-semibold">{`73 ${t("menu_card.currency")}`}</span>
-            </div>
-            <p className="text-gray-700">{t("menu_showcase.tomah_kebab_desc")}</p>
-          </div>
-          <div className="mb-6">
-            <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-              <h3 className="text-xl font-semibold text-black">{t("menu_showcase.beef_joints")}</h3>
-              <span className="h-0.5 w-12 bg-yellow-500"></span>
-              <span className="font-semibold">{`75 ${t("menu_card.currency")}`}</span>
-            </div>
-            <p className="text-gray-700">{t("menu_showcase.beef_joints_desc")}</p>
-          </div>
-        </div>
-      </>
-    )}
-  </div>
-</SectionWrapper>
+      {/* Grilled Menu Section */}
+      <SectionWrapper className="bg-transparent">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {isArabic ? (
+            <>
+              {/* Image - Right side for Arabic (swapped) */}
+              <div className="order-2 md:order-2">
+                <img
+                  src={meal4}
+                  alt="Grilled food"
+                  className="w-full h-auto max-h-96 object-cover rounded-full shadow-lg"
+                />
+              </div>
+              {/* Content - Left side for Arabic (swapped) */}
+              <div className="order-1 md:order-1 text-center md:text-right">
+                <h2 className="text-5xl font-extrabold mb-10">{t("menu_showcase.grilled_menu")}</h2>
 
-{/* Dessert Menu Section */}
-<SectionWrapper className="bg-transparent">
-  <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-    {isArabic ? (
-      <>
-        {/* Image - Left side for Arabic (swapped) */}
-        <div className="order-1 md:order-1">
-          <img
-            src={meal3}
-            alt="Dessert"
-            className="w-full h-auto max-h-96 object-cover rounded-full shadow-lg"
-          />
+                {/* === REVERSED ORDER === */}
+                <div className="mb-8">
+                  <div className="flex items-center justify-center md:justify-end gap-2 mb-2">
+                    <span className="font-semibold">{`73 ${t("menu_card.currency")}`}</span>
+                    <span className="h-0.5 w-12 bg-yellow-500"></span>
+                    <h3 className="text-xl font-semibold text-black">{t("menu_showcase.tahini_kebab")}</h3>
+                  </div>
+                  <p className="text-gray-700">{t("menu_showcase.tahini_kebab_desc")}</p>
+                </div>
+                <div className="mb-8">
+                  <div className="flex items-center justify-center md:justify-end gap-2 mb-2">
+                    <span className="font-semibold">{`73 ${t("menu_card.currency")}`}</span>
+                    <span className="h-0.5 w-12 bg-yellow-500"></span>
+                    <h3 className="text-xl font-semibold text-black">{t("menu_showcase.tomah_kebab")}</h3>
+                  </div>
+                  <p className="text-gray-700">{t("menu_showcase.tomah_kebab_desc")}</p>
+                </div>
+                <div className="mb-6">
+                  <div className="flex items-center justify-center md:justify-end gap-2 mb-2">
+                    <span className="font-semibold">{`75 ${t("menu_card.currency")}`}</span>
+                    <span className="h-0.5 w-12 bg-yellow-500"></span>
+                    <h3 className="text-xl font-semibold text-black">{t("menu_showcase.beef_joints")}</h3>
+                  </div>
+                  <p className="text-gray-700">{t("menu_showcase.beef_joints_desc")}</p>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              {/* Image - Left side for English (swapped) */}
+              <div>
+                <img
+                  src={meal4}
+                  alt="Grilled food"
+                  className="w-full h-auto max-h-96 object-cover rounded-full shadow-lg"
+                />
+              </div>
+              {/* Content - Right side for English (swapped) */}
+              <div className="text-center md:text-left">
+                <h2 className="text-5xl font-extrabold mb-10">{t("menu_showcase.grilled_menu")}</h2>
+
+                {/* === REVERSED ORDER === */}
+                <div className="mb-8">
+                  <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                    <h3 className="text-xl font-semibold text-black">{t("menu_showcase.tahini_kebab")}</h3>
+                    <span className="h-0.5 w-12 bg-yellow-500"></span>
+                    <span className="font-semibold">{`73 ${t("menu_card.currency")}`}</span>
+                  </div>
+                  <p className="text-gray-700">{t("menu_showcase.tahini_kebab_desc")}</p>
+                </div>
+                <div className="mb-8">
+                  <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                    <h3 className="text-xl font-semibold text-black">{t("menu_showcase.tomah_kebab")}</h3>
+                    <span className="h-0.5 w-12 bg-yellow-500"></span>
+                    <span className="font-semibold">{`73 ${t("menu_card.currency")}`}</span>
+                  </div>
+                  <p className="text-gray-700">{t("menu_showcase.tomah_kebab_desc")}</p>
+                </div>
+                <div className="mb-6">
+                  <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                    <h3 className="text-xl font-semibold text-black">{t("menu_showcase.beef_joints")}</h3>
+                    <span className="h-0.5 w-12 bg-yellow-500"></span>
+                    <span className="font-semibold">{`75 ${t("menu_card.currency")}`}</span>
+                  </div>
+                  <p className="text-gray-700">{t("menu_showcase.beef_joints_desc")}</p>
+                </div>
+              </div>
+            </>
+          )}
         </div>
-        {/* Content - Right side for Arabic (swapped) */}
-        <div className="order-2 md:order-2 text-center md:text-right">
-          <h2 className="text-5xl font-extrabold mb-10 text-right">{t("menu_showcase.dessert_menu")}</h2>
-          
-          {/* === REVERSED ORDER === */}
-          <div className="mb-8">
-            <div className="flex items-center justify-center md:justify-end gap-2 mb-2">
-              <span className="font-semibold">{`20 ${t("menu_card.currency")}`}</span>
-              <span className="h-0.5 w-12 bg-yellow-500"></span>
-              <h3 className="text-xl font-semibold text-black">{t("menu_showcase.um_ali")}</h3>
-            </div>
-            <p className="text-gray-700 text-right">{t("menu_showcase.um_ali_desc")}</p>
-          </div>
-          <div className="mb-8">
-            <div className="flex items-center justify-center md:justify-end gap-2 mb-2">
-              <span className="font-semibold">{`20 ${t("menu_card.currency")}`}</span>
-              <span className="h-0.5 w-12 bg-yellow-500"></span>
-              <h3 className="text-xl font-semibold text-black">{t("menu_showcase.cream_caramel")}</h3>
-            </div>
-            <p className="text-gray-700 text-right">{t("menu_showcase.cream_caramel_desc")}</p>
-          </div>
-          <div className="mb-6">
-            <div className="flex items-center justify-center md:justify-end gap-2 mb-2">
-              <span className="font-semibold">{`25 ${t("menu_card.currency")}`}</span>
-              <span className="h-0.5 w-12 bg-yellow-500"></span>
-              <h3 className="text-xl font-semibold text-black">{t("menu_showcase.roqaq")}</h3>
-            </div>
-            <p className="text-gray-700 text-right">{t("menu_showcase.roqaq_desc")}</p>
-          </div>
+      </SectionWrapper>
+
+      {/* Dessert Menu Section */}
+      <SectionWrapper className="bg-transparent">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {isArabic ? (
+            <>
+              {/* Image - Left side for Arabic (swapped) */}
+              <div className="order-1 md:order-1">
+                <img
+                  src={meal3}
+                  alt="Dessert"
+                  className="w-full h-auto max-h-96 object-cover rounded-full shadow-lg"
+                />
+              </div>
+              {/* Content - Right side for Arabic (swapped) */}
+              <div className="order-2 md:order-2 text-center md:text-right">
+                <h2 className="text-5xl font-extrabold mb-10 text-right">{t("menu_showcase.dessert_menu")}</h2>
+
+                {/* === REVERSED ORDER === */}
+                <div className="mb-8">
+                  <div className="flex items-center justify-center md:justify-end gap-2 mb-2">
+                    <span className="font-semibold">{`20 ${t("menu_card.currency")}`}</span>
+                    <span className="h-0.5 w-12 bg-yellow-500"></span>
+                    <h3 className="text-xl font-semibold text-black">{t("menu_showcase.um_ali")}</h3>
+                  </div>
+                  <p className="text-gray-700 text-right">{t("menu_showcase.um_ali_desc")}</p>
+                </div>
+                <div className="mb-8">
+                  <div className="flex items-center justify-center md:justify-end gap-2 mb-2">
+                    <span className="font-semibold">{`20 ${t("menu_card.currency")}`}</span>
+                    <span className="h-0.5 w-12 bg-yellow-500"></span>
+                    <h3 className="text-xl font-semibold text-black">{t("menu_showcase.cream_caramel")}</h3>
+                  </div>
+                  <p className="text-gray-700 text-right">{t("menu_showcase.cream_caramel_desc")}</p>
+                </div>
+                <div className="mb-6">
+                  <div className="flex items-center justify-center md:justify-end gap-2 mb-2">
+                    <span className="font-semibold">{`25 ${t("menu_card.currency")}`}</span>
+                    <span className="h-0.5 w-12 bg-yellow-500"></span>
+                    <h3 className="text-xl font-semibold text-black">{t("menu_showcase.roqaq")}</h3>
+                  </div>
+                  <p className="text-gray-700 text-right">{t("menu_showcase.roqaq_desc")}</p>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              {/* Content - Left side for English (swapped) */}
+              <div className="text-center md:text-left">
+                <h2 className="text-5xl font-extrabold mb-10 text-left">{t("menu_showcase.dessert_menu")}</h2>
+
+                {/* === REVERSED ORDER === */}
+                <div className="mb-8">
+                  <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                    <span className="font-semibold">{`20 ${t("menu_card.currency")}`}</span>
+                    <span className="h-0.5 w-12 bg-yellow-500"></span>
+                    <h3 className="text-xl font-semibold text-black">{t("menu_showcase.um_ali")}</h3>
+                  </div>
+                  <p className="text-gray-700 text-left">{t("menu_showcase.um_ali_desc")}</p>
+                </div>
+                <div className="mb-8">
+                  <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                    <span className="font-semibold">{`20 ${t("menu_card.currency")}`}</span>
+                    <span className="h-0.5 w-12 bg-yellow-500"></span>
+                    <h3 className="text-xl font-semibold text-black">{t("menu_showcase.cream_caramel")}</h3>
+                  </div>
+                  <p className="text-gray-700 text-left">{t("menu_showcase.cream_caramel_desc")}</p>
+                </div>
+                <div className="mb-6">
+                  <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                    <span className="font-semibold">{`25 ${t("menu_card.currency")}`}</span>
+                    <span className="h-0.5 w-12 bg-yellow-500"></span>
+                    <h3 className="text-xl font-semibold text-black">{t("menu_showcase.roqaq")}</h3>
+                  </div>
+                  <p className="text-gray-700 text-left">{t("menu_showcase.roqaq_desc")}</p>
+                </div>
+              </div>
+              {/* Image - Right side for English (swapped) */}
+              <div>
+                <img
+                  src={meal3}
+                  alt="Dessert"
+                  className="w-full h-auto max-h-96 object-cover rounded-full shadow-lg"
+                />
+              </div>
+            </>
+          )}
         </div>
-      </>
-    ) : (
-      <>
-        {/* Content - Left side for English (swapped) */}
-        <div className="text-center md:text-left">
-          <h2 className="text-5xl font-extrabold mb-10 text-left">{t("menu_showcase.dessert_menu")}</h2>
-          
-          {/* === REVERSED ORDER === */}
-          <div className="mb-8">
-            <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-              <span className="font-semibold">{`20 ${t("menu_card.currency")}`}</span>
-              <span className="h-0.5 w-12 bg-yellow-500"></span>
-              <h3 className="text-xl font-semibold text-black">{t("menu_showcase.um_ali")}</h3>
-            </div>
-            <p className="text-gray-700 text-left">{t("menu_showcase.um_ali_desc")}</p>
-          </div>
-          <div className="mb-8">
-            <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-              <span className="font-semibold">{`20 ${t("menu_card.currency")}`}</span>
-              <span className="h-0.5 w-12 bg-yellow-500"></span>
-              <h3 className="text-xl font-semibold text-black">{t("menu_showcase.cream_caramel")}</h3>
-            </div>
-            <p className="text-gray-700 text-left">{t("menu_showcase.cream_caramel_desc")}</p>
-          </div>
-          <div className="mb-6">
-            <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-              <span className="font-semibold">{`25 ${t("menu_card.currency")}`}</span>
-              <span className="h-0.5 w-12 bg-yellow-500"></span>
-              <h3 className="text-xl font-semibold text-black">{t("menu_showcase.roqaq")}</h3>
-            </div>
-            <p className="text-gray-700 text-left">{t("menu_showcase.roqaq_desc")}</p>
-          </div>
-        </div>
-        {/* Image - Right side for English (swapped) */}
-        <div>
-          <img
-            src={meal3}
-            alt="Dessert"
-            className="w-full h-auto max-h-96 object-cover rounded-full shadow-lg"
-          />
-        </div>
-      </>
-    )}
-  </div>
-</SectionWrapper>
+      </SectionWrapper>
 
     </>
   );

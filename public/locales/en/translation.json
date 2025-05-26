@@ -32,6 +32,9 @@
 		"error_message": "There was an error sending your message. Please try again later."
 	},
 	"footer": {
+		"quick_links":" Quick Links",
+		"follow_us":"Follow Us",
+		"rights": "To'mah. All rights reserved.",
 		"services_title": "Services",
 		"services": {
 			"branding": "Branding",
@@ -319,6 +322,9 @@
 	},
 	
   "menu": {
+	"menu.most_popular": "Most Popular Meals",
+	"menu.Menu": "Menu",
+	"menu.description": "Explore our diverse menu featuring traditional Hejazi dishes, grilled specialties, and seasonal delights. Each dish is crafted with care to bring you the authentic flavors of Medina.",
     "title": "Our Menu",
     "search_placeholder": "Search in our Menu...",
     "filters": "Filters",
@@ -376,6 +382,8 @@
 			}
 		]
 	},
+	"menu_banner.button": "Order Now",
+	"menu_banner.title": "Discover Our Seasonal Specials",
 	"payment": {
 "quantity": "Qty: {{count}}",
 		"title": "Payment",
@@ -482,8 +490,8 @@
   "owner_desc": "Founder & Owner. Passionate about authentic flavors and hospitality.",
   "owner2_title": "Ali Al-Tomah",
   "owner2_desc": "Co-Owner. Dedicated to quality and customer satisfaction.",
-  "chef_title": "Chef Mohammed",
-  "chef_desc": "Head Chef. Expert in traditional and modern cuisine."
+  "chef_title": "To'mah Family",
+  "chef_desc": "Our People. Committed to excellence and authentic flavors."
 },
 "toamahBanner": "To'amah, Al Madina People Restaurant"
 

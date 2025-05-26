@@ -1,8 +1,8 @@
 import SectionWrapper from "./sectionWrapper";
-import img1 from "../../assets/1.jpg";
-import img2 from "../../assets/2.jpg";
-import img3 from "../../assets/3.jpg";
-import img4 from "../../assets/4.jpg";
+import img1 from "../../assets/gallery/first.jpg";
+import img2 from "../../assets/gallery/second.jpg";
+import img3 from "../../assets/gallery/third.jpg";
+import img4 from "../../assets/gallery/forth.jpg";
 import img5 from "../../assets/5.jpg";
 import img6 from "../../assets/6.jpg";
 import { useTranslation } from "react-i18next";
@@ -77,7 +77,7 @@ export default function GalleryAndCategoryScroll() {
             ))}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {[img4, img5, img6].map((src, i) => (
+            {[img6, img5, img4].map((src, i) => (
               <div key={i + 3} className="w-full aspect-[4/5] overflow-hidden rounded-lg shadow-md">
                 <img src={src} alt={t("gallery_and_category.dish_alt", { number: i + 4 })} className="w-full h-full object-cover" />
               </div>

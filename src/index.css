@@ -1,8 +1,33 @@
+/* === Almadinah Font Faces === */
+@font-face {
+  font-family: "Almadinah1";
+  src: url("/fonts/almadinah-font/Almadinah1.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Almadinah2";
+  src: url("/fonts/almadinah-font/Almadinah2.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Almadinah3";
+  src: url("/fonts/almadinah-font/Almadinah3.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Base body styles */
 body {
-  font-family: "Roboto";
+  font-family: "Almadinah1", "Roboto", Arial, sans-serif;
   background: #f8f9fc;
-  color: #101828;
+  color: #7e845d;
   font-size: 16px;
   line-height: 1.5;
   transition: background 0.3s, color 0.3s;
@@ -30,7 +55,7 @@ img {
 /* Arabic-specific styles */
 body[dir="rtl"],
 html[dir="rtl"] body {
-  font-family: "Aref Ruqaa", serif;
+  font-family: "Almadinah2", "Aref Ruqaa", serif;
   font-size: 18px;
   background: #f0f2f7;
   color: #1d2939;
@@ -40,8 +65,35 @@ html[dir="rtl"] body {
 
   body[dir="rtl"],
   html[dir="rtl"] body {
-    font-size: 21px;
+    font-size: 34px;
   }
+}
+
+/* Utility classes for new color palette */
+.text-primary {
+  color: #7e845d !important;
+}
+
+.text-primary-dark {
+  color: #673026 !important;
+}
+
+.bg-primary {
+  background-color: #7e845d !important;
+}
+
+.bg-primary-dark {
+  background-color: #673026 !important;
+}
+
+.bg-primary-light {
+  background-color: #a6ab8b !important;
+  /* lighter shade of #7E845D */
+}
+
+.bg-primary-lightest {
+  background-color: #edece3 !important;
+  /* very light shade for backgrounds */
 }
 
 /* Headings */
@@ -51,8 +103,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto ";
-  color: #101828;
+  font-family: "Almadinah3", "Almadinah1", "Roboto", Arial, sans-serif;
+  color: #673026;
 }
 
 /* Arabic headings */
@@ -63,7 +115,7 @@ body[dir="rtl"] h4,
 body[dir="rtl"] h5,
 body[dir="rtl"] h6 {
   font-family: "Aref Ruqaa", serif;
-  color: #101828;
+  color: #673026;
 }
 
 /* Links */
@@ -79,7 +131,7 @@ a:hover {
 /* Buttons */
 button,
 .shop-button {
-  background: #344054;
+  background: #7e845d;
   color: #fff;
   padding: 12px 30px;
   border: none;
@@ -90,8 +142,27 @@ button,
 
 button:hover,
 .shop-button:hover {
-  background: #101828;
-  color: #f8f9fc;
+  background: #673026;
+  color: #edece3;
+}
+
+/* Book a table button */
+.book-a-table-button {
+  background-color: #7e845d;
+  color: #fff;
+  border: 1px solid #673026;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s;
+  border-radius: 0%;
+}
+
+.book-a-table-button:hover {
+  background-color: #673026;
+  color: #fff;
 }
 
 /* Hero section */
@@ -110,42 +181,17 @@ button:hover,
   background: #f8f9fc !important;
 }
 
-/* Utility classes for blue-gray palette */
-.text-primary {
-  color: #344054 !important;
-}
-
-.text-primary-dark {
-  color: #101828 !important;
-}
-
-.bg-primary {
-  background-color: #344054 !important;
-}
-
-.bg-primary-dark {
-  background-color: #101828 !important;
-}
-
-.bg-primary-light {
-  background-color: #f0f2f7 !important;
-}
-
-.bg-primary-lightest {
-  background-color: #f8f9fc !important;
-}
-
 /* Accent colors for contrast */
 .text-accent {
-  color: #667085 !important;
+  color: #a6ab8b !important;
 }
 
 .bg-accent {
-  background-color: #667085 !important;
+  background-color: #a6ab8b !important;
 }
 
 .border-accent {
-  border-color: #667085 !important;
+  border-color: #a6ab8b !important;
 }
 
 /* Responsive font size for Arabic */
@@ -594,30 +640,4 @@ a,
     margin-right: 0.75rem;
     margin-left: 0;
   }
-}
-
-.book-a-table-button {
-  background-color: #f8f8f8;
-  color: #000000;
-  /* لون النص أسود */
-  border: 1px solid #000000;
-  /* إطار أسود رفيع */
-  padding: 10px 20px;
-  /* مسافة داخلية (padding) لجعل الزرار أكبر قليلاً */
-  text-transform: uppercase;
-  /* تحويل النص لأحرف كبيرة (uppercase) */
-  font-family: sans-serif;
-  /* خط عام بدون زوائد (ممكن تختار خط معين لو عندك) */
-  font-size: 16px;
-  /* حجم الخط (ممكن تعدله) */
-  cursor: pointer;
-  /* تغيير شكل المؤشر ليد عند المرور فوق الزرار */
-  transition: background-color 0.3s ease;
-  /* تأثير انتقال سلس لتغيير لون الخلفية عند الـ hover */
-  border-radius: 0%;
-}
-
-.book-a-table-button:hover {
-  background-color: #e0e0e0;
-  /* لون أفتح عند مرور الماوس (hover) */
 }
