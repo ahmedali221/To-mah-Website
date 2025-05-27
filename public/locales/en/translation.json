@@ -32,6 +32,10 @@
 		"error_message": "There was an error sending your message. Please try again later."
 	},
 	"footer": {
+		"address": "Medina, Saudi Arabia",
+		"phone": "+966 58 325 0000",
+		"email": "info@tomah.sa",
+		"hours": "Open 24/7",
 		"quick_links":" Quick Links",
 		"follow_us":"Follow Us",
 		"rights": "To'mah. All rights reserved.",

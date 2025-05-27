@@ -64,13 +64,13 @@ function Navbar({ changeLanguage }) {
 				{currentLanguage === "en" ? (
 					<button
 						onClick={() => handleLanguageChange("ar")}
-						className={`${buttonClasses} bg-primary text-white hover:bg-primary-dark`}>
+						className={`${buttonClasses} bg-primary text-white hover:bg-primary`}>
 						{t("navbar.language_toggle.arabic")}
 					</button>
 				) : (
 					<button
 						onClick={() => handleLanguageChange("en")}
-						className={`${buttonClasses} bg-primary text-white hover:bg-primary-dark`}>
+						className={`${buttonClasses} bg-primary text-white hover:bg-primary`}>
 						{t("navbar.language_toggle.english")}
 					</button>
 				)}
@@ -79,7 +79,7 @@ function Navbar({ changeLanguage }) {
 	};
 
 	const isActive = (path) => {
-		return location.pathname === path ? "text-primary-dark font-medium" : "";
+		return location.pathname === path ? "text-primary font-medium" : "";
 	};
 
 	return (
@@ -124,7 +124,7 @@ function Navbar({ changeLanguage }) {
 						>
 							{t("navbar.home")}
 							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-							{location.pathname === "/" && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary-dark"></span>}
+							{location.pathname === "/" && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>}
 						</Link>
 
 						{/* menu */}
@@ -136,7 +136,7 @@ function Navbar({ changeLanguage }) {
 							{t("navbar.menu")}
 							<span className={`uppercase absolute bottom-0 left-0 w-0 h-0.5 ${scrolled ? "bg-primary" : "bg-white"
 								} transition-all duration-300 group-hover:w-full`}></span>
-							{location.pathname === "/menu" && <span className={`absolute bottom-0 left-0 w-full h-0.5 ${scrolled ? "bg-primary-dark" : "bg-white"
+							{location.pathname === "/menu" && <span className={`absolute bottom-0 left-0 w-full h-0.5 ${scrolled ? "bg-primary" : "bg-white"
 								}`}></span>}
 						</Link>
 
@@ -167,7 +167,7 @@ function Navbar({ changeLanguage }) {
 							{t("navbar.about")}
 							<span className={`absolute bottom-0 left-0 w-0 h-0.5 ${scrolled ? "bg-primary" : "bg-white"
 								} transition-all duration-300 group-hover:w-full`}></span>
-							{location.pathname === "/about" && <span className={`absolute bottom-0 left-0 w-full h-0.5 ${scrolled ? "bg-primary-dark" : "bg-white"
+							{location.pathname === "/about" && <span className={`absolute bottom-0 left-0 w-full h-0.5 ${scrolled ? "bg-primary" : "bg-white"
 								}`}></span>}
 						</Link>
 
@@ -180,7 +180,7 @@ function Navbar({ changeLanguage }) {
 							{t("navbar.contact")}
 							<span className={`absolute bottom-0 left-0 w-0 h-0.5 ${scrolled ? "bg-primary" : "bg-white"
 								} transition-all duration-300 group-hover:w-full`}></span>
-							{location.pathname === "/contact" && <span className={`absolute bottom-0 left-0 w-full h-0.5 ${scrolled ? "bg-primary-dark" : "bg-white"
+							{location.pathname === "/contact" && <span className={`absolute bottom-0 left-0 w-full h-0.5 ${scrolled ? "bg-primary" : "bg-white"
 								}`}></span>}
 						</Link>
 
@@ -207,7 +207,7 @@ function Navbar({ changeLanguage }) {
 
 						<button
 							onClick={() => setIsMenuOpen(!isMenuOpen)}
-							className="p-2 rounded-md text-primary-dark hover:text-primary focus:outline-none transition-colors duration-300">
+							className="p-2 rounded-md text-primary hover:text-primary focus:outline-none transition-colors duration-300">
 							{isMenuOpen ? (
 								<XMarkIcon className="h-6 w-6" />
 							) : (

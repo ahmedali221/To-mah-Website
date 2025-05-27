@@ -27,7 +27,7 @@
 body {
   font-family: "Almadinah1", "Roboto", Arial, sans-serif;
   background: #f8f9fc;
-  color: #7e845d;
+  color: #673026;
   font-size: 16px;
   line-height: 1.5;
   transition: background 0.3s, color 0.3s;
@@ -71,23 +71,23 @@ html[dir="rtl"] body {
 
 /* Utility classes for new color palette */
 .text-primary {
-  color: #7e845d !important;
-}
-
-.text-primary-dark {
   color: #673026 !important;
 }
 
-.bg-primary {
-  background-color: #7e845d !important;
+.text-primary-dark {
+  color: #7e845d !important;
 }
 
-.bg-primary-dark {
+.bg-primary {
   background-color: #673026 !important;
 }
 
+.bg-primary-dark {
+  background-color: #7e845d !important;
+}
+
 .bg-primary-light {
-  background-color: #a6ab8b !important;
+  background-color: #673026 !important;
   /* lighter shade of #7E845D */
 }
 
@@ -131,7 +131,7 @@ a:hover {
 /* Buttons */
 button,
 .shop-button {
-  background: #7e845d;
+  background: #673026;
   color: #fff;
   padding: 12px 30px;
   border: none;
@@ -142,15 +142,15 @@ button,
 
 button:hover,
 .shop-button:hover {
-  background: #673026;
+  background: #7e845d;
   color: #edece3;
 }
 
 /* Book a table button */
 .book-a-table-button {
-  background-color: #7e845d;
+  background-color: #673026;
   color: #fff;
-  border: 1px solid #673026;
+  border: 1px solid #7e845d;
   padding: 10px 20px;
   text-transform: uppercase;
   font-family: sans-serif;
@@ -161,7 +161,7 @@ button:hover,
 }
 
 .book-a-table-button:hover {
-  background-color: #673026;
+  background-color: #7e845d;
   color: #fff;
 }
 
