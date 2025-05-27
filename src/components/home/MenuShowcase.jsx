@@ -15,7 +15,7 @@ export default function MenuShowcase() {
   return (
     <>
       {/* Order Now Section */}
-      <SectionWrapper className="bg-primary-lightest">
+      <SectionWrapper >
         <h2 className="text-4xl font-extrabold uppercase mb-4 text-center text-primary">
           {t("menu_showcase.order_now")}
         </h2>
@@ -54,7 +54,7 @@ export default function MenuShowcase() {
       </SectionWrapper>
 
       {/* Experience Section */}
-      <SectionWrapper className="bg-primary-lightest">
+      <SectionWrapper>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
           {isArabic ? (
             <>
@@ -121,7 +121,7 @@ export default function MenuShowcase() {
       </SectionWrapper>
 
       {/* Grilled Menu Section */}
-      <SectionWrapper className="bg-primary-lightest">
+      <SectionWrapper>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {isArabic ? (
             <>
@@ -210,7 +210,7 @@ export default function MenuShowcase() {
       </SectionWrapper>
 
       {/* Dessert Menu Section */}
-      <SectionWrapper className="bg-primary-lightest">
+      <SectionWrapper>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {isArabic ? (
             <>

@@ -204,9 +204,9 @@ function Menu() {
   }, [productsData]);
 
   return (
-    <div className="bg-primary-lightest min-h-screen" dir={i18n.language === "ar" ? "rtl" : "ltr"}>
+    <div className=" min-h-screen" dir={i18n.language === "ar" ? "rtl" : "ltr"}>
       {/* Decorated Search Section */}
-      <div className="bg-gradient-to-r from-primary to-black py-12 px-4">
+      <div className="bg-primary-light py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <div className={`relative flex ${i18n.language === "ar" ? "flex-row-reverse" : ""}`}>
             <input
@@ -232,7 +232,7 @@ function Menu() {
       </div>
 
       {/* Most Popular Meals Section */}
-      <section className="py-10 bg-primary-lightest">
+      <section className="py-10">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-primary-dark mb-6 text-center">
             {t("menu.most_popular", "Most Popular Meals")}
