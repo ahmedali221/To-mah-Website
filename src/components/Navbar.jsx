@@ -97,10 +97,17 @@ function Navbar({ changeLanguage }) {
 				{/* Mobile Header */}
 				<div className="flex justify-between items-center">
 					<div className="md:hidden flex w-full items-center justify-between">
-						{/* Brand Name */}
-						<span className="text-xl font-bold text-black">
-							{t("navbar.brand") || "To'mah"}
-						</span>
+						{/* Brand Logo and Name */}
+						<div className="flex items-center gap-2">
+							<div className="w-10 h-10 rounded-full overflow-hidden border border-primary">
+								<img src={logo} alt="To'mah Logo" className="w-full h-full object-cover" />
+							</div>
+							<span className="text-xl font-bold text-black">
+								{t("navbar.brand") || "To'mah"}
+							</span>
+						</div>
+
+						{/* Right Side Controls */}
 						<div className="flex items-center gap-2">
 							{/* Cart Icon */}
 							<Link

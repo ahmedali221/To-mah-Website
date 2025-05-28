@@ -149,7 +149,7 @@ function Footer() {
 											</h2>
 											<div className="flex space-x-2 mt-2">
 												{Array.from({ length: 5 }).map((_, i) => (
-													<Star key={i} className="w-8 h-8 text-white fill-current" />
+													<Star key={i} className="w-4 h-4 text-white fill-current" />
 												))}
 											</div>
 										</div>
@@ -172,7 +172,7 @@ function Footer() {
 												className="flex items-center space-x-5 transition-colors duration-300 text-white text-xl"
 											>
 												<contact.icon className="w-8 h-8 text-primary bg-white rounded-full p-1" />
-												<span>{contact.text}</span>
+												<span style={{ fontSize: "24px" }}>{contact.text}</span>
 											</div>
 										))}
 									</div>
@@ -182,7 +182,7 @@ function Footer() {
 
 						{/* Navigation */}
 						<div className="space-y-8">
-							<h3 className="text-3xl font-bold relative " style={{ color: "#f0f0f0" }}>
+							<h3 className="text-xl font-bold relative " style={{ color: "#f0f0f0" }}>
 								{t("footer.quick_links")}
 								<div className="absolute -bottom-2 left-0 w-8 h-1 bg-primary-dark rounded-full"></div>
 							</h3>
@@ -191,10 +191,10 @@ function Footer() {
 									<Link
 										key={index}
 										to={link.path}
-										className="group flex items-center space-x-5 transition-all duration-300 p-4 rounded-lg hover:bg-primary/10 text-white text-xl"
+										className="group flex items-center space-x-5 transition-all duration-300 p-4 rounded-lg hover:bg-primary/10 text-white text-2xl"
 									>
 										<link.icon className="w-8 h-8 text-primary bg-white rounded-full p-1" />
-										<span className="text-white">{link.label}</span>
+										<span style={{ fontSize: "32px", color: "White" }}>{link.label}</span>
 										<ArrowRight className="w-7 h-7 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-primary bg-white rounded-full p-1" />
 									</Link>
 								))}
@@ -211,10 +211,10 @@ function Footer() {
 								{servicesList.map((service, index) => (
 									<div
 										key={index}
-										className="group flex items-center space-x-5 transition-all duration-300 p-4 rounded-lg hover:bg-primary/10 cursor-pointer text-white text-xl"
+										className="group flex items-center space-x-5 transition-all duration-300 p-4 rounded-lg hover:bg-primary/10 text-white text-2xl"
 									>
-										<service.icon className="w-8 h-8 text-primary bg-white rounded-full p-1" />
-										<span>{service.name}</span>
+										<service.icon className="w-7 h-7 text-primary bg-white rounded-full p-1" />
+										<span style={{ fontSize: "32px" }}>{service.name}</span>
 									</div>
 								))}
 							</div>
@@ -234,11 +234,11 @@ function Footer() {
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label={social.name}
-										className={`group relative overflow-hidden bg-white rounded-2xl p-8 border border-primary/20 hover:border-primary transition-all duration-500 hover:scale-105 flex items-center justify-center ${social.shadow} hover:shadow-lg`}
+										className={`group relative overflow-hidden bg-white rounded-2xl p-3 border border-primary/20 hover:border-primary transition-all duration-500 hover:scale-105 flex items-center justify-center ${social.shadow} hover:shadow-lg`}
 										style={{ fontSize: "0.8rem" }} // reverted icon size
 									>
 										<div className={`absolute inset-0 bg-gradient-to-r ${social.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
-										<social.icon className="relative z-10 mx-auto text-primary" style={{ width: "1.5em", height: "1.5em" }} /> {/* reverted icon size */}
+										<social.icon className="relative z-10 mx-auto text-primary" style={{ width: "1.5em", height: "1em" }} /> {/* reverted icon size */}
 									</a>
 								))}
 							</div>

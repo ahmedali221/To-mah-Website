@@ -45,7 +45,7 @@ export default function HeroSlider() {
     };
 
     return (
-        <div className="relative w-full h-[30vh] md:h-[80vh]  lg:h-[90vh] overflow-hidden">
+        <div className="relative w-full h-[30vh] md:h-[80vh] lg:h-[90vh] overflow-hidden">
             <AnimatePresence custom={direction} mode="popLayout">
                 <motion.div
                     key={currentSlide}
@@ -64,7 +64,6 @@ export default function HeroSlider() {
                         animate={{ scale: 1 }}
                         transition={{ duration: 8, ease: "linear" }}
                     />
-
                     <motion.div
                         className="absolute top-16 left-1/2 -translate-x-1/2 z-10"
                         initial={{ y: -20, opacity: 0 }}
@@ -80,50 +79,43 @@ export default function HeroSlider() {
                 </motion.div>
             </AnimatePresence>
 
-            {/* Navigation Buttons */}
+            {/* Navigation Buttons - MINIMAL */}
             <motion.button
                 onClick={() => navigate((currentSlide - 1 + heroImages.length) % heroImages.length)}
                 aria-label="Previous slide"
-                whileHover={{ scale: 1.0, backgroundColor: "rgba(0,0,0,0.7)" }}
-                whileTap={{ scale: 0.9 }}
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white w-8 h-8 rounded-full flex items-center justify-center z-20"
+                style={{ fontSize: "1.2rem", fontWeight: 400 }}
+                whileHover={{ scale: 1.07, backgroundColor: "rgba(0,0,0,0.3)" }}
+                whileTap={{ scale: 0.93 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-                <span className="text-2xl font-bold">&lt;</span>
+                <span>&lt;</span>
             </motion.button>
-
             <motion.button
                 onClick={() => navigate((currentSlide + 1) % heroImages.length)}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white w-12 h-12 rounded-full flex items-center justify-center z-20 backdrop-blur-sm"
                 aria-label="Next slide"
-                whileHover={{ scale: 1.2, backgroundColor: "rgba(0,0,0,0.7)" }}
-                whileTap={{ scale: 0.9 }}
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white w-8 h-8 rounded-full flex items-center justify-center z-20"
+                style={{ fontSize: "1.2rem", fontWeight: 400 }}
+                whileHover={{ scale: 1.07, backgroundColor: "rgba(0,0,0,0.3)" }}
+                whileTap={{ scale: 0.93 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-                <span className="text-2xl font-bold">&gt;</span>
+                <span>&gt;</span>
             </motion.button>
 
-            {/* Indicators */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-10">
+            {/* Indicators - MINIMAL */}
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
                 {heroImages.map((_, idx) => (
-                    <motion.button
+                    <button
                         key={idx}
                         onClick={() => navigate(idx)}
-                        className={`w-3 h-3 rounded-full ${idx === currentSlide ? "bg-white" : "bg-white/50"} relative`}
+                        className={`w-1.5 h-1.5 rounded-full ${idx === currentSlide ? "bg-white" : "bg-white/30"} p-0 m-0 border-none outline-none transition-all duration-200`}
                         aria-label={`Go to slide ${idx + 1}`}
-                        whileHover={{ scale: 1.5 }}
-                        whileTap={{ scale: 0.8 }}
-                        transition={{ type: "spring", stiffness: 500 }}
-                    >
-                        {idx === currentSlide && (
-                            <motion.span
-                                className="absolute inset-0 rounded-full bg-white"
-                                layoutId="indicator"
-                                transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                            />
-                        )}
-                    </motion.button>
+                        style={{ minWidth: '3px', minHeight: '3px' }}
+                    />
                 ))}
             </div>
+
         </div>
     );
 }
