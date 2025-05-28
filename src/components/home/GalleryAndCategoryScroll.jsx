@@ -66,23 +66,14 @@ export default function GalleryAndCategoryScroll() {
       {/* Gallery Section */}
       <SectionWrapper className="bg-transaprent">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          {t("gallery_and_category.title")}
+          {t("gallery_and_category")}
         </h2>
-        <div className="grid grid-cols-1 gap-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {[img1, img2, img3].map((src, i) => (
-              <div key={i} className="w-full aspect-[4/5] overflow-hidden rounded-lg shadow-md">
-                <img src={src} alt={t("gallery_and_category.dish_alt", { number: i + 1 })} className="w-full h-full object-cover" />
-              </div>
-            ))}
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {[img6, img5, img4].map((src, i) => (
-              <div key={i + 3} className="w-full aspect-[4/5] overflow-hidden rounded-lg shadow-md">
-                <img src={src} alt={t("gallery_and_category.dish_alt", { number: i + 4 })} className="w-full h-full object-cover" />
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          {[img1, img2, img3, img6, img5, img4].map((src, i) => (
+            <div key={i} className="w-full aspect-[4/5] overflow-hidden rounded-lg shadow-md">
+              <img src={src} alt={t("gallery_and_category.dish_alt", { number: i + 1 })} className="w-full h-full object-cover" />
+            </div>
+          ))}
         </div>
       </SectionWrapper>
     </>

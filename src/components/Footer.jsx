@@ -100,7 +100,7 @@ function Footer() {
 	];
 
 	return (
-		<footer dir={i18n.language === "ar" ? "rtl" : "ltr"} className="relative overflow-hidden">
+		<footer dir={i18n.language === "ar" ? "rtl" : "ltr"} className="relative overflow-hidden w-full">
 			{/* Dynamic Background */}
 			<div className="absolute inset-0">
 				<div className="absolute inset-0 bg-primary"></div>
@@ -125,10 +125,9 @@ function Footer() {
 			</div>
 
 			<div className="relative z-10">
-				{/* Main Content */}
-				<div className="max-w-7xl mx-auto px-6 py-16 lg:px-8">
-					<div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-
+				{/* Main Content - removed max-w-7xl and reduced padding */}
+				<div className="w-full px-20 py-20">
+					<div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
 						{/* Brand Section */}
 						<div className="lg:col-span-2 space-y-8">
 							<div className="relative group">
@@ -141,27 +140,27 @@ function Footer() {
 											<img
 												src={logo}
 												alt="To'mah Logo"
-												className="relative w-20 h-20 rounded-full object-cover ring-2 ring-primary-dark/30"
+												className="relative w-24 h-24 rounded-full object-cover ring-2 ring-primary-dark/30"
 											/>
 										</div>
 										<div>
-											<h2 className="text-3xl font-bold bg-gradient-to-r from-primary via-primary-dark to-primary bg-clip-text text-transparent" style={{ color: "#7e845d" }}>
+											<h2 className="text-4xl font-bold text-white" style={{ color: "#f0f0f0" }}>
 												{t("navbar.brand")}
 											</h2>
-											<div className="flex space-x-1 mt-2">
+											<div className="flex space-x-2 mt-2">
 												{Array.from({ length: 5 }).map((_, i) => (
-													<Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+													<Star key={i} className="w-8 h-8 text-white fill-current" />
 												))}
 											</div>
 										</div>
 									</div>
 
-									<p className="leading-relaxed mb-6" style={{ color: "#7e845d", fontSize: "1.25em" }}>
+									<p className="leading-relaxed mb-6 text-white text-2xl">
 										{t("footer.aside.description")}
 									</p>
 
 									{/* Contact Info */}
-									<div className="space-y-4">
+									<div className="space-y-5">
 										{[
 											{ icon: MapPin, text: t("footer.address") },
 											{ icon: Phone, text: t("footer.phone") },
@@ -170,10 +169,9 @@ function Footer() {
 										].map((contact, index) => (
 											<div
 												key={index}
-												className="flex items-center space-x-4 transition-colors duration-300"
-												style={{ color: "#7e845d", fontSize: "0.8em" }}
+												className="flex items-center space-x-5 transition-colors duration-300 text-white text-xl"
 											>
-												<contact.icon className="w-6 h-6" style={{ color: "#7e845d" }} />
+												<contact.icon className="w-8 h-8 text-primary bg-white rounded-full p-1" />
 												<span>{contact.text}</span>
 											</div>
 										))}
@@ -183,41 +181,39 @@ function Footer() {
 						</div>
 
 						{/* Navigation */}
-						<div className="space-y-6">
-							<h3 className=" font-bold relative" style={{ color: "#7e845d" }}>
+						<div className="space-y-8">
+							<h3 className="text-3xl font-bold relative " style={{ color: "#f0f0f0" }}>
 								{t("footer.quick_links")}
 								<div className="absolute -bottom-2 left-0 w-8 h-1 bg-primary-dark rounded-full"></div>
 							</h3>
-							<nav className="space-y-4">
+							<nav className="space-y-5">
 								{navigationLinks.map((link, index) => (
 									<Link
 										key={index}
 										to={link.path}
-										className="group flex items-center space-x-4 transition-all duration-300 p-3 rounded-lg hover:bg-primary/10"
-										style={{ color: "#7e845d", fontSize: "0.8em" }}
+										className="group flex items-center space-x-5 transition-all duration-300 p-4 rounded-lg hover:bg-primary/10 text-white text-xl"
 									>
-										<link.icon className="w-7 h-7" style={{ color: "#7e845d" }} />
-										<span>{link.label}</span>
-										<ArrowRight className="w-6 h-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+										<link.icon className="w-8 h-8 text-primary bg-white rounded-full p-1" />
+										<span className="text-white">{link.label}</span>
+										<ArrowRight className="w-7 h-7 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-primary bg-white rounded-full p-1" />
 									</Link>
 								))}
 							</nav>
 						</div>
 
 						{/* Services */}
-						<div className="space-y-6">
-							<h3 className=" font-bold relative" style={{ color: "#7e845d" }}>
+						<div className="space-y-8">
+							<h3 className="text-3xl font-bold relative " style={{ color: "#f0f0f0" }}>
 								{t("footer.services_title")}
 								<div className="absolute -bottom-2 left-0 w-8 h-1 bg-primary-dark rounded-full"></div>
 							</h3>
-							<div className="space-y-4">
+							<div className="space-y-5">
 								{servicesList.map((service, index) => (
 									<div
 										key={index}
-										className="group flex items-center space-x-4 transition-all duration-300 p-3 rounded-lg hover:bg-primary/10 cursor-pointer"
-										style={{ color: "#7e845d", fontSize: "0.8em" }}
+										className="group flex items-center space-x-5 transition-all duration-300 p-4 rounded-lg hover:bg-primary/10 cursor-pointer text-white text-xl"
 									>
-										<service.icon className="w-7 h-7" style={{ color: "#7e845d" }} />
+										<service.icon className="w-8 h-8 text-primary bg-white rounded-full p-1" />
 										<span>{service.name}</span>
 									</div>
 								))}
@@ -225,12 +221,12 @@ function Footer() {
 						</div>
 
 						{/* Social Media */}
-						<div className="lg:col-span-1 space-y-6">
-							<h3 className=" font-bold relative" style={{ color: "#7e845d" }}>
+						<div className="lg:col-span-1 space-y-8">
+							<h3 className="text-3xl font-bold relative " style={{ color: "#f0f0f0" }}>
 								{t("footer.follow_us")}
 								<div className="absolute -bottom-2 left-0 w-8 h-1 bg-primary-dark rounded-full"></div>
 							</h3>
-							<div className="grid grid-cols-2 gap-6">
+							<div className="grid grid-cols-2 gap-8">
 								{socialPlatforms.map((social, index) => (
 									<a
 										key={index}
@@ -238,13 +234,11 @@ function Footer() {
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label={social.name}
-										className={`group relative overflow-hidden bg-primary-lightest rounded-2xl p-7 border border-primary/20 hover:border-primary transition-all duration-500 hover:scale-105 flex items-center justify-center ${social.shadow} hover:shadow-lg`}
-										style={{ fontSize: "2.5rem", color: "#7e845d" }}
+										className={`group relative overflow-hidden bg-white rounded-2xl p-8 border border-primary/20 hover:border-primary transition-all duration-500 hover:scale-105 flex items-center justify-center ${social.shadow} hover:shadow-lg`}
+										style={{ fontSize: "0.8rem" }} // reverted icon size
 									>
 										<div className={`absolute inset-0 bg-gradient-to-r ${social.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
-										<social.icon className="relative z-10 mx-auto" style={{ color: "#7e845d" }} />
-										{/* Shine effect */}
-										<div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+										<social.icon className="relative z-10 mx-auto text-primary" style={{ width: "1.5em", height: "1.5em" }} /> {/* reverted icon size */}
 									</a>
 								))}
 							</div>
@@ -252,31 +246,30 @@ function Footer() {
 					</div>
 				</div>
 
-				{/* Bottom Section */}
+				{/* Bottom Section - removed max-w-7xl and reduced padding */}
 				<div className="border-t border-primary-dark bg-primary-dark/80 backdrop-blur-sm">
-					<div className="max-w-7xl mx-auto px-6 py-6 lg:px-8">
+					<div className="w-full px-4 py-4">
 						<div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-							<div className="flex items-center space-x-4">
-								<div className="flex items-center space-x-2">
-									<div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-										<span className="font-bold text-sm" style={{ color: "#7e845d" }}>©</span>
+							<div className="flex items-center space-x-6">
+								<div className="flex items-center space-x-3">
+									<div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+										<span className="font-bold text-lg text-white">©</span>
 									</div>
-									<span className="text-xl font-semibold" style={{ color: "#7e845d" }}>
+									<span className="text-2xl font-semibold text-white">
 										{new Date().getFullYear()}
 									</span>
 								</div>
-								<p className="text-lg" style={{ color: "#7e845d" }}>
+								<p className="text-xl text-white">
 									{t("footer.rights")}
 								</p>
-								<Heart className="w-5 h-5 text-red-400 animate-pulse fill-current" />
+								<Heart className="w-7 h-7 text-primary bg-white rounded-full p-1 animate-pulse fill-current" />
 							</div>
 
-							<div className="flex space-x-8">
+							<div className="flex space-x-10">
 								{["terms", "privacy", "cookie"].map((item) => (
 									<button
 										key={item}
-										className="group relative font-medium"
-										style={{ color: "#7e845d", fontSize: "1.1em" }}
+										className="group relative font-medium text-white text-xl"
 									>
 										{t(`footer.legal.${item}`)}
 										<div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></div>

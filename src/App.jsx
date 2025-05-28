@@ -2,7 +2,7 @@
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Navbar from "./components/Navbar";
@@ -28,12 +28,20 @@ function App() {
     i18n.changeLanguage(lng);
   };
 
+  // Detect mobile device
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <Router>
       <ThemeProvider>
         <CartProvider>
           {/* Banner and Navbar always visible */}
-          <Banner />
+          {!isMobile && <Banner />}
           <Navbar changeLanguage={changeLanguage} />
 
           {/* Page Content with Top Padding for sticky navbar */}

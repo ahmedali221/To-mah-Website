@@ -6,15 +6,23 @@ import GalleryAndCategoryScroll from "../components/home/GalleryAndCategoryScrol
 import VisionAndPhilosophy from "../components/home/VisionAndPhilosophy";
 import HeroSlider from "../components/home/heroSlider";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 
 
 export default function Home() {
   const { t } = useTranslation();
+  // Detect mobile device
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="main-bg">
       <HeroSlider />
-      <div className="bg-white overflow-hidden border-y border-gray-200">
+      {!isMobile && <div className="bg-white overflow-hidden border-y border-gray-200">
         <div className="w-full h-14 flex items-center">
           <div className="whitespace-nowrap animate-scroll-single px-4">
             <div className="text-2xl font-stretch-expanded text-gray-900 tracking-wide"> {/* Larger font */}
@@ -40,7 +48,7 @@ export default function Home() {
     }
     `}
         </style>
-      </div>
+      </div>}
       <AboutAndVideoSection />
       <MenuBanner />
       <MenuShowcase />

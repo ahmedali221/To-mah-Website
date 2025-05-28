@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import owner from "../../assets/owner.jpg";
+import owner from "../../assets/people.jpg";
 import owner2 from "../../assets/owner2.jpg";
 import cheif from "../../assets/team.jpg";
 
@@ -25,33 +25,53 @@ export default function PeopleSection() {
   ];
 
   return (
-    <>
-      <h2 className="text-4xl font-bold text-center my-6">
-        {t("people_section.title")}
-      </h2>
-      <div className="border border-black overflow-hidden mx-0.5">
-        <div className="flex flex-col md:flex-row">
+    <section className="py-16 px-4 bg-gradient-to-b from-white to-gray-50">
+      <div className="container mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+            {t("people_section.title")}
+          </h2>
+          <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+
+        {/* Cards Container */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cards.map((card, index) => (
             <div
               key={index}
-              className={`flex-1 flex flex-col items-center p-15 relative ${index !== cards.length - 1
-                ? "md:border-r md:border-gray-300"
-                : ""
-                }`}
+              className="group relative transform transition duration-500 hover:scale-105"
             >
-              <img
-                src={card.image}
-                alt={card.title}
-                className="w-60 h-40 mx-auto rounded-full object-cover shadow-lg mb-4 border-2 border-white"
-              />
-              <h3 className="text-2xl font-bold">{card.title}</h3>
-              <p className="text-gray-500 text-xl mt-2 text-center">
-                {card.description}
-              </p>
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden p-6">
+                {/* Image Container */}
+                <div className="relative mb-6">
+                  <div className="aspect-w-1 aspect-h-1">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="w-full h-full object-cover rounded-xl transform transition duration-500 group-hover:scale-105"
+                    />
+                  </div>
+
+                </div>
+
+                {/* Content */}
+                <div className="text-center">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
+                    {card.title}
+                  </h3>
+                  <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
+                    {card.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect Overlay */}
+                <div className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition duration-300 rounded-2xl"></div>
+              </div>
             </div>
           ))}
         </div>
       </div>
-    </>
+    </section>
   );
 }

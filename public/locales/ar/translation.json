@@ -486,10 +486,7 @@
   "pasta": "المعكرونة",
   "snacks": "الوجبات الخفيفة"
 },
-"gallery_and_category": {
-  "title": "مطعم طُعمة",
-  "dish_alt": "طبق {{number}}"
-},
+"gallery_and_category": "زوارنا",
 "people_section": {
   "title": "تعرف على الملاك والطهاة",
   "owner_title": "أحمد الطعمة",

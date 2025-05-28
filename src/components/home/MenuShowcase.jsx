@@ -6,6 +6,7 @@ import meal4 from "../../assets/meal4.JPG";
 import view from "../../assets/reserve2.jpg";
 import products from "../../service/data"; // Adjust the path if needed
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function MenuShowcase() {
   const { t, i18n } = useTranslation();
@@ -16,13 +17,13 @@ export default function MenuShowcase() {
     <>
       {/* Order Now Section */}
       <SectionWrapper >
-        <h2 className="text-4xl font-extrabold uppercase mb-4 text-center text-primary">
+        <h2 className="text-4xl font-extrabold uppercase mb-4 text-center" >
           {t("menu_showcase.order_now")}
         </h2>
         <p className="text-primary-dark mb-12 text-center">
           {t("menu_showcase.order_now_desc")}
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {showcaseProducts.map((product) => (
             <div key={product.id} className="group bg-white rounded-md shadow-md overflow-hidden relative border border-primary/10">
               <div className="relative overflow-hidden">
@@ -64,24 +65,52 @@ export default function MenuShowcase() {
                   {t("menu_showcase.experience_title")}
                 </h2>
 
-                <a
-                  href="https://tomah.sa/"
-                  className="group relative inline-flex items-center justify-center bg-primary text-white px-6 py-3 text-lg font-semibold transition duration-300 hover:bg-primary-dark rounded-full shadow-lg"
+                <Link
+                  to="https://tomah.sa/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+    group
+    relative
+    inline-flex
+    items-center
+    justify-center
+    px-8
+    py-3
+    text-lg
+    font-bold
+    rounded-full
+    bg-primary
+    shadow-xl
+    ring-1 ring-primary/20
+    hover:scale-105
+    hover:shadow-2xl
+    transition-all
+    duration-300
+    focus:outline-none
+    focus:ring-2
+    focus:ring-amber-400
+    backdrop-blur-sm
+    border border-white/10
+    text-white
+    overflow-hidden
+  "
                 >
-                  <span className="absolute right-3 text-amber-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <span className="absolute right-4 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl font-extrabold">
                     *
                   </span>
-                  <span className="transition-transform text-white duration-300 group-hover:-translate-x-1">
+                  <span className="z-10 transition-transform duration-300 group-hover:-translate-x-1" style={{ color: "white" }}>
                     {t("menu_showcase.book_table")}
                   </span>
-                </a>
+                </Link>
+
               </div>
               {/* Image - Left side for Arabic */}
               <div className="order-1 md:order-2">
                 <img
                   src={view}
                   alt="Delicious food"
-                  className="w-full h-96 object-cover rounded-lg shadow-lg border-4 border-primary"
+                  className="w-full h-96 object-cover rounded-lg shadow-lg  border-primary"
                 />
               </div>
             </>
@@ -92,7 +121,7 @@ export default function MenuShowcase() {
                 <img
                   src={view}
                   alt="Delicious food"
-                  className="w-full h-96 object-cover rounded-lg shadow-lg border-4 border-primary"
+                  className="w-full h-96 object-cover rounded-lg shadow-lg border-primary"
                 />
               </div>
               {/* Content - Right side for English */}
@@ -105,15 +134,44 @@ export default function MenuShowcase() {
                 </p>
                 <a
                   href="https://tomah.sa/"
-                  className="group relative inline-flex items-center justify-center bg-primary text-white px-6 py-3 text-lg font-semibold transition duration-300 hover:bg-primary-dark rounded-full shadow-lg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+    group
+    relative
+    inline-flex
+    items-center
+    justify-center
+    px-8
+    py-3
+    text-lg
+    font-bold
+    rounded-full
+bg-primary
+    shadow-xl
+    ring-1 ring-primary/20
+    hover:scale-105
+    hover:shadow-2xl
+    transition-all
+    duration-300
+    focus:outline-none
+    focus:ring-2
+    focus:ring-amber-400
+    backdrop-blur-sm
+    border border-white/10
+    text-white
+    overflow-hidden
+  "
                 >
-                  <span className="absolute left-3 text-amber-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <span className="absolute left-4 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl font-extrabold">
                     *
                   </span>
-                  <span className="transition-transform duration-300 group-hover:translate-x-1">
+                  <span className="z-10 transition-transform duration-300 group-hover:translate-x-1" style={{ color: "white" }}>
                     {t("menu_showcase.book_table")}
                   </span>
                 </a>
+
+
               </div>
             </>
           )}
@@ -130,7 +188,7 @@ export default function MenuShowcase() {
                 <img
                   src={meal4}
                   alt="Grilled food"
-                  className="w-full h-auto max-h-96 object-cover rounded-full shadow-lg border-4 border-primary"
+                  className="w-full h-auto max-h-96 object-cover rounded-full shadow-lg  border-primary"
                 />
               </div>
               {/* Content - Left side for Arabic (swapped) */}
@@ -171,7 +229,7 @@ export default function MenuShowcase() {
                 <img
                   src={meal4}
                   alt="Grilled food"
-                  className="w-full h-auto max-h-96 object-cover rounded-full shadow-lg border-4 border-primary"
+                  className="w-full h-auto max-h-96 object-cover rounded-full shadow-lg  border-primary"
                 />
               </div>
               {/* Content - Right side for English (swapped) */}
@@ -219,7 +277,7 @@ export default function MenuShowcase() {
                 <img
                   src={meal3}
                   alt="Dessert"
-                  className="w-full h-auto max-h-96 object-cover rounded-full shadow-lg border-4 border-primary"
+                  className="w-full h-auto max-h-96 object-cover rounded-full shadow-lg  border-primary"
                 />
               </div>
               {/* Content - Right side for Arabic (swapped) */}
@@ -290,7 +348,7 @@ export default function MenuShowcase() {
                 <img
                   src={meal3}
                   alt="Dessert"
-                  className="w-full h-auto max-h-96 object-cover rounded-full shadow-lg border-4 border-primary"
+                  className="w-full h-auto max-h-96 object-cover rounded-full shadow-lg  border-primary"
                 />
               </div>
             </>

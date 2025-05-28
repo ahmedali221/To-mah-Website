@@ -14,7 +14,7 @@ export default function VisionAndPhilosophy() {
   return (
     <>
       {/* Vision & Goals */}
-      <SectionWrapper className="bg-transaprent mb-25">
+      <SectionWrapper className="bg-transaprent ">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 relative">
           <span className="relative px-8">{t("home.vision.title")}</span>
         </h2>
@@ -69,69 +69,57 @@ export default function VisionAndPhilosophy() {
         </div>
       </SectionWrapper>
 
-      {/* Philosophy Section (now shows Features cards) */}
-      <SectionWrapper className="bg-transaprent ">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 relative">
-          <span className="relative px-8">{t("home.values.title")}</span>
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white p-4 rounded-xl shadow-md text-center">
-            <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center mx-auto mb-3">
-              <SparklesIcon className="h-5 w-5 md:h-6 md:w-6" />
-            </div>
-            <h3 className="text-lg md:text-xl font-bold mb-1">{t("home.features.quality.title")}</h3>
-            <p className="text-gray-600 text-sm md:text-base">{t("home.features.quality.description")}</p>
-          </div>
-          <div className="bg-white p-4 rounded-xl shadow-md text-center">
-            <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center mx-auto mb-3">
-              <ClockIcon className="h-5 w-5 md:h-6 md:w-6" />
-            </div>
-            <h3 className="text-lg md:text-xl font-bold mb-1">{t("home.features.service.title")}</h3>
-            <p className="text-gray-600 text-sm md:text-base">{t("home.features.service.description")}</p>
-          </div>
-          <div className="bg-white p-4 rounded-xl shadow-md text-center">
-            <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center mx-auto mb-3">
-              <ShieldCheckIcon className="h-5 w-5 md:h-6 md:w-6" />
-            </div>
-            <h3 className="text-lg md:text-xl font-bold mb-1">{t("home.features.hygiene.title")}</h3>
-            <p className="text-gray-600 text-sm md:text-base">{t("home.features.hygiene.description")}</p>
-          </div>
-          <div className="bg-white p-4 rounded-xl shadow-md text-center">
-            <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center mx-auto mb-3">
-              <TruckIcon className="h-5 w-5 md:h-6 md:w-6" />
-            </div>
-            <h3 className="text-lg md:text-xl font-bold mb-1">{t("home.features.delivery.title")}</h3>
-            <p className="text-gray-600 text-sm md:text-base">{t("home.features.delivery.description")}</p>
+      {/* Values Section - Clean 4-column layout */}
+      <SectionWrapper className="py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+            {t("home.values.title")}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: SparklesIcon, key: "quality" },
+              { icon: ClockIcon, key: "service" },
+              { icon: ShieldCheckIcon, key: "hygiene" },
+              { icon: TruckIcon, key: "delivery" }
+            ].map(({ icon: Icon, key }) => (
+              <div key={key} className="bg-white border border-gray-100 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
+                <Icon className="h-8 w-8 mx-auto mb-4 text-blue-600" />
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  {t(`home.features.${key}.title`)}
+                </h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {t(`home.features.${key}.description`)}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </SectionWrapper>
 
-      {/* Features Section (now shows Philosophy cards) */}
-      <SectionWrapper className="bg-transaprent">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 relative">
-          <span className="relative px-8">{t("home.features.title")}</span>
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl bg-white">
-            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4">
-              <HeartIcon className="w-6 h-6 md:w-8 md:h-8" />
-            </div>
-            <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.values.quality.title")}</h3>
-            <p className="text-gray-600 text-sm md:text-base">{t("home.values.quality.description")}</p>
-          </div>
-          <div className="flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl bg-white">
-            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4">
-              <SparklesIcon className="w-6 h-6 md:w-8 md:h-8" />
-            </div>
-            <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.values.tradition.title")}</h3>
-            <p className="text-gray-600 text-sm md:text-base">{t("home.values.tradition.description")}</p>
-          </div>
-          <div className="flex flex-col items-center text-center p-6 rounded-xl shadow-lg hover:shadow-xl bg-white">
-            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4">
-              <StarIcon className="w-6 h-6 md:w-8 md:h-8" />
-            </div>
-            <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.values.service.title")}</h3>
-            <p className="text-gray-600 text-sm md:text-base">{t("home.values.service.description")}</p>
+      {/* Features Section - Clean 3-column layout */}
+      <SectionWrapper className="py-16 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+            {t("home.features.title")}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { icon: HeartIcon, key: "quality" },
+              { icon: SparklesIcon, key: "tradition" },
+              { icon: StarIcon, key: "service" }
+            ].map(({ icon: Icon, key }) => (
+              <div key={key} className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-6">
+                  <Icon className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  {t(`home.values.${key}.title`)}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {t(`home.values.${key}.description`)}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </SectionWrapper>

@@ -45,7 +45,7 @@ export default function HeroSlider() {
     };
 
     return (
-        <div className="relative w-full h-[70vh] md:h-[80vh] lg:h-[90vh] overflow-hidden bg-black">
+        <div className="relative w-full h-[30vh] md:h-[80vh]  lg:h-[90vh] overflow-hidden">
             <AnimatePresence custom={direction} mode="popLayout">
                 <motion.div
                     key={currentSlide}
@@ -83,9 +83,8 @@ export default function HeroSlider() {
             {/* Navigation Buttons */}
             <motion.button
                 onClick={() => navigate((currentSlide - 1 + heroImages.length) % heroImages.length)}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white w-12 h-12 rounded-full flex items-center justify-center z-20 backdrop-blur-sm"
                 aria-label="Previous slide"
-                whileHover={{ scale: 1.2, backgroundColor: "rgba(0,0,0,0.7)" }}
+                whileHover={{ scale: 1.0, backgroundColor: "rgba(0,0,0,0.7)" }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
