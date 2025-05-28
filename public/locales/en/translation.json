@@ -486,13 +486,16 @@
 },
 "gallery_and_category":"Our Visitors",
 "people_section": {
-  "title": "Meet Our Owners & Chefs",
-  "owner_title": "Sarah Al-Tomah",
-  "owner_desc": "Founder & Owner. Passionate about authentic flavors and hospitality.",
-  "owner2_title": "Ali Al-Tomah",
-  "owner2_desc": "Co-Owner. Dedicated to quality and customer satisfaction.",
-  "chef_title": "To'mah Family",
-  "chef_desc": "Our People. Committed to excellence and authentic flavors."
+	"title": "Meet Our Owners & Chefs",
+
+	"owner_title": "Linah",
+	"owner_desc": "Founder & Owner.\nPassionate about authentic flavors and hospitality.\n",
+
+	"owner2_title": "Ali Al-Tomah",
+	"owner2_desc": "Co-Owner.\nDedicated to quality and customer satisfaction.\n",
+
+	"chef_title": "To'mah Family",
+	"chef_desc": "Our People.\nCommitted to excellence and authentic flavors.\n"
 },
 "toamahBanner": "To'amah, Al Madina People Restaurant"
 

@@ -5,6 +5,14 @@ import cheif from "../../assets/team.jpg";
 
 export default function PeopleSection() {
   const { t } = useTranslation();
+  // Helper to add <br /> after each period.
+  function formatDescription(text) {
+    // Replace period + space/newline or end with <br />
+    return text
+      .replace(/\.\s*$/gm, ".") // handle periods at end of lines (optional safety)
+      .replace(/\.(\s|\n|$)/g, '.<br />')
+      .replace(/<br \/>$/, ''); // remove last <br /> if exists
+  }
 
   const cards = [
     {
@@ -60,9 +68,11 @@ export default function PeopleSection() {
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
                     {card.title}
                   </h3>
-                  <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
-                    {card.description}
-                  </p>
+                  <p
+                    className="text-black text-lg md:text-xl leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: formatDescription(card.description) }}
+                  ></p>
+
                 </div>
 
                 {/* Hover Effect Overlay */}

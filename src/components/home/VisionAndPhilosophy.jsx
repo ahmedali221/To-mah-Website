@@ -27,7 +27,7 @@ export default function VisionAndPhilosophy() {
               </div>
               <div>
                 <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.vision.heritage.title")}</h3>
-                <p className="text-gray-600 text-sm md:text-base">{t("home.vision.heritage.description")}</p>
+                <p className="text-shadow-black text-sm md:text-base">{t("home.vision.heritage.description")}</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -36,7 +36,7 @@ export default function VisionAndPhilosophy() {
               </div>
               <div>
                 <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.vision.innovation.title")}</h3>
-                <p className="text-gray-600 text-sm md:text-base">{t("home.vision.innovation.description")}</p>
+                <p className="text-shadow-black text-sm md:text-base">{t("home.vision.innovation.description")}</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -45,7 +45,7 @@ export default function VisionAndPhilosophy() {
               </div>
               <div>
                 <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.vision.community.title")}</h3>
-                <p className="text-gray-600 text-sm md:text-base">{t("home.vision.community.description")}</p>
+                <p className="text-shadow-black text-sm md:text-base">{t("home.vision.community.description")}</p>
               </div>
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function VisionAndPhilosophy() {
                 <h3 className="font-semibold text-gray-900 mb-2">
                   {t(`home.features.${key}.title`)}
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-sm text-shadow-black leading-relaxed">
                   {t(`home.features.${key}.description`)}
                 </p>
               </div>
@@ -115,7 +115,7 @@ export default function VisionAndPhilosophy() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
                   {t(`home.values.${key}.title`)}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-shadow-black leading-relaxed">
                   {t(`home.values.${key}.description`)}
                 </p>
               </div>
