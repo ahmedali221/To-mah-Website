@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../../assets/logot.png";
+import logo from "../../assets/logo.png";
 import image1 from "../../assets/Slider1.jpeg";
 import image2 from "../../assets/Slider7.jpeg";
 import image3 from "../../assets/Slider4.jpeg";
@@ -65,7 +65,7 @@ export default function HeroSlider() {
                         transition={{ duration: 8, ease: "linear" }}
                     />
                     <motion.div
-                        className="absolute top-16 left-1/2 -translate-x-1/2 z-10"
+                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
                         initial={{ y: -20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
@@ -73,7 +73,7 @@ export default function HeroSlider() {
                         <img
                             src={logo}
                             alt="Logo"
-                            className="w-36 md:w-56 h-auto drop-shadow-lg"
+                            className="w-48 md:w-72 lg:w-96 h-auto drop-shadow-2xl"
                         />
                     </motion.div>
                 </motion.div>

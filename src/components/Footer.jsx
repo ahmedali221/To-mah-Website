@@ -20,7 +20,7 @@ import {
 	ArrowRight,
 	Clock,
 } from "lucide-react";
-import { FaTiktok } from "react-icons/fa6"; // TikTok icon from react-icons
+import { FaTiktok, FaXTwitter } from "react-icons/fa6"; // TikTok icon from react-icons
 
 function Footer() {
 	const { t, i18n } = useTranslation();
@@ -41,11 +41,11 @@ function Footer() {
 			shadow: "shadow-gray-700/25",
 		},
 		{
-			name: "Twitter",
+			name: "X",
 			url: "https://x.com/Tomah_sa",
-			icon: Twitter,
-			gradient: "from-sky-400 to-blue-600",
-			shadow: "shadow-blue-500/25",
+			icon: FaXTwitter,
+			gradient: "from-black to-gray-700",
+			shadow: "shadow-gray-700/25",
 		},
 		{
 			name: "Facebook",
@@ -182,20 +182,20 @@ function Footer() {
 
 						{/* Navigation */}
 						<div className="space-y-8">
-							<h3 className="text-xl font-bold relative " style={{ color: "#f0f0f0" }}>
+							<h3 className="text-xl font-bold relative" style={{ color: "#f0f0f0" }}>
 								{t("footer.quick_links")}
 								<div className="absolute -bottom-2 left-0 w-8 h-1 bg-primary-dark rounded-full"></div>
 							</h3>
-							<nav className="space-y-5">
+							<nav className="flex flex-wrap gap-4 justify-center">
 								{navigationLinks.map((link, index) => (
 									<Link
 										key={index}
 										to={link.path}
-										className="group flex items-center space-x-5 transition-all duration-300 p-4 rounded-lg hover:bg-primary/10 text-white text-2xl"
+										className="group flex items-center space-x-2 transition-all duration-300 p-2 rounded-lg hover:bg-primary/10 text-white text-lg"
 									>
-										<link.icon className="w-8 h-8 text-primary bg-white rounded-full p-1" />
-										<span style={{ fontSize: "32px", color: "White" }}>{link.label}</span>
-										<ArrowRight className="w-7 h-7 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-primary bg-white rounded-full p-1" />
+										<link.icon className="w-6 h-6 text-primary bg-white rounded-full p-1" />
+										<span style={{ color: "White" }}>{link.label}</span>
+										<ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-primary bg-white rounded-full p-1" />
 									</Link>
 								))}
 							</nav>
@@ -222,11 +222,11 @@ function Footer() {
 
 						{/* Social Media */}
 						<div className="lg:col-span-1 space-y-8">
-							<h3 className="text-3xl font-bold relative " style={{ color: "#f0f0f0" }}>
+							<h3 className="text-3xl font-bold relative" style={{ color: "#f0f0f0" }}>
 								{t("footer.follow_us")}
 								<div className="absolute -bottom-2 left-0 w-8 h-1 bg-primary-dark rounded-full"></div>
 							</h3>
-							<div className="grid grid-cols-2 gap-8">
+							<div className="flex flex-wrap gap-4 justify-center">
 								{socialPlatforms.map((social, index) => (
 									<a
 										key={index}
@@ -235,10 +235,10 @@ function Footer() {
 										rel="noopener noreferrer"
 										aria-label={social.name}
 										className={`group relative overflow-hidden bg-white rounded-2xl p-3 border border-primary/20 hover:border-primary transition-all duration-500 hover:scale-105 flex items-center justify-center ${social.shadow} hover:shadow-lg`}
-										style={{ fontSize: "0.8rem" }} // reverted icon size
+										style={{ fontSize: "0.8rem" }}
 									>
 										<div className={`absolute inset-0 bg-gradient-to-r ${social.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
-										<social.icon className="relative z-10 mx-auto text-primary" style={{ width: "1.5em", height: "1em" }} /> {/* reverted icon size */}
+										<social.icon className="relative z-10 mx-auto text-primary" style={{ width: "1.5em", height: "1em" }} />
 									</a>
 								))}
 							</div>
