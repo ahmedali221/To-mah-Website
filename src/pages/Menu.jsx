@@ -15,7 +15,9 @@ import {
   XMarkIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
-  FunnelIcon
+  FunnelIcon,
+  ChevronDownIcon,
+  ChevronUpIcon
 } from '@heroicons/react/24/outline';
 
 function Menu() {
@@ -40,6 +42,7 @@ function Menu() {
   const [showFilters, setShowFilters] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const [showPopularMeals, setShowPopularMeals] = useState(false);
   const navigate = useNavigate();
   const { addToCart } = useCart();
 
@@ -232,18 +235,54 @@ function Menu() {
         </div>
       </div>
 
-      {/* Most Popular Meals Section */}
+      {/* Most Popular Meals Section with Mobile Toggle */}
       <section className="py-6 sm:py-10">
         <div className="max-w-6xl mx-auto px-2 sm:px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-primary-dark mb-4 sm:mb-6 text-center">
+          {/* Mobile Toggle Button */}
+          <div className="md:hidden mb-4">
+            <button
+              onClick={() => setShowPopularMeals(!showPopularMeals)}
+              className="w-full flex items-center justify-between bg-primary-light hover:bg-primary text-white px-4 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
+            >
+              <span className="text-lg font-semibold">
+                {t("menu.most_popular", "Most Popular Meals")}
+              </span>
+              <div className={`transform transition-transform duration-300 ${showPopularMeals ? 'rotate-180' : 'rotate-0'}`}>
+                <ChevronDownIcon className="h-5 w-5" />
+              </div>
+            </button>
+          </div>
+
+          {/* Desktop Title (always visible) */}
+          <h2 className="hidden md:block text-2xl sm:text-3xl font-bold text-primary-dark mb-4 sm:mb-6 text-center">
             {t("menu.most_popular", "Most Popular Meals")}
           </h2>
-          <MenuCard
-            products={mostPopularMeals}
-            onViewDetails={handleViewDetails}
-            onAddToCart={handleAddToCart}
-            onImageClick={handleImageClick}
-          />
+
+          {/* Content with Animation */}
+          <div className={`
+            transition-all duration-500 ease-in-out overflow-hidden
+            md:max-h-none md:opacity-100 md:transform-none
+            ${showPopularMeals
+              ? 'max-h-[2000px] opacity-100 transform translate-y-0'
+              : 'md:max-h-none md:opacity-100 max-h-0 opacity-0 transform -translate-y-4'
+            }
+          `}>
+            <div className={`
+              transition-all duration-300 delay-100
+              md:transform-none md:opacity-100
+              ${showPopularMeals
+                ? 'transform translate-y-0 opacity-100'
+                : 'transform translate-y-4 opacity-0'
+              }
+            `}>
+              <MenuCard
+                products={mostPopularMeals}
+                onViewDetails={handleViewDetails}
+                onAddToCart={handleAddToCart}
+                onImageClick={handleImageClick}
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -300,9 +339,6 @@ function Menu() {
 
       {/* Main Content */}
       <div className="container mx-auto px-1 sm:px-4 py-3 sm:py-8">
-        {/* Hide old filter button */}
-        {/* <button ...> ... </button> */}
-
         <div className="flex flex-col md:flex-row md:gap-8">
           {/* Sidebar with Animation (desktop only) */}
           <div
@@ -439,6 +475,7 @@ function Menu() {
           </div>
         </div>
       )}
+
       {/* Menu Introduction */}
       <section className="py-10 sm:py-16 bg-primary-lightest">
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -483,7 +520,6 @@ function Menu() {
         </div>
       </section>
     </div>
-
   );
 }
 
