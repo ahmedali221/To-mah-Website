@@ -14,7 +14,8 @@ import {
   ClockIcon,
   XMarkIcon,
   ChevronLeftIcon,
-  ChevronRightIcon
+  ChevronRightIcon,
+  FunnelIcon
 } from '@heroicons/react/24/outline';
 
 function Menu() {
@@ -204,9 +205,9 @@ function Menu() {
   }, [productsData]);
 
   return (
-    <div className=" min-h-screen" dir={i18n.language === "ar" ? "rtl" : "ltr"}>
+    <div className="min-h-screen bg-white" dir={i18n.language === "ar" ? "rtl" : "ltr"}>
       {/* Decorated Search Section */}
-      <div className="bg-primary-light py-12 px-4">
+      <div className="bg-primary-light py-8 px-2 sm:py-12 sm:px-4">
         <div className="max-w-4xl mx-auto">
           <div className={`relative flex ${i18n.language === "ar" ? "flex-row-reverse" : ""}`}>
             <input
@@ -214,16 +215,16 @@ function Menu() {
               value={searchQuery}
               onChange={(e) => handleSearchQueryChange(e.target.value)}
               placeholder={t("menu.search_placeholder")}
-              className="w-full px-6 py-4 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 text-lg"
+              className="w-full px-4 py-3 sm:px-6 sm:py-4 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 text-base sm:text-lg"
               style={{
                 direction: i18n.language === "ar" ? "rtl" : "ltr",
                 textAlign: i18n.language === "ar" ? "right" : "left"
               }}
             />
             <button
-              className={`absolute ${i18n.language === "ar" ? "left-3" : "right-3"} top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white rounded-full p-3 transition-all duration-300`}
+              className={`absolute ${i18n.language === "ar" ? "left-2 sm:left-3" : "right-2 sm:right-3"} top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white rounded-full p-2 sm:p-3 transition-all duration-300`}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </button>
@@ -232,9 +233,9 @@ function Menu() {
       </div>
 
       {/* Most Popular Meals Section */}
-      <section className="py-10">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-primary-dark mb-6 text-center">
+      <section className="py-6 sm:py-10">
+        <div className="max-w-6xl mx-auto px-2 sm:px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-primary-dark mb-4 sm:mb-6 text-center">
             {t("menu.most_popular", "Most Popular Meals")}
           </h2>
           <MenuCard
@@ -246,40 +247,73 @@ function Menu() {
         </div>
       </section>
 
-      {/* Menu Content */}
-      <div className="container mx-auto px-2 sm:px-4 py-4 sm:py-8">
-        {/* Mobile filter toggle button */}
-        <button
-          className={`md:hidden w-full py-3 mb-4 bg-primary-dark text-white flex justify-center items-center transition-all duration-700 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-          onClick={() => setShowFilters(!showFilters)}>
-          {showFilters ? t("menu.hide_filters") : t("menu.show_filters")}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 ml-2"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-            />
-          </svg>
-        </button>
+      {/* Fixed Mobile Filter Icon Button */}
+      <button
+        className={`
+          fixed z-50 bottom-6 ${i18n.language === "ar" ? "left-6" : "right-6"}
+          md:hidden bg-primary-dark text-white rounded-full shadow-lg p-3 flex items-center justify-center
+          transition-all duration-300
+          ${showFilters ? "bg-primary" : "bg-primary-dark"}
+        `}
+        style={{ boxShadow: "0 4px 16px rgba(0,0,0,0.15)" }}
+        aria-label={t("menu.show_filters")}
+        onClick={() => setShowFilters(!showFilters)}
+      >
+        <FunnelIcon className="h-6 w-6" />
+      </button>
+
+      {/* Overlay for mobile filters */}
+      {showFilters && (
+        <div
+          className="fixed inset-0 z-40 bg-black/40 md:hidden"
+          onClick={() => setShowFilters(false)}
+        />
+      )}
+
+      {/* Mobile Filters Drawer */}
+      <div
+        className={`
+          fixed top-0 bottom-0 ${i18n.language === "ar" ? "left-0" : "right-0"}
+          z-50 w-11/12 max-w-xs bg-white shadow-2xl rounded-l-2xl rounded-r-2xl md:hidden
+          transform transition-transform duration-300
+          ${showFilters ? "translate-x-0" : i18n.language === "ar" ? "-translate-x-full" : "translate-x-full"}
+          flex flex-col
+        `}
+        style={{ maxHeight: "100vh" }}
+      >
+        <div className="flex justify-between items-center p-4 border-b">
+          <span className="font-bold text-lg text-primary-dark">{t("menu.filters")}</span>
+          <button
+            className="text-gray-400 hover:text-primary-dark transition"
+            onClick={() => setShowFilters(false)}
+            aria-label={t("menu.hide_filters")}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="overflow-y-auto flex-1 p-2">
+          <Sidebar filters={filters} setFilters={setFilters} />
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="container mx-auto px-1 sm:px-4 py-3 sm:py-8">
+        {/* Hide old filter button */}
+        {/* <button ...> ... </button> */}
 
         <div className="flex flex-col md:flex-row md:gap-8">
-          {/* Sidebar with Animation */}
+          {/* Sidebar with Animation (desktop only) */}
           <div
             className={`
-              md:w-1/4 md:block 
-              ${showFilters ? "block" : "hidden"} 
-              bg-white shadow-md rounded-lg overflow-hidden mb-6 md:mb-0
+              md:w-1/4 md:block hidden
+              bg-white shadow-md rounded-lg overflow-hidden mb-4 md:mb-0
               transition-all duration-1000 transform
               ${visible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}
             `}>
-            <div className="p-5">
-              <h2 className="text-xl font-bold mb-4 uppercase text-primary-dark">
+            <div className="p-3 sm:p-5">
+              <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 uppercase text-primary-dark">
                 {t("menu.filters")}
               </h2>
               <Sidebar filters={filters} setFilters={setFilters} />
@@ -289,29 +323,29 @@ function Menu() {
           {/* Main content area - MenuCard with Animation */}
           <div className={`md:w-3/4 transition-all duration-1000 delay-300 transform ${visible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
             {/* Sort dropdown */}
-            <h2 className="text-3xl font-bold text-primary-dark mb-6 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-primary-dark mb-4 sm:mb-6 text-center">
               {t("menu.Menu", "Our Menu")}
             </h2>
-            <div className="flex flex-col sm:flex-row justify-between items-center mb-6 px-4">
-              <p className="text-lg text-primary-dark mb-3 sm:mb-0">
+            <div className="flex flex-col sm:flex-row justify-between items-center mb-4 sm:mb-6 px-2 sm:px-4 gap-2">
+              <p className="text-base sm:text-lg text-primary-dark mb-2 sm:mb-0">
                 {t("menu_card.showing", {
                   start: filteredProducts.length > 0 ? (currentPage - 1) * ITEMS_PER_PAGE + 1 : 0,
                   end: Math.min(currentPage * ITEMS_PER_PAGE, filteredProducts.length),
                   total: filteredProducts.length
                 })}
               </p>
-              <div className="relative">
+              <div className="relative w-full sm:w-auto">
                 <select
                   value={filters.sortBy}
                   onChange={handleSortChange}
-                  className="appearance-none border rounded py-2 px-4 text-primary-dark leading-tight focus:outline-none focus:shadow-outline">
+                  className="appearance-none border rounded py-2 px-3 sm:px-4 text-primary-dark leading-tight focus:outline-none focus:shadow-outline w-full sm:w-auto">
                   <option value="">{t("menu_card.sort.default")}</option>
                   <option value="price-asc">{t("menu_card.sort.price_asc")}</option>
                   <option value="price-desc">{t("menu_card.sort.price_desc")}</option>
                   <option value="rating-asc">{t("menu_card.sort.rating_asc")}</option>
                   <option value="rating-desc">{t("menu_card.sort.rating_desc")}</option>
                 </select>
-                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-primary-dark">
+                <div className="pointer-events-none absolute inset-y-0 right-2 flex items-center px-2 text-primary-dark">
                   <svg
                     className="fill-current h-4 w-4"
                     xmlns="http://www.w3.org/2000/svg"
@@ -331,7 +365,7 @@ function Menu() {
 
             {/* Pagination controls */}
             {totalPages > 1 && (
-              <div className="mt-10 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4 px-4">
+              <div className="mt-6 sm:mt-10 mb-4 sm:mb-6 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 px-2 sm:px-4">
                 <div className="text-sm text-primary-dark">
                   {t("menu.page", {
                     current: currentPage,
@@ -353,11 +387,11 @@ function Menu() {
                     {getPaginationRange().map((page, index) => (
                       <React.Fragment key={index}>
                         {page === '...' ? (
-                          <span className="px-3 py-1 text-primary-light">...</span>
+                          <span className="px-2 sm:px-3 py-1 text-primary-light">...</span>
                         ) : (
                           <button
                             onClick={() => handlePageChange(page)}
-                            className={`w-10 h-10 flex items-center justify-center rounded-md text-sm font-medium ${currentPage === page
+                            className={`w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-md text-sm font-medium ${currentPage === page
                               ? "bg-primary-dark text-white shadow-md"
                               : "text-primary-dark hover:bg-primary-lightest"
                               }`}
@@ -387,37 +421,35 @@ function Menu() {
 
       {/* Image Modal */}
       {modalOpen && selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
-          <div className="relative bg-white rounded-lg max-w-4xl w-full overflow-hidden">
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-2 sm:p-4">
+          <div className="relative bg-white rounded-lg max-w-full sm:max-w-4xl w-full overflow-hidden">
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 p-2 bg-white rounded-full shadow-md hover:bg-primary-light transition-colors z-10"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 p-2 bg-white rounded-full shadow-md hover:bg-primary-light transition-colors z-10"
             >
-              <XMarkIcon className="h-6 w-6 text-primary-dark" />
+              <XMarkIcon className="h-5 w-5 sm:h-6 sm:w-6 text-primary-dark" />
             </button>
-
-            {/* Full-height image container */}
             <div className="flex-grow flex items-center justify-center h-full overflow-hidden">
               <img
                 src={selectedImage.image}
                 alt={i18n.language === "ar" && selectedImage.name_ar ? selectedImage.name_ar : selectedImage.name_en}
-                className="max-h-full max-w-full object-contain"
+                className="max-h-[60vh] sm:max-h-full max-w-full object-contain"
               />
             </div>
           </div>
         </div>
       )}
       {/* Menu Introduction */}
-      <section className="py-16 bg-primary-lightest">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-16 transition-all duration-1000 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <h2 className="text-4xl font-bold mb-6 relative text-primary-dark">
-              <span className="relative px-8">
+      <section className="py-10 sm:py-16 bg-primary-lightest">
+        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div className={`text-center mb-10 sm:mb-16 transition-all duration-1000 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <h2 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6 relative text-primary-dark">
+              <span className="relative px-4 sm:px-8">
                 {t("home.menu.title")}
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-24 h-1"></span>
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-16 sm:w-24 h-1"></span>
               </span>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 mt-8 sm:mt-12">
               <div className="bg-primary-lightest p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center border border-primary/10">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-primary-light">
                   <SparklesIcon className="h-8 w-8 text-primary-dark" />

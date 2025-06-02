@@ -112,16 +112,16 @@ export default function Sidebar({ filters, setFilters }) {
 
   return (
     <aside
-      className="w-full p-3 bg-white rounded-lg shadow-lg border border-gray-100"
+      className="w-full p-2 sm:p-3 bg-white rounded-lg shadow-lg border border-gray-100"
       dir={i18n.language === "ar" ? "rtl" : "ltr"}
     >
       {(filters.category !== "" ||
         filters.minPrice > 0 ||
         filters.maxPrice < Infinity) && (
-          <div className="p-4 border-b border-gray-100">
+          <div className="p-2 sm:p-4 border-b border-gray-100">
             <button
               onClick={handleResetFilters}
-              className="w-full py-2.5 px-4 bg-amber-600 text-white rounded-lg flex items-center justify-center gap-2 hover:bg-amber-700 transition-all duration-300 shadow-sm"
+              className="w-full py-2 px-3 sm:py-2.5 sm:px-4 bg-amber-600 text-white rounded-lg flex items-center justify-center gap-2 hover:bg-amber-700 transition-all duration-300 shadow-sm text-sm sm:text-base"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -145,7 +145,7 @@ export default function Sidebar({ filters, setFilters }) {
       {/* Categories Section */}
       <div className="border-b border-gray-100 hover:bg-gray-50 transition-colors duration-300">
         <button
-          className="flex justify-between items-center w-full p-4 text-left font-bold text-gray-800"
+          className="flex justify-between items-center w-full p-2 sm:p-4 text-left font-bold text-gray-800"
           onClick={() => toggleSection("categories")}
         >
           <span className="flex items-center gap-2">
@@ -170,18 +170,18 @@ export default function Sidebar({ filters, setFilters }) {
         </button>
 
         {expandedSection === "categories" && (
-          <div className="p-4 pt-4">
-            <ul className="space-y-2">
+          <div className="p-2 sm:p-4 pt-2 sm:pt-4">
+            <ul className="space-y-1 sm:space-y-2">
               {availableCategories.map((category, index) => {
                 const isActive = isCategoryActive(category);
                 return (
                   <li key={index}>
                     <button
                       onClick={() => handleCategoryClick(category)}
-                      className={`w-full text-left py-2 px-3 rounded-lg transition-all duration-300 ${isActive
+                      className={`w-full text-left py-2 px-2 sm:px-3 rounded-lg transition-all duration-300 ${isActive
                         ? "bg-amber-600 text-white font-medium shadow-sm"
                         : "text-gray-700 hover:bg-gray-100"
-                        } ${i18n.language === "ar" ? "text-right" : "text-left"}`}  // Add this line
+                        } ${i18n.language === "ar" ? "text-right" : "text-left"} text-sm sm:text-base`}
                     >
                       {category}
                       {isActive && (
@@ -212,7 +212,7 @@ export default function Sidebar({ filters, setFilters }) {
       {/* Price Filter Section */}
       <div className="border-b border-gray-100 hover:bg-gray-50 transition-colors duration-300">
         <button
-          className="flex justify-between items-center w-full p-4 text-left font-bold text-gray-800"
+          className="flex justify-between items-center w-full p-2 sm:p-4 text-left font-bold text-gray-800"
           onClick={() => toggleSection("price")}
         >
           <span className="flex items-center gap-2">
@@ -237,16 +237,15 @@ export default function Sidebar({ filters, setFilters }) {
         </button>
 
         {expandedSection === "price" && (
-          <div className="p-4 pt-4">
-            <div className="mb-6">
-              <div className="flex items-center justify-between text-sm text-gray-600 mb-2">
+          <div className="p-2 sm:p-4 pt-2 sm:pt-4">
+            <div className="mb-4 sm:mb-6">
+              <div className="flex items-center justify-between text-xs sm:text-sm text-gray-600 mb-1 sm:mb-2">
                 <span className="font-medium">{t("sidebar.price_range")}</span>
-                <span className="bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-sm font-medium">
+                <span className="bg-amber-50 text-amber-700 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
                   {priceRange.min} {t("sidebar.currency")} - {priceRange.max} {t("sidebar.currency")}
                 </span>
               </div>
-
-              <div className="space-y-4">
+              <div className="space-y-2 sm:space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
                     {t("sidebar.min_price")}
@@ -286,10 +285,9 @@ export default function Sidebar({ filters, setFilters }) {
                 </div>
               </div>
             </div>
-
             <button
               onClick={handleApplyPriceFilter}
-              className="w-full bg-amber-600 text-white py-2.5 px-4 rounded-lg hover:bg-amber-700 transition-all duration-300 shadow-sm"
+              className="w-full bg-amber-600 text-white py-2 px-3 sm:py-2.5 sm:px-4 rounded-lg hover:bg-amber-700 transition-all duration-300 shadow-sm text-sm sm:text-base"
             >
               {t("sidebar.apply_filter")}
             </button>
@@ -300,7 +298,7 @@ export default function Sidebar({ filters, setFilters }) {
       {/* Popular Items Section */}
       <div className="hover:bg-gray-50 transition-colors duration-300">
         <button
-          className="flex justify-between items-center w-full p-4 text-left font-bold text-gray-800"
+          className="flex justify-between items-center w-full p-2 sm:p-4 text-left font-bold text-gray-800"
           onClick={() => toggleSection("popular")}
         >
           <span className="flex items-center gap-2">
@@ -325,15 +323,15 @@ export default function Sidebar({ filters, setFilters }) {
         </button>
 
         {expandedSection === "popular" && (
-          <div className="p-4 pt-4">
-            <ul className="space-y-4">
+          <div className="p-2 sm:p-4 pt-2 sm:pt-4">
+            <ul className="space-y-2 sm:space-y-4">
               {popularProducts.length > 0 ? (
                 popularProducts.map((product, index) => (
                   <li
                     key={index}
-                    className={`flex items-center p-2 hover:bg-white rounded-lg transition-all duration-300 cursor-pointer group ${i18n.language === "ar" ? "space-x-reverse gap-3" : "space-x-3 gap-3"}`}
+                    className={`flex items-center p-1 sm:p-2 hover:bg-white rounded-lg transition-all duration-300 cursor-pointer group ${i18n.language === "ar" ? "space-x-reverse gap-2 sm:gap-3" : "space-x-2 sm:space-x-3 gap-2 sm:gap-3"}`}
                   >
-                    <div className="w-16 h-16 overflow-hidden rounded-lg bg-gray-100 shadow-sm">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 overflow-hidden rounded-lg bg-gray-100 shadow-sm">
                       <img
                         src={product.image}
                         alt={product.name}
@@ -341,17 +339,17 @@ export default function Sidebar({ filters, setFilters }) {
                       />
                     </div>
                     <div className="flex-1">
-                      <p className="font-medium text-gray-800 line-clamp-1 group-hover:text-amber-600 transition-colors duration-300">
+                      <p className="font-medium text-gray-800 line-clamp-1 group-hover:text-amber-600 transition-colors duration-300 text-xs sm:text-base">
                         {product.name}
                       </p>
-                      <p className="text-primary-dark font-bold mt-1">
+                      <p className="text-primary-dark font-bold mt-1 text-xs sm:text-base">
                         {product.price.toFixed(2)} {t("sidebar.currency")}
                       </p>
                     </div>
                   </li>
                 ))
               ) : (
-                <li className="text-gray-500 text-center py-4">
+                <li className="text-gray-500 text-center py-2 sm:py-4 text-xs sm:text-base">
                   {t("sidebar.no_popular_products")}
                 </li>
               )}
