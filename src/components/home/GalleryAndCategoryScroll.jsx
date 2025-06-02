@@ -57,7 +57,7 @@ export default function GalleryAndCategoryScroll() {
           {t("gallery_and_category")}
         </h2>
         <div className="relative w-full max-w-md mx-auto">
-          <div className="w-full aspect-[4/5] overflow-hidden rounded-lg shadow-md">
+          <div className="w-full h-full overflow-hidden rounded-lg shadow-md">
             <img
               src={images[active]}
               alt={t("gallery_and_category.dish_alt", { number: active + 1 })}
@@ -80,18 +80,7 @@ export default function GalleryAndCategoryScroll() {
           >
             &#8594;
           </button>
-          {/* Dots Indicator */}
-          <div className="flex justify-center gap-2 mt-4">
-            {images.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setActive(idx)}
-                className={`w-3 h-3 rounded-full ${active === idx ? "bg-yellow-300" : "bg-gray-300"
-                  } transition`}
-                aria-label={`Go to image ${idx + 1}`}
-              />
-            ))}
-          </div>
+
         </div>
 
       </SectionWrapper>

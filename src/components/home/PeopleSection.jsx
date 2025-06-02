@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import owner from "../../assets/people.jpg";
-import owner2 from "../../assets/owner2.jpg";
 import cheif from "../../assets/team.jpg";
 
 export default function PeopleSection() {
@@ -15,11 +14,6 @@ export default function PeopleSection() {
   }
 
   const cards = [
-    {
-      image: owner2,
-      title: t("people_section.owner2_title"),
-      description: t("people_section.owner2_desc"),
-    },
     {
       image: owner,
       title: t("people_section.owner_title"),
@@ -44,7 +38,7 @@ export default function PeopleSection() {
         </div>
 
         {/* Cards Container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 **lg:grid-cols-2** gap-8 **max-w-screen-lg mx-auto**">
           {cards.map((card, index) => (
             <div
               key={index}
@@ -60,7 +54,6 @@ export default function PeopleSection() {
                       className="w-full h-full object-cover rounded-xl transform transition duration-500 group-hover:scale-105"
                     />
                   </div>
-
                 </div>
 
                 {/* Content */}
@@ -72,7 +65,6 @@ export default function PeopleSection() {
                     className="text-black text-lg md:text-xl leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: formatDescription(card.description) }}
                   ></p>
-
                 </div>
 
                 {/* Hover Effect Overlay */}

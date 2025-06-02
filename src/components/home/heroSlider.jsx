@@ -103,18 +103,8 @@ export default function HeroSlider() {
                 <span>&gt;</span>
             </motion.button>
 
-            {/* Indicators - MINIMAL */}
-            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
-                {heroImages.map((_, idx) => (
-                    <button
-                        key={idx}
-                        onClick={() => navigate(idx)}
-                        className={`w-1.5 h-1.5 rounded-full ${idx === currentSlide ? "bg-white" : "bg-white/30"} p-0 m-0 border-none outline-none transition-all duration-200`}
-                        aria-label={`Go to slide ${idx + 1}`}
-                        style={{ minWidth: '3px', minHeight: '3px' }}
-                    />
-                ))}
-            </div>
+
+
 
         </div>
     );

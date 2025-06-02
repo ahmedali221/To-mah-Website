@@ -50,10 +50,10 @@ export default function Home() {
         </style>
       </div>}
       <AboutAndVideoSection />
+      <VisionAndPhilosophy />
       <MenuBanner />
       <MenuShowcase />
       <GalleryAndCategoryScroll />
-      <VisionAndPhilosophy />
       <PeopleSection />
     </div>
   );

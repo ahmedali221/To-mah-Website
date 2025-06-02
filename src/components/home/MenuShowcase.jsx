@@ -27,7 +27,7 @@ export default function MenuShowcase() {
   return (
     <>
       {/* Order Now Section */}
-      <SectionWrapper>
+      {/* <SectionWrapper>
         <h2 className="text-4xl font-extrabold uppercase mb-4 text-center">
           {t("menu_showcase.order_now")}
         </h2>
@@ -70,7 +70,7 @@ export default function MenuShowcase() {
             </div>
           ))}
         </div>
-      </SectionWrapper>
+      </SectionWrapper> */}
 
       {/* Experience Section */}
       <SectionWrapper>
@@ -128,14 +128,14 @@ export default function MenuShowcase() {
           {t("menu_showcase.grilled_menu")}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="order-2 lg:order-1">
+          <div>
             <img
               src={meal4}
               alt="Grilled food"
               className="w-full max-w-xl h-auto max-h-96 object-cover rounded-full shadow-lg border border-primary/20 mx-auto"
             />
           </div>
-          <div className="order-1 lg:order-2 space-y-10">
+          <div className="space-y-10"> {/* Removed order-1 lg:order-2 */}
             {/* Tahini Kebab */}
             <div>
               <div className={`flex items-center gap-2 mb-2 ${isArabic ? "justify-end" : "justify-start"}`}>
@@ -203,7 +203,18 @@ export default function MenuShowcase() {
           {t("menu_showcase.dessert_menu")}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="order-1 lg:order-1">
+          {/* This div contains the image. On mobile, it will appear first in the grid (after the h2).
+              On large screens, it will be ordered second. */}
+          <div className="order-1 lg:order-2">
+            <img
+              src={meal3}
+              alt="Dessert"
+              className="w-full max-w-xl h-auto max-h-96 object-cover rounded-full shadow-lg border border-primary/20 mx-auto"
+            />
+          </div>
+          {/* This div contains the text content. On mobile, it will appear second in the grid.
+              On large screens, it will be ordered first. */}
+          <div className="order-2 lg:order-1">
             <div className="space-y-10">
               {/* Um Ali */}
               <div>
@@ -263,13 +274,6 @@ export default function MenuShowcase() {
                 <p className={`text-primary-dark ${isArabic ? "text-right" : "text-left"}`}>{t("menu_showcase.roqaq_desc")}</p>
               </div>
             </div>
-          </div>
-          <div className="order-2 lg:order-2">
-            <img
-              src={meal3}
-              alt="Dessert"
-              className="w-full max-w-xl h-auto max-h-96 object-cover rounded-full shadow-lg border border-primary/20 mx-auto"
-            />
           </div>
         </div>
       </SectionWrapper>

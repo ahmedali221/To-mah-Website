@@ -171,16 +171,16 @@ const About = () => {
 								src={img1}
 								alt={t("about.story.image_alt_left")}
 								className={`rounded-lg shadow-xl w-full h-auto transform transition-all duration-1000 ${isVisible["story-img-1"]
-										? "translate-y-0 opacity-100"
-										: "translate-y-10 opacity-0"
+									? "translate-y-0 opacity-100"
+									: "translate-y-10 opacity-0"
 									}`}
 							/>
 						</div>
 						<div className="animate-on-scroll" id="story-text">
 							<div
 								className={`text-center space-y-4 transition-all duration-1000 delay-300 ${isVisible["story-text"]
-										? "translate-y-0 opacity-100"
-										: "translate-y-10 opacity-0"
+									? "translate-y-0 opacity-100"
+									: "translate-y-10 opacity-0"
 									}`}
 							>
 								<p className="text-amber-600 font-bold text-xl">***</p>
@@ -197,8 +197,8 @@ const About = () => {
 								src={img2}
 								alt={t("about.story.image_alt_right")}
 								className={`rounded-lg shadow-xl w-full h-auto transform transition-all duration-1000 delay-500 ${isVisible["story-img-2"]
-										? "translate-y-0 opacity-100"
-										: "translate-y-10 opacity-0"
+									? "translate-y-0 opacity-100"
+									: "translate-y-10 opacity-0"
 									}`}
 							/>
 						</div>
@@ -230,8 +230,8 @@ const About = () => {
 					>
 						<div
 							className={`transition-all duration-1000 ${isVisible["video-section"]
-									? "opacity-100 scale-100"
-									: "opacity-0 scale-95"
+								? "opacity-100 scale-100"
+								: "opacity-0 scale-95"
 								}`}
 							onClick={() => setIsPlaying(true)}
 						>
@@ -308,8 +308,8 @@ const About = () => {
 							<div key={index} className="px-2 md:px-4">
 								<div
 									className={`transform transition-all duration-1000 ${isVisible["team-section"]
-											? "translate-y-0 opacity-100"
-											: "translate-y-10 opacity-0"
+										? "translate-y-0 opacity-100"
+										: "translate-y-10 opacity-0"
 										}`}
 									style={{ transitionDelay: `${index * 100}ms` }}
 								>
@@ -333,8 +333,8 @@ const About = () => {
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
 						<div
 							className={`transition-all duration-1000 ${isVisible["special-menu-section"]
-									? "translate-x-0 opacity-100"
-									: "-translate-x-10 opacity-0"
+								? "translate-x-0 opacity-100"
+								: "-translate-x-10 opacity-0"
 								}`}
 						>
 							<img
@@ -345,8 +345,8 @@ const About = () => {
 						</div>
 						<div
 							className={`transition-all duration-1000 delay-300 ${isVisible["special-menu-section"]
-									? "translate-x-0 opacity-100"
-									: "translate-x-10 opacity-0"
+								? "translate-x-0 opacity-100"
+								: "translate-x-10 opacity-0"
 								}`}
 						>
 							<img
@@ -370,8 +370,8 @@ const About = () => {
 					</h2>
 					<div
 						className={`bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-1000 ${isVisible["testimonial-section"]
-								? "opacity-100 translate-y-0"
-								: "opacity-0 translate-y-10"
+							? "opacity-100 translate-y-0"
+							: "opacity-0 translate-y-10"
 							}`}
 					>
 						<Slider {...sliderSettings} slidesToShow={1}>
@@ -428,13 +428,13 @@ const About = () => {
 							<div key={index} className="px-2 md:px-4">
 								<div
 									className={`transform transition-all duration-1000 ${isVisible["visitors-section"]
-											? "translate-y-0 opacity-100"
-											: "translate-y-10 opacity-0"
+										? "translate-y-0 opacity-100"
+										: "translate-y-10 opacity-0"
 										}`}
 									style={{ transitionDelay: `${index * 100}ms` }}
 								>
 									<div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
-										<div className="relative w-full h-64 md:h-80 bg-gray-200 flex items-center justify-center overflow-hidden">
+										<div className="relative w-full h-full md:h-80 bg-gray-200 flex items-center justify-center overflow-hidden">
 											<img
 												src={image}
 												alt=""
@@ -461,24 +461,24 @@ const About = () => {
 				<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 					<h2
 						className={`text-2xl md:text-4xl font-bold mb-4 transition-all duration-1000 ${isVisible["cta-section"]
-								? "opacity-100 translate-y-0"
-								: "opacity-0 translate-y-10"
+							? "opacity-100 translate-y-0"
+							: "opacity-0 translate-y-10"
 							}`}
 					>
 						{t("about.cta.title")}
 					</h2>
 					<p
 						className={`text-base md:text-lg mb-8 transition-all duration-1000 delay-200 ${isVisible["cta-section"]
-								? "opacity-100 translate-y-0"
-								: "opacity-0 translate-y-10"
+							? "opacity-100 translate-y-0"
+							: "opacity-0 translate-y-10"
 							}`}
 					>
 						{t("about.cta.description")}
 					</p>
 					<div
 						className={`transition-all duration-1000 delay-400 ${isVisible["cta-section"]
-								? "opacity-100 translate-y-0"
-								: "opacity-0 translate-y-10"
+							? "opacity-100 translate-y-0"
+							: "opacity-0 translate-y-10"
 							}`}
 					>
 						<Link
