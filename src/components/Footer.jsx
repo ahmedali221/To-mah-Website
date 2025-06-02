@@ -44,12 +44,7 @@ function Footer() {
 		{ label: t("navbar.contact"), path: "/contact", icon: Mail },
 	];
 
-	const servicesList = [
-		{ name: t("footer.services.branding"), icon: Sparkles },
-		{ name: t("footer.services.design"), icon: Star },
-		{ name: t("footer.services.marketing"), icon: Globe },
-		{ name: t("footer.services.advertisement"), icon: ExternalLink },
-	];
+
 
 	return (
 		<footer dir={i18n.language === "ar" ? "rtl" : "ltr"} className="w-full">
@@ -207,24 +202,6 @@ function Footer() {
 								</nav>
 							</div>
 
-							{/* Services */}
-							<div className="space-y-8">
-								<h3 className="text-3xl font-bold relative text-primary">
-									{t("footer.services_title")}
-									<div className="absolute -bottom-2 left-0 w-8 h-1 bg-primary rounded-full"></div>
-								</h3>
-								<div className="space-y-5">
-									{servicesList.map((service, index) => (
-										<div
-											key={index}
-											className="group flex items-center space-x-5 transition-all duration-300 p-4 rounded-lg hover:bg-gray-200 text-gray-800 text-2xl"
-										>
-											<service.icon className="w-7 h-7 text-primary bg-white rounded-full p-1 border border-gray-200" />
-											<span style={{ fontSize: "24px" }}>{service.name}</span>
-										</div>
-									))}
-								</div>
-							</div>
 
 							{/* Social Media */}
 							<div className="lg:col-span-1 space-y-8">

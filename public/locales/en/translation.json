@@ -103,6 +103,15 @@
 		"currency": "SR"
 	},
 	"about": {
+		"visitors": {
+			"title": "Our Valued Visitors",
+			"description": "We take pride in serving a diverse range of guests, from local families to international travelers, all seeking the authentic flavors of Hejazi cuisine."
+		},
+		"teama": {
+			"title": "To'mah Restaurant",
+			"description": "A culinary gem in the heart of Medina, To'mah offers a unique dining experience that combines the rich heritage of Hejazi cuisine with modern hospitality. Our restaurant is a place where tradition meets innovation, creating unforgettable meals for every guest.",
+			"image_alt": "To'mah Restaurant Interior"
+		},
 		"story": {
 			"title": "Our Story",
 			"description": "flavors of traditional Hejazi cuisine in a modern and inviting setting. What began as a dream to revive authentic Saudi dishes with a contemporary twist, quickly grew into a beloved destination for those seeking warmth, heritage, and exceptional taste. At To’mah, every dish tells a story — a story of home, culture, and unforgettable flavor.",
