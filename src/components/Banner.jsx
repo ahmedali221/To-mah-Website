@@ -8,7 +8,12 @@ export default function Banner() {
         <div className={`w-full bg-primary text-white py-4 px-6 text-base md:text-lg flex flex-col md:flex-row items-center justify-center gap-4 ${isRTL ? "text-right" : "text-left"}`}>
             <div className="flex items-center gap-4">
                 <span className="whitespace-nowrap">
-                    <span className="font-bold text-lg md:text-xl">{t("contact.phone")}</span>
+                    <span className="font-bold text-lg md:text-xl"
+                        dir={isRTL ? "ltr" : undefined}
+                        style={isRTL ? { unicodeBidi: "bidi-override" } : {}}
+                    >
+                        {t("contact.phone")}
+                    </span>
                 </span>
 
                 <span className="hidden md:inline-block w-px h-6 bg-white/50 mx-1"></span>

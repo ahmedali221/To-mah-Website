@@ -94,7 +94,9 @@ function Footer() {
 						</div>
 						<div className="flex items-center gap-1">
 							<Phone className="w-4 h-4 text-primary" />
-							<span>{t("footer.phone")}</span>
+							<span dir={i18n.language === "ar" ? "ltr" : undefined} style={i18n.language === "ar" ? { unicodeBidi: "bidi-override" } : {}}>
+								{t("footer.phone")}
+							</span>
 						</div>
 						<div className="flex items-center gap-1">
 							<Mail className="w-4 h-4 text-primary" />
@@ -164,7 +166,7 @@ function Footer() {
 										<div className="space-y-5">
 											{[
 												{ icon: MapPin, text: t("footer.address") },
-												{ icon: Phone, text: t("footer.phone") },
+												{ icon: Phone, text: t("footer.phone"), isPhone: true },
 												{ icon: Mail, text: t("footer.email") },
 												{ icon: Clock, text: t("footer.hours") },
 											].map((contact, index) => (
@@ -173,7 +175,13 @@ function Footer() {
 													className="flex items-center space-x-5 transition-colors duration-300 text-gray-800 text-xl"
 												>
 													<contact.icon className="w-8 h-8 text-primary bg-white rounded-full p-1 border border-gray-200" />
-													<span style={{ fontSize: "20px" }}>{contact.text}</span>
+													<span
+														style={{ fontSize: "20px" }}
+														dir={i18n.language === "ar" && contact.isPhone ? "ltr" : undefined}
+														{...(i18n.language === "ar" && contact.isPhone ? { style: { unicodeBidi: "bidi-override", fontSize: "20px" } } : {})}
+													>
+														{contact.text}
+													</span>
 												</div>
 											))}
 										</div>

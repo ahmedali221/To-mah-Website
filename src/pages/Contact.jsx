@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 
@@ -42,7 +41,7 @@ const ContactPage = () => {
   const isRTL = i18n.language === 'ar';
 
   return (
-    <div 
+    <div
       className={`min-h-screen transition-opacity duration-700 ease-in-out ${visible ? 'opacity-100' : 'opacity-0'}`}
       dir={isRTL ? 'rtl' : 'ltr'}>
       <div className="container mx-auto px-4 py-16">
@@ -89,13 +88,16 @@ const ContactPage = () => {
                       {t("contact.address_line3")}
                     </span>
                   </a>
-                <a
-  href="https://wa.me/966583250000"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-xl text-black block mt-4 hover:text-amber-600 transition-colors duration-300 transform hover:scale-105 transition-transform duration-300">
-  {t("contact.phone")}
-</a>
+                  <a
+                    href="https://wa.me/966583250000"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl text-black block mt-4 hover:text-amber-600 transition-colors duration-300 transform hover:scale-105 transition-transform duration-300"
+                    dir={isRTL ? "ltr" : undefined}
+                    style={isRTL ? { unicodeBidi: "bidi-override" } : {}}
+                  >
+                    {t("contact.phone")}
+                  </a>
                 </span>
               </div>
             </div>
@@ -115,23 +117,23 @@ const ContactPage = () => {
               />
               <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             </div>
-           <div className="text-center font-light tracking-wide leading-relaxed">
-  <span className="block mb-4 hover:text-gray-900 transition-all duration-300">
-    <span className="text-gray-800">{t("contact.hours_weekend")}</span><br />
-    <span className="text-sm text-gray-600">{t("contact.hours_reservations")}</span><br />
-    <span className="italic">{t("contact.hours_weekend_time")}</span>
-  </span>
-  <span className="block hover:text-gray-900 transition-all duration-300">
-    <span className="text-gray-800">{t("contact.hours_weekdays")}</span><br />
-    <span className="text-sm text-gray-600">{t("contact.hours_reservations")}</span><br />
-    <span className="italic">{t("contact.hours_weekdays_time")}</span>
-  </span>
-  <div className="mt-4">
-    <span className="block text-gray-800">{t("contact.hours_breakfast")}</span>
-    <span className="block text-gray-800">{t("contact.hours_lunch")}</span>
-    <span className="block text-gray-800">{t("contact.hours_dinner")}</span>
-  </div>
-  </div>
+            <div className="text-center font-light tracking-wide leading-relaxed">
+              <span className="block mb-4 hover:text-gray-900 transition-all duration-300">
+                <span className="text-gray-800">{t("contact.hours_weekend")}</span><br />
+                <span className="text-sm text-gray-600">{t("contact.hours_reservations")}</span><br />
+                <span className="italic">{t("contact.hours_weekend_time")}</span>
+              </span>
+              <span className="block hover:text-gray-900 transition-all duration-300">
+                <span className="text-gray-800">{t("contact.hours_weekdays")}</span><br />
+                <span className="text-sm text-gray-600">{t("contact.hours_reservations")}</span><br />
+                <span className="italic">{t("contact.hours_weekdays_time")}</span>
+              </span>
+              <div className="mt-4">
+                <span className="block text-gray-800">{t("contact.hours_breakfast")}</span>
+                <span className="block text-gray-800">{t("contact.hours_lunch")}</span>
+                <span className="block text-gray-800">{t("contact.hours_dinner")}</span>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -139,7 +141,7 @@ const ContactPage = () => {
         {/* Contact Form */}
         <div className={`max-w-2xl mx-auto mb-16 bg-white rounded-xl shadow-lg p-8 transition-all duration-1000 delay-900 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
           <h3 className="text-3xl font-serif italic font-light mb-8 text-center">{t("contact.form_title")}</h3>
-          
+
           {activeForm ? (
             <div className="text-center py-12 text-green-600 text-xl animate-pulse">
               {t("contact.form_success")}
@@ -174,7 +176,7 @@ const ContactPage = () => {
                   </label>
                 </div>
               </div>
-              
+
               <div className="relative group">
                 <input
                   type="tel"
@@ -188,7 +190,7 @@ const ContactPage = () => {
                   {t("contact.form_phone")}
                 </label>
               </div>
-              
+
               <div className="relative group">
                 <textarea
                   name="message"
@@ -202,7 +204,7 @@ const ContactPage = () => {
                   {t("contact.form_message")}
                 </label>
               </div>
-              
+
               <div className="text-center">
                 <button
                   type="submit"
