@@ -57,7 +57,7 @@ function Partners() {
       <div className="bg-base-200 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-center mb-8">{t("partners.hero.title")}</h1>
-          <p className="text-center max-w-3xl mx-auto">{t("partners.hero.description")}</p>
+          <p className="text-center max-w-3xl mx-auto text-lg">{t("partners.hero.description")}</p>
         </div>
       </div>
 
@@ -75,9 +75,9 @@ function Partners() {
                 />
               </figure>
               <div className="card-body items-center text-center">
-                <h3 className="card-title">{t(partner.name_key)}</h3>
+                <h3 className="card-title text-xl">{t(partner.name_key)}</h3>
                 <p className="text-sm text-primary">{t(partner.role_key)}</p>
-                <p className="mt-4">{t(partner.testimonial_key)}</p>
+                <p className="mt-4 text-base">{t(partner.testimonial_key)}</p>
               </div>
             </div>
           ))}
@@ -99,9 +99,9 @@ function Partners() {
                   />
                 </figure>
                 <div className="card-body">
-                  <h3 className="card-title">{t(supplier.name_key)}</h3>
+                  <h3 className="card-title text-xl">{t(supplier.name_key)}</h3>
                   <p className="text-sm text-primary">{t(supplier.type_key)}</p>
-                  <p className="mt-4">{t(supplier.description_key)}</p>
+                  <p className="mt-4 text-base">{t(supplier.description_key)}</p>
                 </div>
               </div>
             ))}
@@ -113,8 +113,8 @@ function Partners() {
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">{t("partners.cta.title")}</h2>
-          <p className="max-w-2xl mx-auto mb-8">{t("partners.cta.description")}</p>
-          <button className="btn btn-primary">{t("partners.cta.button")}</button>
+          <p className="max-w-2xl mx-auto mb-8 text-lg">{t("partners.cta.description")}</p>
+          <button className="btn btn-primary text-lg">{t("partners.cta.button")}</button>
         </div>
       </div>
     </div>

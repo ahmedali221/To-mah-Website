@@ -27,16 +27,8 @@ import teamImg2 from "../assets/AboutImages/فريق العمل/1.jpg";
 import teamImg3 from "../assets/AboutImages/فريق العمل/2.jpg";
 import teamImg4 from "../assets/AboutImages/فريق العمل/3.jpg";
 import teamImg5 from "../assets/AboutImages/فريق العمل/4.jpg";
-import visitor1 from "../assets/AboutImages/زوار مطعم طعمه/Doneبروفسور ماليزي.jpg";
-import visitor2 from "../assets/AboutImages/زوار مطعم طعمه/معالي الدكتور توفيق الربيعة .jpg";
-import visitor3 from "../assets/AboutImages/زوار مطعم طعمه/وزيرة السياحة البحرينية.jpg";
-import visitor4 from "../assets/AboutImages/زوار مطعم طعمه/مساعد الزويهري - رئيس الاهلي ٢.jpg";
-import visitor5 from "../assets/AboutImages/زوار مطعم طعمه/مهند قطان و غادة الترك done_.jpg";
-import visitor6 from "../assets/AboutImages/زوار مطعم طعمه/فريق الاتحاد سيدات.jpg";
-import visitor7 from "../assets/AboutImages/زوار مطعم طعمه/رئيس جامعة الملك عبدالله _ البروفيسور إدوارد بيرن.jpg";
-import visitor8 from "../assets/AboutImages/زوار مطعم طعمه/ابوعبدالله ريان بن حزام (دخون الاماراتية) و جواد السويسري.JPG";
-import visitor9 from "../assets/AboutImages/زوار مطعم طعمه/الرئيس التنفيذي للمركز الوطني للالتزام البيئي.jpg";
-import visitor10 from "../assets/AboutImages/زوار مطعم طعمه/م بندر عبدالله الراجحي شركة متين .jpg";
+import visitorsPhotos from "../service/visitors/visitors"; // adjust path if needed
+
 import {
 	HeartIcon,
 	SparklesIcon,
@@ -48,18 +40,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const galleryImages = [g1, g2, g3, g4, g5, g6, g7, g8, g9];
 const teamImages = [teamImg1, teamImg2, teamImg3, teamImg4, teamImg5];
-const visitorImages = [
-	visitor1,
-	visitor2,
-	visitor3,
-	visitor4,
-	visitor5,
-	visitor6,
-	visitor7,
-	visitor8,
-	visitor9,
-	visitor10,
-];
+
 
 const testimonials = [
 	{
@@ -156,31 +137,15 @@ const About = () => {
 		],
 	};
 
-	const visitorSliderSettings = {
-		...sliderSettings,
-		slidesToShow: 3,
+
+	const visitorsGallerySliderSettings = {
+		...gallerySliderSettings,
+		slidesToShow: 4,
+		dots: false,
 		responsive: [
-			{
-				breakpoint: 1280,
-				settings: {
-					slidesToShow: 3,
-					dots: true
-				}
-			},
-			{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 2,
-					dots: true
-				}
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
-					dots: true
-				}
-			},
+			{ breakpoint: 1280, settings: { slidesToShow: 3, dots: false } },
+			{ breakpoint: 1024, settings: { slidesToShow: 2, dots: false } },
+			{ breakpoint: 640, settings: { slidesToShow: 1, dots: false } },
 		],
 	};
 
@@ -444,7 +409,6 @@ const About = () => {
 
 			{/* Gallery Section */}
 			<section className="py-16 md:py-20  overflow-hidden">
-
 				<div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
 					<Slider {...gallerySliderSettings}>
 						{galleryImages.concat(galleryImages).map((img, index) => (
@@ -462,40 +426,36 @@ const About = () => {
 				</div>
 			</section>
 
-			{/* Visitors Section - Enhanced with full height images */}
-			<section className="py-16 md:py-24 bg-gradient-to-br from-white to-slate-50 animate-on-scroll" id="visitors-section">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="text-center mb-16">
-						<h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
-							{t("about.visitors.title",)}
-						</h2>
-						<div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto rounded-full mb-8"></div>
-						<GlobeAltIcon className="w-12 h-12 text-amber-500 mx-auto" />
-					</div>
-					<div className="pb-16">
-						<Slider {...visitorSliderSettings} className="visitors-slider">
-							{visitorImages.map((image, index) => (
-								<div key={index} className="px-3">
-									<div className={`transform transition-all duration-1000 ${isVisible["visitors-section"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`} style={{ transitionDelay: `${index * 100}ms` }}>
-										<div className="relative group h-full">
-											<div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group h-full">
-												<div className="relative w-full h-96 md:h-[28rem] lg:h-[32rem] overflow-hidden">
-													<img
-														src={image}
-														alt={`Visitor ${index + 1}`}
-														className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:brightness-110"
-													/>
-													{/* Removed hover text and overlay */}
-												</div>
-											</div>
-										</div>
-									</div>
+
+			{/* Visitors Section */}
+			<section className=" animate-on-scroll" id="visitors-section">
+				<div className="text-center mb-16">
+					<h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
+						{t("about.visitors.title", "زوارنا المميزون")}
+					</h2>
+					<div className="w-24 h-1 mx-auto rounded-full mb-8"></div>
+					<GlobeAltIcon className="w-12 h-12 text-amber-500 mx-auto" />
+				</div>
+				<div className="max-w-7xl mx-auto ">
+					<Slider {...visitorsGallerySliderSettings} className="visitors-slider">
+						{visitorsPhotos.map((visitor, idx) => (
+							<div key={idx} className="px-3 flex flex-col items-center">
+								<div className="relative group rounded-2xl overflow-hidden shadow-xl bg-white p-2 h-[600px] flex items-center justify-center w-full">
+									<img
+										src={visitor.image}
+										alt={visitor.name}
+										className="w-full h-[500px] object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+									/>
 								</div>
-							))}
-						</Slider>
-					</div>
+								<div className="w-full mt-6">
+									<p className="text-center font-bold text-amber-800 text-xl">{visitor.name}</p>
+								</div>
+							</div>
+						))}
+					</Slider>
 				</div>
 			</section>
+
 
 			{/* CTA Section */}
 			<section className="py-16 md:py-24 bg-gradient-to-br from-amber-600 via-amber-700 to-amber-800 text-white animate-on-scroll relative overflow-hidden" id="cta-section">

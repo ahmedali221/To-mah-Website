@@ -49,7 +49,7 @@ const ContactPage = () => {
         <div className={`text-center mb-16 transition-all duration-1000 delay-300 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <h1 className="text-4xl md:text-5xl font-serif font-light mb-4">{t("contact.title")}</h1>
           <div className="w-24 h-1 mx-auto"></div>
-          <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
             {isRTL ? 'يسعدنا سماع منك. قم بزيارة مطعمنا، أو احجز، أو أرسل لنا رسالة.' : "We'd love to hear from you. Visit our restaurant, make a reservation, or send us a message."}
           </p>
         </div>
@@ -71,7 +71,7 @@ const ContactPage = () => {
               <h3 className="text-3xl font-serif italic font-light mt-8 mb-6 transform transition-transform duration-500 hover:translate-y-1">
                 {t("contact.location_title")}
               </h3>
-              <div className="text-center font-light tracking-wide leading-relaxed text-gray-700">
+              <div className="text-center font-light tracking-wide leading-relaxed text-gray-700 text-base">
                 <span className="block hover:text-gray-900 transition-all duration-300">
                   <a
                     href="https://www.google.com/maps"
@@ -119,19 +119,19 @@ const ContactPage = () => {
             </div>
             <div className="text-center font-light tracking-wide leading-relaxed">
               <span className="block mb-4 hover:text-gray-900 transition-all duration-300">
-                <span className="text-gray-800">{t("contact.hours_weekend")}</span><br />
+                <span className="text-gray-800 text-base">{t("contact.hours_weekend")}</span><br />
                 <span className="text-sm text-gray-600">{t("contact.hours_reservations")}</span><br />
-                <span className="italic">{t("contact.hours_weekend_time")}</span>
+                <span className="italic text-base">{t("contact.hours_weekend_time")}</span>
               </span>
               <span className="block hover:text-gray-900 transition-all duration-300">
-                <span className="text-gray-800">{t("contact.hours_weekdays")}</span><br />
+                <span className="text-gray-800 text-base">{t("contact.hours_weekdays")}</span><br />
                 <span className="text-sm text-gray-600">{t("contact.hours_reservations")}</span><br />
-                <span className="italic">{t("contact.hours_weekdays_time")}</span>
+                <span className="italic text-base">{t("contact.hours_weekdays_time")}</span>
               </span>
               <div className="mt-4">
-                <span className="block text-gray-800">{t("contact.hours_breakfast")}</span>
-                <span className="block text-gray-800">{t("contact.hours_lunch")}</span>
-                <span className="block text-gray-800">{t("contact.hours_dinner")}</span>
+                <span className="block text-gray-800 text-base">{t("contact.hours_breakfast")}</span>
+                <span className="block text-gray-800 text-base">{t("contact.hours_lunch")}</span>
+                <span className="block text-gray-800 text-base">{t("contact.hours_dinner")}</span>
               </div>
             </div>
 
@@ -208,7 +208,7 @@ const ContactPage = () => {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="bg-amber-600 text-white px-8 py-3 rounded-full hover:bg-amber-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50"
+                  className="bg-amber-600 text-white px-8 py-3 rounded-full hover:bg-amber-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 text-lg"
                 >
                   {t("contact.form_button")}
                 </button>

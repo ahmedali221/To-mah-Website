@@ -467,7 +467,7 @@
   "experience_title": "Experience the Taste of Authenticity",
   "experience_desc": "From traditional flavors to modern twists, our dishes are crafted to delight your senses.",
   "book_table": "BOOK A TABLE",
-  "grilled_menu": "GRILLED TE'AMA MENU",
+  "grilled_menu": "GRILLED TO'MAH MENU",
   "beef_joints": "BEEF JOINTS",
   "beef_joints_desc": "Indulge in grilled beef joints served with rich tahini sauce. A delicious meal rich in protein and authentic grilled flavors.",
   "tomah_kebab": "TO'MAH KEBAB",
@@ -502,14 +502,9 @@
 },
 "gallery_and_category":"Our Visitors",
 "people_section": {
-	"title": "Meet Our Owners & Chefs",
-
+	"title": "Meet The Founders ",
 	"owner_title": "Linda Zaidan",
-	"owner_desc": "To'mah's Founder & Owner.",
-
-	
-	"chef_title": "To'mah Family",
-	"chef_desc": "Our Talented Chefs & Staff."
+	"owner_desc": "To'mah's Founder & Owner."
 },
 "toamahBanner": "Al-Madinah People Food"
 

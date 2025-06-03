@@ -1,14 +1,9 @@
 import SectionWrapper from "./sectionWrapper";
-import img1 from "../../assets/gallery/first.jpg";
-import img2 from "../../assets/gallery/second.jpg";
-import img3 from "../../assets/gallery/third.jpg";
-import img4 from "../../assets/gallery/forth.jpg";
-import img5 from "../../assets/gallery/fifth.jpg";
-import img6 from "../../assets/gallery/sixth.png";
+
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import visitorsPhotos from "../../service/visitors/visitors";
 
-const images = [img1, img2, img3, img6, img5, img4];
 
 const categories = [
   "appetizers", "main_dishes", "desserts", "drinks",
@@ -23,8 +18,8 @@ export default function GalleryAndCategoryScroll() {
   const { t } = useTranslation();
   const [active, setActive] = useState(0);
 
-  const prevSlide = () => setActive(active === 0 ? images.length - 1 : active - 1);
-  const nextSlide = () => setActive(active === images.length - 1 ? 0 : active + 1);
+  const prevSlide = () => setActive(active === 0 ? visitorsPhotos.length - 1 : active - 1);
+  const nextSlide = () => setActive(active === visitorsPhotos.length - 1 ? 0 : active + 1);
 
   return (
     <>
@@ -52,37 +47,40 @@ export default function GalleryAndCategoryScroll() {
       </div>
 
       {/* Gallery Slider Section */}
-      <SectionWrapper className="bg-transaprent">
+      <SectionWrapper className="bg-transparent py-16 md:py-32">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           {t("gallery_and_category")}
         </h2>
-        <div className="relative w-full max-w-md mx-auto">
-          <div className="w-full h-full overflow-hidden rounded-lg shadow-md">
+        <div className="relative w-full max-w-md mx-auto flex flex-col items-center">
+          {/* Image Container */}
+          <div className="relative group rounded-2xl overflow-hidden shadow-xl bg-white p-2 h-[600px] flex items-center justify-center w-full">
             <img
-              src={images[active]}
-              alt={t("gallery_and_category.dish_alt", { number: active + 1 })}
-              className="w-full h-full object-cover transition-all duration-500"
+              src={visitorsPhotos[active].image}
+              alt={visitorsPhotos[active].name}
+              className="w-full h-[500px] object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
             />
+            {/* Prev Button */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-gray-100/80 hover:bg-gray-200 text-lg text-gray-700 p-2 rounded-full shadow transition z-10"
+              aria-label="Previous Image"
+            >
+              &#8592;
+            </button>
+            {/* Next Button */}
+            <button
+              onClick={nextSlide}
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-100/80 hover:bg-gray-200 text-lg text-gray-700 p-2 rounded-full shadow transition z-10"
+              aria-label="Next Image"
+            >
+              &#8594;
+            </button>
           </div>
-          {/* Prev Button */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-gray-100/80 hover:bg-gray-200 text-sm text-gray-700  shadow transition"
-            aria-label="Previous Image"
-          >
-            &#8592;
-          </button>
-          {/* Next Button */}
-          <button
-            onClick={nextSlide}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-100/80 hover:bg-gray-200 text-lg text-gray-700 p-2 rounded-full shadow transition"
-            aria-label="Next Image"
-          >
-            &#8594;
-          </button>
-
+          {/* Name Below Image */}
+          <div className="w-full mt-6">
+            <p className="text-center font-bold text-amber-800 text-xl">{visitorsPhotos[active].name}</p>
+          </div>
         </div>
-
       </SectionWrapper>
     </>
   );
