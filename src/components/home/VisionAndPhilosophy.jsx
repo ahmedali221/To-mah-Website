@@ -34,18 +34,42 @@ export default function VisionAndPhilosophy() {
 
   return (
     <>
-      {/* Vision & Goals */}
-      <SectionWrapper className="bg-transaprent">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+      {/* Vision Section */}
+      <SectionWrapper className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold text-center mb-8"
+            initial={{ y: -20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             {t("home.vision.title")}
+          </motion.h2>
+          <motion.p
+            className="text-lg md:text-xl text-center text-gray-700 max-w-3xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
+            {t("home.vision.description")}
+          </motion.p>
+        </div>
+      </SectionWrapper>
+
+      {/* Goals */}
+      <SectionWrapper className="bg-transaprent">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            {t("home.goals.title")}
           </h2>
 
           {/* Image - Now under title on mobile */}
           <div className="mb-8 lg:hidden">
             <img
               src={goals}
-              alt={t("home.vision.image_alt")}
+              alt={t("home.goals.image_alt")}
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
           </div>
@@ -64,8 +88,8 @@ export default function VisionAndPhilosophy() {
                   <GlobeAltIcon className="w-6 h-6 md:w-8 md:h-8" />
                 </div>
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.vision.heritage.title")}</h3>
-                  <p className="text-shadow-black text-sm md:text-base">{t("home.vision.heritage.description")}</p>
+                  <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.goals.heritage.title")}</h3>
+                  <p className="text-shadow-black text-sm md:text-base">{t("home.goals.heritage.description")}</p>
                 </div>
               </motion.div>
 
@@ -80,8 +104,8 @@ export default function VisionAndPhilosophy() {
                   <LightBulbIcon className="w-6 h-6 md:w-8 md:h-8" />
                 </div>
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.vision.innovation.title")}</h3>
-                  <p className="text-shadow-black text-sm md:text-base">{t("home.vision.innovation.description")}</p>
+                  <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.goals.innovation.title")}</h3>
+                  <p className="text-shadow-black text-sm md:text-base">{t("home.goals.innovation.description")}</p>
                 </div>
               </motion.div>
 
@@ -96,8 +120,8 @@ export default function VisionAndPhilosophy() {
                   <UserGroupIcon className="w-6 h-6 md:w-8 md:h-8" />
                 </div>
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.vision.community.title")}</h3>
-                  <p className="text-shadow-black text-sm md:text-base">{t("home.vision.community.description")}</p>
+                  <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.goals.quality.title")}</h3>
+                  <p className="text-shadow-black text-sm md:text-base">{t("home.goals.quality.description")}</p>
                 </div>
               </motion.div>
             </div>
@@ -106,7 +130,7 @@ export default function VisionAndPhilosophy() {
             <div className="order-2 lg:order-1 hidden lg:block">
               <motion.img
                 src={goals}
-                alt={t("home.vision.image_alt")}
+                alt={t("home.goals.image_alt")}
                 className="rounded-lg shadow-2xl w-full h-[30rem] object-cover"
                 initial={{ scale: 0.9, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
@@ -120,7 +144,7 @@ export default function VisionAndPhilosophy() {
 
       {/* Values Section - Animated 2-column grid */}
       <SectionWrapper className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <motion.h2
             className="text-3xl font-bold text-center mb-12 text-gray-900"
             initial={{ y: -20, opacity: 0 }}
@@ -163,7 +187,7 @@ export default function VisionAndPhilosophy() {
 
       {/* Features Section - Animated 2-column grid */}
       <SectionWrapper className="py-16 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <motion.h2
             className="text-3xl font-bold text-center mb-12 text-gray-900"
             initial={{ y: -20, opacity: 0 }}

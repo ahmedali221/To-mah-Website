@@ -233,32 +233,39 @@
     },
     "values": {
       "title": "Our Philosophy",
-      "quality": {
-        "title": "Authentic Taste",
-        "description": "Each dish captures the authentic flavors of our city's traditional cuisine, made with fresh ingredients and time-honored cooking techniques."
-      },
-      "tradition": {
-        "title": "Elegant Atmosphere",
-        "description": "Our restaurant emulates a heritage ambiance that immerses you in tranquility and comfort, creating a historically rich environment steeped in tradition."
-      },
-      "service": {
+	  "service": {
         "title": "Tu'mah Experience",
-        "description": "Food from the city that carries a special meaning - not just a meal, but a connection to our cultural heritage and community values."
+        "description": "The first of its kind in the Medina region."
+
+      },
+			"quality": {
+		"title": "Quality Ingredients",
+		"description": "We use only the freshest and finest ingredients in our dishes."
+	  },	 	
+      "tradition": {
+        "title": "Elegant Atmosphere ",
+        "description": "Suitable for people with special needs, families, and gatherings."
       }
+     
     },
-    "vision": {
-      "title": "Our Vision & Goals",
+	"vision": {
+	  "title": "Our Vision",
+	  "description": "To become one of the best restaurants specializing in traditional cuisine, known for its service, quality, speed of service, and innovative concept",
+	  "image_alt": "Restaurant Vision Image"
+	},
+    "goals": {
+      "title": "Our Goals",
       "heritage": {
         "title": "Cultural Heritage",
-        "description": "Preserving and sharing our rich culinary traditions"
+        "description": "To introduce and spread the culture of Medina's cuisine"
       },
       "innovation": {
         "title": "Modern Innovation",
-        "description": "Blending traditional flavors with contemporary presentation"
+        "description": "Exceptional service for the visitors and guests of Medina"
       },
-      "community": {
-        "title": "Community Focus",
-        "description": "Creating a welcoming space for all our guests"
+      "quality": {
+        "title": "Quality Focus",
+        "description": "To meet the needs of Medina by providing a restaurant that offer high-quality local food"
       },
       "image_alt": "Restaurant Vision Image",
       "years": "Est. 2024",

@@ -36,12 +36,19 @@ html[dir="rtl"] body {
 
 /* Font family definitions */
 body {
-  font-family: "Almadinah2", sans-serif;
+  font-family: "Almadinah2", "Aref Ruqaa", serif;
 }
 
 body[dir="rtl"],
 html[dir="rtl"] body {
   font-family: "Almadinah2", "Aref Ruqaa", serif;
+}
+
+p,
+span {
+  font-family: "Almadinah2", "Aref Ruqaa", serif;
+  font-size: 1.2em;
+
 }
 
 /* Unified responsive font sizes */
