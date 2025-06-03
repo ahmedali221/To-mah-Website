@@ -501,12 +501,15 @@
   "snacks": "الوجبات الخفيفة"
 },
 "gallery_and_category": "زوارنا",
-"people_section": {
-  "title": "تعرف على المؤسسين",
-  "owner_title": "ليندا زيدان",
-  "owner_desc": "مالكة و مؤسسة مطعم طُعمة"
 
-},
+"people_section": {
+	"title": "تعرف على المؤسسين",
+	"owner_title": "ليندا زيدان",
+	"owner_desc": "مالكة و مؤسسة مطعم طُعمة",
+	
+	"chef_title": "عائلة طُعمة",
+	"chef_desc": "فريقنا الموهوب من الطهاة والموظفين."
+	},
 "toamahBanner": "أكل أهل المدينة",
 "menu_banner.button": "أطلب الآن",
 	"menu_banner.title": "استكشف قائمة الطعام"

@@ -234,7 +234,7 @@
     "values": {
       "title": "Our Philosophy",
 	  "service": {
-        "title": "Tu'mah Experience",
+        "title": "To'mah Experience",
         "description": "The first of its kind in the Medina region."
 
       },
@@ -502,9 +502,14 @@
 },
 "gallery_and_category":"Our Visitors",
 "people_section": {
-	"title": "Meet The Founders ",
+	"title": "Meet Our Founders ",
+
 	"owner_title": "Linda Zaidan",
-	"owner_desc": "To'mah's Founder & Owner."
+	"owner_desc": "To'mah's Founder & Owner.",
+
+	
+	"chef_title": "To'mah Family",
+	"chef_desc": "Our Talented Chefs & Staff."
 },
 "toamahBanner": "Al-Madinah People Food"
 
