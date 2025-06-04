@@ -448,7 +448,7 @@ const About = () => {
 									/>
 								</div>
 								<div className="w-full mt-6">
-									<p className="text-center font-bold text-amber-800 text-xl">{visitor.name}</p>
+									<p style={{fontSize:"36px"}} className="text-center font-bold text-amber-800 text-xl">{visitor.name}</p>
 								</div>
 							</div>
 						))}

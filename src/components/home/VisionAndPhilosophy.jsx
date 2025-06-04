@@ -7,6 +7,10 @@ import {
 } from "@heroicons/react/24/outline";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import philosophy from "../../assets/View5.JPG"
+import Choose from "../../assets/View4.jpeg"
+import reserve from "../../assets/reserve.jpg"
+
 
 export default function VisionAndPhilosophy() {
   const { t } = useTranslation();
@@ -34,8 +38,8 @@ export default function VisionAndPhilosophy() {
 
   return (
     <>
-      {/* Vision Section */}
-      <SectionWrapper className="py-16 bg-white">
+ {/* Vision Section - Image on RIGHT */}
+    <SectionWrapper className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-center mb-8"
@@ -46,19 +50,47 @@ export default function VisionAndPhilosophy() {
           >
             {t("home.vision.title")}
           </motion.h2>
-          <motion.p
-            className="text-lg md:text-xl text-center text-gray-700 max-w-3xl mx-auto"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-          >
-            {t("home.vision.description")}
-          </motion.p>
+
+          {/* Image - Above content on mobile */}
+          <div className="mb-8 lg:hidden">
+            <img
+              src={reserve}
+              alt={t("home.vision.image_alt")}
+              className="rounded-lg shadow-lg w-full h-64 object-cover"
+            />
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-12 items-center">
+            {/* Text Content */}
+            <div className="order-1 lg:order-1">
+              <motion.p
+                className="text-lg md:text-xl text-gray-700 leading-relaxed"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+              >
+                {t("home.vision.description")}
+              </motion.p>
+            </div>
+
+            {/* Image - Hidden on mobile, shown on desktop */}
+            <div className="order-2 lg:order-2 hidden lg:block">
+              <motion.img
+                src={reserve}
+                alt={t("home.vision.image_alt")}
+                className="rounded-lg shadow-2xl w-full h-[30rem] object-cover"
+                initial={{ scale: 0.9, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              />
+            </div>
+          </div>
         </div>
       </SectionWrapper>
 
-      {/* Goals */}
+      {/* Goals - Image on LEFT */}
       <SectionWrapper className="bg-transaprent">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
@@ -142,7 +174,7 @@ export default function VisionAndPhilosophy() {
         </div>
       </SectionWrapper>
 
-      {/* Values Section - Animated 2-column grid */}
+{/* Values Section - Image on RIGHT */}
       <SectionWrapper className="py-16">
         <div className="max-w-7xl mx-auto px-4">
           <motion.h2
@@ -154,38 +186,66 @@ export default function VisionAndPhilosophy() {
           >
             {t("home.values.title")}
           </motion.h2>
-          <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 gap-6"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {[
-              { icon: SparklesIcon, key: "quality" },
-              { icon: ClockIcon, key: "service" },
-              { icon: ShieldCheckIcon, key: "hygiene" },
-              { icon: TruckIcon, key: "delivery" }
-            ].map(({ icon: Icon, key }) => (
+
+          {/* Image - Above content on mobile */}
+          <div className="mb-8 lg:hidden">
+            <img
+              src={philosophy}
+              alt={t("home.values.image_alt")}
+              className="rounded-lg shadow-lg w-full h-50 object-contain"
+            />
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-12 items-center">
+            {/* Content */}
+            <div className="order-1 lg:order-1">
               <motion.div
-                key={key}
-                className="bg-white border border-gray-100 rounded-lg p-6 text-center hover:shadow-md transition-shadow"
-                variants={itemVariants}
+                className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
               >
-                <Icon className="h-8 w-8 mx-auto mb-4 text-blue-600" />
-                <h3 className="font-semibold text-gray-900 mb-2">
-                  {t(`home.features.${key}.title`)}
-                </h3>
-                <p className="text-sm text-shadow-black leading-relaxed">
-                  {t(`home.features.${key}.description`)}
-                </p>
+                {[
+                  { icon: SparklesIcon, key: "quality" },
+                  { icon: ClockIcon, key: "service" },
+                  { icon: ShieldCheckIcon, key: "hygiene" },
+                  { icon: TruckIcon, key: "delivery" }
+                ].map(({ icon: Icon, key }) => (
+                  <motion.div
+                    key={key}
+                    className="bg-white border border-gray-100 rounded-lg p-6 text-center hover:shadow-md transition-shadow"
+                    variants={itemVariants}
+                  >
+                    <Icon className="h-8 w-8 mx-auto mb-4 text-blue-600" />
+                    <h3 className="font-semibold text-gray-900 mb-2">
+                      {t(`home.features.${key}.title`)}
+                    </h3>
+                    <p className="text-sm text-shadow-black leading-relaxed">
+                      {t(`home.features.${key}.description`)}
+                    </p>
+                  </motion.div>
+                ))}
               </motion.div>
-            ))}
-          </motion.div>
+            </div>
+
+            {/* Image - Hidden on mobile, shown on desktop */}
+            <div className="order-2 lg:order-2 hidden lg:block">
+              <motion.img
+                src={philosophy}
+                alt={t("home.values.image_alt")}
+                className="rounded-lg shadow-2xl w-full h-[30rem] object-contain"
+                initial={{ scale: 0.9, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              />
+            </div>
+          </div>
         </div>
       </SectionWrapper>
 
-      {/* Features Section - Animated 2-column grid */}
+      {/* Features Section - Image on LEFT */}
       <SectionWrapper className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.h2
@@ -197,35 +257,63 @@ export default function VisionAndPhilosophy() {
           >
             {t("home.features.title")}
           </motion.h2>
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {[
-              { icon: HeartIcon, key: "quality" },
-              { icon: SparklesIcon, key: "tradition" },
-              { icon: StarIcon, key: "service" }
-            ].map(({ icon: Icon, key }) => (
+
+          {/* Image - Above content on mobile */}
+          <div className="mb-8 lg:hidden">
+            <img
+              src={Choose}
+              alt={t("home.features.image_alt")}
+              className="rounded-lg shadow-lg w-full h-64 object-contain"
+            />
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-12 items-center">
+            {/* Content */}
+            <div className="order-1 lg:order-2">
               <motion.div
-                key={key}
-                className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow"
-                variants={itemVariants}
+                className="grid grid-cols-1 md:grid-cols-1 gap-8"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
               >
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-6">
-                  <Icon className="h-6 w-6 text-blue-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  {t(`home.values.${key}.title`)}
-                </h3>
-                <p className="text-shadow-black leading-relaxed">
-                  {t(`home.values.${key}.description`)}
-                </p>
+                {[
+                  { icon: HeartIcon, key: "quality" },
+                  { icon: SparklesIcon, key: "tradition" },
+                  { icon: StarIcon, key: "service" }
+                ].map(({ icon: Icon, key }) => (
+                  <motion.div
+                    key={key}
+                    className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow"
+                    variants={itemVariants}
+                  >
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-6">
+                      <Icon className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                      {t(`home.values.${key}.title`)}
+                    </h3>
+                    <p className="text-shadow-black leading-relaxed">
+                      {t(`home.values.${key}.description`)}
+                    </p>
+                  </motion.div>
+                ))}
               </motion.div>
-            ))}
-          </motion.div>
+            </div>
+
+            {/* Image - Hidden on mobile, shown on desktop */}
+            <div className="order-2 lg:order-1 hidden lg:block">
+              <motion.img
+                src={Choose}
+                alt={t("home.features.image_alt")}
+                className="rounded-lg shadow-2xl w-full h-[30rem] object-contain"
+                initial={{ scale: 0.9, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              />
+            </div>
+          </div>
         </div>
       </SectionWrapper>
     </>

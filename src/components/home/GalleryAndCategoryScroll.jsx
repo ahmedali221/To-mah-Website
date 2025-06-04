@@ -78,7 +78,7 @@ export default function GalleryAndCategoryScroll() {
           </div>
           {/* Name Below Image */}
           <div className="w-full mt-6">
-            <p className="text-center font-bold text-amber-800 text-xl">{visitorsPhotos[active].name}</p>
+            <p style={{fontSize:"54px"}} className="text-center font-bold text-amber-800 text-xl" >{visitorsPhotos[active].name}</p>
           </div>
         </div>
       </SectionWrapper>
