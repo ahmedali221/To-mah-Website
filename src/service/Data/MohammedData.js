@@ -227,6 +227,50 @@ const productsData = [
     available: true,
     trendy: false,
   },
+  {
+    id: "148",
+    image: null,
+    meal_name_en: "Tajouri Mixed Grill Platter",
+    description_en:
+      "Premium mixed grill for 3 persons - selection of grilled meats and chicken served with Madini rice on a special platter (12 skewers)",
+    price: null,
+    meal_name_ar: "مشكل مشويات التاجوري",
+    description_ar:
+      "تكفي عدد 3 أشخاص\nتشكيلة فاخرة من اللحوم والدجاج المشوية والرز المديني تقدم على طبق فاخر\nعدد 12 سيخ",
+    calories: null,
+    category_en: "Grill_Platters",
+    category_ar: "منقل طعمة",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "149",
+    image: null,
+    meal_name_en: "Mixed Grill Platter",
+    description_en: "For 1 person - 3 assorted skewers",
+    price: null,
+    meal_name_ar: "مشكل مشويات طعمة",
+    description_ar: '"تكفي عدد 1 شخص \nعدد 3 أسياخ مشكلة',
+    calories: null,
+    category_en: "Grill_Platters",
+    category_ar: "منقل طعمة",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "150",
+    image: null,
+    meal_name_en: "French Fries",
+    description_en: "Crispy fried potatoes",
+    price: null,
+    meal_name_ar: "بطاطس مقلية",
+    description_ar: "",
+    calories: null,
+    category_en: "Grill_Platters",
+    category_ar: "منقل طعمة",
+    available: true,
+    trendy: false,
+  },
 
   //////////////////////////////////////////////////////////////
 
@@ -312,6 +356,27 @@ const productsData = [
     price: "27 ريال",
     available: true,
     trendy: true,
+  },
+  {
+    id: "163",
+    image: null,
+    meal_name_en: "Eggplant Masaqua'a",
+    description_en:
+      "Fried eggplant pieces with minced meat, served with traditional bread and lemon",
+    price: null,
+    meal_name_ar: "مصقعة خدوج",
+    description_ar:
+      "قطع باذنجان مقلية ومسبكة بلحم المفروم الطازج وتقدم بخبز الحب والليمون",
+    calories: null,
+    category_en: "Stews_and_Gravies",
+    category_ar: "طبيخ طعمة / الإيدامات",
+    available: true,
+    trendy: false,
+    availability_details: {
+      local: true,
+      travel: true,
+      buffet: true,
+    },
   },
 
   //////////////////////////////

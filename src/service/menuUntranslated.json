@@ -1,0 +1,339 @@
+[
+    {
+      "id": "6",
+      "image": null,
+      "meal_name_en": "Karbo Platter",
+      "description_en": "Traditional Karbo dish served with red sauce",
+      "price": null,
+      "meal_name_ar": "كربو",
+      "description_ar": "كربو الحجة و صوص الحمر",
+      "calories": null,
+      "category_en": "Welcome_Dish",
+      "category_ar": "صحن الترحيب",
+      "available": true,
+      "trendy": false
+    },
+    {
+      "id": "7",
+      "image": null,
+      "meal_name_en": "Manfoush Bread",
+      "description_en": "Traditional flatbread",
+      "price": null,
+      "meal_name_ar": "منفوش",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "Welcome_Dish",
+      "category_ar": "صحن الترحيب",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "68",
+      "image": null,
+      "meal_name_en": "Meat Harissa",
+      "description_en": "Traditional wheat and meat porridge garnished with ghee and sugar",
+      "price": null,
+      "meal_name_ar": "هريسة اللحم",
+      "description_ar": "خليط الحب و اللحم المزينة بالسمن و السكر",
+      "calories": null,
+      "category_en": "Breakfast_Sweets",
+      "category_ar": "حلا الفطور \nحلي وعلى النبي صلي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "82",
+      "image": null,
+      "meal_name_en": "Grandma's Salad",
+      "description_en": "Traditional salad with parsley and lemon dressing",
+      "price": null,
+      "meal_name_ar": "سلطة ستيتة",
+      "description_ar": "سلطة الجدات المزينة بالبقدونس و الليمون",
+      "calories": null,
+      "category_en": "Salads_and_Cold_Appetizers",
+      "category_ar": "السلطات و المقبلات الباردة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "95",
+      "image": null,
+      "meal_name_en": "Cooked Stuffed Peppers",
+      "description_en": "Peppers cooked with olive oil and garlic",
+      "price": null,
+      "meal_name_ar": "فلفل طعمة مطبوخ",
+      "description_ar": "فلفل مطبوخ بزيت الزيتون و الثوم",
+      "calories": null,
+      "category_en": "Pickles_and_Preserves",
+      "category_ar": "مشهونات طعمة \n(المخلالات و الطرشي)",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "97",
+      "image": null,
+      "meal_name_en": "Beetroot Pickle Mix",
+      "description_en": "Assorted pickled vegetables with beetroot",
+      "price": null,
+      "meal_name_ar": "مخلل مشكل  البنجر",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "Pickles_and_Preserves",
+      "category_ar": "مشهونات طعمة \n(المخلالات و الطرشي)",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "127",
+      "image": null,
+      "meal_name_en": "Chicken Fatayer",
+      "description_en": "Traditional bread soaked in spiced chicken broth",
+      "price": null,
+      "meal_name_ar": "فطير بالدجاج",
+      "description_ar": "فطير مسقي بمرقة الدجاج المسبكه",
+      "calories": null,
+      "category_en": "Rice_Dishes",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "128",
+      "image": null,
+      "meal_name_en": "Meat Fatayer",
+      "description_en": "Traditional bread soaked in spiced meat broth",
+      "price": null,
+      "meal_name_ar": "فطير باللحم",
+      "description_ar": "فطير مسقي بمرقة اللحم المسبكة",
+      "calories": null,
+      "category_en": "Rice_Dishes",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "129",
+      "image": null,
+      "meal_name_en": "Chicken Kozi",
+      "description_en": "Rice and pasta mix with chicken",
+      "price": null,
+      "meal_name_ar": "كوزي دجاج طعمة",
+      "description_ar": "خليط الرز و المكرونة بالدجاج",
+      "calories": null,
+      "category_en": "Rice_Dishes",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "130",
+      "image": null,
+      "meal_name_en": "Meat Kozi",
+      "description_en": "Rice and pasta mix with meat",
+      "price": null,
+      "meal_name_ar": "كوزي لحم طعمة",
+      "description_ar": "خليط الرز و المكرونة باللحم",
+      "calories": null,
+      "category_en": "Rice_Dishes",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "148",
+      "image": null,
+      "meal_name_en": "Tajouri Mixed Grill Platter",
+      "description_en": "Premium mixed grill for 3 persons - selection of grilled meats and chicken served with Madini rice on a special platter (12 skewers)",
+      "price": null,
+      "meal_name_ar": "مشكل مشويات التاجوري",
+      "description_ar": "تكفي عدد 3 أشخاص\nتشكيلة فاخرة من اللحوم والدجاج المشوية والرز المديني تقدم على طبق فاخر\nعدد 12 سيخ",
+      "calories": null,
+      "category_en": "Grill_Platters",
+      "category_ar": "منقل طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "149",
+      "image": null,
+      "meal_name_en": "Mixed Grill Platter",
+      "description_en": "For 1 person - 3 assorted skewers",
+      "price": null,
+      "meal_name_ar": "مشكل مشويات طعمة",
+      "description_ar": "\"تكفي عدد 1 شخص \nعدد 3 أسياخ مشكلة",
+      "calories": null,
+      "category_en": "Grill_Platters",
+      "category_ar": "منقل طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "150",
+      "image": null,
+      "meal_name_en": "French Fries",
+      "description_en": "Crispy fried potatoes",
+      "price": null,
+      "meal_name_ar": "بطاطس مقلية",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "Grill_Platters",
+      "category_ar": "منقل طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "163",
+      "image": null,
+      "meal_name_en": "Eggplant Masaqua'a",
+      "description_en": "Fried eggplant pieces with minced meat, served with traditional bread and lemon",
+      "price": null,
+      "meal_name_ar": "مصقعة خدوج",
+      "description_ar": "قطع باذنجان مقلية ومسبكة بلحم المفروم الطازج وتقدم بخبز الحب والليمون",
+      "calories": null,
+      "category_en": "Stews_and_Gravies",
+      "category_ar": "طبيخ طعمة / الإيدامات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "181",
+      "image": null,
+      "meal_name_en": "Liver Sandwich",
+      "description_en": "Traditional bread with liver and cheese spread, garnished with parsley",
+      "price": null,
+      "meal_name_ar": "ساندوتش كبدة",
+      "description_ar": "الجبنة السائلة المدهونة مع الكبدة و المزينة بالبقدونس",
+      "calories": null,
+      "category_en": "Traditional_Bread_Sandwiches",
+      "category_ar": "ساندوتش عيش الحب",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    },
+    {
+      "id": "192",
+      "image": null,
+      "meal_name_en": "Turkish Coffee",
+      "description_en": "Traditional strong coffee prepared in cezve",
+      "price": null,
+      "meal_name_ar": "قهوة تركي",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "Drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "203",
+      "image": null,
+      "meal_name_en": "Mineral Water",
+      "description_en": "Bottled mineral water",
+      "price": null,
+      "meal_name_ar": "مياه معدنية",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "Drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "204",
+      "image": null,
+      "meal_name_en": "Carbonated Water",
+      "description_en": "Sparkling mineral water",
+      "price": null,
+      "meal_name_ar": "مياه غازية",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "Drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+]

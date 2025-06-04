@@ -692,7 +692,21 @@ const productsData = [
     trendy: false,
     image: image7_4,
   },
-  // Missing: هريسة اللحم
+  {
+    id: "68",
+    image: null,
+    meal_name_en: "Meat Harissa",
+    description_en:
+      "Traditional wheat and meat porridge garnished with ghee and sugar",
+    price: null,
+    meal_name_ar: "هريسة اللحم",
+    description_ar: "خليط الحب و اللحم المزينة بالسمن و السكر",
+    calories: null,
+    category_en: "Breakfast_Sweets",
+    category_ar: "حلا الفطور \nحلي وعلى النبي صلي",
+    available: true,
+    trendy: false,
+  },
 ];
 
 export default productsData;
