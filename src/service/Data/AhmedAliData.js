@@ -3,7 +3,8 @@ import image19_2 from "../../assets/Menu/19-25/19-2.JPG";
 import image19_3 from "../../assets/Menu/19-25/19-3.JPG";
 import image19_4 from "../../assets/Menu/19-25/19-4.JPG";
 import image19_5 from "../../assets/Menu/19-25/19-5.JPG";
-
+import img2 from "../../assets/Menu/pages13-18/DSC02159.JPG";
+import img3 from "../../assets/Menu/pages13-18/DSC02166.JPG";
 import image21_3 from "../../assets/Menu/19-25/21-3.JPG";
 import image21_4 from "../../assets/Menu/19-25/21-4.JPG";
 import image21_5 from "../../assets/Menu/19-25/21-5.JPG";
@@ -11,50 +12,8 @@ import image21_6 from "../../assets/Menu/19-25/21-6.JPG";
 import image21_7 from "../../assets/Menu/19-25/21-7.JPG";
 
 const productsData = [
-  {
-    id: "8",
-    image: image19_1,
-    meal_name_en: "Cheese Liver",
-    description_en: "Fresh liver with rice bread and cheese cuts",
-    price: "20 ريال",
-    meal_name_ar: "كبدة بالجبنة",
-    description_ar: "كبدة طازجة مع خبز الرز وقطع الجبنة",
-    calories: null,
-    category_en: "breakfast",
-    category_ar: "فطور",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "9",
-    image: image19_2,
-    meal_name_en: "White Cheese with Tomatoes and Mint",
-    description_en: "White cheese with tomatoes and Moroccan mint",
-    price: "15 ريال",
-    meal_name_ar: "جبنة بيضاء، طماطم، نعناع",
-    description_ar: "جبنة بيضاء مع الطماطم والنعناع المغربي",
-    calories: null,
-    category_en: "breakfast",
-    category_ar: "فطور",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "10",
-    image: image19_3,
-    meal_name_en: "Fattoot of Souq Al-Shamiya",
-    description_en:
-      "Halloumi cheese with sun-dried tomatoes stuffed in fatoot bread, with black seeds and more!",
-    price: "10 ريال",
-    meal_name_ar: "فتوت سوق الشامية",
-    description_ar:
-      "جبنة حلوم مع الطماطم المجففة محشوة في خبز الفتوت، وبذور البركة والمزيد",
-    calories: null,
-    category_en: "breakfast",
-    category_ar: "فطور",
-    available: true,
-    trendy: false,
-  },
+  //////////////////////////////////
+  //// ساندويتش عيش الحب
   {
     id: "11",
     image: image19_4,
@@ -84,6 +43,10 @@ const productsData = [
     available: true,
     trendy: false,
   },
+
+  ////////////////////////////////////////
+  //المخبوزات الطازة
+
   {
     id: "13",
     image: null,
@@ -112,6 +75,11 @@ const productsData = [
     available: true,
     trendy: false,
   },
+
+  ///////////////////////////////////
+
+  ////////////////////////////////////////
+  // مخبوزات معلفة
   {
     id: "15",
     image: null,
@@ -238,46 +206,20 @@ const productsData = [
     available: true,
     trendy: false,
   },
+
+  ///////////////////////////////////////////////////////
+
+  //////////////////////////////////////////
+  // الحلويات
   {
-    id: "24",
+    id: "31",
     image: null,
-    meal_name_en: "Sit Al-Beit Kunafa",
-    description_en:
-      "Soft kunafa with baladi cheese made and served in Sit Al-Beit style. Served with sugar syrup mixed with rose water.",
+    meal_name_en: "Kudrit Kader",
+    description_en: "Cream caramel & cake mix",
     price: "20 ريال",
-    meal_name_ar: "طاوة كنافة ست البيت",
-    description_ar:
-      "كنافة ناعمة بالجبنة البلدية على طريقة ست البيت، تقدم مع قطر السكر مخلوطة بماء الورد",
-    calories: "504",
-    category_en: "desserts",
-    category_ar: "حلويات",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "25",
-    image: null,
-    meal_name_en: "Am Khalil’s Saqdana",
-    description_en: "Higazi Desert Made Of Sago Pearls And Milk",
-    price: "20 ريال",
-    meal_name_ar: "أم خليل الخاصة",
-    description_ar: "طبق حجازي شهير يحضر بالساقو و الحليب",
-    calories: "481",
-    category_en: "desserts",
-    category_ar: "حلويات",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "26",
-    image: image21_3,
-    meal_name_en: "Roqaq Al-Aguat",
-    description_en:
-      "Crispy Roqaq Dough Filled With Pistachios And Cream And Served With Ice Cream",
-    price: "25 ريال",
-    meal_name_ar: "رقاق الأعوات",
-    description_ar: "طبقات رقيقة من العجين المحشو بالقشطة الحلوة والشيرة",
-    calories: "479",
+    meal_name_ar: "قدرة قادر",
+    description_ar: "كريم كراميل وكعكة ممزوجة",
+    calories: "306",
     category_en: "desserts",
     category_ar: "حلويات",
     available: true,
@@ -329,34 +271,22 @@ const productsData = [
     trendy: false,
   },
   {
-    id: "30",
-    image: image21_7,
-    meal_name_en: "Tarmbeh",
-    description_en:
-      "Tarmbeh or Balah Al-Sham with ice cream, chocolate and pistachios",
-    price: "20 ريال",
-    meal_name_ar: "طرمبة",
-    description_ar: "طرمبة أو بلح الشام مع الآيس كريم، الشوكولاتة، والفستق",
-    calories: "455",
-    category_en: "desserts",
-    category_ar: "حلويات",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "31",
+    id: "25",
     image: null,
-    meal_name_en: "Kudrit Kader",
-    description_en: "Cream caramel & cake mix",
+    meal_name_en: "Am Khalil’s Saqdana",
+    description_en: "Higazi Desert Made Of Sago Pearls And Milk",
     price: "20 ريال",
-    meal_name_ar: "قدرة قادر",
-    description_ar: "كريم كراميل وكعكة ممزوجة",
-    calories: "306",
+    meal_name_ar: "أم خليل سقعانة",
+    description_ar: "طبق حجازي شهير يحضر بالساقو و الحليب",
+    calories: "481",
     category_en: "desserts",
     category_ar: "حلويات",
     available: true,
     trendy: false,
   },
+
+  ///////////////////////////////
+  //// المشروبات
   {
     id: "32",
     image: null,
@@ -368,6 +298,9 @@ const productsData = [
     calories: "343",
     category_en: "drinks",
     category_ar: "مشروبات",
+    subcategory_en: "",
+    subcategory_ar: "",
+
     available: true,
     trendy: false,
   },
@@ -427,6 +360,7 @@ const productsData = [
     available: true,
     trendy: false,
   },
+
   {
     id: "37",
     image: null,
@@ -609,38 +543,11 @@ const productsData = [
     available: true,
     trendy: false,
   },
-  {
-    id: "50",
-    image: null,
-    meal_name_en: "To'mah Special Tray",
-    description_en:
-      "A balanced tray of To'mah food, served with special rice, madini rice, chicken muqalqal, two types of sambosa, dakos, salad, liver, madini molokhia, tamma eggs, labneh, falafel, foul, pickles, cheese, and more.",
-    price: "900 ريال",
-    meal_name_ar: "تسيي طعمة الفاخر",
-    description_ar:
-      "صينية متكاملة من أطباق طعمة تقدم مع رز خاص، رز مديني، مقلقل دجاج، نوعين من السمبوسة، دقوس، سلطة، كبدة، ملوخية مدينية، بيض طما، لبنة، فلافل، فول، مخللات، جبن والمزيد",
-    calories: null,
-    category_en: "feasts",
-    category_ar: "عزائم",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "51",
-    image: null,
-    meal_name_en: "Invite me",
-    description_en:
-      "Serves 5 people. Includes salad, two types of rice with chicken of your choice, dessert, and drinks.",
-    price: "150 ريال",
-    meal_name_ar: "اعزمني",
-    description_ar:
-      "يخدم ٥ أشخاص. ١/ سلطة، ٢/ نوعين من الرز مع دجاج من اختيارك، ٣/ حلى، ٤/ مشروبات",
-    calories: null,
-    category_en: "feasts",
-    category_ar: "عزائم",
-    available: true,
-    trendy: false,
-  },
+
+  //////////////////////////////////
+
+  ///////////////////////////////////
+  ///// عروض طعمة
   {
     id: "52",
     image: null,
@@ -673,6 +580,9 @@ const productsData = [
     available: true,
     trendy: false,
   },
+
+  /////////////////////////
+  // بوفيه طعمة الخارجي
   {
     id: "54",
     image: null,
@@ -687,6 +597,58 @@ const productsData = [
     available: true,
     trendy: false,
   },
+
+  /////////////////////////
+  //unsorted
+  {
+    id: "24",
+    image: null,
+    meal_name_en: "Sit Al-Beit Kunafa",
+    description_en:
+      "Soft kunafa with baladi cheese made and served in Sit Al-Beit style. Served with sugar syrup mixed with rose water.",
+    price: "20 ريال",
+    meal_name_ar: "طاوة كنافة ست البيت",
+    description_ar:
+      "كنافة ناعمة بالجبنة البلدية على طريقة ست البيت، تقدم مع قطر السكر مخلوطة بماء الورد",
+    calories: "504",
+    category_en: "desserts",
+    category_ar: "حلويات",
+    available: true,
+    trendy: false,
+  },
+
+  {
+    id: "26",
+    image: image21_3,
+    meal_name_en: "Roqaq Al-Aguat",
+    description_en:
+      "Crispy Roqaq Dough Filled With Pistachios And Cream And Served With Ice Cream",
+    price: "25 ريال",
+    meal_name_ar: "رقاق الأعوات",
+    description_ar: "طبقات رقيقة من العجين المحشو بالقشطة الحلوة والشيرة",
+    calories: "479",
+    category_en: "desserts",
+    category_ar: "حلويات",
+    available: true,
+    trendy: false,
+  },
+
+  {
+    id: "30",
+    image: image21_7,
+    meal_name_en: "Tarmbeh",
+    description_en:
+      "Tarmbeh or Balah Al-Sham with ice cream, chocolate and pistachios",
+    price: "20 ريال",
+    meal_name_ar: "طرمبة",
+    description_ar: "طرمبة أو بلح الشام مع الآيس كريم، الشوكولاتة، والفستق",
+    calories: "455",
+    category_en: "desserts",
+    category_ar: "حلويات",
+    available: true,
+    trendy: false,
+  },
+
   {
     id: "55",
     image: null,
@@ -698,6 +660,325 @@ const productsData = [
     calories: null,
     category_en: "feasts",
     category_ar: "عزائم",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "50",
+    image: null,
+    meal_name_en: "To'mah Special Tray",
+    description_en:
+      "A balanced tray of To'mah food, served with special rice, madini rice, chicken muqalqal, two types of sambosa, dakos, salad, liver, madini molokhia, tamma eggs, labneh, falafel, foul, pickles, cheese, and more.",
+    price: "900 ريال",
+    meal_name_ar: "تسيي طعمة الفاخر",
+    description_ar:
+      "صينية متكاملة من أطباق طعمة تقدم مع رز خاص، رز مديني، مقلقل دجاج، نوعين من السمبوسة، دقوس، سلطة، كبدة، ملوخية مدينية، بيض طما، لبنة، فلافل، فول، مخللات، جبن والمزيد",
+    calories: null,
+    category_en: "feasts",
+    category_ar: "عزائم",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "51",
+    image: null,
+    meal_name_en: "Invite me",
+    description_en:
+      "Serves 5 people. Includes salad, two types of rice with chicken of your choice, dessert, and drinks.",
+    price: "150 ريال",
+    meal_name_ar: "اعزمني",
+    description_ar:
+      "يخدم ٥ أشخاص. ١/ سلطة، ٢/ نوعين من الرز مع دجاج من اختيارك، ٣/ حلى، ٤/ مشروبات",
+    calories: null,
+    category_en: "feasts",
+    category_ar: "عزائم",
+    available: true,
+    trendy: false,
+  },
+
+  {
+    id: "8",
+    image: image19_1,
+    meal_name_en: "Cheese Liver",
+    description_en: "Fresh liver with rice bread and cheese cuts",
+    price: "20 ريال",
+    meal_name_ar: "كبدة بالجبنة",
+    description_ar: "كبدة طازجة مع خبز الرز وقطع الجبنة",
+    calories: null,
+    category_en: "breakfast",
+    category_ar: "فطور",
+
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "9",
+    image: image19_2,
+    meal_name_en: "White Cheese with Tomatoes and Mint",
+    description_en: "White cheese with tomatoes and Moroccan mint",
+    price: "15 ريال",
+    meal_name_ar: "جبنة بيضاء، طماطم، نعناع",
+    description_ar: "جبنة بيضاء مع الطماطم والنعناع المغربي",
+    calories: null,
+    category_en: "breakfast",
+    category_ar: "فطور",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "10",
+    image: image19_3,
+    meal_name_en: "Fattoot of Souq Al-Shamiya",
+    description_en:
+      "Halloumi cheese with sun-dried tomatoes stuffed in fatoot bread, with black seeds and more!",
+    price: "10 ريال",
+    meal_name_ar: "فتوت سوق الشامية",
+    description_ar:
+      "جبنة حلوم مع الطماطم المجففة محشوة في خبز الفتوت، وبذور البركة والمزيد",
+    calories: null,
+    category_en: "breakfast",
+    category_ar: "فطور",
+    available: true,
+    trendy: false,
+  },
+  {
+    meal_name_en: "Labnya & Harrisa",
+    description_en: "Cubed pieces of labnya and harrisa.",
+    price: "20 ريال",
+    meal_name_ar: "اللبنية والهريسة",
+    description_ar: "قطع من اللبنية والهريسة مكعبة الشكل.",
+    calories: null,
+    category_en: "desserts",
+    category_ar: "حلويات",
+    available: true,
+    trendy: false,
+    image: null,
+  },
+
+  {
+    meal_name_en: "Tatema Mix",
+    description_en:
+      "Serve 8 - 10 people. Assortment of cheese, olives, pickles, jams and homemade halva. Includes: 1) Mesh 2) White cheese with To'mah spice mix 3) Salty Halawa 4) Pickled olives 5) Labneh with beets 6) Honey and cream 7) Labneh 8) Baked white cheese in pottery 1 / Veggies Muttabak 1 / Ma’soub Bakr 2 / Foul dishes 2 / To’mah egg dishes 2 / Chicken Muqalqal 1 and 2 / Liver dishes with 3 types Madini bakeries.",
+    price: "350 ريال",
+    meal_name_ar: "مشكل تعتيمة",
+    description_ar:
+      "تشكيلة من الأجبان، والزيتون، والمخللات، والمربى، والحلاوة الطحينية المحلى الصنع . تشمل: ١/ مشر ٢/ جبنة بيضاء بخلطة طعمة ٣/ حلاوة طحينية مالحة ٤/ زيتون مخلل ٥/ لبنة بالبنجر ٦/ العسل والقشطة ٧/ لبنة ٨/ جبنة بيضاء في الفخار ١/ مطبق خضار ١/ معصوب بكر ٢/طبق فول ٢/ طبق بيض طعمة ٢/طبق مقلقل دجاج و٢/طبق كبدة، مع ٣ أنواع من مخابز المدينة.",
+    calories: null,
+    category_en: "breakfast",
+    category_ar: "فطور",
+    available: true,
+    trendy: false,
+    image: null,
+  },
+
+  //////////////////////////////
+  // التسالي
+  {
+    meal_name_en: "Mushabak",
+    description_en: null,
+    price: "17 ريال",
+    meal_name_ar: "مشبك",
+    description_ar: null,
+    calories: "390",
+    category_en: "appetizers",
+    category_ar: "مقبلات",
+    available: true,
+    trendy: false,
+    image: null,
+  },
+  {
+    meal_name_en: "Hamam Albir",
+    description_en: null,
+    price: "17 ريال",
+    meal_name_ar: "حمام البر",
+    description_ar: null,
+    calories: "353",
+    category_en: "appetizers",
+    category_ar: "مقبلات",
+    available: true,
+    trendy: false,
+    image: null,
+  },
+  {
+    meal_name_en: "Balela",
+    description_en: null,
+    price: "15 ريال",
+    meal_name_ar: "البليلة",
+    description_ar: null,
+    calories: "168",
+    category_en: "appetizers",
+    category_ar: "مقبلات",
+    available: true,
+    trendy: false,
+    image: null,
+  },
+  {
+    meal_name_en: "Hijazi Chips + Tammarind Sauce",
+    description_en: "Spicy tamarind sauce",
+    price: "17 ريال",
+    meal_name_ar: "كريبو + سلطة الحمر",
+    description_ar: "شطة وسلطة الحمر ",
+    calories: "332",
+    category_en: "appetizers",
+    category_ar: "مقبلات",
+    available: true,
+    trendy: false,
+    image: null,
+  },
+
+  //////////////////////////////////////////////////////////////////////
+  ////////////
+  // ترحيب
+  {
+    id: "6",
+    image: null,
+    meal_name_en: "Karbo",
+    description_en: "كربو الحجة و صوص الحمر",
+    price: null,
+    meal_name_ar: "كربو",
+    description_ar: "كربو الحجة و صوص الحمر",
+    calories: null,
+    category_en: "صحن_الترحيب",
+    category_ar: "صحن الترحيب",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "7",
+    image: null,
+    meal_name_en: "Manfoush",
+    description_en: "",
+    price: null,
+    meal_name_ar: "منفوش",
+    description_ar: "",
+    calories: null,
+    category_en: "صحن_الترحيب",
+    category_ar: "صحن الترحيب",
+    available: true,
+    trendy: false,
+    availability_details: {
+      local: true,
+      travel: true,
+      buffet: true,
+    },
+  },
+
+  ///////////////////////////////////////////////////////////////////
+  {
+    meal_name_en: "Hwa Fattah",
+    description_en: "Bread fattah with chicken broth.",
+    price: "25 ريال",
+    meal_name_ar: "فتة هوا",
+    description_ar: "فتة عيش حب بمرقة الدجاج",
+    calories: null,
+    category_en: "appetizers",
+    category_ar: "مقبلات",
+    available: true,
+    trendy: false,
+    image: null,
+  },
+  {
+    meal_name_en: "To'mah Fattah",
+    description_en: "Bread fattah with tahini and tender beef chunks.",
+    price: "27 ريال",
+    meal_name_ar: "فتة طعمة",
+    description_ar: "فتة عيش حب  مع الطحينة وقطع اللحمة الطرية",
+    calories: null,
+    category_en: "appetizers",
+    category_ar: "مقبلات",
+    available: true,
+    trendy: false,
+    image: null,
+  },
+
+  {
+    meal_name_en: "Tahini Salad with Onion",
+    description_en: null,
+    price: "7 ريال",
+    meal_name_ar: "سلطة طحينة بالبصل",
+    description_ar: null,
+    calories: null,
+    category_en: "appetizers",
+    category_ar: "مقبلات",
+    available: true,
+    trendy: false,
+    image: null,
+  },
+  {
+    id: "2",
+    meal_name_en: "Fries Samoli Sandwich",
+    meal_name_ar: "ساندوتش صامولي بالبطاطس المقلية",
+    description_en:
+      "Long samoli bread sandwich filled with french fries, served with three types of sauce.",
+    description_ar:
+      "ساندوتش صامولي طويل محشو بالبطاطس المقلية، يقدم مع ثلاثة أنواع من الصوص.",
+    image: img3,
+    category_en: "appetizers",
+    category_ar: "مقبلات",
+    calories: "0",
+    price: "10 ريال",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "3",
+    meal_name_en: "Grilled Samoli",
+    meal_name_ar: "صامولي شواية",
+    description_en:
+      "Grilled chicken fillet in samoli bread served with tahini sauce.",
+    description_ar:
+      "قطع من الدجاج الشواية المخلية محشية داخل خبز الصامولي الشهي وتقدم بصوص الطحينة والدقس.",
+    image: img2,
+    category_en: "appetizers",
+    category_ar: "مقبلات",
+    calories: "0",
+    price: "10 ريال",
+    available: true,
+    trendy: true,
+  },
+  {
+    id: "17",
+    meal_name_en: "Grilled Chicken",
+    meal_name_ar: "دجاج شواية",
+    description_en:
+      "Indulge in a delicious meal consisting of Bukhari rice prepared in a special way and a piece of grilled chicken seasoned with TO'MAH's signature spices. This dish is served with a variety of side dishes for a complete and tasty dining experience.",
+    description_ar:
+      "استمتع بوجبة شهية تتكون من رز بخاري معد بطريقة مميزة وقطعة من الدجاج المشوي والمتبل ببهارات طعمة الخاصة. يقدم هذا الطبق مع أطباق جانبية متنوعة لتجربة طعام متكاملة ولذيذة.",
+    image: img10,
+    category_en: "lunch",
+    category_ar: "غداء",
+    calories: "465",
+    price: "38 ريال",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "27",
+    image: img27,
+    meal_name_en: "Hawah Fattah",
+    description_en: "Fattah with whole-grain bread in chicken broth.",
+    price: "30 ريال",
+    meal_name_ar: "فتة هوا",
+    description_ar: "فتة خبز حبوب كاملة بمرق الدجاج",
+    calories: null,
+    category_en: "Lunch",
+    category_ar: "غداء",
+    available: true,
+    trendy: false,
+  },
+
+  {
+    id: "29",
+    image: null,
+    meal_name_en: "To'mah Fattah",
+    description_en:
+      "Fattah with whole-grain bread layered with offal broth, tahini, and tender pieces of meat.",
+    price: "34 ريال",
+    meal_name_ar: "فتة طعمة",
+    description_ar: "فتة خبز بمرقة المقادم والطحينة وقطع اللحمة الطرية",
+    calories: "343 ",
+    category_en: "Lunch",
+    category_ar: "غداء",
     available: true,
     trendy: false,
   },

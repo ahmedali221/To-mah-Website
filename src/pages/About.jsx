@@ -24,8 +24,6 @@ import g8 from "/src/assets/AboutImages/G8.jpg";
 import g9 from "/src/assets/AboutImages/G9.jpg";
 import teamImg1 from "../assets/AboutImages/فريق العمل/staff.jpg";
 import teamImg2 from "../assets/AboutImages/فريق العمل/1.jpg";
-import teamImg3 from "../assets/AboutImages/فريق العمل/2.jpg";
-import teamImg4 from "../assets/AboutImages/فريق العمل/3.jpg";
 import teamImg5 from "../assets/AboutImages/فريق العمل/4.jpg";
 import visitorsPhotos from "../service/visitors/visitors"; // adjust path if needed
 
@@ -39,8 +37,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const galleryImages = [g1, g2, g3, g4, g5, g6, g7, g8, g9];
-const teamImages = [teamImg1, teamImg2, teamImg3, teamImg4, teamImg5];
-
+const teamImages = [teamImg1, teamImg2, teamImg5];
 
 const testimonials = [
 	{
@@ -137,7 +134,6 @@ const About = () => {
 		],
 	};
 
-
 	const visitorsGallerySliderSettings = {
 		...gallerySliderSettings,
 		slidesToShow: 4,
@@ -185,6 +181,9 @@ const About = () => {
 		<div
 			dir={i18n.language === "ar" ? "rtl" : "ltr"}
 			className="bg-gradient-to-br from-slate-50 to-white overflow-x-hidden"
+			style={{
+				background: 'linear-gradient(135deg, #f0f2f7 0%, #f8f9fc 100%)'
+			}}
 		>
 			{/* Custom CSS for dots */}
 			<style jsx>{`
@@ -203,20 +202,33 @@ const About = () => {
 			`}</style>
 
 			{/* Hero Story Section */}
-			<section className="py-16 md:py-24 bg-gradient-to-br from-white via-amber-50/30 to-white relative overflow-hidden">
-				<div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(251,191,36,0.1),transparent_50%)]"></div>
+			<section className="py-16 md:py-24 relative overflow-hidden" style={{
+				background: 'linear-gradient(135deg, #f8f9fc 0%, rgba(103, 48, 38, 0.05) 50%, #f0f2f7 100%)'
+			}}>
+				<div className="absolute inset-0" style={{
+					background: 'radial-gradient(circle at 30% 20%, rgba(103, 48, 38, 0.1), transparent 50%)'
+				}}></div>
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 					<div className="text-center mb-16">
-						<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-amber-600 to-amber-800 bg-clip-text text-transparent mb-4">
+						<h1 className="text-4xl md:text-6xl font-bold mb-4" style={{
+							background: 'linear-gradient(135deg, #673026 0%, #7e845d 100%)',
+							WebkitBackgroundClip: 'text',
+							WebkitTextFillColor: 'transparent',
+							backgroundClip: 'text'
+						}}>
 							{t("about.story.title")}
 						</h1>
-						<div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto rounded-full"></div>
+						<div className="w-24 h-1 mx-auto rounded-full" style={{
+							background: 'linear-gradient(90deg, #d97706 0%, #673026 100%)'
+						}}></div>
 					</div>
 
 					<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
 						<div className="animate-on-scroll order-2 lg:order-1" id="story-img-1">
 							<div className={`relative group transform transition-all duration-1000 ${isVisible["story-img-1"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
-								<div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{
+									background: 'linear-gradient(135deg, #673026 0%, #d97706 100%)'
+								}}></div>
 								<img
 									src={img1}
 									alt={t("about.story.image_alt_left")}
@@ -228,15 +240,22 @@ const About = () => {
 						<div className="animate-on-scroll order-1 lg:order-2" id="story-text">
 							<div className={`text-center space-y-6 transition-all duration-1000 delay-300 ${isVisible["story-text"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
 								<div className="flex items-center justify-center space-x-2 mb-6">
-									<div className="w-16 h-0.5 bg-gradient-to-r from-transparent to-amber-400"></div>
-									<SparklesIcon className="w-6 h-6 text-amber-500" />
-									<div className="w-16 h-0.5 bg-gradient-to-l from-transparent to-amber-400"></div>
+									<div className="w-16 h-0.5" style={{
+										background: 'linear-gradient(90deg, transparent 0%, #d97706 100%)'
+									}}></div>
+									<SparklesIcon className="w-6 h-6" style={{ color: '#d97706' }} />
+									<div className="w-16 h-0.5" style={{
+										background: 'linear-gradient(90deg, #d97706 0%, transparent 100%)'
+									}}></div>
 								</div>
-								<p className="text-gray-700 leading-relaxed text-lg font-medium">
+								<p className="leading-relaxed text-lg font-medium" style={{ color: '#344054' }}>
 									{t("about.story.description")}
 								</p>
-								<div className="bg-gradient-to-r from-amber-50 to-orange-50 p-6 rounded-xl border border-amber-100">
-									<p className="text-2xl font-bold font-serif text-amber-800">
+								<div className="p-6 rounded-xl border" style={{
+									background: 'linear-gradient(135deg, rgba(103, 48, 38, 0.05) 0%, rgba(166, 171, 139, 0.05) 100%)',
+									borderColor: 'rgba(103, 48, 38, 0.2)'
+								}}>
+									<p className="text-2xl font-bold font-serif" style={{ color: '#673026' }}>
 										{t("about.story.signature")}
 									</p>
 								</div>
@@ -245,7 +264,9 @@ const About = () => {
 
 						<div className="animate-on-scroll order-3 lg:order-3" id="story-img-2">
 							<div className={`relative group transform transition-all duration-1000 delay-500 ${isVisible["story-img-2"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
-								<div className="absolute -inset-1 bg-gradient-to-r from-amber-600 to-amber-400 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{
+									background: 'linear-gradient(135deg, #7e845d 0%, #673026 100%)'
+								}}></div>
 								<img
 									src={img2}
 									alt={t("about.story.image_alt_right")}
@@ -258,14 +279,14 @@ const About = () => {
 			</section>
 
 			{/* Why Visit Section */}
-			<section className="py-16 md:py-20 bg-gray-50 animate-on-scroll">
+			<section className="py-16 md:py-20 animate-on-scroll" >
 				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-12">
-						<h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
+						<h2 className="text-3xl md:text-5xl font-bold mb-6" >
 							{t("about.ambiance.title")}
 						</h2>
-						<div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto rounded-full mb-8"></div>
-						<p className="text-gray-600 max-w-4xl mx-auto text-lg md:text-xl leading-relaxed">
+						<div className="w-24 h-1 mx-auto rounded-full mb-8"></div>
+						<p className="max-w-4xl mx-auto text-lg md:text-xl leading-relaxed" >
 							{t("about.ambiance.description")}
 						</p>
 					</div>
@@ -273,7 +294,7 @@ const About = () => {
 			</section>
 
 			{/* Video Section */}
-			<section className="py-16 md:py-24 ">
+			<section className="py-16 md:py-24" style={{ backgroundColor: '#f8f9fc' }}>
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="animate-on-scroll" id="video-section">
 						<div className={`relative rounded-3xl overflow-hidden shadow-2xl group cursor-pointer transition-all duration-1000 ${isVisible["video-section"] ? "opacity-100 scale-100" : "opacity-0 scale-95"}`} onClick={() => setIsPlaying(true)}>
@@ -294,8 +315,11 @@ const About = () => {
 						<div className="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center z-50 p-4">
 							<div className="relative w-full max-w-5xl mx-auto">
 								<button
-									className="absolute -top-12 right-0 text-white text-4xl hover:text-amber-400 transition-colors duration-300"
+									className="absolute -top-12 right-0 text-white text-4xl hover:scale-110 transition-all duration-300"
 									onClick={() => setIsPlaying(false)}
+									style={{ color: '#f8f9fc' }}
+									onMouseEnter={(e) => e.target.style.color = '#d97706'}
+									onMouseLeave={(e) => e.target.style.color = '#f8f9fc'}
 								>
 									✕
 								</button>
@@ -314,27 +338,31 @@ const About = () => {
 			</section>
 
 			{/* Team Section */}
-			<section className="py-16 md:py-24 bg-gradient-to-br from-white to-amber-50/30 animate-on-scroll" id="team-section">
+			<section className="py-16 md:py-24 animate-on-scroll" id="team-section" style={{
+				background: 'linear-gradient(135deg, #f8f9fc 0%, rgba(166, 171, 139, 0.1) 100%)'
+			}}>
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-16">
-						<h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
+						<h2 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#1d2939' }}>
 							{t("about.team.title", "Our Team")}
 						</h2>
-						<div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto rounded-full mb-8"></div>
-						<UserGroupIcon className="w-12 h-12 text-amber-500 mx-auto" />
+						<div className="w-24 h-1 mx-auto rounded-full mb-8" style={{
+							background: 'linear-gradient(90deg, #d97706 0%, #673026 100%)'
+						}}></div>
+						<UserGroupIcon className="w-12 h-12 mx-auto" style={{ color: '#d97706' }} />
 					</div>
 					<div className="pb-16">
 						<Slider {...sliderSettings} className="team-slider">
 							{teamImages.map((image, index) => (
 								<div key={index} className="px-3">
 									<div className={`transform transition-all duration-1000 ${isVisible["team-section"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`} style={{ transitionDelay: `${index * 150}ms` }}>
-										<div className="relative overflow-hidden rounded-2xl shadow-xl group bg-white p-2">
+										<div className="relative overflow-hidden rounded-2xl shadow-xl group p-2" style={{ backgroundColor: '#f8f9fc' }}>
 											<img
 												src={image}
 												alt={t("about.team.member_alt", { number: index + 1 })}
 												className="w-full h-72 md:h-80 object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-500"
 											/>
-											<div className="absolute inset-2 rounded-xl bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+											<div className="absolute inset-2 rounded-xlopacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 										</div>
 									</div>
 								</div>
@@ -345,12 +373,14 @@ const About = () => {
 			</section>
 
 			{/* Restaurant Images Section */}
-			<section className="py-16 md:py-24 bg-white animate-on-scroll" id="special-menu-section">
+			<section className="py-16 md:py-24 animate-on-scroll" id="special-menu-section" style={{ backgroundColor: '#f0f2f7' }}>
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 						<div className={`transition-all duration-1000 ${isVisible["special-menu-section"] ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}>
 							<div className="relative group">
-								<div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{
+									background: 'linear-gradient(135deg, #673026 0%, #d97706 100%)'
+								}}></div>
 								<img
 									src={logo}
 									alt={t("about.special_menu.logo_alt")}
@@ -360,7 +390,9 @@ const About = () => {
 						</div>
 						<div className={`transition-all duration-1000 delay-300 ${isVisible["special-menu-section"] ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}>
 							<div className="relative group">
-								<div className="absolute -inset-1 bg-gradient-to-r from-amber-600 to-amber-400 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{
+									background: 'linear-gradient(135deg, #7e845d 0%, #673026 100%)'
+								}}></div>
 								<img
 									src={loc}
 									alt={t("about.special_menu.interior_alt")}
@@ -373,20 +405,27 @@ const About = () => {
 			</section>
 
 			{/* Testimonials Section */}
-			<section className="py-16 md:py-24 bg-gradient-to-br from-amber-50 to-orange-50 animate-on-scroll" id="testimonial-section">
+			<section className="py-16 md:py-24 animate-on-scroll" id="testimonial-section" style={{
+				background: 'linear-gradient(135deg, rgba(103, 48, 38, 0.05) 0%, rgba(166, 171, 139, 0.1) 100%)'
+			}}>
 				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-16">
-						<h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
+						<h2 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#1d2939' }}>
 							{t("about.testimonials.title")}
 						</h2>
-						<div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto rounded-full mb-8"></div>
-						<HeartIcon className="w-12 h-12 text-amber-500 mx-auto" />
+						<div className="w-24 h-1 mx-auto rounded-full mb-8" style={{
+							background: 'linear-gradient(90deg, #d97706 0%, #673026 100%)'
+						}}></div>
+						<HeartIcon className="w-12 h-12 mx-auto" style={{ color: '#d97706' }} />
 					</div>
-					<div className={`bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 border border-amber-100 transition-all duration-1000 ${isVisible["testimonial-section"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+					<div className={`backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 border transition-all duration-1000 ${isVisible["testimonial-section"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
+						backgroundColor: 'rgba(248, 249, 252, 0.9)',
+						borderColor: 'rgba(103, 48, 38, 0.2)'
+					}}>
 						<Slider {...{ ...sliderSettings, slidesToShow: 1, dots: true }} className="testimonials-slider">
 							{testimonials.map((item, index) => (
 								<div className="text-center px-4 md:px-8" key={index}>
-									<div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 overflow-hidden rounded-full ring-4 ring-amber-200">
+									<div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 overflow-hidden rounded-full ring-4" style={{ ringColor: 'rgba(166, 171, 139, 0.3)' }}>
 										<img
 											className="w-full h-full object-cover"
 											src={item.img}
@@ -396,10 +435,10 @@ const About = () => {
 									<div className="flex justify-center mb-4">
 										{renderStars(item.rating)}
 									</div>
-									<p className="text-gray-700 italic mb-6 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+									<p className="italic mb-6 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: '#344054' }}>
 										"{item.text}"
 									</p>
-									<p className="font-bold text-amber-800 text-lg">{item.name}</p>
+									<p className="font-bold text-lg" style={{ color: '#673026' }}>{item.name}</p>
 								</div>
 							))}
 						</Slider>
@@ -408,7 +447,7 @@ const About = () => {
 			</section>
 
 			{/* Gallery Section */}
-			<section className="py-16 md:py-20  overflow-hidden">
+			<section className="py-16 md:py-20 overflow-hidden" style={{ backgroundColor: '#f8f9fc' }}>
 				<div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
 					<Slider {...gallerySliderSettings}>
 						{galleryImages.concat(galleryImages).map((img, index) => (
@@ -426,21 +465,20 @@ const About = () => {
 				</div>
 			</section>
 
-
 			{/* Visitors Section */}
-			<section className=" animate-on-scroll" id="visitors-section">
+			<section className="animate-on-scroll" id="visitors-section" style={{ backgroundColor: '#f0f2f7' }}>
 				<div className="text-center mb-16">
-					<h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
+					<h2 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#1d2939' }}>
 						{t("about.visitors.title", "زوارنا المميزون")}
 					</h2>
-					<div className="w-24 h-1 mx-auto rounded-full mb-8"></div>
-					<GlobeAltIcon className="w-12 h-12 text-amber-500 mx-auto" />
+					<div className="w-24 h-1 mx-auto rounded-full mb-8" style={{ backgroundColor: '#a6ab8b' }}></div>
+					<GlobeAltIcon className="w-12 h-12 mx-auto" style={{ color: '#d97706' }} />
 				</div>
-				<div className="max-w-7xl mx-auto ">
+				<div className="max-w-7xl mx-auto">
 					<Slider {...visitorsGallerySliderSettings} className="visitors-slider">
 						{visitorsPhotos.map((visitor, idx) => (
 							<div key={idx} className="px-3 flex flex-col items-center">
-								<div className="relative group rounded-2xl overflow-hidden shadow-xl bg-white p-2 h-[600px] flex items-center justify-center w-full">
+								<div className="relative group rounded-2xl overflow-hidden shadow-xl p-2 h-[600px] flex items-center justify-center w-full" style={{ backgroundColor: '#f8f9fc' }}>
 									<img
 										src={visitor.image}
 										alt={visitor.name}
@@ -448,7 +486,7 @@ const About = () => {
 									/>
 								</div>
 								<div className="w-full mt-6">
-									<p style={{fontSize:"36px"}} className="text-center font-bold text-amber-800 text-xl">{visitor.name}</p>
+									<p style={{ fontSize: "36px", color: '#673026' }} className="text-center font-bold text-xl">{visitor.name}</p>
 								</div>
 							</div>
 						))}
@@ -456,21 +494,35 @@ const About = () => {
 				</div>
 			</section>
 
-
 			{/* CTA Section */}
-			<section className="py-16 md:py-24 bg-gradient-to-br from-amber-600 via-amber-700 to-amber-800 text-white animate-on-scroll relative overflow-hidden" id="cta-section">
-				<div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.1),transparent_50%)]"></div>
+			<section className="py-16 md:py-24 bg-primary text-white animate-on-scroll relative overflow-hidden" id="cta-section" 
+			>
+				<div className="absolute inset-0" style={{
+					background: 'radial-gradient(circle at 70% 80%, rgba(248, 249, 252, 0.1), transparent 50%)'
+				}}></div>
 				<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
 					<div className={`transition-all duration-1000 ${isVisible["cta-section"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-						<h2 className="text-3xl md:text-5xl font-bold mb-6">
+						<h2 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#f8f9fc' }}>
 							{t("about.cta.title")}
 						</h2>
-						<p className="text-lg md:text-xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
+						<p className="text-lg md:text-xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed" style={{ color: '#f0f2f7' }}>
 							{t("about.cta.description")}
 						</p>
 						<Link
 							to="/menu"
-							className="inline-flex items-center px-8 py-4 bg-white text-amber-800 hover:bg-amber-50 border-none rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl transform"
+							className="inline-flex items-center px-8 py-4 border-none rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl transform"
+							style={{
+								backgroundColor: '#f8f9fc',
+								color: '#673026'
+							}}
+							onMouseEnter={(e) => {
+								e.target.style.backgroundColor = '#f0f2f7';
+								e.target.style.color = '#101828';
+							}}
+							onMouseLeave={(e) => {
+								e.target.style.backgroundColor = '#f8f9fc';
+								e.target.style.color = '#673026';
+							}}
 						>
 							{t("about.cta.button")}
 							<svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

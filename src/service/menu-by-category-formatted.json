@@ -1,0 +1,3362 @@
+{
+
+  "صحن الترحيب": [
+  
+  ],
+  "التسالي": [
+    {
+      "id": "9",
+      "image": null,
+      "meal_name_en": "Mushabbak",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "مشبك",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "snacks",
+      "category_ar": "التسالي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": false,
+        "buffet": false
+      }
+    },
+    {
+      "id": "10",
+      "image": null,
+      "meal_name_en": "Wild Pigeon",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "حمام البر",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "snacks",
+      "category_ar": "التسالي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": false,
+        "buffet": false
+      }
+    },
+    {
+      "id": "11",
+      "image": null,
+      "meal_name_en": "Manfoush",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "منفوش",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "snacks",
+      "category_ar": "التسالي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": false,
+        "buffet": false
+      }
+    },
+    {
+      "id": "12",
+      "image": null,
+      "meal_name_en": "Balila",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "البليلة",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "snacks",
+      "category_ar": "التسالي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": false,
+        "buffet": false
+      }
+    },
+    {
+      "id": "13",
+      "image": null,
+      "meal_name_en": "كربو + سلطة الحمر",
+      "description_en": "شطة و سلطة حمر",
+      "price": null,
+      "meal_name_ar": "كربو + سلطة الحمر",
+      "description_ar": "شطة و سلطة حمر",
+      "calories": null,
+      "category_en": "snacks",
+      "category_ar": "التسالي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": false,
+        "buffet": false
+      }
+    },
+    {
+      "id": "14",
+      "image": null,
+      "meal_name_en": "مجموعة التسالي",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "مجموعة التسالي",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "snacks",
+      "category_ar": "التسالي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": false,
+        "buffet": false
+      }
+    }
+  ],
+  "مجموعة نواشف طعمة": [
+    {
+      "id": "17",
+      "image": null,
+      "meal_name_en": "Spiced Sahloli Cheese",
+      "description_en": "خلطة جبن مهروسة بالطماطم مع النعناع المغربي والفلفل الحار",
+      "price": null,
+      "meal_name_ar": "جبنة سحلولي المفلفلة",
+      "description_ar": "خلطة جبن مهروسة بالطماطم مع النعناع المغربي والفلفل الحار",
+      "calories": null,
+      "category_en": "مجموعة_نواشف_طعمة",
+      "category_ar": "مجموعة نواشف طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "18",
+      "image": null,
+      "meal_name_en": "White Cheese in Clay Pot",
+      "description_en": "الجبنة البيضاء مطبوخة  كما لم تعرفها من قبل",
+      "price": null,
+      "meal_name_ar": "الجبنة البيضاء في الفخار",
+      "description_ar": "الجبنة البيضاء مطبوخة  كما لم تعرفها من قبل",
+      "calories": null,
+      "category_en": "مجموعة_نواشف_طعمة",
+      "category_ar": "مجموعة نواشف طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "19",
+      "image": null,
+      "meal_name_en": "لبنة",
+      "description_en": "لبنة سادة للحبايب",
+      "price": null,
+      "meal_name_ar": "لبنة",
+      "description_ar": "لبنة سادة للحبايب",
+      "calories": null,
+      "category_en": "مجموعة_نواشف_طعمة",
+      "category_ar": "مجموعة نواشف طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "20",
+      "image": null,
+      "meal_name_en": "الجبنة البلدي بالنعناع",
+      "description_en": "جبنة بلدي بنعناع المدينة  و زيت الزيتون",
+      "price": null,
+      "meal_name_ar": "الجبنة البلدي بالنعناع",
+      "description_ar": "جبنة بلدي بنعناع المدينة  و زيت الزيتون",
+      "calories": null,
+      "category_en": "مجموعة_نواشف_طعمة",
+      "category_ar": "مجموعة نواشف طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "21",
+      "image": null,
+      "meal_name_en": "زيتون",
+      "description_en": "تشكيلة من الزيتون الأخضر والأسود و المخلل في برطمانات طعمة",
+      "price": null,
+      "meal_name_ar": "زيتون",
+      "description_ar": "تشكيلة من الزيتون الأخضر والأسود و المخلل في برطمانات طعمة",
+      "calories": null,
+      "category_en": "مجموعة_نواشف_طعمة",
+      "category_ar": "مجموعة نواشف طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "22",
+      "image": null,
+      "meal_name_en": "جبنة صفراء بالباذنجان",
+      "description_en": "خليط الجبنة التشيدر و الباذنجان المقلي بصوص لا يقاوم",
+      "price": null,
+      "meal_name_ar": "جبنة صفراء بالباذنجان",
+      "description_ar": "خليط الجبنة التشيدر و الباذنجان المقلي بصوص لا يقاوم",
+      "calories": null,
+      "category_en": "مجموعة_نواشف_طعمة",
+      "category_ar": "مجموعة نواشف طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "23",
+      "image": null,
+      "meal_name_en": "صحن مجموعة نواشف طعمة",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "صحن مجموعة نواشف طعمة",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "مجموعة_نواشف_طعمة",
+      "category_ar": "مجموعة نواشف طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "24",
+      "image": null,
+      "meal_name_en": "وجبة شابورة المدينة الشهيرة",
+      "description_en": "شابورة المدينة مع الشاي الأحمر",
+      "price": null,
+      "meal_name_ar": "وجبة شابورة المدينة الشهيرة",
+      "description_ar": "شابورة المدينة مع الشاي الأحمر",
+      "calories": null,
+      "category_en": "مجموعة_نواشف_طعمة",
+      "category_ar": "مجموعة نواشف طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "كومبو طعمة (يكفي 3 أشخاص)\nتبسي مكون من 6 صحون مشكلة + بيض طعمة  + مقلقل دجاج + فول": [
+    {
+      "id": "26",
+      "image": null,
+      "meal_name_en": "مش",
+      "description_en": "مش ولا في الخيال",
+      "price": null,
+      "meal_name_ar": "مش",
+      "description_ar": "مش ولا في الخيال",
+      "calories": null,
+      "category_en": "كومبو_طعمة_(يكفي_3_أشخاص)_تبسي_مكون_من_6_صحون_مشكلة_+_بيض_طعمة_+_مقلقل_دجاج_+_فول",
+      "category_ar": "كومبو طعمة (يكفي 3 أشخاص)\nتبسي مكون من 6 صحون مشكلة + بيض طعمة  + مقلقل دجاج + فول",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "27",
+      "image": null,
+      "meal_name_en": "جبنة بيضاء بخلطة طعمة",
+      "description_en": "جبنة بيضاء و خليط منتجات المدينة من الطماطم والنعناع",
+      "price": null,
+      "meal_name_ar": "جبنة بيضاء بخلطة طعمة",
+      "description_ar": "جبنة بيضاء و خليط منتجات المدينة من الطماطم والنعناع",
+      "calories": null,
+      "category_en": "كومبو_طعمة_(يكفي_3_أشخاص)_تبسي_مكون_من_6_صحون_مشكلة_+_بيض_طعمة_+_مقلقل_دجاج_+_فول",
+      "category_ar": "كومبو طعمة (يكفي 3 أشخاص)\nتبسي مكون من 6 صحون مشكلة + بيض طعمة  + مقلقل دجاج + فول",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "28",
+      "image": null,
+      "meal_name_en": "حلاوة طحينية مالحة",
+      "description_en": "حلاوة طحينية ممزوجة بالجبنة والزيت",
+      "price": null,
+      "meal_name_ar": "حلاوة طحينية مالحة",
+      "description_ar": "حلاوة طحينية ممزوجة بالجبنة والزيت",
+      "calories": null,
+      "category_en": "كومبو_طعمة_(يكفي_3_أشخاص)_تبسي_مكون_من_6_صحون_مشكلة_+_بيض_طعمة_+_مقلقل_دجاج_+_فول",
+      "category_ar": "كومبو طعمة (يكفي 3 أشخاص)\nتبسي مكون من 6 صحون مشكلة + بيض طعمة  + مقلقل دجاج + فول",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "29",
+      "image": null,
+      "meal_name_en": "زيتون مخلل",
+      "description_en": "الزيتون المخلل في مطبخ طعمة",
+      "price": null,
+      "meal_name_ar": "زيتون مخلل",
+      "description_ar": "الزيتون المخلل في مطبخ طعمة",
+      "calories": null,
+      "category_en": "كومبو_طعمة_(يكفي_3_أشخاص)_تبسي_مكون_من_6_صحون_مشكلة_+_بيض_طعمة_+_مقلقل_دجاج_+_فول",
+      "category_ar": "كومبو طعمة (يكفي 3 أشخاص)\nتبسي مكون من 6 صحون مشكلة + بيض طعمة  + مقلقل دجاج + فول",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "30",
+      "image": null,
+      "meal_name_en": "لبنة بالبنجر",
+      "description_en": "لبنة بخلطة بنجر مميزة جدا",
+      "price": null,
+      "meal_name_ar": "لبنة بالبنجر",
+      "description_ar": "لبنة بخلطة بنجر مميزة جدا",
+      "calories": null,
+      "category_en": "كومبو_طعمة_(يكفي_3_أشخاص)_تبسي_مكون_من_6_صحون_مشكلة_+_بيض_طعمة_+_مقلقل_دجاج_+_فول",
+      "category_ar": "كومبو طعمة (يكفي 3 أشخاص)\nتبسي مكون من 6 صحون مشكلة + بيض طعمة  + مقلقل دجاج + فول",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "31",
+      "image": null,
+      "meal_name_en": "عسل و قشطة",
+      "description_en": "خلطة العسل و القشطة ورشة الفستق",
+      "price": null,
+      "meal_name_ar": "عسل و قشطة",
+      "description_ar": "خلطة العسل و القشطة ورشة الفستق",
+      "calories": null,
+      "category_en": "كومبو_طعمة_(يكفي_3_أشخاص)_تبسي_مكون_من_6_صحون_مشكلة_+_بيض_طعمة_+_مقلقل_دجاج_+_فول",
+      "category_ar": "كومبو طعمة (يكفي 3 أشخاص)\nتبسي مكون من 6 صحون مشكلة + بيض طعمة  + مقلقل دجاج + فول",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "32",
+      "image": null,
+      "meal_name_en": "صحن مجموعة كومبو طعمة",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "صحن مجموعة كومبو طعمة",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "كومبو_طعمة_(يكفي_3_أشخاص)_تبسي_مكون_من_6_صحون_مشكلة_+_بيض_طعمة_+_مقلقل_دجاج_+_فول",
+      "category_ar": "كومبو طعمة (يكفي 3 أشخاص)\nتبسي مكون من 6 صحون مشكلة + بيض طعمة  + مقلقل دجاج + فول",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "33",
+      "image": null,
+      "meal_name_en": "مجموعة الكومبو كاملة\nتبسي مكون من 6 صحون مشكلة + بيض طعمة  + مقلقل دجاج + فول",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "مجموعة الكومبو كاملة\nتبسي مكون من 6 صحون مشكلة + بيض طعمة  + مقلقل دجاج + فول",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "كومبو_طعمة_(يكفي_3_أشخاص)_تبسي_مكون_من_6_صحون_مشكلة_+_بيض_طعمة_+_مقلقل_دجاج_+_فول",
+      "category_ar": "كومبو طعمة (يكفي 3 أشخاص)\nتبسي مكون من 6 صحون مشكلة + بيض طعمة  + مقلقل دجاج + فول",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "مختارات البيض": [
+    {
+      "id": "35",
+      "image": null,
+      "meal_name_en": "شكشوكة طُعمة",
+      "description_en": "الشكشوكة الحجازية الأصيلة",
+      "price": null,
+      "meal_name_ar": "شكشوكة طُعمة",
+      "description_ar": "الشكشوكة الحجازية الأصيلة",
+      "calories": null,
+      "category_en": "مختارات_البيض",
+      "category_ar": "مختارات البيض",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "36",
+      "image": null,
+      "meal_name_en": "بيض بالزبدة",
+      "description_en": "حلقات البيض مشوحه بالزبدة و الملح ودقة المدينة المميزة",
+      "price": null,
+      "meal_name_ar": "بيض بالزبدة",
+      "description_ar": "حلقات البيض مشوحه بالزبدة و الملح ودقة المدينة المميزة",
+      "calories": null,
+      "category_en": "مختارات_البيض",
+      "category_ar": "مختارات البيض",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "37",
+      "image": null,
+      "meal_name_en": "بيض طعمة",
+      "description_en": "بيض بالخضار والجبنه المطبوخه بطريقه الشيف",
+      "price": null,
+      "meal_name_ar": "بيض طعمة",
+      "description_ar": "بيض بالخضار والجبنه المطبوخه بطريقه الشيف",
+      "calories": null,
+      "category_en": "مختارات_البيض",
+      "category_ar": "مختارات البيض",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "38",
+      "image": null,
+      "meal_name_en": "بيض بالخضار",
+      "description_en": "البيض المسلوق مع تشكيلة مختارة من الخضار المحلية",
+      "price": null,
+      "meal_name_ar": "بيض بالخضار",
+      "description_ar": "البيض المسلوق مع تشكيلة مختارة من الخضار المحلية",
+      "calories": null,
+      "category_en": "مختارات_البيض",
+      "category_ar": "مختارات البيض",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "39",
+      "image": null,
+      "meal_name_en": "بيض مقلي",
+      "description_en": "بيض الطيبين",
+      "price": null,
+      "meal_name_ar": "بيض مقلي",
+      "description_ar": "بيض الطيبين",
+      "calories": null,
+      "category_en": "مختارات_البيض",
+      "category_ar": "مختارات البيض",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "فول علي الأًصول": [
+    {
+      "id": "42",
+      "image": null,
+      "meal_name_en": "فول مخصوص",
+      "description_en": "فول بالخلطة الخاصة بالسمن البلدي او زيت الزيتون وتقدم بصوص الدقس",
+      "price": null,
+      "meal_name_ar": "فول مخصوص",
+      "description_ar": "فول بالخلطة الخاصة بالسمن البلدي او زيت الزيتون وتقدم بصوص الدقس",
+      "calories": null,
+      "category_en": "فول_علي_الأًصول",
+      "category_ar": "فول علي الأًصول",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "43",
+      "image": null,
+      "meal_name_en": "فول بالطحينة",
+      "description_en": "فول مدمس بخلطة طحينة مميزة علي الوجهه",
+      "price": null,
+      "meal_name_ar": "فول بالطحينة",
+      "description_ar": "فول مدمس بخلطة طحينة مميزة علي الوجهه",
+      "calories": null,
+      "category_en": "فول_علي_الأًصول",
+      "category_ar": "فول علي الأًصول",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "44",
+      "image": null,
+      "meal_name_en": "فول مدخن",
+      "description_en": "الفول الأصلي المدخن",
+      "price": null,
+      "meal_name_ar": "فول مدخن",
+      "description_ar": "الفول الأصلي المدخن",
+      "calories": null,
+      "category_en": "فول_علي_الأًصول",
+      "category_ar": "فول علي الأًصول",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "فطور الطباخة": [
+    {
+      "id": "47",
+      "image": null,
+      "meal_name_en": "كبدة سوق الطباخة",
+      "description_en": "كبدة مشوّحة بالخضار على نار عالية وتقدم بخبز الحب وقطع الليمون والطحينة",
+      "price": null,
+      "meal_name_ar": "كبدة سوق الطباخة",
+      "description_ar": "كبدة مشوّحة بالخضار على نار عالية وتقدم بخبز الحب وقطع الليمون والطحينة",
+      "calories": null,
+      "category_en": "فطور_الطباخة",
+      "category_ar": "فطور الطباخة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "48",
+      "image": null,
+      "meal_name_en": "مقادم الأكتع",
+      "description_en": "مرقه  مع قطعة من الكوارع  الطازجه و خبزالحب",
+      "price": null,
+      "meal_name_ar": "مقادم الأكتع",
+      "description_ar": "مرقه  مع قطعة من الكوارع  الطازجه و خبزالحب",
+      "calories": null,
+      "category_en": "فطور_الطباخة",
+      "category_ar": "فطور الطباخة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "49",
+      "image": null,
+      "meal_name_en": "مقلقل اللحم",
+      "description_en": "قطع لحم مقلقل بالخلطة وتقدم بطريقة أهل أول",
+      "price": null,
+      "meal_name_ar": "مقلقل اللحم",
+      "description_ar": "قطع لحم مقلقل بالخلطة وتقدم بطريقة أهل أول",
+      "calories": null,
+      "category_en": "فطور_الطباخة",
+      "category_ar": "فطور الطباخة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "50",
+      "image": null,
+      "meal_name_en": "مقلقل الدجاج",
+      "description_en": "قطع صدور دجاج مشوّحة بالخضار والبهارات الخاصة",
+      "price": null,
+      "meal_name_ar": "مقلقل الدجاج",
+      "description_ar": "قطع صدور دجاج مشوّحة بالخضار والبهارات الخاصة",
+      "calories": null,
+      "category_en": "فطور_الطباخة",
+      "category_ar": "فطور الطباخة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "51",
+      "image": null,
+      "meal_name_en": "لحمة راس",
+      "description_en": "قطع لحم مخلية من رأس الخروف المشوي بالفرن وتقدم بخبز الحب والطحينة",
+      "price": null,
+      "meal_name_ar": "لحمة راس",
+      "description_ar": "قطع لحم مخلية من رأس الخروف المشوي بالفرن وتقدم بخبز الحب والطحينة",
+      "calories": null,
+      "category_en": "فطور_الطباخة",
+      "category_ar": "فطور الطباخة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "تصبيرة": [
+    {
+      "id": "56",
+      "image": null,
+      "meal_name_en": "فلافل ابو الخل",
+      "description_en": "4 قطع من الفلافل المقرمشة",
+      "price": null,
+      "meal_name_ar": "فلافل ابو الخل",
+      "description_ar": "4 قطع من الفلافل المقرمشة",
+      "calories": null,
+      "category_en": "تصبيرة",
+      "category_ar": "تصبيرة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "57",
+      "image": null,
+      "meal_name_en": "مطبق مالح",
+      "description_en": "رقاق العجين المالح المقرمش مع لحم المفروم الطازج وتقدم مع الليمون والفلفل الأخضر",
+      "price": null,
+      "meal_name_ar": "مطبق مالح",
+      "description_ar": "رقاق العجين المالح المقرمش مع لحم المفروم الطازج وتقدم مع الليمون والفلفل الأخضر",
+      "calories": null,
+      "category_en": "تصبيرة",
+      "category_ar": "تصبيرة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    },
+    {
+      "id": "58",
+      "image": null,
+      "meal_name_en": "مطبق خضار",
+      "description_en": "رقاق العجين المالح بالخضار الطازة و  البيض تقدم مع الليمون والفلفل الحار",
+      "price": null,
+      "meal_name_ar": "مطبق خضار",
+      "description_ar": "رقاق العجين المالح بالخضار الطازة و  البيض تقدم مع الليمون والفلفل الحار",
+      "calories": null,
+      "category_en": "تصبيرة",
+      "category_ar": "تصبيرة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    },
+    {
+      "id": "59",
+      "image": null,
+      "meal_name_en": "مطبق جبنة تشيدر",
+      "description_en": "رقاق العجين المالح مع  الكرات و جبنه الشيدر فلفل حامى  ليمون",
+      "price": null,
+      "meal_name_ar": "مطبق جبنة تشيدر",
+      "description_ar": "رقاق العجين المالح مع  الكرات و جبنه الشيدر فلفل حامى  ليمون",
+      "calories": null,
+      "category_en": "تصبيرة",
+      "category_ar": "تصبيرة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    },
+    {
+      "id": "60",
+      "image": null,
+      "meal_name_en": "مطبق نيوتيلا",
+      "description_en": "رقاق العجين المحشي بشوكولاته البندق (نيوتيلا)",
+      "price": null,
+      "meal_name_ar": "مطبق نيوتيلا",
+      "description_ar": "رقاق العجين المحشي بشوكولاته البندق (نيوتيلا)",
+      "calories": null,
+      "category_en": "تصبيرة",
+      "category_ar": "تصبيرة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    },
+    {
+      "id": "61",
+      "image": null,
+      "meal_name_en": "مطبق موز بالقشطة",
+      "description_en": "رقاق العجين المحشي بالقشة و الموز ورشة الفستق",
+      "price": null,
+      "meal_name_ar": "مطبق موز بالقشطة",
+      "description_ar": "رقاق العجين المحشي بالقشة و الموز ورشة الفستق",
+      "calories": null,
+      "category_en": "تصبيرة",
+      "category_ar": "تصبيرة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    },
+    {
+      "id": "62",
+      "image": null,
+      "meal_name_en": "شيبس حارة البحر",
+      "description_en": "شيبس طازة مقلية وتقدم مع صوص الثوم و الدقة و الحمر الخاص",
+      "price": null,
+      "meal_name_ar": "شيبس حارة البحر",
+      "description_ar": "شيبس طازة مقلية وتقدم مع صوص الثوم و الدقة و الحمر الخاص",
+      "calories": null,
+      "category_en": "تصبيرة",
+      "category_ar": "تصبيرة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "63",
+      "image": null,
+      "meal_name_en": "صحن خضار",
+      "description_en": "تشكيلة من الخضروات العضوية الطازجة من المزارع المحلية وتقدم مقطعة",
+      "price": null,
+      "meal_name_ar": "صحن خضار",
+      "description_ar": "تشكيلة من الخضروات العضوية الطازجة من المزارع المحلية وتقدم مقطعة",
+      "calories": null,
+      "category_en": "تصبيرة",
+      "category_ar": "تصبيرة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "64",
+      "image": null,
+      "meal_name_en": "سلة عيش",
+      "description_en": "تميز / فتوت / شريك / حب",
+      "price": null,
+      "meal_name_ar": "سلة عيش",
+      "description_ar": "تميز / فتوت / شريك / حب",
+      "calories": null,
+      "category_en": "تصبيرة",
+      "category_ar": "تصبيرة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "حلا الفطور \nحلي وعلى النبي صلي": [
+    {
+      "id": "66",
+      "image": null,
+      "meal_name_en": "عريكة السيح",
+      "description_en": "خبز بر على الصاج مقطع ومشوّح بالسمن وتقدم مع القشطة والعسل والجبن",
+      "price": null,
+      "meal_name_ar": "عريكة السيح",
+      "description_ar": "خبز بر على الصاج مقطع ومشوّح بالسمن وتقدم مع القشطة والعسل والجبن",
+      "calories": null,
+      "category_en": "حلا_الفطور_حلي_وعلى_النبي_صلي",
+      "category_ar": "حلا الفطور \nحلي وعلى النبي صلي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "67",
+      "image": null,
+      "meal_name_en": "معصوب بكر",
+      "description_en": "معصوب بالموز والقشطة بطريقة بكر الخاصة مع صوص الكراميل او العسل",
+      "price": null,
+      "meal_name_ar": "معصوب بكر",
+      "description_ar": "معصوب بالموز والقشطة بطريقة بكر الخاصة مع صوص الكراميل او العسل",
+      "calories": null,
+      "category_en": "حلا_الفطور_حلي_وعلى_النبي_صلي",
+      "category_ar": "حلا الفطور \nحلي وعلى النبي صلي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "68",
+      "image": null,
+      "meal_name_en": "هريسة اللحم",
+      "description_en": "خليط الحب و اللحم المزينة بالسمن و السكر",
+      "price": null,
+      "meal_name_ar": "هريسة اللحم",
+      "description_ar": "خليط الحب و اللحم المزينة بالسمن و السكر",
+      "calories": null,
+      "category_en": "حلا_الفطور_حلي_وعلى_النبي_صلي",
+      "category_ar": "حلا الفطور \nحلي وعلى النبي صلي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "الشوربة": [
+    {
+      "id": "71",
+      "image": null,
+      "meal_name_en": "شوربة الحب",
+      "description_en": "مطهوة بقطع اللحم الطرية على الطريقة المدينية",
+      "price": null,
+      "meal_name_ar": "شوربة الحب",
+      "description_ar": "مطهوة بقطع اللحم الطرية على الطريقة المدينية",
+      "calories": null,
+      "category_en": "الشوربة",
+      "category_ar": "الشوربة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "72",
+      "image": null,
+      "meal_name_en": "شكمبا",
+      "description_en": "شوربة  مطبوخة باللحم الطازج وتقدم مع خبز الحب والليمون",
+      "price": null,
+      "meal_name_ar": "شكمبا",
+      "description_ar": "شوربة  مطبوخة باللحم الطازج وتقدم مع خبز الحب والليمون",
+      "calories": null,
+      "category_en": "الشوربة",
+      "category_ar": "الشوربة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "السلطات و المقبلات الباردة": [
+    {
+      "id": "75",
+      "image": null,
+      "meal_name_en": "سلطة العلا",
+      "description_en": "أوراق الجرجير مع البرتقال الموسمي من مزارع العلا",
+      "price": null,
+      "meal_name_ar": "سلطة العلا",
+      "description_ar": "أوراق الجرجير مع البرتقال الموسمي من مزارع العلا",
+      "calories": null,
+      "category_en": "السلطات_و_المقبلات_الباردة",
+      "category_ar": "السلطات و المقبلات الباردة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "76",
+      "image": null,
+      "meal_name_en": "سلطة طعمة",
+      "description_en": "خضار المدينة المزينة بالجبنة",
+      "price": null,
+      "meal_name_ar": "سلطة طعمة",
+      "description_ar": "خضار المدينة المزينة بالجبنة",
+      "calories": null,
+      "category_en": "السلطات_و_المقبلات_الباردة",
+      "category_ar": "السلطات و المقبلات الباردة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "77",
+      "image": null,
+      "meal_name_en": "فتة البامية المدنية",
+      "description_en": "فتة على الأصول مزينة بالبامية المدنية المقرمشة",
+      "price": null,
+      "meal_name_ar": "فتة البامية المدنية",
+      "description_ar": "فتة على الأصول مزينة بالبامية المدنية المقرمشة",
+      "calories": null,
+      "category_en": "السلطات_و_المقبلات_الباردة",
+      "category_ar": "السلطات و المقبلات الباردة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "78",
+      "image": null,
+      "meal_name_en": "حمص نعناع",
+      "description_en": "حمص ممزوج بالنعناع المغربى",
+      "price": null,
+      "meal_name_ar": "حمص نعناع",
+      "description_ar": "حمص ممزوج بالنعناع المغربى",
+      "calories": null,
+      "category_en": "السلطات_و_المقبلات_الباردة",
+      "category_ar": "السلطات و المقبلات الباردة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "79",
+      "image": null,
+      "meal_name_en": "حمص  سادة",
+      "description_en": "حمص مميز برشه زيت الزيتون",
+      "price": null,
+      "meal_name_ar": "حمص  سادة",
+      "description_ar": "حمص مميز برشه زيت الزيتون",
+      "calories": null,
+      "category_en": "السلطات_و_المقبلات_الباردة",
+      "category_ar": "السلطات و المقبلات الباردة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "80",
+      "image": null,
+      "meal_name_en": "طحينة بالباذنجان و الخضار",
+      "description_en": "خضار المدينة المختاره بالطحينة الخل",
+      "price": null,
+      "meal_name_ar": "طحينة بالباذنجان و الخضار",
+      "description_ar": "خضار المدينة المختاره بالطحينة الخل",
+      "calories": null,
+      "category_en": "السلطات_و_المقبلات_الباردة",
+      "category_ar": "السلطات و المقبلات الباردة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "81",
+      "image": null,
+      "meal_name_en": "خضار المدينة بدبس الرمان والفلفل الحار",
+      "description_en": "سلطة مشكلة من الخضار و مطعمة بالفلفل الحار",
+      "price": null,
+      "meal_name_ar": "خضار المدينة بدبس الرمان والفلفل الحار",
+      "description_ar": "سلطة مشكلة من الخضار و مطعمة بالفلفل الحار",
+      "calories": null,
+      "category_en": "السلطات_و_المقبلات_الباردة",
+      "category_ar": "السلطات و المقبلات الباردة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "82",
+      "image": null,
+      "meal_name_en": "سلطة ستيتة",
+      "description_en": "سلطة الجدات المزينة بالبقدونس و الليمون",
+      "price": null,
+      "meal_name_ar": "سلطة ستيتة",
+      "description_ar": "سلطة الجدات المزينة بالبقدونس و الليمون",
+      "calories": null,
+      "category_en": "السلطات_و_المقبلات_الباردة",
+      "category_ar": "السلطات و المقبلات الباردة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "83",
+      "image": null,
+      "meal_name_en": "فتة منتو",
+      "description_en": "قطع منتو باللحم مع لبن الزبادي مرشوشة بصوص الطماطم والكزبرة",
+      "price": null,
+      "meal_name_ar": "فتة منتو",
+      "description_ar": "قطع منتو باللحم مع لبن الزبادي مرشوشة بصوص الطماطم والكزبرة",
+      "calories": null,
+      "category_en": "السلطات_و_المقبلات_الباردة",
+      "category_ar": "السلطات و المقبلات الباردة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "مشهونات طعمة \n(المخلالات و الطرشي)": [
+    {
+      "id": "86",
+      "image": null,
+      "meal_name_en": "سلطة اللبن",
+      "description_en": "اللبن و الخيار الطازح  ونعناع المدينة",
+      "price": null,
+      "meal_name_ar": "سلطة اللبن",
+      "description_ar": "اللبن و الخيار الطازح  ونعناع المدينة",
+      "calories": null,
+      "category_en": "مشهونات_طعمة_(المخلالات_و_الطرشي)",
+      "category_ar": "مشهونات طعمة \n(المخلالات و الطرشي)",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "87",
+      "image": null,
+      "meal_name_en": "أشار الجزر",
+      "description_en": "المخلل الأشهر في بيوت المدينة المصنوع من الجزر",
+      "price": null,
+      "meal_name_ar": "أشار الجزر",
+      "description_ar": "المخلل الأشهر في بيوت المدينة المصنوع من الجزر",
+      "calories": null,
+      "category_en": "مشهونات_طعمة_(المخلالات_و_الطرشي)",
+      "category_ar": "مشهونات طعمة \n(المخلالات و الطرشي)",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "88",
+      "image": null,
+      "meal_name_en": "الحمر",
+      "description_en": "صوص الحمر الحامض",
+      "price": null,
+      "meal_name_ar": "الحمر",
+      "description_ar": "صوص الحمر الحامض",
+      "calories": null,
+      "category_en": "مشهونات_طعمة_(المخلالات_و_الطرشي)",
+      "category_ar": "مشهونات طعمة \n(المخلالات و الطرشي)",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "89",
+      "image": null,
+      "meal_name_en": "الثومية",
+      "description_en": "ثومية طعمة اللذيذة",
+      "price": null,
+      "meal_name_ar": "الثومية",
+      "description_ar": "ثومية طعمة اللذيذة",
+      "calories": null,
+      "category_en": "مشهونات_طعمة_(المخلالات_و_الطرشي)",
+      "category_ar": "مشهونات طعمة \n(المخلالات و الطرشي)",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "90",
+      "image": null,
+      "meal_name_en": "مخلل ليمون",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "مخلل ليمون",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "مشهونات_طعمة_(المخلالات_و_الطرشي)",
+      "category_ar": "مشهونات طعمة \n(المخلالات و الطرشي)",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "91",
+      "image": null,
+      "meal_name_en": "سلطة طحينة بالطماطم المشوي",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "سلطة طحينة بالطماطم المشوي",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "مشهونات_طعمة_(المخلالات_و_الطرشي)",
+      "category_ar": "مشهونات طعمة \n(المخلالات و الطرشي)",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "92",
+      "image": null,
+      "meal_name_en": "سلطة طحينة سادة",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "سلطة طحينة سادة",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "مشهونات_طعمة_(المخلالات_و_الطرشي)",
+      "category_ar": "مشهونات طعمة \n(المخلالات و الطرشي)",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "93",
+      "image": null,
+      "meal_name_en": "دقس حار",
+      "description_en": "خلطة الطماطم بالبقدونس و الفلفل الحار",
+      "price": null,
+      "meal_name_ar": "دقس حار",
+      "description_ar": "خلطة الطماطم بالبقدونس و الفلفل الحار",
+      "calories": null,
+      "category_en": "مشهونات_طعمة_(المخلالات_و_الطرشي)",
+      "category_ar": "مشهونات طعمة \n(المخلالات و الطرشي)",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "94",
+      "image": null,
+      "meal_name_en": "دقس بارد",
+      "description_en": "خلطة الطماطم بالبقدونس",
+      "price": null,
+      "meal_name_ar": "دقس بارد",
+      "description_ar": "خلطة الطماطم بالبقدونس",
+      "calories": null,
+      "category_en": "مشهونات_طعمة_(المخلالات_و_الطرشي)",
+      "category_ar": "مشهونات طعمة \n(المخلالات و الطرشي)",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "95",
+      "image": null,
+      "meal_name_en": "فلفل طعمة مطبوخ",
+      "description_en": "فلفل مطبوخ بزيت الزيتون و الثوم",
+      "price": null,
+      "meal_name_ar": "فلفل طعمة مطبوخ",
+      "description_ar": "فلفل مطبوخ بزيت الزيتون و الثوم",
+      "calories": null,
+      "category_en": "مشهونات_طعمة_(المخلالات_و_الطرشي)",
+      "category_ar": "مشهونات طعمة \n(المخلالات و الطرشي)",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "96",
+      "image": null,
+      "meal_name_en": "فلفل طعمة طازج",
+      "description_en": "فلفل طازة  وليمون وزيت زيتون وبقدونس",
+      "price": null,
+      "meal_name_ar": "فلفل طعمة طازج",
+      "description_ar": "فلفل طازة  وليمون وزيت زيتون وبقدونس",
+      "calories": null,
+      "category_en": "مشهونات_طعمة_(المخلالات_و_الطرشي)",
+      "category_ar": "مشهونات طعمة \n(المخلالات و الطرشي)",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "97",
+      "image": null,
+      "meal_name_en": "مخلل مشكل  البنجر",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "مخلل مشكل  البنجر",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "مشهونات_طعمة_(المخلالات_و_الطرشي)",
+      "category_ar": "مشهونات طعمة \n(المخلالات و الطرشي)",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "98",
+      "image": null,
+      "meal_name_en": "صحن مشكل مشهونات",
+      "description_en": "عدد 8 أصناف مشكلة من المشهونات",
+      "price": null,
+      "meal_name_ar": "صحن مشكل مشهونات",
+      "description_ar": "عدد 8 أصناف مشكلة من المشهونات",
+      "calories": null,
+      "category_en": "مشهونات_طعمة_(المخلالات_و_الطرشي)",
+      "category_ar": "مشهونات طعمة \n(المخلالات و الطرشي)",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "سلة معجنات": [
+    {
+      "id": "100",
+      "image": null,
+      "meal_name_en": "طاوة بريك مدني",
+      "description_en": "طاوة بريك باللحم المفروم الطازج من فرن طعمة",
+      "price": null,
+      "meal_name_ar": "طاوة بريك مدني",
+      "description_ar": "طاوة بريك باللحم المفروم الطازج من فرن طعمة",
+      "calories": null,
+      "category_en": "سلة_معجنات",
+      "category_ar": "سلة معجنات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "101",
+      "image": null,
+      "meal_name_en": "فرموزة زينب\nلحم / جبنة",
+      "description_en": "طبقات من العجين الرقيق الهش محشوة بخلطة اللحم الخاصة وتقدم مع اللازة",
+      "price": null,
+      "meal_name_ar": "فرموزة زينب\nلحم / جبنة",
+      "description_ar": "طبقات من العجين الرقيق الهش محشوة بخلطة اللحم الخاصة وتقدم مع اللازة",
+      "calories": null,
+      "category_en": "سلة_معجنات",
+      "category_ar": "سلة معجنات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "102",
+      "image": null,
+      "meal_name_en": "منتو فتو",
+      "description_en": "٤ قطع منتو مع رشة الكمون والفلفل الأسود",
+      "price": null,
+      "meal_name_ar": "منتو فتو",
+      "description_ar": "٤ قطع منتو مع رشة الكمون والفلفل الأسود",
+      "calories": null,
+      "category_en": "سلة_معجنات",
+      "category_ar": "سلة معجنات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "103",
+      "image": null,
+      "meal_name_en": "يغمش عزو\nلحم / جبنة",
+      "description_en": "٤ قطع يغمش لحم بالخلطة\n4 قطع يغمش جبنة",
+      "price": null,
+      "meal_name_ar": "يغمش عزو\nلحم / جبنة",
+      "description_ar": "٤ قطع يغمش لحم بالخلطة\n4 قطع يغمش جبنة",
+      "calories": null,
+      "category_en": "سلة_معجنات",
+      "category_ar": "سلة معجنات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "104",
+      "image": null,
+      "meal_name_en": "سمبوسك مثلثات اللحم",
+      "description_en": "٤ قطع عجين  محشوة باللحم والبيض بالخلطة المدينية",
+      "price": null,
+      "meal_name_ar": "سمبوسك مثلثات اللحم",
+      "description_ar": "٤ قطع عجين  محشوة باللحم والبيض بالخلطة المدينية",
+      "calories": null,
+      "category_en": "سلة_معجنات",
+      "category_ar": "سلة معجنات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "105",
+      "image": null,
+      "meal_name_en": "سمبوسك أصابع الجبنة البيضاء",
+      "description_en": "٤ قطع عجين رول محشوة  بالجبنة البلدي",
+      "price": null,
+      "meal_name_ar": "سمبوسك أصابع الجبنة البيضاء",
+      "description_ar": "٤ قطع عجين رول محشوة  بالجبنة البلدي",
+      "calories": null,
+      "category_en": "سلة_معجنات",
+      "category_ar": "سلة معجنات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "106",
+      "image": null,
+      "meal_name_en": "عيش باللحم",
+      "description_en": "قطعة عجين باللحم وخلطة الطحينة الخاصة تقدم حارة وطرية",
+      "price": null,
+      "meal_name_ar": "عيش باللحم",
+      "description_ar": "قطعة عجين باللحم وخلطة الطحينة الخاصة تقدم حارة وطرية",
+      "calories": null,
+      "category_en": "سلة_معجنات",
+      "category_ar": "سلة معجنات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "107",
+      "image": null,
+      "meal_name_en": "شيبس حارة البحر",
+      "description_en": "اصابع بطاطس طازة مقلية وتقدم مع صوص الثوم والطحينة والدقس الأخضر وسلطة الحمر",
+      "price": null,
+      "meal_name_ar": "شيبس حارة البحر",
+      "description_ar": "اصابع بطاطس طازة مقلية وتقدم مع صوص الثوم والطحينة والدقس الأخضر وسلطة الحمر",
+      "calories": null,
+      "category_en": "سلة_معجنات",
+      "category_ar": "سلة معجنات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "108",
+      "image": null,
+      "meal_name_en": "بريك ملفوف",
+      "description_en": "بريك متبتب زي أهل المدينة",
+      "price": null,
+      "meal_name_ar": "بريك ملفوف",
+      "description_ar": "بريك متبتب زي أهل المدينة",
+      "calories": null,
+      "category_en": "سلة_معجنات",
+      "category_ar": "سلة معجنات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "109",
+      "image": null,
+      "meal_name_en": "منتو فرني",
+      "description_en": "قطعتنان من المنتو الفرني باللحم الطازج",
+      "price": null,
+      "meal_name_ar": "منتو فرني",
+      "description_ar": "قطعتنان من المنتو الفرني باللحم الطازج",
+      "calories": null,
+      "category_en": "سلة_معجنات",
+      "category_ar": "سلة معجنات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "110",
+      "image": null,
+      "meal_name_en": "بف",
+      "description_en": "قطعتان من البف باللحم الطازح والعجينة الهشة",
+      "price": null,
+      "meal_name_ar": "بف",
+      "description_ar": "قطعتان من البف باللحم الطازح والعجينة الهشة",
+      "calories": null,
+      "category_en": "سلة_معجنات",
+      "category_ar": "سلة معجنات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "111",
+      "image": null,
+      "meal_name_en": "قاضي قضي",
+      "description_en": "4حبات من كرات اللحم الأشهر في أطباق أهل المدينة",
+      "price": null,
+      "meal_name_ar": "قاضي قضي",
+      "description_ar": "4حبات من كرات اللحم الأشهر في أطباق أهل المدينة",
+      "calories": null,
+      "category_en": "سلة_معجنات",
+      "category_ar": "سلة معجنات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "112",
+      "image": null,
+      "meal_name_en": "سمبوسك طعمة بخليط الأجبان",
+      "description_en": "4 حبات خليط من الأجبان ملفوفة برقاق المدينة",
+      "price": null,
+      "meal_name_ar": "سمبوسك طعمة بخليط الأجبان",
+      "description_ar": "4 حبات خليط من الأجبان ملفوفة برقاق المدينة",
+      "calories": null,
+      "category_en": "سلة_معجنات",
+      "category_ar": "سلة معجنات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "أرزاز طعمة": [
+    {
+      "id": "117",
+      "image": null,
+      "meal_name_en": "رز مديني باللحم",
+      "description_en": "رز ابيض مع اللحم المحمر منكهـ بخلطة طعمة الخاصة بالسمن الغنمي والزعفران \nيقدم مع سلطة الدقس  و سلطة اللبن",
+      "price": null,
+      "meal_name_ar": "رز مديني باللحم",
+      "description_ar": "رز ابيض مع اللحم المحمر منكهـ بخلطة طعمة الخاصة بالسمن الغنمي والزعفران \nيقدم مع سلطة الدقس  و سلطة اللبن",
+      "calories": null,
+      "category_en": "أرزاز_طعمة",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "118",
+      "image": null,
+      "meal_name_en": "رز مديني بالدجاج",
+      "description_en": "رز ابيض مع  االدجاج المحمر منكهـ بخلطة طعمة الخاصة بالسمن الغنمي والزعفران \nيقدم مع سلطة الدقس و سلطة اللبن",
+      "price": null,
+      "meal_name_ar": "رز مديني بالدجاج",
+      "description_ar": "رز ابيض مع  االدجاج المحمر منكهـ بخلطة طعمة الخاصة بالسمن الغنمي والزعفران \nيقدم مع سلطة الدقس و سلطة اللبن",
+      "calories": null,
+      "category_en": "أرزاز_طعمة",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "119",
+      "image": null,
+      "meal_name_en": "رز بخاري الزواجات",
+      "description_en": "رز بخاري مكشن باللحم مخصوص على طريقة زواجات أهل اول بخلطة كشنة الزبيب والبليلة واللوز البجلي \nيقدم مع سلطة الدقس و سلطة خضراء",
+      "price": null,
+      "meal_name_ar": "رز بخاري الزواجات",
+      "description_ar": "رز بخاري مكشن باللحم مخصوص على طريقة زواجات أهل اول بخلطة كشنة الزبيب والبليلة واللوز البجلي \nيقدم مع سلطة الدقس و سلطة خضراء",
+      "calories": null,
+      "category_en": "أرزاز_طعمة",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "120",
+      "image": null,
+      "meal_name_en": "رز بخاري ست البيت",
+      "description_en": "رز بخاري مكشن  بالدجاج مخصوص على طريقة زواجات أهل اول بخلطة كشنة الزبيب والبليلة واللوز البجلي \nيقدم مع سلطة الدقس و سلطة خضراء",
+      "price": null,
+      "meal_name_ar": "رز بخاري ست البيت",
+      "description_ar": "رز بخاري مكشن  بالدجاج مخصوص على طريقة زواجات أهل اول بخلطة كشنة الزبيب والبليلة واللوز البجلي \nيقدم مع سلطة الدقس و سلطة خضراء",
+      "calories": null,
+      "category_en": "أرزاز_طعمة",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "121",
+      "image": null,
+      "meal_name_en": "رز المدينة الكابلي المشهور",
+      "description_en": "رز باللحم منكهـ بقشر البرتقال والزعفران مع كشنة البطاطس الحامض الخاصة \nيقدم مع سلطة اللبن وسلطة حارة",
+      "price": null,
+      "meal_name_ar": "رز المدينة الكابلي المشهور",
+      "description_ar": "رز باللحم منكهـ بقشر البرتقال والزعفران مع كشنة البطاطس الحامض الخاصة \nيقدم مع سلطة اللبن وسلطة حارة",
+      "calories": null,
+      "category_en": "أرزاز_طعمة",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "122",
+      "image": null,
+      "meal_name_en": "الرز الكابلي ل ست البيت",
+      "description_en": "رز الدجاج منكهـ بقشر البرتقال والزعفران مع كشنة البطاطس الحامض الخاصة \nيقدم مع سلطة اللبن وسلطة حارة",
+      "price": null,
+      "meal_name_ar": "الرز الكابلي ل ست البيت",
+      "description_ar": "رز الدجاج منكهـ بقشر البرتقال والزعفران مع كشنة البطاطس الحامض الخاصة \nيقدم مع سلطة اللبن وسلطة حارة",
+      "calories": null,
+      "category_en": "أرزاز_طعمة",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "123",
+      "image": null,
+      "meal_name_en": "سليق باللحم",
+      "description_en": "رز مسلوق بالحليب محضّر بنكهة خاصة وتقدم باللحم  المحمّر بالسمن الغنمي وصوص الدقس الحار\nيقدم مع الدقس و سلطة حارة",
+      "price": null,
+      "meal_name_ar": "سليق باللحم",
+      "description_ar": "رز مسلوق بالحليب محضّر بنكهة خاصة وتقدم باللحم  المحمّر بالسمن الغنمي وصوص الدقس الحار\nيقدم مع الدقس و سلطة حارة",
+      "calories": null,
+      "category_en": "أرزاز_طعمة",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "124",
+      "image": null,
+      "meal_name_en": "سليق بالدجاج",
+      "description_en": "رز مسلوق بالحليب محضّر بنكهة خاصة بالدجاج المحمّر بالسمن الغنمي وصوص الدقس الحار\nيقدم مع الدقس وسلطة حارة",
+      "price": null,
+      "meal_name_ar": "سليق بالدجاج",
+      "description_ar": "رز مسلوق بالحليب محضّر بنكهة خاصة بالدجاج المحمّر بالسمن الغنمي وصوص الدقس الحار\nيقدم مع الدقس وسلطة حارة",
+      "calories": null,
+      "category_en": "أرزاز_طعمة",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "125",
+      "image": null,
+      "meal_name_en": "رز عربي ودجاج طعمة",
+      "description_en": "حبات الرز الأبيض مع الدجاج المتبل بطريقة ليندا  الخاصة باللبن والزعفران و البطاطس\nيقدم مع سلطة اللبن و سلطة حارة",
+      "price": null,
+      "meal_name_ar": "رز عربي ودجاج طعمة",
+      "description_ar": "حبات الرز الأبيض مع الدجاج المتبل بطريقة ليندا  الخاصة باللبن والزعفران و البطاطس\nيقدم مع سلطة اللبن و سلطة حارة",
+      "calories": null,
+      "category_en": "أرزاز_طعمة",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "126",
+      "image": null,
+      "meal_name_en": "رز الجمعة",
+      "description_en": "رز باللحم أو الدجاج مطبوخ بالحمص وخلطة طعمة الخاصة بطشة السمن وتقدم بقطع أشار الجزر \nوصوص الطحينة  و مخلل الأشار",
+      "price": null,
+      "meal_name_ar": "رز الجمعة",
+      "description_ar": "رز باللحم أو الدجاج مطبوخ بالحمص وخلطة طعمة الخاصة بطشة السمن وتقدم بقطع أشار الجزر \nوصوص الطحينة  و مخلل الأشار",
+      "calories": null,
+      "category_en": "أرزاز_طعمة",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "127",
+      "image": null,
+      "meal_name_en": "فطير بالدجاج",
+      "description_en": "فطير مسقي بمرقة الدجاج المسبكه",
+      "price": null,
+      "meal_name_ar": "فطير بالدجاج",
+      "description_ar": "فطير مسقي بمرقة الدجاج المسبكه",
+      "calories": null,
+      "category_en": "أرزاز_طعمة",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "128",
+      "image": null,
+      "meal_name_en": "فطير باللحم",
+      "description_en": "فطير مسقي بمرقة اللحم المسبكة",
+      "price": null,
+      "meal_name_ar": "فطير باللحم",
+      "description_ar": "فطير مسقي بمرقة اللحم المسبكة",
+      "calories": null,
+      "category_en": "أرزاز_طعمة",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "129",
+      "image": null,
+      "meal_name_en": "كوزي دجاج طعمة",
+      "description_en": "خليط الرز و المكرونة بالدجاج",
+      "price": null,
+      "meal_name_ar": "كوزي دجاج طعمة",
+      "description_ar": "خليط الرز و المكرونة بالدجاج",
+      "calories": null,
+      "category_en": "أرزاز_طعمة",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "130",
+      "image": null,
+      "meal_name_en": "كوزي لحم طعمة",
+      "description_en": "خليط الرز و المكرونة باللحم",
+      "price": null,
+      "meal_name_ar": "كوزي لحم طعمة",
+      "description_ar": "خليط الرز و المكرونة باللحم",
+      "calories": null,
+      "category_en": "أرزاز_طعمة",
+      "category_ar": "أرزاز طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "جدول أنواع الرز اليومي": [
+    {
+      "id": "132",
+      "image": null,
+      "meal_name_en": "الأحد",
+      "description_en": "رز مديني (لحم +دجاج) - الرز الكابلي (لحم + دجاج)",
+      "price": null,
+      "meal_name_ar": "الأحد",
+      "description_ar": "رز مديني (لحم +دجاج) - الرز الكابلي (لحم + دجاج)",
+      "calories": null,
+      "category_en": "جدول_أنواع_الرز_اليومي",
+      "category_ar": "جدول أنواع الرز اليومي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "133",
+      "image": null,
+      "meal_name_en": "الاثنين",
+      "description_en": "رز مديني (لحم +دجاج) - الرز الكابلي (لحم + دجاج)",
+      "price": null,
+      "meal_name_ar": "الاثنين",
+      "description_ar": "رز مديني (لحم +دجاج) - الرز الكابلي (لحم + دجاج)",
+      "calories": null,
+      "category_en": "جدول_أنواع_الرز_اليومي",
+      "category_ar": "جدول أنواع الرز اليومي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "134",
+      "image": null,
+      "meal_name_en": "الثلاثاء",
+      "description_en": "رز مديني (لحم +دجاج) - الرز البخاري (لحم + دجاج) - سليق (لحم + دجاج)",
+      "price": null,
+      "meal_name_ar": "الثلاثاء",
+      "description_ar": "رز مديني (لحم +دجاج) - الرز البخاري (لحم + دجاج) - سليق (لحم + دجاج)",
+      "calories": null,
+      "category_en": "جدول_أنواع_الرز_اليومي",
+      "category_ar": "جدول أنواع الرز اليومي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "135",
+      "image": null,
+      "meal_name_en": "الأربعاء",
+      "description_en": "رز مديني (لحم +دجاج) - الرز البخاري (لحم + دجاج) -  سليق (لحم + دجاج)",
+      "price": null,
+      "meal_name_ar": "الأربعاء",
+      "description_ar": "رز مديني (لحم +دجاج) - الرز البخاري (لحم + دجاج) -  سليق (لحم + دجاج)",
+      "calories": null,
+      "category_en": "جدول_أنواع_الرز_اليومي",
+      "category_ar": "جدول أنواع الرز اليومي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "136",
+      "image": null,
+      "meal_name_en": "الخميس",
+      "description_en": "رز مديني (لحم +دجاج) - الرز البخاري (لحم + دجاج) - سليق (لحم + دجاج)",
+      "price": null,
+      "meal_name_ar": "الخميس",
+      "description_ar": "رز مديني (لحم +دجاج) - الرز البخاري (لحم + دجاج) - سليق (لحم + دجاج)",
+      "calories": null,
+      "category_en": "جدول_أنواع_الرز_اليومي",
+      "category_ar": "جدول أنواع الرز اليومي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "137",
+      "image": null,
+      "meal_name_en": "الجمعة",
+      "description_en": "رز مديني (لحم +دجاج) - رز بالحمص  (لحم) - سليق (لحم + دجاج)",
+      "price": null,
+      "meal_name_ar": "الجمعة",
+      "description_ar": "رز مديني (لحم +دجاج) - رز بالحمص  (لحم) - سليق (لحم + دجاج)",
+      "calories": null,
+      "category_en": "جدول_أنواع_الرز_اليومي",
+      "category_ar": "جدول أنواع الرز اليومي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "138",
+      "image": null,
+      "meal_name_en": "السبت",
+      "description_en": "رز مديني (لحم +دجاج) - الرز الكابلي (لحم + دجاج)",
+      "price": null,
+      "meal_name_ar": "السبت",
+      "description_ar": "رز مديني (لحم +دجاج) - الرز الكابلي (لحم + دجاج)",
+      "calories": null,
+      "category_en": "جدول_أنواع_الرز_اليومي",
+      "category_ar": "جدول أنواع الرز اليومي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "منقل طعمة": [
+    {
+      "id": "140",
+      "image": null,
+      "meal_name_en": "مبشور اللحم",
+      "description_en": "قطع لحم مفروم مشوية على السيخ مع تشكيلة الخضار المشوية و السلطة",
+      "price": null,
+      "meal_name_ar": "مبشور اللحم",
+      "description_ar": "قطع لحم مفروم مشوية على السيخ مع تشكيلة الخضار المشوية و السلطة",
+      "calories": null,
+      "category_en": "منقل_طعمة",
+      "category_ar": "منقل طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "141",
+      "image": null,
+      "meal_name_en": "مبشور دجاج",
+      "description_en": "قطع دجاج مفروم مشوية على السيخ وتقدم مع تشكيلة الخضار المشوية و السلطة",
+      "price": null,
+      "meal_name_ar": "مبشور دجاج",
+      "description_ar": "قطع دجاج مفروم مشوية على السيخ وتقدم مع تشكيلة الخضار المشوية و السلطة",
+      "calories": null,
+      "category_en": "منقل_طعمة",
+      "category_ar": "منقل طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "142",
+      "image": null,
+      "meal_name_en": "أوصال لحم",
+      "description_en": "قطع اوصال لحم مشوية على السيخ وتقدم مع صوص الطحينة",
+      "price": null,
+      "meal_name_ar": "أوصال لحم",
+      "description_ar": "قطع اوصال لحم مشوية على السيخ وتقدم مع صوص الطحينة",
+      "calories": null,
+      "category_en": "منقل_طعمة",
+      "category_ar": "منقل طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "143",
+      "image": null,
+      "meal_name_en": "أوصال دجاج",
+      "description_en": "قطع صدور دجاج مشوية على السيخ تقدم مع صوص الثوم",
+      "price": null,
+      "meal_name_ar": "أوصال دجاج",
+      "description_ar": "قطع صدور دجاج مشوية على السيخ تقدم مع صوص الثوم",
+      "calories": null,
+      "category_en": "منقل_طعمة",
+      "category_ar": "منقل طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "144",
+      "image": null,
+      "meal_name_en": "كباب حجازي",
+      "description_en": "الكباب الحجازي علي الأصول مع السلطة الخضراء و صوص الطحينة",
+      "price": null,
+      "meal_name_ar": "كباب حجازي",
+      "description_ar": "الكباب الحجازي علي الأصول مع السلطة الخضراء و صوص الطحينة",
+      "calories": null,
+      "category_en": "منقل_طعمة",
+      "category_ar": "منقل طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "145",
+      "image": null,
+      "meal_name_en": "كباب دجاج",
+      "description_en": "كباب الدجاج المميز مع السلطة الخضراء و صوص الطحينة",
+      "price": null,
+      "meal_name_ar": "كباب دجاج",
+      "description_ar": "كباب الدجاج المميز مع السلطة الخضراء و صوص الطحينة",
+      "calories": null,
+      "category_en": "منقل_طعمة",
+      "category_ar": "منقل طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "146",
+      "image": null,
+      "meal_name_en": "كباب الطحينة",
+      "description_en": "الكباب المميز مع صوص الطحينة علي الوجهه",
+      "price": null,
+      "meal_name_ar": "كباب الطحينة",
+      "description_ar": "الكباب المميز مع صوص الطحينة علي الوجهه",
+      "calories": null,
+      "category_en": "منقل_طعمة",
+      "category_ar": "منقل طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "147",
+      "image": null,
+      "meal_name_en": "كباب طعمة",
+      "description_en": "الكباب  الفاخر بالمكسرات و صوص الطحينة",
+      "price": null,
+      "meal_name_ar": "كباب طعمة",
+      "description_ar": "الكباب  الفاخر بالمكسرات و صوص الطحينة",
+      "calories": null,
+      "category_en": "منقل_طعمة",
+      "category_ar": "منقل طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "148",
+      "image": null,
+      "meal_name_en": "مشكل مشويات التاجوري",
+      "description_en": "تكفي عدد 3 أشخاص\nتشكيلة فاخرة من اللحوم والدجاج المشوية والرز المديني تقدم على طبق فاخر\nعدد 12 سيخ",
+      "price": null,
+      "meal_name_ar": "مشكل مشويات التاجوري",
+      "description_ar": "تكفي عدد 3 أشخاص\nتشكيلة فاخرة من اللحوم والدجاج المشوية والرز المديني تقدم على طبق فاخر\nعدد 12 سيخ",
+      "calories": null,
+      "category_en": "منقل_طعمة",
+      "category_ar": "منقل طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "149",
+      "image": null,
+      "meal_name_en": "مشكل مشويات طعمة",
+      "description_en": "\"تكفي عدد 1 شخص \nعدد 3 أسياخ مشكلة",
+      "price": null,
+      "meal_name_ar": "مشكل مشويات طعمة",
+      "description_ar": "\"تكفي عدد 1 شخص \nعدد 3 أسياخ مشكلة",
+      "calories": null,
+      "category_en": "منقل_طعمة",
+      "category_ar": "منقل طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "150",
+      "image": null,
+      "meal_name_en": "بطاطس مقلية",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "بطاطس مقلية",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "منقل_طعمة",
+      "category_ar": "منقل طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "أطباق  طعمة  المدينة": [
+    {
+      "id": "153",
+      "image": null,
+      "meal_name_en": "مقلقل اللحم",
+      "description_en": "قطع لحم مقلقل بالخلطة وتقدم بطريقة أهل أول",
+      "price": null,
+      "meal_name_ar": "مقلقل اللحم",
+      "description_ar": "قطع لحم مقلقل بالخلطة وتقدم بطريقة أهل أول",
+      "calories": null,
+      "category_en": "أطباق_طعمة_المدينة",
+      "category_ar": "أطباق  طعمة  المدينة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "154",
+      "image": null,
+      "meal_name_en": "مقلقل الدجاج",
+      "description_en": "قطع صدور دجاج مشوّحة بالخضار والبهارات الخاصة",
+      "price": null,
+      "meal_name_ar": "مقلقل الدجاج",
+      "description_ar": "قطع صدور دجاج مشوّحة بالخضار والبهارات الخاصة",
+      "calories": null,
+      "category_en": "أطباق_طعمة_المدينة",
+      "category_ar": "أطباق  طعمة  المدينة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "155",
+      "image": null,
+      "meal_name_en": "لحمة راس",
+      "description_en": "قطع لحم مخلية من رأس الخروف المشوي بالفرن وتقدم بخبز الحب والطحينة",
+      "price": null,
+      "meal_name_ar": "لحمة راس",
+      "description_ar": "قطع لحم مخلية من رأس الخروف المشوي بالفرن وتقدم بخبز الحب والطحينة",
+      "calories": null,
+      "category_en": "أطباق_طعمة_المدينة",
+      "category_ar": "أطباق  طعمة  المدينة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "156",
+      "image": null,
+      "meal_name_en": "سلات أهل المدينة",
+      "description_en": "قطع لحم طرية مطبوخة بالبصل والثوم على نار هادئة وتقدم بخبز الحب والرز المدني",
+      "price": null,
+      "meal_name_ar": "سلات أهل المدينة",
+      "description_ar": "قطع لحم طرية مطبوخة بالبصل والثوم على نار هادئة وتقدم بخبز الحب والرز المدني",
+      "calories": null,
+      "category_en": "أطباق_طعمة_المدينة",
+      "category_ar": "أطباق  طعمة  المدينة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "157",
+      "image": null,
+      "meal_name_en": "منزلة علي الأصول",
+      "description_en": "قطع اللحم الطرية مع مرقة الطحينة المسبكة",
+      "price": null,
+      "meal_name_ar": "منزلة علي الأصول",
+      "description_ar": "قطع اللحم الطرية مع مرقة الطحينة المسبكة",
+      "calories": null,
+      "category_en": "أطباق_طعمة_المدينة",
+      "category_ar": "أطباق  طعمة  المدينة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "طبيخ طعمة / الإيدامات": [
+    {
+      "id": "160",
+      "image": null,
+      "meal_name_en": "مختوم بامية",
+      "description_en": "بامية مدينية مطبوخة بقطع اللحم الطرية وتقدم بخبز الحب والرز المديني",
+      "price": null,
+      "meal_name_ar": "مختوم بامية",
+      "description_ar": "بامية مدينية مطبوخة بقطع اللحم الطرية وتقدم بخبز الحب والرز المديني",
+      "calories": null,
+      "category_en": "طبيخ_طعمة_/_الإيدامات",
+      "category_ar": "طبيخ طعمة / الإيدامات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "161",
+      "image": null,
+      "meal_name_en": "ملوخية خضراء",
+      "description_en": "اختياركم من اوراق الملوخية الخضراء مطبوخة على طريقة أهل أول بقطع اللحم او الدجاج المحمر وتقدم بخبز الحب والرز المدني",
+      "price": null,
+      "meal_name_ar": "ملوخية خضراء",
+      "description_ar": "اختياركم من اوراق الملوخية الخضراء مطبوخة على طريقة أهل أول بقطع اللحم او الدجاج المحمر وتقدم بخبز الحب والرز المدني",
+      "calories": null,
+      "category_en": "طبيخ_طعمة_/_الإيدامات",
+      "category_ar": "طبيخ طعمة / الإيدامات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "162",
+      "image": null,
+      "meal_name_en": "ملوخية ناشفة",
+      "description_en": "اختياركم من اوراق الملوخية الناشفة  مطبوخة على طريقة أهل أول بقطع اللحم او الدجاج المحمر وتقدم بخبز الحب والرز المديني",
+      "price": null,
+      "meal_name_ar": "ملوخية ناشفة",
+      "description_ar": "اختياركم من اوراق الملوخية الناشفة  مطبوخة على طريقة أهل أول بقطع اللحم او الدجاج المحمر وتقدم بخبز الحب والرز المديني",
+      "calories": null,
+      "category_en": "طبيخ_طعمة_/_الإيدامات",
+      "category_ar": "طبيخ طعمة / الإيدامات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "163",
+      "image": null,
+      "meal_name_en": "مصقعة خدوج",
+      "description_en": "قطع باذنجان مقلية ومسبكة بلحم المفروم الطازج وتقدم بخبز الحب والليمون",
+      "price": null,
+      "meal_name_ar": "مصقعة خدوج",
+      "description_ar": "قطع باذنجان مقلية ومسبكة بلحم المفروم الطازج وتقدم بخبز الحب والليمون",
+      "calories": null,
+      "category_en": "طبيخ_طعمة_/_الإيدامات",
+      "category_ar": "طبيخ طعمة / الإيدامات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "164",
+      "image": null,
+      "meal_name_en": "مقادم\n(كولاجين المدينة )",
+      "description_en": "قطعتين من الكوارع  مسلوقة وتقدم مع خبز الحب وخلطة الليمون بالثوم",
+      "price": null,
+      "meal_name_ar": "مقادم\n(كولاجين المدينة )",
+      "description_ar": "قطعتين من الكوارع  مسلوقة وتقدم مع خبز الحب وخلطة الليمون بالثوم",
+      "calories": null,
+      "category_en": "طبيخ_طعمة_/_الإيدامات",
+      "category_ar": "طبيخ طعمة / الإيدامات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "165",
+      "image": null,
+      "meal_name_en": "صينية الكباب بالبطاطس",
+      "description_en": "صينية مخصوصة من البطاطس والكباب بالفرن تقدم بالرز المديني بصوص الدقس",
+      "price": null,
+      "meal_name_ar": "صينية الكباب بالبطاطس",
+      "description_ar": "صينية مخصوصة من البطاطس والكباب بالفرن تقدم بالرز المديني بصوص الدقس",
+      "calories": null,
+      "category_en": "طبيخ_طعمة_/_الإيدامات",
+      "category_ar": "طبيخ طعمة / الإيدامات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "المخبوزات الطازة": [
+    {
+      "id": "168",
+      "image": null,
+      "meal_name_en": "عيش حب",
+      "description_en": "3 حبات من الخبز الظازج في فرن طعمة",
+      "price": null,
+      "meal_name_ar": "عيش حب",
+      "description_ar": "3 حبات من الخبز الظازج في فرن طعمة",
+      "calories": null,
+      "category_en": "المخبوزات_الطازة",
+      "category_ar": "المخبوزات الطازة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "169",
+      "image": null,
+      "meal_name_en": "عيش أبيض",
+      "description_en": "3 حبات من الخبز الطازج في فرن طعمة",
+      "price": null,
+      "meal_name_ar": "عيش أبيض",
+      "description_ar": "3 حبات من الخبز الطازج في فرن طعمة",
+      "calories": null,
+      "category_en": "المخبوزات_الطازة",
+      "category_ar": "المخبوزات الطازة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "صفايح وساندوتش": [
+    {
+      "id": "173",
+      "image": null,
+      "meal_name_en": "صفايح مصقعه بالجبنة",
+      "description_en": "مصقعة خدوج بالجبنة المطاطة",
+      "price": null,
+      "meal_name_ar": "صفايح مصقعه بالجبنة",
+      "description_ar": "مصقعة خدوج بالجبنة المطاطة",
+      "calories": null,
+      "category_en": "صفايح_وساندوتش",
+      "category_ar": "صفايح وساندوتش",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "174",
+      "image": null,
+      "meal_name_en": "صفايح سلات بالطحينة",
+      "description_en": "سلات المدينة و الطحينة كلام خطير",
+      "price": null,
+      "meal_name_ar": "صفايح سلات بالطحينة",
+      "description_ar": "سلات المدينة و الطحينة كلام خطير",
+      "calories": null,
+      "category_en": "صفايح_وساندوتش",
+      "category_ar": "صفايح وساندوتش",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "175",
+      "image": null,
+      "meal_name_en": "صفايح جبنة بيضاء بالحلاوة الطحينية",
+      "description_en": "خليط الجبنة و الحلاوة والمزينة بالفستق",
+      "price": null,
+      "meal_name_ar": "صفايح جبنة بيضاء بالحلاوة الطحينية",
+      "description_ar": "خليط الجبنة و الحلاوة والمزينة بالفستق",
+      "calories": null,
+      "category_en": "صفايح_وساندوتش",
+      "category_ar": "صفايح وساندوتش",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "ساندوتش عيش الحب": [
+    {
+      "id": "179",
+      "image": null,
+      "meal_name_en": "-ساندويتش لحمة راس",
+      "description_en": "قطع من لحم الرأس المشوي بالبهارات الجافة ومحشية في خبز البر وتقدم مع صوص الطحينة والخل والدقس .",
+      "price": null,
+      "meal_name_ar": "-ساندويتش لحمة راس",
+      "description_ar": "قطع من لحم الرأس المشوي بالبهارات الجافة ومحشية في خبز البر وتقدم مع صوص الطحينة والخل والدقس .",
+      "calories": null,
+      "category_en": "ساندوتش_عيش_الحب",
+      "category_ar": "ساندوتش عيش الحب",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    },
+    {
+      "id": "180",
+      "image": null,
+      "meal_name_en": "-ساندويتش سلات المدينة",
+      "description_en": "قطع لحم السلات الطرية مع مصوص الطحينة  و الشيبس",
+      "price": null,
+      "meal_name_ar": "-ساندويتش سلات المدينة",
+      "description_ar": "قطع لحم السلات الطرية مع مصوص الطحينة  و الشيبس",
+      "calories": null,
+      "category_en": "ساندوتش_عيش_الحب",
+      "category_ar": "ساندوتش عيش الحب",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    },
+    {
+      "id": "181",
+      "image": null,
+      "meal_name_en": "ساندوتش كبدة",
+      "description_en": "الجبنة السائلة المدهونة مع الكبدة و المزينة بالبقدونس",
+      "price": null,
+      "meal_name_ar": "ساندوتش كبدة",
+      "description_ar": "الجبنة السائلة المدهونة مع الكبدة و المزينة بالبقدونس",
+      "calories": null,
+      "category_en": "ساندوتش_عيش_الحب",
+      "category_ar": "ساندوتش عيش الحب",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    }
+  ],
+  "المشروبات": [
+    {
+      "id": "183",
+      "image": null,
+      "meal_name_en": "السحلب",
+      "description_en": "مشروب الشتاء الشهير لأهل المدينة",
+      "price": null,
+      "meal_name_ar": "السحلب",
+      "description_ar": "مشروب الشتاء الشهير لأهل المدينة",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "184",
+      "image": null,
+      "meal_name_en": "قهوة اللوز/ ستنا خديجة",
+      "description_en": "قهوة الحليب باللوز المحلاه بالسكر",
+      "price": null,
+      "meal_name_ar": "قهوة اللوز/ ستنا خديجة",
+      "description_ar": "قهوة الحليب باللوز المحلاه بالسكر",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "185",
+      "image": null,
+      "meal_name_en": "قهوة سعودية",
+      "description_en": "القهوة الأشهر عربيا",
+      "price": null,
+      "meal_name_ar": "قهوة سعودية",
+      "description_ar": "القهوة الأشهر عربيا",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "186",
+      "image": null,
+      "meal_name_en": "شاي معطر",
+      "description_en": "شاي أحمر معطر بنكهه المدينة",
+      "price": null,
+      "meal_name_ar": "شاي معطر",
+      "description_ar": "شاي أحمر معطر بنكهه المدينة",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "187",
+      "image": null,
+      "meal_name_en": "شاي مشكِل الحارة",
+      "description_en": "براد شاي أحمر محبوك مع النعناع والورد المدني",
+      "price": null,
+      "meal_name_ar": "شاي مشكِل الحارة",
+      "description_ar": "براد شاي أحمر محبوك مع النعناع والورد المدني",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "188",
+      "image": null,
+      "meal_name_en": "شاهي أحمر",
+      "description_en": "شاي أحمر بنعناع المدينة",
+      "price": null,
+      "meal_name_ar": "شاهي أحمر",
+      "description_ar": "شاي أحمر بنعناع المدينة",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "189",
+      "image": null,
+      "meal_name_en": "شاي اخضر",
+      "description_en": "براد شاي أخضر بالنعناع المدني",
+      "price": null,
+      "meal_name_ar": "شاي اخضر",
+      "description_ar": "براد شاي أخضر بالنعناع المدني",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "190",
+      "image": null,
+      "meal_name_en": "شاي حليب",
+      "description_en": "حليب بالشاي مع خلطة مدنية خاصة",
+      "price": null,
+      "meal_name_ar": "شاي حليب",
+      "description_ar": "حليب بالشاي مع خلطة مدنية خاصة",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "191",
+      "image": null,
+      "meal_name_en": "شاي النعناع الدوش",
+      "description_en": "براد النعناع الدوش المحبوك",
+      "price": null,
+      "meal_name_ar": "شاي النعناع الدوش",
+      "description_ar": "براد النعناع الدوش المحبوك",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "192",
+      "image": null,
+      "meal_name_en": "قهوة تركي",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "قهوة تركي",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "194",
+      "image": null,
+      "meal_name_en": "شربيت فيمتو",
+      "description_en": "خليط الفيمتو بالنعناع والليمون المديني",
+      "price": null,
+      "meal_name_ar": "شربيت فيمتو",
+      "description_ar": "خليط الفيمتو بالنعناع والليمون المديني",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "195",
+      "image": null,
+      "meal_name_en": "كركديه",
+      "description_en": "سلاش خاص بنكه المدينة",
+      "price": null,
+      "meal_name_ar": "كركديه",
+      "description_ar": "سلاش خاص بنكه المدينة",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "196",
+      "image": null,
+      "meal_name_en": "قمر الدين",
+      "description_en": "سلاش قمر الدين مع عصير البرتقال",
+      "price": null,
+      "meal_name_ar": "قمر الدين",
+      "description_ar": "سلاش قمر الدين مع عصير البرتقال",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "197",
+      "image": null,
+      "meal_name_en": "زبيب",
+      "description_en": "سلاش فيتامين الحديد و الطاقة",
+      "price": null,
+      "meal_name_ar": "زبيب",
+      "description_ar": "سلاش فيتامين الحديد و الطاقة",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "198",
+      "image": null,
+      "meal_name_en": "سوبيا",
+      "description_en": "سلاش السوبيا المنعش",
+      "price": null,
+      "meal_name_ar": "سوبيا",
+      "description_ar": "سلاش السوبيا المنعش",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "199",
+      "image": null,
+      "meal_name_en": "عجوة المدينة",
+      "description_en": "عجوة  المدينة مخلوط بالحليب يقدم بارد",
+      "price": null,
+      "meal_name_ar": "عجوة المدينة",
+      "description_ar": "عجوة  المدينة مخلوط بالحليب يقدم بارد",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "200",
+      "image": null,
+      "meal_name_en": "برتقال طازه",
+      "description_en": "برتقال مزارع العلا الطازج",
+      "price": null,
+      "meal_name_ar": "برتقال طازه",
+      "description_ar": "برتقال مزارع العلا الطازج",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "201",
+      "image": null,
+      "meal_name_en": "ليمون نعناع",
+      "description_en": "ليمون بنعناع المدينة المنعش",
+      "price": null,
+      "meal_name_ar": "ليمون نعناع",
+      "description_ar": "ليمون بنعناع المدينة المنعش",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "202",
+      "image": null,
+      "meal_name_en": "مشروبات غازية",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "مشروبات غازية",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "203",
+      "image": null,
+      "meal_name_en": "مياه معدنية",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "مياه معدنية",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "204",
+      "image": null,
+      "meal_name_en": "مياه غازية",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "مياه غازية",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "drinks",
+      "category_ar": "المشروبات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "مخبوزات مغلفة": [
+    {
+      "id": "206",
+      "image": null,
+      "meal_name_en": "شابورة مالحة",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "شابورة مالحة",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "مخبوزات_مغلفة",
+      "category_ar": "مخبوزات مغلفة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    },
+    {
+      "id": "207",
+      "image": null,
+      "meal_name_en": "شابورة الدقة",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "شابورة الدقة",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "مخبوزات_مغلفة",
+      "category_ar": "مخبوزات مغلفة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    },
+    {
+      "id": "208",
+      "image": null,
+      "meal_name_en": "شابورة حلوة",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "شابورة حلوة",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "مخبوزات_مغلفة",
+      "category_ar": "مخبوزات مغلفة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    },
+    {
+      "id": "209",
+      "image": null,
+      "meal_name_en": "غريبة",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "غريبة",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "مخبوزات_مغلفة",
+      "category_ar": "مخبوزات مغلفة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    },
+    {
+      "id": "210",
+      "image": null,
+      "meal_name_en": "بسكويت الحليب",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "بسكويت الحليب",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "مخبوزات_مغلفة",
+      "category_ar": "مخبوزات مغلفة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    },
+    {
+      "id": "211",
+      "image": null,
+      "meal_name_en": "بسكويت السمسم",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "بسكويت السمسم",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "مخبوزات_مغلفة",
+      "category_ar": "مخبوزات مغلفة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    },
+    {
+      "id": "212",
+      "image": null,
+      "meal_name_en": "ميني شابورة",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "ميني شابورة",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "مخبوزات_مغلفة",
+      "category_ar": "مخبوزات مغلفة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    },
+    {
+      "id": "213",
+      "image": null,
+      "meal_name_en": "شابورة التعتيمة",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "شابورة التعتيمة",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "مخبوزات_مغلفة",
+      "category_ar": "مخبوزات مغلفة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    },
+    {
+      "id": "214",
+      "image": null,
+      "meal_name_en": "مارينج / بيض الهوا",
+      "description_en": "",
+      "price": null,
+      "meal_name_ar": "مارينج / بيض الهوا",
+      "description_ar": "",
+      "calories": null,
+      "category_en": "مخبوزات_مغلفة",
+      "category_ar": "مخبوزات مغلفة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": false
+      }
+    }
+  ],
+  "عروض طعمة": [
+    {
+      "id": "216",
+      "image": null,
+      "meal_name_en": "غداء العمل",
+      "description_en": "شخص واحد \n1-سلطة / 1-رز مديني ربع دجاج / 2-سمبوسك جبن / 1-كريم كراميل / 1- مشروب غازي",
+      "price": null,
+      "meal_name_ar": "غداء العمل",
+      "description_ar": "شخص واحد \n1-سلطة / 1-رز مديني ربع دجاج / 2-سمبوسك جبن / 1-كريم كراميل / 1- مشروب غازي",
+      "calories": null,
+      "category_en": "عروض_طعمة",
+      "category_ar": "عروض طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "217",
+      "image": null,
+      "meal_name_en": "وجبة شركات السياحة",
+      "description_en": "شخص واحد \n 1-سليق ربع دجاج /1-دقس / 1-سمبوسك / 1 -شروب غازي",
+      "price": null,
+      "meal_name_ar": "وجبة شركات السياحة",
+      "description_ar": "شخص واحد \n 1-سليق ربع دجاج /1-دقس / 1-سمبوسك / 1 -شروب غازي",
+      "calories": null,
+      "category_en": "عروض_طعمة",
+      "category_ar": "عروض طعمة",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "بوفيه طعمة الخارجي": [
+    {
+      "id": "221",
+      "image": null,
+      "meal_name_en": "بوفيه تعتيمة طعمة",
+      "description_en": "عبارة عن مجموعة الصور في سخانات المطعم / قسم الفطور كامل",
+      "price": null,
+      "meal_name_ar": "بوفيه تعتيمة طعمة",
+      "description_ar": "عبارة عن مجموعة الصور في سخانات المطعم / قسم الفطور كامل",
+      "calories": null,
+      "category_en": "بوفيه_طعمة_الخارجي",
+      "category_ar": "بوفيه طعمة الخارجي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "222",
+      "image": null,
+      "meal_name_en": "بوفيه المناسبات السعيدة",
+      "description_en": "مجموعة الصور لجميع الساخن / قسم الغداء و العشائ",
+      "price": null,
+      "meal_name_ar": "بوفيه المناسبات السعيدة",
+      "description_ar": "مجموعة الصور لجميع الساخن / قسم الغداء و العشائ",
+      "calories": null,
+      "category_en": "بوفيه_طعمة_الخارجي",
+      "category_ar": "بوفيه طعمة الخارجي",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ],
+  "الحلويات": [
+    {
+      "id": "230",
+      "image": null,
+      "meal_name_en": "-سقدانة عم خليل",
+      "description_en": "طبق حجازي شهير يحضر بالساقو والحليب",
+      "price": null,
+      "meal_name_ar": "-سقدانة عم خليل",
+      "description_ar": "طبق حجازي شهير يحضر بالساقو والحليب",
+      "calories": null,
+      "category_en": "desserts",
+      "category_ar": "الحلويات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "231",
+      "image": null,
+      "meal_name_en": "-توتوة كريم الكراميل",
+      "description_en": "كريم كراميل مطبوخ في الفرن وتقدم باردة بصوص السكر المكرمل .",
+      "price": null,
+      "meal_name_ar": "-توتوة كريم الكراميل",
+      "description_ar": "كريم كراميل مطبوخ في الفرن وتقدم باردة بصوص السكر المكرمل .",
+      "calories": null,
+      "category_en": "desserts",
+      "category_ar": "الحلويات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "232",
+      "image": null,
+      "meal_name_en": "-ام علي",
+      "description_en": "حلى الرقاق بالحليب مع المكسرات المحمصة وتقدم على طاوة ساخنة",
+      "price": null,
+      "meal_name_ar": "-ام علي",
+      "description_ar": "حلى الرقاق بالحليب مع المكسرات المحمصة وتقدم على طاوة ساخنة",
+      "calories": null,
+      "category_en": "desserts",
+      "category_ar": "الحلويات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "233",
+      "image": null,
+      "meal_name_en": "-مهلبية الأرز",
+      "description_en": "طبق  محضر بالحليب و الرز  المخفوق تقدم على طاسة باردة مزينة بالوز",
+      "price": null,
+      "meal_name_ar": "-مهلبية الأرز",
+      "description_ar": "طبق  محضر بالحليب و الرز  المخفوق تقدم على طاسة باردة مزينة بالوز",
+      "calories": null,
+      "category_en": "desserts",
+      "category_ar": "الحلويات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    },
+    {
+      "id": "234",
+      "image": null,
+      "meal_name_en": "قدرة قادر",
+      "description_en": "مزيج الكيك و الكريم كراميل",
+      "price": null,
+      "meal_name_ar": "قدرة قادر",
+      "description_ar": "مزيج الكيك و الكريم كراميل",
+      "calories": null,
+      "category_en": "desserts",
+      "category_ar": "الحلويات",
+      "available": true,
+      "trendy": false,
+      "availability_details": {
+        "local": true,
+        "travel": true,
+        "buffet": true
+      }
+    }
+  ]
+}
