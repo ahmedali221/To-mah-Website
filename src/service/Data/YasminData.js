@@ -4,36 +4,36 @@ import img3 from "../../assets/Menu/مختارات البيض/3.JPG";
 import img4 from "../../assets/Menu/مختارات البيض/4.JPG";
 import img5 from "../../assets/Menu/مختارات البيض/5.JPG";
 
-import beans1 from "../../assets/Menu/beans/1";
-import beans2 from "../../assets/Menu/beans/2";
-import beans3 from "../../assets/Menu/beans/3";
+import beans1 from "../../assets/Menu/beans/1.jpg";
+import beans2 from "../../assets/Menu/beans/2.jpg";
+import beans3 from "../../assets/Menu/beans/3.jpg";
 
-import breakfastCook1 from "../../assets/Menu/breakfastCook/1";
-import breakfastCook2 from "../../assets/Menu/breakfastCook/2";
-import breakfastCook3 from "../../assets/Menu/breakfastCook/3";
-import breakfastCook4 from "../../assets/Menu/breakfastCook/4";
-import breakfastCook5 from "../../assets/Menu/breakfastCook/5";
+import breakfastCook1 from "../../assets/Menu/breakfastCook/1.jpg";
+import breakfastCook2 from "../../assets/Menu/breakfastCook/2.jpg";
+import breakfastCook3 from "../../assets/Menu/breakfastCook/3.jpg";
+import breakfastCook4 from "../../assets/Menu/breakfastCook/4.jpg";
+import breakfastCook5 from "../../assets/Menu/breakfastCook/5.jpg";
 
-import appetizer1 from "../../assets/Menu/appetizers/1";
-import appetizer2 from "../../assets/Menu/appetizers/2";
-import appetizer3 from "../../assets/Menu/appetizers/3";
-import appetizer4 from "../../assets/Menu/appetizers/4";
-import appetizer5 from "../../assets/Menu/appetizers/5";
+import appetizer1 from "../../assets/Menu/appetizers/1.jpg";
+import appetizer2 from "../../assets/Menu/appetizers/2.jpg";
+import appetizer3 from "../../assets/Menu/appetizers/3.jpg";
+import appetizer4 from "../../assets/Menu/appetizers/4.jpg";
+import appetizer5 from "../../assets/Menu/appetizers/5.jpg";
 
-import breakfastDesert1 from "../../assets/Menu/breakfastDesert/1";
-import breakfastDesert2 from "../../assets/Menu/breakfastDesert/2";
+import breakfastDesert1 from "../../assets/Menu/breakfastDeserts/1.jpg";
+import breakfastDesert2 from "../../assets/Menu/breakfastDeserts/2.jpg";
 
-import cheese1 from "../../assets/Menu/cheese/1";
-import cheese2 from "../../assets/Menu/cheese/2";
-import cheese3 from "../../assets/Menu/cheese/3";
-import cheese4 from "../../assets/Menu/cheese/4";
-import cheese5 from "../../assets/Menu/cheese/5";
-import cheese6 from "../../assets/Menu/cheese/6";
-import cheese7 from "../../assets/Menu/cheese/7";
-import cheese8 from "../../assets/Menu/cheese/8";
-import cheese9 from "../../assets/Menu/cheese/9";
-import cheese10 from "../../assets/Menu/cheese/10";
-import cheese11 from "../../assets/Menu/cheese/11";
+import cheese1 from "../../assets/Menu/cheese/1.jpg";
+import cheese2 from "../../assets/Menu/cheese/2.jpg";
+import cheese3 from "../../assets/Menu/cheese/3.jpg";
+import cheese4 from "../../assets/Menu/cheese/4.jpg";
+import cheese5 from "../../assets/Menu/cheese/5.jpg";
+import cheese6 from "../../assets/Menu/cheese/6.jpg";
+import cheese7 from "../../assets/Menu/cheese/7.jpg";
+import cheese8 from "../../assets/Menu/cheese/8.jpg";
+import cheese9 from "../../assets/Menu/cheese/9.jpg";
+import cheese10 from "../../assets/Menu/cheese/10.jpg";
+import cheese11 from "../../assets/Menu/cheese/11.jpg";
 
 const productsData = [
   // مجموعة نواشف
