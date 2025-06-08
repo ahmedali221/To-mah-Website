@@ -8,6 +8,37 @@ import img5 from "../../assets/Menu/pages13-18/DSC01232.JPG";
 import img1 from "../../assets/Menu/pages13-18/DSC01782.JPG";
 import img4 from "../../assets/Menu/pages13-18/DSC01791.JPG";
 
+import soup1 from "../../assets/Menu/soup/1.jpg";
+import soup2 from "../../assets/Menu/soup/2.jpg";
+
+import salad1 from "../../assets/Menu/salads/1.jpg";
+import salad2 from "../../assets/Menu/salads/2.jpg";
+import salad3 from "../../assets/Menu/salads/3.jpg";
+import salad4 from "../../assets/Menu/salads/4.jpg";
+import salad5 from "../../assets/Menu/salads/5.jpg";
+import salad6 from "../../assets/Menu/salads/6.jpg";
+import salad7 from "../../assets/Menu/salads/7.jpg";
+import salad8 from "../../assets/Menu/salads/8.jpg";
+
+import breadBasket1 from "../../assets/Menu/breadBasket/1.jpg";
+import breadBasket3 from "../../assets/Menu/breadBasket/3.jpg";
+import breadBasket5 from "../../assets/Menu/breadBasket/5.jpg";
+import breadBasket7 from "../../assets/Menu/breadBasket/7.jpg";
+import breadBasket9 from "../../assets/Menu/breadBasket/9.jpg";
+import breadBasket10 from "../../assets/Menu/breadBasket/10.jpg";
+import breadBasket11 from "../../assets/Menu/breadBasket/11.jpg";
+import breadBasket13 from "../../assets/Menu/breadBasket/13.jpg";
+
+import rice1 from "../../assets/Menu/rice/1.jpg";
+import rice2 from "../../assets/Menu/rice/2.jpg";
+import rice3 from "../../assets/Menu/rice/3.jpg";
+import rice4 from "../../assets/Menu/rice/4.jpg";
+import rice5 from "../../assets/Menu/rice/5.jpg";
+import rice6 from "../../assets/Menu/rice/6.jpg";
+import rice7 from "../../assets/Menu/rice/7.jpg";
+import rice8 from "../../assets/Menu/rice/8.jpg";
+import rice9 from "../../assets/Menu/rice/9.jpg";
+
 const productsData = [
   // الشوربة
   {
@@ -22,7 +53,7 @@ const productsData = [
     category_ar: "الشوربة",
     available: true,
     trendy: false,
-    image: null,
+    image: soup1,
   },
   {
     meal_name_en: "shkamba soup",
@@ -36,7 +67,7 @@ const productsData = [
     category_ar: "الشوربة",
     available: true,
     trendy: false,
-    image: null,
+    image: soup2,
   },
   ////////////////////////////////////////////////////////
 
@@ -56,7 +87,7 @@ const productsData = [
     category_ar: "السلطات و المقبلات الباردة",
     available: true,
     trendy: false,
-    image: null,
+    image: salad1,
   },
   {
     meal_name_en: "To'mah Salad",
@@ -71,7 +102,7 @@ const productsData = [
     category_ar: "السلطات و المقبلات الباردة",
     available: true,
     trendy: false,
-    image: null,
+    image: salad2,
   },
   {
     meal_name_en: "Madini Okra Fattah",
@@ -84,7 +115,7 @@ const productsData = [
     category_ar: "السلطات و المقبلات الباردة",
     available: true,
     trendy: false,
-    image: null,
+    image: salad3,
   },
   {
     meal_name_en: "Mint Hummus",
@@ -97,7 +128,7 @@ const productsData = [
     category_ar: "السلطات و المقبلات الباردة",
     available: true,
     trendy: false,
-    image: null,
+    image: salad4,
   },
   {
     meal_name_en: "Plain Hummus",
@@ -110,7 +141,7 @@ const productsData = [
     category_ar: "السلطات و المقبلات الباردة",
     available: true,
     trendy: false,
-    image: null,
+    image: salad5,
   },
 
   {
@@ -125,8 +156,10 @@ const productsData = [
     category_ar: "السلطات و المقبلات الباردة",
     available: true,
     trendy: false,
-    image: null,
+    image: salad6,
   },
+
+  //
   {
     meal_name_en: "Madini Veggies with Pomegranate Molasses and Spicy Pepper",
     description_en: "Veggie salad flavored with spicy pepper",
@@ -154,11 +187,11 @@ const productsData = [
     category_ar: "السلطات و المقبلات الباردة",
     available: true,
     trendy: false,
-    image: null,
+    image: salad7,
   },
   {
     id: "82",
-    image: null,
+    image: salad8,
     meal_name_en: "Grandma's Salad",
     description_en: "Traditional salad with parsley and lemon dressing",
     price: null,
@@ -174,6 +207,7 @@ const productsData = [
   //////////////////////////////////////
 
   // مشهونات طعمة
+  //
   {
     meal_name_en: "Yogurt Salad",
     description_en: "Yogurt mix with fresh cucumber and Madini mint",
@@ -188,6 +222,7 @@ const productsData = [
     trendy: false,
     image: null,
   },
+  //
   {
     meal_name_en: "Carrot Achard",
     description_en: "The traditional Madini pickles made of carrots",
@@ -466,9 +501,10 @@ const productsData = [
     category_ar: "سلة معجنات",
     available: true,
     trendy: false,
-    image: image12_3,
+    image: breadBasket1,
   },
 
+  //
   {
     meal_name_en: "Triangular Meat Samosa",
     description_en:
@@ -482,7 +518,7 @@ const productsData = [
     category_ar: "سلة معجنات",
     available: true,
     trendy: false,
-    image: image12_5,
+    image: null,
   },
   {
     meal_name_en: "White Cheese Rolls",
@@ -496,9 +532,9 @@ const productsData = [
     category_ar: "سلة معجنات",
     available: true,
     trendy: false,
-    image: image12_6,
+    image: breadBasket3,
   },
-
+  //
   {
     id: "37",
     meal_name_en: "Sea Spicy Chips",
@@ -525,7 +561,7 @@ const productsData = [
       "A traditional pastry from Madinah, featuring flaky dough layers filled with a savory mixture, rolled and baked to perfection.",
     description_ar:
       "معجنات تقليدية من المدينة، تتكون من طبقات عجين هشة محشوة بخليط لذيذ، ملفوفة ومخبوزة حتى الكمال.",
-    image: img15,
+    image: breadBasket5,
 
     category_en: "Bread Basket",
     category_ar: "سلة معجنات",
@@ -534,6 +570,7 @@ const productsData = [
     available: true,
     trendy: false,
   },
+  //
   {
     id: "6",
     meal_name_en: "Baked Mantu",
@@ -559,7 +596,7 @@ const productsData = [
       "Two delicious pieces of puffs filled with fresh and carefully seasoned beef, encased in a golden, crispy, and flaky pastry. A delightful light meal or a distinctive appetizer that satisfies all tastes.",
     description_ar:
       "استمتع بقطعتين شهيتين من البف المحشو باللحم الطازج والمتبل بعناية، داخل عجينة ذهبية هشة ومقرمشة. وجبة خفيفة لذيذة أو مقبل مميز يرضي جميع الأذواق.",
-    image: "img18",
+    image: breadBasket7,
 
     category_en: "Bread Basket",
     category_ar: "سلة معجنات",
@@ -568,6 +605,7 @@ const productsData = [
     available: true,
     trendy: false,
   },
+  //
   {
     id: "33",
     meal_name_en: "Qadi al Qudah",
@@ -611,7 +649,7 @@ const productsData = [
       "Enjoy a piece of thin dough filled with fresh minced beef seasoned with a special and distinctive tahini mix. This dish is served soft and hot to give you an unforgettable dining experience.",
     description_ar:
       "استمتع بقطعة من العجين الرقيق المحشو باللحم المفروم الطازج والمتبل بخلطة طحينة خاصة ومميزة. يقدم هذا الطبق ساخناً وطرياً ليمنحك تجربة طعام لا تُنسى.",
-    image: "img19",
+    image: breadBasket9,
 
     category_en: "Bread Basket",
     category_ar: "سلة معجنات",
@@ -628,7 +666,7 @@ const productsData = [
       "Indulge in four pieces of delicious Yaghmash, filled with beef seasoned with a special and distinctive blend. A tasty and flavorful dish, perfect as a light meal or an appetizer that adds an authentic Eastern touch to your table.",
     description_ar:
       "استمتع بأربع قطع من اليغمش اللذيذ، محشوة باللحم المتبل بخلطة خاصة ومميزة. طبق شهي وغني بالنكهات، مثالي كوجبة خفيفة أو مقبل يضيف لمسة شرقية أصيلة إلى مائدتك.",
-    image: "img4",
+    image: breadBasket10,
 
     category_en: "Bread Basket",
     category_ar: "سلة معجنات",
@@ -644,7 +682,7 @@ const productsData = [
       "Indulge in four pieces of delicious Mantu, filled with a savory stuffing and topped with a sprinkle of aromatic cumin and spicy black pepper. An authentic traditional dish with a distinctive flavor that takes you on a journey to the world of Eastern tastes.",
     description_ar:
       "استمتع بأربع قطع من المنتو الشهي، محشوة بحشوة لذيذة ومغطاة برشة من الكمون العطري والفلفل الأسود الحار. طبق تقليدي أصيل بنكهة مميزة تأخذك في رحلة إلى عالم من المذاقات الشرقية.",
-    image: img4,
+    image: breadBasket11,
 
     category_en: "Bread Basket",
     category_ar: "سلة معجنات",
@@ -661,7 +699,7 @@ const productsData = [
       "Layers of thin, crispy dough filled with a special meat mixture and served with Laza.",
     description_ar:
       "طبقات من العجين الرقيق الهش محشوة بخلطة اللحم الخاصة وتقدم مع اللازا.",
-    image: img1,
+    image: breadBasket13,
 
     category_en: "Bread Basket",
     category_ar: "سلة معجنات",
@@ -681,7 +719,7 @@ const productsData = [
       "Indulge in a plate of premium white rice with a piece of roasted lamb flavored with TO'MAH's special blend of lamb ghee, saffron, and barberry. This delicious dish is served with dakos and yogurt salad to give you a complete and flavorful authentic meal.",
     description_ar:
       "استمتع بطبق من الأرز الأبيض الفاخر مع قطعة من لحم الضأن المحمر والمنكه بخلطة طعمة الخاصة من السمن الغنمي والزعفران والزرشك الأحمر. يقدم هذا الطبق الشهي مع سلطة الدقس وسلطة اللبن ليمنحك وجبة متكاملة وغنية بالنكهات الأصيلة.",
-    image: "img1",
+    image: rice1,
 
     category_en: "To'mah Rice Dishes",
     category_ar: "أرزاز طعمة",
@@ -698,7 +736,7 @@ const productsData = [
       "Indulge in a plate of premium white rice with a piece of roasted chicken flavored with TO'MAH's special blend of lamb ghee, saffron, and barberry. This delicious dish is served with dakos and yogurt salad to give you a complete and flavorful authentic meal.",
     description_ar:
       "استمتع بطبق من الأرز الأبيض الفاخر مع قطعة من الدجاج المحمر والمنكه بخلطة طعمة الخاصة من السمن الغنمي والزعفران والزرشك الأحمر. يقدم هذا الطبق الشهي مع سلطة الدقس وسلطة اللبن ليمنحك وجبة متكاملة وغنية بالنكهات الأصيلة.",
-    image: "img2",
+    image: rice2,
     category_en: "To'mah Rice Dishes",
     category_ar: "أرزاز طعمة",
     calories: "1310",
@@ -714,7 +752,7 @@ const productsData = [
       "Indulge in a plate of Bukhari rice prepared in the Jawazat Ahl Awal style, with a piece of slow-cooked meat seasoned with a special blend of spices. This delicious dish is garnished with a mixture of raisins, balila, and almonds, and served with dakos and a refreshing green salad for an authentic dining experience and an unforgettable taste.",
     description_ar:
       "استمتع بطبق من الرز البخاري المعد على طريقة جوازات أهل أول، مع قطعة من اللحم المطهو ببطء والمتبل بخلطة بهارات خاصة. يزين هذا الطبق الشهي بمزيج من الزبيب والبليلة واللوز، ويقدم مع سلطة الدقس وسلطة خضراء منعشة لتجربة طعام أصيلة ومذاق لا يُنسى.",
-    image: "img7",
+    image: rice3,
     category_en: "To'mah Rice Dishes",
     category_ar: "أرزاز طعمة",
     calories: "1755",
@@ -731,7 +769,7 @@ const productsData = [
       "Indulge in a plate of Bukhari rice prepared with chicken in the Sit Al-Beit style, a distinctive recipe from Jawazat Ahl Awal. This dish features a unique blend of spices and a delicious mix of raisins, balila, and almonds. Served with dakos and a refreshing green salad for an authentic homemade dining experience and an unforgettable taste.",
     description_ar:
       "استمتع بطبق من الرز البخاري المعد بالدجاج على طريقة ست البيت، وهي وصفة مميزة من جوازات أهل أول. يتميز هذا الطبق بخلطة بهارات فريدة ومزيج شهي من الزبيب والبليلة واللوز. يقدم مع سلطة الدقس وسلطة خضراء منعشة لتجربة طعام منزلية أصيلة ومذاق لا يُنسى.",
-    image: "img8",
+    image: rice4,
     category_en: "To'mah Rice Dishes",
     category_ar: "أرزاز طعمة",
     calories: "146",
@@ -747,7 +785,7 @@ const productsData = [
       "Indulge in a plate of meat rice flavored with orange zest and saffron, served with a special sour potato kashneh. This famous dish is accompanied by yogurt salad and spicy salad to give you a unique dining experience rich in diverse flavors.",
     description_ar:
       "استمتع بطبق من الرز باللحم المنكه بقشر البرتقال والزعفران مع كشنة البطاطس الحامض الخاصة. يقدم هذا الطبق الشهير مع سلطة اللبن وسلطة حارة ليمنحك تجربة طعام فريدة وغنية بالنكهات المتنوعة.",
-    image: "img5",
+    image: rice5,
     category_en: "To'mah Rice Dishes",
     category_ar: "أرزاز طعمة",
     calories: "1876",
@@ -763,7 +801,7 @@ const productsData = [
       "Indulge in a plate of chicken rice flavored with orange zest and saffron, served with a special sour potato kashneh. This delicious dish is accompanied by yogurt salad and spicy salad to give you a unique homemade dining experience rich in diverse flavors.",
     description_ar:
       "استمتع بطبق من رز الدجاج المنكه بقشر البرتقال والزعفران مع كشنة البطاطس الحامض الخاصة. يقدم هذا الطبق الشهي مع سلطة اللبن وسلطة حارة ليمنحك تجربة طعام منزلية مميزة وغنية بالنكهات المتنوعة.",
-    image: "img6",
+    image: rice6,
     category_en: "To'mah Rice Dishes",
     category_ar: "أرزاز طعمة",
     calories: "149",
@@ -779,7 +817,7 @@ const productsData = [
       "Indulge in a plate of milk-boiled rice prepared with special flavors, served with a piece of meat roasted in sheep ghee and spicy dakos sauce. This delicious dish is accompanied by dakos and spicy salad to give you a traditional dining experience rich in flavors.",
     description_ar:
       "استمتع بطبق من الرز المسلوق بالحليب والمحضر بنكهة خاصة، ويقدم مع قطعة من اللحم المحمر بالسمن الغنمي وصوص الدقس الحار. يقدم هذا الطبق الشهي مع الدقس وسلطة حارة ليمنحك تجربة طعام تقليدية غنية بالنكهات.",
-    image: "img11",
+    image: rice7,
     category_en: "To'mah Rice Dishes",
     category_ar: "أرزاز طعمة",
     calories: "1622",
@@ -795,7 +833,7 @@ const productsData = [
       "Indulge in a plate of milk-boiled rice prepared with special flavors, served with a piece of chicken roasted in sheep ghee and spicy dakos sauce. This delicious dish is accompanied by dakos and spicy salad to give you a traditional dining experience rich in flavors.",
     description_ar:
       "استمتع بطبق من الرز المسلوق بالحليب والمحضر بنكهة خاصة، ويقدم مع قطعة من الدجاج المحمر بالسمن الغنمي وصوص الدقس الحار. يقدم هذا الطبق الشهي مع الدقس وسلطة حارة ليمنحك تجربة طعام تقليدية غنية بالنكهات.",
-    image: "img17",
+    image: rice8,
     category_en: "To'mah Rice Dishes",
     category_ar: "أرزاز طعمة",
     calories: "1190",
@@ -803,6 +841,7 @@ const productsData = [
     available: true,
     trendy: false,
   },
+  //
   {
     id: "4",
     code: "ARABIAN-RICE-CHICKEN",
@@ -828,13 +867,15 @@ const productsData = [
       "Indulge in a plate of rice cooked with meat or chicken, chickpeas, and Linda's special ghee blend with an authentic ghee flavor. This delicious dish is served with sliced carrots, tahini sauce with cucumber, and pickled ahwaz carrots to give you a warm family meal rich in diverse flavors.",
     description_ar:
       "استمتع بطبق من الرز المطبوخ باللحم أو الدجاج مع الحمص وخلطة ليندا الخاصة بطعم السمن الأصيل. يقدم هذا الطبق الشهي مع قطع من الجزر الشرائح وصوص الطحينة بالخيار والمخلل الأهواز ليمنحك وجبة عائلية دافئة وغنية بالنكهات المتنوعة.",
-    image: "img9",
+    image: rice9,
     category_en: "To'mah Rice Dishes",
     category_ar: "أرزاز طعمة",
     calories: "138",
     price: "97 ريال",
     available: true,
   },
+
+  //
   {
     id: "127",
     image: null,

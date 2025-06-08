@@ -1,46 +1,45 @@
-import img1 from "../../assets/Menu/pages1-6/DSC00924.JPG";
-import img2 from "../../assets/Menu/pages1-6/DSC00970.JPG";
-import img3 from "../../assets/Menu/pages1-6/DSC00965.JPG";
-import img4 from "../../assets/Menu/pages1-6/DSC00962.JPG";
-import img6 from "../../assets/Menu/pages1-6/DSC00840.JPG";
-import img7 from "../../assets/Menu/pages1-6/DSC00973.JPG";
-import img8 from "../../assets/Menu/pages1-6/DSC01527.JPG";
-import img9 from "../../assets/Menu/pages1-6/DSC00794.JPG";
-import img10 from "../../assets/Menu/pages1-6/DSC00764.JPG";
-import img11 from "../../assets/Menu/pages1-6/DSC00829.JPG";
-import img12 from "../../assets/Menu/pages1-6/DSC00840.JPG";
-import img13 from "../../assets/Menu/pages1-6/DSC00865.JPG";
-import img14 from "../../assets/Menu/pages1-6/DSC00875.JPG";
-import img15 from "../../assets/Menu/pages1-6/DSC00993.JPG";
-import img16 from "../../assets/Menu/pages1-6/DSC01010.JPG";
-import img17 from "../../assets/Menu/pages1-6/DSC01012.JPG";
-import img18 from "../../assets/Menu/pages1-6/DSC01035.JPG";
-import img19 from "../../assets/Menu/pages1-6/DSC01024.JPG";
-import img20 from "../../assets/Menu/pages1-6/DSC01115.JPG";
-import img21 from "../../assets/Menu/pages1-6/DSC01102.JPG";
-import img22 from "../../assets/Menu/pages1-6/DSC01083.JPG";
-import img23 from "../../assets/Menu/pages1-6/DSC01144.JPG";
-import img24 from "../../assets/Menu/pages1-6/DSC01134.JPG";
+import img1 from "../../assets/Menu/مختارات البيض/1.JPG";
+import img2 from "../../assets/Menu/مختارات البيض/2.JPG";
+import img3 from "../../assets/Menu/مختارات البيض/3.JPG";
+import img4 from "../../assets/Menu/مختارات البيض/4.JPG";
+import img5 from "../../assets/Menu/مختارات البيض/5.JPG";
 
-import img27 from "../../assets/Menu/pages1-6/DSC01141.JPG";
+import beans1 from "../../assets/Menu/beans/1";
+import beans2 from "../../assets/Menu/beans/2";
+import beans3 from "../../assets/Menu/beans/3";
 
-import img30 from "../../assets/Menu/pages1-6/DSC01281.JPG";
-import img31 from "../../assets/Menu/pages1-6/DSC01292.JPG";
-import img32 from "../../assets/Menu/pages1-6/DSC01289.JPG";
-import img33 from "../../assets/Menu/pages1-6/DSC01286.JPG";
-import img34 from "../../assets/Menu/pages1-6/DSC01283.JPG";
-import img35 from "../../assets/Menu/pages1-6/DSC01296.JPG";
-import img36 from "../../assets/Menu/pages1-6/DSC01276.JPG";
-import image7_1 from "../../assets/Menu/7-12/7-1.JPG";
-import image7_2 from "../../assets/Menu/7-12/7-2.JPG";
-import image7_3 from "../../assets/Menu/7-12/7-3.JPG";
-import image7_4 from "../../assets/Menu/7-12/7-4.JPG";
+import breakfastCook1 from "../../assets/Menu/breakfastCook/1";
+import breakfastCook2 from "../../assets/Menu/breakfastCook/2";
+import breakfastCook3 from "../../assets/Menu/breakfastCook/3";
+import breakfastCook4 from "../../assets/Menu/breakfastCook/4";
+import breakfastCook5 from "../../assets/Menu/breakfastCook/5";
+
+import appetizer1 from "../../assets/Menu/appetizers/1";
+import appetizer2 from "../../assets/Menu/appetizers/2";
+import appetizer3 from "../../assets/Menu/appetizers/3";
+import appetizer4 from "../../assets/Menu/appetizers/4";
+import appetizer5 from "../../assets/Menu/appetizers/5";
+
+import breakfastDesert1 from "../../assets/Menu/breakfastDesert/1";
+import breakfastDesert2 from "../../assets/Menu/breakfastDesert/2";
+
+import cheese1 from "../../assets/Menu/cheese/1";
+import cheese2 from "../../assets/Menu/cheese/2";
+import cheese3 from "../../assets/Menu/cheese/3";
+import cheese4 from "../../assets/Menu/cheese/4";
+import cheese5 from "../../assets/Menu/cheese/5";
+import cheese6 from "../../assets/Menu/cheese/6";
+import cheese7 from "../../assets/Menu/cheese/7";
+import cheese8 from "../../assets/Menu/cheese/8";
+import cheese9 from "../../assets/Menu/cheese/9";
+import cheese10 from "../../assets/Menu/cheese/10";
+import cheese11 from "../../assets/Menu/cheese/11";
 
 const productsData = [
   // مجموعة نواشف
   {
     id: "1",
-    image: img1,
+    image: cheese1,
     meal_name_en: "Sahlouli Cheese with Peppers",
     description_en:
       "A mashed cheese mix with tomatoes, Moroccan mint, and chili, served with whole grain bread.",
@@ -58,7 +57,7 @@ const productsData = [
   },
   {
     id: "2",
-    image: img2,
+    image: cheese2,
     meal_name_en: "White Cheese in Clay Pot",
     description_en:
       "White cheese cooked in a way you've never experienced before.",
@@ -74,7 +73,7 @@ const productsData = [
   },
   {
     id: "3",
-    image: img3,
+    image: cheese3,
     meal_name_en: "Labneh",
     description_en: "Plain labneh for our loved ones.",
     price: "15 ريال",
@@ -87,6 +86,8 @@ const productsData = [
     available: true,
     trendy: false,
   },
+
+  //
   {
     id: "4",
     image: img4,
@@ -102,6 +103,7 @@ const productsData = [
     category_ar: "مجموعة نواشف طعمة",
     trendy: false,
   },
+  //
   {
     id: "5",
     image: null,
@@ -119,7 +121,7 @@ const productsData = [
   },
   {
     id: "6",
-    image: img6,
+    image: cheese4,
     meal_name_en: "Olives",
     description_en:
       "A selection of green and black olives pickled in To'mah jars.",
@@ -135,7 +137,7 @@ const productsData = [
   },
   {
     id: "7",
-    image: img7,
+    image: cheese5,
     meal_name_en: "Yellow Cheese with Eggplant",
     description_en:
       "A blend of cheddar cheese and fried eggplant with irresistible sauce.",
@@ -152,7 +154,7 @@ const productsData = [
   //2
   {
     id: "8",
-    image: img8,
+    image: cheese6,
     meal_name_en: "To'mah Combo (Feast for 3)",
     description_en:
       "A dish consisting of 6 assorted plates + Ta'ma eggs + chicken maqlouqi + foul.",
@@ -168,7 +170,7 @@ const productsData = [
   },
   {
     id: "9",
-    image: img9,
+    image: cheese7,
     meal_name_en: "Mesh",
     description_en: "Mesh like you've never imagined.",
     price: "15 ريال",
@@ -183,7 +185,7 @@ const productsData = [
   },
   {
     id: "10",
-    image: img10,
+    image: cheese8,
     meal_name_en: "Salty Halawa",
     description_en: "Halawa mixed with cheese and oil.",
     price: "15 ريال",
@@ -198,7 +200,7 @@ const productsData = [
   },
   {
     id: "11",
-    image: img11,
+    image: cheese9,
     meal_name_en: "White Cheese with To'mah Mix",
     description_en: "White cheese mixed with Medina tomatoes and mint.",
     price: "15 ريال",
@@ -211,9 +213,11 @@ const productsData = [
     available: true,
     trendy: false,
   },
+
+  //
   {
     id: "12",
-    image: img12,
+    image: null,
     meal_name_en: "Pickled Olives",
     description_en: "Olives pickled in To'mah kitchen.",
     price: "15 ريال",
@@ -228,7 +232,7 @@ const productsData = [
   },
   {
     id: "13",
-    image: img13,
+    image: cheese10,
     meal_name_en: "Labneh with Beetroot",
     description_en: "Labneh with a very special beetroot mix.",
     price: "13 ريال",
@@ -243,7 +247,7 @@ const productsData = [
   },
   {
     id: "14",
-    image: img14,
+    image: cheese11,
     meal_name_en: "Honey and clotted cream",
     description_en: "Qeshta and honey with mixed with pistachio.",
     price: "17 ريال",
@@ -260,7 +264,7 @@ const productsData = [
   // مختارات البيض
   {
     id: "15",
-    image: img15,
+    image: img1,
     meal_name_en: "To'mah Shakshuka",
     description_en: "The authentic Hejazi shakshuka.",
     price: "17 ريال",
@@ -275,7 +279,7 @@ const productsData = [
   },
   {
     id: "16",
-    image: img16,
+    image: img3,
     meal_name_en: "To'mah Eggs",
     description_en:
       "Eggs with vegetables and melted cheese, prepared in the chef's special way.",
@@ -291,7 +295,7 @@ const productsData = [
   },
   {
     id: "17",
-    image: img17,
+    image: img4,
     meal_name_en: "Butter Eggs",
     description_en:
       "Egg fried with butter, salt, and Madinah's special Dukkah spice mix.",
@@ -307,7 +311,7 @@ const productsData = [
   },
   {
     id: "18",
-    image: img18,
+    image: img2,
     meal_name_en: "Eggs with Vegetables",
     description_en: "Boiled eggs with a selection of local vegetables.",
     price: "20 ريال",
@@ -322,7 +326,7 @@ const productsData = [
   },
   {
     id: "19",
-    image: img19,
+    image: img5,
     meal_name_en: "Fried Eggs",
     description_en: "For the good ones.",
     price: "17 ريال",
@@ -339,7 +343,7 @@ const productsData = [
   // فول على الأصول
   {
     id: "20",
-    image: img20,
+    image: beans1,
     meal_name_en: "Special Ful",
     description_en:
       "Ful prepared with a special blend of ghee or olive oil, served with daggus sauce, tahini, and whole-grain bread.",
@@ -356,7 +360,7 @@ const productsData = [
   },
   {
     id: "21",
-    image: img21,
+    image: beans2,
     meal_name_en: "Smoked Ful",
     description_en: "Authentic smoked ful.",
     price: "20 ريال",
@@ -371,7 +375,7 @@ const productsData = [
   },
   {
     id: "22",
-    image: img22,
+    image: beans3,
     meal_name_en: "Ful with Tahini",
     description_en: "Ful medame with a special tahini topping.",
     price: "20 ريال",
@@ -388,7 +392,7 @@ const productsData = [
   // فطور الطباخة
   {
     id: "23",
-    image: img23,
+    image: breakfastCook1,
     meal_name_en: "Cook's Market Liver",
     description_en:
       "Liver fried with vegetables over high heat, served with whole-grain bread, lemon wedges, and tahini.",
@@ -405,7 +409,7 @@ const productsData = [
   },
   {
     id: "24",
-    image: img24,
+    image: breakfastCook2,
     meal_name_en: "Lamb Feet",
     description_en:
       "White broth with two pieces of fresh lamb hocks, served with a garlic and vinegar sauce and whole-grain bread.",
@@ -422,7 +426,7 @@ const productsData = [
   },
   {
     id: "25",
-    image: null,
+    image: breakfastCook3,
     meal_name_en: "Meat Muqalqal",
     description_en:
       "Tender pieces of meat stir-fried with a special blend of spices, served the traditional way.",
@@ -438,7 +442,7 @@ const productsData = [
   },
   {
     id: "26",
-    image: null,
+    image: breakfastCook4,
     meal_name_en: "Chicken Muqalqal",
     description_en:
       "Grilled chicken breasts sautéed with vegetables and special spices.",
@@ -454,7 +458,7 @@ const productsData = [
   },
   {
     id: "28",
-    image: null,
+    image: breakfastCook5,
     meal_name_en: "Head Meat",
     description_en:
       "Tender pieces of meat from the lamb's head, roasted in the oven, served with whole-grain bread and tahini.",
@@ -474,7 +478,7 @@ const productsData = [
 
   {
     id: "30",
-    image: img30,
+    image: appetizer1,
     meal_name_en: "Abu El-Khall Falafel",
     description_en:
       "4 pieces of falafel served with a variety of delicious sauces and bread.",
@@ -489,10 +493,9 @@ const productsData = [
     available: true,
     trendy: false,
   },
-
   {
     id: "31",
-    image: img31,
+    image: appetizer2,
     meal_name_en: "Vegetables Muttabak",
     description_en:
       "Colorful peppers with egg balls, tomatoes, hot pepper, and lemon.",
@@ -506,6 +509,7 @@ const productsData = [
     available: true,
     trendy: false,
   },
+  //
   {
     id: "32",
     image: img32,
@@ -523,6 +527,7 @@ const productsData = [
     available: true,
     trendy: false,
   },
+  //
   {
     id: "33",
     image: img33,
@@ -541,7 +546,7 @@ const productsData = [
   },
   {
     id: "34",
-    image: img34,
+    image: appetizer3,
     meal_name_en: "Nutella Muttabbak",
     description_en: "Dough + Nutella",
     price: "17 ريال",
@@ -556,7 +561,7 @@ const productsData = [
   },
   {
     id: "35",
-    image: img35,
+    image: appetizer4,
     meal_name_en: "Banana Muttabak with Cream",
     description_en:
       "Fattah with whole-grain bread layered with offal broth, tahini, and tender pieces of meat.",
@@ -572,7 +577,7 @@ const productsData = [
   },
   {
     id: "36",
-    image: img36,
+    image: appetizer5,
     meal_name_en: "Spicy Sea Chips",
     description_en:
       "Freshly fried chips served with garlic sauce, spicy dip, and special red sauce.",
@@ -588,6 +593,7 @@ const productsData = [
     trendy: false,
   },
 
+  //
   {
     meal_name_en: "Vegetable Plate",
     description_en:
@@ -604,6 +610,7 @@ const productsData = [
     trendy: false,
     image: image7_1,
   },
+  //
   {
     meal_name_en: "Bread Basket",
     description_en: "Tamees / Fatoot / Surek / hab.",
@@ -635,7 +642,7 @@ const productsData = [
 
     available: true,
     trendy: false,
-    image: image7_3,
+    image: breakfastDesert1,
   },
 
   {
@@ -652,8 +659,10 @@ const productsData = [
     category_ar: "حلا الفطور حلي وعلى النبي صلي",
     available: true,
     trendy: false,
-    image: image7_4,
+    image: breakfastDesert2,
   },
+
+  ///
   {
     id: "68",
     image: null,

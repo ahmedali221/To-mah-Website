@@ -11,6 +11,20 @@ import image21_5 from "../../assets/Menu/19-25/21-5.JPG";
 import image21_6 from "../../assets/Menu/19-25/21-6.JPG";
 import image21_7 from "../../assets/Menu/19-25/21-7.JPG";
 
+import desert1 from "../../assets/Menu/deserts/1.jpg";
+import desert2 from "../../assets/Menu/deserts/2.jpg";
+import desert3 from "../../assets/Menu/deserts/3.jpg";
+import desert5 from "../../assets/Menu/deserts/5.jpg";
+
+import drink2 from "../../assets/Menu/drinks/2.jpg";
+import drink6 from "../../assets/Menu/drinks/6.jpg";
+import drink7 from "../../assets/Menu/drinks/7.jpg";
+import drink10 from "../../assets/Menu/drinks/10.jpg";
+import drink11 from "../../assets/Menu/drinks/11.jpg";
+import drink12 from "../../assets/Menu/drinks/12.jpg";
+import drink13 from "../../assets/Menu/drinks/13.jpg";
+import drink15 from "../../assets/Menu/drinks/15.jpg";
+
 const productsData = [
   //////////////////////////////////
   //// ساندويتش عيش الحب
@@ -228,7 +242,7 @@ const productsData = [
   // الحلويات
   {
     id: "31",
-    image: null,
+    image: desert1,
     meal_name_en: "Kudrit Kader",
     description_en: "Cream caramel & cake mix",
     price: "20 ريال",
@@ -242,7 +256,7 @@ const productsData = [
   },
   {
     id: "27",
-    image: image21_4,
+    image: desert2,
     meal_name_en: "Cream Caramel",
     description_en:
       "Oven Baked Cream caramel served cold caramelized sugar sauce",
@@ -258,7 +272,7 @@ const productsData = [
   },
   {
     id: "28",
-    image: image21_5,
+    image: desert3,
     meal_name_en: "Um Ali",
     description_en:
       "Dessert made of roqaq with milk and roasted nuts served hot",
@@ -287,7 +301,7 @@ const productsData = [
   },
   {
     id: "25",
-    image: null,
+    image: desert5,
     meal_name_en: "Am Khalil’s Saqdana",
     description_en: "Higazi Desert Made Of Sago Pearls And Milk",
     price: "20 ريال",
@@ -322,7 +336,7 @@ const productsData = [
 
   {
     id: "192",
-    image: null,
+    image: drink2,
     meal_name_en: "Turkish Coffee",
     description_en: "Traditional strong coffee prepared in cezve",
     price: null,
@@ -393,7 +407,7 @@ const productsData = [
   },
   {
     id: "34",
-    image: null,
+    image: drink6,
     meal_name_en: "Saudi Coffee",
     description_en: "The famous Arabic coffee",
     price: "27 ريال",
@@ -407,7 +421,7 @@ const productsData = [
   },
   {
     id: "35",
-    image: null,
+    image: drink7,
     meal_name_en: "Harah Mix Tea",
     description_en: "Red tea boiled with mint and Madini rose",
     price: "15 ريال",
@@ -450,7 +464,7 @@ const productsData = [
   },
   {
     id: "38",
-    image: null,
+    image: drink10,
     meal_name_en: "Milk Tea",
     description_en: "Red tea pot with fresh milk",
     price: "17 ريال",
@@ -548,7 +562,7 @@ const productsData = [
   },
   {
     id: "45",
-    image: null,
+    image: drink11,
     meal_name_en: "Hibiscus",
     description_en: "Special slash with Madini flavors",
     price: "14 ريال",
@@ -562,7 +576,7 @@ const productsData = [
   },
   {
     id: "46",
-    image: null,
+    image: drink12,
     meal_name_en: "Madini Ajwa",
     description_en: "Madini dates served cold with milk",
     price: "20 ريال",
@@ -576,7 +590,7 @@ const productsData = [
   },
   {
     id: "47",
-    image: null,
+    image: drink13,
     meal_name_en: "Fresh Orange",
     description_en: "Fresh Oula orange juice",
     price: "14 ريال",
@@ -604,7 +618,7 @@ const productsData = [
   },
   {
     id: "49",
-    image: null,
+    image: drink15,
     meal_name_en: "Soft Drinks",
     description_en: "Assorted soft drinks",
     price: "7 ريال",

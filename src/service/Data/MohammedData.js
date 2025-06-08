@@ -6,6 +6,19 @@ import img12 from "../../assets/Menu/pages13-18/DSC01921.JPG";
 import img13 from "../../assets/Menu/pages13-18/DSC01954.JPG";
 import img14 from "../../assets/Menu/pages13-18/DSC01946.JPG";
 
+import dish1 from "../../assets/Menu/dishes/1.jpg";
+import dish2 from "../../assets/Menu/dishes/2.jpg";
+
+import tabee51 from "../../assets/Menu/tabee5/1.jpg";
+import tabee52 from "../../assets/Menu/tabee5/2.jpg";
+import tabee53 from "../../assets/Menu/tabee5/3.jpg";
+import tabee54 from "../../assets/Menu/tabee5/4.jpg";
+import tabee56 from "../../assets/Menu/tabee5/6.jpg";
+
+import sandwich1 from "../../assets/Menu/sandwich/1.jpg";
+import sandwich2 from "../../assets/Menu/sandwich/2.jpg";
+import sandwich3 from "../../assets/Menu/sandwich/3.jpg";
+
 const productsData = [
   ////////////////////////////////////////////////
   //أطباق طعمة المدينة
@@ -68,7 +81,7 @@ const productsData = [
       "Indulge in tender beef chunks with rich and flavorful tahini gravy. A traditional meal rich in authentic flavors.",
     description_ar:
       "استمتع بقطع اللحم الطرية مع مرقة الطحينة المسبكة. وجبة تقليدية وغنية بالنكهات الأصيلة.",
-    image: "img22",
+    image: dish1,
     category_en: "Ta'mah City Dishes",
     category_ar: "أطباق طعمة المدينة",
     calories: "0",
@@ -84,7 +97,7 @@ const productsData = [
       "Indulge in tender beef chunks slow-cooked with onion and garlic, served with grain bread and Madini rice. A delicious meal rich in the traditional and distinctive flavors of the city's locals.",
     description_ar:
       "استمتع بقطع لحم طرية مطبوخة بالبصل والثوم على نار هادئة، وتقدم مع خبز الحب والرز المديني. وجبة شهية وغنية بالنكهات التقليدية والمميزة لأهل المدينة.",
-    image: "img25",
+    image: dish2,
     category_en: "Ta'mah City Dishes",
     category_ar: "أطباق طعمة المدينة",
     calories: "0",
@@ -284,7 +297,7 @@ const productsData = [
       "Indulge in Madini okra cooked with tender beef chunks, served with grain bread and Madini rice. A delicious meal rich in the traditional and distinctive flavors of the city's locals.",
     description_ar:
       "استمتع ببامية مدينية مطبوخة بقطع اللحم الطرية، وتقدم بخبز الحب والرز المديني. وجبة شهية وغنية بالنكهات التقليدية والمميزة لأهل المدينة.",
-    image: "img24",
+    image: tabee51,
     category_en: "To'mah Stews & Curries",
     category_ar: "طبيخ طعمة / الإيدامات",
     calories: "243",
@@ -300,7 +313,7 @@ const productsData = [
       "Indulge in a special tray of potatoes and kebab grilled in the oven, served with delicious Madini rice and spicy dakos sauce. A delicious family meal rich in diverse flavors.",
     description_ar:
       "استمتع بصينية مخصوصة من البطاطس والكباب المشوي بالفرن، وتقدم مع الرز المديني الشهي وصوص الدقس الحار. وجبة عائلية شهية وغنية بالنكهات المتنوعة.",
-    image: "img23",
+    image: tabee52,
     category_en: "To'mah Stews & Curries",
     category_ar: "طبيخ طعمة / الإيدامات",
     calories: "289",
@@ -316,7 +329,7 @@ const productsData = [
       "Choose from dried molokhia leaves cooked in the Ahl Awl style, with pieces of beef or roasted chicken, and served with grain bread and Madini rice. A delicious meal rich in the traditional and distinctive flavors of the city's locals.",
     description_ar:
       "اختار من أوراق الملوخية الناشفة المطبوخة على طريقة أهل أول، مع قطع اللحم أو الدجاج المحمر، وتقدم بخبز الحب والرز المديني. وجبة شهية وغنية بالنكهات التقليدية والمميزة لأهل المدينة.",
-    image: "img3",
+    image: tabee53,
     category_en: "To'mah Stews & Curries",
     category_ar: "طبيخ طعمة / الإيدامات",
     calories: 329,
@@ -333,7 +346,7 @@ const productsData = [
       "Choose from green molokhia leaves cooked in the Ahl Awl style, with pieces of beef or roasted chicken, and served with grain bread and Madini rice. A delicious meal rich in the traditional and distinctive flavors of the city's locals.",
     description_ar:
       "اختار من أوراق الملوخية الخضرا المطبوخة على طريقة أهل أول، مع قطع اللحم أو الدجاج المحمر، وتقدم بخبز الحب والرز المديني. وجبة شهية وغنية بالنكهات التقليدية والمميزة لأهل المدينة.",
-    image: "img26",
+    image: tabee54,
     category_en: "To'mah Stews & Curries",
     category_ar: "طبيخ طعمة / الإيدامات",
     calories: "351",
@@ -359,7 +372,7 @@ const productsData = [
   },
   {
     id: "163",
-    image: null,
+    image: tabee56,
     meal_name_en: "Eggplant Masaqua'a",
     description_en:
       "Fried eggplant pieces with minced meat, served with traditional bread and lemon",
@@ -372,11 +385,6 @@ const productsData = [
     category_ar: "طبيخ طعمة / الإيدامات",
     available: true,
     trendy: false,
-    availability_details: {
-      local: true,
-      travel: true,
-      buffet: true,
-    },
   },
 
   //////////////////////////////
@@ -390,7 +398,7 @@ const productsData = [
       "Enjoy a Khadua pie with delicious mozzarella cheese. Fresh and tasty pastries, perfect as a light meal or a delicious appetizer.",
     description_ar:
       "استمتع بصفيحة خدوة بالجبنة الموزاريلا اللذيذة. معجنات طازجة وشهية، مثالية كوجبة خفيفة أو مقبل لذيذ.",
-    image: "img20",
+    image: sandwich1,
     category_en: "Flatbreads & Sandwiches",
     category_ar: "صفايح وساندوتشات",
     calories: "0",
@@ -406,7 +414,7 @@ const productsData = [
       "Enjoy Madini Salat with Tahini, a seriously amazing combination! Fresh and tasty pastries filled with a special filling and topped with delicious tahini.",
     description_ar:
       "استمتع بسلات المدينة والطحينة كلام خطير! معجنات طازجة وشهية محشوة بحشوة مميزة ومغطاة بالطحينة اللذيذة.",
-    image: "img6",
+    image: sandwich2,
     category_en: "Flatbreads & Sandwiches",
     category_ar: "صفايح وساندوتشات",
     calories: "0",
@@ -422,7 +430,7 @@ const productsData = [
       "Indulge in a special mix of white cheese and halva tahini, topped with delicious pistachios. Fresh pastries that combine sweet and savory flavors in a unique and tasty way.",
     description_ar:
       "استمتع بخليط الجبنة البيضاء والحلاوة الطحينية المميزة، والمزينة بالفستق الحلبي الشهي. معجنات طازجة تجمع بين المذاق الحلو والمالح بطريقة فريدة ولذيذة.",
-    image: "img7",
+    image: sandwich3,
     category_en: "Flatbreads & Sandwiches",
     category_ar: "صفايح وساندوتشات",
     calories: "0",
