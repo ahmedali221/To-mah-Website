@@ -1,15 +1,7 @@
-import image19_1 from "../../assets/Menu/19-25/19-1.JPG";
-import image19_2 from "../../assets/Menu/19-25/19-2.JPG";
-import image19_3 from "../../assets/Menu/19-25/19-3.JPG";
 import image19_4 from "../../assets/Menu/19-25/19-4.JPG";
 import image19_5 from "../../assets/Menu/19-25/19-5.JPG";
-import img2 from "../../assets/Menu/pages13-18/DSC02159.JPG";
-import img3 from "../../assets/Menu/pages13-18/DSC02166.JPG";
-import image21_3 from "../../assets/Menu/19-25/21-3.JPG";
-import image21_4 from "../../assets/Menu/19-25/21-4.JPG";
-import image21_5 from "../../assets/Menu/19-25/21-5.JPG";
+
 import image21_6 from "../../assets/Menu/19-25/21-6.JPG";
-import image21_7 from "../../assets/Menu/19-25/21-7.JPG";
 
 import desert1 from "../../assets/Menu/deserts/1.jpg";
 import desert2 from "../../assets/Menu/deserts/2.jpg";

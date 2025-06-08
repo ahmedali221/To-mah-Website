@@ -512,7 +512,7 @@ const productsData = [
   //
   {
     id: "32",
-    image: img32,
+    image: null,
     meal_name_en: "Savory Muttabak",
     description_en:
       "Crispy, savory dough layers filled with fresh minced meat served with lemon, green chili, and daggus sauce.",
@@ -530,7 +530,7 @@ const productsData = [
   //
   {
     id: "33",
-    image: img33,
+    image: null,
     meal_name_en: "Cheddar Muttabbak",
     description_en:
       "Tomato balls, eggs, cheddar cheese balls, hot pepper, and lemon.",
@@ -608,7 +608,7 @@ const productsData = [
     category_ar: "تصبيرة",
     available: true,
     trendy: false,
-    image: image7_1,
+    image: null,
   },
   //
   {
@@ -623,7 +623,7 @@ const productsData = [
     category_ar: "تصبيرة",
     available: true,
     trendy: false,
-    image: image7_2,
+    image: null,
   },
 
   // حلا الفطور
