@@ -82,7 +82,7 @@ export default function MenuCard({
 
                   {/* Price */}
                   <p className="text-base sm:text-lg font-medium text-gray-800">
-                    {t("menu_card.currency")}{product.price.toFixed(0)}
+                    {t("menu_card.currency")}{product.price ? product.price.toFixed(0) : "N/A"}
                   </p>
 
                   {/* Description (optional) */}
