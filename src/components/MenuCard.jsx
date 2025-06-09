@@ -32,7 +32,7 @@ export default function MenuCard({
                 onClick={() => onViewDetails(product)}
               >
                 {/* Image Container */}
-                <div className="h-48 sm:h-60 overflow-hidden bg-gray-100 rounded-lg relative flex items-center justify-center">
+                <div className="h-40 sm:h-60 overflow-hidden bg-gray-100 rounded-lg relative flex items-center justify-center">
                   {product.image ? (
                     <img
                       src={product.image}
