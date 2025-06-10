@@ -1,8 +1,8 @@
-import img1 from "../../assets/Menu/مختارات البيض/1.JPG";
-import img2 from "../../assets/Menu/مختارات البيض/2.JPG";
-import img3 from "../../assets/Menu/مختارات البيض/3.JPG";
-import img4 from "../../assets/Menu/مختارات البيض/4.JPG";
-import img5 from "../../assets/Menu/مختارات البيض/5.JPG";
+import img1 from "../../assets/Menu/مختارات البيض/1.jpg";
+import img2 from "../../assets/Menu/مختارات البيض/2.jpg";
+import img3 from "../../assets/Menu/مختارات البيض/3.jpg";
+import img4 from "../../assets/Menu/مختارات البيض/4.jpg";
+import img5 from "../../assets/Menu/مختارات البيض/5.jpg";
 
 import beans1 from "../../assets/Menu/beans/1.jpg";
 import beans2 from "../../assets/Menu/beans/2.jpg";
