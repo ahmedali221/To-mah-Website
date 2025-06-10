@@ -1,12 +1,6 @@
-import image12_3 from "../../assets/Menu/7-12/8-3.JPG";
-import image12_5 from "../../assets/Menu/7-12/8-5.JPG";
-import image12_6 from "../../assets/Menu/7-12/8-6.JPG";
-import img15 from "../../assets/Menu/pages13-18/DSC01852.JPG";
 import img6 from "../../assets/Menu/pages13-18/DSC01866.JPG";
 import img7 from "../../assets/Menu/pages13-18/DSC01863.JPG";
 import img5 from "../../assets/Menu/pages13-18/DSC01232.JPG";
-import img1 from "../../assets/Menu/pages13-18/DSC01782.JPG";
-import img4 from "../../assets/Menu/pages13-18/DSC01791.JPG";
 
 import soup1 from "../../assets/Menu/soup/1.jpg";
 import soup2 from "../../assets/Menu/soup/2.jpg";
@@ -27,7 +21,7 @@ import breadBasket7 from "../../assets/Menu/breadBasket/7.jpg";
 import breadBasket9 from "../../assets/Menu/breadBasket/9.jpg";
 import breadBasket10 from "../../assets/Menu/breadBasket/10.jpg";
 import breadBasket11 from "../../assets/Menu/breadBasket/11.jpg";
-import breadBasket13 from "../../assets/Menu/breadBasket/13.jpg";
+import breadBasket13 from "../../assets/Menu/breadBasket/13.JPG";
 
 import rice1 from "../../assets/Menu/rice/1.jpg";
 import rice2 from "../../assets/Menu/rice/2.jpg";

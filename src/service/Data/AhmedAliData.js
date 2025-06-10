@@ -3,7 +3,7 @@ import image19_5 from "../../assets/Menu/19-25/19-5.JPG";
 
 import image21_6 from "../../assets/Menu/19-25/21-6.JPG";
 
-import desert1 from "../../assets/Menu/deserts/1.jpg";
+import desert1 from "../../assets/Menu/deserts/1.JPG";
 import desert2 from "../../assets/Menu/deserts/2.jpg";
 import desert3 from "../../assets/Menu/deserts/3.jpg";
 import desert5 from "../../assets/Menu/deserts/5.jpg";
