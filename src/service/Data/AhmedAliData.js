@@ -12,10 +12,10 @@ import drink2 from "../../assets/Menu/drinks/2.jpg";
 import drink6 from "../../assets/Menu/drinks/6.jpg";
 import drink7 from "../../assets/Menu/drinks/7.jpg";
 import drink10 from "../../assets/Menu/drinks/10.jpg";
-import drink11 from "../../assets/Menu/drinks/11.jpg";
+import drink11 from "../../assets/Menu/drinks/11.JPG";
 import drink12 from "../../assets/Menu/drinks/12.jpg";
 import drink13 from "../../assets/Menu/drinks/13.jpg";
-import drink15 from "../../assets/Menu/drinks/15.jpg";
+import drink15 from "../../assets/Menu/drinks/15.JPG";
 
 const productsData = [
   //////////////////////////////////
