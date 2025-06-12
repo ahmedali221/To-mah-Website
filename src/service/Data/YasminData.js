@@ -1,3 +1,4 @@
+//31
 import img1 from "../../assets/Menu/مختارات البيض/1.jpg";
 import img2 from "../../assets/Menu/مختارات البيض/2.jpg";
 import img3 from "../../assets/Menu/مختارات البيض/3.jpg";
@@ -674,7 +675,7 @@ const productsData = [
     description_ar: "خليط الحب و اللحم المزينة بالسمن و السكر",
     calories: null,
     category_en: "Breakfast_Sweets",
-    category_ar: "حلا الفطور \nحلي وعلى النبي صلي",
+    category_ar: "حلا الفطور حلي وعلى النبي صلي",
     available: true,
     trendy: false,
   },

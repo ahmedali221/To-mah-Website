@@ -70,7 +70,6 @@ export default function Sidebar({ filters, setFilters }) {
   const handleCategoryClick = (category) => {
     const categoryForFilter = category === t("sidebar.all_categories") ? "" : category;
     updateFilter("category", categoryForFilter);
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handlePriceInputChange = (event) => {
@@ -86,7 +85,6 @@ export default function Sidebar({ filters, setFilters }) {
       maxPrice: priceRange.max,
     }));
     setShowResetButton(priceRange.min > 0 || priceRange.max < Infinity);
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleResetFilters = () => {
@@ -95,7 +93,6 @@ export default function Sidebar({ filters, setFilters }) {
     const max = Math.max(...productsData.map((p) => p.price));
     setPriceRange({ min, max });
     setShowResetButton(false);
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const toggleSection = (section) => {

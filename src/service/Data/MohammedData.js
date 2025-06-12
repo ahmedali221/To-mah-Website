@@ -6,6 +6,7 @@ import img12 from "../../assets/Menu/pages13-18/DSC01921.JPG";
 import img13 from "../../assets/Menu/pages13-18/DSC01954.JPG";
 import img14 from "../../assets/Menu/pages13-18/DSC01946.JPG";
 
+//10
 import dish1 from "../../assets/Menu/dishes/1.jpg";
 import dish2 from "../../assets/Menu/dishes/2.jpg";
 

@@ -2,6 +2,7 @@ import img6 from "../../assets/Menu/pages13-18/DSC01866.JPG";
 import img7 from "../../assets/Menu/pages13-18/DSC01863.JPG";
 import img5 from "../../assets/Menu/pages13-18/DSC01232.JPG";
 
+//27
 import soup1 from "../../assets/Menu/soup/1.jpg";
 import soup2 from "../../assets/Menu/soup/2.jpg";
 
