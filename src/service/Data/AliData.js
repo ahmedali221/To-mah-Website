@@ -1,6 +1,5 @@
-import img6 from "../../assets/Menu/pages13-18/DSC01866.JPG";
 import img7 from "../../assets/Menu/pages13-18/DSC01863.JPG";
-import img5 from "../../assets/Menu/pages13-18/DSC01232.JPG";
+import img5 from "../../assets/Menu/breadBasket/8.jpg";
 
 //27
 import soup1 from "../../assets/Menu/soup/1.jpg";
@@ -18,6 +17,7 @@ import salad8 from "../../assets/Menu/salads/8.jpg";
 import breadBasket1 from "../../assets/Menu/breadBasket/1.jpg";
 import breadBasket3 from "../../assets/Menu/breadBasket/3.jpg";
 import breadBasket5 from "../../assets/Menu/breadBasket/5.jpg";
+import breadBasket6 from "../../assets/Menu/breadBasket/6.jpg";
 import breadBasket7 from "../../assets/Menu/breadBasket/7.jpg";
 import breadBasket9 from "../../assets/Menu/breadBasket/9.jpg";
 import breadBasket10 from "../../assets/Menu/breadBasket/10.jpg";
@@ -609,7 +609,7 @@ const productsData = [
       "Enjoy the most famous and popular meatballs in the dishes of the city's locals! These delicious balls are prepared with a special and distinctive recipe to give you an unforgettable taste. An irresistible dish favored by everyone.",
     description_ar:
       "استمتع بكرات اللحم الأشهر والأكثر شعبية في أطباق أهل المدينة! هذه الكرات اللذيذة محضرة بوصفة خاصة ومميزة لتمنحك طعماً لا يُنسى. طبق لا يقاوم يفضله الجميع.",
-    image: img6,
+    image: breadBasket6,
 
     category_en: "Bread Basket",
     category_ar: "سلة معجنات",
