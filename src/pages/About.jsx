@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import intro from "../assets/AboutImages/intro.mp4";
 import rev1 from "../assets/AboutImages/TripAdvisor.jpg";
-import rev2 from "../assets/AboutImages/tiktok.jpg";
 import rev3 from "../assets/AboutImages/User.jpg";
 import img1 from "/src/assets/AboutImages/img1.jpg";
 import img2 from "/src/assets/AboutImages/img2.jpg";
@@ -20,11 +19,9 @@ import g4 from "/src/assets/AboutImages/G4.jpg";
 import g5 from "/src/assets/AboutImages/G5.jpg";
 import g6 from "/src/assets/AboutImages/G6.jpg";
 import g7 from "/src/assets/AboutImages/G7.jpg";
-import g8 from "/src/assets/AboutImages/G8.jpg";
-import g9 from "/src/assets/AboutImages/G9.jpg";
+
 import teamImg1 from "../assets/AboutImages/فريق العمل/staff.jpg";
 import teamImg2 from "../assets/AboutImages/فريق العمل/1.jpg";
-import teamImg5 from "../assets/AboutImages/فريق العمل/4.jpg";
 import visitorsPhotos from "../service/visitors/visitors"; // adjust path if needed
 
 import {
@@ -36,47 +33,46 @@ import {
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const galleryImages = [g1, g2, g3, g4, g5, g6, g7, g8, g9];
-const teamImages = [teamImg1, teamImg2, teamImg5];
+const galleryImages = [g1, g2, g3, g4, g5, g6, g7];
+const teamImages = [teamImg1, teamImg2];
 
 const testimonials = [
+
+
 	{
 		img: rev1,
-		text: "مطعم رائع وخدمة ممتازة!",
-		name: "زائر من تريب أدفايزر",
-		rating: 5,
-	},
-	{
-		img: rev2,
-		text: "أجواء جميلة وطعام لذيذ.",
-		name: "زائر من تيك توك",
+		text_ar: "من أجمل المطاعم، الأكل في المدينة فعليًا تحفة جداً. شكرًا لمن صممه.",
+		text_en: "One of the most beautiful restaurants — food in Medina is truly a masterpiece. Grateful to its designer!",
+		name: "أحمد حكيم",
+		name_en: "Ahmed Hakeem",
 		rating: 5,
 	},
 	{
 		img: rev1,
-		text: "أفضل تجربة عائلية.",
-		name: "زائر من تريب أدفايزر",
+		text_ar: "مكان جميل ومميز جداً. كل شي فخم ونظيف والموظفون محترمون جداً ومحبون.",
+		text_en: "A really beautiful and special place — everything is elegant, clean, and the staff is kind and welcoming!",
+		name: "محمد مرشد",
+		name_en: "Mohammed Murshed",
+		rating: 5,
+	},
+	{
+		img: rev1,
+		text_ar: "الأكل ماشاء الله تبارك الله ممتاز جداً، حتى التعامل مع الزبائن جداً جميل. الله يوفقهم.",
+		text_en: "The food is exceptionally delicious, and the service is wonderful. May God grant them continued success!",
+		name: "بدر أحمد",
+		name_en: "Badr Ahmed",
 		rating: 5,
 	},
 	{
 		img: rev3,
-		text: "خدمة سريعة وطاقم ودود.",
-		name: "زائر",
-		rating: 4,
-	},
-	{
-		img: rev3,
-		text: "أنصح الجميع بزيارته.",
-		name: "زائر",
-		rating: 5,
-	},
-	{
-		img: rev3,
-		text: "مكان مميز في المدينة.",
-		name: "زائر",
+		text_ar: "ماشاء الله المكان خرافي.",
+		text_en: "The place is simply fantastic!",
+		name: "جواهر الحربي",
+		name_en: "Jawaher AlHarbi",
 		rating: 5,
 	},
 ];
+
 
 const About = () => {
 	const [isPlaying, setIsPlaying] = useState(false);
@@ -337,7 +333,6 @@ const About = () => {
 				</div>
 			</section>
 
-			{/* Team Section */}
 			<section className="py-16 md:py-24 animate-on-scroll" id="team-section" style={{
 				background: 'linear-gradient(135deg, #f8f9fc 0%, rgba(166, 171, 139, 0.1) 100%)'
 			}}>
@@ -351,28 +346,23 @@ const About = () => {
 						}}></div>
 						<UserGroupIcon className="w-12 h-12 mx-auto" style={{ color: '#d97706' }} />
 					</div>
-					<div className="pb-16">
-						<Slider {...sliderSettings} className="team-slider">
-							{teamImages.map((image, index) => (
-								<div key={index} className="px-3">
-									<div className={`transform transition-all duration-1000 ${isVisible["team-section"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`} style={{ transitionDelay: `${index * 150}ms` }}>
-										<div className="relative overflow-hidden rounded-2xl shadow-xl group p-2" style={{ backgroundColor: '#f8f9fc' }}>
-											<img
-												src={image}
-												alt={t("about.team.member_alt", { number: index + 1 })}
-												className="w-full h-72 md:h-80 object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-500"
-											/>
-											<div className="absolute inset-2 rounded-xlopacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-										</div>
-									</div>
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-16">
+						{teamImages.map((image, index) => (
+							<div key={index} className={`transform transition-all duration-1000 ${isVisible["team-section"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`} style={{ transitionDelay: `${index * 150}ms` }}>
+								<div className="relative overflow-hidden rounded-2xl shadow-xl group p-2" style={{ backgroundColor: '#f8f9fc' }}>
+									<img
+										src={image}
+										alt={t("about.team.member_alt", { number: index + 1 })}
+										className="w-full h-72 md:h-80 object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-500"
+									/>
+									<div className="absolute inset-2 rounded-xlopacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 								</div>
-							))}
-						</Slider>
+							</div>
+						))}
 					</div>
 				</div>
 			</section>
 
-			{/* Restaurant Images Section */}
 			<section className="py-16 md:py-24 animate-on-scroll" id="special-menu-section" style={{ backgroundColor: '#f0f2f7' }}>
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -405,58 +395,54 @@ const About = () => {
 			</section>
 
 			{/* Testimonials Section */}
-			<section className="py-16 md:py-24 animate-on-scroll" id="testimonial-section" style={{
-				background: 'linear-gradient(135deg, rgba(103, 48, 38, 0.05) 0%, rgba(166, 171, 139, 0.1) 100%)'
-			}}>
-				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<section className="py-16 md:py-24 animate-on-scroll" id="testimonials-section" style={{ background: 'linear-gradient(135deg, #f8f9fc 0%, #fffbe6 100%)' }}>
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-16">
 						<h2 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#1d2939' }}>
-							{t("about.testimonials.title")}
+							{t("about.testimonials.title", "آراء الزوار")}
 						</h2>
 						<div className="w-24 h-1 mx-auto rounded-full mb-8" style={{
 							background: 'linear-gradient(90deg, #d97706 0%, #673026 100%)'
 						}}></div>
 						<HeartIcon className="w-12 h-12 mx-auto" style={{ color: '#d97706' }} />
 					</div>
-					<div className={`backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 border transition-all duration-1000 ${isVisible["testimonial-section"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
-						backgroundColor: 'rgba(248, 249, 252, 0.9)',
-						borderColor: 'rgba(103, 48, 38, 0.2)'
-					}}>
-						<Slider {...{ ...sliderSettings, slidesToShow: 1, dots: true }} className="testimonials-slider">
-							{testimonials.map((item, index) => (
-								<div className="text-center px-4 md:px-8" key={index}>
-									<div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 overflow-hidden rounded-full ring-4" style={{ ringColor: 'rgba(166, 171, 139, 0.3)' }}>
-										<img
-											className="w-full h-full object-cover"
-											src={item.img}
-											alt={item.name}
-										/>
+					<Slider {...sliderSettings}>
+						{testimonials.map((testimonial, idx) => (
+							<div key={idx} className="px-4">
+								<div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center h-full min-h-[340px]">
+									<img
+										src={testimonial.img}
+										alt={testimonial.name}
+										className="w-20 h-20 rounded-full object-cover border-4 border-amber-200 shadow mb-4"
+									/>
+									<div className="mb-2">
+										{renderStars(testimonial.rating)}
 									</div>
-									<div className="flex justify-center mb-4">
-										{renderStars(item.rating)}
-									</div>
-									<p className="italic mb-6 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: '#344054' }}>
-										"{item.text}"
+									<p className="text-lg font-medium mb-4" style={{ color: '#673026' }}>
+										{i18n.language === "ar" ? testimonial.text_ar : testimonial.text_en}
 									</p>
-									<p className="font-bold text-lg" style={{ color: '#673026' }}>{item.name}</p>
+									<p className="text-sm text-gray-500 font-semibold">
+										{i18n.language === "ar" ? testimonial.name : testimonial.name_en}
+									</p>
 								</div>
-							))}
-						</Slider>
-					</div>
+							</div>
+						))}
+					</Slider>
 				</div>
 			</section>
-
 			{/* Gallery Section */}
-			<section className="py-16 md:py-20 overflow-hidden" style={{ backgroundColor: '#f8f9fc' }}>
+			<section
+				className="py-16 md:py-20 overflow-hidden"
+				style={{ backgroundColor: '#f8f9fc' }}>
 				<div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
 					<Slider {...gallerySliderSettings}>
 						{galleryImages.concat(galleryImages).map((img, index) => (
 							<div key={index} className="px-2">
-								<div className="w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-2xl group">
+								<div className="flex items-center justify-center rounded-2xl overflow-hidden shadow-2xl group">
 									<img
 										src={img}
 										alt={t("about.gallery.image_alt")}
-										className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 group-hover:brightness-110"
+										className="h-96 w-auto object-cover transform group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 rounded-2xl shadow-lg"
 									/>
 								</div>
 							</div>
@@ -465,7 +451,8 @@ const About = () => {
 				</div>
 			</section>
 
-			{/* Visitors Section */}
+
+			{/* Google Reviewss Section */}
 			<section className="animate-on-scroll" id="visitors-section" style={{ backgroundColor: '#f0f2f7' }}>
 				<div className="text-center mb-16">
 					<h2 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#1d2939' }}>
@@ -494,44 +481,6 @@ const About = () => {
 				</div>
 			</section>
 
-			{/* CTA Section */}
-			<section className="py-16 md:py-24 bg-primary text-white animate-on-scroll relative overflow-hidden" id="cta-section" 
-			>
-				<div className="absolute inset-0" style={{
-					background: 'radial-gradient(circle at 70% 80%, rgba(248, 249, 252, 0.1), transparent 50%)'
-				}}></div>
-				<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-					<div className={`transition-all duration-1000 ${isVisible["cta-section"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-						<h2 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#f8f9fc' }}>
-							{t("about.cta.title")}
-						</h2>
-						<p className="text-lg md:text-xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed" style={{ color: '#f0f2f7' }}>
-							{t("about.cta.description")}
-						</p>
-						<Link
-							to="/menu"
-							className="inline-flex items-center px-8 py-4 border-none rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl transform"
-							style={{
-								backgroundColor: '#f8f9fc',
-								color: '#673026'
-							}}
-							onMouseEnter={(e) => {
-								e.target.style.backgroundColor = '#f0f2f7';
-								e.target.style.color = '#101828';
-							}}
-							onMouseLeave={(e) => {
-								e.target.style.backgroundColor = '#f8f9fc';
-								e.target.style.color = '#673026';
-							}}
-						>
-							{t("about.cta.button")}
-							<svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-							</svg>
-						</Link>
-					</div>
-				</div>
-			</section>
 		</div>
 	);
 };

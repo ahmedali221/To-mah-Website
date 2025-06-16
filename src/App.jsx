@@ -9,7 +9,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Partners from "./pages/Partners";
 import Contact from "./pages/Contact";
 import Menu from "./pages/Menu";
 import Cart from "./pages/Cart";
@@ -50,7 +49,6 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/partners" element={<Partners />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/menu" element={<Menu />} />
               <Route path="/menu/:id" element={<MealDetails />} />

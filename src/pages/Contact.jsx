@@ -55,88 +55,103 @@ const ContactPage = () => {
         </div>
 
         {/* Main Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 relative max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 relative max-w-6xl px-4 sm:px-6 lg:px-8 mx-auto">
+
           {/* First Column */}
-          <div className={`flex flex-col items-center w-full transition-all duration-1000 delay-500 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
-            <div className="h-48 sm:h-64 md:h-96 w-full sm:w-4/5 overflow-hidden relative">
+          <div
+            className={`flex flex-col items-center w-full transform transition-all duration-1000 delay-500 ${visible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
+              }`}
+          >
+            {/* Image */}
+            <div className="flex items-center justify-center rounded-t-full overflow-hidden shadow-2xl group transform transition-transform duration-500 hover:shadow-3xl">
               <img
                 src="https://tomah.sa/uploads/products/8.jpg"
                 alt={t("contact.location_image_alt")}
-                className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
+                className="h-96 w-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:brightness-110"
                 style={{ borderRadius: "50em 50em 0 0" }}
               />
-              <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             </div>
-            <div className="w-4/5 text-center">
-              <h3 className="text-3xl font-serif italic font-light mt-8 mb-6 transform transition-transform duration-500 hover:translate-y-1">
+
+            {/* Location Info */}
+            <div className="w-4/5 text-center mt-10 px-4">
+              <h3 className="text-4xl font-semibold italic mb-6 transform transition-transform duration-500 hover:translate-y-1">
                 {t("contact.location_title")}
               </h3>
-              <div className="text-center font-light tracking-wide leading-relaxed text-gray-700 text-base">
-                <span className="block hover:text-gray-900 transition-all duration-300">
-                  <a
-                    href="https://www.google.com/maps"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-amber-600 transition-colors duration-300">
-                    <span className="text-black text-lg block mb-3">
-                      {t("contact.address_line1")}
-                    </span>
-                    <span className="text-black text-lg block mb-2">
-                      {t("contact.address_line2")}
-                    </span>
-                    <span className="text-black text-base block mb-4">
-                      {t("contact.address_line3")}
-                    </span>
-                  </a>
-                  <a
-                    href="https://wa.me/966583250000"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xl text-black block mt-4 hover:text-amber-600 transition-colors duration-300 transform hover:scale-105 transition-transform duration-300"
-                    dir={isRTL ? "ltr" : undefined}
-                    style={isRTL ? { unicodeBidi: "bidi-override" } : {}}
-                  >
-                    {t("contact.phone")}
-                  </a>
-                </span>
+              <div className="text-gray-700 font-light tracking-wide leading-relaxed">
+                <a
+                  href="https://www.google.com/maps"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-amber-600 transition-colors duration-300 block mb-4">
+                  <span className="text-black text-lg block mb-3">
+                    {t("contact.address_line1")}
+                  </span>
+                  <span className="text-black text-lg block mb-2">
+                    {t("contact.address_line2")}
+                  </span>
+                  <span className="text-black text-base block">
+                    {t("contact.address_line3")}
+                  </span>
+                </a>
+                <a
+                  href="https://wa.me/966583250000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-2xl text-black block mt-4 transform hover:scale-105 hover:text-amber-600 transition-all duration-500">
+                  {t("contact.phone")}
+                </a>
               </div>
             </div>
           </div>
 
-          {/* Vertical Line Divider */}
-          <div className="hidden md:block absolute left-1/2 top-[20%] bottom-[20%] w-px bg-gray-300 transform -translate-x-1/2"></div>
+          {/* Vertical Divider */}
+          <div className="hidden md:block absolute left-1/2 top-[20%] bottom-[20%] w-px bg-gray-300 transform -translate-x-1/2 rounded-full shadow-md" />
 
           {/* Second Column */}
-          <div className={`flex flex-col items-center w-full transition-all duration-1000 delay-700 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
-            <div className="h-64 md:h-96 w-4/5 overflow-hidden relative">
+          <div
+            className={`flex flex-col items-center w-full transform transition-all duration-1000 delay-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
+              }`}
+          >
+            {/* Image */}
+            <div className="flex items-center justify-center rounded-full overflow-hidden shadow-2xl group transform transition-transform duration-500 hover:shadow-3xl">
               <img
                 src="https://tomah.sa/uploads/products/9.jpg"
                 alt={t("contact.restaurant_image_alt")}
-                className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
-                style={{ borderRadius: "50em 50em" }}
+                className="h-96 w-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:brightness-110 rounded-full"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             </div>
-            <div className="text-center font-light tracking-wide leading-relaxed">
-              <span className="block mb-4 hover:text-gray-900 transition-all duration-300">
-                <span className="text-gray-800 text-base">{t("contact.hours_weekend")}</span><br />
-                <span className="text-sm text-gray-600">{t("contact.hours_reservations")}</span><br />
-                <span className="italic text-base">{t("contact.hours_weekend_time")}</span>
-              </span>
-              <span className="block hover:text-gray-900 transition-all duration-300">
-                <span className="text-gray-800 text-base">{t("contact.hours_weekdays")}</span><br />
-                <span className="text-sm text-gray-600">{t("contact.hours_reservations")}</span><br />
-                <span className="italic text-base">{t("contact.hours_weekdays_time")}</span>
-              </span>
-              <div className="mt-4">
-                <span className="block text-gray-800 text-base">{t("contact.hours_breakfast")}</span>
-                <span className="block text-gray-800 text-base">{t("contact.hours_lunch")}</span>
-                <span className="block text-gray-800 text-base">{t("contact.hours_dinner")}</span>
-              </div>
+
+            {/* Hours Info */}
+            <div className="text-center font-light tracking-wide leading-relaxed mt-10 px-4">
+              {/* List of hours by day */}
+              <ul className="space-y-4">
+                <li className="hover:text-gray-900 transition-all duration-500">
+                  <span className="text-gray-800 font-semibold">{t("contact.hours.monday")}</span> — {t("contact.hours.monday_time")}
+                </li>
+                <li className="hover:text-gray-900 transition-all duration-500">
+                  <span className="text-gray-800 font-semibold">{t("contact.hours.tuesday")}</span> — {t("contact.hours.tuesday_time")}
+                </li>
+                <li className="hover:text-gray-900 transition-all duration-500">
+                  <span className="text-gray-800 font-semibold">{t("contact.hours.wednesday")}</span> — {t("contact.hours.wednesday_time")}
+                </li>
+                <li className="hover:text-gray-900 transition-all duration-500">
+                  <span className="text-gray-800 font-semibold">{t("contact.hours.thursday")}</span> — {t("contact.hours.thursday_time")}
+                </li>
+                <li className="hover:text-gray-900 transition-all duration-500">
+                  <span className="text-gray-800 font-semibold">{t("contact.hours.friday")}</span> — {t("contact.hours.friday_time")}
+                </li>
+                <li className="hover:text-gray-900 transition-all duration-500">
+                  <span className="text-gray-800 font-semibold">{t("contact.hours.saturday")}</span> — {t("contact.hours.saturday_time")}
+                </li>
+                <li className="hover:text-gray-900 transition-all duration-500">
+                  <span className="text-gray-800 font-semibold">{t("contact.hours.sunday")}</span> — {t("contact.hours.sunday_time")}
+                </li>
+              </ul>
             </div>
 
           </div>
         </div>
+
 
         {/* Contact Form */}
         <div className={`max-w-2xl mx-auto mb-16 bg-white rounded-xl shadow-lg p-8 transition-all duration-1000 delay-900 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>

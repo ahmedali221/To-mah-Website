@@ -36,16 +36,38 @@ export default function AboutAndVideoSection() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {t("home.about.title")}
           </h2>
+
           <p className="mb-6 text-gray-600 text-base md:text-lg leading-relaxed">
             {t("home.about.description")}
           </p>
+
+          {/* Idea Section */}
+          <div className="mb-4">
+            <h3 className="text-2xl font-semibold">
+              {t("home.about.idea_section.heading")}
+            </h3>
+            <p className="text-gray-500">
+              {t("home.about.idea_section.hijri")} — {t("home.about.idea_section.gregorian")}
+            </p>
+          </div>
+
+          {/* Opening Section */}
+          <div className="mb-4">
+            <h3 className="text-2xl font-semibold">
+              {t("home.about.opening_section.heading")}
+            </h3>
+            <p className="text-gray-500">
+              {t("home.about.opening_section.hijri")} — {t("home.about.opening_section.gregorian")}
+            </p>
+          </div>
+
           <Link
             to="/about"
-            className="inline-block px-8 py-3 text-sm md:text-base bg-gray-200 rounded-md hover:bg-gray-500 hover:text-red transition-colors duration-300"
-          >
+            className="inline-block px-8 py-3 text-sm md:text-base bg-gray-200 rounded-md hover:bg-gray-500 hover:text-red transition-colors duration-300">
             {t("home.about.button")}
           </Link>
         </motion.div>
+
 
         <motion.div
           className="relative mt-8 md:mt-0"

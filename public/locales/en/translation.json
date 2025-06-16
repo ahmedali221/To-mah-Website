@@ -35,7 +35,7 @@
 		"address": "Medina, Saudi Arabia",
 		"phone": "+966 58 325 0000",
 		"email": "info@tomah.sa",
-		"hours": "Open 24/7",
+		"hours": "Open 7 Days",
 		"quick_links":" Quick Links",
 		"follow_us":"Follow Us",
 		"rights": "To'mah. All rights reserved.",
@@ -191,30 +191,37 @@
 	},
 	"contact": {
 		"title": "Contact Us",
-  "form_title": "Send Us a Message",
-  "form_name": "Your Name",
-  "form_email": "Your Email",
-  "form_phone": "Your Phone",
-  "form_message": "Your Message",
-  "form_button": "Send Message",
-  "form_success": "Thank you! Your message has been sent.",
+		"form_title": "Send Us a Message",
+		"form_name": "Your Name",
+		"form_email": "Your Email",
+		"form_phone": "Your Phone Number",
+		"form_message": "Your Message",
+		"form_button": "Send Message",
+		"form_success": "Thank you! Your message has been sent.",
 		"location_title": "Location",
 		"location_image_alt": "Location Image",
-		"address_line1": "طُعمة, DMAJ8018",
-		"address_line2": "5153 King Abdullah Branch Rd, Mahzur, 8018, Madinah 42319",
-		"address_line3": "Madinah 42210, Saudi Arabia",
+		"address_line1": "To'mah, DMAJ8018",
+		"address_line2": "5153 King Abdullah Branch Rd, Mahzur District, 8018, Medina 42319",
+		"address_line3": "Medina 42210, Saudi Arabia",
 		"phone": "+966 58 325 0000",
-		"hours_title": "Working Hours",
-		"hours_weekend": "Saturday & Sunday",
-		"hours_weekdays": "Thursday to Sunday",
-		"hours_reservations": "Reservations",
-		"hours_weekend_time": "12:00 pm - 1:30 pm",
-		"hours_weekdays_time": "6:00 pm - 8:45 pm",
-		"restaurant_image_alt": "Restaurant Image",
-		  "hours_breakfast": "Breakfast: 6:00 am - 1:00 pm",
-    "hours_lunch": "Lunch: 1:00 pm - 6:00 pm",
-    "hours_dinner": "Dinner: 6:00 pm - 12:00 am"
-  
+		"hours_title": "Opening Hours",
+		"hours": {
+			"monday": "Monday",
+			"monday_time": "6:00 AM – 12:00 AM",
+			"tuesday": "Tuesday",
+			"tuesday_time": "6:00 AM – 12:00 AM",
+			"wednesday": "Wednesday",
+			"wednesday_time": "6:00 AM – 2:00 AM",
+			"thursday": "Thursday",
+			"thursday_time": "6:00 AM – 2:00 AM",
+			"friday": "Friday",
+			"friday_time": "6:00 AM – 2:00 AM",
+			"saturday": "Saturday",
+			"saturday_time": "6:00 AM – 2:00 AM",
+			"sunday": "Sunday",
+			"sunday_time": "6:00 AM – 12:00 AM"
+		},
+		"restaurant_image_alt": "Restaurant Image"
 	},
 	
   "home": {
@@ -311,12 +318,23 @@
         "name": "Jane Smith"
       }
     },
-    "about": {
-      "title": "Our Story",
-      "description": "Discover the perfect blend of tradition and innovation at To'mah. Our passionate chefs create memorable dining experiences with the finest ingredients and authentic recipes.",
-      "button": "Learn More",
-      "image_alt": "Restaurant Interior"
-    },
+  "about": {
+  "title": "Our Story",
+  "description": "Discover the perfect blend of tradition and innovation at To'mah. Our passionate chefs create memorable dining experiences with the finest ingredients and authentic recipes.",
+  "button": "Learn More",
+  "image_alt": "Restaurant Interior",
+  "idea_section": {
+    "heading": "The Idea of To’mah Began On",
+    "hijri": "15-4-1442 AH",
+    "gregorian": "30-11-2020 AD"
+  },
+  "opening_section": {
+    "heading": "The Opening Took Place On",
+    "hijri": "18-5-1446 AH",
+    "gregorian": "20-11-2024 AD"
+  }
+}
+,
     "currency": "SR"
   
 },

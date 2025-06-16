@@ -159,7 +159,6 @@ function Navbar({ changeLanguage }) {
 									<Link to="/" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.home")}</Link>
 									<Link to="/about" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.about")}</Link>
 									<Link to="/menu" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.menu")}</Link>
-									<Link to="/partners" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.partners")}</Link>
 									<Link to="/contact" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.contact")}</Link>
 									<Link to="/no-image-products" className="block px-4 py-2 hover:bg-red-50 hover:text-red-600 transition">
 										{t("navbar.no_image_products", "منتجات بدون صورة")}
