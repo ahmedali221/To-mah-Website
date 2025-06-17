@@ -32,8 +32,11 @@ const productsData = [
     description_ar:
       "استمتع بقطع لحم مقلقل بالخلطة وتقدم بطريقة أهل أول. وجبة شهية وغنية بالنكهات التقليدية والمميزة.",
     image: "img20",
-    category_en: "Ta'mah City Dishes",
-    category_ar: "أطباق طعمة المدينة",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Ta'mah City Dishes",
+    subcategory_ar: "أطباق طعمة المدينة",
     calories: "607",
     price: "40 ريال",
     available: true,
@@ -49,8 +52,11 @@ const productsData = [
     description_ar:
       "استمتع بقطع صدور دجاج مشوحة بالخضار الطازجة والبهارات الخاصة. وجبة شهية وخفيفة وغنية بالنكهات المميزة.",
     image: "img21",
-    category_en: "Ta'mah City Dishes",
-    category_ar: "أطباق طعمة المدينة",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Ta'mah City Dishes",
+    subcategory_ar: "أطباق طعمة المدينة",
     calories: "479",
     price: "30 ريال",
     available: true,
@@ -66,8 +72,11 @@ const productsData = [
     description_ar:
       "استمتع بقطع لحم مخلية من رأس الخروف المشوي بالفرن وتقدم مع خبز الحب والطحينة. وجبة شهية وغنية بالنكهات التقليدية والمميزة.",
     image: "img22",
-    category_en: "Ta'mah City Dishes",
-    category_ar: "أطباق طعمة المدينة",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Ta'mah City Dishes",
+    subcategory_ar: "أطباق طعمة المدينة",
     calories: "297",
     price: "30 ريال",
     available: true,
@@ -83,8 +92,11 @@ const productsData = [
     description_ar:
       "استمتع بقطع اللحم الطرية مع مرقة الطحينة المسبكة. وجبة تقليدية وغنية بالنكهات الأصيلة.",
     image: dish1,
-    category_en: "Ta'mah City Dishes",
-    category_ar: "أطباق طعمة المدينة",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Ta'mah City Dishes",
+    subcategory_ar: "أطباق طعمة المدينة",
     calories: "0",
     price: "45 ريال",
     available: true,
@@ -99,8 +111,11 @@ const productsData = [
     description_ar:
       "استمتع بقطع لحم طرية مطبوخة بالبصل والثوم على نار هادئة، وتقدم مع خبز الحب والرز المديني. وجبة شهية وغنية بالنكهات التقليدية والمميزة لأهل المدينة.",
     image: dish2,
-    category_en: "Ta'mah City Dishes",
-    category_ar: "أطباق طعمة المدينة",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Ta'mah City Dishes",
+    subcategory_ar: "أطباق طعمة المدينة",
     calories: "0",
     price: "45 ريال",
     available: true,
@@ -120,8 +135,11 @@ const productsData = [
     description_ar:
       "استمتع بلحم مفروم مشوي على السيخ مع تشكيلة من الخضار المشوية الطازجة، ويقدم مع سلطة منعشة. وجبة شهية وغنية بالنكهات المشوية، مثالية لمحبي اللحوم والخضروات.",
     image: img8,
-    category_en: "Grill_Section",
-    category_ar: "منقل طعمة",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Grill_Section",
+    subcategory_ar: "منقل طعمة",
     calories: "0",
     price: "73 ريال",
     available: true,
@@ -136,8 +154,11 @@ const productsData = [
     description_ar:
       "استمتع بقطع دجاج مفروم مشوية على السيخ وتقدم مع تشكيلة من الخضار المشوية الطازجة وسلطة منعشة. وجبة خفيفة ولذيذة وغنية بالبروتين والنكهات المشوية.",
     image: img9,
-    category_en: "Grill_Section",
-    category_ar: "منقل طعمة",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Grill_Section",
+    subcategory_ar: "منقل طعمة",
     calories: "0",
     price: "75 ريال",
     available: true,
@@ -152,8 +173,11 @@ const productsData = [
     description_ar:
       "استمتع بقطع صدور دجاج مشوية على السيخ وتقدم مع صوص الثوم الكريمي. وجبة شهية وخفيفة وغنية بالبروتين والنكهات المشوية اللذيذة.",
     image: "img17",
-    category_en: "Grill_Section",
-    category_ar: "منقل طعمة",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Grill_Section",
+    subcategory_ar: "منقل طعمة",
     calories: "343",
     price: "55 ريال",
     available: true,
@@ -169,8 +193,11 @@ const productsData = [
     description_ar:
       "استمتع بقطع أوصال لحم مشوية على السيخ وتقدم مع صوص الطحينة الغني. وجبة شهية وغنية بالبروتين والنكهات المشوية الأصيلة.",
     image: img10,
-    category_en: "Grill_Section",
-    category_ar: "منقل طعمة",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Grill_Section",
+    subcategory_ar: "منقل طعمة",
     calories: "0",
     price: "75 ريال",
     available: true,
@@ -186,8 +213,11 @@ const productsData = [
     description_ar:
       "استمتع بالكباب الحجازي الأصيل المشوي على الفحم، ويقدم مع السلطة الخضراء الطازجة وصوص الطحينة الغني. وجبة شهية وغنية بالنكهات التقليدية التي تميز المطبخ الحجازي.",
     image: img11,
-    category_en: "Grill_Section",
-    category_ar: "منقل طعمة",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Grill_Section",
+    subcategory_ar: "منقل طعمة",
     calories: "343",
     price: "73 ريال",
     available: true,
@@ -202,8 +232,11 @@ const productsData = [
     description_ar:
       "استمتع بكباب الدجاج المميز المشوي على الفحم، ويقدم مع السلطة الخضراء الطازجة وصوص الطحينة الغني. وجبة شهية وخفيفة وغنية بالبروتين والنكهات المشوية الأصيلة.",
     image: img12,
-    category_en: "Grill_Section",
-    category_ar: "منقل طعمة",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Grill_Section",
+    subcategory_ar: "منقل طعمة",
     calories: "343",
     price: "73 ريال",
     available: true,
@@ -218,8 +251,11 @@ const productsData = [
     description_ar:
       "استمتع بالكباب المميز المشوي على الفحم والمغطى بصوص الطحينة الغني واللذيذ. وجبة شهية وغنية بالنكهات المشوية والطحينة المميزة.",
     image: img14,
-    category_en: "Grill_Section",
-    category_ar: "منقل طعمة",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Grill_Section",
+    subcategory_ar: "منقل طعمة",
     calories: "343",
     price: "73 ريال",
     available: true,
@@ -234,8 +270,11 @@ const productsData = [
     description_ar:
       "استمتع بالكباب الفاخر والمميز المقدم مع المكسرات الشهية وصوص الطحينة الغني. وجبة ملكية غنية بالنكهات الفاخرة والمكونات الطازجة.",
     image: img13,
-    category_en: "Grill_Section",
-    category_ar: "منقل طعمة",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Grill_Section",
+    subcategory_ar: "منقل طعمة",
     calories: "343",
     price: "73 ريال",
     available: true,
@@ -252,8 +291,11 @@ const productsData = [
     description_ar:
       "تكفي عدد 3 أشخاص\nتشكيلة فاخرة من اللحوم والدجاج المشوية والرز المديني تقدم على طبق فاخر\nعدد 12 سيخ",
     calories: null,
-    category_en: "Grill Section",
-    category_ar: "منقل طعمة",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Grill Section",
+    subcategory_ar: "منقل طعمة",
     available: true,
     trendy: false,
   },
@@ -266,8 +308,11 @@ const productsData = [
     meal_name_ar: "مشكل مشويات طعمة",
     description_ar: '"تكفي عدد 1 شخص \nعدد 3 أسياخ مشكلة',
     calories: null,
-    category_en: "Grill Section",
-    category_ar: "منقل طعمة",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Grill Section",
+    subcategory_ar: "منقل طعمة",
     available: true,
     trendy: false,
   },
@@ -280,8 +325,11 @@ const productsData = [
     meal_name_ar: "بطاطس مقلية",
     description_ar: "",
     calories: null,
-    category_en: "Grill Section",
-    category_ar: "منقل طعمة",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Grill Section",
+    subcategory_ar: "منقل طعمة",
     available: true,
     trendy: false,
   },
@@ -299,8 +347,11 @@ const productsData = [
     description_ar:
       "استمتع ببامية مدينية مطبوخة بقطع اللحم الطرية، وتقدم بخبز الحب والرز المديني. وجبة شهية وغنية بالنكهات التقليدية والمميزة لأهل المدينة.",
     image: tabee51,
-    category_en: "To'mah Stews & Curries",
-    category_ar: "طبيخ طعمة / الإيدامات",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "To'mah Stews & Curries",
+    subcategory_ar: "طبيخ طعمة / الإيدامات",
     calories: "243",
     price: "20 ريال",
     available: true,
@@ -315,8 +366,11 @@ const productsData = [
     description_ar:
       "استمتع بصينية مخصوصة من البطاطس والكباب المشوي بالفرن، وتقدم مع الرز المديني الشهي وصوص الدقس الحار. وجبة عائلية شهية وغنية بالنكهات المتنوعة.",
     image: tabee52,
-    category_en: "To'mah Stews & Curries",
-    category_ar: "طبيخ طعمة / الإيدامات",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "To'mah Stews & Curries",
+    subcategory_ar: "طبيخ طعمة / الإيدامات",
     calories: "289",
     price: "27 ريال",
     available: true,
@@ -331,8 +385,11 @@ const productsData = [
     description_ar:
       "اختار من أوراق الملوخية الناشفة المطبوخة على طريقة أهل أول، مع قطع اللحم أو الدجاج المحمر، وتقدم بخبز الحب والرز المديني. وجبة شهية وغنية بالنكهات التقليدية والمميزة لأهل المدينة.",
     image: tabee53,
-    category_en: "To'mah Stews & Curries",
-    category_ar: "طبيخ طعمة / الإيدامات",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "To'mah Stews & Curries",
+    subcategory_ar: "طبيخ طعمة / الإيدامات",
     calories: 329,
     price: "20 ريال",
     available: true,
@@ -348,8 +405,11 @@ const productsData = [
     description_ar:
       "اختار من أوراق الملوخية الخضرا المطبوخة على طريقة أهل أول، مع قطع اللحم أو الدجاج المحمر، وتقدم بخبز الحب والرز المديني. وجبة شهية وغنية بالنكهات التقليدية والمميزة لأهل المدينة.",
     image: tabee54,
-    category_en: "To'mah Stews & Curries",
-    category_ar: "طبيخ طعمة / الإيدامات",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "To'mah Stews & Curries",
+    subcategory_ar: "طبيخ طعمة / الإيدامات",
     calories: "351",
     price: "20 ريال",
     available: true,
@@ -364,8 +424,11 @@ const productsData = [
     description_ar:
       "استمتع بقطعتين من كوارع الغنم المسلوقة، وتقدم مع خبز الحب وخلطة الليمون بالثوم. وجبة شهية وغنية بالكولاجين والنكهات التقليدية والمميزة لأهل المدينة.",
     image: "img28",
-    category_en: "To'mah Stews & Curries",
-    category_ar: "طبيخ طعمة / الإيدامات",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "To'mah Stews & Curries",
+    subcategory_ar: "طبيخ طعمة / الإيدامات",
     calories: "0",
     price: "27 ريال",
     available: true,
@@ -382,8 +445,11 @@ const productsData = [
     description_ar:
       "قطع باذنجان مقلية ومسبكة بلحم المفروم الطازج وتقدم بخبز الحب والليمون",
     calories: null,
-    category_en: "To'mah Stews & Curries",
-    category_ar: "طبيخ طعمة / الإيدامات",
+
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "To'mah Stews & Curries",
+    subcategory_ar: "طبيخ طعمة / الإيدامات",
     available: true,
     trendy: false,
   },
@@ -400,8 +466,10 @@ const productsData = [
     description_ar:
       "استمتع بصفيحة خدوة بالجبنة الموزاريلا اللذيذة. معجنات طازجة وشهية، مثالية كوجبة خفيفة أو مقبل لذيذ.",
     image: sandwich1,
-    category_en: "Flatbreads & Sandwiches",
-    category_ar: "صفايح وساندوتشات",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Flatbreads & Sandwiches",
+    subcategory_ar: "صفايح وساندوتشات",
     calories: "0",
     price: "12 ريال",
     available: true,
@@ -416,8 +484,10 @@ const productsData = [
     description_ar:
       "استمتع بسلات المدينة والطحينة كلام خطير! معجنات طازجة وشهية محشوة بحشوة مميزة ومغطاة بالطحينة اللذيذة.",
     image: sandwich2,
-    category_en: "Flatbreads & Sandwiches",
-    category_ar: "صفايح وساندوتشات",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Flatbreads & Sandwiches",
+    subcategory_ar: "صفايح وساندوتشات",
     calories: "0",
     price: "12 ريال",
     available: true,
@@ -432,8 +502,10 @@ const productsData = [
     description_ar:
       "استمتع بخليط الجبنة البيضاء والحلاوة الطحينية المميزة، والمزينة بالفستق الحلبي الشهي. معجنات طازجة تجمع بين المذاق الحلو والمالح بطريقة فريدة ولذيذة.",
     image: sandwich3,
-    category_en: "Flatbreads & Sandwiches",
-    category_ar: "صفايح وساندوتشات",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Flatbreads & Sandwiches",
+    subcategory_ar: "صفايح وساندوتشات",
     calories: "0",
     price: "12 ريال",
     available: true,
