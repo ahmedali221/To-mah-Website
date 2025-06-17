@@ -76,33 +76,63 @@ function Menu() {
   };
 
   // Memoize filtered products to avoid recalculating on every render
+  // ...existing code...
   const filteredProducts = useMemo(() => {
     let filtered = productsData.filter((product) => {
+      const normalizeString = (str) => {
+        return str ? str.trim().replace(/\s+/g, ' ').toLowerCase().replace('/', '-').replace(' ', '-') : '';
+      };
 
+      // Category
       const normalizedProductCategoryEn = normalizeString(product.category_en);
       const normalizedFilterCategory = normalizeString(filters.category);
-
       const matchesCategory =
         filters.category === "" ||
         (i18n.language === "ar" && product.category_ar
           ? normalizeString(product.category_ar) === normalizedFilterCategory
           : normalizedProductCategoryEn === normalizedFilterCategory);
+
+      // Subcategory
+      const normalizedProductSubcategoryEn = normalizeString(product.subcategory_en);
+      const normalizedFilterSubcategory = normalizeString(filters.subcategory || "");
+      const matchesSubcategory =
+        !filters.subcategory ||
+        (i18n.language === "ar" && product.subcategory_ar
+          ? normalizeString(product.subcategory_ar) === normalizedFilterSubcategory
+          : normalizedProductSubcategoryEn === normalizedFilterSubcategory);
+
+      // Price
       const matchesPrice =
         product.price >= filters.minPrice && product.price <= filters.maxPrice;
+
+      // Search
       const matchesSearch =
         searchQuery === "" ||
         (i18n.language === "ar" && product.name_ar
           ? product.name_ar.toLowerCase().includes(searchQuery.toLowerCase())
           : product.name_en.toLowerCase().includes(searchQuery.toLowerCase()));
+
+      // Brand
       const matchesBrand =
         filters.brand === "" || product.brand === filters.brand;
+
+      // Available
       const matchesAvailable =
         filters.available === "" || String(product.available) === filters.available;
+
+      // Rating
       const matchesRating =
         product.rating >= filters.minRating;
 
-      return matchesCategory && matchesPrice && matchesSearch &&
-        matchesBrand && matchesAvailable && matchesRating;
+      return (
+        matchesCategory &&
+        matchesSubcategory &&
+        matchesPrice &&
+        matchesSearch &&
+        matchesBrand &&
+        matchesAvailable &&
+        matchesRating
+      );
     });
 
     // Apply sorting
@@ -118,6 +148,7 @@ function Menu() {
 
     return filtered;
   }, [filters, searchQuery, i18n.language]);
+
 
   // Calculate paginated products
   const paginatedProducts = useMemo(() => {
