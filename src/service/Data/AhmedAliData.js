@@ -1,8 +1,3 @@
-import image19_4 from "../../assets/Menu/19-25/19-4.JPG";
-import image19_5 from "../../assets/Menu/19-25/19-5.JPG";
-
-import image21_6 from "../../assets/Menu/19-25/21-6.JPG";
-
 import desert1 from "../../assets/Menu/deserts/1.JPG";
 import desert2 from "../../assets/Menu/deserts/2.jpg";
 import desert3 from "../../assets/Menu/deserts/3.jpg";
@@ -22,7 +17,7 @@ const productsData = [
   //// ساندويتش عيش الحب
   {
     id: "11",
-    image: image19_4,
+    image: null,
     meal_name_en: "City Salat Sandwich",
     description_en:
       "Madini salad stuffed in soft bread with pomegranate molasses",
@@ -39,7 +34,7 @@ const productsData = [
   },
   {
     id: "12",
-    image: image19_5,
+    image: null,
     meal_name_en: "Mutton Head Sandwich",
     description_en: "Mutton head meat with tahini sauce and cucumber slices",
     price: "20 ريال",
@@ -283,7 +278,7 @@ const productsData = [
   },
   {
     id: "29",
-    image: image21_6,
+    image: null,
     meal_name_en: "Rice Pudding",
     description_en: "Rice and milk pudding served cold with toasted almonds",
     price: "17 ريال",

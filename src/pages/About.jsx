@@ -244,9 +244,24 @@ const About = () => {
 										background: 'linear-gradient(90deg, #d97706 0%, transparent 100%)'
 									}}></div>
 								</div>
-								<p className="leading-relaxed text-lg font-medium" style={{ color: '#344054' }}>
-									{t("about.story.description")}
-								</p>
+								  <div className="mb-6 bg-white p-6 rounded-lg shadow-sm">
+            <h3 className="text-2xl font-semibold text-gray-800">
+              {t("home.about.idea_section.heading")}
+            </h3>
+            <p className="text-gray-600 mt-2">
+              {t("home.about.idea_section.hijri")} — {t("home.about.idea_section.gregorian")}
+            </p>
+          </div>
+
+          {/* Opening Section */}
+          <div className="mb-8 bg-white p-6 rounded-lg shadow-sm">
+            <h3 className="text-2xl font-semibold text-gray-800">
+              {t("home.about.opening_section.heading")}
+            </h3>
+            <p className="text-gray-600 mt-2">
+              {t("home.about.opening_section.hijri")} — {t("home.about.opening_section.gregorian")}
+            </p>
+          </div>
 								<div className="p-6 rounded-xl border" style={{
 									background: 'linear-gradient(135deg, rgba(103, 48, 38, 0.05) 0%, rgba(166, 171, 139, 0.05) 100%)',
 									borderColor: 'rgba(103, 48, 38, 0.2)'

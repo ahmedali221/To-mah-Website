@@ -53,7 +53,6 @@ export default function Home() {
       <VisionAndPhilosophy />
       <MenuBanner />
       <MenuShowcase />
-      <GalleryAndCategoryScroll />
       <PeopleSection />
     </div>
   );

@@ -1,10 +1,4 @@
-import img8 from "../../assets/Menu/pages13-18/DSC01937.JPG";
-import img9 from "../../assets/Menu/pages13-18/DSC01902.JPG";
-import img10 from "../../assets/Menu/pages13-18/DSC01929.JPG";
-import img11 from "../../assets/Menu/pages13-18/DSC01885.JPG";
-import img12 from "../../assets/Menu/pages13-18/DSC01921.JPG";
-import img13 from "../../assets/Menu/pages13-18/DSC01954.JPG";
-import img14 from "../../assets/Menu/pages13-18/DSC01946.JPG";
+
 
 //10
 import dish1 from "../../assets/Menu/dishes/1.jpg";
@@ -134,7 +128,7 @@ const productsData = [
       "Indulge in minced beef grilled on skewers with a selection of fresh grilled vegetables, served with a refreshing salad. A delicious meal rich in grilled flavors, perfect for meat and vegetable lovers.",
     description_ar:
       "استمتع بلحم مفروم مشوي على السيخ مع تشكيلة من الخضار المشوية الطازجة، ويقدم مع سلطة منعشة. وجبة شهية وغنية بالنكهات المشوية، مثالية لمحبي اللحوم والخضروات.",
-    image: img8,
+    image: null,
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
@@ -153,7 +147,7 @@ const productsData = [
       "Indulge in minced chicken pieces grilled on skewers and served with a selection of fresh grilled vegetables and a refreshing salad. A light and delicious meal rich in protein and grilled flavors.",
     description_ar:
       "استمتع بقطع دجاج مفروم مشوية على السيخ وتقدم مع تشكيلة من الخضار المشوية الطازجة وسلطة منعشة. وجبة خفيفة ولذيذة وغنية بالبروتين والنكهات المشوية.",
-    image: img9,
+    image: null,
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
@@ -192,7 +186,7 @@ const productsData = [
       "Indulge in grilled beef joints served with rich tahini sauce. A delicious meal rich in protein and authentic grilled flavors.",
     description_ar:
       "استمتع بقطع أوصال لحم مشوية على السيخ وتقدم مع صوص الطحينة الغني. وجبة شهية وغنية بالبروتين والنكهات المشوية الأصيلة.",
-    image: img10,
+    image: null,
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
@@ -212,7 +206,7 @@ const productsData = [
       "Indulge in traditional Hijazi kebab grilled over charcoal, served with fresh green salad and rich tahini sauce. A delicious meal rich in the traditional flavors that distinguish Hijazi cuisine.",
     description_ar:
       "استمتع بالكباب الحجازي الأصيل المشوي على الفحم، ويقدم مع السلطة الخضراء الطازجة وصوص الطحينة الغني. وجبة شهية وغنية بالنكهات التقليدية التي تميز المطبخ الحجازي.",
-    image: img11,
+    image: null,
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
@@ -231,7 +225,7 @@ const productsData = [
       "Indulge in special chicken kebab grilled over charcoal, served with fresh green salad and rich tahini sauce. A delicious and light meal rich in protein and authentic grilled flavors.",
     description_ar:
       "استمتع بكباب الدجاج المميز المشوي على الفحم، ويقدم مع السلطة الخضراء الطازجة وصوص الطحينة الغني. وجبة شهية وخفيفة وغنية بالبروتين والنكهات المشوية الأصيلة.",
-    image: img12,
+    image: null,
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
@@ -250,7 +244,7 @@ const productsData = [
       "Indulge in special kebab grilled over charcoal and topped with rich and delicious tahini sauce. A delicious meal rich in grilled flavors and distinctive tahini.",
     description_ar:
       "استمتع بالكباب المميز المشوي على الفحم والمغطى بصوص الطحينة الغني واللذيذ. وجبة شهية وغنية بالنكهات المشوية والطحينة المميزة.",
-    image: img14,
+    image: null,
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
@@ -269,7 +263,7 @@ const productsData = [
       "Indulge in premium special kebab served with delicious nuts and rich tahini sauce. A royal meal rich in luxurious flavors and fresh ingredients.",
     description_ar:
       "استمتع بالكباب الفاخر والمميز المقدم مع المكسرات الشهية وصوص الطحينة الغني. وجبة ملكية غنية بالنكهات الفاخرة والمكونات الطازجة.",
-    image: img13,
+    image: null,
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",

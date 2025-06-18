@@ -1,4 +1,7 @@
 {
+	"vision":{
+		"years": "Est. 2024"
+	},
 	"navbar": {
 		"brand": "To'mah",
 		"pages":"Pages",
@@ -31,6 +34,7 @@
 		"success_message": "Your message has been sent successfully!",
 		"error_message": "There was an error sending your message. Please try again later."
 	},
+
 	"footer": {
 		"address": "Medina, Saudi Arabia",
 		"phone": "+966 58 325 0000",
@@ -206,6 +210,8 @@
 		"phone": "+966 58 325 0000",
 		"hours_title": "Opening Hours",
 		"hours": {
+			"sunday": "Sunday",
+			"sunday_time": "6:00 AM – 12:00 AM",
 			"monday": "Monday",
 			"monday_time": "6:00 AM – 12:00 AM",
 			"tuesday": "Tuesday",
@@ -217,14 +223,14 @@
 			"friday": "Friday",
 			"friday_time": "6:00 AM – 2:00 AM",
 			"saturday": "Saturday",
-			"saturday_time": "6:00 AM – 2:00 AM",
-			"sunday": "Sunday",
-			"sunday_time": "6:00 AM – 12:00 AM"
+			"saturday_time": "6:00 AM – 2:00 AM"
+			
 		},
 		"restaurant_image_alt": "Restaurant Image"
 	},
 	
   "home": {
+	
 	"menu":{"title":"Introduced Our Menu"},
 	"chefs": {
     "title": "Meet Our Chefs",
@@ -420,7 +426,7 @@
 			}
 		]
 	},
-	"menu_banner.button": "Order Now",
+	"menu_banner.button": "Go To Menu",
 	"menu_banner.title": "Discover Our Seasonal Specials",
 	"payment": {
 "quantity": "Qty: {{count}}",

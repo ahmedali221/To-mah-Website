@@ -7,6 +7,8 @@ import { useTranslation } from "react-i18next";
 export default function MenuBanner() {
   const { t } = useTranslation();
 
+  // Remove handleClick function
+
   return (
     <motion.div
       className="relative w-full h-96 my-16 bg-cover bg-center bg-no-repeat overflow-hidden"
@@ -43,6 +45,7 @@ export default function MenuBanner() {
         >
           <Link
             to="/menu"
+            // Remove onClick={handleClick}
             className="group bg-white text-black px-8 py-3 rounded-full text-sm md:text-base hover:bg-gray-200 transition-all duration-300 flex items-center gap-2 shadow-md"
           >
             <motion.span

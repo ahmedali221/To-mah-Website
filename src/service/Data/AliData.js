@@ -1,4 +1,3 @@
-import img7 from "../../assets/Menu/pages13-18/DSC01863.JPG";
 import img5 from "../../assets/Menu/breadBasket/8.jpg";
 
 //27
@@ -692,7 +691,7 @@ const productsData = [
       "Enjoy a unique taste with Samosa Mix Cheese, crispy dough filled with a delicious blend of cheeses in the Madini style. A tasty light meal or a distinctive appetizer that satisfies all tastes.",
     description_ar:
       "استمتع بمذاق فريد مع سمبوسك طعمة، رقائق مقرمشة محشوة بخليط من الأجبان اللذيذة على طريقة أهل المدينة. وجبة خفيفة شهية أو مقبل مميز يرضي جميع الأذواق.",
-    image: img7,
+    image: null,
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
     subcategory_en: "Bread Basket",

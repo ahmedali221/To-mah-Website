@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+// Import the normalized data with unique IDs
 import productsData from "../service/data";
 
 const initialFilters = {
   category: "",
-  subcategory: "",
   brand: "",
   available: "",
   minPrice: 0,
@@ -18,49 +18,35 @@ export default function Sidebar({ filters, setFilters }) {
   const [priceRange, setPriceRange] = useState({ min: 0, max: Infinity });
   const [, setShowResetButton] = useState(false);
   const [expandedSection, setExpandedSection] = useState("categories");
-  const [expandedCategory, setExpandedCategory] = useState(null);
   const { t, i18n } = useTranslation();
 
+  // Helper function to capitalize first letter
   const capitalizeFirstLetter = (string) => {
     if (!string) return '';
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
   };
 
+  // Use the normalized data with unique IDs
   const allProductsData = productsData;
 
-  // Get unique categories and their subcategories
-  const categoriesWithSub = () => {
-    const map = {};
-    allProductsData.forEach((product) => {
-      const cat =
-        i18n.language === "ar" && product.category_ar
-          ? product.category_ar
-          : capitalizeFirstLetter(product.category_en);
-      const subcat =
-        i18n.language === "ar" && product.subcategory_ar
-          ? product.subcategory_ar
-          : capitalizeFirstLetter(product.subcategory_en || "");
-      if (!map[cat]) map[cat] = new Set();
-      if (subcat) map[cat].add(subcat);
-    });
-    return map;
-  };
-
-  const categoriesMap = categoriesWithSub();
+  // Get category names based on language
   const availableCategories = [
     t("sidebar.all_categories"),
-    ...Object.keys(categoriesMap),
+    ...new Set(allProductsData.map((product) =>
+      i18n.language === "ar" && product.category_ar
+        ? product.category_ar
+        : capitalizeFirstLetter(product.category_en)
+    )),
   ];
 
   const popularProducts = allProductsData
     .filter((product) => product.trendy === true)
     .map((product) => ({
       id: product.id,
-      name:
-        i18n.language === "ar" && product.meal_name_ar
-          ? product.meal_name_ar
-          : capitalizeFirstLetter(product.meal_name_en),
-      price: parseFloat(product.price),
+      name: i18n.language === "ar" && product.meal_name_ar
+        ? product.meal_name_ar
+        : capitalizeFirstLetter(product.meal_name_en),
+      price: product.price,
       image: product.image,
     }));
 
@@ -69,7 +55,7 @@ export default function Sidebar({ filters, setFilters }) {
     const max = Math.max(...allProductsData.map((p) => parseFloat(p.price) || 100));
     setPriceRange({
       min: filters.minPrice || min,
-      max: filters.maxPrice === Infinity ? max : filters.maxPrice,
+      max: filters.maxPrice === Infinity ? max : filters.maxPrice
     });
 
     if (filters.minPrice === 0 && filters.maxPrice === Infinity) {
@@ -82,17 +68,8 @@ export default function Sidebar({ filters, setFilters }) {
   };
 
   const handleCategoryClick = (category) => {
-    if (category === t("sidebar.all_categories")) {
-      setFilters({ ...filters, category: "", subcategory: "" });
-      setExpandedCategory(null);
-    } else {
-      setFilters({ ...filters, category, subcategory: "" });
-      setExpandedCategory(category === expandedCategory ? null : category);
-    }
-  };
-
-  const handleSubcategoryClick = (subcategory) => {
-    setFilters({ ...filters, subcategory });
+    const categoryForFilter = category === t("sidebar.all_categories") ? "" : category;
+    updateFilter("category", categoryForFilter);
   };
 
   const handlePriceInputChange = (event) => {
@@ -112,28 +89,41 @@ export default function Sidebar({ filters, setFilters }) {
 
   const handleResetFilters = () => {
     setFilters(initialFilters);
-    const min = Math.min(...productsData.map((p) => parseFloat(p.price) || 0));
-    const max = Math.max(...productsData.map((p) => parseFloat(p.price) || 100));
+    const min = Math.min(...productsData.map((p) => p.price));
+    const max = Math.max(...productsData.map((p) => p.price));
     setPriceRange({ min, max });
     setShowResetButton(false);
-    setExpandedCategory(null);
   };
 
   const toggleSection = (section) => {
     setExpandedSection(expandedSection === section ? null : section);
   };
 
-  const minPrice = Math.min(...productsData.map((p) => parseFloat(p.price) || 0));
-  const maxPrice = Math.max(...productsData.map((p) => parseFloat(p.price) || 100));
+  const minPrice = Math.min(...productsData.map((p) => p.price));
+  const maxPrice = Math.max(...productsData.map((p) => p.price));
 
   const isCategoryActive = (category) => {
     if (category === t("sidebar.all_categories")) return filters.category === "";
     return filters.category === category;
   };
 
-  const isSubcategoryActive = (subcategory) => {
-    return filters.subcategory === subcategory;
-  };
+  // Group categories and subcategories
+  const categoriesWithSubcategories = {};
+  allProductsData.forEach(product => {
+    const cat = i18n.language === "ar" && product.category_ar 
+      ? product.category_ar 
+      : capitalizeFirstLetter(product.category_en);
+    const subcat = i18n.language === "ar" && product.subcategory_ar 
+      ? product.subcategory_ar 
+      : capitalizeFirstLetter(product.subcategory_en);
+    
+    if (!categoriesWithSubcategories[cat]) {
+      categoriesWithSubcategories[cat] = new Set();
+    }
+    if (subcat) {
+      categoriesWithSubcategories[cat].add(subcat);
+    }
+  });
 
   return (
     <aside
@@ -141,7 +131,6 @@ export default function Sidebar({ filters, setFilters }) {
       dir={i18n.language === "ar" ? "rtl" : "ltr"}
     >
       {(filters.category !== "" ||
-        filters.subcategory !== "" ||
         filters.minPrice > 0 ||
         filters.maxPrice < Infinity) && (
           <div className="p-2 sm:p-4 border-b border-gray-100">
@@ -168,7 +157,7 @@ export default function Sidebar({ filters, setFilters }) {
           </div>
         )}
 
-      {/* Categories & Subcategories Section */}
+      {/* Categories Section */}
       <div className="border-b border-gray-100 hover:bg-gray-50 transition-colors duration-300">
         <button
           className="flex justify-between items-center w-full p-2 sm:p-4 text-left font-bold text-gray-800"
@@ -200,31 +189,16 @@ export default function Sidebar({ filters, setFilters }) {
             <ul className="space-y-1 sm:space-y-2">
               {availableCategories.map((category, index) => {
                 const isActive = isCategoryActive(category);
-                const hasSubcategories =
-                  category !== t("sidebar.all_categories") &&
-                  categoriesMap[category] &&
-                  categoriesMap[category].size > 0;
                 return (
                   <li key={index}>
                     <button
                       onClick={() => handleCategoryClick(category)}
-                      className={`w-full text-left py-2 px-2 sm:px-3 rounded-lg transition-all duration-300 flex items-center justify-between ${isActive
+                      className={`w-full text-left py-2 px-2 sm:px-3 rounded-lg transition-all duration-300 ${isActive
                         ? "bg-amber-600 text-white font-medium shadow-sm"
                         : "text-gray-700 hover:bg-gray-100"
                         } ${i18n.language === "ar" ? "text-right" : "text-left"} text-sm sm:text-base`}
                     >
-                      <span>{category}</span>
-                      {hasSubcategories && category !== t("sidebar.all_categories") && (
-                        <svg
-                          className={`w-4 h-4 ml-2 transition-transform duration-200 ${expandedCategory === category ? "rotate-90" : ""}`}
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      )}
+                      {category}
                       {isActive && (
                         <span className={`${i18n.language === "ar" ? "float-left" : "float-right"}`}>
                           <svg
@@ -242,39 +216,6 @@ export default function Sidebar({ filters, setFilters }) {
                         </span>
                       )}
                     </button>
-                    {/* Subcategories */}
-                    {hasSubcategories && expandedCategory === category && (
-                      <ul className="ml-4 mt-1 space-y-1 border-l border-amber-200 pl-2">
-                        {[...categoriesMap[category]].map((subcat, subIdx) => (
-                          <li key={subIdx}>
-                            <button
-                              onClick={() => handleSubcategoryClick(subcat)}
-                              className={`w-full text-left py-1 px-2 rounded transition-all duration-200 text-xs sm:text-sm flex items-center ${isSubcategoryActive(subcat)
-                                ? "bg-amber-100 text-amber-700 font-semibold"
-                                : "text-gray-600 hover:bg-amber-50"
-                                }`}
-                            >
-                              <span className="mr-2">–</span>
-                              {subcat}
-                              {isSubcategoryActive(subcat) && (
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  className="h-4 w-4 ml-1 text-amber-700"
-                                  viewBox="0 0 20 20"
-                                  fill="currentColor"
-                                >
-                                  <path
-                                    fillRule="evenodd"
-                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                    clipRule="evenodd"
-                                  />
-                                </svg>
-                              )}
-                            </button>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
                   </li>
                 );
               })}

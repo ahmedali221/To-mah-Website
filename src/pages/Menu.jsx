@@ -75,8 +75,6 @@ function Menu() {
     return str ? str.trim().replace(/\s+/g, ' ').toLowerCase().replace('/', '-').replace(' ', '-') : '';
   };
 
-  // Memoize filtered products to avoid recalculating on every render
-  // ...existing code...
   const filteredProducts = useMemo(() => {
     let filtered = productsData.filter((product) => {
       const normalizeString = (str) => {
@@ -223,20 +221,7 @@ function Menu() {
     return Array.from({ length: totalPages }, (_, i) => i + 1);
   };
 
-  // Most Popular Meals: get random meals with images
-  const mostPopularMeals = useMemo(() => {
-    // Filter meals that have an image
-    const mealsWithImages = productsData.filter(
-      (product) => product.image && typeof product.image === "string" && product.image.trim() !== ""
-    );
-    // Shuffle the array
-    const shuffled = mealsWithImages
-      .map((a) => ({ sort: Math.random(), value: a }))
-      .sort((a, b) => a.sort - b.sort)
-      .map((a) => a.value);
-    // Pick first 6 (or any number you want)
-    return shuffled.slice(0, 3);
-  }, [productsData]);
+
 
   return (
     <div className="min-h-screen bg-white" dir={i18n.language === "ar" ? "rtl" : "ltr"}>
@@ -266,56 +251,111 @@ function Menu() {
         </div>
       </div>
 
-      {/* Most Popular Meals Section with Mobile Toggle */}
-      <section className="py-6 sm:py-10">
-        <div className="max-w-6xl mx-auto px-2 sm:px-4">
-          {/* Mobile Toggle Button */}
-          <div className="md:hidden mb-4">
-            <button
-              onClick={() => setShowPopularMeals(!showPopularMeals)}
-              className="w-full flex items-center justify-between bg-primary-light hover:bg-primary text-white px-4 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
-            >
-              <span className="text-lg font-semibold">
-                {t("menu.most_popular", "Most Popular Meals")}
-              </span>
-              <div className={`transform transition-transform duration-300 ${showPopularMeals ? 'rotate-180' : 'rotate-0'}`}>
-                <ChevronDownIcon className="h-5 w-5" />
-              </div>
-            </button>
-          </div>
-
-          {/* Desktop Title (always visible) */}
-          <h2 className="hidden md:block text-2xl sm:text-3xl font-bold text-primary-dark mb-4 sm:mb-6 text-center">
-            {t("menu.most_popular", "Most Popular Meals")}
-          </h2>
-
-          {/* Content with Animation */}
-          <div className={`
-            transition-all duration-500 ease-in-out overflow-hidden
-            md:max-h-none md:opacity-100 md:transform-none
-            ${showPopularMeals
-              ? 'max-h-[2000px] opacity-100 transform translate-y-0'
-              : 'md:max-h-none md:opacity-100 max-h-0 opacity-0 transform -translate-y-4'
-            }
-          `}>
-            <div className={`
-              transition-all duration-300 delay-100
-              md:transform-none md:opacity-100
-              ${showPopularMeals
-                ? 'transform translate-y-0 opacity-100'
-                : 'transform translate-y-4 opacity-0'
-              }
-            `}>
-              <MenuCard
-                products={mostPopularMeals}
-                onViewDetails={handleViewDetails}
-                onAddToCart={handleAddToCart}
-                onImageClick={handleImageClick}
-              />
-            </div>
-          </div>
+   {/* Categories Section with Toggle */}
+<section className="py-6 sm:py-10">
+  <div className="max-w-6xl mx-auto px-2 sm:px-4">
+    {/* Mobile Toggle Button */}
+    <div className="md:hidden mb-4">
+      <button
+        onClick={() => setShowPopularMeals(!showPopularMeals)}
+        className="w-full flex items-center justify-between bg-primary-light hover:bg-primary text-white px-4 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
+      >
+        <span className="text-lg font-semibold">
+          {t("menu.categories", "Categories")}
+        </span>
+        <div className={`transform transition-transform duration-300 ${showPopularMeals ? 'rotate-180' : 'rotate-0'}`}>
+          <ChevronDownIcon className="h-5 w-5" />
         </div>
-      </section>
+      </button>
+    </div>
+
+    {/* Desktop Title (always visible) */}
+    <h2 className="hidden md:block text-2xl sm:text-3xl font-bold text-primary-dark mb-4 sm:mb-6 text-center">
+      {t("menu.categories", "Categories")}
+    </h2>
+
+    {/* Content with Animation */}
+    <div className={`
+      transition-all duration-500 ease-in-out overflow-hidden
+      md:max-h-none md:opacity-100 md:transform-none
+      ${showPopularMeals
+        ? 'max-h-[2000px] opacity-100 transform translate-y-0'
+        : 'md:max-h-none md:opacity-100 max-h-0 opacity-0 transform -translate-y-4'
+      }
+    `}>
+      <div className={`
+        transition-all duration-300 delay-100
+        md:transform-none md:opacity-100
+        ${showPopularMeals
+          ? 'transform translate-y-0 opacity-100'
+          : 'transform translate-y-4 opacity-0'
+        }
+      `}>
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 px-2 sm:px-0">
+          {/* All Categories Button */}
+          <button
+            onClick={() => setFilters({...filters, category: "", subcategory: ""})}
+            className={`px-4 py-2 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-all duration-300 flex items-center
+              ${!filters.category 
+                ? "bg-primary-dark text-white shadow-md"
+                : "bg-white text-primary-dark border border-primary-light hover:bg-primary-lightest"
+              }`}
+          >
+            {t("menu.all_categories", "All Categories")}
+          </button>
+
+          {/* Dynamic Category Buttons */}
+          {Array.from(new Set(productsData.map(p => i18n.language === "ar" ? p.category_ar : p.category_en)))
+            .filter(category => category)
+            .map((category, index) => (
+              <button
+                key={index}
+                onClick={() => setFilters({...filters, category: category, subcategory: ""})}
+                className={`px-4 py-2 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-all duration-300 flex items-center
+                  ${filters.category === category
+                    ? "bg-primary-dark text-white shadow-md"
+                    : "bg-white text-primary-dark border border-primary-light hover:bg-primary-lightest"
+                  }`}
+              >
+                {category}
+                {filters.category === category && (
+                  <span className="ml-2 bg-white/20 rounded-full p-1">
+                    <ChevronUpIcon className="h-3 w-3" />
+                  </span>
+                )}
+              </button>
+            ))
+          }
+        </div>
+
+        {/* Subcategories (only shown when a category is selected) */}
+        {filters.category && (
+          <div className="mt-4 flex flex-wrap justify-center gap-2 sm:gap-3 px-2 sm:px-0">
+            {Array.from(new Set(
+              productsData
+                .filter(p => (i18n.language === "ar" ? p.category_ar === filters.category : p.category_en === filters.category))
+                .map(p => i18n.language === "ar" ? p.subcategory_ar : p.subcategory_en)
+            ))
+            .filter(subcategory => subcategory)
+            .map((subcategory, index) => (
+              <button
+                key={index}
+                onClick={() => setFilters({...filters, subcategory})}
+                className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300
+                  ${filters.subcategory === subcategory
+                    ? "bg-primary text-white shadow-sm"
+                    : "bg-white text-primary-dark border border-primary-light hover:bg-primary-lightest"
+                  }`}
+              >
+                {subcategory}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Fixed Mobile Filter Icon Button */}
       <button

@@ -91,7 +91,7 @@ export default function MenuShowcase() {
             </p>
             {isArabic ? (
               <Link
-                to="https://tomah.sa/"
+                to="https://mytable.sa/widget/reservation/?rid=2034&lang=en&fbclid=PAZXh0bgNhZW0CMTEAAaYuR96bLluL1TDMP1YL3EkhA6m_lbAbXLYOD-dLQ-CcjZhZ7W4Hrt-c6_w_aem_0m_5PflX6LR-50gWyLYr5A"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-bold rounded-full bg-primary shadow-xl ring-1 ring-primary/20 hover:scale-105 hover:shadow-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-400 backdrop-blur-sm border border-white/10 text-white overflow-hidden"
@@ -122,7 +122,7 @@ export default function MenuShowcase() {
         </div>
       </SectionWrapper>
 
-      {/* Grilled Menu Section */}
+    {/* Grilled Menu Section */}
       <SectionWrapper>
         <h2 className="text-5xl font-extrabold mb-6 text-center text-primary">
           {t("menu_showcase.grilled_menu")}
@@ -135,61 +135,31 @@ export default function MenuShowcase() {
               className="w-full max-w-xl h-auto max-h-96 object-cover rounded-full shadow-lg border border-primary/20 mx-auto"
             />
           </div>
-          <div className="space-y-10"> {/* Removed order-1 lg:order-2 */}
+          <div className="space-y-10">
             {/* Tahini Kebab */}
             <div>
-              <div className={`flex items-center gap-2 mb-2 ${isArabic ? "justify-end" : "justify-start"}`}>
-                {isArabic ? (
-                  <>
-                    <span className="font-semibold text-primary-dark">{`73 ${t("menu_card.currency")}`}</span>
-                    <span className="h-0.5 w-12 bg-amber-400"></span>
-                    <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.tahini_kebab")}</h3>
-                  </>
-                ) : (
-                  <>
-                    <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.tahini_kebab")}</h3>
-                    <span className="h-0.5 w-12 bg-amber-400"></span>
-                    <span className="font-semibold text-primary-dark">{`73 ${t("menu_card.currency")}`}</span>
-                  </>
-                )}
+              <div className={`flex items-center gap-2 mb-2 `}>
+                <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.tahini_kebab")}</h3>
+                <span className="h-0.5 w-12 bg-amber-400"></span>
+                <span className="font-semibold text-primary-dark">{`73 ${t("menu_card.currency")}`}</span>
               </div>
               <p className={`text-primary-dark ${isArabic ? "text-right" : "text-left"}`}>{t("menu_showcase.tahini_kebab_desc")}</p>
             </div>
             {/* Tomah Kebab */}
             <div>
-              <div className={`flex items-center gap-2 mb-2 ${isArabic ? "justify-end" : "justify-start"}`}>
-                {isArabic ? (
-                  <>
-                    <span className="font-semibold text-primary-dark">{`73 ${t("menu_card.currency")}`}</span>
-                    <span className="h-0.5 w-12 bg-amber-400"></span>
-                    <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.tomah_kebab")}</h3>
-                  </>
-                ) : (
-                  <>
-                    <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.tomah_kebab")}</h3>
-                    <span className="h-0.5 w-12 bg-amber-400"></span>
-                    <span className="font-semibold text-primary-dark">{`73 ${t("menu_card.currency")}`}</span>
-                  </>
-                )}
+              <div className={`flex items-center gap-2 mb-2 `}>
+                <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.tomah_kebab")}</h3>
+                <span className="h-0.5 w-12 bg-amber-400"></span>
+                <span className="font-semibold text-primary-dark">{`73 ${t("menu_card.currency")}`}</span>
               </div>
               <p className={`text-primary-dark ${isArabic ? "text-right" : "text-left"}`}>{t("menu_showcase.tomah_kebab_desc")}</p>
             </div>
             {/* Beef Joints */}
             <div>
-              <div className={`flex items-center gap-2 mb-2 ${isArabic ? "justify-end" : "justify-start"}`}>
-                {isArabic ? (
-                  <>
-                    <span className="font-semibold text-primary-dark">{`75 ${t("menu_card.currency")}`}</span>
-                    <span className="h-0.5 w-12 bg-amber-400"></span>
-                    <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.beef_joints")}</h3>
-                  </>
-                ) : (
-                  <>
-                    <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.beef_joints")}</h3>
-                    <span className="h-0.5 w-12 bg-amber-400"></span>
-                    <span className="font-semibold text-primary-dark">{`75 ${t("menu_card.currency")}`}</span>
-                  </>
-                )}
+              <div className={`flex items-center gap-2 mb-2 `}>
+                <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.beef_joints")}</h3>
+                <span className="h-0.5 w-12 bg-amber-400"></span>
+                <span className="font-semibold text-primary-dark">{`75 ${t("menu_card.currency")}`}</span>
               </div>
               <p className={`text-primary-dark ${isArabic ? "text-right" : "text-left"}`}>{t("menu_showcase.beef_joints_desc")}</p>
             </div>
@@ -203,8 +173,6 @@ export default function MenuShowcase() {
           {t("menu_showcase.dessert_menu")}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* This div contains the image. On mobile, it will appear first in the grid (after the h2).
-              On large screens, it will be ordered second. */}
           <div className="order-1 lg:order-2">
             <img
               src={meal3}
@@ -212,64 +180,32 @@ export default function MenuShowcase() {
               className="w-full max-w-xl h-auto max-h-96 object-cover rounded-full shadow-lg border border-primary/20 mx-auto"
             />
           </div>
-          {/* This div contains the text content. On mobile, it will appear second in the grid.
-              On large screens, it will be ordered first. */}
           <div className="order-2 lg:order-1">
             <div className="space-y-10">
               {/* Um Ali */}
               <div>
-                <div className={`flex items-center gap-2 mb-2 ${isArabic ? "justify-end" : "justify-start"}`}>
-                  {isArabic ? (
-                    <>
-                      <span className="font-semibold text-primary-dark">{`20 ${t("menu_card.currency")}`}</span>
-                      <span className="h-0.5 w-12 bg-amber-400"></span>
-                      <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.um_ali")}</h3>
-                    </>
-                  ) : (
-                    <>
-                      <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.um_ali")}</h3>
-                      <span className="h-0.5 w-12 bg-amber-400"></span>
-                      <span className="font-semibold text-primary-dark">{`20 ${t("menu_card.currency")}`}</span>
-                    </>
-                  )}
+                <div className={`flex items-center gap-2 mb-2 `}>
+                  <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.um_ali")}</h3>
+                  <span className="h-0.5 w-12 bg-amber-400"></span>
+                  <span className="font-semibold text-primary-dark">{`20 ${t("menu_card.currency")}`}</span>
                 </div>
                 <p className={`text-primary-dark ${isArabic ? "text-right" : "text-left"}`}>{t("menu_showcase.um_ali_desc")}</p>
               </div>
               {/* Cream Caramel */}
               <div>
-                <div className={`flex items-center gap-2 mb-2 ${isArabic ? "justify-end" : "justify-start"}`}>
-                  {isArabic ? (
-                    <>
-                      <span className="font-semibold text-primary-dark">{`20 ${t("menu_card.currency")}`}</span>
-                      <span className="h-0.5 w-12 bg-amber-400"></span>
-                      <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.cream_caramel")}</h3>
-                    </>
-                  ) : (
-                    <>
-                      <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.cream_caramel")}</h3>
-                      <span className="h-0.5 w-12 bg-amber-400"></span>
-                      <span className="font-semibold text-primary-dark">{`20 ${t("menu_card.currency")}`}</span>
-                    </>
-                  )}
+                <div className={`flex items-center gap-2 mb-2 `}>
+                  <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.cream_caramel")}</h3>
+                  <span className="h-0.5 w-12 bg-amber-400"></span>
+                  <span className="font-semibold text-primary-dark">{`20 ${t("menu_card.currency")}`}</span>
                 </div>
                 <p className={`text-primary-dark ${isArabic ? "text-right" : "text-left"}`}>{t("menu_showcase.cream_caramel_desc")}</p>
               </div>
               {/* Roqaq */}
               <div>
-                <div className={`flex items-center gap-2 mb-2 ${isArabic ? "justify-end" : "justify-start"}`}>
-                  {isArabic ? (
-                    <>
-                      <span className="font-semibold text-primary-dark">{`25 ${t("menu_card.currency")}`}</span>
-                      <span className="h-0.5 w-12 bg-amber-400"></span>
-                      <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.roqaq")}</h3>
-                    </>
-                  ) : (
-                    <>
-                      <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.roqaq")}</h3>
-                      <span className="h-0.5 w-12 bg-amber-400"></span>
-                      <span className="font-semibold text-primary-dark">{`25 ${t("menu_card.currency")}`}</span>
-                    </>
-                  )}
+                <div className={`flex items-center gap-2 mb-2 `}>
+                  <h3 className="text-xl font-semibold text-primary">{t("menu_showcase.roqaq")}</h3>
+                  <span className="h-0.5 w-12 bg-amber-400"></span>
+                  <span className="font-semibold text-primary-dark">{`25 ${t("menu_card.currency")}`}</span>
                 </div>
                 <p className={`text-primary-dark ${isArabic ? "text-right" : "text-left"}`}>{t("menu_showcase.roqaq_desc")}</p>
               </div>

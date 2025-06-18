@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import owner from "../../assets/people.jpg";
-import cheif from "../../assets/team.jpg";
 
 export default function PeopleSection() {
   const { t } = useTranslation();
@@ -17,11 +16,7 @@ export default function PeopleSection() {
       title: t("people_section.owner_title"),
       description: t("people_section.owner_desc"),
     },
-    {
-      image: cheif,
-      title: t("people_section.chef_title"),
-      description: t("people_section.chef_desc"),
-    },
+   
   ];
 
   return (
@@ -36,7 +31,7 @@ export default function PeopleSection() {
         </div>
 
         {/* Cards Container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 **lg:grid-cols-2** gap-8 **max-w-screen-lg mx-auto**">
+        <div className="max-w-3xl mx-auto">
           {cards.map((card, index) => (
             <div
               key={index}
