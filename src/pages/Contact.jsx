@@ -126,6 +126,12 @@ const ContactPage = () => {
               {/* List of hours by day */}
               <ul className="space-y-4">
                 <li className="hover:text-gray-900 transition-all duration-500">
+                  <span className="text-gray-800 font-semibold">{t("contact.hours.saturday")}</span> — {t("contact.hours.saturday_time")}
+                </li>
+                <li className="hover:text-gray-900 transition-all duration-500">
+                  <span className="text-gray-800 font-semibold">{t("contact.hours.sunday")}</span> — {t("contact.hours.sunday_time")}
+                </li>
+                <li className="hover:text-gray-900 transition-all duration-500">
                   <span className="text-gray-800 font-semibold">{t("contact.hours.monday")}</span> — {t("contact.hours.monday_time")}
                 </li>
                 <li className="hover:text-gray-900 transition-all duration-500">
@@ -139,12 +145,6 @@ const ContactPage = () => {
                 </li>
                 <li className="hover:text-gray-900 transition-all duration-500">
                   <span className="text-gray-800 font-semibold">{t("contact.hours.friday")}</span> — {t("contact.hours.friday_time")}
-                </li>
-                <li className="hover:text-gray-900 transition-all duration-500">
-                  <span className="text-gray-800 font-semibold">{t("contact.hours.saturday")}</span> — {t("contact.hours.saturday_time")}
-                </li>
-                <li className="hover:text-gray-900 transition-all duration-500">
-                  <span className="text-gray-800 font-semibold">{t("contact.hours.sunday")}</span> — {t("contact.hours.sunday_time")}
                 </li>
               </ul>
             </div>

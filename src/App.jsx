@@ -15,6 +15,7 @@ import Cart from "./pages/Cart";
 import Payment from "./pages/Payment";
 import MealDetails from "./pages/MealDetails";
 import NoImageProducts from "./pages/NoImagePage";
+import Partners from "./pages/Partners";
 import { CartProvider, useCart } from "./context/CartContext";
 import { ThemeProvider } from "./context/ThemeContext";
 import Banner from "./components/Banner";
@@ -55,6 +56,7 @@ function App() {
               <Route path="/cart" element={<Cart />} />
               <Route path="/payment" element={<Payment />} />
               <Route path="/no-image-products" element={<NoImageProducts />} />
+              <Route path="/partners" element={<Partners />} />
             </Routes>
           </main>
 

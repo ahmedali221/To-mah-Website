@@ -1,7 +1,7 @@
 /** @format */
 
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
 	Bars3Icon,
 	XMarkIcon,
@@ -17,8 +17,16 @@ function Navbar({ changeLanguage }) {
 	const { cartItems } = useCart();
 	const { t, i18n } = useTranslation();
 	const location = useLocation();
+	const navigate = useNavigate();
 
 	const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+	
+	// Function to handle navigation and scroll to top
+	const handleNavigation = (e, path) => {
+		e.preventDefault();
+		navigate(path);
+		window.scrollTo(0, 0);
+	};
 
 	// Add scroll effect
 	useEffect(() => {
@@ -112,6 +120,7 @@ function Navbar({ changeLanguage }) {
 							{/* Cart Icon */}
 							<Link
 								to="/cart"
+								onClick={(e) => handleNavigation(e, "/cart")}
 								className="relative p-2 rounded-full bg-white shadow transition hover:scale-105 border border-gray-100"
 								aria-label="Cart"
 							>
@@ -140,6 +149,7 @@ function Navbar({ changeLanguage }) {
 						{/* Cart on left */}
 						<Link
 							to="/cart"
+							onClick={(e) => handleNavigation(e, "/cart")}
 							className="flex items-center text-black hover:text-gray-700 transition duration-300 ease-in-out"
 						>
 							<ShoppingBagIcon className="h-6 w-6 mr-2" />
@@ -156,11 +166,12 @@ function Navbar({ changeLanguage }) {
 									<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
 								</span>
 								<div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 transition-all duration-300 z-40 pointer-events-none group-hover:pointer-events-auto">
-									<Link to="/" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.home")}</Link>
-									<Link to="/about" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.about")}</Link>
-									<Link to="/menu" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.menu")}</Link>
-									<Link to="/contact" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.contact")}</Link>
-									<Link to="/no-image-products" className="block px-4 py-2 hover:bg-red-50 hover:text-red-600 transition">
+									<Link to="/" onClick={(e) => handleNavigation(e, "/")} className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.home")}</Link>
+									<Link to="/about" onClick={(e) => handleNavigation(e, "/about")} className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.about")}</Link>
+									<Link to="/menu" onClick={(e) => handleNavigation(e, "/menu")} className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.menu")}</Link>
+									<Link to="/partners" onClick={(e) => handleNavigation(e, "/partners")} className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.partners", "Partners")}</Link>
+									<Link to="/contact" onClick={(e) => handleNavigation(e, "/contact")} className="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition">{t("navbar.contact")}</Link>
+									<Link to="/no-image-products" onClick={(e) => handleNavigation(e, "/no-image-products")} className="block px-4 py-2 hover:bg-red-50 hover:text-red-600 transition">
 										{t("navbar.no_image_products", "منتجات بدون صورة")}
 									</Link>
 								</div>
@@ -169,6 +180,7 @@ function Navbar({ changeLanguage }) {
 							{/* home */}
 							<Link
 								to="/"
+								onClick={(e) => handleNavigation(e, "/")}
 								className={`uppercase nav-link relative py-2 transition-colors duration-300 hover:text-primary ${isActive("/")} group`}
 							>
 								{t("navbar.home")}
@@ -181,6 +193,7 @@ function Navbar({ changeLanguage }) {
 							{/* menu */}
 							<Link
 								to="/menu"
+								onClick={(e) => handleNavigation(e, "/menu")}
 								className={`uppercase nav-link relative py-2 transition-colors duration-300 ${scrolled ? "hover:text-primary" : "text-white hover:text-white/80"
 									} ${isActive("/menu")} group`}
 							>
@@ -200,7 +213,7 @@ function Navbar({ changeLanguage }) {
 
 							{/* Logo */}
 							<div className="flex items-center">
-								<Link to="/" className="flex items-center space-x-8">
+								<Link to="/" onClick={(e) => handleNavigation(e, "/")} className="flex items-center space-x-8">
 									<div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary">
 										<img src={logo} alt="To'mah Logo" className="w-full h-full object-cover" />
 									</div>
@@ -210,6 +223,7 @@ function Navbar({ changeLanguage }) {
 							{/* about */}
 							<Link
 								to="/about"
+								onClick={(e) => handleNavigation(e, "/about")}
 								className={`uppercase nav-link relative py-2 transition-colors duration-300 ${scrolled ? "hover:text-primary" : "text-white hover:text-white/80"
 									} ${isActive("/about")} group`}
 							>
@@ -226,10 +240,30 @@ function Navbar({ changeLanguage }) {
 								)}
 							</Link>
 							
+							{/* partners */}
+							<Link
+								to="/partners"
+								onClick={(e) => handleNavigation(e, "/partners")}
+								className={`uppercase nav-link relative py-2 transition-colors duration-300 ${scrolled ? "hover:text-primary" : "text-white hover:text-white/80"
+									} ${isActive("/partners")} group`}
+							>
+								{t("navbar.partners", "Partners")}
+								<span
+									className={`absolute bottom-0 left-0 w-0 h-0.5 ${scrolled ? "bg-primary" : "bg-white"
+										} transition-all duration-300 group-hover:w-full`}
+								></span>
+								{location.pathname === "/partners" && (
+									<span
+										className={`absolute bottom-0 left-0 w-full h-0.5 ${scrolled ? "bg-primary" : "bg-white"
+											}`}
+									></span>
+								)}
+							</Link>
 
 							{/* contact */}
 							<Link
 								to="/contact"
+								onClick={(e) => handleNavigation(e, "/contact")}
 								className={`uppercase nav-link relative py-2 transition-colors duration-300 ${scrolled ? "hover:text-primary" : "text-white hover:text-white/80"
 									} ${isActive("/contact")} group`}
 							>
@@ -263,17 +297,23 @@ function Navbar({ changeLanguage }) {
 				<div className="px-4 py-3 space-y-2">
 					<Link
 						to="/"
+						onClick={(e) => handleNavigation(e, "/")}
 						className={`block px-3 py-2 rounded-md hover:bg-primary/10 hover:text-primary transition-colors duration-300 ${isActive(
 							"/"
 						)}`}
 					>
 						{t("navbar.home")}
 					</Link>
-					<Link to="/no-image-products" className="block px-4 py-2 hover:bg-red-50 hover:text-red-600 transition">
-										{t("navbar.no_image_products", "منتجات بدون صورة")}
-									</Link>
+					<Link 
+						to="/no-image-products" 
+						onClick={(e) => handleNavigation(e, "/no-image-products")} 
+						className="block px-4 py-2 hover:bg-red-50 hover:text-red-600 transition"
+					>
+						{t("navbar.no_image_products", "منتجات بدون صورة")}
+					</Link>
 					<Link
 						to="/about"
+						onClick={(e) => handleNavigation(e, "/about")}
 						className={`block px-3 py-2 rounded-md hover:bg-primary/10 hover:text-primary transition-colors duration-300 ${isActive(
 							"/about"
 						)}`}
@@ -282,6 +322,7 @@ function Navbar({ changeLanguage }) {
 					</Link>
 					<Link
 						to="/menu"
+						onClick={(e) => handleNavigation(e, "/menu")}
 						className={`block px-3 py-2 rounded-md hover:bg-primary/10 hover:text-primary transition-colors duration-300 ${isActive(
 							"/menu"
 						)}`}
@@ -290,6 +331,7 @@ function Navbar({ changeLanguage }) {
 					</Link>
 					<Link
 						to="/partners"
+						onClick={(e) => handleNavigation(e, "/partners")}
 						className={`block px-3 py-2 rounded-md hover:bg-primary/10 hover:text-primary transition-colors duration-300 ${isActive(
 							"/partners"
 						)}`}
@@ -298,6 +340,7 @@ function Navbar({ changeLanguage }) {
 					</Link>
 					<Link
 						to="/contact"
+						onClick={(e) => handleNavigation(e, "/contact")}
 						className={`block px-3 py-2 rounded-md hover:bg-primary/10 hover:text-primary transition-colors duration-300 ${isActive(
 							"/contact"
 						)}`}

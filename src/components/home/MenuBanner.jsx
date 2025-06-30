@@ -1,13 +1,19 @@
 // components/home/MenuBanner.jsx
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import bg from "../../assets/newMenu.jpg";
 import { useTranslation } from "react-i18next";
 
 export default function MenuBanner() {
   const { t } = useTranslation();
-
-  // Remove handleClick function
+  const navigate = useNavigate();
+  
+  // Add handleClick function to navigate and scroll to top
+  const handleClick = (e) => {
+    e.preventDefault();
+    navigate("/menu");
+    window.scrollTo(0, 0);
+  };
 
   return (
     <motion.div
@@ -45,7 +51,7 @@ export default function MenuBanner() {
         >
           <Link
             to="/menu"
-            // Remove onClick={handleClick}
+            onClick={handleClick}
             className="group bg-white text-black px-8 py-3 rounded-full text-sm md:text-base hover:bg-gray-200 transition-all duration-300 flex items-center gap-2 shadow-md"
           >
             <motion.span

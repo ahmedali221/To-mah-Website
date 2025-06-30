@@ -1,10 +1,18 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import productsData from "../service/data";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const NoImageProducts = () => {
     const { t, i18n } = useTranslation();
+    const navigate = useNavigate();
+    
+    // Function to handle navigation and scroll to top
+    const handleNavigation = (e, path) => {
+        e.preventDefault();
+        navigate(path);
+        window.scrollTo(0, 0);
+    };
 
     // Filter products with no image or empty image string
     const productsWithoutImages = productsData.filter(
@@ -53,6 +61,7 @@ const NoImageProducts = () => {
                                 </div>
                                 <Link
                                     to={`/menu/${product.id}`}
+                                    onClick={(e) => handleNavigation(e, `/menu/${product.id}`)}
                                     className="mt-4 inline-block text-primary hover:underline text-sm"
                                 >
                                     {t("no_image_products.view_details", "عرض التفاصيل")}

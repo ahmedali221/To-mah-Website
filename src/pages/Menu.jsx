@@ -328,30 +328,6 @@ function Menu() {
           }
         </div>
 
-        {/* Subcategories (only shown when a category is selected) */}
-        {filters.category && (
-          <div className="mt-4 flex flex-wrap justify-center gap-2 sm:gap-3 px-2 sm:px-0">
-            {Array.from(new Set(
-              productsData
-                .filter(p => (i18n.language === "ar" ? p.category_ar === filters.category : p.category_en === filters.category))
-                .map(p => i18n.language === "ar" ? p.subcategory_ar : p.subcategory_en)
-            ))
-            .filter(subcategory => subcategory)
-            .map((subcategory, index) => (
-              <button
-                key={index}
-                onClick={() => setFilters({...filters, subcategory})}
-                className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300
-                  ${filters.subcategory === subcategory
-                    ? "bg-primary text-white shadow-sm"
-                    : "bg-white text-primary-dark border border-primary-light hover:bg-primary-lightest"
-                  }`}
-              >
-                {subcategory}
-              </button>
-            ))}
-          </div>
-        )}
       </div>
     </div>
   </div>
@@ -463,15 +439,102 @@ function Menu() {
               </div>
             </div>
 
-            <MenuCard
-              products={paginatedProducts}
-              onViewDetails={handleViewDetails}
-              onAddToCart={handleAddToCart}
-              onImageClick={handleImageClick}
-            />
+            {/* Subcategories with meals (only shown when a category is selected) */}
+            {filters.category && (
+              <div className="mt-2 mb-6">
+                {/* Get unique subcategories for the selected category, including 'Others' for items without subcategory */}
+                {(() => {
+                  const subcategories = Array.from(new Set(
+                    productsData
+                      .filter(p => (i18n.language === "ar" ? p.category_ar === filters.category : p.category_en === filters.category))
+                      .map(p => (i18n.language === "ar" ? p.subcategory_ar : p.subcategory_en) || t("menu.others", "Others"))
+                  ));
+                  return subcategories.filter(Boolean).map((subcategory, index) => {
+                    // Get products for this subcategory (including those with no subcategory as 'Others')
+                    const subcategoryProducts = productsData.filter(p =>
+                      (i18n.language === "ar" ? p.category_ar === filters.category : p.category_en === filters.category) &&
+                      ((i18n.language === "ar" ? p.subcategory_ar : p.subcategory_en) === subcategory || (!p.subcategory_ar && !p.subcategory_en && subcategory === t("menu.others", "Others")))
+                    );
+                    return (
+                      <div key={index} className="mb-8 bg-white rounded-lg shadow-md overflow-hidden">
+                        {/* Subcategory Header */}
+                        <h3 className="text-lg sm:text-xl font-semibold text-primary-dark mb-3 mt-2 text-center">
+                          {subcategory}
+                        </h3>
+                        {/* Subcategory Products */}
+                        <div className="p-3 sm:p-4">
+                          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {subcategoryProducts.map((product) => (
+                              <div
+                                key={product.id}
+                                className="group relative bg-white overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
+                              >
+                               {/* Clickable area for navigation */}
+<div
+  className="cursor-pointer"
+  onClick={() => handleViewDetails(product)}
+>
+  {/* Image Container - Increased height */}
+  <div className="h-56 sm:h-60 overflow-hidden bg-gray-100 rounded-t-lg relative flex items-center justify-center">
+    {product.image ? (
+      <img
+        src={product.image}
+        alt={i18n.language === "ar" && product.name_ar ? product.name_ar : product.name_en}
+        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+    ) : (
+      <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+        <span className="text-gray-400 text-sm">{t("menu_card.no_image")}</span>
+      </div>
+    )}
+  </div>
 
-            {/* Pagination controls */}
-            {totalPages > 1 && (
+  {/* Product Info */}
+  <div className="p-3">
+    {/* Title */}
+    <h4 className="text-sm sm:text-base font-semibold mb-1 text-gray-900 line-clamp-1">
+      {i18n.language === "ar" && product.name_ar ? product.name_ar : product.name_en}
+    </h4>
+    {/* Price */}
+    <p className="text-sm sm:text-base font-medium text-gray-800">
+      {t("menu_card.currency")}{product.price ? product.price.toFixed(0) : "N/A"}
+    </p>
+    {/* Add to Cart Button */}
+    <button
+      onClick={(e) => {
+        e.stopPropagation();
+        handleAddToCart(product);
+      }}
+      className="mt-2 w-full bg-primary-light hover:bg-primary text-white px-3 py-1.5 text-xs sm:text-sm font-medium rounded transition-colors duration-300 disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed"
+      disabled={!product.available}
+    >
+      {t("menu_card.add_to_cart")}
+    </button>
+  </div>
+</div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  });
+                })()}
+              </div>
+            )}
+
+            {/* Only show MenuCard when no category is selected */}
+            {!filters.category && (
+              <MenuCard
+                products={paginatedProducts}
+                onViewDetails={handleViewDetails}
+                onAddToCart={handleAddToCart}
+                onImageClick={handleImageClick}
+              />
+            )}
+
+            {/* Pagination controls - only show when no category is selected */}
+            {!filters.category && totalPages > 1 && (
               <div className="mt-6 sm:mt-10 mb-4 sm:mb-6 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 px-2 sm:px-4">
                 <div className="text-sm text-primary-dark">
                   {t("menu.page", {

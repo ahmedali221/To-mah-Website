@@ -87,12 +87,14 @@
     "available": "متوفر",
     "unavailable": "غير متوفر",
     "currency": "ر.س",
-    "no_products": "لم يتم العثور على منتجات"
+    "no_products": "لم يتم العثور على منتجات",
+    "no_image": "لا توجد صورة متاحة"
   },
 "popular_meals": {
     "title": "الوجبات الشعبية"
   },
 	"sidebar": {
+		"others":"أخرى",
 		    "all_categories": "الكل",	
 "min_price":"من",
 		"max_price":"إلى",
@@ -211,7 +213,15 @@
 		"address_line3": "المدينة المنورة ٤٢٢١٠، المملكة العربية السعودية",
 		"phone": "+٩٦٦ ٥٨ ٣٢٥ ٠٠٠٠",
 		"hours_title": "ساعات العمل",
+		"hours_weekdays": "أيام الأسبوع",
+		"hours_weekdays_time": "٦:٠٠ ص – ١٢:٠٠ ص",
+		"hours_weekend": "عطلة نهاية الأسبوع",
+		"hours_weekend_time": "٦:٠٠ ص – ٢:٠٠ ص",
 		"hours": {
+			"saturday": "السبت",
+			"saturday_time": "٦:٠٠ ص – ٢:٠٠ ص",
+			"sunday": "الأحد",
+			"sunday_time": "٦:٠٠ ص – ١٢:٠٠ ص",
 			"monday": "الاثنين",
 			"monday_time": "٦:٠٠ ص – ١٢:٠٠ ص",
 			"tuesday": "الثلاثاء",
@@ -221,11 +231,7 @@
 			"thursday": "الخميس",
 			"thursday_time": "٦:٠٠ ص – ٢:٠٠ ص",
 			"friday": "الجمعة",
-			"friday_time": "٦:٠٠ ص – ٢:٠٠ ص",
-			"saturday": "السبت",
-			"saturday_time": "٦:٠٠ ص – ٢:٠٠ ص",
-			"sunday": "الأحد",
-			"sunday_time": "٦:٠٠ ص – ١٢:٠٠ ص"
+			"friday_time": "٦:٠٠ ص – ٢:٠٠ ص"
 		},
 		"restaurant_image_alt": "صورة المطعم"
 	},
@@ -375,15 +381,19 @@
 		"toast": "تمت إضافة العنصر إلى السلة!"
 	},
  "menu": {
-	"menu.most_popular": "الوجبات الأكثر شعبية",
-	"menu.Menu": "قائمة الطعام",
-	"menu.description": "استكشف قائمتنا المتنوعة التي تضم أطباق هجرية تقليدية، وأطباق مشوية، وأطباق موسمية. كل طبق مُعد بعناية ليقدم لك نكهات المدينة الأصيلة.",
+	"most_popular": "الوجبات الأكثر شعبية",
+	"Menu": "قائمة الطعام",
+	"description": "استكشف قائمتنا المتنوعة التي تضم أطباق هجرية تقليدية، وأطباق مشوية، وأطباق موسمية. كل طبق مُعد بعناية ليقدم لك نكهات المدينة الأصيلة.",
     "title": "قائمتنا",
     "search_placeholder": "ابحث في قائمتنا...",
+    "categories": "الفئات",
+    "all_categories": "جميع الفئات",
     "filters": "التصنيفات",
     "show_filters": "إظهار التصنيفات",
     "hide_filters": "إخفاء التصنيفات",
-    "page": "الصفحة {{current}} من {{total}}"
+    "others": "أخرى",
+    "page": "الصفحة {{current}} من {{total}}",
+    "page_number": "{{number}}"
   },
 	"partners": {
 		"hero": {

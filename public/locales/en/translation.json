@@ -87,13 +87,15 @@
     "available": "Available",
     "unavailable": "Unavailable",
     "currency": "SR",
-    "no_products": "No products found"
+    "no_products": "No products found",
+    "no_image": "No image available"
 	},
 	"popular_meals":{
 		    "title": "Popular Meals"
 
 	},
 	"sidebar": {
+		"others":"Others",
 	    "all_categories": "All",
 		"min_price":"From",
 		"max_price":"To",
@@ -209,23 +211,26 @@
 		"address_line3": "Medina 42210, Saudi Arabia",
 		"phone": "+966 58 325 0000",
 		"hours_title": "Opening Hours",
+		"hours_weekdays": "Weekdays",
+		"hours_weekdays_time": "6:00 AM – 12:00 AM",
+		"hours_weekend": "Weekend",
+		"hours_weekend_time": "6:00 AM – 2:00 AM",
 		"hours": {
-			"sunday": "Sunday",
-			"sunday_time": "6:00 AM – 12:00 AM",
-			"monday": "Monday",
-			"monday_time": "6:00 AM – 12:00 AM",
-			"tuesday": "Tuesday",
-			"tuesday_time": "6:00 AM – 12:00 AM",
-			"wednesday": "Wednesday",
-			"wednesday_time": "6:00 AM – 2:00 AM",
-			"thursday": "Thursday",
-			"thursday_time": "6:00 AM – 2:00 AM",
-			"friday": "Friday",
-			"friday_time": "6:00 AM – 2:00 AM",
-			"saturday": "Saturday",
-			"saturday_time": "6:00 AM – 2:00 AM"
-			
-		},
+    "saturday": "Saturday",
+    "saturday_time": "6:00 AM – 2:00 AM",
+    "sunday": "Sunday",
+    "sunday_time": "6:00 AM – 12:00 AM",
+    "monday": "Monday",
+    "monday_time": "6:00 AM – 12:00 AM",
+    "tuesday": "Tuesday",
+    "tuesday_time": "6:00 AM – 12:00 AM",
+    "wednesday": "Wednesday",
+    "wednesday_time": "6:00 AM – 2:00 AM",
+    "thursday": "Thursday",
+    "thursday_time": "6:00 AM – 2:00 AM",
+    "friday": "Friday",
+    "friday_time": "6:00 AM – 2:00 AM"
+},
 		"restaurant_image_alt": "Restaurant Image"
 	},
 	
@@ -366,15 +371,19 @@
 	},
 	
   "menu": {
-	"menu.most_popular": "Most Popular Meals",
-	"menu.Menu": "Menu",
-	"menu.description": "Explore our diverse menu featuring traditional Hejazi dishes, grilled specialties, and seasonal delights. Each dish is crafted with care to bring you the authentic flavors of Medina.",
+	"most_popular": "Most Popular Meals",
+	"Menu": "Menu",
+	"description": "Explore our diverse menu featuring traditional Hejazi dishes, grilled specialties, and seasonal delights. Each dish is crafted with care to bring you the authentic flavors of Medina.",
     "title": "Our Menu",
     "search_placeholder": "Search in our Menu...",
+    "categories": "Categories",
+    "all_categories": "All Categories",
     "filters": "Filters",
     "show_filters": "Show Filters",
     "hide_filters": "Hide Filters",
-    "page": "Page {{current}} of {{total}}"
+    "others": "Others",
+    "page": "Page {{current}} of {{total}}",
+    "page_number": "{{number}}"
   },
   
 	"partners": {
