@@ -356,6 +356,8 @@
 		"prep_time": "Preparation Time",
 		"calories": "Calories",
 		"kcal": "kcal",
+		"burn_time": "Burn Time (Running)",
+		"minutes": "min",
 		"difficulty": "Difficulty",
 		"servings": "Servings",
 		"vegetarian": "Vegetarian",
@@ -367,7 +369,8 @@
 		"notes": "Notes",
 		"add_to_cart": "Add to Cart",
 		"currency": "SR",
-		"toast": "Item added to cart!"
+		"toast": "Item added to cart!",
+		"unnamed_meal": "Unnamed Meal"
 	},
 	
   "menu": {
