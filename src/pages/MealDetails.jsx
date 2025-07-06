@@ -75,12 +75,12 @@ function MealDetails() {
 	// Format price safely
 	const formatPrice = (price) => {
 		if (price === undefined || price === null) return t("meal_details.na");
-		
+
 		if (typeof price === 'string') {
 			// If price is already a string (like "15 ريال"), return it as is
 			return price;
 		}
-		
+
 		try {
 			return typeof price === 'number' ? price.toFixed(2) : price.toString();
 		} catch {
@@ -103,8 +103,8 @@ function MealDetails() {
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				{/* Back button */}
 				<div className={`mb-8 transition-all duration-700 transform ${visible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
-					<button 
-						onClick={() => navigate(-1)} 
+					<button
+						onClick={() => navigate(-1)}
 						className="btn btn-ghost hover:bg-amber-100 transition-all duration-300">
 						← {t("meal_details.back")}
 					</button>
@@ -131,8 +131,6 @@ function MealDetails() {
 								/>
 							</div>
 						)}
-
-					
 					</div>
 
 					{/* Right column - Details */}
@@ -143,64 +141,76 @@ function MealDetails() {
 									{t("meal_details.currency")} {formatPrice(meal.price)}
 								</p>
 							)}
-							
+
 							{getMealDescription() && (
 								<p className="text-lg mt-4">
 									{getMealDescription()}
 								</p>
 							)}
-								{/* Quick facts - Only show if at least one fact exists */}
-						{(meal.prepTime || meal.calories || meal.difficulty_en || meal.difficulty_ar || 
-						  meal.servings || meal.isVegetarian !== undefined || meal.isVegan !== undefined) && (
+
+							{/* Quick facts - Show all available data */}
 							<div className={`bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 transition-all duration-1000 delay-500 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
 								<h3 className="text-xl font-bold mb-4 text-amber-600">
 									{t("meal_details.quick_facts")}
 								</h3>
 								<div className="grid grid-cols-2 gap-4">
+									{/* Calories */}
+									{(meal.calories || meal.calories_en || meal.calories_ar) && (
+										<div className="flex items-center gap-2">
+											<span role="img" aria-label="calories" className="text-amber-500 text-xl">🔥</span>
+											<div>
+												<p className="text-sm opacity-70">{t("meal_details.calories")}</p>
+												<p className="font-medium">
+													{meal.calories
+														|| (i18n.language === "ar" ? meal.calories_ar : meal.calories_en)
+														|| t("meal_details.na")}
+												</p>
+											</div>
+										</div>
+									)}
+									{/* Burn time */}
+									{(meal.burn_time_en || meal.burn_time_ar || meal.calories) && (
+										<div className="flex items-center gap-2">
+											<span role="img" aria-label="run" className="text-amber-500 text-xl">🏃‍♂️</span>
+											<div>
+												<p className="text-sm opacity-70">{t("meal_details.burn_time")}</p>
+												<p className="font-medium">
+													{meal.burn_time_en && i18n.language !== "ar" && meal.burn_time_en}
+													{meal.burn_time_ar && i18n.language === "ar" && meal.burn_time_ar}
+													{!meal.burn_time_en && !meal.burn_time_ar && meal.calories && (
+														<>
+															{calculateBurnTime(Number(meal.calories))} {t("meal_details.minutes")}
+														</>
+													)}
+												</p>
+											</div>
+										</div>
+									)}
+									{/* Prep Time */}
 									{meal.prepTime && (
 										<div>
-											<p className="text-sm opacity-70">
-												{t("meal_details.prep_time")}
-											</p>
+											<p className="text-sm opacity-70">{t("meal_details.prep_time")}</p>
+											<p className="font-medium">{meal.prepTime}</p>
+										</div>
+									)}
+									{/* Difficulty */}
+									{(meal.difficulty_en || meal.difficulty_ar) && (
+										<div>
+											<p className="text-sm opacity-70">{t("meal_details.difficulty")}</p>
 											<p className="font-medium">
-												{meal.prepTime}
+												{i18n.language === "ar" && meal.difficulty_ar
+													? meal.difficulty_ar
+													: meal.difficulty_en}
 											</p>
 										</div>
 									)}
-									
-									{/* Calories field with icon */}
-									<div>
-										<p className="text-sm opacity-70 flex items-center gap-1">
-											🔥 {t("meal_details.calories")}
-										</p>
-										<p className="font-medium">
-											{meal.calories || 250} {t("meal_details.kcal")}
-										</p>
-									</div>
-									
-									{/* Burn time field with running icon */}
-									<div>
-										<p className="text-sm opacity-70 flex items-center gap-1">
-											🏃‍♂️ {t("meal_details.burn_time")}
-										</p>
-										<p className="font-medium">
-											{calculateBurnTime(meal.calories || 250)} {t("meal_details.minutes")}
-										</p>
-									</div>
-									
-								
-									
-								
-									
-								
+
 								</div>
 							</div>
-						)}
 						</div>
 
 						<div className="divider"></div>
 
-					
 						{/* Notes - Only show if notes exist */}
 						{(meal.notes_en || meal.notes_ar || meal.notes) && (
 							<div className={`transition-all duration-1000 delay-700 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
