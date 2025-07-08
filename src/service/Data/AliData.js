@@ -13,6 +13,11 @@ import salad6 from "../../assets/Menu/salads/6.jpg";
 import salad7 from "../../assets/Menu/salads/7.jpg";
 import salad8 from "../../assets/Menu/salads/8.jpg";
 
+
+import lunch1 from "../../assets/Menu/lunch/1.jpg";
+import lunch2 from "../../assets/Menu/lunch/2.jpg";
+import lunch3 from "../../assets/Menu/lunch/3.jpg";
+
 import breadBasket1 from "../../assets/Menu/breadBasket/1.jpg";
 import breadBasket3 from "../../assets/Menu/breadBasket/3.jpg";
 import breadBasket5 from "../../assets/Menu/breadBasket/5.jpg";
@@ -441,7 +446,7 @@ const productsData = [
     subcategory_ar: "مشهونات طعمة (المخلالات و الطرشي)",
     available: true,
     trendy: false,
-    image: null,
+    image: lunch1,
   },
 
   {
@@ -1138,7 +1143,7 @@ const productsData = [
   },
   {
     id: "128",
-    image: null,
+    image: lunch2,
     meal_name_en: "Meat Fatayer",
     description_en: "Traditional bread soaked in spiced meat broth",
     price: null,
@@ -1176,7 +1181,7 @@ const productsData = [
   },
   {
     id: "130",
-    image: null,
+    image: lunch3,
     meal_name_en: "Meat Kozi",
     description_en: "Rice and pasta mix with meat",
     price: null,

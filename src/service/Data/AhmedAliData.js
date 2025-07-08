@@ -2,6 +2,16 @@ import desert1 from "../../assets/Menu/deserts/1.JPG";
 import desert2 from "../../assets/Menu/deserts/2.jpg";
 import desert3 from "../../assets/Menu/deserts/3.jpg";
 import desert5 from "../../assets/Menu/deserts/5.jpg";
+import desert4 from "../../assets/Menu/deserts/4.jpg";
+import desert6 from "../../assets/Menu/deserts/6.jpg";
+
+import breadbaked1 from "../../assets/Menu/breakfastDeserts/3.jpg";
+import breadbaked2 from "../../assets/Menu/breakfastDeserts/4.jpg";
+
+
+import offer1 from "../../assets/Menu/offers/workLunch.jpg";
+import offer2 from "../../assets/Menu/offers/companyOffers.jpg";
+
 
 import drink2 from "../../assets/Menu/drinks/2.jpg";
 import drink6 from "../../assets/Menu/drinks/6.jpg";
@@ -11,6 +21,8 @@ import drink11 from "../../assets/Menu/drinks/11.JPG";
 import drink12 from "../../assets/Menu/drinks/12.jpg";
 import drink13 from "../../assets/Menu/drinks/13.jpg";
 import drink15 from "../../assets/Menu/drinks/15.JPG";
+import drink16 from "../../assets/Menu/drinks/16.jpg";
+import drink17 from "../../assets/Menu/drinks/17.jpg";
 
 const productsData = [
   //////////////////////////////////
@@ -233,7 +245,7 @@ const productsData = [
   },
   {
     id: "21",
-    image: null,
+    image: breadbaked1,
     meal_name_en: "Mini Rusk",
     description_en: "",
     price: "13 ريال",
@@ -272,7 +284,7 @@ const productsData = [
   },
   {
     id: "23",
-    image: null,
+    image: breadbaked2,
     meal_name_en: "Marengue / Hwa Eggs",
     description_en: "",
     price: "5 ريال",
@@ -411,7 +423,7 @@ const productsData = [
     subcategory_ar: "حلويات",
     available: true,
     trendy: false,
-    image: null,
+    image: desert6,
   },
   {
     meal_name_en: "Ashure (Noah's Pudding)",
@@ -430,13 +442,13 @@ const productsData = [
     subcategory_ar: "حلويات",
     available: true,
     trendy: false,
-    image: null,
+    image: desert4,
   },
   ///////////////////////////////
   //// مشروبات
   {
     id: "32",
-    image: null,
+    image: drink17,
     meal_name_en: "Sahlab",
     description_en: "The popular Madini winter drink",
     price: "17 ريال",
@@ -530,7 +542,7 @@ const productsData = [
   },
   {
     id: "33",
-    image: null,
+    image: drink16,
     meal_name_en: "Almond Coffee",
     description_en: "Coffee with milk and almonds sweetened with sugar",
     price: "17 ريال",
@@ -881,7 +893,7 @@ const productsData = [
   ///// عروض طعمة
   {
     id: "52",
-    image: null,
+    image: offer1,
     meal_name_en: "Lunch Meal",
     description_en:
       "1 person. Includes salad, madini rice, ½ chicken, cheese samosa, cream caramel, and soft drink.",
@@ -899,12 +911,12 @@ const productsData = [
   },
   {
     id: "53",
-    image: null,
+    image: offer2,
     meal_name_en: "Tour Meals",
     description_en:
       "1 person. Includes salad, chicken, dakos, 1 samosa, and soft drink.",
     price: "27 ريال",
-    meal_name_ar: "وجبة شراحات السياحة",
+    meal_name_ar: "وجبة شركات السياحة",
     description_ar:
       "يخدم شخص واحد. ١/ سلطة، ٢/ دجاج، ٣/ دقوس، ٤/ سمبوسة، ٥/ مشروب غازي",
 
