@@ -242,7 +242,7 @@ function Menu() {
             <button
               className={`absolute ${i18n.language === "ar" ? "left-2 sm:left-3" : "right-2 sm:right-3"} top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white rounded-full p-2 sm:p-3 transition-all duration-300`}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </button>
@@ -263,7 +263,7 @@ function Menu() {
           {t("menu.categories", "Categories")}
         </span>
         <div className={`transform transition-transform duration-300 ${showPopularMeals ? 'rotate-180' : 'rotate-0'}`}>
-          <ChevronDownIcon className="h-5 w-5" />
+          <ChevronDownIcon className="h-5 w-5 text-white" />
         </div>
       </button>
     </div>
@@ -292,11 +292,11 @@ function Menu() {
       `}>
         <div className="flex flex-wrap justify-center gap-3 sm:gap-6 md:gap-8 lg:gap-10 px-2 sm:px-0 mb-6 mt-2">
           {[
-            { key: 'breakfast', label: i18n.language === 'ar' ? 'فطور' : 'Breakfast' },
-            { key: 'lunch_dinner', label: i18n.language === 'ar' ? 'غداء وعشاء' : 'Lunch & Dinner' },
-            { key: 'baked_goods', label: i18n.language === 'ar' ? 'مخبوزات' : 'Baked Goods' },
-            { key: 'deserts', label: i18n.language === 'ar' ? 'حلويات' : 'Deserts' },
-            { key: 'drinks', label: i18n.language === 'ar' ? 'مشروبات' : 'Drinks' },
+            { key: 'breakfast', label: i18n.language === 'ar' ? 'الفطور' : 'Breakfast' },
+            { key: 'lunch_dinner', label: i18n.language === 'ar' ? 'الغداء و العشاء' : 'Lunch & Dinner' },
+            { key: 'baked_goods', label: i18n.language === 'ar' ? 'المخبوزات' : 'Baked Goods' },
+            { key: 'deserts', label: i18n.language === 'ar' ? 'حلويات' : 'deserts' },
+            { key: 'drinks', label: i18n.language === 'ar' ? 'مشروبات' : 'drinks' },
           ].map((cat) => (
             <button
               key={cat.key}
@@ -312,7 +312,7 @@ function Menu() {
               {cat.label}
               {filters.category === cat.label && (
                 <span className="ml-2 bg-white/20 rounded-full p-1">
-                  <ChevronUpIcon className="h-4 w-4" />
+                  <ChevronDownIcon className="h-4 w-4 text-white" />
                 </span>
               )}
             </button>
@@ -354,7 +354,7 @@ function Menu() {
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-2 flex items-center px-2 text-primary-dark">
                   <svg
-                    className="fill-current h-4 w-4"
+                    className="fill-current h-4 w-4 text-white"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20">
                     <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
@@ -399,7 +399,7 @@ function Menu() {
   onClick={() => handleViewDetails(product)}
 >
   {/* Image Container - Increased height */}
-  <div className="h-56 sm:h-60 overflow-hidden bg-gray-100 rounded-t-lg relative flex items-center justify-center">
+  <div className="h-72 sm:h-80 overflow-hidden bg-gray-100 rounded-t-lg relative flex items-center justify-center">
     {product.image ? (
       <img
         src={product.image}
@@ -474,7 +474,7 @@ function Menu() {
                     className={`p-2 rounded-md ${currentPage === 1 ? 'text-primary-light cursor-not-allowed' : 'text-primary-dark hover:bg-primary-lightest'}`}
                     aria-label={t("menu_card.previous")}
                   >
-                    <ChevronLeftIcon className="h-5 w-5" />
+                    <ChevronLeftIcon className="h-5 w-5 text-white" />
                   </button>
 
                   <div className="flex items-center gap-1">
@@ -504,7 +504,7 @@ function Menu() {
                     className={`p-2 rounded-md ${currentPage === totalPages || totalPages === 0 ? 'text-primary-light cursor-not-allowed' : 'text-primary-dark hover:bg-primary-lightest'}`}
                     aria-label={t("menu_card.next")}
                   >
-                    <ChevronRightIcon className="h-5 w-5" />
+                    <ChevronRightIcon className="h-5 w-5 text-white" />
                   </button>
                 </div>
               </div>
@@ -521,7 +521,7 @@ function Menu() {
               onClick={closeModal}
               className="absolute top-2 right-2 sm:top-4 sm:right-4 p-2 bg-white rounded-full shadow-md hover:bg-primary-light transition-colors z-10"
             >
-              <XMarkIcon className="h-5 w-5 sm:h-6 sm:w-6 text-primary-dark" />
+              <XMarkIcon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
             </button>
             <div className="flex-grow flex items-center justify-center h-full overflow-hidden">
               <img
@@ -547,28 +547,28 @@ function Menu() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 mt-8 sm:mt-12">
               <div className="bg-primary-lightest p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center border border-primary/10">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-primary-light">
-                  <SparklesIcon className="h-8 w-8 text-primary-dark" />
+                  <SparklesIcon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-primary-dark">{t("home.features.quality.title")}</h3>
                 <p className="text-primary">{t("home.features.quality.description")}</p>
               </div>
               <div className="bg-primary-lightest p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center border border-primary/10">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-primary-light">
-                  <StarIcon className="h-8 w-8 text-primary-dark" />
+                  <StarIcon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-primary-dark">{t("home.values.service.title")}</h3>
                 <p className="text-primary">{t("home.values.service.description")}</p>
               </div>
               <div className="bg-primary-lightest p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center border border-primary/10">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-primary-light">
-                  <HeartIcon className="h-8 w-8 text-primary-dark" />
+                  <HeartIcon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-primary-dark">{t("home.values.quality.title")}</h3>
                 <p className="text-primary">{t("home.values.quality.description")}</p>
               </div>
               <div className="bg-primary-lightest p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center border border-primary/10">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-primary-light">
-                  <ClockIcon className="h-8 w-8 text-primary-dark" />
+                  <ClockIcon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-primary-dark">{t("home.features.delivery.title")}</h3>
                 <p className="text-primary">{t("home.features.delivery.description")}</p>

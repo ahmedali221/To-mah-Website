@@ -29,9 +29,9 @@
 body,
 body[dir="rtl"],
 html[dir="rtl"] body {
-  font-family: "Almadinah2", "Aref Ruqaa", serif;
-  font-size: 24px;
-  line-height: 1.6;
+  font-family: "Almadinah2", Arial, "Aref Ruqaa", serif;
+  font-size: 18px;
+  line-height: 1.7;
   background: #f0f2f7;
   color: #1d2939;
   transition: background 0.3s, color 0.3s;
@@ -40,10 +40,8 @@ html[dir="rtl"] body {
 /* Enhanced Arabic body text */
 [dir="rtl"] body,
 html[dir="rtl"] body {
-  font-size: 28px;
-  /* Increased for Arabic readability */
-  line-height: 1.7;
-  /* Slightly more spacing for Arabic */
+  font-size: 20px;
+  line-height: 1.8;
 }
 
 /* Text elements - unified sizing for LTR */
@@ -58,9 +56,9 @@ textarea,
 label,
 td,
 th {
-  font-family: "Almadinah2", "Aref Ruqaa", serif;
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-family: "Almadinah2", Arial, "Aref Ruqaa", serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 /* Enhanced Arabic text elements */
@@ -75,10 +73,8 @@ th {
 [dir="rtl"] label,
 [dir="rtl"] td,
 [dir="rtl"] th {
-  font-size: 1.6rem;
-  /* Increased from 1.5rem for better Arabic readability */
-  line-height: 1.7;
-  /* Enhanced line height for Arabic */
+  font-size: 1.2rem;
+  line-height: 1.8;
 }
 
 /* Heading hierarchy - unified base styles */
@@ -98,325 +94,329 @@ h6 {
 
 /* LTR heading sizes */
 h1 {
-  font-size: 3rem;
+  font-size: 2.6rem;
 }
-
 h2 {
-  font-size: 2.5rem;
-}
-
-h3 {
   font-size: 2.1rem;
 }
-
+h3 {
+  font-size: 1.7rem;
+}
 h4 {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 }
-
 h5 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
-
 h6 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 /* Enhanced Arabic heading sizes */
 [dir="rtl"] h1 {
-  font-size: 3.5rem;
-  /* Significantly larger for Arabic */
-  line-height: 1.4;
-  /* Better spacing for Arabic headers */
-}
-
-[dir="rtl"] h2 {
   font-size: 3rem;
   line-height: 1.4;
 }
-
+[dir="rtl"] h2 {
+  font-size: 2.5rem;
+  line-height: 1.4;
+}
 [dir="rtl"] h3 {
-  font-size: 2.6rem;
+  font-size: 2rem;
   line-height: 1.4;
 }
-
 [dir="rtl"] h4 {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   line-height: 1.4;
 }
-
 [dir="rtl"] h5 {
-  font-size: 1.9rem;
+  font-size: 1.2rem;
   line-height: 1.4;
 }
-
 [dir="rtl"] h6 {
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   line-height: 1.4;
 }
 
 /* ===== RESPONSIVE BREAKPOINTS ===== */
 
-/* Desktop (768px+) */
-@media (min-width: 768px) {
-
+/* Desktop (min-width: 1025px) */
+@media (min-width: 1025px) {
   body,
   body[dir="rtl"],
   html[dir="rtl"] body {
-    font-size: 20px;
+    font-size: 22px;
   }
-
-  /* Enhanced Arabic body on desktop */
   [dir="rtl"] body,
   html[dir="rtl"] body {
     font-size: 24px;
   }
-
-  /* LTR desktop headings */
-  h1 {
-    font-size: 3.2rem;
-  }
-
-  h2 {
-    font-size: 2.6rem;
-  }
-
-  h3 {
-    font-size: 2.2rem;
-  }
-
-  h4 {
-    font-size: 1.9rem;
-  }
-
-  h5 {
+  p,
+  span,
+  div,
+  li,
+  a,
+  button,
+  input,
+  textarea,
+  label,
+  td,
+  th {
     font-size: 1.6rem;
   }
-
-  h6 {
+  [dir="rtl"] p,
+  [dir="rtl"] span,
+  [dir="rtl"] div,
+  [dir="rtl"] li,
+  [dir="rtl"] a,
+  [dir="rtl"] button,
+  [dir="rtl"] input,
+  [dir="rtl"] textarea,
+  [dir="rtl"] label,
+  [dir="rtl"] td,
+  [dir="rtl"] th {
+    font-size: 1.8rem;
+  }
+  h1 {
+    font-size: 2.6rem;
+  }
+  h2 {
+    font-size: 2.1rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
+  h4 {
     font-size: 1.3rem;
   }
-
-  /* Enhanced Arabic desktop headings */
+  h5 {
+    font-size: 1.1rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
   [dir="rtl"] h1 {
-    font-size: 3.8rem;
+    font-size: 3rem;
   }
-
   [dir="rtl"] h2 {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
   }
-
   [dir="rtl"] h3 {
-    font-size: 2.8rem;
-  }
-
-  [dir="rtl"] h4 {
-    font-size: 2.4rem;
-  }
-
-  [dir="rtl"] h5 {
     font-size: 2rem;
   }
-
+  [dir="rtl"] h4 {
+    font-size: 1.5rem;
+  }
+  [dir="rtl"] h5 {
+    font-size: 1.2rem;
+  }
   [dir="rtl"] h6 {
-    font-size: 1.7rem;
+    font-size: 1.1rem;
   }
 }
 
 /* Tablet (601px - 1024px) */
 @media (max-width: 1024px) and (min-width: 601px) {
-
-  body,
-  body[dir="rtl"],
-  html[dir="rtl"] body {
-    font-size: 19px;
-  }
-
-  /* Enhanced Arabic body on tablet */
-  [dir="rtl"] body,
-  html[dir="rtl"] body {
-    font-size: 23px;
-  }
-
-  /* LTR tablet headings */
-  h1 {
-    font-size: 2.8rem;
-  }
-
-  h2 {
-    font-size: 2.3rem;
-  }
-
-  h3 {
-    font-size: 2rem;
-  }
-
-  h4 {
-    font-size: 1.7rem;
-  }
-
-  h5 {
-    font-size: 1.5rem;
-  }
-
-  h6 {
-    font-size: 1.2rem;
-  }
-
-  /* Enhanced Arabic tablet headings */
-  [dir="rtl"] h1 {
-    font-size: 3.4rem;
-  }
-
-  [dir="rtl"] h2 {
-    font-size: 2.9rem;
-  }
-
-  [dir="rtl"] h3 {
-    font-size: 2.5rem;
-  }
-
-  [dir="rtl"] h4 {
-    font-size: 2.1rem;
-  }
-
-  [dir="rtl"] h5 {
-    font-size: 1.8rem;
-  }
-
-  [dir="rtl"] h6 {
-    font-size: 1.5rem;
-  }
-}
-
-/* Mobile (up to 600px) */
-@media (max-width: 600px) {
-
   body,
   body[dir="rtl"],
   html[dir="rtl"] body {
     font-size: 18px;
   }
-
-  /* Enhanced Arabic body on mobile */
   [dir="rtl"] body,
   html[dir="rtl"] body {
-    font-size: 22px;
+    font-size: 20px;
   }
-
-  /* LTR mobile headings */
-  h1 {
-    font-size: 2.4rem;
+  p,
+  span,
+  div,
+  li,
+  a,
+  button,
+  input,
+  textarea,
+  label,
+  td,
+  th {
+    font-size: 1.05rem;
   }
-
-  h2 {
-    font-size: 2.1rem;
-  }
-
-  h3 {
-    font-size: 1.8rem;
-  }
-
-  h4 {
-    font-size: 1.6rem;
-  }
-
-  h5 {
-    font-size: 1.4rem;
-  }
-
-  h6 {
+  [dir="rtl"] p,
+  [dir="rtl"] span,
+  [dir="rtl"] div,
+  [dir="rtl"] li,
+  [dir="rtl"] a,
+  [dir="rtl"] button,
+  [dir="rtl"] input,
+  [dir="rtl"] textarea,
+  [dir="rtl"] label,
+  [dir="rtl"] td,
+  [dir="rtl"] th {
     font-size: 1.2rem;
   }
-
-  /* Enhanced Arabic mobile headings */
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  h5 {
+    font-size: 1.05rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
   [dir="rtl"] h1 {
     font-size: 3rem;
   }
-
   [dir="rtl"] h2 {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
   }
-
   [dir="rtl"] h3 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
-
   [dir="rtl"] h4 {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
   }
-
   [dir="rtl"] h5 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
-
   [dir="rtl"] h6 {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
+  body,
+  body[dir="rtl"],
+  html[dir="rtl"] body {
+    font-size: 16px;
+  }
+  [dir="rtl"] body,
+  html[dir="rtl"] body {
+    font-size: 18px;
+  }
+  p,
+  span,
+  div,
+  li,
+  a,
+  button,
+  input,
+  textarea,
+  label,
+  td,
+  th {
+    font-size: 0.98rem;
+  }
+  [dir="rtl"] p,
+  [dir="rtl"] span,
+  [dir="rtl"] div,
+  [dir="rtl"] li,
+  [dir="rtl"] a,
+  [dir="rtl"] button,
+  [dir="rtl"] input,
+  [dir="rtl"] textarea,
+  [dir="rtl"] label,
+  [dir="rtl"] td,
+  [dir="rtl"] th {
+    font-size: 1.1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  h4,
+  h5,
+  h6 {
+    font-size: 1rem;
+  }
+  [dir="rtl"] h1 {
+    font-size: 2.3rem;
+  }
+  [dir="rtl"] h2 {
+    font-size: 1.8rem;
+  }
+  [dir="rtl"] h3 {
+    font-size: 1.3rem;
+  }
+  [dir="rtl"] h4,
+  [dir="rtl"] h5,
+  [dir="rtl"] h6 {
+    font-size: 1.1rem;
   }
 }
 
 /* Extra small devices (up to 375px) */
 @media (max-width: 375px) {
-
   body,
   body[dir="rtl"],
   html[dir="rtl"] body {
-    font-size: 17px;
+    font-size: 15px;
   }
-
-  /* Enhanced Arabic body on extra small devices */
   [dir="rtl"] body,
   html[dir="rtl"] body {
-    font-size: 21px;
+    font-size: 16px;
   }
-
-  /* LTR extra small headings */
+  p,
+  span,
+  div,
+  li,
+  a,
+  button,
+  input,
+  textarea,
+  label,
+  td,
+  th {
+    font-size: 0.9rem;
+  }
+  [dir="rtl"] p,
+  [dir="rtl"] span,
+  [dir="rtl"] div,
+  [dir="rtl"] li,
+  [dir="rtl"] a,
+  [dir="rtl"] button,
+  [dir="rtl"] input,
+  [dir="rtl"] textarea,
+  [dir="rtl"] label,
+  [dir="rtl"] td,
+  [dir="rtl"] th {
+    font-size: 1rem;
+  }
   h1 {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.9rem;
-  }
-
-  h3 {
-    font-size: 1.7rem;
-  }
-
-  h4 {
     font-size: 1.5rem;
   }
-
-  h5 {
-    font-size: 1.3rem;
-  }
-
-  h6 {
+  h2 {
     font-size: 1.2rem;
   }
-
-  /* Enhanced Arabic extra small headings */
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1rem;
+  }
   [dir="rtl"] h1 {
-    font-size: 2.8rem;
+    font-size: 1.7rem;
   }
-
   [dir="rtl"] h2 {
-    font-size: 2.4rem;
-  }
-
-  [dir="rtl"] h3 {
-    font-size: 2.1rem;
-  }
-
-  [dir="rtl"] h4 {
-    font-size: 1.8rem;
-  }
-
-  [dir="rtl"] h5 {
-    font-size: 1.5rem;
-  }
-
-  [dir="rtl"] h6 {
     font-size: 1.3rem;
+  }
+  [dir="rtl"] h3,
+  [dir="rtl"] h4,
+  [dir="rtl"] h5,
+  [dir="rtl"] h6 {
+    font-size: 1.1rem;
   }
 }
 
@@ -451,6 +451,12 @@ h6 {
 [dir="rtl"] .menu-item-description,
 [dir="rtl"] .section-description {
   font-size: 1.4rem;
+}
+
+/* Partners page hero h1 override */
+.partners-hero-title {
+  color: white !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 
 /* ===== UTILITY STYLES ===== */

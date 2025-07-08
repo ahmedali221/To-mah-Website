@@ -38,6 +38,11 @@ import cheese8 from "../../assets/Menu/cheese/8.jpg";
 import cheese9 from "../../assets/Menu/cheese/9.jpg";
 import cheese10 from "../../assets/Menu/cheese/10.jpg";
 import cheese11 from "../../assets/Menu/cheese/11.jpg";
+import left2MuttabakMalih from "../../assets/Menu/Left2/مطبق مالح ( بوفيه ) .JPG";
+import left2MuttabakCheddar from "../../assets/Menu/Left2/مطبق جبنة تشيدر ( محلي ).JPG";
+import left2SaladPlate from "../../assets/Menu/Left2/صحن خضار ( بوفيه).JPG";
+
+import left3Tea1 from "../../assets/Menu/Left3/6.JPG";
 const productsData = [
   // مجموعة نواشف
   {
@@ -657,7 +662,7 @@ const productsData = [
   //
   {
     id: "32",
-    image: null,
+    image: left2MuttabakMalih,
     meal_name_en: "Savory Muttabak",
     description_en:
       "Crispy, savory dough layers filled with fresh minced meat served with lemon, green chili, and daggus sauce.",
@@ -680,7 +685,7 @@ const productsData = [
   //
   {
     id: "33",
-    image: null,
+    image: left2MuttabakCheddar,
     meal_name_en: "Cheddar Muttabbak",
     description_en:
       "Tomato balls, eggs, cheddar cheese balls, hot pepper, and lemon.",
@@ -782,7 +787,7 @@ const productsData = [
     subcategory_ar: "تصبيرة",
     available: true,
     trendy: false,
-    image: null,
+    image: left2SaladPlate,
   },
 
   // حلا الفطور
@@ -832,7 +837,7 @@ const productsData = [
   ///
   {
     id: "68",
-    image: null,
+    image: left3Tea1,
     meal_name_en: "Meat Harissa",
     description_en:
       "Traditional wheat and meat porridge garnished with ghee and sugar",

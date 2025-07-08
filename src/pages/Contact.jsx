@@ -63,15 +63,13 @@ const ContactPage = () => {
               }`}
           >
             {/* Image */}
-            <div className="flex items-center justify-center rounded-t-full overflow-hidden shadow-2xl group transform transition-transform duration-500 hover:shadow-3xl">
+            <div className="flex items-center justify-center rounded-full overflow-hidden shadow-2xl group transform transition-transform duration-500 hover:shadow-3xl">
               <img
-                src="https://tomah.sa/uploads/products/8.jpg"
-                alt={t("contact.location_image_alt")}
-                className="h-96 w-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:brightness-110"
-                style={{ borderRadius: "50em 50em 0 0" }}
+                src="https://tomah.sa/uploads/products/10.jpg"
+                alt={t("contact.restaurant_image_alt")}
+                className="h-96 w-96 object-cover rounded-full"
               />
             </div>
-
             {/* Location Info */}
             <div className="w-4/5 text-center mt-10 px-4">
               <h3 className="text-4xl font-semibold italic mb-6 transform transition-transform duration-500 hover:translate-y-1">
@@ -117,7 +115,7 @@ const ContactPage = () => {
               <img
                 src="https://tomah.sa/uploads/products/9.jpg"
                 alt={t("contact.restaurant_image_alt")}
-                className="h-96 w-auto object-cover transform transition-transform duration-700 group-hover:scale-105 group-hover:brightness-110 rounded-full"
+                className="h-96 w-96 object-cover rounded-full"
               />
             </div>
 

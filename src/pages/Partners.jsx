@@ -188,13 +188,14 @@ const Partners = () => {
     <div className="bg-white">
       {/* Hero Section */}
       <section className="relative bg-primary text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 
+              className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg partners-hero-title"
+            >
               {t("partners.hero.title")}
             </h1>
-            <p className="text-xl md:text-2xl mb-8">
+            <p className="text-xl md:text-2xl mb-8 text-white drop-shadow-md">
               {t("partners.hero.description")}
             </p>
           </div>
@@ -301,7 +302,7 @@ const Partners = () => {
                 className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
               >
                 <div className="flex flex-col items-center mb-4">
-                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-3 text-3xl">
+                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-3 text-3xl text-primary">
                     {company.icon}
                   </div>
                   <div className="text-center">
@@ -361,8 +362,8 @@ const Partners = () => {
 
       {/* CTA Section */}
       <section className="py-16 bg-primary text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <div className="container mx-auto px-4 text-center ">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 partners-hero-title">
             {t("partners.cta.title")}
           </h2>
           <p className="text-xl max-w-3xl mx-auto mb-8">

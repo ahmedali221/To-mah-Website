@@ -22,33 +22,38 @@ export default function Home() {
   return (
     <div className="main-bg">
       <HeroSlider />
-      {!isMobile && <div className="bg-white overflow-hidden border-y border-gray-200">
-        <div className="w-full h-14 flex items-center">
-          <div className="whitespace-nowrap animate-scroll-single px-4">
-            <div className="text-2xl font-stretch-expanded text-gray-900 tracking-wide"> {/* Larger font */}
-              {t(`toamahBanner`)}
+      {!isMobile && (
+        <div className="bg-white overflow-hidden border-y border-gray-200">
+          <div className="w-full h-14 flex items-center overflow-hidden">
+            <div className="relative w-full h-full">
+              <div className="animate-marquee flex whitespace-nowrap absolute left-0 top-0 h-full">
+                {Array.from({ length: 40 }).map((_, i) => (
+                  <span key={i} className="text-2xl font-stretch-expanded text-gray-900 tracking-wide mx-8 inline-block">
+                    {t(`toamahBanner`)}
+                  </span>
+                ))}
+                {/* Duplicate for seamless loop */}
+                {Array.from({ length: 40 }).map((_, i) => (
+                  <span key={i + 40} className="text-2xl font-stretch-expanded text-gray-900 tracking-wide mx-8 inline-block">
+                    {t(`toamahBanner`)}
+                  </span>
+                ))}
+              </div>
+              <style>
+                {`
+                  @keyframes marquee {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                  }
+                  .animate-marquee {
+                    animation: marquee 35s linear infinite;
+                  }
+                `}
+              </style>
             </div>
           </div>
         </div>
-
-        {/* Animation style */}
-        <style>
-          {`
-    @keyframes scroll-single {
-      0% { transform: translateX(100vw); }
-      100% { transform: translateX(-100%); }
-    }
-    .animate-scroll-single {
-      display: inline-block;
-      animation: scroll-single 15s linear infinite;
-      padding-left: 100%; /* Ensures smooth entry */
-    }
-    .animate-scroll-single:hover {
-      animation-play-state: paused; /* Pause on hover */
-    }
-    `}
-        </style>
-      </div>}
+      )}
       <AboutAndVideoSection />
       <VisionAndPhilosophy />
       <MenuBanner />

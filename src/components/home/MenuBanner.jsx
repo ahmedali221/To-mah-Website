@@ -55,7 +55,7 @@ export default function MenuBanner() {
             className="group bg-white text-black px-8 py-3 rounded-full text-sm md:text-base hover:bg-gray-200 transition-all duration-300 flex items-center gap-2 shadow-md"
           >
             <motion.span
-              className="text-yellow-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              className="text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               style={{ fontSize: "1.5rem", fontWeight: "bold" }}
               animate={{ x: [0, 5, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}

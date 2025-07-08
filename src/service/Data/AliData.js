@@ -38,6 +38,26 @@ import rice7 from "../../assets/Menu/rice/7.jpg";
 import rice8 from "../../assets/Menu/rice/8.jpg";
 import rice9 from "../../assets/Menu/rice/9.jpg";
 
+import leftYogurtSalad from "../../assets/Menu/Left/سلطة اللبن ( محلي ).JPG";
+import leftCarrotAchard from "../../assets/Menu/Left/اشار الجزر ( محلي ).JPG";
+import leftPickledLemon from "../../assets/Menu/Left/مخلل ليمون.JPG";
+import leftPlainTahini from "../../assets/Menu/Left/سلطة طحينة سادة ( محلي ).JPG";
+import leftThoumia from "../../assets/Menu/Left/ثومية ( محلي ).JPG";
+import leftTahiniTomato from "../../assets/Menu/Left/سلطة طحينة بالطماطم المشوي .JPG";
+import leftDakosHot from "../../assets/Menu/Left/دقس حار ( محلي ).JPG";
+import leftDakosMild from "../../assets/Menu/Left/دقس بارد (بوفيه).jpeg";
+import leftStuffedPepper from "../../assets/Menu/Left/فلفل طعمة مطبوخ ( محلي ).JPG";
+import leftBeetrootPickle from "../../assets/Menu/Left/مخلل مشكل البنجر.JPG";
+import leftSambosaMeat from "../../assets/Menu/Left/سمبوسك مثلثات اللحم.png";
+import leftSambosaCheese from "../../assets/Menu/Left/سمبوسة طعمة بخليط الاجبان ( محلي).JPG";
+import leftChickenFatayer from "../../assets/Menu/Left/فطير بالدجاج ( محلي ).JPG";
+import left2VegPomPepper from "../../assets/Menu/Left2/خضار المدينة بدبس الرمان والفلفل الحار ( بوفيه ).JPG";
+import left2Fries from "../../assets/Menu/Left2/بطاطس مقلية ( محلي ).JPG";
+
+
+import img1 from "../../assets/Menu/Left/3.JPG";
+
+import img2 from "../../assets/Menu/Left3/5.JPG"
 const productsData = [
   // الشوربة
   {
@@ -215,7 +235,7 @@ const productsData = [
     subcategory_ar: "السلطات و المقبلات الباردة",
     available: true,
     trendy: false,
-    image: null,
+    image: left2VegPomPepper,
   },
 
   {
@@ -278,7 +298,7 @@ const productsData = [
     subcategory_ar: "مشهونات طعمة (المخلالات و الطرشي)",
     available: true,
     trendy: false,
-    image: null,
+    image: leftYogurtSalad,
   },
   //
   {
@@ -297,7 +317,7 @@ const productsData = [
     subcategory_ar: "مشهونات طعمة (المخلالات و الطرشي)",
     available: true,
     trendy: false,
-    image: null,
+    image: leftCarrotAchard,
   },
   {
     meal_name_en: "Homr Tammarind Sauce",
@@ -315,11 +335,11 @@ const productsData = [
     subcategory_ar: "مشهونات طعمة (المخلالات و الطرشي)",
     available: true,
     trendy: false,
-    image: null,
+    image: img2,
   },
   {
     id: "90",
-    image: null,
+    image: leftPickledLemon,
     meal_name_en: "Pickled Lemons",
     description_en: "Traditional preserved lemons with authentic spices",
     price: null,
@@ -354,11 +374,11 @@ const productsData = [
     subcategory_ar: "مشهونات طعمة (المخلالات و الطرشي)",
     available: true,
     trendy: false,
-    image: null,
+    image: leftPlainTahini,
   },
   {
     meal_name_en: "Garlic Sauce",
-    description_en: "To'mah’s delicious garlic sauce",
+    description_en: "To'mah's delicious garlic sauce",
     price: "7 ريال",
     meal_name_ar: "الثومية",
     description_ar: "ثومية طُعمة اللذيذة",
@@ -372,7 +392,7 @@ const productsData = [
     subcategory_ar: "مشهونات طعمة (المخلالات و الطرشي)",
     available: true,
     trendy: false,
-    image: null,
+    image: leftThoumia,
   },
 
   {
@@ -391,7 +411,7 @@ const productsData = [
     subcategory_ar: "مشهونات طعمة (المخلالات و الطرشي)",
     available: true,
     trendy: false,
-    image: null,
+    image: leftTahiniTomato,
   },
 
   {
@@ -410,7 +430,7 @@ const productsData = [
     subcategory_ar: "مشهونات طعمة (المخلالات و الطرشي)",
     available: true,
     trendy: false,
-    image: null,
+    image: leftDakosHot,
   },
   {
     meal_name_en: "Mild Dakos",
@@ -428,7 +448,7 @@ const productsData = [
     subcategory_ar: "مشهونات طعمة (المخلالات و الطرشي)",
     available: true,
     trendy: false,
-    image: null,
+    image: leftDakosMild,
   },
   {
     meal_name_en: "To'mah Fresh Peppers",
@@ -451,7 +471,7 @@ const productsData = [
 
   {
     id: "95",
-    image: null,
+    image: leftStuffedPepper,
     meal_name_en: "Cooked Stuffed Peppers",
     description_en: "Peppers cooked with olive oil and garlic",
     price: null,
@@ -470,7 +490,7 @@ const productsData = [
   },
   {
     id: "97",
-    image: null,
+    image: leftBeetrootPickle,
     meal_name_en: "Beetroot Pickle Mix",
     description_en: "Assorted pickled vegetables with beetroot",
     price: null,
@@ -654,7 +674,7 @@ const productsData = [
     subcategory_ar: "سلة معجنات",
     available: true,
     trendy: false,
-    image: null,
+    image: leftSambosaMeat,
   },
   {
     meal_name_en: "White Cheese Rolls",
@@ -791,7 +811,7 @@ const productsData = [
       "Enjoy a unique taste with Samosa Mix Cheese, crispy dough filled with a delicious blend of cheeses in the Madini style. A tasty light meal or a distinctive appetizer that satisfies all tastes.",
     description_ar:
       "استمتع بمذاق فريد مع سمبوسك طعمة، رقائق مقرمشة محشوة بخليط من الأجبان اللذيذة على طريقة أهل المدينة. وجبة خفيفة شهية أو مقبل مميز يرضي جميع الأذواق.",
-    image: null,
+    image: leftSambosaCheese,
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
     subcategory_en: "Bread Basket",
@@ -890,7 +910,7 @@ const productsData = [
 
   {
     id: "150",
-    image: null,
+    image: left2Fries,
     meal_name_en: "French Fries",
     description_en: "Crispy fried potatoes",
     price: null,
@@ -1124,7 +1144,7 @@ const productsData = [
   //
   {
     id: "127",
-    image: null,
+    image: leftChickenFatayer,
     meal_name_en: "Chicken Fatayer",
     description_en: "Traditional bread soaked in spiced chicken broth",
     price: null,
@@ -1162,7 +1182,7 @@ const productsData = [
   },
   {
     id: "129",
-    image: null,
+    image: img1,
     meal_name_en: "Chicken Kozi",
     description_en: "Rice and pasta mix with chicken",
     price: null,

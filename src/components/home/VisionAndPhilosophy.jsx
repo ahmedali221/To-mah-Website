@@ -117,7 +117,7 @@ export default function VisionAndPhilosophy() {
                 transition={{ duration: 0.5 }}
               >
                 <div className="flex-shrink-0 bg-transaprent rounded-lg p-2 md:p-3 shadow-md">
-                  <GlobeAltIcon className="w-6 h-6 md:w-8 md:h-8" />
+                  <GlobeAltIcon className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.goals.heritage.title")}</h3>
@@ -133,7 +133,7 @@ export default function VisionAndPhilosophy() {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div className="flex-shrink-0 bg-transaprent rounded-lg p-2 md:p-3 shadow-md">
-                  <LightBulbIcon className="w-6 h-6 md:w-8 md:h-8" />
+                  <LightBulbIcon className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.goals.innovation.title")}</h3>
@@ -149,7 +149,7 @@ export default function VisionAndPhilosophy() {
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
                 <div className="flex-shrink-0 bg-transaprent rounded-lg p-2 md:p-3 shadow-md">
-                  <UserGroupIcon className="w-6 h-6 md:w-8 md:h-8" />
+                  <UserGroupIcon className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-lg md:text-xl font-bold mb-2">{t("home.goals.quality.title")}</h3>
@@ -217,7 +217,7 @@ export default function VisionAndPhilosophy() {
                     className="bg-white border border-gray-100 rounded-lg p-6 text-center hover:shadow-md transition-shadow"
                     variants={itemVariants}
                   >
-                    <Icon className="h-8 w-8 mx-auto mb-4 text-blue-600" />
+                    <Icon className="h-8 w-8 mx-auto mb-4 text-primary" />
                     <h3 className="font-semibold text-gray-900 mb-2">
                       {t(`home.features.${key}.title`)}
                     </h3>
@@ -284,11 +284,11 @@ export default function VisionAndPhilosophy() {
                 ].map(({ icon: Icon, key }) => (
                   <motion.div
                     key={key}
-                    className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow"
+                    className="bg-[#f5ecd7] rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow"
                     variants={itemVariants}
                   >
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-6">
-                      <Icon className="h-6 w-6 text-blue-600" />
+                      <Icon className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">
                       {t(`home.values.${key}.title`)}

@@ -98,13 +98,14 @@ function Footer() {
 								{t("footer.phone")}
 							</span>
 						</div>
-						<div className="flex items-center gap-1">
-							<Mail className="w-4 h-4 text-primary" />
-							<span>{t("footer.email")}</span>
-						</div>
+						
 						<div className="flex items-center gap-1">
 							<Clock className="w-4 h-4 text-primary" />
 							<span>{t("footer.hours")}</span>
+						</div>
+						<div className="flex items-center gap-1">
+							<Mail className="w-4 h-4 text-primary" />
+							<span>{t("footer.email")}</span>
 						</div>
 					</div>
 
@@ -167,8 +168,8 @@ function Footer() {
 											{[
 												{ icon: MapPin, text: t("footer.address") },
 												{ icon: Phone, text: t("footer.phone"), isPhone: true },
-												{ icon: Mail, text: t("footer.email") },
 												{ icon: Clock, text: t("footer.hours") },
+												{ icon: Mail, text: t("footer.email") },
 											].map((contact, index) => (
 												<div
 													key={index}

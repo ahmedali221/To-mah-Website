@@ -24,12 +24,37 @@ import drink15 from "../../assets/Menu/drinks/15.JPG";
 import drink16 from "../../assets/Menu/drinks/16.jpg";
 import drink17 from "../../assets/Menu/drinks/17.jpg";
 
+import leftSandwichSalat from "../../assets/Menu/Left/ساندوتش سلات المدينة ( محلي ).JPG";
+import leftSandwichHead from "../../assets/Menu/Left/ساندوتش لحمة راس (محلي ).JPG";
+import left2SandwichLiver from "../../assets/Menu/Left2/ساندوتش كبدة ( محلي ).JPG";
+import left2AishHob from "../../assets/Menu/Left2/عيش حب.JPG";
+import left2ShabouraMalha from "../../assets/Menu/Left2/شابورة مالحة .JPG";
+import left2Ghraiba from "../../assets/Menu/Left2/غريبة.JPG";
+import left2SesameBiscuit from "../../assets/Menu/Left2/بسكويت بالسمسم.JPG";
+import left2Water from "../../assets/Menu/Left2/مياه معدنية وغازية (محلي ).JPG";
+import left2TeaMarjoram from "../../assets/Menu/Left2/شاي نعناع دوش ( محلي ).JPG";
+import left2TeaRed from "../../assets/Menu/Left2/شاي احمر بالنعناع المديني ( محلي ).JPG";
+import left2MuttabakMalih from "../../assets/Menu/Left2/مطبق مالح ( بوفيه ) .JPG";
+import left2MuttabakCheddar from "../../assets/Menu/Left2/مطبق جبنة تشيدر ( محلي ).JPG";
+import left2SaladPlate from "../../assets/Menu/Left2/صحن خضار ( بوفيه).JPG";
+import left2Vimto from "../../assets/Menu/Left2/شربيت فيمتو ( محلي ).JPG";
+
+import tatima from "../../assets/Menu/Left2/1.jpeg";
+import mahalbya from "../../assets/Menu/Left2/2.JPG";
+
+import tea1 from "../../assets/Menu/Left3/1.JPG";
+import tea2 from "../../assets/Menu/Left3/2.JPG";
+import tea3 from "../../assets/Menu/Left3/3.JPG";
+import tea4 from "../../assets/Menu/Left3/4.JPG";
+
+
+
 const productsData = [
   //////////////////////////////////
   //// ساندويتش عيش الحب
   {
     id: "11",
-    image: null,
+    image: leftSandwichSalat,
     meal_name_en: "City Salat Sandwich",
     description_en:
       "Madini salad stuffed in soft bread with pomegranate molasses",
@@ -50,7 +75,7 @@ const productsData = [
   },
   {
     id: "12",
-    image: null,
+    image: leftSandwichHead,
     meal_name_en: "Mutton Head Sandwich",
     description_en: "Mutton head meat with tahini sauce and cucumber slices",
     price: "20 ريال",
@@ -66,7 +91,7 @@ const productsData = [
   },
   {
     id: "181",
-    image: null,
+    image: left2SandwichLiver,
     meal_name_en: "Liver Sandwich",
     description_en:
       "Traditional bread with liver and cheese spread, garnished with parsley",
@@ -85,7 +110,7 @@ const productsData = [
 
   {
     id: "13",
-    image: null,
+    image: left2AishHob,
     meal_name_en: "Whole Grain Bread",
     description_en: "",
     price: "5 ريال",
@@ -129,7 +154,7 @@ const productsData = [
   // مخبوزات معلفة
   {
     id: "15",
-    image: null,
+    image: left2ShabouraMalha,
     meal_name_en: "Salty Rusk",
     description_en: "",
     price: "13 ريال",
@@ -186,7 +211,7 @@ const productsData = [
   },
   {
     id: "18",
-    image: null,
+    image: left2Ghraiba,
     meal_name_en: "Ghoriba",
     description_en: "",
     price: "13 ريال",
@@ -225,7 +250,7 @@ const productsData = [
   },
   {
     id: "20",
-    image: null,
+    image: left2SesameBiscuit,
     meal_name_en: "Sesame Biscuits",
     description_en: "",
     price: "13 ريال",
@@ -265,7 +290,7 @@ const productsData = [
   },
   {
     id: "22",
-    image: null,
+    image: tatima,
     meal_name_en: "Ta’tema Rusk",
     description_en: "",
     price: "5 ريال",
@@ -368,7 +393,7 @@ const productsData = [
   },
   {
     id: "29",
-    image: null,
+    image: mahalbya,
     meal_name_en: "Rice Pudding",
     description_en: "Rice and milk pudding served cold with toasted almonds",
     price: "17 ريال",
@@ -491,7 +516,7 @@ const productsData = [
   },
   {
     id: "203",
-    image: null,
+    image: left2Water,
     meal_name_en: "Mineral Water",
     description_en: "Bottled mineral water",
     price: null,
@@ -517,7 +542,7 @@ const productsData = [
   },
   {
     id: "204",
-    image: null,
+    image: left2Water,
     meal_name_en: "Carbonated Water",
     description_en: "Sparkling mineral water",
     price: null,
@@ -602,7 +627,7 @@ const productsData = [
   },
   {
     id: "36",
-    image: null,
+    image: tea1,
     meal_name_en: "Flavored Tea",
     description_en: "Red tea with Madini flavors",
     price: "15 ريال",
@@ -624,7 +649,7 @@ const productsData = [
 
   {
     id: "37",
-    image: null,
+    image: left2TeaMarjoram,
     meal_name_en: "Marjoram Tea with Mint",
     description_en: "Marjoram tea pot with mint",
     price: "20 ريال",
@@ -665,7 +690,7 @@ const productsData = [
   },
   {
     id: "39",
-    image: null,
+    image: left2TeaRed,
     meal_name_en: "Red Tea",
     description_en: "Red tea with Madini mint",
     price: "15 ريال",
@@ -685,7 +710,7 @@ const productsData = [
   },
   {
     id: "40",
-    image: null,
+    image: tea2,
     meal_name_en: "Green Tea",
     description_en: "Green tea pot with Madini mint",
     price: "20 ريال",
@@ -766,7 +791,7 @@ const productsData = [
   },
   {
     id: "44",
-    image: null,
+    image: tea3,
     meal_name_en: "Qamar al-Din",
     description_en: "Qamar al-Din slash with orange juice",
     price: "14 ريال",
@@ -1032,7 +1057,7 @@ const productsData = [
   // ترحيب
   {
     id: "6",
-    image: null,
+    image: tea4,
     meal_name_en: "Karbo Platter",
     description_en: "Traditional Karbo dish served with red sauce",
     price: null,
@@ -1070,5 +1095,14 @@ const productsData = [
 
   ///////////////////////////////////////////////////////////////////
 ];
+
+productsData.forEach(product => {
+  if (product.image === null) {
+    if (product.meal_name_ar === "مطبق مالح") product.image = left2MuttabakMalih;
+    if (product.meal_name_ar === "مطبق جبنة تشيدر") product.image = left2MuttabakCheddar;
+    if (product.meal_name_ar === "صحن خضار") product.image = left2SaladPlate;
+    if (product.meal_name_ar === "شربت فيمتو") product.image = left2Vimto;
+  }
+});
 
 export default productsData;

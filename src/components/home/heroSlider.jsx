@@ -74,12 +74,12 @@ export default function HeroSlider() {
                         <img
                             src={logo}
                             alt="Logo"
-                            className="w-48 md:w-72 lg:w-96 h-auto drop-shadow-2xl"
+                            className="w-48 md:w-72 lg:w-96 h-auto drop-shadow-2xl text-primary"
                         />
                         <img
                             src={title}
                             alt="Logo"
-                            className="w-48 md:w-72 lg:w-96 h-auto drop-shadow-2xl"
+                            className="w-48 md:w-72 lg:w-96 h-auto drop-shadow-2xl text-primary"
                         />
                     </motion.div>
                 </motion.div>

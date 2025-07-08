@@ -12,6 +12,15 @@ import sandwich1 from "../../assets/Menu/sandwich/1.jpg";
 import sandwich2 from "../../assets/Menu/sandwich/2.jpg";
 import sandwich3 from "../../assets/Menu/sandwich/3.jpg";
 
+import leftMabshoorLahm from "../../assets/Menu/Left/مبشور لحم ( محلي ).JPG";
+import leftMabshoorDajaj from "../../assets/Menu/Left/مبشور دجاج.png";
+import leftAwsalLahm from "../../assets/Menu/Left/اوصال لحم ( محلي ).JPG";
+import leftKebabHijazi from "../../assets/Menu/Left/كباب حجازي ( محلي ).JPG";
+import leftKebabDajaj from "../../assets/Menu/Left/كباب دجاج ( محلي ).JPG";
+import leftKebabTahina from "../../assets/Menu/Left/كباب الطحينة.png";
+import leftKebabTaama from "../../assets/Menu/Left/كباب طعمة ( محلي ).JPG";
+import leftMixedGrill from "../../assets/Menu/Left/مشكل مشويات طعمة .JPG";
+
 const productsData = [
   ////////////////////////////////////////////////
   //أطباق طعمة المدينة
@@ -135,14 +144,13 @@ const productsData = [
   // منقل طعمة
   {
     id: "23",
+    image: leftMabshoorLahm,
     meal_name_en: 'Mabshoor "Minced" Beef',
     meal_name_ar: "مبشور اللحم",
     description_en:
       "Indulge in minced beef grilled on skewers with a selection of fresh grilled vegetables, served with a refreshing salad. A delicious meal rich in grilled flavors, perfect for meat and vegetable lovers.",
     description_ar:
       "استمتع بلحم مفروم مشوي على السيخ مع تشكيلة من الخضار المشوية الطازجة، ويقدم مع سلطة منعشة. وجبة شهية وغنية بالنكهات المشوية، مثالية لمحبي اللحوم والخضروات.",
-    image: null,
-
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
     subcategory_en: "Grill_Section",
@@ -157,14 +165,13 @@ const productsData = [
   },
   {
     id: "24",
+    image: leftMabshoorDajaj,
     meal_name_en: "Mabshoor Minced Chicken",
     meal_name_ar: "مبشور دجاج",
     description_en:
       "Indulge in minced chicken pieces grilled on skewers and served with a selection of fresh grilled vegetables and a refreshing salad. A light and delicious meal rich in protein and grilled flavors.",
     description_ar:
       "استمتع بقطع دجاج مفروم مشوية على السيخ وتقدم مع تشكيلة من الخضار المشوية الطازجة وسلطة منعشة. وجبة خفيفة ولذيذة وغنية بالبروتين والنكهات المشوية.",
-    image: null,
-
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
     subcategory_en: "Grill_Section",
@@ -202,14 +209,13 @@ const productsData = [
 
   {
     id: "8",
+    image: leftAwsalLahm,
     meal_name_en: "Beef Joints",
     meal_name_ar: "أوصال لحم",
     description_en:
       "Indulge in grilled beef joints served with rich tahini sauce. A delicious meal rich in protein and authentic grilled flavors.",
     description_ar:
       "استمتع بقطع أوصال لحم مشوية على السيخ وتقدم مع صوص الطحينة الغني. وجبة شهية وغنية بالبروتين والنكهات المشوية الأصيلة.",
-    image: null,
-
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
     subcategory_en: "Grill_Section",
@@ -225,14 +231,13 @@ const productsData = [
 
   {
     id: "19",
+    image: leftKebabHijazi,
     meal_name_en: "Hijazi Kebab",
     meal_name_ar: "كباب حجازي",
     description_en:
       "Indulge in traditional Hijazi kebab grilled over charcoal, served with fresh green salad and rich tahini sauce. A delicious meal rich in the traditional flavors that distinguish Hijazi cuisine.",
     description_ar:
       "استمتع بالكباب الحجازي الأصيل المشوي على الفحم، ويقدم مع السلطة الخضراء الطازجة وصوص الطحينة الغني. وجبة شهية وغنية بالنكهات التقليدية التي تميز المطبخ الحجازي.",
-    image: null,
-
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
     subcategory_en: "Grill_Section",
@@ -247,14 +252,13 @@ const productsData = [
   },
   {
     id: "12",
+    image: leftKebabDajaj,
     meal_name_en: "Grilled Chicken Kebab",
     meal_name_ar: "كباب دجاج",
     description_en:
       "Indulge in special chicken kebab grilled over charcoal, served with fresh green salad and rich tahini sauce. A delicious and light meal rich in protein and authentic grilled flavors.",
     description_ar:
       "استمتع بكباب الدجاج المميز المشوي على الفحم، ويقدم مع السلطة الخضراء الطازجة وصوص الطحينة الغني. وجبة شهية وخفيفة وغنية بالبروتين والنكهات المشوية الأصيلة.",
-    image: null,
-
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
     subcategory_en: "Grill_Section",
@@ -269,14 +273,13 @@ const productsData = [
   },
   {
     id: "42",
+    image: leftKebabTahina,
     meal_name_en: "Tahini Kebab",
     meal_name_ar: "كباب الطحينة",
     description_en:
       "Indulge in special kebab grilled over charcoal and topped with rich and delicious tahini sauce. A delicious meal rich in grilled flavors and distinctive tahini.",
     description_ar:
       "استمتع بالكباب المميز المشوي على الفحم والمغطى بصوص الطحينة الغني واللذيذ. وجبة شهية وغنية بالنكهات المشوية والطحينة المميزة.",
-    image: null,
-
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
     subcategory_en: "Grill_Section",
@@ -291,14 +294,13 @@ const productsData = [
   },
   {
     id: "43",
+    image: leftKebabTaama,
     meal_name_en: "To'mah Kebab",
     meal_name_ar: "كباب طعمة",
     description_en:
       "Indulge in premium special kebab served with delicious nuts and rich tahini sauce. A royal meal rich in luxurious flavors and fresh ingredients.",
     description_ar:
       "استمتع بالكباب الفاخر والمميز المقدم مع المكسرات الشهية وصوص الطحينة الغني. وجبة ملكية غنية بالنكهات الفاخرة والمكونات الطازجة.",
-    image: null,
-
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
     subcategory_en: "Grill_Section",
@@ -335,7 +337,7 @@ const productsData = [
   },
   {
     id: "149",
-    image: null,
+    image: leftMixedGrill,
     meal_name_en: "Mixed Grill Platter",
     description_en: "For 1 person - 3 assorted skewers",
     price: null,
@@ -345,7 +347,6 @@ const productsData = [
     calories_ar: "1800 سعرة حرارية",
     burn_time_en: "330 minutes",
     burn_time_ar: "330 دقيقة",
-
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
     subcategory_en: "Grill Section",

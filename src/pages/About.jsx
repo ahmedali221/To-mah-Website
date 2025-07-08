@@ -166,7 +166,7 @@ const About = () => {
 		return Array.from({ length: 5 }, (_, i) => (
 			<span
 				key={i}
-				className={`text-lg ${i < rating ? 'text-amber-400' : 'text-gray-300'}`}
+				className={`text-lg ${i < rating ? 'text-accent' : 'text-gray-300'}`}
 			>
 				★
 			</span>
@@ -188,12 +188,20 @@ const About = () => {
 				}
 				.custom-dots li button:before {
 					font-size: 12px !important;
-					color: #d97706 !important;
+					color: #a6ab8b !important;
 					opacity: 0.5;
 				}
 				.custom-dots li.slick-active button:before {
 					opacity: 1;
-					color: #d97706 !important;
+					color: #a6ab8b !important;
+				}
+				.story-img-symmetry {
+					width: 100%;
+					max-width: 420px;
+					height: 320px;
+					object-fit: cover;
+					margin-left: auto;
+					margin-right: auto;
 				}
 			`}</style>
 
@@ -215,73 +223,63 @@ const About = () => {
 							{t("about.story.title")}
 						</h1>
 						<div className="w-24 h-1 mx-auto rounded-full" style={{
-							background: 'linear-gradient(90deg, #d97706 0%, #673026 100%)'
+							background: 'linear-gradient(90deg, #a6ab8b 0%, #673026 100%)'
 						}}></div>
 					</div>
 
 					<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
-						<div className="animate-on-scroll order-2 lg:order-1" id="story-img-1">
-							<div className={`relative group transform transition-all duration-1000 ${isVisible["story-img-1"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
+						{/* Left Image */}
+						<div className="animate-on-scroll order-2 lg:order-1 flex items-center justify-center" id="story-img-1">
+							<div className={`relative group transform transition-all duration-1000 ${isVisible["story-img-1"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+								style={{height: '500px', width: '100%'}}>
 								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{
 									background: 'linear-gradient(135deg, #673026 0%, #d97706 100%)'
 								}}></div>
 								<img
 									src={img1}
 									alt={t("about.story.image_alt_left")}
-									className="relative rounded-2xl shadow-2xl w-full h-80 object-cover"
+									className="relative rounded-2xl shadow-2xl w-full h-full object-cover story-img-symmetry"
+									style={{height: '100%'}}
 								/>
 							</div>
 						</div>
 
-						<div className="animate-on-scroll order-1 lg:order-2" id="story-text">
-							<div className={`text-center space-y-6 transition-all duration-1000 delay-300 ${isVisible["story-text"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
-								<div className="flex items-center justify-center space-x-2 mb-6">
-									<div className="w-16 h-0.5" style={{
-										background: 'linear-gradient(90deg, transparent 0%, #d97706 100%)'
-									}}></div>
-									<SparklesIcon className="w-6 h-6" style={{ color: '#d97706' }} />
-									<div className="w-16 h-0.5" style={{
-										background: 'linear-gradient(90deg, #d97706 0%, transparent 100%)'
-									}}></div>
-								</div>
-								  <div className="mb-6 bg-white p-6 rounded-lg shadow-sm">
-            <h3 className="text-2xl font-semibold text-gray-800">
-              {t("home.about.idea_section.heading")}
-            </h3>
-            <p className="text-gray-600 mt-2">
-              {t("home.about.idea_section.hijri")} — {t("home.about.idea_section.gregorian")}
-            </p>
-          </div>
-
-          {/* Opening Section */}
-          <div className="mb-8 bg-white p-6 rounded-lg shadow-sm">
-            <h3 className="text-2xl font-semibold text-gray-800">
-              {t("home.about.opening_section.heading")}
-            </h3>
-            <p className="text-gray-600 mt-2">
-              {t("home.about.opening_section.hijri")} — {t("home.about.opening_section.gregorian")}
-            </p>
-          </div>
-								<div className="p-6 rounded-xl border" style={{
-									background: 'linear-gradient(135deg, rgba(103, 48, 38, 0.05) 0%, rgba(166, 171, 139, 0.05) 100%)',
-									borderColor: 'rgba(103, 48, 38, 0.2)'
-								}}>
-									<p className="text-2xl font-bold font-serif" style={{ color: '#673026' }}>
-										{t("about.story.signature")}
+						{/* Center Text Cards */}
+						<div className="animate-on-scroll order-1 lg:order-2 flex flex-col justify-center h-[500px]" id="story-text">
+							<div className="flex flex-col justify-between h-full">
+								
+								<div className="mb-6 bg-white p-6 rounded-lg shadow-sm flex flex-col justify-center h-[250px]">
+									<h3 className="text-2xl font-semibold text-gray-800">
+										{t("home.about.idea_section.heading")}
+									</h3>
+									<p className="text-gray-600 mt-2 ">
+										{t("home.about.idea_section.hijri")} — {t("home.about.idea_section.gregorian")}
 									</p>
 								</div>
+								<div className="mb-8 mt-5 bg-white p-6 rounded-lg shadow-sm flex flex-col justify-center h-[250px]">
+									<h3 className="text-2xl font-semibold text-gray-800">
+										{t("home.about.opening_section.heading")}
+									</h3>
+									<p className="text-gray-600 mt-2">
+										{t("home.about.opening_section.hijri")} — {t("home.about.opening_section.gregorian")}
+									</p>
+								</div>
+
 							</div>
 						</div>
 
-						<div className="animate-on-scroll order-3 lg:order-3" id="story-img-2">
-							<div className={`relative group transform transition-all duration-1000 delay-500 ${isVisible["story-img-2"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
+						{/* Right Image */}
+						<div className="animate-on-scroll order-3 lg:order-3 flex items-center justify-center" id="story-img-2">
+							<div className={`relative group transform transition-all duration-1000 delay-500 ${isVisible["story-img-2"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+								style={{height: '500px', width: '100%'}}>
 								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{
 									background: 'linear-gradient(135deg, #7e845d 0%, #673026 100%)'
 								}}></div>
 								<img
 									src={img2}
 									alt={t("about.story.image_alt_right")}
-									className="relative rounded-2xl shadow-2xl w-full h-80 object-cover"
+									className="relative rounded-2xl shadow-2xl w-full h-full object-cover story-img-symmetry"
+									style={{height: '100%'}}
 								/>
 							</div>
 						</div>
@@ -356,10 +354,8 @@ const About = () => {
 						<h2 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#1d2939' }}>
 							{t("about.team.title", "Our Team")}
 						</h2>
-						<div className="w-24 h-1 mx-auto rounded-full mb-8" style={{
-							background: 'linear-gradient(90deg, #d97706 0%, #673026 100%)'
-						}}></div>
-						<UserGroupIcon className="w-12 h-12 mx-auto" style={{ color: '#d97706' }} />
+						<div className="w-24 h-1 mx-auto rounded-full mb-8 bg-accent"></div>
+						<UserGroupIcon className="w-12 h-12 mx-auto text-accent" />
 					</div>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-16">
 						{teamImages.map((image, index) => (
@@ -416,10 +412,8 @@ const About = () => {
 						<h2 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#1d2939' }}>
 							{t("about.testimonials.title", "آراء الزوار")}
 						</h2>
-						<div className="w-24 h-1 mx-auto rounded-full mb-8" style={{
-							background: 'linear-gradient(90deg, #d97706 0%, #673026 100%)'
-						}}></div>
-						<HeartIcon className="w-12 h-12 mx-auto" style={{ color: '#d97706' }} />
+						<div className="w-24 h-1 mx-auto rounded-full mb-8 bg-accent"></div>
+						<HeartIcon className="w-12 h-12 mx-auto text-accent" />
 					</div>
 					<Slider {...sliderSettings}>
 						{testimonials.map((testimonial, idx) => (
@@ -428,12 +422,12 @@ const About = () => {
 									<img
 										src={testimonial.img}
 										alt={testimonial.name}
-										className="w-20 h-20 rounded-full object-cover border-4 border-amber-200 shadow mb-4"
+										className="w-20 h-20 rounded-full object-cover border-4 border-accent shadow mb-4"
 									/>
 									<div className="mb-2">
 										{renderStars(testimonial.rating)}
 									</div>
-									<p className="text-lg font-medium mb-4" style={{ color: '#673026' }}>
+									<p className="text-lg font-medium mb-4 text-primary">
 										{i18n.language === "ar" ? testimonial.text_ar : testimonial.text_en}
 									</p>
 									<p className="text-sm text-gray-500 font-semibold">
@@ -473,8 +467,8 @@ const About = () => {
 					<h2 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#1d2939' }}>
 						{t("about.visitors.title", "زوارنا المميزون")}
 					</h2>
-					<div className="w-24 h-1 mx-auto rounded-full mb-8" style={{ backgroundColor: '#a6ab8b' }}></div>
-					<GlobeAltIcon className="w-12 h-12 mx-auto" style={{ color: '#d97706' }} />
+					<div className="w-24 h-1 mx-auto rounded-full mb-8 bg-accent"></div>
+					<GlobeAltIcon className="w-12 h-12 mx-auto text-accent" />
 				</div>
 				<div className="max-w-7xl mx-auto">
 					<Slider {...visitorsGallerySliderSettings} className="visitors-slider">
@@ -488,7 +482,7 @@ const About = () => {
 									/>
 								</div>
 								<div className="w-full mt-6">
-									<p style={{ fontSize: "36px", color: '#673026' }} className="text-center font-bold text-xl">{visitor.name}</p>
+									<p style={{ fontSize: "36px", color: '#673026' }} className="text-center font-bold text-xl text-primary">{visitor.name}</p>
 								</div>
 							</div>
 						))}

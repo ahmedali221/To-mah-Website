@@ -26,7 +26,7 @@ export default function GalleryAndCategoryScroll() {
           {categories.map((cat, idx, arr) => (
             <div key={idx} className="flex items-center text-lg font-semibold text-gray-800">
               <span className="px-3">{t(`categories.${cat}`)}</span>
-              {idx < arr.length - 1 && <span className="text-yellow-500 text-xl px-2">*</span>}
+              {idx < arr.length - 1 && <span className="text-primary text-xl px-2">*</span>}
             </div>
           ))}
         </div>
