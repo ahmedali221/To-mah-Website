@@ -6,7 +6,6 @@ import MenuCard from "../components/MenuCard";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import productsData from "../service/data";
-import Sidebar from "../components/Sidebar";
 import {
   SparklesIcon,
   StarIcon,
@@ -39,7 +38,6 @@ function Menu() {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
-  const [showFilters, setShowFilters] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [showPopularMeals, setShowPopularMeals] = useState(false);
@@ -71,33 +69,34 @@ function Menu() {
     setModalOpen(false);
     setSelectedImage(null);
   };
-  const normalizeString = (str) => {
-    return str ? str.trim().replace(/\s+/g, ' ').toLowerCase().replace('/', '-').replace(' ', '-') : '';
-  };
 
   const filteredProducts = useMemo(() => {
     let filtered = productsData.filter((product) => {
-      const normalizeString = (str) => {
+      // Category
+      const normalizedProductCategoryEn = (str) => {
         return str ? str.trim().replace(/\s+/g, ' ').toLowerCase().replace('/', '-').replace(' ', '-') : '';
       };
-
-      // Category
-      const normalizedProductCategoryEn = normalizeString(product.category_en);
-      const normalizedFilterCategory = normalizeString(filters.category);
+      const normalizedFilterCategory = (str) => {
+        return str ? str.trim().replace(/\s+/g, ' ').toLowerCase().replace('/', '-').replace(' ', '-') : '';
+      };
       const matchesCategory =
         filters.category === "" ||
         (i18n.language === "ar" && product.category_ar
-          ? normalizeString(product.category_ar) === normalizedFilterCategory
-          : normalizedProductCategoryEn === normalizedFilterCategory);
+          ? normalizedFilterCategory(product.category_ar) === normalizedFilterCategory(filters.category)
+          : normalizedProductCategoryEn(product.category_en) === normalizedFilterCategory(filters.category));
 
       // Subcategory
-      const normalizedProductSubcategoryEn = normalizeString(product.subcategory_en);
-      const normalizedFilterSubcategory = normalizeString(filters.subcategory || "");
+      const normalizedProductSubcategoryEn = (str) => {
+        return str ? str.trim().replace(/\s+/g, ' ').toLowerCase().replace('/', '-').replace(' ', '-') : '';
+      };
+      const normalizedFilterSubcategory = (str) => {
+        return str ? str.trim().replace(/\s+/g, ' ').toLowerCase().replace('/', '-').replace(' ', '-') : '';
+      };
       const matchesSubcategory =
         !filters.subcategory ||
         (i18n.language === "ar" && product.subcategory_ar
-          ? normalizeString(product.subcategory_ar) === normalizedFilterSubcategory
-          : normalizedProductSubcategoryEn === normalizedFilterSubcategory);
+          ? normalizedFilterSubcategory(product.subcategory_ar) === normalizedFilterSubcategory(filters.subcategory)
+          : normalizedProductSubcategoryEn(product.subcategory_en) === normalizedFilterSubcategory(filters.subcategory));
 
       // Price
       const matchesPrice =
@@ -291,41 +290,33 @@ function Menu() {
           : 'transform translate-y-4 opacity-0'
         }
       `}>
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 px-2 sm:px-0">
-          {/* All Categories Button */}
-          <button
-            onClick={() => setFilters({...filters, category: "", subcategory: ""})}
-            className={`px-4 py-2 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-all duration-300 flex items-center
-              ${!filters.category 
-                ? "bg-primary-dark text-white shadow-md"
-                : "bg-white text-primary-dark border border-primary-light hover:bg-primary-lightest"
-              }`}
-          >
-            {t("menu.all_categories", "All Categories")}
-          </button>
-
-          {/* Dynamic Category Buttons */}
-          {Array.from(new Set(productsData.map(p => i18n.language === "ar" ? p.category_ar : p.category_en)))
-            .filter(category => category)
-            .map((category, index) => (
-              <button
-                key={index}
-                onClick={() => setFilters({...filters, category: category, subcategory: ""})}
-                className={`px-4 py-2 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-all duration-300 flex items-center
-                  ${filters.category === category
-                    ? "bg-primary-dark text-white shadow-md"
-                    : "bg-white text-primary-dark border border-primary-light hover:bg-primary-lightest"
-                  }`}
-              >
-                {category}
-                {filters.category === category && (
-                  <span className="ml-2 bg-white/20 rounded-full p-1">
-                    <ChevronUpIcon className="h-3 w-3" />
-                  </span>
-                )}
-              </button>
-            ))
-          }
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-6 md:gap-8 lg:gap-10 px-2 sm:px-0 mb-6 mt-2">
+          {[
+            { key: 'breakfast', label: i18n.language === 'ar' ? 'فطور' : 'Breakfast' },
+            { key: 'lunch_dinner', label: i18n.language === 'ar' ? 'غداء وعشاء' : 'Lunch & Dinner' },
+            { key: 'baked_goods', label: i18n.language === 'ar' ? 'مخبوزات' : 'Baked Goods' },
+            { key: 'deserts', label: i18n.language === 'ar' ? 'حلويات' : 'Deserts' },
+            { key: 'drinks', label: i18n.language === 'ar' ? 'مشروبات' : 'Drinks' },
+          ].map((cat) => (
+            <button
+              key={cat.key}
+              onClick={() => setFilters({ ...filters, category: cat.label, subcategory: '' })}
+              className={`px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-semibold shadow transition-all duration-300 flex items-center justify-center
+                border-2
+                ${filters.category === cat.label
+                  ? 'bg-primary-dark text-white border-primary-dark scale-105 shadow-lg'
+                  : 'bg-white text-primary-dark border-primary-light hover:bg-primary-lightest hover:border-primary hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-light'
+                }`}
+              style={{ minWidth: '140px', marginBottom: '0.5rem' }}
+            >
+              {cat.label}
+              {filters.category === cat.label && (
+                <span className="ml-2 bg-white/20 rounded-full p-1">
+                  <ChevronUpIcon className="h-4 w-4" />
+                </span>
+              )}
+            </button>
+          ))}
         </div>
 
       </div>
@@ -333,78 +324,11 @@ function Menu() {
   </div>
 </section>
 
-      {/* Fixed Mobile Filter Icon Button */}
-      <button
-        className={`
-          fixed z-50 bottom-6 ${i18n.language === "ar" ? "left-6" : "right-6"}
-          md:hidden bg-primary-dark text-white rounded-full shadow-lg p-3 flex items-center justify-center
-          transition-all duration-300
-          ${showFilters ? "bg-primary" : "bg-primary-dark"}
-        `}
-        style={{ boxShadow: "0 4px 16px rgba(0,0,0,0.15)" }}
-        aria-label={t("menu.show_filters")}
-        onClick={() => setShowFilters(!showFilters)}
-      >
-        <FunnelIcon className="h-6 w-6" />
-      </button>
-
-      {/* Overlay for mobile filters */}
-      {showFilters && (
-        <div
-          className="fixed inset-0 z-40 bg-black/40 md:hidden"
-          onClick={() => setShowFilters(false)}
-        />
-      )}
-
-      {/* Mobile Filters Drawer */}
-      <div
-        className={`
-          fixed top-0 bottom-0 ${i18n.language === "ar" ? "left-0" : "right-0"}
-          z-50 w-11/12 max-w-xs bg-white shadow-2xl rounded-l-2xl rounded-r-2xl md:hidden
-          transform transition-transform duration-300
-          ${showFilters ? "translate-x-0" : i18n.language === "ar" ? "-translate-x-full" : "translate-x-full"}
-          flex flex-col
-        `}
-        style={{ maxHeight: "100vh" }}
-      >
-        <div className="flex justify-between items-center p-4 border-b">
-          <span className="font-bold text-lg text-primary-dark">{t("menu.filters")}</span>
-          <button
-            className="text-gray-400 hover:text-primary-dark transition"
-            onClick={() => setShowFilters(false)}
-            aria-label={t("menu.hide_filters")}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        <div className="overflow-y-auto flex-1 p-2">
-          <Sidebar filters={filters} setFilters={setFilters} />
-        </div>
-      </div>
-
       {/* Main Content */}
       <div className="container mx-auto px-1 sm:px-4 py-3 sm:py-8">
         <div className="flex flex-col md:flex-row md:gap-8">
-          {/* Sidebar with Animation (desktop only) */}
-          <div
-            className={`
-              md:w-1/4 md:block hidden
-              bg-white shadow-md rounded-lg overflow-hidden mb-4 md:mb-0
-              transition-all duration-1000 transform
-              ${visible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}
-            `}>
-            <div className="p-3 sm:p-5">
-              <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 uppercase text-primary-dark">
-                {t("menu.filters")}
-              </h2>
-              <Sidebar filters={filters} setFilters={setFilters} />
-            </div>
-          </div>
-
           {/* Main content area - MenuCard with Animation */}
-          <div className={`md:w-3/4 transition-all duration-1000 delay-300 transform ${visible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
+          <div className={`w-full transition-all duration-1000 delay-300 transform ${visible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
             {/* Sort dropdown */}
             <h2 className="text-2xl sm:text-3xl font-bold text-primary-dark mb-4 sm:mb-6 text-center">
               {t("menu.Menu", "Our Menu")}

@@ -9,7 +9,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { useCart } from "../context/CartContext";
 import { useTranslation } from "react-i18next";
-import logo from "../assets/logo.webp";
+import logo from "../assets/logoen1.png";
 
 function Navbar({ changeLanguage }) {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -108,7 +108,7 @@ function Navbar({ changeLanguage }) {
 						{/* Brand Logo and Name */}
 						<div className="flex items-center gap-2">
 							<div className="w-10 h-10 rounded-full overflow-hidden border border-primary">
-								<img src={logo} alt="To'mah Logo" className="w-full h-full object-cover" />
+								<img src={logo} alt="To'mah Logo" className="w-full h-full object-cover " />
 							</div>
 							<span className="text-xl font-bold text-black">
 								{t("navbar.brand") || "To'mah"}

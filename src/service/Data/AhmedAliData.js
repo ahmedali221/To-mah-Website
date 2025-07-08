@@ -279,8 +279,10 @@ const productsData = [
     meal_name_ar: "مارينج بيض الهوا",
     description_ar: "",
 
-    category_en: "Packaged Baked Goods",
-    category_ar: "مخبوزات مغلفة",
+    category_en: "Baked Goods",
+    category_ar: "المخبوزات",
+    subcategory_en: "Packaged Baked Goods",
+    subcategory_ar: "مخبوزات مغلفة",
     available: true,
     trendy: false,
   },
