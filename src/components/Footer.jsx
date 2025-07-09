@@ -49,13 +49,13 @@ function Footer() {
 	return (
 		<footer dir={i18n.language === "ar" ? "rtl" : "ltr"} className="w-full">
 			{/* Mobile Layout (default) */}
-			<div className="bg-gray-100 text-gray-800 pt-6 pb-2 px-2 border-t border-gray-200 lg:hidden">
-				<div className="max-w-2xl mx-auto flex flex-col gap-4">
+			<div className="bg-gray-100 text-gray-800 pt-8 pb-4 px-2 border-t border-gray-200 lg:hidden">
+				<div className="max-w-2xl mx-auto flex flex-col gap-6">
 					{/* Brand and Social */}
-					<div className="flex flex-col items-center gap-2">
-						<img src={logo} alt="To'mah Logo" className="w-12 h-12 rounded-full object-cover border border-gray-300" />
-						<span className="font-bold text-lg">{t("navbar.brand")}</span>
-						<div className="flex gap-2 mt-1">
+					<div className="flex flex-col items-center gap-3">
+						<img src={logo} alt="To'mah Logo" className="w-14 h-14 rounded-full object-cover border border-gray-300" />
+						<span className="font-bold text-lg text-center">{t("navbar.brand")}</span>
+						<div className="flex gap-3 mt-2">
 							{socialPlatforms.map((social, idx) => (
 								<a
 									key={idx}
@@ -63,8 +63,8 @@ function Footer() {
 									target="_blank"
 									rel="noopener noreferrer"
 									aria-label={social.name}
-									className="bg-white border border-gray-200 rounded-full p-1.5 flex items-center justify-center hover:bg-gray-200 transition"
-									style={{ width: 32, height: 32 }}
+									className="bg-white border border-gray-200 rounded-full p-2 flex items-center justify-center hover:bg-gray-200 transition"
+									style={{ width: 36, height: 36 }}
 								>
 									<social.icon className="w-5 h-5 text-primary" />
 								</a>
@@ -73,58 +73,48 @@ function Footer() {
 					</div>
 
 					{/* Quick Links */}
-					<div className="flex flex-wrap justify-center gap-2 text-sm">
+					<div className="flex flex-col items-center gap-2 text-base w-full">
 						{navigationLinks.map((link, idx) => (
 							<Link
 								key={idx}
 								to={link.path}
-								className="flex items-center gap-1 px-2 py-1 rounded hover:bg-gray-200 transition"
+								className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-200 transition w-full justify-center"
 							>
-								<link.icon className="w-4 h-4 text-primary" />
+								<link.icon className="w-5 h-5 text-primary" />
 								<span>{link.label}</span>
 							</Link>
 						))}
 					</div>
 
 					{/* Contact Info */}
-					<div className="flex flex-wrap justify-center gap-3 text-xs text-gray-600">
-						<div className="flex items-center gap-1">
-							<MapPin className="w-4 h-4 text-primary" />
-							<span>{t("footer.address")}</span>
-						</div>
-						<div className="flex items-center gap-1">
-							<Phone className="w-4 h-4 text-primary" />
-							<span dir={i18n.language === "ar" ? "ltr" : undefined} style={i18n.language === "ar" ? { unicodeBidi: "bidi-override" } : {}}>
-								{t("footer.phone")}
-							</span>
-						</div>
-						
-						<div className="flex items-center gap-1">
-							<Clock className="w-4 h-4 text-primary" />
-							<span>{t("footer.hours")}</span>
-						</div>
-						<div className="flex items-center gap-1">
-							<Mail className="w-4 h-4 text-primary" />
-							<span>{t("footer.email")}</span>
-						</div>
-					</div>
-
+					/* Contact Info Section - Mobile Version Fix */
+<div className="flex flex-col items-center gap-2 text-sm text-gray-600 w-full">
+	<div className="flex items-center gap-2">
+		<MapPin className="w-5 h-5 text-primary flex-shrink-0" />
+		<span className="text-center">{t("footer.address")}</span>
+	</div>
+	<div className="flex items-center gap-2">
+		<Phone className="w-5 h-5 text-primary flex-shrink-0" />
+		<span dir={i18n.language === "ar" ? "ltr" : undefined} style={i18n.language === "ar" ? { unicodeBidi: "bidi-override" } : {}} className="text-center">
+			{t("footer.phone")}
+		</span>
+	</div>
+	<div className="flex items-center gap-2">
+		<Clock className="w-5 h-5 text-primary flex-shrink-0" />
+		<span className="text-center">{t("footer.hours")}</span>
+	</div>
+	<div className="flex items-start gap-2">
+		<Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+		<span className="text-center break-words">{t("footer.email")}</span>
+	</div>
+</div>
 					{/* Bottom */}
-					<div className="flex flex-col sm:flex-row justify-between items-center gap-2 border-t border-gray-200 pt-2 mt-2 text-xs bg-primary w-full px-2 py-2 text-white rounded-b-lg">
+					<div className="flex flex-col sm:flex-row justify-between items-center gap-2 border-t border-gray-200 pt-3 mt-3 text-xs bg-primary w-full px-2 py-3 text-white">
 						<div className="flex items-center gap-2">
 							<span>© {new Date().getFullYear()} {t("footer.rights")}</span>
 							<Heart className="w-4 h-4 text-amber-400" />
 						</div>
-						<div className="flex gap-3">
-							{["terms", "privacy", "cookie"].map((item) => (
-								<button
-									key={item}
-									className="hover:underline text-white"
-								>
-									{t(`footer.legal.${item}`)}
-								</button>
-							))}
-						</div>
+						{/* Legal buttons removed for mobile */}
 					</div>
 				</div>
 			</div>

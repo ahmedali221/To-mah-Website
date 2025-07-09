@@ -287,7 +287,7 @@ export default function VisionAndPhilosophy() {
                     className="bg-[#f5ecd7] rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow"
                     variants={itemVariants}
                   >
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-6">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-white rounded-full mb-6">
                       <Icon className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">

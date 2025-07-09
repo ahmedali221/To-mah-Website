@@ -9,6 +9,10 @@ import partner1 from "../assets/partners/1.jpg";
 import partner2 from "../assets/partners/2.jpg";
 import partner3 from "../assets/partners/3.jpg";
 import partner4 from "../assets/partners/4.jpg";
+import foodicsImg from "../assets/partners/foodics.jpg";
+import jisrImg from "../assets/partners/jisr.jpg";
+import mytableImg from "../assets/partners/mytable.jpg";
+import netexImg from "../assets/partners/netex.jpg";
 
 const Partners = () => {
   const { t, i18n } = useTranslation();
@@ -76,7 +80,7 @@ const Partners = () => {
         en: "Leading food delivery platform providing seamless ordering experience for To'mah customers.",
         ar: "منصة توصيل الطعام الرائدة التي توفر تجربة طلب سلسة لعملاء طُعمة.",
       },
-      icon: "🍽️",
+      image: foodicsImg,
     },
     {
       id: 2,
@@ -86,7 +90,7 @@ const Partners = () => {
         en: "Comprehensive accounting solutions tailored for restaurant and food service operations.",
         ar: "حلول محاسبية شاملة مصممة خصيصًا لعمليات المطاعم وخدمات الطعام.",
       },
-      icon: "💼",
+      image: foodicsImg,
     },
     {
       id: 3,
@@ -96,7 +100,7 @@ const Partners = () => {
         en: "Advanced online ordering system enabling customers to enjoy To'mah's flavors from anywhere.",
         ar: "نظام طلب متقدم عبر الإنترنت يمكن العملاء من الاستمتاع بنكهات طُعمة من أي مكان.",
       },
-      icon: "💻",
+      image: foodicsImg,
     },
     {
       id: 4,
@@ -106,7 +110,7 @@ const Partners = () => {
         en: "Exclusive loyalty program offering special rewards and benefits for frequent To'mah diners.",
         ar: "برنامج ولاء حصري يقدم مكافآت ومزايا خاصة لرواد طُعمة المنتظمين.",
       },
-      icon: "🏆",
+      image: partner4, // fallback to existing image
     },
     {
       id: 5,
@@ -116,7 +120,7 @@ const Partners = () => {
         en: "Smart table reservation system ensuring the perfect dining experience at To'mah Restaurant.",
         ar: "نظام ذكي لحجز الطاولات يضمن تجربة طعام مثالية في مطعم طُعمة.",
       },
-      icon: "🪑",
+      image: mytableImg,
     },
     {
       id: 6,
@@ -126,7 +130,7 @@ const Partners = () => {
         en: "Customer experience platform enhancing service quality and satisfaction at To'mah.",
         ar: "منصة تجربة العملاء التي تعزز جودة الخدمة والرضا في طُعمة.",
       },
-      icon: "⭐",
+      image: partner3, // fallback to existing image
     },
     {
       id: 7,
@@ -136,7 +140,7 @@ const Partners = () => {
         en: "Reliable network infrastructure solutions supporting To'mah's digital operations.",
         ar: "حلول البنية التحتية للشبكات الموثوقة التي تدعم العمليات الرقمية لطُعمة.",
       },
-      icon: "🌐",
+      image: netexImg,
     },
     {
       id: 8,
@@ -146,7 +150,7 @@ const Partners = () => {
         en: "Secure payment gateway ensuring safe and convenient transactions for To'mah customers.",
         ar: "بوابة دفع آمنة تضمن معاملات آمنة ومريحة لعملاء طُعمة.",
       },
-      icon: "💳",
+      image: jisrImg,
     },
   ];
 
@@ -187,20 +191,19 @@ const Partners = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative bg-primary text-white py-20 overflow-hidden">
+      <section className="relative bg-primary py-20 overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 
-              className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg partners-hero-title"
+              className="text-4xl md:text-5xl font-bold mb-6 partners-hero-title"
             >
               {t("partners.hero.title")}
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white drop-shadow-md">
+            <p className="text-xl md:text-2xl mb-8 text-white">
               {t("partners.hero.description")}
             </p>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 w-full h-16 bg-white" style={{ clipPath: "polygon(0 100%, 100% 100%, 100% 0)" }}></div>
       </section>
 
       {/* Certificates Section */}
@@ -303,7 +306,11 @@ const Partners = () => {
               >
                 <div className="flex flex-col items-center mb-4">
                   <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-3 text-3xl text-primary">
-                    {company.icon}
+                    {company.image ? (
+                      <img src={company.image} alt={company.name[i18n.language === "ar" ? "ar" : "en"]} className="w-16 h-16 object-contain" />
+                    ) : (
+                      company.icon
+                    )}
                   </div>
                   <div className="text-center">
                     <h3 className="text-lg font-bold text-gray-900 mb-1">

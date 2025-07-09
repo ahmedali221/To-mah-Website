@@ -23,37 +23,37 @@ export default function Home() {
     <div className="main-bg">
       <HeroSlider />
       {!isMobile && (
-        <div className="bg-white overflow-hidden border-y border-gray-200">
-          <div className="w-full h-14 flex items-center overflow-hidden">
-            <div className="relative w-full h-full">
-              <div className="animate-marquee flex whitespace-nowrap absolute left-0 top-0 h-full">
-                {Array.from({ length: 40 }).map((_, i) => (
-                  <span key={i} className="text-2xl font-stretch-expanded text-gray-900 tracking-wide mx-8 inline-block">
-                    {t(`toamahBanner`)}
-                  </span>
-                ))}
-                {/* Duplicate for seamless loop */}
-                {Array.from({ length: 40 }).map((_, i) => (
-                  <span key={i + 40} className="text-2xl font-stretch-expanded text-gray-900 tracking-wide mx-8 inline-block">
-                    {t(`toamahBanner`)}
-                  </span>
-                ))}
-              </div>
-              <style>
-                {`
-                  @keyframes marquee {
-                    0% { transform: translateX(0); }
-                    100% { transform: translateX(-50%); }
-                  }
-                  .animate-marquee {
-                    animation: marquee 35s linear infinite;
-                  }
-                `}
-              </style>
-            </div>
-          </div>
+  <div className="bg-white overflow-hidden border-y border-gray-200">
+    <div className="w-full h-10 flex items-center overflow-hidden">
+      <div className="relative w-full h-full">
+        <div className="animate-marquee flex whitespace-nowrap absolute left-0 top-0 h-full items-center">
+          {Array.from({ length: 40 }).map((_, i) => (
+            <span key={i} className="text-2xl font-stretch-expanded text-gray-900 tracking-wide px-12 inline-flex items-center h-full">
+              {t(`toamahBanner`)}
+            </span>
+          ))}
+          {/* Duplicate for seamless loop */}
+          {Array.from({ length: 40 }).map((_, i) => (
+            <span key={i + 40} className="text-2xl font-stretch-expanded text-gray-900 tracking-wide px-12 inline-flex items-center h-full">
+              {t(`toamahBanner`)}
+            </span>
+          ))}
         </div>
-      )}
+        <style>
+          {`
+            @keyframes marquee {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .animate-marquee {
+              animation: marquee 40s linear infinite;
+            }
+          `}
+        </style>
+      </div>
+    </div>
+  </div>
+)}
       <AboutAndVideoSection />
       <VisionAndPhilosophy />
       <MenuBanner />
