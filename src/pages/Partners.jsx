@@ -12,7 +12,6 @@ import partner4 from "../assets/partners/4.jpg";
 import foodicsImg from "../assets/partners/foodics.jpg";
 import jisrImg from "../assets/partners/jisr.jpg";
 import mytableImg from "../assets/partners/mytable.jpg";
-import netexImg from "../assets/partners/netex.jpg";
 
 const Partners = () => {
   const { t, i18n } = useTranslation();
@@ -74,7 +73,7 @@ const Partners = () => {
   const partnerCompanies = [
     {
       id: 1,
-      name: { en: "Foodex", ar: "فوديكس" },
+      name: { en: "Foodics", ar: "فوديكس" },
       type: { en: "Food Delivery Platform", ar: "منصة توصيل الطعام" },
       description: {
         en: "Leading food delivery platform providing seamless ordering experience for To'mah customers.",
@@ -84,23 +83,23 @@ const Partners = () => {
     },
     {
       id: 2,
-      name: { en: "Foodex Accounting", ar: "فوديكس المحاسبي" },
+      name: { en: "Foodics Accounting", ar: "فوديكس المحاسبي" },
       type: { en: "Financial Management", ar: "إدارة مالية" },
       description: {
         en: "Comprehensive accounting solutions tailored for restaurant and food service operations.",
         ar: "حلول محاسبية شاملة مصممة خصيصًا لعمليات المطاعم وخدمات الطعام.",
       },
-      image: foodicsImg,
+      image: partner4,
     },
     {
       id: 3,
-      name: { en: "Foodex Online", ar: "فوديكس اون لاين" },
+      name: { en: "Foodics Online", ar: "فوديكس اون لاين" },
       type: { en: "Digital Ordering System", ar: "نظام الطلب الرقمي" },
       description: {
         en: "Advanced online ordering system enabling customers to enjoy To'mah's flavors from anywhere.",
         ar: "نظام طلب متقدم عبر الإنترنت يمكن العملاء من الاستمتاع بنكهات طُعمة من أي مكان.",
       },
-      image: foodicsImg,
+      image: partner3,
     },
     {
       id: 4,
@@ -130,17 +129,17 @@ const Partners = () => {
         en: "Customer experience platform enhancing service quality and satisfaction at To'mah.",
         ar: "منصة تجربة العملاء التي تعزز جودة الخدمة والرضا في طُعمة.",
       },
-      image: partner3, // fallback to existing image
+      image: partner1,
     },
     {
       id: 7,
-      name: { en: "Netex", ar: "نتكس" },
+      name: { en: "Nitx", ar: "نتكس" },
       type: { en: "Network Solutions", ar: "حلول الشبكات" },
       description: {
         en: "Reliable network infrastructure solutions supporting To'mah's digital operations.",
         ar: "حلول البنية التحتية للشبكات الموثوقة التي تدعم العمليات الرقمية لطُعمة.",
       },
-      image: netexImg,
+      image: partner2,
     },
     {
       id: 8,
