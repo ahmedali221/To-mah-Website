@@ -47,13 +47,6 @@ function Navbar({ changeLanguage }) {
 		setIsMenuOpen(false);
 	}, [location]);
 
-	const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-	useEffect(() => {
-		const handleResize = () => setIsMobile(window.innerWidth < 768);
-		window.addEventListener("resize", handleResize);
-		return () => window.removeEventListener("resize", handleResize);
-	}, []);
-
 	const LanguageToggle = ({ isMobile = false }) => {
 		const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
@@ -66,9 +59,10 @@ function Navbar({ changeLanguage }) {
 		};
 
 		const buttonClasses =
-			"px-3 py-1 text-sm rounded-full shadow-md " +
-			"transition-all duration-300 ease-in-out transform " +
-			"hover:scale-105 active:scale-95 focus:outline-none";
+			(isMobile
+				? "px-2 py-0.5 text-xs "
+				: "px-3 py-1 text-sm ") +
+			"rounded-full shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 focus:outline-none";
 
 		return (
 			<div className={`flex space-x-2 ${isMobile ? "px-3 py-2" : ""}`}>
@@ -293,6 +287,7 @@ function Navbar({ changeLanguage }) {
 			<div
 				className={`md:hidden absolute w-full bg-white shadow-lg transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen ? "max-h-100 opacity-100" : "max-h-0 opacity-0"
 					}`}
+				style={{ maxHeight: isMenuOpen ? '80vh' : 0, overflowY: isMenuOpen ? 'auto' : 'hidden' }}
 			>
 				<div className="px-4 py-3 space-y-2">
 					<Link
