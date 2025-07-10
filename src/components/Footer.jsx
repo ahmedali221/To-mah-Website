@@ -182,16 +182,16 @@ function Footer() {
 
 							{/* Navigation */}
 							<div className="space-y-8">
-								<h3 className="text-lg font-bold relative text-primary">
+								<h3 className={`text-lg font-bold relative text-primary ${i18n.language === "ar" ? "text-right" : "text-left"}`}>
 									{t("footer.quick_links")}
-									<div className="absolute -bottom-2 left-0 w-8 h-1 bg-primary rounded-full"></div>
+									<div className={`absolute -bottom-2 ${i18n.language === "ar" ? "right-0" : "left-0"} w-8 h-1 bg-primary rounded-full`}></div>
 								</h3>
-								<nav className={`flex flex-col gap-2 ${i18n.language === "ar" ? "items-end text-right" : "items-start text-left"}`}>
+								<nav className={`flex flex-col gap-2 w-full ${i18n.language === "ar" ? "items-end text-right" : "items-start text-left"}`}>
 									{navigationLinks.map((link, index) => (
 										<Link
 											key={index}
 											to={link.path}
-											className="group flex items-center space-x-2 transition-all duration-300 p-1 rounded-lg hover:bg-gray-200 text-gray-800 text-base"
+											className={`group flex w-full items-center ${i18n.language === "ar" ? "flex-row-reverse justify-end gap-x-2" : "flex-row justify-start gap-x-2"} transition-all duration-300 p-1 rounded-lg hover:bg-gray-200 text-gray-800 text-base`}
 										>
 											<link.icon className="w-5 h-5 text-primary bg-white rounded-full p-1 border border-gray-200" />
 											<span>{link.label}</span>
@@ -204,11 +204,11 @@ function Footer() {
 
 							{/* Social Media */}
 							<div className="lg:col-span-1 space-y-8">
-								<h3 className="text-xl font-bold relative text-primary">
+								<h3 className={`text-xl font-bold relative text-primary ${i18n.language === "ar" ? "text-right" : "text-left"}`}>
 									{t("footer.follow_us")}
-									<div className="absolute -bottom-2 left-0 w-8 h-1 bg-primary rounded-full"></div>
+									<div className={`absolute -bottom-2 ${i18n.language === "ar" ? "right-0" : "left-0"} w-8 h-1 bg-primary rounded-full`}></div>
 								</h3>
-								<div className="grid grid-cols-4 gap-3 justify-center">
+								<div className={`grid grid-cols-4 gap-3 ${i18n.language === "ar" ? "justify-end items-end" : "justify-start items-start"}`}>
 									{socialPlatforms.map((social, index) => (
 										<a
 											key={index}

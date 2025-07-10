@@ -295,8 +295,8 @@ function Menu() {
             { key: 'breakfast', label: i18n.language === 'ar' ? 'الفطور' : 'Breakfast' },
             { key: 'lunch_dinner', label: i18n.language === 'ar' ? 'الغداء و العشاء' : 'Lunch & Dinner' },
             { key: 'baked_goods', label: i18n.language === 'ar' ? 'المخبوزات' : 'Baked Goods' },
-            { key: 'deserts', label: i18n.language === 'ar' ? 'حلويات' : 'deserts' },
-            { key: 'drinks', label: i18n.language === 'ar' ? 'مشروبات' : 'drinks' },
+            { key: 'desserts', label: i18n.language === 'ar' ? 'حلويات' : 'Desserts' },
+            { key: 'drinks', label: i18n.language === 'ar' ? 'مشروبات' : 'Drinks' },
           ].map((cat) => (
             <button
               key={cat.key}

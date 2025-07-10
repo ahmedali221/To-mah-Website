@@ -304,7 +304,7 @@ const Partners = () => {
                 className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
               >
                 <div className="flex flex-col items-center mb-4">
-                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-3 text-3xl text-primary">
+                  <div className="w-20 h-20 flex items-center justify-center mb-3 text-3xl ">
                     {company.image ? (
                       <img src={company.image} alt={company.name[i18n.language === "ar" ? "ar" : "en"]} className="w-16 h-16 object-contain" />
                     ) : (
