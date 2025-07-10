@@ -54,7 +54,7 @@ function Footer() {
 					{/* Brand and Social */}
 					<div className="flex flex-col items-center gap-3">
 						<img src={logo} alt="To'mah Logo" className="w-14 h-14 rounded-full object-cover border border-gray-300" />
-						<span className="font-bold text-lg text-center">{t("navbar.brand")}</span>
+						<span className="font-bold text-base text-center">{t("navbar.brand")}</span>
 						<div className="flex gap-3 mt-2">
 							{socialPlatforms.map((social, idx) => (
 								<a
@@ -87,8 +87,8 @@ function Footer() {
 					</div>
 
 					{/* Contact Info */}
-					/* Contact Info Section - Mobile Version Fix */
-<div className="flex flex-col items-center gap-2 text-sm text-gray-600 w-full">
+					{/* Contact Info Section - Mobile Version Fix */}
+<div className="flex flex-col items-center gap-2 text-xs text-gray-600 w-full">
 	<div className="flex items-center gap-2">
 		<MapPin className="w-5 h-5 text-primary flex-shrink-0" />
 		<span className="text-center">{t("footer.address")}</span>
@@ -167,9 +167,9 @@ function Footer() {
 												>
 													<contact.icon className="w-8 h-8 text-primary bg-white rounded-full p-1 border border-gray-200" />
 													<span
-														style={{ fontSize: "20px" }}
+														style={{ fontSize: "16px" }}
 														dir={i18n.language === "ar" && contact.isPhone ? "ltr" : undefined}
-														{...(i18n.language === "ar" && contact.isPhone ? { style: { unicodeBidi: "bidi-override", fontSize: "20px" } } : {})}
+														{...(i18n.language === "ar" && contact.isPhone ? { style: { unicodeBidi: "bidi-override", fontSize: "16px" } } : {})}
 													>
 														{contact.text}
 													</span>
@@ -182,20 +182,20 @@ function Footer() {
 
 							{/* Navigation */}
 							<div className="space-y-8">
-								<h3 className="text-xl font-bold relative text-primary">
+								<h3 className="text-lg font-bold relative text-primary">
 									{t("footer.quick_links")}
 									<div className="absolute -bottom-2 left-0 w-8 h-1 bg-primary rounded-full"></div>
 								</h3>
-								<nav className="flex flex-wrap gap-4 justify-center">
+								<nav className={`flex flex-col gap-2 ${i18n.language === "ar" ? "items-end text-right" : "items-start text-left"}`}>
 									{navigationLinks.map((link, index) => (
 										<Link
 											key={index}
 											to={link.path}
-											className="group flex items-center space-x-2 transition-all duration-300 p-2 rounded-lg hover:bg-gray-200 text-gray-800 text-lg"
+											className="group flex items-center space-x-2 transition-all duration-300 p-1 rounded-lg hover:bg-gray-200 text-gray-800 text-base"
 										>
-											<link.icon className="w-6 h-6 text-primary bg-white rounded-full p-1 border border-gray-200" />
+											<link.icon className="w-5 h-5 text-primary bg-white rounded-full p-1 border border-gray-200" />
 											<span>{link.label}</span>
-											<ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-primary bg-white rounded-full p-1 border border-gray-200" />
+											<ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-primary bg-white rounded-full p-1 border border-gray-200" />
 										</Link>
 									))}
 								</nav>
@@ -204,11 +204,11 @@ function Footer() {
 
 							{/* Social Media */}
 							<div className="lg:col-span-1 space-y-8">
-								<h3 className="text-3xl font-bold relative text-primary">
+								<h3 className="text-xl font-bold relative text-primary">
 									{t("footer.follow_us")}
 									<div className="absolute -bottom-2 left-0 w-8 h-1 bg-primary rounded-full"></div>
 								</h3>
-								<div className="flex flex-wrap gap-4 justify-center">
+								<div className="grid grid-cols-4 gap-3 justify-center">
 									{socialPlatforms.map((social, index) => (
 										<a
 											key={index}
@@ -216,9 +216,9 @@ function Footer() {
 											target="_blank"
 											rel="noopener noreferrer"
 											aria-label={social.name}
-											className="group relative overflow-hidden bg-white rounded-2xl p-3 border border-gray-200 hover:border-primary transition-all duration-500 hover:scale-105 flex items-center justify-center hover:shadow-lg"
+											className="group relative overflow-hidden bg-white rounded-2xl p-2 border border-gray-200 hover:border-primary transition-all duration-500 hover:scale-105 flex items-center justify-center hover:shadow-lg"
 										>
-											<social.icon className="relative z-10 mx-auto text-primary" style={{ width: "1.5em", height: "1em" }} />
+											<social.icon className="relative z-10 mx-auto text-primary" style={{ width: "1.2em", height: "1.2em" }} />
 										</a>
 									))}
 								</div>

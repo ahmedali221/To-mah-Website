@@ -20,7 +20,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="main-bg">
+    <div className="main-bg overflow-x-hidden">
       <HeroSlider />
       {!isMobile && (
   <div className="bg-white overflow-hidden border-y border-gray-200">
@@ -46,7 +46,7 @@ export default function Home() {
               100% { transform: translateX(-50%); }
             }
             .animate-marquee {
-              animation: marquee 40s linear infinite;
+              animation: marquee 80s linear infinite;
             }
           `}
         </style>
