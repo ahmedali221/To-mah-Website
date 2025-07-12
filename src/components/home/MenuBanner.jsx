@@ -64,7 +64,7 @@ export default function MenuBanner() {
             </motion.span>
             <motion.span
               className="transform transition-transform duration-300 group-hover:translate-x-1"
-              style={{ fontSize: "1.5rem", fontWeight: "bold" }}
+              style={{ fontSize: "0.9rem", fontWeight: "bold" }}
               whileHover={{ scale: 1.05 }}
             >
               {t("menu_banner.button")}

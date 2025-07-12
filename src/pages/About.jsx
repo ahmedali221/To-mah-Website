@@ -105,7 +105,7 @@ const About = () => {
 			{
 				breakpoint: 1024,
 				settings: {
-					slidesToShow: 2,
+					slidesToShow: 1,
 					dots: true
 				}
 			},
@@ -125,7 +125,7 @@ const About = () => {
 		dots: false,
 		responsive: [
 			{ breakpoint: 1280, settings: { slidesToShow: 3, dots: false } },
-			{ breakpoint: 1024, settings: { slidesToShow: 2, dots: false } },
+			{ breakpoint: 1024, settings: { slidesToShow: 1, dots: false } },
 			{ breakpoint: 640, settings: { slidesToShow: 1, dots: false } },
 		],
 	};
@@ -136,7 +136,7 @@ const About = () => {
 		dots: false,
 		responsive: [
 			{ breakpoint: 1280, settings: { slidesToShow: 3, dots: false } },
-			{ breakpoint: 1024, settings: { slidesToShow: 2, dots: false } },
+			{ breakpoint: 1024, settings: { slidesToShow: 1, dots: false } },
 			{ breakpoint: 640, settings: { slidesToShow: 1, dots: false } },
 		],
 	};
@@ -206,14 +206,14 @@ const About = () => {
 			`}</style>
 
 			{/* Hero Story Section */}
-			<section className="py-16 md:py-24 relative overflow-hidden" style={{
+			<section className="py-4 md:py-6 relative overflow-hidden" style={{
 				background: 'linear-gradient(135deg, #f8f9fc 0%, rgba(103, 48, 38, 0.05) 50%, #f0f2f7 100%)'
 			}}>
 				<div className="absolute inset-0" style={{
 					background: 'radial-gradient(circle at 30% 20%, rgba(103, 48, 38, 0.1), transparent 50%)'
 				}}></div>
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-					<div className="text-center mb-16">
+					<div className="text-center mb-20">
 						<h1 className="text-4xl md:text-6xl font-bold mb-4" style={{
 							background: 'linear-gradient(135deg, #673026 0%, #7e845d 100%)',
 							WebkitBackgroundClip: 'text',
@@ -227,14 +227,31 @@ const About = () => {
 						}}></div>
 					</div>
 
-					<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
-						{/* Left Image */}
-						<div className="animate-on-scroll order-2 lg:order-1 flex items-center justify-center" id="story-img-1">
+					{/* Hero Story Section grid */}
+					<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-12 lg:gap-20 items-center">
+						{/* Center Text Cards and Image for mobile */}
+						<div className="flex flex-col lg:hidden">
+							<div className="mb-4 bg-white p-4 md:p-8 rounded-lg shadow-sm flex flex-col justify-center h-[220px] md:h-[250px]">
+								<h3 className="text-2xl font-semibold text-gray-800">{t("home.about.idea_section.heading")}</h3>
+								<p className="text-gray-600 mt-2 ">{t("home.about.idea_section.hijri")} — {t("home.about.idea_section.gregorian")}</p>
+							</div>
+							<div className="flex items-center justify-center my-2">
+								<img
+									src={img1}
+									alt={t("about.story.image_alt_left")}
+									className="rounded-2xl shadow-2xl w-full max-w-xs h-48 object-cover story-img-symmetry"
+								/>
+							</div>
+							<div className="mb-4 bg-white p-4 md:p-8 rounded-lg shadow-sm flex flex-col justify-center h-[220px] md:h-[250px]">
+								<h3 className="text-2xl font-semibold text-gray-800">{t("home.about.opening_section.heading")}</h3>
+								<p className="text-gray-600 mt-2">{t("home.about.opening_section.hijri")} — {t("home.about.opening_section.gregorian")}</p>
+							</div>
+						</div>
+						{/* Desktop layout: left image, center text, right image */}
+						<div className="hidden lg:flex items-center justify-center animate-on-scroll order-2 lg:order-1" id="story-img-1">
 							<div className={`relative group transform transition-all duration-1000 ${isVisible["story-img-1"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
 								style={{height: '500px', width: '100%'}}>
-								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{
-									background: 'linear-gradient(135deg, #673026 0%, #d97706 100%)'
-								}}></div>
+								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{background: 'linear-gradient(135deg, #673026 0%, #d97706 100%)'}}></div>
 								<img
 									src={img1}
 									alt={t("about.story.image_alt_left")}
@@ -243,38 +260,22 @@ const About = () => {
 								/>
 							</div>
 						</div>
-
-						{/* Center Text Cards */}
-						<div className="animate-on-scroll order-1 lg:order-2 flex flex-col justify-center h-[500px]" id="story-text">
+						<div className="hidden lg:flex flex-col justify-center h-[500px] animate-on-scroll order-1 lg:order-2" id="story-text">
 							<div className="flex flex-col justify-between h-full">
-								
-								<div className="mb-6 bg-white p-6 rounded-lg shadow-sm flex flex-col justify-center h-[250px]">
-									<h3 className="text-2xl font-semibold text-gray-800">
-										{t("home.about.idea_section.heading")}
-									</h3>
-									<p className="text-gray-600 mt-2 ">
-										{t("home.about.idea_section.hijri")} — {t("home.about.idea_section.gregorian")}
-									</p>
+								<div className="mb-8 bg-white p-8 rounded-lg shadow-sm flex flex-col justify-center h-[250px]">
+									<h3 className="text-2xl font-semibold text-gray-800">{t("home.about.idea_section.heading")}</h3>
+									<p className="text-gray-600 mt-2 ">{t("home.about.idea_section.hijri")} — {t("home.about.idea_section.gregorian")}</p>
 								</div>
-								<div className="mb-8 mt-5 bg-white p-6 rounded-lg shadow-sm flex flex-col justify-center h-[250px]">
-									<h3 className="text-2xl font-semibold text-gray-800">
-										{t("home.about.opening_section.heading")}
-									</h3>
-									<p className="text-gray-600 mt-2">
-										{t("home.about.opening_section.hijri")} — {t("home.about.opening_section.gregorian")}
-									</p>
+								<div className="mb-12 mt-8 bg-white p-8 rounded-lg shadow-sm flex flex-col justify-center h-[250px]">
+									<h3 className="text-2xl font-semibold text-gray-800">{t("home.about.opening_section.heading")}</h3>
+									<p className="text-gray-600 mt-2">{t("home.about.opening_section.hijri")} — {t("home.about.opening_section.gregorian")}</p>
 								</div>
-
 							</div>
 						</div>
-
-						{/* Right Image */}
-						<div className="animate-on-scroll order-3 lg:order-3 flex items-center justify-center" id="story-img-2">
+						<div className="hidden lg:flex items-center justify-center animate-on-scroll order-3 lg:order-3 md:flex" id="story-img-2">
 							<div className={`relative group transform transition-all duration-1000 delay-500 ${isVisible["story-img-2"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
 								style={{height: '500px', width: '100%'}}>
-								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{
-									background: 'linear-gradient(135deg, #7e845d 0%, #673026 100%)'
-								}}></div>
+								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{background: 'linear-gradient(135deg, #7e845d 0%, #673026 100%)'}}></div>
 								<img
 									src={img2}
 									alt={t("about.story.image_alt_right")}
@@ -288,14 +289,14 @@ const About = () => {
 			</section>
 
 			{/* Why Visit Section */}
-			<section className="py-16 md:py-20 animate-on-scroll" >
-				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="text-center mb-12">
-						<h2 className="text-3xl md:text-5xl font-bold mb-6" >
+			<section className="py-4 md:py-6 animate-on-scroll" >
+				<div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12">
+					<div className="text-center mb-16">
+						<h2 className="text-3xl md:text-5xl font-bold mb-8" >
 							{t("about.ambiance.title")}
 						</h2>
-						<div className="w-24 h-1 mx-auto rounded-full mb-8"></div>
-						<p className="max-w-4xl mx-auto text-lg md:text-xl leading-relaxed" >
+						<div className="w-24 h-1 mx-auto rounded-full mb-10"></div>
+						<p className="max-w-4xl mx-auto text-lg md:text-xl leading-relaxed mt-4" >
 							{t("about.ambiance.description")}
 						</p>
 					</div>
@@ -303,7 +304,7 @@ const About = () => {
 			</section>
 
 			{/* Video Section */}
-			<section className="py-16 md:py-24" style={{ backgroundColor: '#f8f9fc' }}>
+			<section className="py-4 md:py-6" style={{ backgroundColor: '#f8f9fc' }}>
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="animate-on-scroll" id="video-section">
 						<div className={`relative rounded-3xl overflow-hidden shadow-2xl group cursor-pointer transition-all duration-1000 ${isVisible["video-section"] ? "opacity-100 scale-100" : "opacity-0 scale-95"}`} onClick={() => setIsPlaying(true)}>
@@ -346,21 +347,21 @@ const About = () => {
 				</div>
 			</section>
 
-			<section className="py-16 md:py-24 animate-on-scroll" id="team-section" style={{
+			<section className="py-4 md:py-6 animate-on-scroll" id="team-section" style={{
 				background: 'linear-gradient(135deg, #f8f9fc 0%, rgba(166, 171, 139, 0.1) 100%)'
 			}}>
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="text-center mb-16">
-						<h2 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#1d2939' }}>
+					<div className="text-center mb-20">
+						<h2 className="text-3xl md:text-5xl font-bold mb-8" style={{ color: '#1d2939' }}>
 							{t("about.team.title", "Our Team")}
 						</h2>
-						<div className="w-24 h-1 mx-auto rounded-full mb-8 bg-accent"></div>
+						<div className="w-24 h-1 mx-auto rounded-full mb-10 bg-accent"></div>
 						<UserGroupIcon className="w-12 h-12 mx-auto text-accent" />
 					</div>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-16">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-12 pb-20">
 						{teamImages.map((image, index) => (
 							<div key={index} className={`transform transition-all duration-1000 ${isVisible["team-section"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`} style={{ transitionDelay: `${index * 150}ms` }}>
-								<div className="relative overflow-hidden rounded-2xl shadow-xl group p-2" style={{ backgroundColor: '#f8f9fc' }}>
+								<div className="relative overflow-hidden rounded-2xl shadow-xl group p-4" style={{ backgroundColor: '#f8f9fc' }}>
 									<img
 										src={image}
 										alt={t("about.team.member_alt", { number: index + 1 })}
@@ -374,9 +375,9 @@ const About = () => {
 				</div>
 			</section>
 
-			<section className="py-16 md:py-24 animate-on-scroll" id="special-menu-section" style={{ backgroundColor: '#f0f2f7' }}>
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+			<section className="py-4 md:py-6 animate-on-scroll" id="special-menu-section" style={{ backgroundColor: '#f0f2f7' }}>
+				<div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 						<div className={`transition-all duration-1000 ${isVisible["special-menu-section"] ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}>
 							<div className="relative group">
 								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{
@@ -385,11 +386,11 @@ const About = () => {
 								<img
 									src={logo}
 									alt={t("about.special_menu.logo_alt")}
-									className="relative rounded-2xl shadow-2xl w-full h-80 lg:h-96 object-cover"
+									className="relative rounded-2xl shadow-2xl w-full h-80 lg:h-96 object-cover mb-4"
 								/>
 							</div>
 						</div>
-						<div className={`transition-all duration-1000 delay-300 ${isVisible["special-menu-section"] ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}>
+						<div className={`transition-all duration-1000 delay-300 ${isVisible["special-menu-section"] ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"} hidden md:block`}>
 							<div className="relative group">
 								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{
 									background: 'linear-gradient(135deg, #7e845d 0%, #673026 100%)'
@@ -397,7 +398,7 @@ const About = () => {
 								<img
 									src={loc}
 									alt={t("about.special_menu.interior_alt")}
-									className="relative rounded-2xl shadow-2xl w-full h-80 lg:h-96 object-cover"
+									className="relative rounded-2xl shadow-2xl w-full h-80 lg:h-96 object-cover mb-4"
 								/>
 							</div>
 						</div>
@@ -406,19 +407,19 @@ const About = () => {
 			</section>
 
 			{/* Testimonials Section */}
-			<section className="py-16 md:py-24 animate-on-scroll" id="testimonials-section" style={{ background: 'linear-gradient(135deg, #f8f9fc 0%, #fffbe6 100%)' }}>
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="text-center mb-16">
-						<h2 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#1d2939' }}>
+			<section className="py-4 md:py-6 animate-on-scroll" id="testimonials-section" style={{ background: 'linear-gradient(135deg, #f8f9fc 0%, #fffbe6 100%)' }}>
+				<div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+					<div className="text-center mb-20">
+						<h2 className="text-3xl md:text-5xl font-bold mb-8" style={{ color: '#1d2939' }}>
 							{t("about.testimonials.title", "آراء الزوار")}
 						</h2>
-						<div className="w-24 h-1 mx-auto rounded-full mb-8 bg-accent"></div>
+						<div className="w-24 h-1 mx-auto rounded-full mb-10 bg-accent"></div>
 						<HeartIcon className="w-12 h-12 mx-auto text-accent" />
 					</div>
 					<Slider {...sliderSettings}>
 						{testimonials.map((testimonial, idx) => (
-							<div key={idx} className="px-4">
-								<div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center h-full min-h-[340px]">
+							<div key={idx} className="px-3">
+								<div className="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center text-center h-full min-h-[340px] mb-8">
 									<img
 										src={testimonial.img}
 										alt={testimonial.name}
@@ -441,12 +442,12 @@ const About = () => {
 			</section>
 			{/* Gallery Section */}
 			<section
-				className="py-16 md:py-20 overflow-hidden"
+				className="py-4 md:py-6 overflow-hidden"
 				style={{ backgroundColor: '#f8f9fc' }}>
 				<div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
 					<Slider {...gallerySliderSettings}>
 						{galleryImages.concat(galleryImages).map((img, index) => (
-							<div key={index} className="px-2">
+							<div key={index} className="px-4">
 								<div className="flex items-center justify-center rounded-2xl overflow-hidden shadow-2xl group">
 									<img
 										src={img}
@@ -462,27 +463,27 @@ const About = () => {
 
 
 			{/* Google Reviewss Section */}
-			<section className="animate-on-scroll" id="visitors-section" style={{ backgroundColor: '#f0f2f7' }}>
-				<div className="text-center mb-16">
-					<h2 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#1d2939' }}>
+			<section className="py-4 md:py-6 animate-on-scroll" id="visitors-section" style={{ backgroundColor: '#f0f2f7' }}>
+				<div className="text-center mb-20">
+					<h2 className="text-3xl md:text-5xl font-bold mb-8" style={{ color: '#1d2939' }}>
 						{t("about.visitors.title", "زوارنا المميزون")}
-					</h2>
-					<div className="w-24 h-1 mx-auto rounded-full mb-8 bg-accent"></div>
+					</h2>	
+					<div className="w-24 h-1 mx-auto rounded-full mb-10 bg-accent"></div>
 					<GlobeAltIcon className="w-12 h-12 mx-auto text-accent" />
 				</div>
 				<div className="max-w-7xl mx-auto">
 					<Slider {...visitorsGallerySliderSettings} className="visitors-slider">
 						{visitorsPhotos.map((visitor, idx) => (
-							<div key={idx} className="px-3 flex flex-col items-center">
-								<div className="relative group rounded-2xl overflow-hidden shadow-xl p-2 h-[600px] flex items-center justify-center w-full" style={{ backgroundColor: '#f8f9fc' }}>
+							<div key={idx} className="px-4 flex flex-col items-center">
+								<div className="relative group rounded-2xl overflow-hidden shadow-xl p-4 h-[600px] flex items-center justify-center w-full" style={{ backgroundColor: '#f8f9fc' }}>
 									<img
 										src={visitor.image}
 										alt={visitor.name}
 										className="w-full h-[500px] object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
 									/>
 								</div>
-								<div className="w-full mt-6">
-									<p style={{ fontSize: "36px", color: '#673026' }} className="text-center font-bold text-xl text-primary">{visitor.name}</p>
+								<div className="w-full mt-8">
+									<p style={{ fontSize: "20px", color: '#673026' }} className="text-center font-bold text-xl text-primary">{visitor.name}</p>
 								</div>
 							</div>
 						))}

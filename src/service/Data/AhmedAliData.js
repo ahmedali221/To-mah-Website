@@ -7,6 +7,7 @@ import desert6 from "../../assets/Menu/deserts/6.jpg";
 
 import breadbaked1 from "../../assets/Menu/breakfastDeserts/3.jpg";
 import breadbaked2 from "../../assets/Menu/breakfastDeserts/4.jpg";
+import breadbaked20 from "../../assets/Menu/breakfastDeserts/20.jpg";
 
 
 import offer1 from "../../assets/Menu/offers/workLunch.jpg";
@@ -95,8 +96,8 @@ const productsData = [
     meal_name_en: "Liver Sandwich",
     description_en:
       "Traditional bread with liver and cheese spread, garnished with parsley",
-    price: null,
-    meal_name_ar: "ساندوتش كبدة",
+      price: "20 ريال",
+      meal_name_ar: "ساندوتش كبدة",
     description_ar: "الجبنة السائلة المدهونة مع الكبدة و المزينة بالبقدونس",
 
     subcategory_en: "Love Bread Sandwich",
@@ -157,7 +158,7 @@ const productsData = [
     image: left2ShabouraMalha,
     meal_name_en: "Salty Rusk",
     description_en: "",
-    price: "13 ريال",
+    price: "10 ريال",
     meal_name_ar: "شابورة مالحة",
     description_ar: "",
     calories_en: "574 calories",
@@ -173,10 +174,10 @@ const productsData = [
   },
   {
     id: "16",
-    image: null,
+    image: left2ShabouraMalha,
     meal_name_en: "Duqqa Rusk",
     description_en: "",
-    price: "13 ريال",
+    price: "10 ريال",
     meal_name_ar: "شابورة الدقة",
     description_ar: "",
     calories_en: "575 calories",
@@ -195,7 +196,7 @@ const productsData = [
     image: null,
     meal_name_en: "Milk Biscuits",
     description_en: "",
-    price: "13 ريال",
+    price: "10 ريال",
     meal_name_ar: "بسكويت الحليب",
     description_ar: "",
     calories_en: null,
@@ -214,7 +215,7 @@ const productsData = [
     image: left2Ghraiba,
     meal_name_en: "Ghoriba",
     description_en: "",
-    price: "13 ريال",
+    price: "10 ريال",
     meal_name_ar: "غريبة",
     description_ar: "",
     calories_en: "1194 calories",
@@ -230,10 +231,10 @@ const productsData = [
   },
   {
     id: "19",
-    image: null,
+    image: breadbaked20,
     meal_name_en: "Sweet Rusk",
     description_en: "",
-    price: "13 ريال",
+    price: "10 ريال",
     meal_name_ar: "شابورة حلوة",
     description_ar: "",
 
@@ -253,7 +254,7 @@ const productsData = [
     image: left2SesameBiscuit,
     meal_name_en: "Sesame Biscuits",
     description_en: "",
-    price: "13 ريال",
+    price: "10 ريال",
     meal_name_ar: "بسكويت السمسم",
     description_ar: "",
 
@@ -273,7 +274,7 @@ const productsData = [
     image: breadbaked1,
     meal_name_en: "Mini Rusk",
     description_en: "",
-    price: "13 ريال",
+    price: "7 ريال",
     meal_name_ar: "ميني شابورة",
     description_ar: "",
 
@@ -293,7 +294,7 @@ const productsData = [
     image: tatima,
     meal_name_en: "Ta’tema Rusk",
     description_en: "",
-    price: "5 ريال",
+    price: "10 ريال",
     meal_name_ar: "شابورة التعتيمة",
     description_ar: "",
     calories_en: "350 calories",
@@ -497,7 +498,7 @@ const productsData = [
     image: drink2,
     meal_name_en: "Turkish Coffee",
     description_en: "Traditional strong coffee prepared in cezve",
-    price: null,
+    price: "12 ريال",
     meal_name_ar: "قهوة تركي",
     description_ar: "",
 
@@ -517,7 +518,7 @@ const productsData = [
     image: left2Water,
     meal_name_en: "Mineral Water",
     description_en: "Bottled mineral water",
-    price: null,
+    price: "3 ريال",
     meal_name_ar: "مياه معدنية",
     description_ar: "",
 
@@ -542,7 +543,7 @@ const productsData = [
     image: left2Water,
     meal_name_en: "Carbonated Water",
     description_en: "Sparkling mineral water",
-    price: null,
+    price: "5 ريال",
     meal_name_ar: "مياه غازية",
     description_ar: "",
     category_en: "Drinks",
@@ -606,7 +607,7 @@ const productsData = [
     image: drink7,
     meal_name_en: "Harah Mix Tea",
     description_en: "Red tea boiled with mint and Madini rose",
-    price: "15 ريال",
+    price: "20 ريال",
     meal_name_ar: "شاي مشكل الحارة",
     description_ar: "شاي أحمر مغلي مع النعناع والورد المديني",
     category_en: "Drinks",
@@ -625,7 +626,7 @@ const productsData = [
     image: tea1,
     meal_name_en: "Flavored Tea",
     description_en: "Red tea with Madini flavors",
-    price: "15 ريال",
+    price: "20 ريال",
     meal_name_ar: "شاي معطر",
     description_ar: "شاي أحمر مديني معطر بنكهات المدينة",
 
@@ -666,7 +667,7 @@ const productsData = [
     image: drink10,
     meal_name_en: "Milk Tea",
     description_en: "Red tea pot with fresh milk",
-    price: "17 ريال",
+    price: "9 ريال",
     meal_name_ar: "شاي حليب",
     description_ar: "شاي أحمر بالحليب مع خلطة مدينية خاصة",
 
@@ -686,7 +687,7 @@ const productsData = [
     image: left2TeaRed,
     meal_name_en: "Red Tea",
     description_en: "Red tea with Madini mint",
-    price: "15 ريال",
+    price: "20 ريال",
     meal_name_ar: "شاي أحمر",
     description_ar: "شاي أحمر (سادة) بالنعناع المديني",
     category_en: "Drinks",
@@ -726,7 +727,7 @@ const productsData = [
     image: null,
     meal_name_en: "Vimto",
     description_en: "Vimto mix with Madini mint and lemon",
-    price: "14 ريال",
+    price: "17 ريال",
     meal_name_ar: "شربت فيمتو",
     description_ar: "فيمتو بالنعناع والليمون المديني",
     category_en: "Drinks",
@@ -786,7 +787,7 @@ const productsData = [
     image: tea3,
     meal_name_en: "Qamar al-Din",
     description_en: "Qamar al-Din slash with orange juice",
-    price: "14 ريال",
+    price: "17 ريال",
     meal_name_ar: "قمر الدين",
     description_ar: "قمر الدين مع عصير البرتقال",
     category_en: "Drinks",
@@ -805,7 +806,7 @@ const productsData = [
     image: drink11,
     meal_name_en: "Hibiscus",
     description_en: "Special slash with Madini flavors",
-    price: "14 ريال",
+    price: "17 ريال",
     meal_name_ar: "كركديه",
     description_ar: "سلاش خاص بنكهة المدينية",
     category_en: "Drinks",
@@ -825,7 +826,7 @@ const productsData = [
     image: drink12,
     meal_name_en: "Madini Ajwa",
     description_en: "Madini dates served cold with milk",
-    price: "20 ريال",
+    price: "25 ريال",
     meal_name_ar: "عجوة المدينه",
     description_ar: "تمر العجوة المديني بالتبريد، يقدم مع حليب",
     category_en: "Drinks",
@@ -844,7 +845,7 @@ const productsData = [
     image: drink13,
     meal_name_en: "Fresh Orange",
     description_en: "Fresh Oula orange juice",
-    price: "14 ريال",
+    price: "20 ريال",
     meal_name_ar: "برتقال طازة",
     description_ar: "برتقال طازة من مزارع العلا المحلي",
 
@@ -929,7 +930,7 @@ const productsData = [
     meal_name_en: "Tour Meals",
     description_en:
       "1 person. Includes salad, chicken, dakos, 1 samosa, and soft drink.",
-    price: "27 ريال",
+    price: "30 ريال",
     meal_name_ar: "وجبة شركات السياحة",
     description_ar:
       "يخدم شخص واحد. ١/ سلطة، ٢/ دجاج، ٣/ دقوس، ٤/ سمبوسة، ٥/ مشروب غازي",
@@ -966,8 +967,8 @@ const productsData = [
     meal_name_en: "Happy Occasions Buffet",
     description_en:
       "Photo collection of all hot dishes / Lunch & Dinner section",
-    price: null,
-    meal_name_ar: "بوفيه المناسبات السعيدة",
+      price: "150 ريال",
+      meal_name_ar: "بوفيه المناسبات السعيدة",
     description_ar: "مجموعة الصور لجميع الأطباق الساخنة / قسم الغداء والعشاء",
 
     category_en: "Lunch & Dinner",

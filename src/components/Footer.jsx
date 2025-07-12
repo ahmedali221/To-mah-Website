@@ -55,7 +55,7 @@ function Footer() {
 					<div className="flex flex-col items-center gap-3">
 						<img src={logo} alt="To'mah Logo" className="w-14 h-14 rounded-full object-cover border border-gray-300" />
 						<span className="font-bold text-base text-center">{t("navbar.brand")}</span>
-						<div className="flex gap-3 mt-2">
+						<div className="grid grid-cols-4 gap-3 mt-2">
 							{socialPlatforms.map((social, idx) => (
 								<a
 									key={idx}
