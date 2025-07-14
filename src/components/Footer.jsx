@@ -73,15 +73,24 @@ function Footer() {
 					</div>
 
 					{/* Quick Links */}
-					<div className="flex flex-col items-center gap-2 text-base w-full">
+					<div className={`flex flex-col gap-2 text-base w-full ${i18n.language === "ar" ? "items-end text-right" : "items-center text-center"}`}>
 						{navigationLinks.map((link, idx) => (
 							<Link
 								key={idx}
 								to={link.path}
-								className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-200 transition w-full justify-center"
+								className={`flex px-3 py-2 rounded hover:bg-gray-200 transition w-full justify-center items-center gap-2 ${i18n.language === "ar" ? "flex-row-reverse justify-end" : "flex-row justify-center"}`}
 							>
-								<link.icon className="w-5 h-5 text-primary" />
-								<span>{link.label}</span>
+								{ i18n.language === "ar" ? (
+									<>
+										<span>{link.label}</span>
+										<link.icon className="w-5 h-5 text-primary" />
+									</>
+								) : (
+									<>
+										<link.icon className="w-5 h-5 text-primary" />
+										<span>{link.label}</span>
+									</>
+								)}
 							</Link>
 						))}
 					</div>
@@ -180,27 +189,35 @@ function Footer() {
 								</div>
 							</div>
 
-							{/* Navigation */}
-							<div className="space-y-8">
-								<h3 className={`text-lg font-bold relative text-primary ${i18n.language === "ar" ? "text-right" : "text-left"}`}>
-									{t("footer.quick_links")}
-									<div className={`absolute -bottom-2 ${i18n.language === "ar" ? "right-0" : "left-0"} w-8 h-1 bg-primary rounded-full`}></div>
-								</h3>
-								<nav className={`flex flex-col gap-2 w-full ${i18n.language === "ar" ? "items-end text-right" : "items-start text-left"}`}>
-									{navigationLinks.map((link, index) => (
-										<Link
-											key={index}
-											to={link.path}
-											className={`group flex w-full items-center ${i18n.language === "ar" ? "flex-row-reverse justify-end gap-x-2" : "flex-row justify-start gap-x-2"} transition-all duration-300 p-1 rounded-lg hover:bg-gray-200 text-gray-800 text-base`}
-										>
-											<link.icon className="w-5 h-5 text-primary bg-white rounded-full p-1 border border-gray-200" />
-											<span>{link.label}</span>
-											<ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-primary bg-white rounded-full p-1 border border-gray-200" />
-										</Link>
-									))}
-								</nav>
-							</div>
-
+<div className="space-y-8">
+	<h3 className={`text-lg font-bold relative text-primary ${i18n.language === "ar" ? "text-right" : "text-left"}`}>
+		{t("footer.quick_links")}
+		<div className={`absolute -bottom-2 ${i18n.language === "ar" ? "right-0" : "left-0"} w-8 h-1 bg-primary rounded-full`}></div>
+	</h3>
+	<nav className={`flex flex-col gap-2 w-full`}>
+		{navigationLinks.map((link, index) => (
+			<Link
+				key={index}
+				to={link.path}
+				className={`group flex items-center transition-all duration-300 p-1 rounded-lg hover:bg-gray-200 text-gray-800 text-base ${i18n.language === "ar" ? "flex-row-reverse justify-end gap-x-2" : "flex-row justify-start gap-x-2"}`}
+			>
+				{ i18n.language === "ar" ? (
+					<>
+						<ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:-translate-x-1 transition-all duration-300 text-primary bg-white rounded-full p-1 border border-gray-200" />
+						<span>{link.label}</span>
+						<link.icon className="w-5 h-5 text-primary bg-white rounded-full p-1 border border-gray-200" />
+					</>
+				) : (
+					<>
+						<link.icon className="w-5 h-5 text-primary bg-white rounded-full p-1 border border-gray-200" />
+						<span>{link.label}</span>
+						<ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-primary bg-white rounded-full p-1 border border-gray-200" />
+					</>
+				)}
+			</Link>
+		))}
+	</nav>
+</div>
 
 							{/* Social Media */}
 							<div className="lg:col-span-1 space-y-8">
