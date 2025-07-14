@@ -63,6 +63,15 @@ export default function VisionAndPhilosophy() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-12 items-center">
             {/* Text Content */}
             <div className="order-1 lg:order-1">
+              <motion.h2
+                className="text-3xl md:text-4xl font-bold text-center mb-8"
+                initial={{ y: -20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                {t("home.vision.title")}
+              </motion.h2>
               <motion.p
                 className="text-lg md:text-xl text-gray-700 leading-relaxed"
                 initial={{ opacity: 0 }}
@@ -217,7 +226,7 @@ export default function VisionAndPhilosophy() {
                     className="bg-white border border-gray-100 rounded-lg p-6 text-center hover:shadow-md transition-shadow"
                     variants={itemVariants}
                   >
-                    <Icon className="h-8 w-8 mx-auto mb-4 text-primary" />
+                    {Icon && <Icon className="h-8 w-8 mx-auto mb-4 text-primary" />}
                     <h3 className="font-semibold text-gray-900 mb-2">
                       {t(`home.features.${key}.title`)}
                     </h3>
@@ -288,7 +297,7 @@ export default function VisionAndPhilosophy() {
                     variants={itemVariants}
                   >
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-white rounded-full mb-6">
-                      <Icon className="h-6 w-6 text-primary" />
+                      {Icon && <Icon className="h-6 w-6 text-primary" />}
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">
                       {t(`home.values.${key}.title`)}

@@ -151,35 +151,53 @@ function Navbar({ changeLanguage }) {
 								{t("navbar.cart_with_count", { count: totalItems })}
 							</span>
 						</Link>
-						{/* Center - Navigation Links */}
-						<div className="flex items-center space-x-8 mx-8">
-							<Link to="/" onClick={(e) => handleNavigation(e, "/")} className={`uppercase nav-link relative py-2 transition-colors duration-300 hover:text-primary ${isActive("/")} group`}>
-								{t("navbar.home")}
-							</Link>
-							<Link to="/menu" onClick={(e) => handleNavigation(e, "/menu")} className={`uppercase nav-link relative py-2 transition-colors duration-300 hover:text-primary ${isActive("/menu")} group`}>
-								{t("navbar.menu")}
-							</Link>
-							<Link to="/about" onClick={(e) => handleNavigation(e, "/about")} className={`uppercase nav-link relative py-2 transition-colors duration-300 hover:text-primary ${isActive("/about")} group`}>
-								{t("navbar.about")}
-							</Link>
-							<Link to="/partners" onClick={(e) => handleNavigation(e, "/partners")} className={`uppercase nav-link relative py-2 transition-colors duration-300 hover:text-primary ${isActive("/partners")} group`}>
-								{t("navbar.partners", "Partners")}
-							</Link>
-							<Link to="/contact" onClick={(e) => handleNavigation(e, "/contact")} className={`uppercase nav-link relative py-2 transition-colors duration-300 hover:text-primary ${isActive("/contact")} group`}>
-								{t("navbar.contact")}
-							</Link>
-							<a href="https://mytable.sa/widget/reservation/?rid=2034&lang=en&fbclid=PAZXh0bgNhZW0CMTEAAaYuR96bLluL1TDMP1YL3EkhA6m_lbAbXLYOD-dLQ-CcjZhZ7W4Hrt-c6_w_aem_0m_5PflX6LR-50gWyLYr5A" className="book-a-table-button">
-								{t("navbar.bookingTable")}
-							</a>
-							<Link to="/no-image-products" onClick={(e) => handleNavigation(e, "/no-image-products")} className="uppercase nav-link relative py-2 transition-colors duration-300 hover:text-red-600 group">
-								{t("navbar.no_image_products", "منتجات بدون صورة")}
-							</Link>
+						{/* Center - Navigation Links with Logo in the Middle */}
+						<div className="flex items-center mx-8">
+							{/* Left group of links (Pages dropdown + 2 links) */}
+							<div className="flex items-center space-x-8">
+								{/* Pages Dropdown styled as nav link */}
+								<div className="relative group">
+									<Link className={`uppercase nav-link relative py-2 transition-colors duration-300 hover:text-primary focus:outline-none ${isActive('/')}`}> {/* Use isActive('/') for highlight if on home */}
+										{t("navbar.pages", "Pages")}
+									</Link>
+									<div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-200 z-50 pointer-events-none group-hover:pointer-events-auto group-focus-within:pointer-events-auto">
+										<Link to="/" onClick={(e) => handleNavigation(e, "/")} className="block px-4 py-2 hover:bg-primary/10 hover:text-primary">{t("navbar.home")}</Link>
+										<Link to="/menu" onClick={(e) => handleNavigation(e, "/menu")} className="block px-4 py-2 hover:bg-primary/10 hover:text-primary">{t("navbar.menu")}</Link>
+										<Link to="/about" onClick={(e) => handleNavigation(e, "/about")} className="block px-4 py-2 hover:bg-primary/10 hover:text-primary">{t("navbar.about")}</Link>
+										<Link to="/partners" onClick={(e) => handleNavigation(e, "/partners")} className="block px-4 py-2 hover:bg-primary/10 hover:text-primary">{t("navbar.partners", "Partners")}</Link>
+										<Link to="/contact" onClick={(e) => handleNavigation(e, "/contact")} className="block px-4 py-2 hover:bg-primary/10 hover:text-primary">{t("navbar.contact")}</Link>
+										<a href="https://mytable.sa/widget/reservation/?rid=2034&lang=en&fbclid=PAZXh0bgNhZW0CMTEAAaYuR96bLluL1TDMP1YL3EkhA6m_lbAbXLYOD-dLQ-CcjZhZ7W4Hrt-c6_w_aem_0m_5PflX6LR-50gWyLYr5A" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary">{t("navbar.bookingTable")}</a>
+										<Link to="/no-image-products" onClick={(e) => handleNavigation(e, "/no-image-products")} className="block px-4 py-2 hover:bg-red-50 hover:text-red-600">{t("navbar.no_image_products", "منتجات بدون صورة")}</Link>
+									</div>
+								</div>
+								<Link to="/" onClick={(e) => handleNavigation(e, "/")} className={`uppercase nav-link relative py-2 transition-colors duration-300 hover:text-primary ${isActive("/")} group`}>
+									{t("navbar.home")}
+								</Link>
+								<Link to="/menu" onClick={(e) => handleNavigation(e, "/menu")} className={`uppercase nav-link relative py-2 transition-colors duration-300 hover:text-primary ${isActive("/menu")} group`}>
+									{t("navbar.menu")}
+								</Link>
+							</div>
+							{/* Centered Logo */}
+							<div className="flex items-center justify-center mx-8">
+								<div className="w-14 h-14 rounded-full overflow-hidden border-2 border-primary bg-white flex items-center justify-center shadow">
+									<img src={logo} alt="To'mah Logo" className="w-full h-full object-cover" />
+								</div>
+							</div>
+							{/* Right group of links (3 links) */}
+							<div className="flex items-center space-x-8">
+								<Link to="/about" onClick={(e) => handleNavigation(e, "/about")} className={`uppercase nav-link relative py-2 transition-colors duration-300 hover:text-primary ${isActive("/about")} group`}>
+									{t("navbar.about")}
+								</Link>
+								<Link to="/partners" onClick={(e) => handleNavigation(e, "/partners")} className={`uppercase nav-link relative py-2 transition-colors duration-300 hover:text-primary ${isActive("/partners")} group`}>
+									{t("navbar.partners", "Partners")}
+								</Link>
+								<Link to="/contact" onClick={(e) => handleNavigation(e, "/contact")} className={`uppercase nav-link relative py-2 transition-colors duration-300 hover:text-primary ${isActive("/contact")} group`}>
+									{t("navbar.contact")}
+								</Link>
+							</div>
 						</div>
 						{/* Menu button beside language toggle */}
 						<div className="flex items-center gap-2">
-							{i18n.language === 'ar' && (
-								<Link to="/menu" className="px-4 py-2 bg-primary text-white rounded-full shadow hover:bg-primary/90 transition" style={{ color: '#fff' }}>{t("navbar.menu")}</Link>
-							)}
 							<LanguageToggle />
 						</div>
 					</div>
@@ -200,13 +218,6 @@ function Navbar({ changeLanguage }) {
 					<a href="https://mytable.sa/widget/reservation/?rid=2034&lang=en&fbclid=PAZXh0bgNhZW0CMTEAAaYuR96bLluL1TDMP1YL3EkhA6m_lbAbXLYOD-dLQ-CcjZhZ7W4Hrt-c6_w_aem_0m_5PflX6LR-50gWyLYr5A" className="block px-3 py-2 rounded-md hover:bg-primary/10 hover:text-primary transition-colors duration-300">{t("navbar.bookingTable")}</a>
 					<Link to="/no-image-products" onClick={(e) => handleNavigation(e, "/no-image-products")} className="block px-4 py-2 hover:bg-red-50 hover:text-red-600 transition">{t("navbar.no_image_products", "منتجات بدون صورة")}</Link>
 					<div className="pt-2 border-t border-gray-200">
-						{i18n.language === 'ar' && (
-							<Link to="/menu" onClick={(e) => handleNavigation(e, "/menu")}
-								className="block px-3 py-2 rounded-md bg-primary text-white hover:bg-primary/90 transition-colors duration-300"
-								style={{ color: '#fff' }}>
-								{t("navbar.menu")}
-							</Link>
-						)}
 						<LanguageToggle isMobile={true} />
 					</div>
 				</div>
