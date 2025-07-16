@@ -440,17 +440,16 @@ const About = () => {
 			</section>
 			{/* Gallery Section */}
 			<section
-				className="py-8 md:py-6 overflow-hidden"
 				style={{ backgroundColor: '#f8f9fc' }}>
-				<div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-8">
+				<div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-8 ">
 					<Slider {...gallerySliderSettings}>
 						{galleryImages.concat(galleryImages).map((img, index) => (
-							<div key={index} className="px-4">
+							<div key={index} className="px-4 py-8">
 								<div className="flex items-center justify-center rounded-2xl overflow-hidden shadow-2xl group">
 									<img
 										src={img}
 										alt={t("about.gallery.image_alt")}
-										className="h-96 w-auto object-cover transform group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 rounded-2xl shadow-lg"
+										className="h-full w-auto object-cover transform group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 rounded-2xl shadow-lg"
 									/>
 								</div>
 							</div>
