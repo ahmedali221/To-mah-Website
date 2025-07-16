@@ -101,7 +101,8 @@ function Navbar({ changeLanguage }) {
 					<div className="md:hidden flex w-full items-center justify-between">
 						{/* Brand Logo and Name */}
 						<div className="flex items-center gap-2">
-							<div className="w-10 h-10 rounded-full overflow-hidden border border-primary">
+							{/* Mobile logo */}
+							<div className="w-10 h-10 rounded-full overflow-hidden">
 								<img src={logo} alt="To'mah Logo" className="w-full h-full object-cover " />
 							</div>
 							<span className="text-xl font-bold text-black">
@@ -179,7 +180,8 @@ function Navbar({ changeLanguage }) {
 							</div>
 							{/* Centered Logo */}
 							<div className="flex items-center justify-center mx-8">
-								<div className="w-14 h-14 rounded-full overflow-hidden border-2 border-primary bg-white flex items-center justify-center shadow">
+								{/* Desktop logo */}
+								<div className="w-14 h-14 rounded-full overflow-hidden bg-white flex items-center justify-center shadow">
 									<img src={logo} alt="To'mah Logo" className="w-full h-full object-cover" />
 								</div>
 							</div>

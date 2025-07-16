@@ -375,34 +375,32 @@ const About = () => {
 				</div>
 			</section>
 
-			<section className="py-4 md:py-6 animate-on-scroll" id="special-menu-section" style={{ backgroundColor: '#f0f2f7' }}>
-				<div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-						<div className={`transition-all duration-1000 ${isVisible["special-menu-section"] ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}>
-							<div className="relative group">
-								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{
-									background: 'linear-gradient(135deg, #673026 0%, #d97706 100%)'
-								}}></div>
-								<img
-									src={logo}
-									alt={t("about.special_menu.logo_alt")}
-									className="relative rounded-2xl shadow-2xl w-full h-80 lg:h-96 object-cover mb-4"
-								/>
+		{/* Visitors Section */}
+		<section className="py-4 md:py-6 animate-on-scroll" id="visitors-section" style={{ backgroundColor: '#f0f2f7' }}>
+				<div className="text-center mb-20">
+					<h2 className="text-3xl md:text-5xl font-bold mb-8" style={{ color: '#1d2939' }}>
+						{t("about.visitors.title", "زوارنا المميزون")}
+					</h2>	
+					<div className="w-24 h-1 mx-auto rounded-full mb-10 bg-accent"></div>
+					<GlobeAltIcon className="w-12 h-12 mx-auto text-accent" />
+				</div>
+				<div className="max-w-7xl mx-auto">
+					<Slider {...visitorsGallerySliderSettings} className="visitors-slider">
+						{visitorsPhotos.map((visitor, idx) => (
+							<div key={idx} className="px-4 flex flex-col items-center">
+								<div className="relative group rounded-2xl overflow-hidden shadow-xl p-4 h-[600px] flex items-center justify-center w-full" style={{ backgroundColor: '#f8f9fc' }}>
+									<img
+										src={visitor.image}
+										alt={visitor.name}
+										className="w-full h-[500px] object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+									/>
+								</div>
+								<div className="w-full mt-8">
+									<p style={{ fontSize: "20px", color: '#673026' }} className="text-center font-bold text-xl text-primary">{visitor.name}</p>
+								</div>
 							</div>
-						</div>
-						<div className={`transition-all duration-1000 delay-300 ${isVisible["special-menu-section"] ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"} hidden md:block`}>
-							<div className="relative group">
-								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{
-									background: 'linear-gradient(135deg, #7e845d 0%, #673026 100%)'
-								}}></div>
-								<img
-									src={loc}
-									alt={t("about.special_menu.interior_alt")}
-									className="relative rounded-2xl shadow-2xl w-full h-80 lg:h-96 object-cover mb-4"
-								/>
-							</div>
-						</div>
-					</div>
+						))}
+					</Slider>
 				</div>
 			</section>
 
@@ -442,9 +440,9 @@ const About = () => {
 			</section>
 			{/* Gallery Section */}
 			<section
-				className="py-4 md:py-6 overflow-hidden"
+				className="py-8 md:py-6 overflow-hidden"
 				style={{ backgroundColor: '#f8f9fc' }}>
-				<div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+				<div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-8">
 					<Slider {...gallerySliderSettings}>
 						{galleryImages.concat(galleryImages).map((img, index) => (
 							<div key={index} className="px-4">
@@ -462,34 +460,7 @@ const About = () => {
 			</section>
 
 
-			{/* Google Reviewss Section */}
-			<section className="py-4 md:py-6 animate-on-scroll" id="visitors-section" style={{ backgroundColor: '#f0f2f7' }}>
-				<div className="text-center mb-20">
-					<h2 className="text-3xl md:text-5xl font-bold mb-8" style={{ color: '#1d2939' }}>
-						{t("about.visitors.title", "زوارنا المميزون")}
-					</h2>	
-					<div className="w-24 h-1 mx-auto rounded-full mb-10 bg-accent"></div>
-					<GlobeAltIcon className="w-12 h-12 mx-auto text-accent" />
-				</div>
-				<div className="max-w-7xl mx-auto">
-					<Slider {...visitorsGallerySliderSettings} className="visitors-slider">
-						{visitorsPhotos.map((visitor, idx) => (
-							<div key={idx} className="px-4 flex flex-col items-center">
-								<div className="relative group rounded-2xl overflow-hidden shadow-xl p-4 h-[600px] flex items-center justify-center w-full" style={{ backgroundColor: '#f8f9fc' }}>
-									<img
-										src={visitor.image}
-										alt={visitor.name}
-										className="w-full h-[500px] object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
-									/>
-								</div>
-								<div className="w-full mt-8">
-									<p style={{ fontSize: "20px", color: '#673026' }} className="text-center font-bold text-xl text-primary">{visitor.name}</p>
-								</div>
-							</div>
-						))}
-					</Slider>
-				</div>
-			</section>
+			
 
 		</div>
 	);
