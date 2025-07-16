@@ -10,8 +10,7 @@ import rev3 from "../assets/AboutImages/User.jpg";
 import img1 from "/src/assets/AboutImages/img1.jpg";
 import img2 from "/src/assets/AboutImages/img2.jpg";
 import cover from "/src/assets/AboutImages/COVER.jpg";
-import logo from "/src/assets/AboutImages/TO'MAH.jpg";
-import loc from "/src/assets/AboutImages/restaurantt.jpg";
+
 import g1 from "/src/assets/AboutImages/G1.jpg";
 import g2 from "/src/assets/AboutImages/G2.jpg";
 import g3 from "/src/assets/AboutImages/G3.jpg";
@@ -250,13 +249,13 @@ const About = () => {
 						{/* Desktop layout: left image, center text, right image */}
 						<div className="hidden lg:flex items-center justify-center animate-on-scroll order-2 lg:order-1" id="story-img-1">
 							<div className={`relative group transform transition-all duration-1000 ${isVisible["story-img-1"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
-								style={{height: '500px', width: '100%'}}>
-								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{background: 'linear-gradient(135deg, #673026 0%, #d97706 100%)'}}></div>
+								style={{ height: '500px', width: '100%' }}>
+								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{ background: 'linear-gradient(135deg, #673026 0%, #d97706 100%)' }}></div>
 								<img
 									src={img1}
 									alt={t("about.story.image_alt_left")}
 									className="relative rounded-2xl shadow-2xl w-full h-full object-cover story-img-symmetry"
-									style={{height: '100%'}}
+									style={{ height: '100%' }}
 								/>
 							</div>
 						</div>
@@ -274,13 +273,13 @@ const About = () => {
 						</div>
 						<div className="hidden lg:flex items-center justify-center animate-on-scroll order-3 lg:order-3 md:flex" id="story-img-2">
 							<div className={`relative group transform transition-all duration-1000 delay-500 ${isVisible["story-img-2"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
-								style={{height: '500px', width: '100%'}}>
-								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{background: 'linear-gradient(135deg, #7e845d 0%, #673026 100%)'}}></div>
+								style={{ height: '500px', width: '100%' }}>
+								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{ background: 'linear-gradient(135deg, #7e845d 0%, #673026 100%)' }}></div>
 								<img
 									src={img2}
 									alt={t("about.story.image_alt_right")}
 									className="relative rounded-2xl shadow-2xl w-full h-full object-cover story-img-symmetry"
-									style={{height: '100%'}}
+									style={{ height: '100%' }}
 								/>
 							</div>
 						</div>
@@ -375,12 +374,12 @@ const About = () => {
 				</div>
 			</section>
 
-		{/* Visitors Section */}
-		<section className="py-4 md:py-6 animate-on-scroll" id="visitors-section" style={{ backgroundColor: '#f0f2f7' }}>
+			{/* Visitors Section */}
+			<section className="py-4 md:py-6 animate-on-scroll" id="visitors-section" style={{ backgroundColor: '#f0f2f7' }}>
 				<div className="text-center mb-20">
 					<h2 className="text-3xl md:text-5xl font-bold mb-8" style={{ color: '#1d2939' }}>
 						{t("about.visitors.title", "زوارنا المميزون")}
-					</h2>	
+					</h2>
 					<div className="w-24 h-1 mx-auto rounded-full mb-10 bg-accent"></div>
 					<GlobeAltIcon className="w-12 h-12 mx-auto text-accent" />
 				</div>
@@ -459,7 +458,7 @@ const About = () => {
 			</section>
 
 
-			
+
 
 		</div>
 	);

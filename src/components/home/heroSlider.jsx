@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../assets/logo.png";
-import title from "../../assets/title.png";
 import image1 from "../../assets/Slider1.jpeg";
 import image2 from "../../assets/Slider7.jpeg";
 import image3 from "../../assets/Slider4.jpeg";
@@ -76,7 +75,7 @@ export default function HeroSlider() {
                             alt="Logo"
                             className="w-48 md:w-72 lg:w-96 h-auto drop-shadow-2xl text-primary"
                         />
-                       
+
                     </motion.div>
                 </motion.div>
             </AnimatePresence>

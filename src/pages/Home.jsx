@@ -6,7 +6,7 @@ import GalleryAndCategoryScroll from "../components/home/GalleryAndCategoryScrol
 import VisionAndPhilosophy from "../components/home/VisionAndPhilosophy";
 import HeroSlider from "../components/home/heroSlider";
 import { useTranslation } from "react-i18next";
-import artImg from "../assets/art.jpeg";
+import artImg from "../assets/ELEMNT-TOMAH.png";
 
 export default function Home() {
   const { t, i18n } = useTranslation();
@@ -39,33 +39,10 @@ export default function Home() {
       <AboutAndVideoSection />
       <VisionAndPhilosophy />
       <MenuBanner />
-      {/* Sliding line of art.jpeg images */}
-      <div className="w-full overflow-hidden my-2">
-        <div className="relative w-full h-8">
-          <div className="animate-marquee-images flex whitespace-nowrap absolute left-0 top-0 h-full items-center">
-            {Array.from({ length: 30 }).map((_, i) => (
-              <img
-                key={i}
-                src={artImg}
-                alt="art"
-                className="w-12 h-12 mx-6 object-contain inline-block"
-              />
-            ))}
-            {/* Duplicate for seamless loop */}
-            {Array.from({ length: 30 }).map((_, i) => (
-              <img
-                key={i + 30}
-                src={artImg}
-                alt="art"
-                className="w-12 h-12 mx-6 object-contain inline-block"
-              />
-            ))}
-          </div>
-        </div>
-      </div>
+
       <MenuShowcase />
       <PeopleSection />
-      
+
       <style>
         {`
           @keyframes marquee-text {
@@ -80,7 +57,7 @@ export default function Home() {
             animation: marquee-text 80s linear infinite;
           }
           .animate-marquee-images {
-            animation: marquee-images 80s linear infinite;
+            animation: marquee-images 40s linear infinite; // changed from 80s to 40s
           }
         `}
       </style>
