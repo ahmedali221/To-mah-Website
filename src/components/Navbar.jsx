@@ -9,7 +9,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { useCart } from "../context/CartContext";
 import { useTranslation } from "react-i18next";
-import logo from "../assets/logoen1.png";
+import logo from "../assets/logonn.png";
 
 function Navbar({ changeLanguage }) {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +20,7 @@ function Navbar({ changeLanguage }) {
 	const navigate = useNavigate();
 
 	const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-	
+
 	// Function to handle navigation and scroll to top
 	const handleNavigation = (e, path) => {
 		e.preventDefault();

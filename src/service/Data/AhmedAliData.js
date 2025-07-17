@@ -9,10 +9,8 @@ import breadbaked1 from "../../assets/Menu/breakfastDeserts/3.jpg";
 import breadbaked2 from "../../assets/Menu/breakfastDeserts/4.jpg";
 import breadbaked20 from "../../assets/Menu/breakfastDeserts/20.jpg";
 
-
 import offer1 from "../../assets/Menu/offers/workLunch.jpg";
 import offer2 from "../../assets/Menu/offers/companyOffers.jpg";
-
 
 import drink2 from "../../assets/Menu/drinks/2.jpg";
 import drink6 from "../../assets/Menu/drinks/6.jpg";
@@ -47,8 +45,6 @@ import tea1 from "../../assets/Menu/Left3/1.JPG";
 import tea2 from "../../assets/Menu/Left3/2.JPG";
 import tea3 from "../../assets/Menu/Left3/3.JPG";
 import tea4 from "../../assets/Menu/Left3/4.JPG";
-
-
 
 const productsData = [
   //////////////////////////////////
@@ -96,8 +92,8 @@ const productsData = [
     meal_name_en: "Liver Sandwich",
     description_en:
       "Traditional bread with liver and cheese spread, garnished with parsley",
-      price: "20 ريال",
-      meal_name_ar: "ساندوتش كبدة",
+    price: "20 ريال",
+    meal_name_ar: "ساندوتش كبدة",
     description_ar: "الجبنة السائلة المدهونة مع الكبدة و المزينة بالبقدونس",
 
     subcategory_en: "Love Bread Sandwich",
@@ -123,8 +119,8 @@ const productsData = [
     burn_time_ar: "100 دقيقة",
     category_en: "Baked Goods",
     category_ar: "المخبوزات",
-    sub_category_en: "Fresh Baked Goods",
-    sub_category_ar: "المخبوزات الطازة",
+    subcategory_en: "Fresh Baked Goods",
+    subcategory_ar: "المخبوزات الطازة",
     available: true,
     trendy: false,
   },
@@ -142,8 +138,8 @@ const productsData = [
     burn_time_ar: "100 دقيقة",
     category_en: "Baked Goods",
     category_ar: "المخبوزات",
-    sub_category_en: "Fresh Baked Goods",
-    sub_category_ar: "المخبوزات الطازة",
+    subcategory_en: "Fresh Baked Goods",
+    subcategory_ar: "المخبوزات الطازة",
 
     available: true,
     trendy: false,
@@ -342,10 +338,10 @@ const productsData = [
     burn_time_en: "50 minutes",
     burn_time_ar: "50 دقيقة",
 
-    sub_category_en: "Desserts",
-    sub_category_ar: "حلويات",
     category_en: "Desserts",
     category_ar: "حلويات",
+    subcategory_en: "Desserts",
+    subcategory_ar: "حلويات",
     available: true,
     trendy: false,
   },
@@ -364,10 +360,10 @@ const productsData = [
     burn_time_en: "55 minutes",
     burn_time_ar: "55 دقيقة",
 
-    sub_category_en: "Desserts",
-    sub_category_ar: "حلويات",
     category_en: "Desserts",
     category_ar: "حلويات",
+    subcategory_en: "Desserts",
+    subcategory_ar: "حلويات",
     available: true,
     trendy: false,
   },
@@ -385,10 +381,10 @@ const productsData = [
     burn_time_en: "210 minutes",
     burn_time_ar: "210 دقيقة",
 
-    sub_category_en: "Desserts",
-    sub_category_ar: "حلويات",
     category_en: "Desserts",
     category_ar: "حلويات",
+    subcategory_en: "Desserts",
+    subcategory_ar: "حلويات",
     available: true,
     trendy: false,
   },
@@ -405,10 +401,10 @@ const productsData = [
     burn_time_en: "60 minutes",
     burn_time_ar: "60 دقيقة",
 
-    sub_category_en: "Desserts",
-    sub_category_ar: "حلويات",
     category_en: "Desserts",
     category_ar: "حلويات",
+    subcategory_en: "Desserts",
+    subcategory_ar: "حلويات",
     available: true,
     trendy: false,
   },
@@ -426,10 +422,10 @@ const productsData = [
     burn_time_en: "75 minutes",
     burn_time_ar: "75 دقيقة",
 
-    sub_category_en: "Desserts",
-    sub_category_ar: "حلويات",
     category_en: "Desserts",
     category_ar: "حلويات",
+    subcategory_en: "Desserts",
+    subcategory_ar: "حلويات",
     available: true,
     trendy: false,
   },
@@ -954,8 +950,8 @@ const productsData = [
     meal_name_ar: "بوفيه تعتمة",
     description_ar: "كامل قائمة الفطور",
 
-    category_en: "Lunch & Dinner",
-    category_ar: "الغداء و العشاء",
+    category_en: "External Buffet",
+    category_ar: "البوفيه الخارجي",
     subcategory_en: "To'mah Outdoor Buffet",
     subcategory_ar: "بوفيه طعمة الخارجي",
     available: true,
@@ -967,12 +963,12 @@ const productsData = [
     meal_name_en: "Happy Occasions Buffet",
     description_en:
       "Photo collection of all hot dishes / Lunch & Dinner section",
-      price: "150 ريال",
-      meal_name_ar: "بوفيه المناسبات السعيدة",
+    price: "150 ريال",
+    meal_name_ar: "بوفيه المناسبات السعيدة",
     description_ar: "مجموعة الصور لجميع الأطباق الساخنة / قسم الغداء والعشاء",
 
-    category_en: "Lunch & Dinner",
-    category_ar: "الغداء و العشاء",
+    category_en: "External Buffet",
+    category_ar: "البوفيه الخارجي",
     subcategory_en: "External Food Buffet",
     subcategory_ar: "بوفيه طعمة الخارجي",
     available: true,
@@ -1086,10 +1082,12 @@ const productsData = [
   ///////////////////////////////////////////////////////////////////
 ];
 
-productsData.forEach(product => {
+productsData.forEach((product) => {
   if (product.image === null) {
-    if (product.meal_name_ar === "مطبق مالح") product.image = left2MuttabakMalih;
-    if (product.meal_name_ar === "مطبق جبنة تشيدر") product.image = left2MuttabakCheddar;
+    if (product.meal_name_ar === "مطبق مالح")
+      product.image = left2MuttabakMalih;
+    if (product.meal_name_ar === "مطبق جبنة تشيدر")
+      product.image = left2MuttabakCheddar;
     if (product.meal_name_ar === "صحن خضار") product.image = left2SaladPlate;
     if (product.meal_name_ar === "شربت فيمتو") product.image = left2Vimto;
   }

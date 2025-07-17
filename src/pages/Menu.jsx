@@ -250,79 +250,45 @@ function Menu() {
         </div>
       </div>
 
-   {/* Categories Section with Toggle */}
-<section className="py-6 sm:py-10">
-  <div className="max-w-6xl mx-auto px-2 sm:px-4">
-    {/* Mobile Toggle Button */}
-    <div className="md:hidden mb-4">
-      <button
-        onClick={() => setShowPopularMeals(!showPopularMeals)}
-        className="w-full flex items-center justify-between bg-primary-light hover:bg-primary text-white px-4 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
-      >
-        <span className="text-lg font-semibold">
-          {t("menu.categories", "Categories")}
-        </span>
-        <div className={`transform transition-transform duration-300 ${showPopularMeals ? 'rotate-180' : 'rotate-0'}`}>
-          <ChevronDownIcon className="h-5 w-5 text-white" />
+      {/* Categories Section */}
+      <section className="py-6 sm:py-10">
+        <div className="max-w-6xl mx-auto px-2 sm:px-4">
+          {/* Title (always visible) */}
+          <h2 className="text-2xl sm:text-3xl font-bold text-primary-dark mb-4 sm:mb-6 text-center">
+            {t("menu.categories", "Categories")}
+          </h2>
+          {/* Category Buttons (always visible on all devices) */}
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-6 md:gap-8 lg:gap-10 px-2 sm:px-0 mb-6 mt-2">
+            {[
+              { key: 'breakfast', label: i18n.language === 'ar' ? 'الفطور' : 'Breakfast' },
+              { key: 'lunch_dinner', label: i18n.language === 'ar' ? 'الغداء و العشاء' : 'Lunch & Dinner' },
+              { key: 'baked_goods', label: i18n.language === 'ar' ? 'المخبوزات' : 'Baked Goods' },
+              { key: 'desserts', label: i18n.language === 'ar' ? 'حلويات' : 'Desserts' },
+              { key: 'drinks', label: i18n.language === 'ar' ? 'مشروبات' : 'Drinks' },
+              { key: 'external_buffet', label: i18n.language === 'ar' ? 'البوفيه الخارجي' : 'External Buffet' },
+            ].map((cat) => (
+              <button
+                key={cat.key}
+                onClick={() => setFilters({ ...filters, category: cat.label, subcategory: '' })}
+                className={`px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-semibold shadow transition-all duration-300 flex items-center justify-center
+            border-2
+            ${filters.category === cat.label
+                    ? 'bg-primary-dark text-white border-primary-dark scale-105 shadow-lg'
+                    : 'bg-white text-primary-dark border-primary-light hover:bg-primary-lightest hover:border-primary hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-light'
+                  }`}
+                style={{ minWidth: '140px', marginBottom: '0.5rem' }}
+              >
+                {cat.label}
+                {filters.category === cat.label && (
+                  <span className="ml-2 bg-white/20 rounded-full p-1">
+                    <ChevronDownIcon className="h-4 w-4 text-white" />
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
         </div>
-      </button>
-    </div>
-
-    {/* Desktop Title (always visible) */}
-    <h2 className="hidden md:block text-2xl sm:text-3xl font-bold text-primary-dark mb-4 sm:mb-6 text-center">
-      {t("menu.categories", "Categories")}
-    </h2>
-
-    {/* Content with Animation */}
-    <div className={`
-      transition-all duration-500 ease-in-out overflow-hidden
-      md:max-h-none md:opacity-100 md:transform-none
-      ${showPopularMeals
-        ? 'max-h-[2000px] opacity-100 transform translate-y-0'
-        : 'md:max-h-none md:opacity-100 max-h-0 opacity-0 transform -translate-y-4'
-      }
-    `}>
-      <div className={`
-        transition-all duration-300 delay-100
-        md:transform-none md:opacity-100
-        ${showPopularMeals
-          ? 'transform translate-y-0 opacity-100'
-          : 'transform translate-y-4 opacity-0'
-        }
-      `}>
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-6 md:gap-8 lg:gap-10 px-2 sm:px-0 mb-6 mt-2">
-          {[
-            { key: 'breakfast', label: i18n.language === 'ar' ? 'الفطور' : 'Breakfast' },
-            { key: 'lunch_dinner', label: i18n.language === 'ar' ? 'الغداء و العشاء' : 'Lunch & Dinner' },
-            { key: 'baked_goods', label: i18n.language === 'ar' ? 'المخبوزات' : 'Baked Goods' },
-            { key: 'desserts', label: i18n.language === 'ar' ? 'حلويات' : 'Desserts' },
-            { key: 'drinks', label: i18n.language === 'ar' ? 'مشروبات' : 'Drinks' },
-          ].map((cat) => (
-            <button
-              key={cat.key}
-              onClick={() => setFilters({ ...filters, category: cat.label, subcategory: '' })}
-              className={`px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-semibold shadow transition-all duration-300 flex items-center justify-center
-                border-2
-                ${filters.category === cat.label
-                  ? 'bg-primary-dark text-white border-primary-dark scale-105 shadow-lg'
-                  : 'bg-white text-primary-dark border-primary-light hover:bg-primary-lightest hover:border-primary hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-light'
-                }`}
-              style={{ minWidth: '140px', marginBottom: '0.5rem' }}
-            >
-              {cat.label}
-              {filters.category === cat.label && (
-                <span className="ml-2 bg-white/20 rounded-full p-1">
-                  <ChevronDownIcon className="h-4 w-4 text-white" />
-                </span>
-              )}
-            </button>
-          ))}
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Main Content */}
       <div className="container mx-auto px-1 sm:px-4 py-3 sm:py-8">
@@ -393,49 +359,49 @@ function Menu() {
                                 key={product.id}
                                 className="group relative bg-white overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
                               >
-                               {/* Clickable area for navigation */}
-<div
-  className="cursor-pointer"
-  onClick={() => handleViewDetails(product)}
->
-  {/* Image Container - Increased height */}
-  <div className="h-72 sm:h-80 overflow-hidden bg-gray-100 rounded-t-lg relative flex items-center justify-center">
-    {product.image ? (
-      <img
-        src={product.image}
-        alt={i18n.language === "ar" && product.name_ar ? product.name_ar : product.name_en}
-        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-      />
-    ) : (
-      <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-        <span className="text-gray-400 text-sm">{t("menu_card.no_image")}</span>
-      </div>
-    )}
-  </div>
+                                {/* Clickable area for navigation */}
+                                <div
+                                  className="cursor-pointer"
+                                  onClick={() => handleViewDetails(product)}
+                                >
+                                  {/* Image Container - Increased height */}
+                                  <div className="h-72 sm:h-80 overflow-hidden bg-gray-100 rounded-t-lg relative flex items-center justify-center">
+                                    {product.image ? (
+                                      <img
+                                        src={product.image}
+                                        alt={i18n.language === "ar" && product.name_ar ? product.name_ar : product.name_en}
+                                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                      />
+                                    ) : (
+                                      <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                                        <span className="text-gray-400 text-sm">{t("menu_card.no_image")}</span>
+                                      </div>
+                                    )}
+                                  </div>
 
-  {/* Product Info */}
-  <div className="p-3">
-    {/* Title */}
-    <h4 className="text-sm sm:text-base font-semibold mb-1 text-gray-900 line-clamp-1">
-      {i18n.language === "ar" && product.name_ar ? product.name_ar : product.name_en}
-    </h4>
-    {/* Price */}
-    <p className="text-sm sm:text-base font-medium text-gray-800">
-      {t("menu_card.currency")}{product.price ? product.price.toFixed(0) : "N/A"}
-    </p>
-    {/* Add to Cart Button */}
-    <button
-      onClick={(e) => {
-        e.stopPropagation();
-        handleAddToCart(product);
-      }}
-      className="mt-2 w-full bg-primary-light hover:bg-primary text-white px-3 py-1.5 text-xs sm:text-sm font-medium rounded transition-colors duration-300 disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed"
-      disabled={!product.available}
-    >
-      {t("menu_card.add_to_cart")}
-    </button>
-  </div>
-</div>
+                                  {/* Product Info */}
+                                  <div className="p-3">
+                                    {/* Title */}
+                                    <h4 className="text-sm sm:text-base font-semibold mb-1 text-gray-900 line-clamp-1">
+                                      {i18n.language === "ar" && product.name_ar ? product.name_ar : product.name_en}
+                                    </h4>
+                                    {/* Price */}
+                                    <p className="text-sm sm:text-base font-medium text-gray-800">
+                                      {t("menu_card.currency")}{product.price ? product.price.toFixed(0) : "N/A"}
+                                    </p>
+                                    {/* Add to Cart Button */}
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleAddToCart(product);
+                                      }}
+                                      className="mt-2 w-full bg-primary-light hover:bg-primary text-white px-3 py-1.5 text-xs sm:text-sm font-medium rounded transition-colors duration-300 disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed"
+                                      disabled={!product.available}
+                                    >
+                                      {t("menu_card.add_to_cart")}
+                                    </button>
+                                  </div>
+                                </div>
                               </div>
                             ))}
                           </div>
