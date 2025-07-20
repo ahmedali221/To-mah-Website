@@ -50,10 +50,10 @@ function Footer() {
 		<footer dir={i18n.language === "ar" ? "rtl" : "ltr"} className="w-full">
 			{/* Mobile Layout (default) */}
 			<div className="bg-gray-100 text-gray-800 pt-8 pb-4 px-2 border-t border-gray-200 lg:hidden">
-				<div className="max-w-2xl mx-auto flex flex-col gap-6">
+				<div className="max-w-2xl mx-auto flex flex-col gap-4">
 					{/* Brand and Social */}
-					<div className="flex flex-col items-center gap-3">
-						<img src={logo} alt="To'mah Logo" className="w-14 h-14 rounded-full object-cover border border-gray-300" />
+					<div className="bg-white rounded-2xl shadow p-4 flex flex-col items-center gap-2">
+						<img src={logo} alt="To'mah Logo" className="w-14 h-14 rounded-full object-cover border border-gray-300 mb-1" />
 						<span className="font-bold text-base text-center">{t("navbar.brand")}</span>
 						<div className="grid grid-cols-4 gap-3 mt-2">
 							{socialPlatforms.map((social, idx) => (
@@ -63,7 +63,7 @@ function Footer() {
 									target="_blank"
 									rel="noopener noreferrer"
 									aria-label={social.name}
-									className="bg-white border border-gray-200 rounded-full p-2 flex items-center justify-center hover:bg-gray-200 transition"
+									className="bg-gray-50 border border-gray-200 rounded-full p-2 flex items-center justify-center hover:bg-gray-200 transition"
 									style={{ width: 36, height: 36 }}
 								>
 									<social.icon className="w-5 h-5 text-primary" />
@@ -72,53 +72,58 @@ function Footer() {
 						</div>
 					</div>
 
-					{/* Quick Links */}
-					<div className={`flex flex-col gap-2 text-base w-full ${i18n.language === "ar" ? "items-end text-right" : "items-center text-center"}`}>
-						{navigationLinks.map((link, idx) => (
-							<Link
-								key={idx}
-								to={link.path}
-								className={`flex px-3 py-2 rounded hover:bg-gray-200 transition w-full justify-center items-center gap-2 ${i18n.language === "ar" ? "flex-row-reverse justify-end" : "flex-row justify-center"}`}
-							>
-								{ i18n.language === "ar" ? (
-									<>
-										<span>{link.label}</span>
-										<link.icon className="w-5 h-5 text-primary" />
-									</>
-								) : (
-									<>
-										<link.icon className="w-5 h-5 text-primary" />
-										<span>{link.label}</span>
-									</>
-								)}
-							</Link>
-						))}
+					{/* Quick Links and Contact Info in a grid */}
+					<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+						{/* Quick Links */}
+						<div className="bg-white rounded-2xl shadow p-4 flex flex-col gap-2 items-center">
+							<h3 className="font-semibold text-primary mb-2 text-center">{t("footer.quick_links")}</h3>
+							{navigationLinks.map((link, idx) => (
+								<Link
+									key={idx}
+									to={link.path}
+									className={`flex px-3 py-2 rounded hover:bg-gray-200 transition w-full justify-center items-center gap-2 ${i18n.language === "ar" ? "flex-row-reverse justify-end" : "flex-row justify-center"}`}
+								>
+									{ i18n.language === "ar" ? (
+										<>
+											<span>{link.label}</span>
+											<link.icon className="w-5 h-5 text-primary" />
+										</>
+									) : (
+										<>
+											<link.icon className="w-5 h-5 text-primary" />
+											<span>{link.label}</span>
+										</>
+									)}
+								</Link>
+							))}
+						</div>
+
+						{/* Contact Info */}
+						<div className="bg-white rounded-2xl shadow p-4 flex flex-col gap-3 items-center">
+							<h3 className="font-semibold text-primary mb-2 text-center">{t("footer.contact")}</h3>
+							<div className="flex items-center gap-2 text-xs text-gray-600">
+								<MapPin className="w-5 h-5 text-primary flex-shrink-0" />
+								<span className="text-center">{t("footer.address")}</span>
+							</div>
+							<div className="flex items-center gap-2 text-xs text-gray-600">
+								<Phone className="w-5 h-5 text-primary flex-shrink-0" />
+								<span dir={i18n.language === "ar" ? "ltr" : undefined} style={i18n.language === "ar" ? { unicodeBidi: "bidi-override" } : {}} className="text-center">
+									{t("footer.phone")}
+								</span>
+							</div>
+							<div className="flex items-center gap-2 text-xs text-gray-600">
+								<Clock className="w-5 h-5 text-primary flex-shrink-0" />
+								<span className="text-center">{t("footer.hours")}</span>
+							</div>
+							<div className="flex items-start gap-2 text-xs text-gray-600">
+								<Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+								<span className="text-center break-words">{t("footer.email")}</span>
+							</div>
+						</div>
 					</div>
 
-					{/* Contact Info */}
-					{/* Contact Info Section - Mobile Version Fix */}
-<div className="flex flex-col items-center gap-2 text-xs text-gray-600 w-full">
-	<div className="flex items-center gap-2">
-		<MapPin className="w-5 h-5 text-primary flex-shrink-0" />
-		<span className="text-center">{t("footer.address")}</span>
-	</div>
-	<div className="flex items-center gap-2">
-		<Phone className="w-5 h-5 text-primary flex-shrink-0" />
-		<span dir={i18n.language === "ar" ? "ltr" : undefined} style={i18n.language === "ar" ? { unicodeBidi: "bidi-override" } : {}} className="text-center">
-			{t("footer.phone")}
-		</span>
-	</div>
-	<div className="flex items-center gap-2">
-		<Clock className="w-5 h-5 text-primary flex-shrink-0" />
-		<span className="text-center">{t("footer.hours")}</span>
-	</div>
-	<div className="flex items-start gap-2">
-		<Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-		<span className="text-center break-words">{t("footer.email")}</span>
-	</div>
-</div>
 					{/* Bottom */}
-					<div className="flex flex-col sm:flex-row justify-between items-center gap-2 border-t border-gray-200 pt-3 mt-3 text-xs bg-primary w-full px-2 py-3 text-white">
+					<div className="flex flex-col sm:flex-row justify-between items-center gap-2 border-t border-gray-200 pt-3 mt-3 text-xs bg-primary w-full px-2 py-3 text-white rounded-2xl shadow mt-4">
 						<div className="flex items-center gap-2">
 							<span>© {new Date().getFullYear()} {t("footer.rights")}</span>
 							<Heart className="w-4 h-4 text-amber-400" />

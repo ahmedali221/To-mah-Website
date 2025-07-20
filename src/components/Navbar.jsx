@@ -20,7 +20,7 @@ function Navbar({ changeLanguage }) {
 	const navigate = useNavigate();
 
 	const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-
+	
 	// Function to handle navigation and scroll to top
 	const handleNavigation = (e, path) => {
 		e.preventDefault();
