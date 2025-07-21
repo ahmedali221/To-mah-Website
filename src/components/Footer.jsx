@@ -74,52 +74,52 @@ function Footer() {
 
 					{/* Quick Links and Contact Info in a grid */}
 					<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-						{/* Quick Links */}
+					{/* Quick Links */}
 						<div className="bg-white rounded-2xl shadow p-4 flex flex-col gap-2 items-center">
 							<h3 className="font-semibold text-primary mb-2 text-center">{t("footer.quick_links")}</h3>
-							{navigationLinks.map((link, idx) => (
-								<Link
-									key={idx}
-									to={link.path}
-									className={`flex px-3 py-2 rounded hover:bg-gray-200 transition w-full justify-center items-center gap-2 ${i18n.language === "ar" ? "flex-row-reverse justify-end" : "flex-row justify-center"}`}
-								>
-									{ i18n.language === "ar" ? (
-										<>
-											<span>{link.label}</span>
-											<link.icon className="w-5 h-5 text-primary" />
-										</>
-									) : (
-										<>
-											<link.icon className="w-5 h-5 text-primary" />
-											<span>{link.label}</span>
-										</>
-									)}
-								</Link>
-							))}
-						</div>
+						{navigationLinks.map((link, idx) => (
+							<Link
+								key={idx}
+								to={link.path}
+								className={`flex px-3 py-2 rounded hover:bg-gray-200 transition w-full items-center gap-2 ${i18n.language === "ar" ? "flex-row-reverse justify-center" : "flex-row justify-center"}`}
+							>
+								{ i18n.language === "ar" ? (
+									<>
+										<span>{link.label}</span>
+										<link.icon className="w-5 h-5 text-primary" />
+									</>
+								) : (
+									<>
+										<link.icon className="w-5 h-5 text-primary" />
+										<span>{link.label}</span>
+									</>
+								)}
+							</Link>
+						))}
+					</div>
 
-						{/* Contact Info */}
+					{/* Contact Info */}
 						<div className="bg-white rounded-2xl shadow p-4 flex flex-col gap-3 items-center">
 							<h3 className="font-semibold text-primary mb-2 text-center">{t("footer.contact")}</h3>
 							<div className="flex items-center gap-2 text-xs text-gray-600">
-								<MapPin className="w-5 h-5 text-primary flex-shrink-0" />
-								<span className="text-center">{t("footer.address")}</span>
-							</div>
+		<MapPin className="w-5 h-5 text-primary flex-shrink-0" />
+		<span className="text-center">{t("footer.address")}</span>
+	</div>
 							<div className="flex items-center gap-2 text-xs text-gray-600">
-								<Phone className="w-5 h-5 text-primary flex-shrink-0" />
-								<span dir={i18n.language === "ar" ? "ltr" : undefined} style={i18n.language === "ar" ? { unicodeBidi: "bidi-override" } : {}} className="text-center">
-									{t("footer.phone")}
-								</span>
-							</div>
+		<Phone className="w-5 h-5 text-primary flex-shrink-0" />
+		<span dir={i18n.language === "ar" ? "ltr" : undefined} style={i18n.language === "ar" ? { unicodeBidi: "bidi-override" } : {}} className="text-center">
+			{t("footer.phone")}
+		</span>
+	</div>
 							<div className="flex items-center gap-2 text-xs text-gray-600">
-								<Clock className="w-5 h-5 text-primary flex-shrink-0" />
-								<span className="text-center">{t("footer.hours")}</span>
-							</div>
+		<Clock className="w-5 h-5 text-primary flex-shrink-0" />
+		<span className="text-center">{t("footer.hours")}</span>
+	</div>
 							<div className="flex items-start gap-2 text-xs text-gray-600">
-								<Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-								<span className="text-center break-words">{t("footer.email")}</span>
-							</div>
-						</div>
+		<Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+		<span className="text-center break-words">{t("footer.email")}</span>
+	</div>
+</div>
 					</div>
 
 					{/* Bottom */}

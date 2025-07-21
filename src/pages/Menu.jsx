@@ -40,7 +40,6 @@ function Menu() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedImage, setSelectedImage] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
-  const [showPopularMeals, setShowPopularMeals] = useState(false);
   const navigate = useNavigate();
   const { addToCart } = useCart();
 
@@ -359,49 +358,52 @@ function Menu() {
                                 key={product.id}
                                 className="group relative bg-white overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
                               >
-                                {/* Clickable area for navigation */}
-                                <div
-                                  className="cursor-pointer"
-                                  onClick={() => handleViewDetails(product)}
-                                >
-                                  {/* Image Container - Increased height */}
-                                  <div className="h-72 sm:h-80 overflow-hidden bg-gray-100 rounded-t-lg relative flex items-center justify-center">
-                                    {product.image ? (
-                                      <img
-                                        src={product.image}
-                                        alt={i18n.language === "ar" && product.name_ar ? product.name_ar : product.name_en}
-                                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                      />
-                                    ) : (
-                                      <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                                        <span className="text-gray-400 text-sm">{t("menu_card.no_image")}</span>
-                                      </div>
-                                    )}
-                                  </div>
+                             {/* Clickable area for navigation */}
+<div
+  className="cursor-pointer"
+  onClick={() => handleViewDetails(product)}
+>
+  {/* Image Container - Significantly increased height */}
+  <div className="aspect-[4/3] sm:aspect-[4/3] md:aspect-[4/3] lg:aspect-[4/3] w-full overflow-hidden bg-gray-100 rounded-t-lg relative flex items-center justify-center" style={{ minHeight: '260px', maxHeight: '340px' }}>
+    {product.image ? (
+      <div className="flex items-center justify-center w-full h-full">
+        <img
+          src={product.image}
+          alt={i18n.language === "ar" && product.name_ar ? product.name_ar : product.name_en}
+          className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
+          style={{ display: 'block', margin: 'auto' }}
+        />
+      </div>
+    ) : (
+      <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+        <span className="text-gray-400 text-base">{t("menu_card.no_image")}</span>
+      </div>
+    )}
+  </div>
 
-                                  {/* Product Info */}
-                                  <div className="p-3">
-                                    {/* Title */}
-                                    <h4 className="text-sm sm:text-base font-semibold mb-1 text-gray-900 line-clamp-1">
-                                      {i18n.language === "ar" && product.name_ar ? product.name_ar : product.name_en}
-                                    </h4>
-                                    {/* Price */}
-                                    <p className="text-sm sm:text-base font-medium text-gray-800">
-                                      {t("menu_card.currency")}{product.price ? product.price.toFixed(0) : "N/A"}
-                                    </p>
-                                    {/* Add to Cart Button */}
-                                    <button
-                                      onClick={(e) => {
-                                        e.stopPropagation();
-                                        handleAddToCart(product);
-                                      }}
-                                      className="mt-2 w-full bg-primary-light hover:bg-primary text-white px-3 py-1.5 text-xs sm:text-sm font-medium rounded transition-colors duration-300 disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed"
-                                      disabled={!product.available}
-                                    >
-                                      {t("menu_card.add_to_cart")}
-                                    </button>
-                                  </div>
-                                </div>
+  {/* Product Info - Increased padding and spacing */}
+  <div className="p-4 sm:p-5 md:p-6">
+    {/* Title - Increased font size */}
+    <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-gray-900 line-clamp-2">
+      {i18n.language === "ar" && product.name_ar ? product.name_ar : product.name_en}
+    </h4>
+    {/* Price - Increased font size */}
+    <p className="text-base sm:text-lg md:text-xl font-medium text-gray-800 mb-3">
+      {t("menu_card.currency")}{product.price ? product.price.toFixed(0) : "N/A"}
+    </p>
+    {/* Add to Cart Button - Increased size and padding */}
+    <button
+      onClick={(e) => {
+        e.stopPropagation();
+        handleAddToCart(product);
+      }}
+      className="mt-3 w-full bg-primary-light hover:bg-primary text-white px-4 py-2.5 sm:py-3 text-sm sm:text-base md:text-lg font-medium rounded-lg transition-colors duration-300 disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed"
+      disabled={!product.available}
+    >
+      {t("menu_card.add_to_cart")}
+    </button>
+  </div>
+</div>
                               </div>
                             ))}
                           </div>

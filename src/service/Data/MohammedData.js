@@ -1,7 +1,4 @@
 //10
-import dish1 from "../../assets/Menu/dishes/1.jpg";
-import dish2 from "../../assets/Menu/dishes/2.jpg";
-
 import tabee51 from "../../assets/Menu/tabee5/1.jpg";
 import tabee52 from "../../assets/Menu/tabee5/2.jpg";
 import tabee53 from "../../assets/Menu/tabee5/3.jpg";
@@ -13,13 +10,13 @@ import sandwich2 from "../../assets/Menu/sandwich/2.jpg";
 import sandwich3 from "../../assets/Menu/sandwich/3.jpg";
 
 import leftMabshoorLahm from "../../assets/Menu/Left/مبشور لحم ( محلي ).JPG";
-import leftMabshoorDajaj from "../../assets/Menu/Left/مبشور دجاج.png";
 import leftAwsalLahm from "../../assets/Menu/Left/اوصال لحم ( محلي ).JPG";
 import leftKebabHijazi from "../../assets/Menu/Left/كباب حجازي ( محلي ).JPG";
 import leftKebabDajaj from "../../assets/Menu/Left/كباب دجاج ( محلي ).JPG";
-import leftKebabTahina from "../../assets/Menu/Left/كباب الطحينة.png";
 import leftKebabTaama from "../../assets/Menu/Left/كباب طعمة ( محلي ).JPG";
-import leftMixedGrill from "../../assets/Menu/Left/مشكل مشويات طعمة .JPG";
+import مبشور_دجاج from "../../assets/replacment images/مبشور دجاج.png";
+import كباب_الطحينة from "../../assets/replacment images/كباب الطحينة.png";
+import مشكل_مشويات from "../../assets/replacment images/مشكل مشويات.png";
 
 const productsData = [
   ////////////////////////////////////////////////
@@ -101,7 +98,7 @@ const productsData = [
       "Indulge in tender beef chunks with rich and flavorful tahini gravy. A traditional meal rich in authentic flavors.",
     description_ar:
       "استمتع بقطع اللحم الطرية مع مرقة الطحينة المسبكة. وجبة تقليدية وغنية بالنكهات الأصيلة.",
-    image: dish1,
+    image: "img20",
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
@@ -123,7 +120,7 @@ const productsData = [
       "Indulge in tender beef chunks slow-cooked with onion and garlic, served with grain bread and Madini rice. A delicious meal rich in the traditional and distinctive flavors of the city's locals.",
     description_ar:
       "استمتع بقطع لحم طرية مطبوخة بالبصل والثوم على نار هادئة، وتقدم مع خبز الحب والرز المديني. وجبة شهية وغنية بالنكهات التقليدية والمميزة لأهل المدينة.",
-    image: dish2,
+    image: "img21",
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
@@ -165,7 +162,7 @@ const productsData = [
   },
   {
     id: "24",
-    image: leftMabshoorDajaj,
+    image: مبشور_دجاج,
     meal_name_en: "Mabshoor Minced Chicken",
     meal_name_ar: "مبشور دجاج",
     description_en:
@@ -273,7 +270,7 @@ const productsData = [
   },
   {
     id: "42",
-    image: leftKebabTahina,
+    image: كباب_الطحينة,
     meal_name_en: "Tahini Kebab",
     meal_name_ar: "كباب الطحينة",
     description_en:
@@ -315,7 +312,7 @@ const productsData = [
   },
   {
     id: "148",
-    image: null,
+    image: مشكل_مشويات,
     meal_name_en: "Tajouri Mixed Grill Platter",
     description_en:
       "Premium mixed grill for 3 persons - selection of grilled meats and chicken served with Madini rice on a special platter (12 skewers)",
@@ -337,7 +334,7 @@ const productsData = [
   },
   {
     id: "149",
-    image: leftMixedGrill,
+    image: مشكل_مشويات,
     meal_name_en: "Mixed Grill Platter",
     description_en: "For 1 person - 3 assorted skewers",
     price: "75 ريال",

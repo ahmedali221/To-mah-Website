@@ -4,7 +4,6 @@ import img5 from "../../assets/Menu/breadBasket/8.jpg";
 import soup1 from "../../assets/Menu/soup/1.jpg";
 import soup2 from "../../assets/Menu/soup/2.jpg";
 
-import salad1 from "../../assets/Menu/salads/1.jpg";
 import salad2 from "../../assets/Menu/salads/2.jpg";
 import salad3 from "../../assets/Menu/salads/3.jpg";
 import salad4 from "../../assets/Menu/salads/4.jpg";
@@ -40,15 +39,12 @@ import rice9 from "../../assets/Menu/rice/9.jpg";
 
 import leftYogurtSalad from "../../assets/Menu/Left/سلطة اللبن ( محلي ).JPG";
 import leftCarrotAchard from "../../assets/Menu/Left/اشار الجزر ( محلي ).JPG";
-import leftPickledLemon from "../../assets/Menu/Left/مخلل ليمون.JPG";
 import leftPlainTahini from "../../assets/Menu/Left/سلطة طحينة سادة ( محلي ).JPG";
 import leftThoumia from "../../assets/Menu/Left/ثومية ( محلي ).JPG";
-import leftTahiniTomato from "../../assets/Menu/Left/سلطة طحينة بالطماطم المشوي .JPG";
 import leftDakosHot from "../../assets/Menu/Left/دقس حار ( محلي ).JPG";
 import leftDakosMild from "../../assets/Menu/Left/دقس بارد (بوفيه).jpeg";
 import leftStuffedPepper from "../../assets/Menu/Left/فلفل طعمة مطبوخ ( محلي ).JPG";
 import leftBeetrootPickle from "../../assets/Menu/Left/مخلل مشكل البنجر.JPG";
-import leftSambosaMeat from "../../assets/Menu/Left/سمبوسك مثلثات اللحم.png";
 import leftSambosaCheese from "../../assets/Menu/Left/سمبوسة طعمة بخليط الاجبان ( محلي).JPG";
 import leftChickenFatayer from "../../assets/Menu/Left/فطير بالدجاج ( محلي ).JPG";
 import left2VegPomPepper from "../../assets/Menu/Left2/خضار المدينة بدبس الرمان والفلفل الحار ( بوفيه ).JPG";
@@ -56,8 +52,16 @@ import left2Fries from "../../assets/Menu/Left2/بطاطس مقلية ( محلي
 
 
 import img1 from "../../assets/Menu/Left/3.JPG";
+import khodar from "../../assets/replacment images/khodar.png";
+
 
 import img2 from "../../assets/Menu/Left3/5.JPG"
+import سلطة_طحينة_بالطماطم from "../../assets/replacment images/سلطة طحينة بالطماطم.png";
+import مخلل_ليمون from "../../assets/replacment images/مخلل ليمون.png";
+import سمبوسة_مثلث_اللحم from "../../assets/replacment images/سمبوسة مثلث اللحم.png";
+import tomahSalad from "../../assets/replacment images/سلطة طعمة.png";
+import mekhall from "../../assets/replacment images/مخلل مشكل البنجر.png";
+import doks from "../../assets/replacment images/دقس بارد.png";
 const productsData = [
   // الشوربة
   {
@@ -120,7 +124,7 @@ const productsData = [
     subcategory_ar: "السلطات و المقبلات الباردة",
     available: true,
     trendy: false,
-    image: salad2,
+    image: tomahSalad,
   },
   {
     meal_name_en: "Madini Okra Fattah",
@@ -215,7 +219,7 @@ const productsData = [
     subcategory_ar: "السلطات و المقبلات الباردة",
     available: true,
     trendy: false,
-    image: left2VegPomPepper,
+    image: khodar,
   },
 
   {
@@ -319,7 +323,7 @@ const productsData = [
   },
   {
     id: "90",
-    image: leftPickledLemon,
+    image: مخلل_ليمون,
     meal_name_en: "Pickled Lemons",
     description_en: "Traditional preserved lemons with authentic spices",
     price: "7 ريال",
@@ -391,7 +395,7 @@ const productsData = [
     subcategory_ar: "مشهونات طعمة (المخلالات و الطرشي)",
     available: true,
     trendy: false,
-    image: leftTahiniTomato,
+    image: سلطة_طحينة_بالطماطم,
   },
 
   {
@@ -428,7 +432,7 @@ const productsData = [
     subcategory_ar: "مشهونات طعمة (المخلالات و الطرشي)",
     available: true,
     trendy: false,
-    image: leftDakosMild,
+    image: doks,
   },
   {
     meal_name_en: "To'mah Fresh Peppers",
@@ -470,7 +474,7 @@ const productsData = [
   },
   {
     id: "97",
-    image: leftBeetrootPickle,
+    image: mekhall,
     meal_name_en: "Beetroot Pickle Mix",
     description_en: "Assorted pickled vegetables with beetroot",
     price: null,
@@ -654,7 +658,7 @@ const productsData = [
     subcategory_ar: "سلة معجنات",
     available: true,
     trendy: false,
-    image: leftSambosaMeat,
+    image: سمبوسة_مثلث_اللحم,
   },
   {
     meal_name_en: "White Cheese Rolls",

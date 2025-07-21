@@ -33,10 +33,7 @@ import left2SesameBiscuit from "../../assets/Menu/Left2/بسكويت بالسم�
 import left2Water from "../../assets/Menu/Left2/مياه معدنية وغازية (محلي ).JPG";
 import left2TeaMarjoram from "../../assets/Menu/Left2/شاي نعناع دوش ( محلي ).JPG";
 import left2TeaRed from "../../assets/Menu/Left2/شاي احمر بالنعناع المديني ( محلي ).JPG";
-import left2MuttabakMalih from "../../assets/Menu/Left2/مطبق مالح ( بوفيه ) .JPG";
 import left2MuttabakCheddar from "../../assets/Menu/Left2/مطبق جبنة تشيدر ( محلي ).JPG";
-import left2SaladPlate from "../../assets/Menu/Left2/صحن خضار ( بوفيه).JPG";
-import left2Vimto from "../../assets/Menu/Left2/شربيت فيمتو ( محلي ).JPG";
 
 import tatima from "../../assets/Menu/Left2/1.jpeg";
 import mahalbya from "../../assets/Menu/Left2/2.JPG";
@@ -45,6 +42,10 @@ import tea1 from "../../assets/Menu/Left3/1.JPG";
 import tea2 from "../../assets/Menu/Left3/2.JPG";
 import tea3 from "../../assets/Menu/Left3/3.JPG";
 import tea4 from "../../assets/Menu/Left3/4.JPG";
+
+import صحن_خضار from "../../assets/replacment images/صحن خضار.png";
+import مبشور_دجاج from "../../assets/replacment images/مبشور دجاج.png";
+import مطبق_مالح from "../../assets/replacment images/مطبق مالح.png";
 
 const productsData = [
   //////////////////////////////////
@@ -126,7 +127,7 @@ const productsData = [
   },
   {
     id: "14",
-    image: null,
+    image: صحن_خضار, // closest: صحن خضار.png
     meal_name_en: "White Bread",
     description_en: "",
     price: "5 ريال",
@@ -1085,11 +1086,11 @@ const productsData = [
 productsData.forEach((product) => {
   if (product.image === null) {
     if (product.meal_name_ar === "مطبق مالح")
-      product.image = left2MuttabakMalih;
+      product.image = مطبق_مالح;
     if (product.meal_name_ar === "مطبق جبنة تشيدر")
       product.image = left2MuttabakCheddar;
-    if (product.meal_name_ar === "صحن خضار") product.image = left2SaladPlate;
-    if (product.meal_name_ar === "شربت فيمتو") product.image = left2Vimto;
+    if (product.meal_name_ar === "صحن خضار") product.image = صحن_خضار;
+    if (product.meal_name_ar === "مبشور دجاج") product.image = مبشور_دجاج;
   }
 });
 
