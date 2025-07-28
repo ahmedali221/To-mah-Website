@@ -370,13 +370,16 @@ function Menu() {
         <img
           src={product.image}
           alt={i18n.language === "ar" && product.name_ar ? product.name_ar : product.name_en}
-          className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
-          style={{ display: 'block', margin: 'auto' }}
+          className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"          style={{ display: 'block', margin: 'auto' }}
         />
       </div>
     ) : (
-      <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-        <span className="text-gray-400 text-base">{t("menu_card.no_image")}</span>
+      <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+        <img
+          src="/src/assets/logonn.png"
+          alt="To'mah Logo"
+          className="max-h-24 max-w-24 object-contain"
+        />
       </div>
     )}
   </div>

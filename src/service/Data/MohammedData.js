@@ -9,14 +9,24 @@ import sandwich1 from "../../assets/Menu/sandwich/1.jpg";
 import sandwich2 from "../../assets/Menu/sandwich/2.jpg";
 import sandwich3 from "../../assets/Menu/sandwich/3.jpg";
 
+import awsalDajaj from "../../assets/replacment images/awsal.JPG";
+
 import leftMabshoorLahm from "../../assets/Menu/Left/مبشور لحم ( محلي ).JPG";
 import leftAwsalLahm from "../../assets/Menu/Left/اوصال لحم ( محلي ).JPG";
 import leftKebabHijazi from "../../assets/Menu/Left/كباب حجازي ( محلي ).JPG";
 import leftKebabDajaj from "../../assets/Menu/Left/كباب دجاج ( محلي ).JPG";
 import leftKebabTaama from "../../assets/Menu/Left/كباب طعمة ( محلي ).JPG";
-import مبشور_دجاج from "../../assets/replacment images/مبشور دجاج.png";
-import كباب_الطحينة from "../../assets/replacment images/كباب الطحينة.png";
-import مشكل_مشويات from "../../assets/replacment images/مشكل مشويات.png";
+import مبشور_دجاج from "../../assets/Menu/Left3/21.jpg";
+import كباب_الطحينة from "../../assets/replacment images/كباب الطحينة.JPG";
+import مشكل_مشويات from "../../assets/replacment images/مشكل مشويات.JPG";
+import makadm from "../../assets/replacment images/makadm.JPG";
+
+import manzala from "../../assets/replacment images/manzala.JPG";
+import mokalklDajaj from "../../assets/replacment images/mokalklDajaj.jpg";
+import mokalklLahm from "../../assets/replacment images/mokalklLahm.JPG";
+import salat from "../../assets/replacment images/salat.JPG";
+import lahmtRas from "../../assets/replacment images/lahmtRas.JPG";
+
 
 const productsData = [
   ////////////////////////////////////////////////
@@ -29,7 +39,7 @@ const productsData = [
       "Indulge in beef muqalqal pieces with the special blend, served in the Ahl Awl style. A delicious meal rich in traditional and distinctive flavors.",
     description_ar:
       "استمتع بقطع لحم مقلقل بالخلطة وتقدم بطريقة أهل أول. وجبة شهية وغنية بالنكهات التقليدية والمميزة.",
-    image: "img20",
+    image: mokalklLahm,
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
@@ -52,7 +62,7 @@ const productsData = [
       "Indulge in chicken breast sautéed with fresh vegetables and special spices. A delicious and light meal rich in distinctive flavors.",
     description_ar:
       "استمتع بقطع صدور دجاج مشوحة بالخضار الطازجة والبهارات الخاصة. وجبة شهية وخفيفة وغنية بالنكهات المميزة.",
-    image: "img21",
+    image: mokalklDajaj,
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
@@ -75,7 +85,7 @@ const productsData = [
       "Indulge in boneless pieces of mutton head beef baked in the oven and served with grain bread and tahini. A delicious meal rich in traditional and distinctive flavors.",
     description_ar:
       "استمتع بقطع لحم مخلية من رأس الخروف المشوي بالفرن وتقدم مع خبز الحب والطحينة. وجبة شهية وغنية بالنكهات التقليدية والمميزة.",
-    image: "img22",
+    image: lahmtRas,
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
@@ -98,7 +108,7 @@ const productsData = [
       "Indulge in tender beef chunks with rich and flavorful tahini gravy. A traditional meal rich in authentic flavors.",
     description_ar:
       "استمتع بقطع اللحم الطرية مع مرقة الطحينة المسبكة. وجبة تقليدية وغنية بالنكهات الأصيلة.",
-    image: "img20",
+    image: manzala,
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
@@ -120,7 +130,7 @@ const productsData = [
       "Indulge in tender beef chunks slow-cooked with onion and garlic, served with grain bread and Madini rice. A delicious meal rich in the traditional and distinctive flavors of the city's locals.",
     description_ar:
       "استمتع بقطع لحم طرية مطبوخة بالبصل والثوم على نار هادئة، وتقدم مع خبز الحب والرز المديني. وجبة شهية وغنية بالنكهات التقليدية والمميزة لأهل المدينة.",
-    image: "img21",
+    image: salat,
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
@@ -189,7 +199,7 @@ const productsData = [
       "Indulge in grilled chicken breast pieces served with creamy garlic sauce. A delicious and light meal rich in protein and delightful grilled flavors.",
     description_ar:
       "استمتع بقطع صدور دجاج مشوية على السيخ وتقدم مع صوص الثوم الكريمي. وجبة شهية وخفيفة وغنية بالبروتين والنكهات المشوية اللذيذة.",
-    image: "img17",
+    image: awsalDajaj,
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
@@ -453,7 +463,7 @@ const productsData = [
       "Indulge in two pieces of boiled lamb feet, served with grain bread and a lemon-garlic mix. A delicious meal rich in collagen and the traditional and distinctive flavors of the city's locals.",
     description_ar:
       "استمتع بقطعتين من كوارع الغنم المسلوقة، وتقدم مع خبز الحب وخلطة الليمون بالثوم. وجبة شهية وغنية بالكولاجين والنكهات التقليدية والمميزة لأهل المدينة.",
-    image: "img28",
+    image: makadm,
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",

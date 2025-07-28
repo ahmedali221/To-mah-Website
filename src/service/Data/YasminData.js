@@ -21,6 +21,7 @@ import appetizer5 from "../../assets/Menu/appetizers/5.jpg";
 import breakfastDesert1 from "../../assets/Menu/breakfastDeserts/1.jpg";
 import breakfastDesert2 from "../../assets/Menu/breakfastDeserts/2.jpg";
 
+
 import cheese1 from "../../assets/Menu/cheese/1.jpg";
 import cheese2 from "../../assets/Menu/cheese/2.jpg";
 import cheese3 from "../../assets/Menu/cheese/3.jpg";
@@ -32,14 +33,19 @@ import cheese8 from "../../assets/Menu/cheese/8.jpg";
 import cheese9 from "../../assets/Menu/cheese/9.jpg";
 import cheese10 from "../../assets/Menu/cheese/10.jpg";
 import cheese11 from "../../assets/Menu/cheese/11.jpg";
+import cheese12 from "../../assets/Menu/cheese/12.JPG";
 import left2MuttabakCheddar from "../../assets/Menu/Left2/مطبق جبنة تشيدر ( محلي ).JPG";
 
 import breaks21 from "../../assets/Menu/breakfastDeserts/21.jpg";
 
+import egg1 from "../../assets/Menu/مختارات البيض/1.jpg";
+import egg2 from "../../assets/Menu/مختارات البيض/2.JPG";
+import egg3 from "../../assets/Menu/مختارات البيض/3.JPG";
+import egg4 from "../../assets/Menu/مختارات البيض/4.JPG";
+import egg5 from "../../assets/Menu/مختارات البيض/5.JPG";
+
 import left3Tea1 from "../../assets/Menu/Left3/6.JPG";
-import بيض_الطيببين from "../../assets/replacment images/بيض الطيبين.png";
-import صحن_خضار from "../../assets/replacment images/صحن خضار.png";
-import مطبق_مالح from "../../assets/replacment images/مطبق مالح.png";
+import صحن_خضار from "../../assets/Menu/Left/20.JPG";
 const productsData = [
   // مجموعة نواشف
   {
@@ -110,7 +116,7 @@ const productsData = [
   //
   {
     id: "4",
-    image: null,
+    image: cheese12,
     meal_name_en: "Baladi Cheese with Mint",
     description_en: "Traditional cheese with mint from Medina and olive oil.",
     price: "15 ريال",
@@ -338,7 +344,7 @@ const productsData = [
   // مختارات البيض
   {
     id: "15",
-    image: null,
+    image: egg1,
     meal_name_en: "To'mah Shakshuka",
     description_en: "The authentic Hejazi shakshuka.",
     price: "20 ريال",
@@ -357,7 +363,7 @@ const productsData = [
   },
   {
     id: "16",
-    image: null,
+    image: egg3,
     meal_name_en: "To'mah Eggs",
     description_en:
       "Eggs with vegetables and melted cheese, prepared in the chef's special way.",
@@ -377,7 +383,7 @@ const productsData = [
   },
   {
     id: "17",
-    image: null,
+    image: egg4,
     meal_name_en: "Butter Eggs",
     description_en:
       "Egg fried with butter, salt, and Madinah's special Dukkah spice mix.",
@@ -398,7 +404,7 @@ const productsData = [
   },
   {
     id: "18",
-    image: null,
+    image: egg2,
     meal_name_en: "Eggs with Vegetables",
     description_en: "Boiled eggs with a selection of local vegetables.",
     price: "20 ريال",
@@ -418,7 +424,7 @@ const productsData = [
   },
   {
     id: "19",
-    image: بيض_الطيببين,
+    image:egg5,
     meal_name_en: "Fried Eggs",
     description_en: "For the good ones.",
     price: "17 ريال",
@@ -659,7 +665,7 @@ const productsData = [
   //
   {
     id: "32",
-    image: مطبق_مالح,
+    image:appetizer2,
     meal_name_en: "Savory Muttabak",
     description_en:
       "Crispy, savory dough layers filled with fresh minced meat served with lemon, green chili, and daggus sauce.",

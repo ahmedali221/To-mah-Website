@@ -22,6 +22,8 @@ import drink13 from "../../assets/Menu/drinks/13.jpg";
 import drink15 from "../../assets/Menu/drinks/15.JPG";
 import drink16 from "../../assets/Menu/drinks/16.jpg";
 import drink17 from "../../assets/Menu/drinks/17.jpg";
+import drink18 from  "../../assets/Menu/Left/23.JPG";
+import drink19 from "../../assets/Menu/drinks/drinkLemon.PNG";
 
 import leftSandwichSalat from "../../assets/Menu/Left/ساندوتش سلات المدينة ( محلي ).JPG";
 import leftSandwichHead from "../../assets/Menu/Left/ساندوتش لحمة راس (محلي ).JPG";
@@ -33,19 +35,20 @@ import left2SesameBiscuit from "../../assets/Menu/Left2/بسكويت بالسم�
 import left2Water from "../../assets/Menu/Left2/مياه معدنية وغازية (محلي ).JPG";
 import left2TeaMarjoram from "../../assets/Menu/Left2/شاي نعناع دوش ( محلي ).JPG";
 import left2TeaRed from "../../assets/Menu/Left2/شاي احمر بالنعناع المديني ( محلي ).JPG";
-import left2MuttabakCheddar from "../../assets/Menu/Left2/مطبق جبنة تشيدر ( محلي ).JPG";
 
 import tatima from "../../assets/Menu/Left2/1.jpeg";
 import mahalbya from "../../assets/Menu/Left2/2.JPG";
-
+import whiteBread from "../../assets/Menu/Left2/عيش أبيض.png";
 import tea1 from "../../assets/Menu/Left3/1.JPG";
 import tea2 from "../../assets/Menu/Left3/2.JPG";
 import tea3 from "../../assets/Menu/Left3/3.JPG";
 import tea4 from "../../assets/Menu/Left3/4.JPG";
 
-import صحن_خضار from "../../assets/replacment images/صحن خضار.png";
-import مبشور_دجاج from "../../assets/replacment images/مبشور دجاج.png";
-import مطبق_مالح from "../../assets/replacment images/مطبق مالح.png";
+import blila1 from "../../assets/Menu/Left/22.JPG";
+
+import biscut1 from "../../assets/Menu/Left/21.jpeg";
+
+
 
 const productsData = [
   //////////////////////////////////
@@ -127,7 +130,7 @@ const productsData = [
   },
   {
     id: "14",
-    image: صحن_خضار, // closest: صحن خضار.png
+    image: whiteBread, 
     meal_name_en: "White Bread",
     description_en: "",
     price: "5 ريال",
@@ -190,7 +193,7 @@ const productsData = [
   },
   {
     id: "17",
-    image: null,
+    image: biscut1,
     meal_name_en: "Milk Biscuits",
     description_en: "",
     price: "10 ريال",
@@ -721,7 +724,7 @@ const productsData = [
   },
   {
     id: "41",
-    image: null,
+    image: drink18,
     meal_name_en: "Vimto",
     description_en: "Vimto mix with Madini mint and lemon",
     price: "17 ريال",
@@ -739,46 +742,8 @@ const productsData = [
     available: true,
     trendy: false,
   },
-  {
-    id: "42",
-    image: null,
-    meal_name_en: "Sobia",
-    description_en: "Refreshing sobia slash",
-    price: "14 ريال",
-    meal_name_ar: "سوبيا",
-    description_ar: "مشروب السوبيا المنعش",
-    category_en: "Drinks",
-    category_ar: "مشروبات",
-    calories_en: "120 calories",
-    calories_ar: "120 سعرة حرارية",
-    burn_time_en: "20 minutes",
-    burn_time_ar: "20 دقيقة",
 
-    subcategory_en: "Cold Drinks",
-    subcategory_ar: "مشروبات باردة",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "43",
-    image: null,
-    meal_name_en: "Raisins",
-    description_en: "Power slash with energy",
-    price: "14 ريال",
-    meal_name_ar: "زبيب",
-    description_ar: "مشروب الزبيب الطاقي المنعش",
-    category_en: "Drinks",
-    category_ar: "مشروبات",
-    calories_en: "0 calories",
-    calories_ar: "0 سعرة حرارية",
-    burn_time_en: "0 minutes",
-    burn_time_ar: "0 دقيقة",
-
-    subcategory_en: "Cold Drinks",
-    subcategory_ar: "مشروبات باردة",
-    available: true,
-    trendy: false,
-  },
+ 
   {
     id: "44",
     image: tea3,
@@ -860,7 +825,7 @@ const productsData = [
   },
   {
     id: "48",
-    image: null,
+    image: drink19,
     meal_name_en: "Lemon Mint",
     description_en: "Lemon with mint",
     price: "20 ريال",
@@ -957,7 +922,7 @@ const productsData = [
     subcategory_ar: "بوفيه طعمة الخارجي",
     available: true,
     trendy: false,
-  },
+  }, 
   {
     id: "222",
     image: null,
@@ -1021,7 +986,7 @@ const productsData = [
     subcategory_ar: "التسالي",
     available: true,
     trendy: false,
-    image: null,
+    image: blila1,
   },
   {
     meal_name_en: "Hijazi Chips + Tammarind Sauce",
@@ -1036,7 +1001,7 @@ const productsData = [
     subcategory_ar: "التسالي",
     available: true,
     trendy: false,
-    image: null,
+    image: tea4,
   },
 
   //////////////////////////////////////////////////////////////////////
@@ -1083,15 +1048,6 @@ const productsData = [
   ///////////////////////////////////////////////////////////////////
 ];
 
-productsData.forEach((product) => {
-  if (product.image === null) {
-    if (product.meal_name_ar === "مطبق مالح")
-      product.image = مطبق_مالح;
-    if (product.meal_name_ar === "مطبق جبنة تشيدر")
-      product.image = left2MuttabakCheddar;
-    if (product.meal_name_ar === "صحن خضار") product.image = صحن_خضار;
-    if (product.meal_name_ar === "مبشور دجاج") product.image = مبشور_دجاج;
-  }
-});
+
 
 export default productsData;

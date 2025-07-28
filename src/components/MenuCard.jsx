@@ -41,11 +41,15 @@ export default function MenuCard({
                           ? product.name_ar
                           : product.name_en
                       }
-                      className="h-full w-full object-scale-down transition-transform duration-500 group-hover:scale-105"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   ) : (
-                    <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                      <span className="text-gray-400 text-lg">{t("menu_card.no_image")}</span>
+                    <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                      <img
+                        src="/src/assets/logonn.png"
+                        alt="To'mah Logo"
+                        className="max-h-24 max-w-24 object-contain"
+                      />
                     </div>
                   )}
 

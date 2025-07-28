@@ -4,7 +4,6 @@ import img5 from "../../assets/Menu/breadBasket/8.jpg";
 import soup1 from "../../assets/Menu/soup/1.jpg";
 import soup2 from "../../assets/Menu/soup/2.jpg";
 
-import salad2 from "../../assets/Menu/salads/2.jpg";
 import salad3 from "../../assets/Menu/salads/3.jpg";
 import salad4 from "../../assets/Menu/salads/4.jpg";
 import salad5 from "../../assets/Menu/salads/5.jpg";
@@ -42,26 +41,25 @@ import leftCarrotAchard from "../../assets/Menu/Left/اشار الجزر ( مح�
 import leftPlainTahini from "../../assets/Menu/Left/سلطة طحينة سادة ( محلي ).JPG";
 import leftThoumia from "../../assets/Menu/Left/ثومية ( محلي ).JPG";
 import leftDakosHot from "../../assets/Menu/Left/دقس حار ( محلي ).JPG";
-import leftDakosMild from "../../assets/Menu/Left/دقس بارد (بوفيه).jpeg";
 import leftStuffedPepper from "../../assets/Menu/Left/فلفل طعمة مطبوخ ( محلي ).JPG";
-import leftBeetrootPickle from "../../assets/Menu/Left/مخلل مشكل البنجر.JPG";
 import leftSambosaCheese from "../../assets/Menu/Left/سمبوسة طعمة بخليط الاجبان ( محلي).JPG";
 import leftChickenFatayer from "../../assets/Menu/Left/فطير بالدجاج ( محلي ).JPG";
-import left2VegPomPepper from "../../assets/Menu/Left2/خضار المدينة بدبس الرمان والفلفل الحار ( بوفيه ).JPG";
 import left2Fries from "../../assets/Menu/Left2/بطاطس مقلية ( محلي ).JPG";
 
 
+
+
 import img1 from "../../assets/Menu/Left/3.JPG";
-import khodar from "../../assets/replacment images/khodar.png";
+import khoadrRoman from "../../assets/replacment images/khodarRoman.JPG";
+import mento from "../../assets/replacment images/mento.JPG";
 
 
 import img2 from "../../assets/Menu/Left3/5.JPG"
-import سلطة_طحينة_بالطماطم from "../../assets/replacment images/سلطة طحينة بالطماطم.png";
-import مخلل_ليمون from "../../assets/replacment images/مخلل ليمون.png";
-import سمبوسة_مثلث_اللحم from "../../assets/replacment images/سمبوسة مثلث اللحم.png";
-import tomahSalad from "../../assets/replacment images/سلطة طعمة.png";
-import mekhall from "../../assets/replacment images/مخلل مشكل البنجر.png";
-import doks from "../../assets/replacment images/دقس بارد.png";
+import سلطة_طحينة_بالطماطم from "../../assets/replacment images/salad.JPG";
+import مخلل_ليمون from "../../assets/replacment images/مخلل ليمون.JPG";
+import سمبوسة_مثلث_اللحم from "../../assets/replacment images/sambosa.JPG";
+import tomahSalad from "../../assets/replacment images/سلطة طعمة.JPG";
+import mekhall from "../../assets/replacment images/mekhall.JPG";
 const productsData = [
   // الشوربة
   {
@@ -219,7 +217,7 @@ const productsData = [
     subcategory_ar: "السلطات و المقبلات الباردة",
     available: true,
     trendy: false,
-    image: khodar,
+    image: khoadrRoman,
   },
 
   {
@@ -432,7 +430,7 @@ const productsData = [
     subcategory_ar: "مشهونات طعمة (المخلالات و الطرشي)",
     available: true,
     trendy: false,
-    image: doks,
+    image: leftDakosHot,
   },
   {
     meal_name_en: "To'mah Fresh Peppers",
@@ -495,129 +493,129 @@ const productsData = [
   ///////////////////////////////////////////////////////
   /// جدول أنواع الرز اليومي
 
-  {
-    id: "132",
-    image: null,
-    meal_name_en: "Sunday Rice Selection",
-    description_en:
-      "Madini Rice (Lamb + Chicken) - Kabuli Rice (Lamb + Chicken)",
-    price: null,
-    meal_name_ar: "الأحد",
-    description_ar: "رز مديني (لحم +دجاج) - الرز الكابلي (لحم + دجاج)",
-    category_en: "Lunch & Dinner",
-    category_ar: "الغداء و العشاء",
-    calories: null,
-    subcategory_en: "Daily Rice Varieties",
-    subcategory_ar: "جدول أنواع الرز اليومي",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "133",
-    image: null,
-    meal_name_en: "Monday Rice Selection",
-    description_en:
-      "Madini Rice (Lamb + Chicken) - Kabuli Rice (Lamb + Chicken)",
-    price: null,
-    meal_name_ar: "الاثنين",
-    description_ar: "رز مديني (لحم +دجاج) - الرز الكابلي (لحم + دجاج)",
-    category_en: "Lunch & Dinner",
-    category_ar: "الغداء و العشاء",
-    calories: null,
-    subcategory_en: "Daily Rice Varieties",
-    subcategory_ar: "جدول أنواع الرز اليومي",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "134",
-    image: null,
-    meal_name_en: "Tuesday Rice Selection",
-    description_en:
-      "Madini Rice (Lamb + Chicken) - Bukhari Rice (Lamb + Chicken) - Saleeg (Lamb + Chicken)",
-    price: null,
-    meal_name_ar: "الثلاثاء",
-    description_ar:
-      "رز مديني (لحم +دجاج) - الرز البخاري (لحم + دجاج) - سليق (لحم + دجاج)",
-    category_en: "Lunch & Dinner",
-    category_ar: "الغداء و العشاء",
-    calories: null,
-    subcategory_en: "Daily Rice Varieties",
-    subcategory_ar: "جدول أنواع الرز اليومي",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "135",
-    image: null,
-    meal_name_en: "Wednesday Rice Selection",
-    description_en:
-      "Madini Rice (Lamb + Chicken) - Bukhari Rice (Lamb + Chicken) - Saleeg (Lamb + Chicken)",
-    price: null,
-    meal_name_ar: "الأربعاء",
-    description_ar:
-      "رز مديني (لحم +دجاج) - الرز البخاري (لحم + دجاج) -  سليق (لحم + دجاج)",
-    category_en: "Lunch & Dinner",
-    category_ar: "الغداء و العشاء",
-    calories: null,
-    subcategory_en: "Daily Rice Varieties",
-    subcategory_ar: "جدول أنواع الرز اليومي",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "136",
-    image: null,
-    meal_name_en: "Thursday Rice Selection",
-    description_en:
-      "Madini Rice (Lamb + Chicken) - Bukhari Rice (Lamb + Chicken) - Saleeg (Lamb + Chicken)",
-    price: null,
-    meal_name_ar: "الخميس",
-    description_ar:
-      "رز مديني (لحم +دجاج) - الرز البخاري (لحم + دجاج) - سليق (لحم + دجاج)",
-    category_en: "Lunch & Dinner",
-    category_ar: "الغداء و العشاء",
-    calories: null,
-    subcategory_en: "Daily Rice Varieties",
-    subcategory_ar: "جدول أنواع الرز اليومي",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "137",
-    image: null,
-    meal_name_en: "Friday Rice Selection",
-    description_en:
-      "Madini Rice (Lamb + Chicken) - Chickpea Rice (Lamb) - Saleeg (Lamb + Chicken)",
-    price: null,
-    meal_name_ar: "الجمعة",
-    description_ar:
-      "رز مديني (لحم +دجاج) - رز بالحمص  (لحم) - سليق (لحم + دجاج)",
-    category_en: "Lunch & Dinner",
-    category_ar: "الغداء و العشاء",
-    calories: null,
-    subcategory_en: "Daily Rice Varieties",
-    subcategory_ar: "جدول أنواع الرز اليومي",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "138",
-    image: null,
-    meal_name_en: "Saturday Rice Selection",
-    description_en:
-      "Madini Rice (Lamb + Chicken) - Kabuli Rice (Lamb + Chicken)",
-    price: null,
-    meal_name_ar: "السبت",
-    description_ar: "رز مديني (لحم +دجاج) - الرز الكابلي (لحم + دجاج)",
-    category_en: "Lunch & Dinner",
-    category_ar: "الغداء و العشاء",
-    calories: null,
-    subcategory_en: "Daily Rice Varieties",
-    subcategory_ar: "جدول أنواع الرز اليومي",
-    available: true,
-    trendy: false,
-  },
+  // {
+  //   id: "132",
+  //   image: null,
+  //   meal_name_en: "Sunday Rice Selection",
+  //   description_en:
+  //     "Madini Rice (Lamb + Chicken) - Kabuli Rice (Lamb + Chicken)",
+  //   price: null,
+  //   meal_name_ar: "الأحد",
+  //   description_ar: "رز مديني (لحم +دجاج) - الرز الكابلي (لحم + دجاج)",
+  //   category_en: "Lunch & Dinner",
+  //   category_ar: "الغداء و العشاء",
+  //   calories: null,
+  //   subcategory_en: "Daily Rice Varieties",
+  //   subcategory_ar: "جدول أنواع الرز اليومي",
+  //   available: true,
+  //   trendy: false,
+  // },
+  // {
+  //   id: "133",
+  //   image: null,
+  //   meal_name_en: "Monday Rice Selection",
+  //   description_en:
+  //     "Madini Rice (Lamb + Chicken) - Kabuli Rice (Lamb + Chicken)",
+  //   price: null,
+  //   meal_name_ar: "الاثنين",
+  //   description_ar: "رز مديني (لحم +دجاج) - الرز الكابلي (لحم + دجاج)",
+  //   category_en: "Lunch & Dinner",
+  //   category_ar: "الغداء و العشاء",
+  //   calories: null,
+  //   subcategory_en: "Daily Rice Varieties",
+  //   subcategory_ar: "جدول أنواع الرز اليومي",
+  //   available: true,
+  //   trendy: false,
+  // },
+  // {
+  //   id: "134",
+  //   image: null,
+  //   meal_name_en: "Tuesday Rice Selection",
+  //   description_en:
+  //     "Madini Rice (Lamb + Chicken) - Bukhari Rice (Lamb + Chicken) - Saleeg (Lamb + Chicken)",
+  //   price: null,
+  //   meal_name_ar: "الثلاثاء",
+  //   description_ar:
+  //     "رز مديني (لحم +دجاج) - الرز البخاري (لحم + دجاج) - سليق (لحم + دجاج)",
+  //   category_en: "Lunch & Dinner",
+  //   category_ar: "الغداء و العشاء",
+  //   calories: null,
+  //   subcategory_en: "Daily Rice Varieties",
+  //   subcategory_ar: "جدول أنواع الرز اليومي",
+  //   available: true,
+  //   trendy: false,
+  // },
+  // {
+  //   id: "135",
+  //   image: null,
+  //   meal_name_en: "Wednesday Rice Selection",
+  //   description_en:
+  //     "Madini Rice (Lamb + Chicken) - Bukhari Rice (Lamb + Chicken) - Saleeg (Lamb + Chicken)",
+  //   price: null,
+  //   meal_name_ar: "الأربعاء",
+  //   description_ar:
+  //     "رز مديني (لحم +دجاج) - الرز البخاري (لحم + دجاج) -  سليق (لحم + دجاج)",
+  //   category_en: "Lunch & Dinner",
+  //   category_ar: "الغداء و العشاء",
+  //   calories: null,
+  //   subcategory_en: "Daily Rice Varieties",
+  //   subcategory_ar: "جدول أنواع الرز اليومي",
+  //   available: true,
+  //   trendy: false,
+  // },
+  // {
+  //   id: "136",
+  //   image: null,
+  //   meal_name_en: "Thursday Rice Selection",
+  //   description_en:
+  //     "Madini Rice (Lamb + Chicken) - Bukhari Rice (Lamb + Chicken) - Saleeg (Lamb + Chicken)",
+  //   price: null,
+  //   meal_name_ar: "الخميس",
+  //   description_ar:
+  //     "رز مديني (لحم +دجاج) - الرز البخاري (لحم + دجاج) - سليق (لحم + دجاج)",
+  //   category_en: "Lunch & Dinner",
+  //   category_ar: "الغداء و العشاء",
+  //   calories: null,
+  //   subcategory_en: "Daily Rice Varieties",
+  //   subcategory_ar: "جدول أنواع الرز اليومي",
+  //   available: true,
+  //   trendy: false,
+  // },
+  // {
+  //   id: "137",
+  //   image: null,
+  //   meal_name_en: "Friday Rice Selection",
+  //   description_en:
+  //     "Madini Rice (Lamb + Chicken) - Chickpea Rice (Lamb) - Saleeg (Lamb + Chicken)",
+  //   price: null,
+  //   meal_name_ar: "الجمعة",
+  //   description_ar:
+  //     "رز مديني (لحم +دجاج) - رز بالحمص  (لحم) - سليق (لحم + دجاج)",
+  //   category_en: "Lunch & Dinner",
+  //   category_ar: "الغداء و العشاء",
+  //   calories: null,
+  //   subcategory_en: "Daily Rice Varieties",
+  //   subcategory_ar: "جدول أنواع الرز اليومي",
+  //   available: true,
+  //   trendy: false,
+  // },
+  // {
+  //   id: "138",
+  //   image: null,
+  //   meal_name_en: "Saturday Rice Selection",
+  //   description_en:
+  //     "Madini Rice (Lamb + Chicken) - Kabuli Rice (Lamb + Chicken)",
+  //   price: null,
+  //   meal_name_ar: "السبت",
+  //   description_ar: "رز مديني (لحم +دجاج) - الرز الكابلي (لحم + دجاج)",
+  //   category_en: "Lunch & Dinner",
+  //   category_ar: "الغداء و العشاء",
+  //   calories: null,
+  //   subcategory_en: "Daily Rice Varieties",
+  //   subcategory_ar: "جدول أنواع الرز اليومي",
+  //   available: true,
+  //   trendy: false,
+  // },
 
   /////////////////////////////////////////////////////////
   // سلة معجنات
@@ -729,7 +727,7 @@ const productsData = [
       "Enjoy two pieces of fresh oven-baked Mantu, filled with fresh and carefully seasoned beef. A light and healthy dish with a distinctive flavor, perfect as a light meal or a delicious appetizer.",
     description_ar:
       "استمتع بقطعتين من المنتو الطازج المخبوز في الفرن، محشو باللحم الطازج والمتبل بعناية. طبق خفيف وصحي بنكهة مميزة، مثالي كوجبة خفيفة أو مقبل شهي.",
-    image: "img3",
+    image: mento,
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
     subcategory_en: "Bread Basket",
