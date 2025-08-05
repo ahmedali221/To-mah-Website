@@ -25,7 +25,7 @@ import manzala from "../../assets/replacment images/manzala.JPG";
 import mokalklDajaj from "../../assets/replacment images/mokalklDajaj.jpg";
 import mokalklLahm from "../../assets/replacment images/mokalklLahm.JPG";
 import salat from "../../assets/replacment images/salat.JPG";
-import lahmtRas from "../../assets/replacment images/lahmtRas.JPG";
+import lahmtRas from "../../assets/replacment images/lahmtRas.jpg";
 
 const productsData = [
   ////////////////////////////////////////////////
