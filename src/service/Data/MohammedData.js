@@ -19,14 +19,13 @@ import leftKebabTaama from "../../assets/Menu/Left/كباب طعمة ( محلي 
 import مبشور_دجاج from "../../assets/Menu/Left3/21.jpg";
 import كباب_الطحينة from "../../assets/replacment images/كباب الطحينة.JPG";
 import مشكل_مشويات from "../../assets/replacment images/مشكل مشويات.JPG";
-import makadm from "../../assets/replacment images/makadm.JPG";
+import makadm from "../../assets/replacment images/makadm.jpg";
 
 import manzala from "../../assets/replacment images/manzala.JPG";
 import mokalklDajaj from "../../assets/replacment images/mokalklDajaj.jpg";
 import mokalklLahm from "../../assets/replacment images/mokalklLahm.JPG";
 import salat from "../../assets/replacment images/salat.JPG";
 import lahmtRas from "../../assets/replacment images/lahmtRas.JPG";
-
 
 const productsData = [
   ////////////////////////////////////////////////
@@ -326,8 +325,8 @@ const productsData = [
     meal_name_en: "Tajouri Mixed Grill Platter",
     description_en:
       "Premium mixed grill for 3 persons - selection of grilled meats and chicken served with Madini rice on a special platter (12 skewers)",
-      price: "175 ريال",
-      meal_name_ar: "مشكل مشويات التاجوري",
+    price: "175 ريال",
+    meal_name_ar: "مشكل مشويات التاجوري",
     description_ar:
       "تكفي عدد 3 أشخاص\nتشكيلة فاخرة من اللحوم والدجاج المشوية والرز المديني تقدم على طبق فاخر\nعدد 12 سيخ",
     calories_en: null,
