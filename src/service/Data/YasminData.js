@@ -40,7 +40,7 @@ import egg1 from "../../assets/Menu/مختارات البيض/1.jpg";
 import egg2 from "../../assets/Menu/مختارات البيض/2.jpg";
 import egg3 from "../../assets/Menu/مختارات البيض/3.jpg";
 import egg4 from "../../assets/Menu/مختارات البيض/4.jpg";
-import egg5 from "../../assets/Menu/مختارات البيض/5.JPG";
+import egg5 from "../../assets/Menu/egg_selections/5.jpg";
 
 import left3Tea1 from "../../assets/Menu/Left3/6.JPG";
 import صحن_خضار from "../../assets/Menu/Left/20.JPG";
