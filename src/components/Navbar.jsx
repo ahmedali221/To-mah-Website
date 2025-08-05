@@ -217,7 +217,6 @@ function Navbar({ changeLanguage }) {
 					<Link to="/partners" onClick={(e) => handleNavigation(e, "/partners")} className={`block px-3 py-2 rounded-md hover:bg-primary/10 hover:text-primary transition-colors duration-300 ${isActive("/partners")}`}>{t("navbar.partners")}</Link>
 					<Link to="/contact" onClick={(e) => handleNavigation(e, "/contact")} className={`block px-3 py-2 rounded-md hover:bg-primary/10 hover:text-primary transition-colors duration-300 ${isActive("/contact")}`}>{t("navbar.contact")}</Link>
 					<a href="https://mytable.sa/widget/reservation/?rid=2034&lang=en&fbclid=PAZXh0bgNhZW0CMTEAAaYuR96bLluL1TDMP1YL3EkhA6m_lbAbXLYOD-dLQ-CcjZhZ7W4Hrt-c6_w_aem_0m_5PflX6LR-50gWyLYr5A" className="block px-3 py-2 rounded-md hover:bg-primary/10 hover:text-primary transition-colors duration-300">{t("navbar.bookingTable")}</a>
-					<Link to="/no-image-products" onClick={(e) => handleNavigation(e, "/no-image-products")} className="block px-4 py-2 hover:bg-red-50 hover:text-red-600 transition">{t("navbar.no_image_products", "منتجات بدون صورة")}</Link>
 					<div className="pt-2 border-t border-gray-200">
 						<LanguageToggle isMobile={true} />
 					</div>

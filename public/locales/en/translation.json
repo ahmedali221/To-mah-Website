@@ -87,7 +87,7 @@
     "view_details": "View Details",
     "available": "Available",
     "unavailable": "Unavailable",
-    "currency": "SR",
+    "currency": "SAR ",
     "no_products": "No products found",
     "no_image": "No image available"
 	},
@@ -107,7 +107,7 @@
 		"apply_filter": "Apply Filter",
 		"popular_items": "Popular Items",
 		"no_popular_products": "No popular products available",
-		"currency": "SR"
+		"currency": "SAR"
 	},
 	"about": {
 		"visitors": {
@@ -189,7 +189,7 @@
 		"checkout": "Proceed to Checkout",
 		"summary": "Order Summary",
 		"total": "Total:",
-		"currency": "SR",
+		"currency": "SAR",
 		"delivery_title": "Delivery Information",
 		"address_label": "Delivery Address",
 		"phone_label": "Phone Number",
@@ -347,7 +347,7 @@
   }
 }
 ,
-    "currency": "SR"
+    "currency": "SAR"
   
 },
 	"meal_details": {
@@ -369,7 +369,7 @@
 		"ingredients": "Ingredients",
 		"notes": "Notes",
 		"add_to_cart": "Add to Cart",
-		"currency": "SR",
+		"currency": "SAR",
 		"toast": "Item added to cart!",
 		"unnamed_meal": "Unnamed Meal"
 	},
@@ -478,7 +478,7 @@
 		"delivery_note": "You'll pay with cash, card, or mobile payment when your order arrives.",
 		"empty_cart": "Your cart is empty",
 		"quantity": "Qty: {{count}}",
-		"currency": "SR",
+		"currency": "SAR",
 		"total": "Total",
 		"current_location": "Current Location",
 		"near_location": "Near {lat}, {lng}",
@@ -497,8 +497,8 @@
 		"success_card": "Payment processed successfully!",
 		"success_delivery": "Order placed successfully! Pay on delivery.",
 		"processing": "Processing...",
-		"pay_button": "Pay {total} SR",
-		"place_order_button": "Place Order (Pay {total} SR on Delivery)"
+		"pay_button": "Pay {total} SAR",
+		"place_order_button": "Place Order (Pay {total} SAR on Delivery)"
 	},
 	"menu_showcase": {
   "order_now": "Order Now",
