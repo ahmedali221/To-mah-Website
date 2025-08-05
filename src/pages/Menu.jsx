@@ -240,6 +240,7 @@ function Menu() {
             />
             <button
               className={`absolute ${i18n.language === "ar" ? "left-2 sm:left-3" : "right-2 sm:right-3"} top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white rounded-full p-2 sm:p-3 transition-all duration-300`}
+              aria-label={t("menu.search_button")}
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -365,23 +366,13 @@ function Menu() {
 >
   {/* Image Container - Significantly increased height */}
   <div className="aspect-[4/3] sm:aspect-[4/3] md:aspect-[4/3] lg:aspect-[4/3] w-full overflow-hidden bg-gray-100 rounded-t-lg relative flex items-center justify-center" style={{ minHeight: '260px', maxHeight: '340px' }}>
-    {product.image ? (
-      <div className="flex items-center justify-center w-full h-full">
-        <img
-          src={product.image}
-          alt={i18n.language === "ar" && product.name_ar ? product.name_ar : product.name_en}
-          className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"          style={{ display: 'block', margin: 'auto' }}
-        />
-      </div>
-    ) : (
-      <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-        <img
-          src="/src/assets/logonn.png"
-          alt="To'mah Logo"
-          className="max-h-24 max-w-24 object-contain"
-        />
-      </div>
-    )}
+    <div className="flex items-center justify-center w-full h-full">
+      <img
+        src={product.image}
+        alt={i18n.language === "ar" && product.name_ar ? product.name_ar : product.name_en}
+        className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105" style={{ display: 'block', margin: 'auto' }}
+      />
+    </div>
   </div>
 
   {/* Product Info - Increased padding and spacing */}
@@ -420,12 +411,21 @@ function Menu() {
 
             {/* Only show MenuCard when no category is selected */}
             {!filters.category && (
-              <MenuCard
-                products={paginatedProducts}
-                onViewDetails={handleViewDetails}
-                onAddToCart={handleAddToCart}
-                onImageClick={handleImageClick}
-              />
+              <>
+                {searchQuery && filteredProducts.length === 0 ? (
+                  <div className="text-center py-8">
+                    <h3 className="text-xl font-semibold text-primary-dark mb-2">{t("menu.search_results")}</h3>
+                    <p className="text-gray-600">{t("menu.no_search_results")}</p>
+                  </div>
+                ) : (
+                  <MenuCard
+                    products={paginatedProducts}
+                    onViewDetails={handleViewDetails}
+                    onAddToCart={handleAddToCart}
+                    onImageClick={handleImageClick}
+                  />
+                )}
+              </>
             )}
 
             {/* Pagination controls - only show when no category is selected */}

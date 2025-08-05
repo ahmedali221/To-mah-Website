@@ -22,8 +22,8 @@ import drink13 from "../../assets/Menu/drinks/13.jpg";
 import drink15 from "../../assets/Menu/drinks/15.JPG";
 import drink16 from "../../assets/Menu/drinks/16.jpg";
 import drink17 from "../../assets/Menu/drinks/17.jpg";
-import drink18 from  "../../assets/Menu/Left/23.JPG";
-import drink19 from "../../assets/Menu/drinks/drinkLemon.PNG";
+import drink18 from "../../assets/Menu/Left/23.JPG";
+import drink19 from "../../assets/Menu/drinks/drinkLemon.png";
 
 import leftSandwichSalat from "../../assets/Menu/Left/ساندوتش سلات المدينة ( محلي ).JPG";
 import leftSandwichHead from "../../assets/Menu/Left/ساندوتش لحمة راس (محلي ).JPG";
@@ -47,8 +47,6 @@ import tea4 from "../../assets/Menu/Left3/4.JPG";
 import blila1 from "../../assets/Menu/Left/22.JPG";
 
 import biscut1 from "../../assets/Menu/Left/21.jpeg";
-
-
 
 const productsData = [
   //////////////////////////////////
@@ -130,7 +128,7 @@ const productsData = [
   },
   {
     id: "14",
-    image: whiteBread, 
+    image: whiteBread,
     meal_name_en: "White Bread",
     description_en: "",
     price: "5 ريال",
@@ -743,7 +741,6 @@ const productsData = [
     trendy: false,
   },
 
- 
   {
     id: "44",
     image: tea3,
@@ -922,7 +919,7 @@ const productsData = [
     subcategory_ar: "بوفيه طعمة الخارجي",
     available: true,
     trendy: false,
-  }, 
+  },
   {
     id: "222",
     image: null,
@@ -1007,47 +1004,45 @@ const productsData = [
   //////////////////////////////////////////////////////////////////////
   ////////////
   // ترحيب
-  {
-    id: "6",
-    image: tea4,
-    meal_name_en: "Karbo Platter",
-    description_en: "Traditional Karbo dish served with red sauce",
-    price: null,
-    meal_name_ar: "كربو",
-    description_ar: "كربو الحجة و صوص الحمر",
+  // {
+  //   id: "6",
+  //   image: tea4,
+  //   meal_name_en: "Karbo Platter",
+  //   description_en: "Traditional Karbo dish served with red sauce",
+  //   price: null,
+  //   meal_name_ar: "كربو",
+  //   description_ar: "كربو الحجة و صوص الحمر",
 
-    category_en: "Breakfast",
-    category_ar: "الفطور",
-    subcategory_en: "Welcome Dish",
-    subcategory_ar: "صحن الترحيب",
-    available: true,
-    trendy: false,
-  },
-  {
-    id: "7",
-    image: null,
-    meal_name_en: "Manfoush Bread",
-    description_en: "Traditional flatbread",
-    price: null,
-    meal_name_ar: "منفوش",
-    description_ar: "",
+  //   category_en: "Breakfast",
+  //   category_ar: "الفطور",
+  //   subcategory_en: "Welcome Dish",
+  //   subcategory_ar: "صحن الترحيب",
+  //   available: true,
+  //   trendy: false,
+  // },
+  // {
+  //   id: "7",
+  //   image: null,
+  //   meal_name_en: "Manfoush Bread",
+  //   description_en: "Traditional flatbread",
+  //   price: null,
+  //   meal_name_ar: "منفوش",
+  //   description_ar: "",
 
-    category_en: "Breakfast",
-    category_ar: "الفطور",
-    subcategory_en: "Welcome Dish",
-    subcategory_ar: "صحن الترحيب",
-    available: true,
-    trendy: false,
-    availability_details: {
-      local: true,
-      travel: true,
-      buffet: true,
-    },
-  },
+  //   category_en: "Breakfast",
+  //   category_ar: "الفطور",
+  //   subcategory_en: "Welcome Dish",
+  //   subcategory_ar: "صحن الترحيب",
+  //   available: true,
+  //   trendy: false,
+  //   availability_details: {
+  //     local: true,
+  //     travel: true,
+  //     buffet: true,
+  //   },
+  // },
 
   ///////////////////////////////////////////////////////////////////
 ];
-
-
 
 export default productsData;

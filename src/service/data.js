@@ -57,7 +57,15 @@ const normalizedProducts = productsWithIds.map((product) => {
     available: product.available !== undefined ? product.available : true,
     trendy: product.trendy !== undefined ? product.trendy : false,
     rating: product.rating !== undefined ? product.rating : 0,
+    // Ensure image property exists (even if null)
+    image: product.image || null
   };
 });
 
-export default normalizedProducts;
+// Filter out products without images
+const productsWithImages = normalizedProducts.filter(product => product.image !== null && product.image !== undefined);
+
+console.log(`Total products: ${normalizedProducts.length}, Products with images: ${productsWithImages.length}`);
+
+
+export default productsWithImages;

@@ -376,18 +376,21 @@
 	
   "menu": {
 	"most_popular": "Most Popular Meals",
-	"Menu": "Menu",
-	"description": "Explore our diverse menu featuring traditional Hejazi dishes, grilled specialties, and seasonal delights. Each dish is crafted with care to bring you the authentic flavors of Medina.",
+	"Menu": "Our Menu",
+	"description": "Explore our diverse menu featuring traditional Hijazi dishes, grilled specialties, and seasonal offerings. Each dish is carefully prepared to bring you authentic Madinah flavors.",
     "title": "Our Menu",
-    "search_placeholder": "Search in our Menu...",
-    "categories": "Categories",
+    "search_placeholder": "Search our menu...",
+    "categories": "Choose Your Meal",
     "all_categories": "All Categories",
     "filters": "Filters",
     "show_filters": "Show Filters",
     "hide_filters": "Hide Filters",
     "others": "Others",
     "page": "Page {{current}} of {{total}}",
-    "page_number": "{{number}}"
+    "page_number": "{{number}}",
+    "search_results": "Search Results",
+    "no_search_results": "No results found for your search",
+    "search_button": "Search"
   },
   
 	"partners": {

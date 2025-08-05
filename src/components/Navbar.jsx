@@ -168,7 +168,6 @@ function Navbar({ changeLanguage }) {
 										<Link to="/partners" onClick={(e) => handleNavigation(e, "/partners")} className="block px-4 py-2 hover:bg-primary/10 hover:text-primary">{t("navbar.partners", "Partners")}</Link>
 										<Link to="/contact" onClick={(e) => handleNavigation(e, "/contact")} className="block px-4 py-2 hover:bg-primary/10 hover:text-primary">{t("navbar.contact")}</Link>
 										<a href="https://mytable.sa/widget/reservation/?rid=2034&lang=en&fbclid=PAZXh0bgNhZW0CMTEAAaYuR96bLluL1TDMP1YL3EkhA6m_lbAbXLYOD-dLQ-CcjZhZ7W4Hrt-c6_w_aem_0m_5PflX6LR-50gWyLYr5A" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary">{t("navbar.bookingTable")}</a>
-										<Link to="/no-image-products" onClick={(e) => handleNavigation(e, "/no-image-products")} className="block px-4 py-2 hover:bg-red-50 hover:text-red-600">{t("navbar.no_image_products", "منتجات بدون صورة")}</Link>
 									</div>
 								</div>
 								<Link to="/" onClick={(e) => handleNavigation(e, "/")} className={`uppercase nav-link relative py-2 transition-colors duration-300 hover:text-primary ${isActive("/")} group`}>

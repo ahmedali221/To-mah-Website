@@ -1,4 +1,3 @@
-
 //31
 import beans1 from "../../assets/Menu/beans/1.jpg";
 import beans2 from "../../assets/Menu/beans/2.jpg";
@@ -20,7 +19,6 @@ import appetizer5 from "../../assets/Menu/appetizers/5.jpg";
 
 import breakfastDesert1 from "../../assets/Menu/breakfastDeserts/1.jpg";
 import breakfastDesert2 from "../../assets/Menu/breakfastDeserts/2.jpg";
-
 
 import cheese1 from "../../assets/Menu/cheese/1.jpg";
 import cheese2 from "../../assets/Menu/cheese/2.jpg";
@@ -424,7 +422,7 @@ const productsData = [
   },
   {
     id: "19",
-    image:egg5,
+    image: egg5,
     meal_name_en: "Fried Eggs",
     description_en: "For the good ones.",
     price: "17 ريال",
@@ -665,7 +663,7 @@ const productsData = [
   //
   {
     id: "32",
-    image:appetizer2,
+    image: appetizer2,
     meal_name_en: "Savory Muttabak",
     description_en:
       "Crispy, savory dough layers filled with fresh minced meat served with lemon, green chili, and daggus sauce.",
@@ -844,7 +842,7 @@ const productsData = [
     meal_name_en: "Meat Harissa",
     description_en:
       "Traditional wheat and meat porridge garnished with ghee and sugar",
-    price: null,
+    price: 25,
     meal_name_ar: "هريسة اللحم",
     description_ar: "خليط الحب و اللحم المزينة بالسمن و السكر",
     calories_en: "1057 calories",

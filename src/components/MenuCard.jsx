@@ -33,25 +33,15 @@ export default function MenuCard({
               >
                 {/* Image Container */}
                 <div className="h-80 sm:h-96 overflow-hidden bg-gray-100 rounded-lg relative flex items-center justify-center">
-                  {product.image ? (
-                    <img
-                      src={product.image}
-                      alt={
-                        i18n.language === "ar" && product.name_ar
-                          ? product.name_ar
-                          : product.name_en
-                      }
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                      <img
-                        src="/src/assets/logonn.png"
-                        alt="To'mah Logo"
-                        className="max-h-24 max-w-24 object-contain"
-                      />
-                    </div>
-                  )}
+                  <img
+                    src={product.image}
+                    alt={
+                      i18n.language === "ar" && product.name_ar
+                        ? product.name_ar
+                        : product.name_en
+                    }
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
 
                   {/* Availability Badge */}
                   {!product.available && (

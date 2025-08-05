@@ -11,7 +11,6 @@ import salad6 from "../../assets/Menu/salads/6.jpg";
 import salad7 from "../../assets/Menu/salads/7.jpg";
 import salad8 from "../../assets/Menu/salads/8.jpg";
 
-
 import lunch1 from "../../assets/Menu/lunch/1.jpg";
 import lunch2 from "../../assets/Menu/lunch/2.jpg";
 import lunch3 from "../../assets/Menu/lunch/3.jpg";
@@ -46,15 +45,11 @@ import leftSambosaCheese from "../../assets/Menu/Left/سمبوسة طعمة بخ
 import leftChickenFatayer from "../../assets/Menu/Left/فطير بالدجاج ( محلي ).JPG";
 import left2Fries from "../../assets/Menu/Left2/بطاطس مقلية ( محلي ).JPG";
 
-
-
-
 import img1 from "../../assets/Menu/Left/3.JPG";
 import khoadrRoman from "../../assets/replacment images/khodarRoman.JPG";
 import mento from "../../assets/replacment images/mento.JPG";
 
-
-import img2 from "../../assets/Menu/Left3/5.JPG"
+import img2 from "../../assets/Menu/Left3/5.JPG";
 import سلطة_طحينة_بالطماطم from "../../assets/replacment images/salad.JPG";
 import مخلل_ليمون from "../../assets/replacment images/مخلل ليمون.JPG";
 import سمبوسة_مثلث_اللحم from "../../assets/replacment images/sambosa.JPG";
@@ -456,7 +451,7 @@ const productsData = [
     image: leftStuffedPepper,
     meal_name_en: "Cooked Stuffed Peppers",
     description_en: "Peppers cooked with olive oil and garlic",
-    price: null,
+    price: 7,
     meal_name_ar: "فلفل طعمة مطبوخ",
     description_ar: "فلفل مطبوخ بزيت الزيتون و الثوم",
     category_en: "Lunch & Dinner",
@@ -475,7 +470,7 @@ const productsData = [
     image: mekhall,
     meal_name_en: "Beetroot Pickle Mix",
     description_en: "Assorted pickled vegetables with beetroot",
-    price: null,
+    price: 7,
     meal_name_ar: "مخلل مشكل  البنجر",
     description_ar: "",
     category_en: "Lunch & Dinner",

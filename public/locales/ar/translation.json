@@ -396,7 +396,10 @@
     "hide_filters": "إخفاء التصنيفات",
     "others": "أخرى",
     "page": "الصفحة {{current}} من {{total}}",
-    "page_number": "{{number}}"
+    "page_number": "{{number}}",
+    "search_results": "نتائج البحث",
+    "no_search_results": "لم يتم العثور على نتائج لبحثك",
+    "search_button": "بحث"
   },
 	"partners": {
 		"hero": {
