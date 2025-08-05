@@ -37,9 +37,9 @@ import left2MuttabakCheddar from "../../assets/Menu/Left2/مطبق جبنة تش
 import breaks21 from "../../assets/Menu/breakfastDeserts/21.jpg";
 
 import egg1 from "../../assets/Menu/مختارات البيض/1.jpg";
-import egg2 from "../../assets/Menu/مختارات البيض/2.JPG";
-import egg3 from "../../assets/Menu/مختارات البيض/3.JPG";
-import egg4 from "../../assets/Menu/مختارات البيض/4.JPG";
+import egg2 from "../../assets/Menu/مختارات البيض/2.jpg";
+import egg3 from "../../assets/Menu/مختارات البيض/3.jpg";
+import egg4 from "../../assets/Menu/مختارات البيض/4.jpg";
 import egg5 from "../../assets/Menu/مختارات البيض/5.JPG";
 
 import left3Tea1 from "../../assets/Menu/Left3/6.JPG";
