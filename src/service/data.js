@@ -62,10 +62,4 @@ const normalizedProducts = productsWithIds.map((product) => {
   };
 });
 
-// Filter out products without images
-const productsWithImages = normalizedProducts.filter(product => product.image !== null && product.image !== undefined);
-
-console.log(`Total products: ${normalizedProducts.length}, Products with images: ${productsWithImages.length}`);
-
-
-export default productsWithImages;
+export default normalizedProducts;

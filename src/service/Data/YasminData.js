@@ -40,10 +40,15 @@ import egg1 from "../../assets/Menu/مختارات البيض/1.jpg";
 import egg2 from "../../assets/Menu/مختارات البيض/2.jpg";
 import egg3 from "../../assets/Menu/مختارات البيض/3.jpg";
 import egg4 from "../../assets/Menu/مختارات البيض/4.jpg";
-import egg5 from "../../assets/Menu/egg_selections/5.jpg";
+import egg5 from "../../assets/Menu/egg_selections/egg5.png";
 
 import left3Tea1 from "../../assets/Menu/Left3/6.JPG";
 import صحن_خضار from "../../assets/Menu/Left/20.JPG";
+
+// Newly Added Images
+import nawashefTomah from "../../assets/Menu/newlyAdded/صحن مجموعة نواشف طعمة ( محلي ).jpg";
+import fullCombo from "../../assets/Menu/newlyAdded/مجموعة الكومبو كاملة ( محلي).jpg";
+import comboPlate from "../../assets/Menu/newlyAdded/صحن مجموعة كومبو طعمة.jpg";
 const productsData = [
   // مجموعة نواشف
   {
@@ -52,7 +57,7 @@ const productsData = [
     meal_name_en: "Sahlouli Cheese with Peppers",
     description_en:
       "A mashed cheese mix with tomatoes, Moroccan mint, and chili, served with whole grain bread.",
-    price: "15 ريال",
+    price: "17 ريال",
     meal_name_ar: "جبنة سحلولي بالفلافلة",
     description_ar:
       "خلطة جبن مهروسة بالطماطم، النعناع المغربي، الفلفل الحار، وتقدم مع خبز الحبوب الكاملة",
@@ -75,7 +80,7 @@ const productsData = [
     meal_name_en: "White Cheese in Clay Pot",
     description_en:
       "White cheese cooked in a way you've never experienced before.",
-    price: "15 ريال",
+    price: "17 ريال",
     meal_name_ar: "الجبنة البيضاء في الفخار",
     description_ar: "جبنة بيضاء مطبوخة بطريقة لم تجربها من قبل.",
     calories: "357 ",
@@ -117,7 +122,7 @@ const productsData = [
     image: cheese12,
     meal_name_en: "Baladi Cheese with Mint",
     description_en: "Traditional cheese with mint from Medina and olive oil.",
-    price: "15 ريال",
+    price: "17 ريال",
     meal_name_ar: "الجبنة البلدى بالنعناع",
     description_ar: "جبنة بلدي تقليدية بالنعناع وزيت الزيتون من المدينة",
     calories: "262 ",
@@ -195,27 +200,7 @@ const productsData = [
     trendy: false,
   },
   //2
-  {
-    id: "8",
-    image: cheese6,
-    meal_name_en: "To'mah Combo (Feast for 3)",
-    description_en:
-      "A dish consisting of 6 assorted plates + Ta'ma eggs + chicken maqlouqi + foul.",
-    price: "120 ريال",
-    meal_name_ar: "كومبو طعمة (يخدم 3 أشخاص)",
-    description_ar: "طبق مكوّن من ٦ أطباق مشكلة + بيض طعمة + مقلقل دجاج + فول",
-    calories: null,
-    calories_en: null,
-    calories_ar: null,
-    burn_time_en: null,
-    burn_time_ar: null,
-    category_en: "Breakfast",
-    category_ar: "الفطور",
-    subcategory_en: "Ta'mah Dry Goods Collection",
-    subcategory_ar: "مجموعة نواشف طعمة",
-    available: true,
-    trendy: false,
-  },
+
   {
     id: "9",
     image: cheese7,
@@ -261,7 +246,7 @@ const productsData = [
     image: cheese9,
     meal_name_en: "White Cheese with To'mah Mix",
     description_en: "White cheese mixed with Medina tomatoes and mint.",
-    price: "15 ريال",
+    price: "17 ريال",
     meal_name_ar: "جبنة بيضاء بخلطة طعمة",
     description_ar: "جبنة بيضاء مع طماطم المدينة والنعناع",
     calories: "105 ",
@@ -345,7 +330,7 @@ const productsData = [
     image: egg1,
     meal_name_en: "To'mah Shakshuka",
     description_en: "The authentic Hejazi shakshuka.",
-    price: "20 ريال",
+    price: "17 ريال",
     meal_name_ar: "شكشوكة طعمة",
     description_ar: "الشكشوكة الحجازية الأصيلة",
     calories_en: "309 calories",
@@ -365,7 +350,7 @@ const productsData = [
     meal_name_en: "To'mah Eggs",
     description_en:
       "Eggs with vegetables and melted cheese, prepared in the chef's special way.",
-    price: "23 ريال",
+    price: "20 ريال",
     meal_name_ar: "بيض طعمة",
     description_ar: "بيض بالخضار والجبنة الذائبة بطريقة الشيف الخاصة",
     calories_en: "577 calories",
@@ -385,7 +370,7 @@ const productsData = [
     meal_name_en: "Butter Eggs",
     description_en:
       "Egg fried with butter, salt, and Madinah's special Dukkah spice mix.",
-    price: "23 ريال",
+    price: "20 ريال",
     meal_name_ar: "بيض بالزبدة",
     description_ar: "البيضة مع الزبدة وملح ومديني وبهار الدقة",
     calories: null,
@@ -448,7 +433,7 @@ const productsData = [
     meal_name_en: "Special Ful",
     description_en:
       "Ful prepared with a special blend of ghee or olive oil, served with daggus sauce, tahini, and whole-grain bread.",
-    price: "23 ريال",
+    price: "20 ريال",
     meal_name_ar: "فول مخصوص",
     description_ar:
       "طبق فول بالخليط الخاص بالسمن أو الزيت، يقدم مع صلصة الدقوس، الطحينة وخبز الحبوب.",
@@ -512,7 +497,7 @@ const productsData = [
     meal_name_en: "Cook's Market Liver",
     description_en:
       "Liver fried with vegetables over high heat, served with whole-grain bread, lemon wedges, and tahini.",
-    price: "35 ريال",
+    price: "27 ريال",
     meal_name_ar: "كبدة سوق الطباخين",
     description_ar:
       "كبدة مقلية بالخضار على نار عالية مع خبز الحبوب والليمون والطحينة",
@@ -534,7 +519,7 @@ const productsData = [
     meal_name_en: "Lamb Feet",
     description_en:
       "White broth with two pieces of fresh lamb hocks, served with a garlic and vinegar sauce and whole-grain bread.",
-    price: "35 ريال",
+    price: "27 ريال",
     meal_name_ar: "مقادم الأكتع",
     description_ar:
       "مرقة بيضاء مع قطعتين من الأكواع الطازجة، يقدم مع صوص الثوم والخل وخبز الحبوب",
@@ -556,7 +541,7 @@ const productsData = [
     meal_name_en: "Meat Muqalqal",
     description_en:
       "Tender pieces of meat stir-fried with a special blend of spices, served the traditional way.",
-    price: "40 ريال",
+    price: "38 ريال",
     meal_name_ar: "مقلقل اللحم",
     description_ar: "قطع لحم مقلقلة بطريقة تقليدية مع خلطة التوابل الخاصة",
     calories: null,
@@ -577,7 +562,7 @@ const productsData = [
     meal_name_en: "Chicken Muqalqal",
     description_en:
       "Grilled chicken breasts sautéed with vegetables and special spices.",
-    price: "30 ريال",
+    price: "28 ريال",
     meal_name_ar: "مقلقل الدجاج",
     description_ar: "قطع صدور دجاج مشوحة بالخضار والبهارات الخاصة",
     calories: null,
@@ -598,7 +583,7 @@ const productsData = [
     meal_name_en: "Head Meat",
     description_en:
       "Tender pieces of meat from the lamb's head, roasted in the oven, served with whole-grain bread and tahini.",
-    price: "38 ريال",
+    price: "30 ريال",
     meal_name_ar: "لحمة راس",
     description_ar:
       "قطع لحم محلية من رأس الخروف المشوي بالفرن وتقدم بخبز الحبوب والطحينة",
@@ -623,7 +608,7 @@ const productsData = [
     meal_name_en: "Abu El-Khall Falafel",
     description_en:
       "4 pieces of falafel served with a variety of delicious sauces and bread.",
-    price: "13 ريال",
+    price: "9 ريال",
     meal_name_ar: "فلافل ابو الخل",
     description_ar: "٤ قطع فلافل تقدم مع تشكيلة من الصوصات والخبز",
     calories: null,
@@ -710,7 +695,7 @@ const productsData = [
     image: appetizer3,
     meal_name_en: "Nutella Muttabbak",
     description_en: "Dough + Nutella",
-    price: "20 ريال",
+    price: "23 ريال",
     meal_name_ar: "مطبق نوتيلا",
     description_ar: "عجينة نوتيلا",
     calories: null,
@@ -752,7 +737,7 @@ const productsData = [
     meal_name_en: "Spicy Sea Chips",
     description_en:
       "Freshly fried chips served with garlic sauce, spicy dip, and special red sauce.",
-    price: "11 ريال",
+    price: "10 ريال",
     meal_name_ar: "شيبس حارة البحر",
     description_ar: "شيبس مقلية تقدم مع صوص الثوم، وصوص حار، وصوص أحمر خاص",
     calories_en: "722 calories",
@@ -770,6 +755,7 @@ const productsData = [
 
   //
   {
+    id: "37",
     meal_name_en: "Vegetable Plate",
     description_en:
       "A selection of fresh organic vegetables from local farms, served chopped.",
@@ -793,10 +779,11 @@ const productsData = [
 
   // حلا الفطور
   {
+    id: "38",
     meal_name_en: "Areeka Al-Sih",
     description_en:
       "Bri style bread sliced and sautéed in ghee and served with cream, honey and cheese.",
-    price: "30 ريال",
+    price: "28 ريال",
     meal_name_ar: "عريكة السيح",
     description_ar:
       "خبز على طريقة السيح مقطع ومقلي بالسمن ويقدم مع القشطة، والعسل والجبن.",
@@ -815,10 +802,11 @@ const productsData = [
   },
 
   {
+    id: "39",
     meal_name_en: "Ma'soub Bakr",
     description_en:
-      "Banana and cream ma’soub on Bakr’s special style served with caramel sauce or honey.",
-    price: "30 ريال",
+      "Banana and cream ma'soub on Bakr's special style served with caramel sauce or honey.",
+    price: "29 ريال",
     meal_name_ar: "معصوب بكر",
     description_ar:
       "موز وقشطة على طريقة بكر الخاصة، يقدم مع صوص الكراميل أو العسل.",
@@ -856,6 +844,67 @@ const productsData = [
     available: true,
     trendy: false,
   },
+
+  // Missing Breakfast Items
+  {
+    id: "70",
+    image: nawashefTomah,
+    meal_name_en: "Nawashef Tomah Platter",
+    meal_name_ar: "صحن مجموعة نواشف طعمة",
+    description_en: "Spicy Sahlooli cheese - white cheese in a clay pot - labneh - local cheese with mint - olives - yellow cheese with eggplant + a fresh vegetable plate in the middle",
+    description_ar: "جبنة سحلولي حارة - جبنة بيضاء في الفخار - لبنة - جبنة بلدية بالنعناع - زيتون - جبنة صفراء بالباذنجان + صحن خضار طازج في الوسط",
+    calories_en: "750 calories",
+    calories_ar: "750 سعرة حرارية",
+    burn_time_en: "125 minutes",
+    burn_time_ar: "125 دقيقة",
+    price: "75 ريال",
+    category_en: "Breakfast",
+    category_ar: "الفطور",
+    subcategory_en: "Ta'mah Dry Goods Collection",
+    subcategory_ar: "مجموعة نواشف طعمة",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "71",
+    image: fullCombo,
+    meal_name_en: "To'mah Full Combo Set",
+    meal_name_ar: "مجموعة كومبو طعمة الكاملة",
+    description_en: "Tray consisting of 6 mixed dishes + To'mah eggs + Chicken Muqalqal + Fava beans + Shakshuka. Serves 4 people",
+    description_ar: "تبسى مكون من 6 صحون مشكلة + بيض طعمة + مقلقل دجاج + فول + شكشوكه. يخدم 4 أشخاص",
+    calories_en: "1200 calories",
+    calories_ar: "1200 سعرة حرارية",
+    burn_time_en: "200 minutes",
+    burn_time_ar: "200 دقيقة",
+    price: "150 ريال",
+    category_en: "Breakfast",
+    category_ar: "الفطور",
+    subcategory_en: "Ta'mah Dry Goods Collection",
+    subcategory_ar: "مجموعة نواشف طعمة",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "72",
+    image: comboPlate,
+    meal_name_en: "To'mah Combo Plate",
+    meal_name_ar: "صحن مجموعة كومبو طعمة",
+    description_en: "Plate of 6 types of dry goods + vegetable plate in the middle",
+    description_ar: "صحن مجموعة 6 انواع نواشف + صحن خضار في الوسط",
+    calories_en: "650 calories",
+    calories_ar: "650 سعرة حرارية",
+    burn_time_en: "110 minutes",
+    burn_time_ar: "110 دقيقة",
+    price: "75 ريال",
+    category_en: "Breakfast",
+    category_ar: "الفطور",
+    subcategory_en: "Ta'mah Dry Goods Collection",
+    subcategory_ar: "مجموعة نواشف طعمة",
+    available: true,
+    trendy: false,
+  },
+
+  //////////////////////////////
 ];
 
 export default productsData;

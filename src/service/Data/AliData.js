@@ -1,4 +1,11 @@
-import img5 from "../../assets/Menu/breadBasket/8.jpg";
+
+
+// Newly Added Images
+import alulaSalad from "../../assets/Menu/newlyAdded/سلطة العلا ( محلي ).jpg";
+import bukhariRiceSalad from "../../assets/Menu/newlyAdded/سلطة الرز البخاري (محلي ).jpg";
+import mixedMishhoonat from "../../assets/Menu/newlyAdded/صحن مشهونات مشكل_.jpg";
+import mixedPastriesBureik from "../../assets/Menu/newlyAdded/مشكل معجنات مع صينية ( البريك ).jpg";
+import mixedPastriesBread from "../../assets/Menu/newlyAdded/مشكل معجنات مع صينية ( عيش باللحم ).jpg";
 
 //27
 import soup1 from "../../assets/Menu/soup/1.jpg";
@@ -55,12 +62,16 @@ import مخلل_ليمون from "../../assets/replacment images/مخلل ليم�
 import سمبوسة_مثلث_اللحم from "../../assets/replacment images/sambosa.JPG";
 import tomahSalad from "../../assets/replacment images/سلطة طعمة.JPG";
 import mekhall from "../../assets/replacment images/mekhall.JPG";
+
+
+import ye8m4 from "../../assets/Menu/newlyAdded/ye8m4.jpg";
+
 const productsData = [
   // الشوربة
   {
-    meal_name_en: "Grain Soup",
+    meal_name_en: "Wheat Soup",
     description_en: "Cooked with tender beef chunks on Madini style",
-    price: "25 ريال",
+    price: "20 ريال",
     meal_name_ar: "شوربة الحب",
     description_ar: "مطبوخة بلحم العجل الطري، على الطريقة المدينية الخاصة",
     calories: null,
@@ -80,7 +91,7 @@ const productsData = [
     meal_name_en: "shkamba soup",
     description_en:
       "Beef chunks soup served with whole grain bread and lemon wedges",
-    price: "25 ريال",
+    price: "20 ريال",
     meal_name_ar: "شكمبا",
     description_ar: "شوربة مطبوخة باللحم الطازج، تقدم مع خبز الحب والليمون",
     category_en: "Lunch & Dinner",
@@ -103,7 +114,7 @@ const productsData = [
     meal_name_en: "To'mah Salad",
     description_en:
       "Baladi black seeds cheese pieces with roasted almonds and dried figs",
-    price: "17 ريال",
+    price: "19 ريال",
     meal_name_ar: "سلطة طعمة",
     description_ar:
       "قطع جبن بلدي بالحبة السوداء مع السلطة الخضراء مزينة باللوز البجلي المحمص والتين المجفف",
@@ -122,7 +133,7 @@ const productsData = [
   {
     meal_name_en: "Madini Okra Fattah",
     description_en: "Traditional fattah with crispy okra.",
-    price: "19 ريال",
+    price: "27 ريال",
     meal_name_ar: "فتة البامية المدنية",
     description_ar: "فتة على الأصول مزينة بالبامية المدنية المقرمشة ",
     category_en: "Lunch & Dinner",
@@ -141,7 +152,7 @@ const productsData = [
   {
     meal_name_en: "Mint Hummus",
     description_en: "Chickpeas mixed with Moroccan mint",
-    price: "27 ريال",
+    price: "11 ريال",
     meal_name_ar: "حمص نعناع",
     description_ar: "حمص مخلوط بالنعناع المغربي",
     category_en: "Lunch & Dinner",
@@ -179,8 +190,8 @@ const productsData = [
     meal_name_en: "Tahini with Veggies and Eggplant",
     description_en:
       "Assortment of Madini veggies served with tahini vinaigrette",
-    price: "11 ريال",
-    meal_name_ar: "طحنية بالباذنجان والخضار",
+    price: "14 ريال",
+    meal_name_ar: "طحينة بالباذنجان والخضار",
     description_ar: "خضار المدينة المختارة بالطحينة والخل ",
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
@@ -199,7 +210,7 @@ const productsData = [
   {
     meal_name_en: "Madini Veggies with Pomegranate Molasses and Spicy Pepper",
     description_en: "Veggie salad flavored with spicy pepper",
-    price: "15 ريال",
+    price: "19 ريال",
     meal_name_ar: "خضار المدينة بدبس الرمان والفلفل الحار",
     description_ar: "سلطة مشكلة من الخضار ومطعمة بالفلفل الحار ",
     category_en: "Lunch & Dinner",
@@ -219,7 +230,7 @@ const productsData = [
     meal_name_en: "Mantu Fattah",
     description_en:
       "Beef mantu with yogurt served with tomato sauce and coriander",
-    price: "17 ريال",
+    price: "20 ريال",
     meal_name_ar: "فتة منتو",
     description_ar:
       "قطع منتو باللحم مع لبن الزبادي مرشوشة بصوص الطماطم والكزبرة ",
@@ -240,7 +251,7 @@ const productsData = [
     image: salad8,
     meal_name_en: "Grandma's Salad",
     description_en: "Traditional salad with parsley and lemon dressing",
-    price: "19 ريال",
+    price: "12 ريال",
     meal_name_ar: "سلطة ستيتة",
     description_ar: "سلطة الجدات المزينة بالبقدونس و الليمون",
     category_en: "Lunch & Dinner",
@@ -319,7 +330,7 @@ const productsData = [
     image: مخلل_ليمون,
     meal_name_en: "Pickled Lemons",
     description_en: "Traditional preserved lemons with authentic spices",
-    price: "7 ريال",
+    price: "6 ريال",
     meal_name_ar: "مخلل ليمون",
     description_ar: "",
     category_en: "Lunch & Dinner",
@@ -394,7 +405,7 @@ const productsData = [
   {
     meal_name_en: "Spicy Dakos",
     description_en: "Tomatoes mixed with parsley and spicy pepper",
-    price: "7 ريال",
+    price: "5 ريال",
     meal_name_ar: "دقس حار",
     description_ar: "خلطة طمامط بالبقدونس والفلفل الحار",
     category_en: "Lunch & Dinner",
@@ -412,7 +423,7 @@ const productsData = [
   {
     meal_name_en: "Mild Dakos",
     description_en: "Tomatoes and parsley mix",
-    price: "7 ريال",
+    price: "5 ريال",
     meal_name_ar: "دقس بارد",
     description_ar: "خلطة الطماطم بالبقدونس",
     category_en: "Lunch & Dinner",
@@ -470,7 +481,7 @@ const productsData = [
     image: mekhall,
     meal_name_en: "Beetroot Pickle Mix",
     description_en: "Assorted pickled vegetables with beetroot",
-    price: 7,
+    price: 6,
     meal_name_ar: "مخلل مشكل  البنجر",
     description_ar: "",
     category_en: "Lunch & Dinner",
@@ -617,7 +628,7 @@ const productsData = [
   {
     meal_name_en: "Madini Borek Pan",
     description_en: "Fresh borek filled with minced beef right from the oven",
-    price: "20 ريال",
+    price: "25 ريال",
     meal_name_ar: "طاوة بريك مدني",
     description_ar: "طاوة بريك باللحم المفروم الطازج من فرن طُعمة",
     calories_en: "353 calories",
@@ -656,7 +667,7 @@ const productsData = [
   {
     meal_name_en: "White Cheese Rolls",
     description_en: "4 pieces of rolls filled with baladi cheese",
-    price: "13 ريال",
+    price: "12 ريال",
     meal_name_ar: "سمبوسك اصابع الجبنة البيضاء ",
     description_ar: "٤ قطع عجين رول محشوة بالجبنة البلدي",
     calories_en: "332 calories",
@@ -672,25 +683,7 @@ const productsData = [
     image: breadBasket3,
   },
   //
-  {
-    id: "37",
-    meal_name_en: "Sea Spicy Chips",
-    meal_name_ar: "شيبسي حارة البحر",
-    description_en:
-      "Enjoy fresh potato fries served with a distinctive selection of sauces: creamy garlic sauce, rich sesame tahini, spicy green dakos, and refreshing homr salad. A perfect side dish for lovers of hot and diverse flavors.",
-    description_ar:
-      "استمتع بأصابع البطاطس الطازجة المقلية والمقدمة مع تشكيلة مميزة من الصوصات: صوص الثوم الكريمي، طحينة السمسم الغنية، دقوس الأخضر الحار، وسلطة الحمر المنعشة. وجبة جانبية مثالية لعشاق النكهات الحارة والمتنوعة.",
-    image: img5,
-    category_en: "Lunch & Dinner",
-    category_ar: "الغداء و العشاء",
-    subcategory_en: "Bread Basket",
-    subcategory_ar: "سلة معجنات",
-    calories: "0",
 
-    price: "12 ريال",
-    available: true,
-    trendy: false,
-  },
   {
     id: "44",
     meal_name_en: "Rolled Borek",
@@ -731,7 +724,7 @@ const productsData = [
     calories_ar: "222 سعرة حرارية",
     burn_time_en: "35 minutes",
     burn_time_ar: "35 دقيقة",
-    price: "20س ريال",
+    price: "15 ريال",
     available: true,
     trendy: false,
   },
@@ -753,7 +746,7 @@ const productsData = [
     subcategory_en: "Bread Basket",
     subcategory_ar: "سلة معجنات",
     calories: "322",
-    price: "17 ريال",
+    price: "20 ريال",
     available: true,
     trendy: false,
   },
@@ -803,7 +796,7 @@ const productsData = [
   },
   {
     id: "20",
-    meal_name_en: "Lahmacun",
+    meal_name_en: "Bread with Meat",
     meal_name_ar: "عيش باللحم",
     description_en:
       "Enjoy a piece of thin dough filled with fresh minced beef seasoned with a special and distinctive tahini mix. This dish is served soft and hot to give you an unforgettable dining experience.",
@@ -830,7 +823,7 @@ const productsData = [
       "Indulge in four pieces of delicious Yaghmash, filled with beef seasoned with a special and distinctive blend. A tasty and flavorful dish, perfect as a light meal or an appetizer that adds an authentic Eastern touch to your table.",
     description_ar:
       "استمتع بأربع قطع من اليغمش اللذيذ، محشوة باللحم المتبل بخلطة خاصة ومميزة. طبق شهي وغني بالنكهات، مثالي كوجبة خفيفة أو مقبل يضيف لمسة شرقية أصيلة إلى مائدتك.",
-    image: breadBasket10,
+    image: ye8m4,
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
     subcategory_en: "Bread Basket",
@@ -850,7 +843,7 @@ const productsData = [
       "Indulge in four pieces of delicious Yaghmash, filled with beef seasoned with a special and distinctive blend. A tasty and flavorful dish, perfect as a light meal or an appetizer that adds an authentic Eastern touch to your table.",
     description_ar:
       "استمتع بأربع قطع من اليغمش اللذيذ، محشوة باللحم المتبل بخلطة خاصة ومميزة. طبق شهي وغني بالنكهات، مثالي كوجبة خفيفة أو مقبل يضيف لمسة شرقية أصيلة إلى مائدتك.",
-    image: breadBasket10,
+    image: ye8m4,
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
     subcategory_en: "Bread Basket",
@@ -870,7 +863,7 @@ const productsData = [
       "Indulge in four pieces of delicious Mantu, filled with a savory stuffing and topped with a sprinkle of aromatic cumin and spicy black pepper. An authentic traditional dish with a distinctive flavor that takes you on a journey to the world of Eastern tastes.",
     description_ar:
       "استمتع بأربع قطع من المنتو الشهي، محشوة بحشوة لذيذة ومغطاة برشة من الكمون العطري والفلفل الأسود الحار. طبق تقليدي أصيل بنكهة مميزة تأخذك في رحلة إلى عالم من المذاقات الشرقية.",
-    image: breadBasket11,
+    image: breadBasket10,
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
     subcategory_en: "Bread Basket",
@@ -879,7 +872,7 @@ const productsData = [
     calories_ar: "231 سعرة حرارية",
     burn_time_en: "40 minutes",
     burn_time_ar: "40 دقيقة",
-    price: "15 ريال",
+    price: "17 ريال",
     available: true,
     trendy: false,
   },
@@ -891,7 +884,7 @@ const productsData = [
       "Layers of thin, crispy dough filled with a special meat mixture and served with Laza.",
     description_ar:
       "طبقات من العجين الرقيق الهش محشوة بخلطة اللحم الخاصة وتقدم مع اللازا.",
-    image: breadBasket13,
+    image: breadBasket11,
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
     subcategory_en: "Bread Basket",
@@ -900,7 +893,28 @@ const productsData = [
     calories_ar: "454 سعرة حرارية",
     burn_time_en: "60 minutes",
     burn_time_ar: "60 دقيقة",
-    price: "15 ريال",
+    price: "17 ريال",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "1",
+    meal_name_en: "Zainab Fermoza (Cheese)",
+    meal_name_ar: "فرموزة زينب (جبن)",
+    description_en:
+      "Layers of thin, crispy dough filled with a special meat mixture and served with Laza.",
+    description_ar:
+      "طبقات من العجين الرقيق الهش محشوة بخلطة اللحم الخاصة وتقدم مع اللازا.",
+    image: breadBasket11,
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Bread Basket",
+    subcategory_ar: "سلة معجنات",
+    calories_en: "422 calories",
+    calories_ar: "422 سعرة حرارية",
+    burn_time_en: "50 minutes",
+    burn_time_ar: "50 دقيقة",
+    price: "12 ريال",
     available: true,
     trendy: false,
   },
@@ -920,8 +934,8 @@ const productsData = [
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
-    subcategory_en: "Grill Section",
-    subcategory_ar: "منقل طعمة",
+    subcategory_en: "Bread Basket",
+    subcategory_ar: "سلة معجنات",
     available: true,
     trendy: false,
   },
@@ -1051,7 +1065,7 @@ const productsData = [
     calories_ar: "1302 سعرة حرارية",
     burn_time_en: "294 minutes",
     burn_time_ar: "294 دقيقة",
-    price: "40 ريال",
+    price: "38 ريال",
     available: true,
     trendy: false,
   },
@@ -1119,10 +1133,30 @@ const productsData = [
   // },
   {
     id: "15",
-    meal_name_en: "Gama'h Rice",
-    meal_name_ar: "رز الجمعه",
+    meal_name_en: "Gama'h Rice (Chicken)",
+    meal_name_ar: "رز الجمعة (بالدجاج)",
     description_en:
-      "Indulge in a plate of rice cooked with meat or chicken, chickpeas, and Linda's special ghee blend with an authentic ghee flavor. This delicious dish is served with sliced carrots, tahini sauce with cucumber, and pickled ahwaz carrots to give you a warm family meal rich in diverse flavors.",
+      "Indulge in a plate of rice cooked with chicken, chickpeas, and Linda's special ghee blend with an authentic ghee flavor. This delicious dish is served with sliced carrots, tahini sauce with cucumber, and pickled ahwaz carrots to give you a warm family meal rich in diverse flavors.",
+    description_ar:
+      "استمتع بطبق من الرز المطبوخ بالدجاج مع الحمص وخلطة ليندا الخاصة بطعم السمن الأصيل. يقدم هذا الطبق الشهي مع قطع من الجزر الشرائح وصوص الطحينة بالخيار والمخلل الأهواز ليمنحك وجبة عائلية دافئة وغنية بالنكهات المتنوعة.",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    image: rice9,
+    subcategory_en: "To'mah Rice Dishes",
+    subcategory_ar: "أرزاز طعمة",
+    calories_en: "1000 calories",
+    calories_ar: "1000 سعرة حرارية",
+    burn_time_en: "180 minutes",
+    burn_time_ar: "180 دقيقة",
+    price: "40 ريال",
+    available: true,
+  },
+  {
+    id: "15",
+    meal_name_en: "Gama'h Rice (Meat)",
+    meal_name_ar: " رز الجمعة (باللحم)",
+    description_en:
+      "Indulge in a plate of rice cooked with meat , chickpeas, and Linda's special ghee blend with an authentic ghee flavor. This delicious dish is served with sliced carrots, tahini sauce with cucumber, and pickled ahwaz carrots to give you a warm family meal rich in diverse flavors.",
     description_ar:
       "استمتع بطبق من الرز المطبوخ باللحم أو الدجاج مع الحمص وخلطة ليندا الخاصة بطعم السمن الأصيل. يقدم هذا الطبق الشهي مع قطع من الجزر الشرائح وصوص الطحينة بالخيار والمخلل الأهواز ليمنحك وجبة عائلية دافئة وغنية بالنكهات المتنوعة.",
     category_en: "Lunch & Dinner",
@@ -1130,11 +1164,11 @@ const productsData = [
     image: rice9,
     subcategory_en: "To'mah Rice Dishes",
     subcategory_ar: "أرزاز طعمة",
-    calories_en: "1230 calories",
-    calories_ar: "1230 سعرة حرارية",
-    burn_time_en: "224 minutes",
-    burn_time_ar: "224 دقيقة",
-    price: "40 ريال",
+    calories_en: "2050 calories",
+    calories_ar: "2050 سعرة حرارية",
+    burn_time_en: "240 minutes",
+    burn_time_ar: "240 دقيقة",
+    price: "85 ريال",
     available: true,
   },
 
@@ -1182,7 +1216,7 @@ const productsData = [
     image: img1,
     meal_name_en: "Chicken Kozi",
     description_en: "Rice and pasta mix with chicken",
-    price: "38 ريال",
+    price: "40 ريال",
     meal_name_ar: "كوزي دجاج طعمة",
     description_ar: "خليط الرز و المكرونة بالدجاج",
     category_en: "Lunch & Dinner",
@@ -1212,6 +1246,128 @@ const productsData = [
     burn_time_ar: "540 دقيقة",
     subcategory_en: "To'mah Rice Dishes",
     subcategory_ar: "أرزاز طعمة",
+    available: true,
+    trendy: false,
+  },
+
+  ////////////////////////////////////
+
+  // Missing Bread Basket Items // missing calories and burn time
+  {
+    id: "131",
+    image: mixedPastriesBureik,
+    meal_name_en: "Mixed Madinah Pastries with Bureik",
+    meal_name_ar: "مشكل معجنات المدينة مع ( البريك )",
+    description_en: "A selection of Madinah pastries, topped by a Bureik tray. Enjoy a variety of traditional baked goods including spring rolls, triangular pastries, and other savory delights served with a central dip and garnishes.",
+    description_ar: "تشكيلة معجنات المدينة ويترأسها صينية البريك. استمتع بمجموعة متنوعة من المعجنات التقليدية المخبوزة بما في ذلك اللفائف الربيعية والمعجنات المثلثة وغيرها من الأطباق اللذيذة المقدمة مع غموس مركزي وتزيينات.",
+    calories_en: "800 calories",
+    calories_ar: "800 سعرة حرارية",
+    burn_time_en: "120 minutes",
+    burn_time_ar: "120 دقيقة",
+    price: "65 ريال",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Bread Basket",
+    subcategory_ar: "سلة معجنات",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "132",
+    image: mixedPastriesBread,
+    meal_name_en: "Mixed Madinah Pastries with Bread and Meat",
+    meal_name_ar: "مشكل معجنات المدينة مع ( عيش باللحم)",
+    description_en: "A selection of Madinah pastries, topped by Bread with Meat. Enjoy a variety of traditional baked goods including small bread rolls, flat filled pastries, and other savory items served with a central meat stew and red sauce.",
+    description_ar: "تشكيلة معجنات المدينة ويترأسها عيش باللحم. استمتع بمجموعة متنوعة من المعجنات التقليدية المخبوزة بما في ذلك لفائف الخبز الصغيرة والمعجنات المسطحة المحشوة وغيرها من الأطباق اللذيذة المقدمة مع طبق لحم مركزي وصلصة حمراء.",
+    calories_en: "900 calories",
+    calories_ar: "900 سعرة حرارية",
+    burn_time_en: "135 minutes",
+    burn_time_ar: "135 دقيقة",
+    price: "70 ريال",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Bread Basket",
+    subcategory_ar: "سلة معجنات",
+    available: true,
+    trendy: false,
+  },
+
+  ////////////////////////////////////
+
+  // Missing Salads & Appetizers
+  {
+    id: "133",
+    image: alulaSalad,
+    meal_name_en: "AlUla Salad",
+    meal_name_ar: "سلطة العلا",
+    description_en: "Arugula leaves with seasonal orange slices from AlUla farms, topped with Tomah's innovative sauce made from the best of Madinah",
+    description_ar: "أوراق الجرجير مع البرتقال الموسمي من مزارع العلا",
+    calories_en: "336 calories",
+    calories_ar: "336 سعرة حرارية",
+    burn_time_en: "60 minutes",
+    burn_time_ar: "مشى سريع ٦٠ دقيقة",
+    price: "17 ريال",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Salads & Cold Appetizers",
+    subcategory_ar: "سلطات ومقبلات باردة",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "134",
+    image: bukhariRiceSalad,
+    meal_name_en: "Bukhari Rice Salad",
+    meal_name_ar: "سلطة الرز البخاري",
+    description_en: "A mix of cucumber, tomatoes, and parsley with sauce and vinegar, served with Bukhari rice",
+    description_ar: "خلطة من الخيار والطماطم والبقدونس مع الصلصة والخل تقدم مع الرز البخاري",
+    calories_en: "280 calories",
+    calories_ar: "280 سعرة حرارية",
+    burn_time_en: "45 minutes",
+    burn_time_ar: "45 دقيقة",
+    price: "5 ريال",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "To'mah Pickles & Preserves",
+    subcategory_ar: "مشهونات طعمة (المخلالات و الطرشي)",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "134",
+    image: bukhariRiceSalad,
+    meal_name_en: "Bukhari Rice Salad",
+    meal_name_ar: "سلطة الرز البخاري",
+    description_en: "A mix of cucumber, tomatoes, and parsley with sauce and vinegar, served with Bukhari rice",
+    description_ar: "خلطة من الخيار والطماطم والبقدونس مع الصلصة والخل تقدم مع الرز البخاري",
+    calories_en: "280 calories",
+    calories_ar: "280 سعرة حرارية",
+    burn_time_en: "45 minutes",
+    burn_time_ar: "45 دقيقة",
+    price: "14 ريال",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Salads & Cold Appetizers",
+    subcategory_ar: "سلطات ومقبلات باردة",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "135",
+    image: mixedMishhoonat,
+    meal_name_en: "Mixed Mishhoonat Platter",
+    meal_name_ar: "صحن مشكل مشهونات",
+    description_en: "A selection of 8 traditional sides, dips, and pickles",
+    description_ar: "عدد 8 أصناف مشكلة من المشهونات",
+    calories_en: "600 calories",
+    calories_ar: "600 سعرة حرارية",
+    burn_time_en: "90 minutes",
+    burn_time_ar: "90 دقيقة",
+    price: "40 ريال",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Salads & Cold Appetizers",
+    subcategory_ar: "سلطات ومقبلات باردة",
     available: true,
     trendy: false,
   },

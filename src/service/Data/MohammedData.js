@@ -19,6 +19,7 @@ import leftKebabTaama from "../../assets/Menu/Left/كباب طعمة ( محلي 
 import مبشور_دجاج from "../../assets/Menu/Left3/21.jpg";
 import كباب_الطحينة from "../../assets/replacment images/كباب الطحينة.JPG";
 import مشكل_مشويات from "../../assets/replacment images/مشكل مشويات.JPG";
+import m4kl from "../../assets/Menu/newlyAdded/m4kl.jpg";
 import makadm from "../../assets/replacment images/makadm.jpg";
 
 import manzala from "../../assets/replacment images/manzala.JPG";
@@ -26,6 +27,13 @@ import mokalklDajaj from "../../assets/replacment images/mokalklDajaj.jpg";
 import mokalklLahm from "../../assets/replacment images/mokalklLahm.JPG";
 import salat from "../../assets/replacment images/salat.JPG";
 import lahmtRas from "../../assets/replacment images/lahmtRas.jpg";
+
+import safi7a4idar from "../../assets/Menu/newlyAdded/safi7a4idar.jpg";
+
+// Newly Added Images
+import redOkra from "../../assets/Menu/newlyAdded/بامية حمراء ( محلي ).jpg";
+import madinahStewsTray from "../../assets/Menu/newlyAdded/صينية ايدامات المدينة.jpg";
+import agha from "../../assets/Menu/newlyAdded/agha.jpeg";
 
 const productsData = [
   ////////////////////////////////////////////////
@@ -42,13 +50,13 @@ const productsData = [
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
-    subcategory_en: "Ta'mah City Dishes",
+    subcategory_en: "Tomah City Dishes",
     subcategory_ar: "أطباق طعمة المدينة",
     calories_en: "607 calories",
     calories_ar: "607 سعرة حرارية",
     burn_time_en: "101 minutes",
     burn_time_ar: "101 دقيقة",
-    price: "40 ريال",
+    price: "38 ريال",
     available: true,
     trendy: false,
   },
@@ -65,13 +73,13 @@ const productsData = [
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
-    subcategory_en: "Ta'mah City Dishes",
+    subcategory_en: "Tomah City Dishes",
     subcategory_ar: "أطباق طعمة المدينة",
     calories_en: "479 calories",
     calories_ar: "479 سعرة حرارية",
     burn_time_en: "80 minutes",
     burn_time_ar: "80 دقيقة",
-    price: "30 ريال",
+    price: "28 ريال",
     available: true,
     trendy: false,
   },
@@ -88,13 +96,13 @@ const productsData = [
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
-    subcategory_en: "Ta'mah City Dishes",
+    subcategory_en: "Tomah City Dishes",
     subcategory_ar: "أطباق طعمة المدينة",
     calories_en: "297 calories",
     calories_ar: "297 سعرة حرارية",
     burn_time_en: "34 minutes",
     burn_time_ar: "34 دقيقة",
-    price: "38 ريال",
+    price: "30 ريال",
     available: true,
     trendy: false,
   },
@@ -111,13 +119,13 @@ const productsData = [
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
-    subcategory_en: "Ta'mah City Dishes",
+    subcategory_en: "Tomah City Dishes",
     subcategory_ar: "أطباق طعمة المدينة",
     calories_en: "290 calories",
     calories_ar: "290 سعرة حرارية",
     burn_time_en: "48 minutes",
     burn_time_ar: "48 دقيقة",
-    price: "45 ريال",
+    price: "42 ريال",
     available: true,
     trendy: false,
   },
@@ -133,13 +141,13 @@ const productsData = [
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
-    subcategory_en: "Ta'mah City Dishes",
+    subcategory_en: "Tomah City Dishes",
     subcategory_ar: "أطباق طعمة المدينة",
     calories_en: "266 calories",
     calories_ar: "266 سعرة حرارية",
     burn_time_en: "44 minutes",
     burn_time_ar: "44 دقيقة",
-    price: "45 ريال",
+    price: "42 ريال",
     available: true,
     trendy: true,
   },
@@ -165,7 +173,7 @@ const productsData = [
     calories_ar: "288 سعرة حرارية",
     burn_time_en: "52 minutes",
     burn_time_ar: "52 دقيقة",
-    price: "75 ريال",
+    price: "70 ريال",
     available: true,
     trendy: false,
   },
@@ -230,7 +238,7 @@ const productsData = [
     calories_ar: "422 سعرة حرارية",
     burn_time_en: "76 minutes",
     burn_time_ar: "76 دقيقة",
-    price: "75 ريال",
+    price: "70 ريال",
     available: true,
     trendy: false,
   },
@@ -273,7 +281,7 @@ const productsData = [
     calories_ar: "303 سعرة حرارية",
     burn_time_en: "55 minutes",
     burn_time_ar: "55 دقيقة",
-    price: "65 ريال",
+    price: "55 ريال",
     available: true,
     trendy: false,
   },
@@ -315,13 +323,13 @@ const productsData = [
     calories_ar: "328 سعرة حرارية",
     burn_time_en: "59 minutes",
     burn_time_ar: "59 دقيقة",
-    price: "65 ريال",
+    price: "70 ريال",
     available: true,
     trendy: false,
   },
   {
     id: "148",
-    image: مشكل_مشويات,
+    image: m4kl,
     meal_name_en: "Tajouri Mixed Grill Platter",
     description_en:
       "Premium mixed grill for 3 persons - selection of grilled meats and chicken served with Madini rice on a special platter (12 skewers)",
@@ -346,7 +354,7 @@ const productsData = [
     image: مشكل_مشويات,
     meal_name_en: "Mixed Grill Platter",
     description_en: "For 1 person - 3 assorted skewers",
-    price: "75 ريال",
+    price: "70 ريال",
     meal_name_ar: "مشكل مشويات طعمة",
     description_ar: '"تكفي عدد 1 شخص \nعدد 3 أسياخ مشكلة',
     calories_en: "1800 calories",
@@ -377,10 +385,10 @@ const productsData = [
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
-    subcategory_en: "To'mah Stews & Curries",
+    subcategory_en: "Tomah Stews",
     subcategory_ar: "طبيخ طعمة / الإيدامات",
-    calories_en: "234 calories",
-    calories_ar: "234 سعرة حرارية",
+    calories_en: "243 calories",
+    calories_ar: "243 سعرة حرارية",
     burn_time_en: "40 minutes",
     burn_time_ar: "40 دقيقة",
     price: "20 ريال",
@@ -399,7 +407,7 @@ const productsData = [
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
-    subcategory_en: "To'mah Stews & Curries",
+    subcategory_en: "Tomah Stews",
     subcategory_ar: "طبيخ طعمة / الإيدامات",
     calories_en: "289 calories",
     calories_ar: "289 سعرة حرارية",
@@ -421,7 +429,7 @@ const productsData = [
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
-    subcategory_en: "To'mah Stews & Curries",
+    subcategory_en: "Tomah Stews",
     subcategory_ar: "طبيخ طعمة / الإيدامات",
     calories_en: "329 calories",
     calories_ar: "329 سعرة حرارية",
@@ -444,7 +452,7 @@ const productsData = [
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
-    subcategory_en: "To'mah Stews & Curries",
+    subcategory_en: "Tomah Stews",
     subcategory_ar: "طبيخ طعمة / الإيدامات",
     calories_en: "351 calories",
     calories_ar: "351 سعرة حرارية",
@@ -466,7 +474,7 @@ const productsData = [
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
-    subcategory_en: "To'mah Stews & Curries",
+    subcategory_en: "Tomah Stews",
     subcategory_ar: "طبيخ طعمة / الإيدامات",
     calories_en: "810 calories",
     calories_ar: "810 سعرة حرارية",
@@ -493,7 +501,7 @@ const productsData = [
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
-    subcategory_en: "To'mah Stews & Curries",
+    subcategory_en: "Tomah Stews",
     subcategory_ar: "طبيخ طعمة / الإيدامات",
     available: true,
     trendy: false,
@@ -520,6 +528,21 @@ const productsData = [
     burn_time_en: "134 minutes",
     burn_time_ar: "134 دقيقة",
     price: "12 ريال",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "181",
+    image: sandwich1,
+    meal_name_en: "Liver Sandwich",
+    description_en:
+      "Traditional bread with liver and cheese spread, garnished with parsley",
+    price: "20 ريال",
+    meal_name_ar: "ساندوتش كبدة",
+    description_ar: "الجبنة السائلة المدهونة مع الكبدة و المزينة بالبقدونس",
+
+    subcategory_en: "Flatbreads & Sandwiches",
+    subcategory_ar: "صفايح وساندوتشات",
     available: true,
     trendy: false,
   },
@@ -566,6 +589,84 @@ const productsData = [
     trendy: false,
   },
   ////////////////////////////////////////////////////////////
+
+  // Missing Main Dishes
+  {
+    id: "164",
+    image: agha, // Using available image for now
+    meal_name_en: "Agha Grilled Chicken",
+    meal_name_ar: "دجاج اغا",
+    description_en: "Half chicken marinated with Ta'mah flavor, served with rice of your choice (Madini or Bukhari)",
+    description_ar: "نصف دجاجة متبلة بنكهة طعمة مع رز من اختيار الزبون ( مديني - بخاري)",
+    calories_en: "800 calories",
+    calories_ar: "800 سعرة حرارية",
+    burn_time_en: "150 minutes",
+    burn_time_ar: "مشي سريع ساعتين ونصف",
+    price: "38 ريال",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Tomah City Dishes",
+    subcategory_ar: "أطباق طعمة المدينة",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "165",
+    image: redOkra,
+    meal_name_en: "Red Okra",
+    meal_name_ar: "بامية حمراء",
+    description_en: "Madinah-style okra cooked in tomato sauce the traditional way, served with whole wheat bread or Madinah rice upon request",
+    description_ar: "بامية مدينية مطبوخة بصلصة الطماطم على طريقة اهل اول وتقدم بخبز الحب او الرز المديني بالطلب",
+    calories_en: "243 calories",
+    calories_ar: "243 سعرة حرارية",
+    burn_time_en: "40 minutes",
+    burn_time_ar: "مشي سريع 40 دقيقة",
+    price: "20 ريال",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Tomah Stews",
+    subcategory_ar: "طبيخ طعمة / الإيدامات",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "166",
+    image: madinahStewsTray,
+    meal_name_en: "Madinah Stews Tray",
+    meal_name_ar: "صينية إيدامات المدينة",
+    description_en: "Try all our delicious stews served with rice, bread, and a squeeze of fresh lemon",
+    description_ar: "لا تفوتك تجرب كل الايدامات بالرز والعيش وعصرة الليمون",
+    calories_en: "600 calories",
+    calories_ar: "600 سعرة حرارية",
+    burn_time_en: "120 minutes",
+    burn_time_ar: "مشي سريع ساعتين",
+    price: "75 ريال",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Tomah Stews",
+    subcategory_ar: "طبيخ طعمة / الإيدامات",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "167",
+    image: safi7a4idar, // Using available image for now
+    meal_name_en: "Meat Muqalqal Sfiha with Cheddar",
+    meal_name_ar: "صفايح مقلقل لحم مع الجبنة الشيدر",
+    description_en: "A savory mix of minced meat, sautéed onions and tomatoes, topped with cheddar cheese",
+    description_ar: "خليط اللحم والبصل والطماطم المشوحة وجبنة الشيدر وشوف الطعم",
+    calories_en: "450 calories",
+    calories_ar: "450 سعرة حرارية",
+    burn_time_en: "90 minutes",
+    burn_time_ar: "مشي سريع ساعة ونصف",
+    price: "17 ريال",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Flatbreads & Sandwiches",
+    subcategory_ar: "صفايح وساندوتشات",
+    available: true,
+    trendy: false,
+  },
 
   // Unsorted
 ];

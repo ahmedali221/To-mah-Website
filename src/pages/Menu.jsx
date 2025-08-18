@@ -364,16 +364,18 @@ function Menu() {
   className="cursor-pointer"
   onClick={() => handleViewDetails(product)}
 >
-  {/* Image Container - Significantly increased height */}
-  <div className="aspect-[4/3] sm:aspect-[4/3] md:aspect-[4/3] lg:aspect-[4/3] w-full overflow-hidden bg-gray-100 rounded-t-lg relative flex items-center justify-center" style={{ minHeight: '260px', maxHeight: '340px' }}>
-    <div className="flex items-center justify-center w-full h-full">
-      <img
-        src={product.image}
-        alt={i18n.language === "ar" && product.name_ar ? product.name_ar : product.name_en}
-        className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105" style={{ display: 'block', margin: 'auto' }}
-      />
+  {/* Image Container - show only when image exists */}
+  {product.image && (
+    <div className="aspect-[4/3] sm:aspect-[4/3] md:aspect-[4/3] lg:aspect-[4/3] w-full overflow-hidden bg-gray-100 rounded-t-lg relative flex items-center justify-center" style={{ minHeight: '260px', maxHeight: '340px' }}>
+      <div className="flex items-center justify-center w-full h-full">
+        <img
+          src={product.image}
+          alt={i18n.language === "ar" && product.name_ar ? product.name_ar : product.name_en}
+          className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105" style={{ display: 'block', margin: 'auto' }}
+        />
+      </div>
     </div>
-  </div>
+  )}
 
   {/* Product Info - Increased padding and spacing */}
   <div className="p-4 sm:p-5 md:p-6">

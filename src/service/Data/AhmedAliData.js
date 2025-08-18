@@ -12,18 +12,21 @@ import breadbaked20 from "../../assets/Menu/breakfastDeserts/20.jpg";
 import offer1 from "../../assets/Menu/offers/workLunch.jpg";
 import offer2 from "../../assets/Menu/offers/companyOffers.jpg";
 
+import pepsi from "../../assets/Menu/newlyAdded/pepsi.jpg";
+import lemon from "../../assets/Menu/newlyAdded/lemon.jpg";
+import agwa from "../../assets/Menu/newlyAdded/agwa.jpg";
+import vimto from "../../assets/Menu/newlyAdded/4rbeit.jpg";
+
+
+
 import drink2 from "../../assets/Menu/drinks/2.jpg";
 import drink6 from "../../assets/Menu/drinks/6.jpg";
 import drink7 from "../../assets/Menu/drinks/7.jpg";
 import drink10 from "../../assets/Menu/drinks/10.jpg";
 import drink11 from "../../assets/Menu/drinks/11.JPG";
-import drink12 from "../../assets/Menu/drinks/12.jpg";
 import drink13 from "../../assets/Menu/drinks/13.jpg";
-import drink15 from "../../assets/Menu/drinks/15.JPG";
 import drink16 from "../../assets/Menu/drinks/16.jpg";
 import drink17 from "../../assets/Menu/drinks/17.jpg";
-import drink18 from "../../assets/Menu/Left/23.JPG";
-import drink19 from "../../assets/Menu/drinks/drinkLemon.png";
 
 import leftSandwichSalat from "../../assets/Menu/Left/ساندوتش سلات المدينة ( محلي ).JPG";
 import leftSandwichHead from "../../assets/Menu/Left/ساندوتش لحمة راس (محلي ).JPG";
@@ -48,6 +51,13 @@ import blila1 from "../../assets/Menu/Left/22.JPG";
 
 import biscut1 from "../../assets/Menu/Left/21.jpeg";
 
+import coffee from "../../assets/Menu/newlyAdded/coffe.jpg";
+import tasali from "../../assets/Menu/newlyAdded/tasali.jpg";
+import tatemah from "../../assets/Menu/newlyAdded/tatemah.jpg"
+
+// Newly Added Images
+import sobia from "../../assets/Menu/newlyAdded/سوبيا ( محلي ).jpg";
+
 const productsData = [
   //////////////////////////////////
   //// ساندويتش عيش الحب
@@ -57,7 +67,7 @@ const productsData = [
     meal_name_en: "City Salat Sandwich",
     description_en:
       "Madini salad stuffed in soft bread with pomegranate molasses",
-    price: "25 ريال",
+    price: "23 ريال",
     meal_name_ar: "ساندويتش سلات المدينة",
     description_ar: "سلات المدينة محشوة في خبز طري مع دبس الرمان",
     calories_en: "631 calories",
@@ -67,7 +77,7 @@ const productsData = [
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
-    subcategory_en: "Love Bread Sandwich",
+    subcategory_en: "Whole Wheat Bread Sandwiches",
     subcategory_ar: "ساندوتش عيش الحب",
     available: true,
     trendy: false,
@@ -77,13 +87,13 @@ const productsData = [
     image: leftSandwichHead,
     meal_name_en: "Mutton Head Sandwich",
     description_en: "Mutton head meat with tahini sauce and cucumber slices",
-    price: "20 ريال",
+    price: "18 ريال",
     meal_name_ar: "ساندويتش لحمة راس",
     description_ar: "لحم رأس مع صلصة الطحينة وشرائح الخيار",
 
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
-    subcategory_en: "Love Bread Sandwich",
+    subcategory_en: "Whole Wheat Bread Sandwiches",
     subcategory_ar: "ساندوتش عيش الحب",
     available: true,
     trendy: false,
@@ -98,7 +108,7 @@ const productsData = [
     meal_name_ar: "ساندوتش كبدة",
     description_ar: "الجبنة السائلة المدهونة مع الكبدة و المزينة بالبقدونس",
 
-    subcategory_en: "Love Bread Sandwich",
+    subcategory_en: "Whole Wheat Bread Sandwiches",
     subcategory_ar: "ساندوتش عيش الحب",
     available: true,
     trendy: false,
@@ -110,9 +120,9 @@ const productsData = [
   {
     id: "13",
     image: left2AishHob,
-    meal_name_en: "Whole Grain Bread",
+    meal_name_en: "Whole wheat bread",
     description_en: "",
-    price: "5 ريال",
+    price: "1 ريال",
     meal_name_ar: "عيش حب",
     description_ar: "",
     calories_en: "574 calories",
@@ -272,7 +282,7 @@ const productsData = [
     image: breadbaked1,
     meal_name_en: "Mini Rusk",
     description_en: "",
-    price: "7 ريال",
+    price: "10 ريال",
     meal_name_ar: "ميني شابورة",
     description_ar: "",
 
@@ -297,8 +307,8 @@ const productsData = [
     description_ar: "",
     calories_en: "350 calories",
     calories_ar: "350 سعرة حرارية",
-    burn_time_en: "60 minutes",
-    burn_time_ar: "60 دقيقة",
+    burn_time_en: "50 minutes",
+    burn_time_ar: "50 دقيقة",
     category_en: "Baked Goods",
     category_ar: "المخبوزات",
     subcategory_en: "Packaged Baked Goods",
@@ -309,12 +319,15 @@ const productsData = [
   {
     id: "23",
     image: breadbaked2,
-    meal_name_en: "Marengue / Hwa Eggs",
+    meal_name_en: "Meringue",
     description_en: "",
-    price: "5 ريال",
+    price: "10 ريال",
     meal_name_ar: "مارينج بيض الهوا",
     description_ar: "",
-
+    calories_en: "350 calories",
+    calories_ar: "350 سعرة حرارية",
+    burn_time_en: "50 minutes",
+    burn_time_ar: "50 دقيقة",
     category_en: "Baked Goods",
     category_ar: "المخبوزات",
     subcategory_en: "Packaged Baked Goods",
@@ -330,7 +343,7 @@ const productsData = [
   {
     id: "31",
     image: desert1,
-    meal_name_en: "Kudrit Kader",
+    meal_name_en: "Qidrah Qader",
     description_en: "Cream caramel & cake mix",
     price: "20 ريال",
     meal_name_ar: "قدرة قادر",
@@ -353,7 +366,7 @@ const productsData = [
     meal_name_en: "Cream Caramel",
     description_en:
       "Oven Baked Cream caramel served cold caramelized sugar sauce",
-    price: "20 ريال",
+    price: "15 ريال",
     meal_name_ar: "توتوة كريم الكراميل",
     description_ar:
       " كريم كراميل مطبوخ في الفرن و تقدم باردة بصوص السكر المكرمل",
@@ -413,10 +426,10 @@ const productsData = [
   {
     id: "25",
     image: desert5,
-    meal_name_en: "Am Khalil’s Saqdana",
+    meal_name_en: "Saqqadana Am Khalil",
     description_en: "Higazi Desert Made Of Sago Pearls And Milk",
     price: "20 ريال",
-    meal_name_ar: "أم خليل سقعانة",
+    meal_name_ar: "سقعانة عم خليل",
     description_ar: "طبق حجازي شهير يحضر بالساقو و الحليب",
     calories: "481",
     calories_en: "481 calories",
@@ -433,8 +446,8 @@ const productsData = [
   },
   {
     meal_name_en: "Kunafa",
-    description_en: "Kunafa with cream, made in Taama's kitchen",
-    price: "0 SAR",
+    description_en: "Kunafa with cream, made in Tomah’s kitchen",
+    price: "17 ريال",
     meal_name_ar: "كنافة",
     description_ar: "كنافة بالقشطة المصنوعة في مطبخ طعمة",
     calories_en: "648 calories",
@@ -452,7 +465,7 @@ const productsData = [
   {
     meal_name_en: "Ashure (Noah's Pudding)",
     description_en: "",
-    price: "0 SAR",
+    price: "15 ريال",
     meal_name_ar: "عاشورية",
     description_ar: "",
     calories: 395,
@@ -516,8 +529,33 @@ const productsData = [
     image: left2Water,
     meal_name_en: "Mineral Water",
     description_en: "Bottled mineral water",
-    price: "3 ريال",
-    meal_name_ar: "مياه معدنية",
+    price: "5 ريال",
+    meal_name_ar: " مياه معدنية صغيرة",
+    description_ar: "",
+
+    category_en: "Drinks",
+    category_ar: "مشروبات",
+    calories_en: "0 calories",
+    calories_ar: "0 سعرة حرارية",
+    burn_time_en: "0 minutes",
+    burn_time_ar: "0 دقيقة",
+    subcategory_en: "Cold Drinks",
+    subcategory_ar: "مشروبات باردة",
+    available: true,
+    trendy: false,
+    availability_details: {
+      local: true,
+      travel: true,
+      buffet: true,
+    },
+  },
+  {
+    id: "203",
+    image: left2Water,
+    meal_name_en: "Mineral Water",
+    description_en: "Bottled mineral water",
+    price: "7 ريال",
+    meal_name_ar: " مياه معدنية كبيرة",
     description_ar: "",
 
     category_en: "Drinks",
@@ -722,11 +760,11 @@ const productsData = [
   },
   {
     id: "41",
-    image: drink18,
+    image: vimto,
     meal_name_en: "Vimto",
     description_en: "Vimto mix with Madini mint and lemon",
-    price: "17 ريال",
-    meal_name_ar: "شربت فيمتو",
+    price: "19 ريال",
+    meal_name_ar: "شربيت فيمتو",
     description_ar: "فيمتو بالنعناع والليمون المديني",
     category_en: "Drinks",
     category_ar: "مشروبات",
@@ -746,7 +784,7 @@ const productsData = [
     image: tea3,
     meal_name_en: "Qamar al-Din",
     description_en: "Qamar al-Din slash with orange juice",
-    price: "17 ريال",
+    price: "19 ريال",
     meal_name_ar: "قمر الدين",
     description_ar: "قمر الدين مع عصير البرتقال",
     category_en: "Drinks",
@@ -765,7 +803,7 @@ const productsData = [
     image: drink11,
     meal_name_en: "Hibiscus",
     description_en: "Special slash with Madini flavors",
-    price: "17 ريال",
+    price: "19 ريال",
     meal_name_ar: "كركديه",
     description_ar: "سلاش خاص بنكهة المدينية",
     category_en: "Drinks",
@@ -782,7 +820,7 @@ const productsData = [
   },
   {
     id: "46",
-    image: drink12,
+    image: agwa,
     meal_name_en: "Madini Ajwa",
     description_en: "Madini dates served cold with milk",
     price: "25 ريال",
@@ -804,7 +842,7 @@ const productsData = [
     image: drink13,
     meal_name_en: "Fresh Orange",
     description_en: "Fresh Oula orange juice",
-    price: "20 ريال",
+    price: "19 ريال",
     meal_name_ar: "برتقال طازة",
     description_ar: "برتقال طازة من مزارع العلا المحلي",
 
@@ -822,10 +860,10 @@ const productsData = [
   },
   {
     id: "48",
-    image: drink19,
+    image: lemon,
     meal_name_en: "Lemon Mint",
     description_en: "Lemon with mint",
-    price: "20 ريال",
+    price: "19 ريال",
     meal_name_ar: "ليمون نعناع",
     description_ar: "ليمون مع النعناع",
     category_en: "Drinks",
@@ -842,7 +880,7 @@ const productsData = [
   },
   {
     id: "49",
-    image: drink15,
+    image: pepsi,
     meal_name_en: "Soft Drinks",
     description_en: "Assorted soft drinks",
     price: "7 ريال",
@@ -904,15 +942,35 @@ const productsData = [
 
   /////////////////////////
   // بوفيه طعمة الخارجي
-  {
-    id: "54",
-    image: null,
-    meal_name_en: "Ta’tma Buffet",
-    description_en: "All breakfast menu",
-    price: "150 ريال",
-    meal_name_ar: "بوفيه تعتمة",
-    description_ar: "كامل قائمة الفطور",
 
+  {
+    id: "222",
+    image: null,
+    meal_name_en: "Happy Occasions Buffet – Per Person",
+    description_en:
+      "A full buffet including all items from our lunch and dinner section, along with salads and side dishes",
+    price: "150 ريال",
+    meal_name_ar: "بوفيه المناسبات السعيدة – للفرد",
+    description_ar:
+      "بوفيه متكامل يشمل جميع أصناف قسم الغداء والعشاء، مع السلطات والمشهونات",
+
+    category_en: "External Buffet",
+    category_ar: "البوفيه الخارجي",
+    subcategory_en: "External Food Buffet",
+    subcategory_ar: "بوفيه طعمة الخارجي",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "224",
+    image: tatemah,
+    meal_name_en: "Breakfast Buffet",
+    description_en:
+      "(Serves 30–40 persons | Large warmers)\n1 Liver dish\n1 Shakshuka\n1 Sallat\n1 Chicken Mugalgal\n1 Foul Pot\n1 Tray of 40 Falafel\n6 Mixed cheese platters\nBread basket included\n\nOffer includes chafing dish deposit\nDoes not include chairs or table setup",
+    price: "1450 ريال",
+    meal_name_ar: "بكج فطور / تعتيمة طعمة",
+    description_ar:
+      "(سخانات كبيرة ) 30-40 شخص\n1-كبدة 1-شكشوكة 1-سلات 1-مقلقل دجاج 1-جرة فول 1- صينية فلافل 40حبة 6- صحون أجبان مشكلة (سلة العيش)\n\nالعرض يشمل تأمين علي السخانات\nالعرض لا يشمل تجهيز الكراسي و الطاولات للأكل",
     category_en: "External Buffet",
     category_ar: "البوفيه الخارجي",
     subcategory_en: "To'mah Outdoor Buffet",
@@ -921,18 +979,18 @@ const productsData = [
     trendy: false,
   },
   {
-    id: "222",
+    id: "225",
     image: null,
-    meal_name_en: "Happy Occasions Buffet",
+    meal_name_en: "Lunch & Dinner Buffet",
     description_en:
-      "Photo collection of all hot dishes / Lunch & Dinner section",
-    price: "150 ريال",
-    meal_name_ar: "بوفيه المناسبات السعيدة",
-    description_ar: "مجموعة الصور لجميع الأطباق الساخنة / قسم الغداء والعشاء",
-
+      "(Serves 30–40 persons | Large warmers)\n2 Bowls of Tomah Salad\n2 Stands of Side Dishes & Pickles (Tahini, Chili, Achar, etc.)\n1 Madini Rice (10 half chickens)\n1 Bukhari Rice (10 half chickens)\n1 Moussaka\n1 Sallat\n1 Mugalgal Chicken\n1 Mixed Mabshoor (40 skewers)\n1 Okra Stew\n1 Mixed Pastry (50 pieces)\n2 Crème Caramel Cakes\n1 Small Um Ali Warmer\nOffer includes chafing dish deposit\nOffer excludes setup of chairs and dining tables",
+      price: "3000 ريال",
+      meal_name_ar: "بوفيه الغداء أو العشاء",
+    description_ar:
+      "(يكفي 30–40 شخص | سخانات كبيرة)\n2 زبديات سلطة طعمة\n2 ستاند مشهونات (طحينة، فلفل، أشار، إلخ)\n1 رز مديني (10 أنصاف دجاج)\n1 رز بخاري (10 أنصاف دجاج)\n1 مسقعة\n1 سلات\n1 مقلقل دجاج\n1 مبشور مشكل (40 سيخ)\n1 بامية\n1 معجنات مشكلة (50 قطعة)\n2 قالب كريم كراميل\n1 سخان صغير أم علي\nالعرض يشمل تأمين علي السخانات\nالعرض لا يشمل تجهيز الكراسي و الطاولات للأكل",
     category_en: "External Buffet",
     category_ar: "البوفيه الخارجي",
-    subcategory_en: "External Food Buffet",
+    subcategory_en: "To'mah Outdoor Buffet",
     subcategory_ar: "بوفيه طعمة الخارجي",
     available: true,
     trendy: false,
@@ -947,8 +1005,8 @@ const productsData = [
     meal_name_ar: "مشبك",
     description_ar: null,
     calories: "390",
-    category_en: "Breakfast",
-    category_ar: "الفطور",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
     subcategory_en: "Snacks",
     subcategory_ar: "التسالي",
     available: true,
@@ -962,8 +1020,8 @@ const productsData = [
     meal_name_ar: "حمام البر",
     description_ar: null,
     calories: "353",
-    category_en: "Breakfast",
-    category_ar: "الفطور",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
     subcategory_en: "Snacks",
     subcategory_ar: "التسالي",
     available: true,
@@ -973,12 +1031,12 @@ const productsData = [
   {
     meal_name_en: "Balela",
     description_en: null,
-    price: "15 ريال",
+    price: "11 ريال",
     meal_name_ar: "البليلة",
     description_ar: null,
     calories: "168",
-    category_en: "Breakfast",
-    category_ar: "الفطور",
+      category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
     subcategory_en: "Snacks",
     subcategory_ar: "التسالي",
     available: true,
@@ -992,55 +1050,133 @@ const productsData = [
     meal_name_ar: "كريبو + سلطة الحمر",
     description_ar: "شطة وسلطة الحمر ",
     calories: "332",
-    category_en: "Breakfast",
-    category_ar: "الفطور",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
     subcategory_en: "Snacks",
     subcategory_ar: "التسالي",
     available: true,
     trendy: false,
     image: tea4,
   },
+  {
+    meal_name_en: "Tisali Snack Platter",
+    description_en:
+      "Mushabak / Hamam Al-Birr / Manfoush / Balilah / Hijazi Chips + Tammarind Sauce",
+    price: "39 ريال",
+    meal_name_ar: "مجموعة التسالي",
+    description_ar:
+      "مشبك / حمام البر / منفوش / البليلة / كريبو + سلطة الحمر",
+    category_en: "Lunch & Dinner",
+    category_ar: "الغداء و العشاء",
+    subcategory_en: "Snacks",
+    subcategory_ar: "التسالي",
+    available: true,
+    trendy: false,
+    image: tasali,
+  },
 
-  //////////////////////////////////////////////////////////////////////
-  ////////////
-  // ترحيب
-  // {
-  //   id: "6",
-  //   image: tea4,
-  //   meal_name_en: "Karbo Platter",
-  //   description_en: "Traditional Karbo dish served with red sauce",
-  //   price: null,
-  //   meal_name_ar: "كربو",
-  //   description_ar: "كربو الحجة و صوص الحمر",
+  {
+    id: "7",
+    image: null,
+    meal_name_en: "Manfoush Bread",
+    description_en: "Traditional flatbread",
+    price: null,
+    meal_name_ar: "منفوش",
+    description_ar: "",
 
-  //   category_en: "Breakfast",
-  //   category_ar: "الفطور",
-  //   subcategory_en: "Welcome Dish",
-  //   subcategory_ar: "صحن الترحيب",
-  //   available: true,
-  //   trendy: false,
-  // },
-  // {
-  //   id: "7",
-  //   image: null,
-  //   meal_name_en: "Manfoush Bread",
-  //   description_en: "Traditional flatbread",
-  //   price: null,
-  //   meal_name_ar: "منفوش",
-  //   description_ar: "",
+    category_en: "Breakfast",
+    category_ar: "الفطور",
+    subcategory_en: "Snacks",
+    subcategory_ar: "التسالي",
+    available: true,
+    trendy: false,
+    availability_details: {
+      local: true,
+      travel: true,
+      buffet: true,
+    },
+  },
+  
 
-  //   category_en: "Breakfast",
-  //   category_ar: "الفطور",
-  //   subcategory_en: "Welcome Dish",
-  //   subcategory_ar: "صحن الترحيب",
-  //   available: true,
-  //   trendy: false,
-  //   availability_details: {
-  //     local: true,
-  //     travel: true,
-  //     buffet: true,
-  //   },
-  // },
+  ///////////////////////////////////////////////////////////////////
+
+  // Missing Drinks
+  {
+    id: "60",
+    image: coffee, // Using available drink image
+    meal_name_en: "Coffee of the Day Hot / Iced",
+    meal_name_ar: "قهوة اليوم ساخن / بارد",
+    description_en: "Fresh brewed coffee served hot or iced",
+    description_ar: "قهوة طازجة مخمرة تقدم ساخنة أو مثلجة",
+    calories_en: "5 calories",
+    calories_ar: "5 سعرة حرارية",
+    burn_time_en: "5 minutes",
+    burn_time_ar: "التنفس الجيد لمدة 5 دقائق",
+    price: "12 ريال",
+    category_en: "Drinks",
+    category_ar: "مشروبات",
+    subcategory_en: "Hot Drinks",
+    subcategory_ar: "مشروبات ساخنة",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "61",
+    image: sobia, 
+    meal_name_en: "Raisins",
+    meal_name_ar: "زبيب",
+    description_en: "Iron and energy vitamin slush. Special for Ramadan",
+    description_ar: "سلاش فيتامين الحديد و الطاقة. خاص برمضان",
+    calories_en: "150 calories",
+    calories_ar: "150 سعرة حرارية",
+    burn_time_en: "25 minutes",
+    burn_time_ar: "25 دقيقة",
+    price: "15 ريال",
+    category_en: "Drinks",
+    category_ar: "مشروبات",
+    subcategory_en: "Cold Drinks",
+    subcategory_ar: "مشروبات باردة",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "62",
+    image: sobia,
+    meal_name_en: "Sobia",
+    meal_name_ar: "سوبيا",
+    description_en: "Refreshing Sobia slush. Special for Ramadan",
+    description_ar: "سلاش السوبيا المنعش. خاص برمضان",
+    calories_en: "180 calories",
+    calories_ar: "180 سعرة حرارية",
+    burn_time_en: "30 minutes",
+    burn_time_ar: "30 دقيقة",
+    price: "15 ريال",
+    category_en: "Drinks",
+    category_ar: "مشروبات",
+    subcategory_en: "Cold Drinks",
+    subcategory_ar: "مشروبات باردة",
+    available: true,
+    trendy: false,
+  },
+  {
+    id: "63",
+    image: pepsi, // Using available drink image
+    meal_name_en: "Yogurt Drink",
+    meal_name_ar: "لبن شرب",
+    description_en: "Fresh yogurt drink with natural flavors",
+    description_ar: "لبن شرب طازج بنكهات طبيعية",
+    calories_en: "120 calories",
+    calories_ar: "120 سعرة حرارية",
+    burn_time_en: "20 minutes",
+    burn_time_ar: "20 دقيقة",
+    price: "4 ريال",
+    category_en: "Drinks",
+    category_ar: "مشروبات",
+    subcategory_en: "Cold Drinks",
+    subcategory_ar: "مشروبات باردة",
+    available: true,
+    trendy: false,
+  },
 
   ///////////////////////////////////////////////////////////////////
 ];
