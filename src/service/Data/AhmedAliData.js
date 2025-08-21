@@ -942,7 +942,22 @@ const productsData = [
 
   /////////////////////////
   // بوفيه طعمة الخارجي
+  {
+    id: "54",
+    image: null,
+    meal_name_en: "Tomah Tateemah Buffet – Per Person",
+    description_en: "A full traditional Hijazi breakfast buffet including all items from our breakfast section – from hot dishes and baked goods to ‘nawashef",
+    price: "150 ريال",
+    meal_name_ar: "بوفية تعتيمة طعمة - للفرد ",
+    description_ar: "بوفيه فطور حجازي متكامل يشمل جميع أصناف قسم الفطور لدينا، من الأطباق الساخنة والمخبوزات إلى النواشف ",
 
+    category_en: "External Buffet",
+    category_ar: "البوفيه الخارجي",
+    subcategory_en: "To'mah Outdoor Buffet",
+    subcategory_ar: "بوفيه طعمة الخارجي",
+    available: true,
+    trendy: false,
+  },
   {
     id: "222",
     image: null,
