@@ -364,7 +364,7 @@ function Menu() {
   className="cursor-pointer"
   onClick={() => handleViewDetails(product)}
 >
-  {/* Image Container - show only when image exists */}
+  {/* Image Container - only render if image exists */}
   {product.image && (
     <div className="aspect-[4/3] sm:aspect-[4/3] md:aspect-[4/3] lg:aspect-[4/3] w-full overflow-hidden bg-gray-100 rounded-t-lg relative flex items-center justify-center" style={{ minHeight: '260px', maxHeight: '340px' }}>
       <div className="flex items-center justify-center w-full h-full">

@@ -6,7 +6,7 @@ import tabee54 from "../../assets/Menu/tabee5/4.jpg";
 import tabee56 from "../../assets/Menu/tabee5/6.jpg";
 
 import sandwich1 from "../../assets/Menu/sandwich/1.jpg";
-import sandwich2 from "../../assets/Menu/sandwich/2.jpg";
+import sandwich2 from "../../assets/Menu/sandwich/2.png";
 import sandwich3 from "../../assets/Menu/sandwich/3.jpg";
 
 import awsalDajaj from "../../assets/replacment images/awsal.JPG";
@@ -595,7 +595,7 @@ const productsData = [
     id: "164",
     image: agha, // Using available image for now
     meal_name_en: "Agha Grilled Chicken",
-    meal_name_ar: "دجاج اغا",
+    meal_name_ar: "أرز اغا",
     description_en: "Half chicken marinated with Ta'mah flavor, served with rice of your choice (Madini or Bukhari)",
     description_ar: "نصف دجاجة متبلة بنكهة طعمة مع رز من اختيار الزبون ( مديني - بخاري)",
     calories_en: "800 calories",
@@ -605,8 +605,8 @@ const productsData = [
     price: "38 ريال",
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
-    subcategory_en: "Tomah City Dishes",
-    subcategory_ar: "أطباق طعمة المدينة",
+     subcategory_en: "To'mah Rice Dishes",
+    subcategory_ar: "أرزاز طعمة",
     available: true,
     trendy: false,
   },

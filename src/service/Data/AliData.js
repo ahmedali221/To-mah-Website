@@ -41,6 +41,8 @@ import rice6 from "../../assets/Menu/rice/6.jpg";
 import rice7 from "../../assets/Menu/rice/7.jpg";
 import rice8 from "../../assets/Menu/rice/8.jpg";
 import rice9 from "../../assets/Menu/rice/9.jpg";
+import rice10 from "../../assets/Menu/rice/10.jpeg";
+
 
 import leftYogurtSalad from "../../assets/Menu/Left/سلطة اللبن ( محلي ).JPG";
 import leftCarrotAchard from "../../assets/Menu/Left/اشار الجزر ( محلي ).JPG";
@@ -1141,7 +1143,7 @@ const productsData = [
       "استمتع بطبق من الرز المطبوخ بالدجاج مع الحمص وخلطة ليندا الخاصة بطعم السمن الأصيل. يقدم هذا الطبق الشهي مع قطع من الجزر الشرائح وصوص الطحينة بالخيار والمخلل الأهواز ليمنحك وجبة عائلية دافئة وغنية بالنكهات المتنوعة.",
     category_en: "Lunch & Dinner",
     category_ar: "الغداء و العشاء",
-    image: rice9,
+    image: rice10,
     subcategory_en: "To'mah Rice Dishes",
     subcategory_ar: "أرزاز طعمة",
     calories_en: "1000 calories",
