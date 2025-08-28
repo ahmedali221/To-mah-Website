@@ -20,7 +20,7 @@ import g6 from "/src/assets/AboutImages/G6.jpg";
 import g7 from "/src/assets/AboutImages/G7.jpg";
 
 import teamImg1 from "../assets/AboutImages/فريق العمل/staff.jpg";
-import teamImg2 from "../assets/AboutImages/فريق العمل/1.jpg";
+import teamImg2 from "../assets/AboutImages/فريق العمل/staff2.png";
 import visitorsPhotos from "../service/visitors/visitors"; // adjust path if needed
 
 import {
