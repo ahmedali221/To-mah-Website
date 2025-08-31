@@ -1,6 +1,6 @@
 /** @format */
 
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import { useCart } from "../context/CartContext";
 
@@ -228,6 +228,7 @@ const Payment = () => {
             : item.name
         }
         className="w-full h-full object-cover"
+        loading="lazy"
       />
     ) : (
       <div className="w-full h-full flex items-center justify-center text-gray-400">

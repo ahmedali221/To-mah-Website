@@ -45,6 +45,7 @@ export default function PeopleSection() {
                       src={card.image}
                       alt={card.title}
                       className="w-full h-full object-cover rounded-xl transform transition duration-500 group-hover:scale-105"
+                      loading="lazy"
                     />
                   </div>
                 </div>

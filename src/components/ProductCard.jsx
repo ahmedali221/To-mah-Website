@@ -16,6 +16,8 @@ export default function ProductCard({ product, onAddToCart, onViewDetails }) {
                     <div className="relative w-full h-full flex items-center justify-center">
                         <img
                             src={modalImage}
+                                          loading="lazy"
+
                             alt="preview"
                             className="object-cover w-full h-full transition-transform duration-500 ease-in-out scale-100"
                         />

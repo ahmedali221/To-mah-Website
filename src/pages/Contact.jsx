@@ -68,6 +68,7 @@ const ContactPage = () => {
                 src="https://tomah.sa/uploads/products/10.jpg"
                 alt={t("contact.restaurant_image_alt")}
                 className="h-96 w-96 object-cover rounded-full"
+                loading="lazy"
               />
             </div>
             {/* Location Info */}
@@ -116,6 +117,7 @@ const ContactPage = () => {
                 src="https://tomah.sa/uploads/products/9.jpg"
                 alt={t("contact.restaurant_image_alt")}
                 className="h-96 w-96 object-cover rounded-full"
+                loading="lazy"
               />
             </div>
 

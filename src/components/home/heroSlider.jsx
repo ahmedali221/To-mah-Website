@@ -60,6 +60,7 @@ export default function HeroSlider() {
                         src={heroImages[currentSlide]}
                         alt={`Hero Slide ${currentSlide + 1}`}
                         className="w-full h-full object-cover"
+                        loading="lazy"
                         initial={{ scale: 1.1 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 8, ease: "linear" }}
@@ -74,6 +75,7 @@ export default function HeroSlider() {
                             src={logo}
                             alt="Logo"
                             className="w-48 md:w-72 lg:w-96 h-auto drop-shadow-2xl text-primary"
+                            loading="lazy"
                         />
 
                     </motion.div>

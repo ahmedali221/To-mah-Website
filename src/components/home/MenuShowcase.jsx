@@ -83,6 +83,7 @@ export default function MenuShowcase() {
               src={view}
               alt="Restaurant View"
               className="w-full max-w-2xl h-96 object-cover rounded-2xl shadow-lg border border-primary/20 mx-auto"
+              loading="lazy"
             />
           </div>
           <div className="order-2 lg:order-2 flex flex-col items-center justify-center">
@@ -133,6 +134,7 @@ export default function MenuShowcase() {
               src={meal4}
               alt="Grilled food"
               className="w-full max-w-xl h-auto max-h-96 object-cover rounded-full shadow-lg border border-primary/20 mx-auto"
+              loading="lazy"
             />
           </div>
           <div className="space-y-10">
@@ -178,6 +180,7 @@ export default function MenuShowcase() {
               src={meal3}
               alt="Dessert"
               className="w-full max-w-xl h-auto max-h-96 object-cover rounded-full shadow-lg border border-primary/20 mx-auto"
+              loading="lazy"
             />
           </div>
           <div className="order-2 lg:order-1">

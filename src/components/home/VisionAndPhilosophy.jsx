@@ -57,6 +57,8 @@ export default function VisionAndPhilosophy() {
               src={reserve}
               alt={t("home.vision.image_alt")}
               className="rounded-lg shadow-lg w-full h-64 object-cover"
+                            loading="lazy"
+
             />
           </div>
 
@@ -93,6 +95,8 @@ export default function VisionAndPhilosophy() {
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
+                              loading="lazy"
+
               />
             </div>
           </div>
@@ -112,6 +116,8 @@ export default function VisionAndPhilosophy() {
               src={goals}
               alt={t("home.goals.image_alt")}
               className="rounded-lg shadow-lg w-full h-64 object-cover"
+                            loading="lazy"
+
             />
           </div>
 
@@ -177,6 +183,8 @@ export default function VisionAndPhilosophy() {
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
+                              loading="lazy"
+
               />
             </div>
           </div>
@@ -202,6 +210,8 @@ export default function VisionAndPhilosophy() {
               src={philosophy}
               alt={t("home.values.image_alt")}
               className="rounded-lg shadow-lg w-full h-50 object-contain"
+                            loading="lazy"
+
             />
           </div>
 
@@ -248,6 +258,8 @@ export default function VisionAndPhilosophy() {
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
+                              loading="lazy"
+
               />
             </div>
           </div>
@@ -273,6 +285,8 @@ export default function VisionAndPhilosophy() {
               src={Choose}
               alt={t("home.features.image_alt")}
               className="rounded-lg shadow-lg w-full h-64 object-contain"
+                            loading="lazy"
+
             />
           </div>
 
@@ -320,6 +334,8 @@ export default function VisionAndPhilosophy() {
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
+                              loading="lazy"
+
               />
             </div>
           </div>

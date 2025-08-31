@@ -88,6 +88,7 @@ function Cart() {
                     src={item.image}
                     alt={i18n.language === "ar" && item.name_ar ? item.name_ar : item.name_en}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    loading="lazy"
                   />
                   <button
                     onClick={() => removeFromCart(item.id)}

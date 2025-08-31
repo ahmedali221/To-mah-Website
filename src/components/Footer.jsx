@@ -53,7 +53,8 @@ function Footer() {
 				<div className="max-w-2xl mx-auto flex flex-col gap-4">
 					{/* Brand and Social */}
 					<div className="bg-white rounded-2xl shadow p-4 flex flex-col items-center gap-2">
-						<img src={logo} alt="To'mah Logo" className="w-14 h-14 rounded-full object-cover border border-gray-300 mb-1" />
+						<img src={logo}                loading="lazy"
+ alt="To'mah Logo" className="w-14 h-14 rounded-full object-cover border border-gray-300 mb-1" />
 						<span className="font-bold text-base text-center">{t("navbar.brand")}</span>
 						<div className="grid grid-cols-4 gap-3 mt-2">
 							{socialPlatforms.map((social, idx) => (

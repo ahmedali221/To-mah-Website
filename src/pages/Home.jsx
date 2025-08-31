@@ -21,14 +21,14 @@ export default function Home() {
             <div className="animate-marquee-text flex whitespace-nowrap absolute left-0 top-0 h-full items-center">
               {Array.from({ length: 40 }).map((_, i) => (
                 <span key={i} className="flex items-center gap-3 px-8 h-full">
-                  <img src={artImg} alt="art" className="w-7 h-7 object-contain" />
+                  <img src={artImg} alt="art" className="w-7 h-7 object-contain" loading="lazy" />
                   <span className="text-2xl font-stretch-expanded text-gray-900 tracking-wide">{t(`toamahBanner`)}</span>
                 </span>
               ))}
               {/* Duplicate for seamless loop */}
               {Array.from({ length: 40 }).map((_, i) => (
                 <span key={i + 40} className="flex items-center gap-3 px-8 h-full">
-                  <img src={artImg} alt="art" className="w-7 h-7 object-contain" />
+                  <img src={artImg} alt="art" className="w-7 h-7 object-contain" loading="lazy" />
                   <span className="text-2xl font-stretch-expanded text-gray-900 tracking-wide">{t(`toamahBanner`)}</span>
                 </span>
               ))}

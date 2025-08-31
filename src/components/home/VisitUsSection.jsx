@@ -19,6 +19,8 @@ export default function VisitUsSection() {
               src={menu}
               alt="Our Menu"
               className="w-60 h-60 object-cover rounded-full shadow-lg mb-4"
+                            loading="lazy"
+
             />
             <span className="text-xl font-semibold text-gray-800">OUR MENU</span>
           </div>
@@ -27,6 +29,8 @@ export default function VisitUsSection() {
               src={to3}
               alt="Another"
               className="w-full h-auto object-cover shadow-md"
+                            loading="lazy"
+
             />
           </div>
         </div>

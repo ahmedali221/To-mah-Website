@@ -230,6 +230,7 @@ const About = () => {
 									src="https://res.cloudinary.com/tomahrest/image/upload/v1756653182/img2_ydwtwb.jpg"
 									alt={t("about.story.image_alt_left")}
 									className="rounded-2xl shadow-2xl w-full max-w-xs h-48 object-cover story-img-symmetry"
+									loading="lazy"
 								/>
 							</div>
 							<div className="mb-4 bg-white p-4 md:p-8 rounded-lg shadow-sm flex flex-col justify-center h-[220px] md:h-[250px]">
@@ -247,6 +248,7 @@ const About = () => {
 									alt={t("about.story.image_alt_left")}
 									className="relative rounded-2xl shadow-2xl w-full h-full object-cover story-img-symmetry"
 									style={{ height: '100%' }}
+									loading="lazy"
 								/>
 							</div>
 						</div>
@@ -271,6 +273,8 @@ const About = () => {
 									alt={t("about.story.image_alt_right")}
 									className="relative rounded-2xl shadow-2xl w-full h-full object-cover story-img-symmetry"
 									style={{ height: '100%' }}
+									              loading="lazy"
+
 								/>
 							</div>
 						</div>
@@ -302,6 +306,7 @@ const About = () => {
 								src={cover}
 								alt={t("about.video.cover_alt")}
 								className="w-full h-[50vh] md:h-[60vh] object-cover group-hover:scale-105 transition-transform duration-700"
+								loading="lazy"
 							/>
 							<div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
 							<button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-6 md:p-8 rounded-full hover:bg-white/30 hover:scale-110 transition-all duration-300 border-2 border-white/30" aria-label={t("about.video.play_button")}>
@@ -356,6 +361,7 @@ const About = () => {
 										src={image}
 										alt={t("about.team.member_alt", { number: index + 1 })}
 										className="w-full h-72 md:h-80 object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-500"
+										loading="lazy"
 									/>
 									<div className="absolute inset-2 rounded-xlopacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 								</div>
@@ -383,6 +389,7 @@ const About = () => {
 										src={visitor.image}
 										alt={visitor.name}
 										className="w-full h-[500px] object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+										loading="lazy"
 									/>
 								</div>
 								<div className="w-full mt-8">

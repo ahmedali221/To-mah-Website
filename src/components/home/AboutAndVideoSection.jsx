@@ -79,6 +79,7 @@ export default function AboutAndVideoSection() {
               src={story}
               alt="about"
               className="rounded-2xl shadow-2xl w-full h-[300px] md:h-[350px] object-cover"
+              loading="lazy"
             />
             <motion.div
               className="absolute -bottom-4 right-4 text-white p-4 rounded-xl bg-black/80 backdrop-blur-sm"
@@ -114,6 +115,7 @@ export default function AboutAndVideoSection() {
               src={cover}
               alt={t("home.video.cover_alt", "Video Cover")}
               className="w-full h-auto object-cover"
+              loading="lazy"
             />
             <motion.button
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black/40 text-white p-8 rounded-full z-10 hover:bg-black/60 transition-all backdrop-blur-sm"
