@@ -7,20 +7,11 @@ import Slider from "react-slick";
 import intro from "../assets/AboutImages/intro.mp4";
 import rev1 from "../assets/AboutImages/TripAdvisor.jpg";
 import rev3 from "../assets/AboutImages/User.jpg";
-import img1 from "/src/assets/AboutImages/img1.jpg";
-import img2 from "/src/assets/AboutImages/img2.jpg";
+
 import cover from "/src/assets/AboutImages/COVER.jpg";
 
-import g1 from "/src/assets/AboutImages/G1.jpg";
-import g2 from "/src/assets/AboutImages/G2.jpg";
-import g3 from "/src/assets/AboutImages/G3.jpg";
-import g4 from "/src/assets/AboutImages/G4.jpg";
-import g5 from "/src/assets/AboutImages/G5.jpg";
-import g6 from "/src/assets/AboutImages/G6.jpg";
-import g7 from "/src/assets/AboutImages/G7.jpg";
 
-import teamImg1 from "../assets/AboutImages/فريق العمل/staff.jpg";
-import teamImg2 from "../assets/AboutImages/فريق العمل/staff2.png";
+
 import visitorsPhotos from "../service/visitors/visitors"; // adjust path if needed
 
 import {
@@ -32,8 +23,8 @@ import {
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const galleryImages = [g1, g2, g3, g4, g5, g6, g7];
-const teamImages = [teamImg1, teamImg2];
+const galleryImages = ["https://res.cloudinary.com/tomahrest/image/upload/v1756653322/G1_btxeay.jpg", "https://res.cloudinary.com/tomahrest/image/upload/v1756653324/G2_hyjpta.jpg", "https://res.cloudinary.com/tomahrest/image/upload/v1756653326/G3_zzdkld.jpg", "https://res.cloudinary.com/tomahrest/image/upload/v1756653328/G4_smrrfh.jpg", "https://res.cloudinary.com/tomahrest/image/upload/v1756653331/G5_yyy5pe.jpg", "https://res.cloudinary.com/tomahrest/image/upload/v1756653332/G6_yabnf0.jpg", "https://res.cloudinary.com/tomahrest/image/upload/v1756653334/G7_kzjxjz.jpg"];
+const teamImages = ["https://res.cloudinary.com/tomahrest/image/upload/v1756652940/staff2_szdluk.png", "https://res.cloudinary.com/tomahrest/image/upload/v1756652975/staff_ozkar2.jpg"];
 
 const testimonials = [
 
@@ -236,7 +227,7 @@ const About = () => {
 							</div>
 							<div className="flex items-center justify-center my-2">
 								<img
-									src={img1}
+									src="https://res.cloudinary.com/tomahrest/image/upload/v1756653182/img2_ydwtwb.jpg"
 									alt={t("about.story.image_alt_left")}
 									className="rounded-2xl shadow-2xl w-full max-w-xs h-48 object-cover story-img-symmetry"
 								/>
@@ -252,7 +243,7 @@ const About = () => {
 								style={{ height: '500px', width: '100%' }}>
 								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{ background: 'linear-gradient(135deg, #673026 0%, #d97706 100%)' }}></div>
 								<img
-									src={img1}
+									src="https://res.cloudinary.com/tomahrest/image/upload/v1756653182/img2_ydwtwb.jpg"
 									alt={t("about.story.image_alt_left")}
 									className="relative rounded-2xl shadow-2xl w-full h-full object-cover story-img-symmetry"
 									style={{ height: '100%' }}
@@ -276,7 +267,7 @@ const About = () => {
 								style={{ height: '500px', width: '100%' }}>
 								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{ background: 'linear-gradient(135deg, #7e845d 0%, #673026 100%)' }}></div>
 								<img
-									src={img2}
+									src="https://res.cloudinary.com/tomahrest/image/upload/v1756653181/img1_i76p9x.jpg"
 									alt={t("about.story.image_alt_right")}
 									className="relative rounded-2xl shadow-2xl w-full h-full object-cover story-img-symmetry"
 									style={{ height: '100%' }}

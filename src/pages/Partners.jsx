@@ -233,6 +233,7 @@ const Partners = () => {
                     src={certificate.image}
                     alt={certificate.title[i18n.language === "ar" ? "ar" : "en"]}
                     className="w-full h-full object-contain p-4 hover:opacity-90 transition-opacity"
+                    loading="lazy"
                   />
                 </div>
                 <div className="p-6">
@@ -274,6 +275,7 @@ const Partners = () => {
                     src={photo.image}
                     alt={photo.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
                
@@ -306,7 +308,7 @@ const Partners = () => {
                 <div className="flex flex-col items-center mb-4">
                   <div className="w-20 h-20 flex items-center justify-center mb-3 text-3xl ">
                     {company.image ? (
-                      <img src={company.image} alt={company.name[i18n.language === "ar" ? "ar" : "en"]} className="w-16 h-16 object-contain" />
+                      <img src={company.image} alt={company.name[i18n.language === "ar" ? "ar" : "en"]} className="w-16 h-16 object-contain" loading="lazy" />
                     ) : (
                       company.icon
                     )}
@@ -403,6 +405,7 @@ const Partners = () => {
               alt="Certificate"
               className="max-w-full max-h-full object-contain"
               onClick={(e) => e.stopPropagation()}
+              loading="lazy"
             />
           </div>
         </div>

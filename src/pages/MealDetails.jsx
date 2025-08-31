@@ -125,10 +125,11 @@ function MealDetails() {
 						{meal.image && (
 							<div className="rounded-lg shadow-xl overflow-hidden relative">
 								<img
-									src={meal.image}
-									alt={getMealName()}
-									className="w-full h-64 object-cover transition-transform duration-700 hover:scale-105"
-								/>
+								src={meal.image}
+								alt={getMealName()}
+								className="w-full h-64 object-cover transition-transform duration-700 hover:scale-105"
+								loading="lazy"
+							/>
 							</div>
 						)}
 					</div>
