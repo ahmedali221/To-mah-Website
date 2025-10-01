@@ -7,13 +7,8 @@ import Slider from "react-slick";
 import intro from "../assets/AboutImages/intro.mp4";
 import rev1 from "../assets/AboutImages/TripAdvisor.jpg";
 import rev3 from "../assets/AboutImages/User.jpg";
-
 import cover from "/src/assets/AboutImages/COVER.jpg";
-
-
-
-import visitorsPhotos from "../service/visitors/visitors"; // adjust path if needed
-
+import visitorsPhotos from "../service/visitors/visitors";
 import {
 	HeartIcon,
 	SparklesIcon,
@@ -23,12 +18,27 @@ import {
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const galleryImages = ["https://res.cloudinary.com/tomahrest/image/upload/v1756653322/G1_btxeay.jpg", "https://res.cloudinary.com/tomahrest/image/upload/v1756653324/G2_hyjpta.jpg", "https://res.cloudinary.com/tomahrest/image/upload/v1756653326/G3_zzdkld.jpg", "https://res.cloudinary.com/tomahrest/image/upload/v1756653328/G4_smrrfh.jpg", "https://res.cloudinary.com/tomahrest/image/upload/v1756653331/G5_yyy5pe.jpg", "https://res.cloudinary.com/tomahrest/image/upload/v1756653332/G6_yabnf0.jpg", "https://res.cloudinary.com/tomahrest/image/upload/v1756653334/G7_kzjxjz.jpg"];
-const teamImages = ["https://res.cloudinary.com/tomahrest/image/upload/v1756652940/staff2_szdluk.png", "https://res.cloudinary.com/tomahrest/image/upload/v1756652975/staff_ozkar2.jpg"];
+const galleryImages = [
+	"https://res.cloudinary.com/tomahrest/image/upload/c_scale,w_800,q_auto,f_auto/v1756653322/G1_btxeay.jpg",
+	"https://res.cloudinary.com/tomahrest/image/upload/c_scale,w_800,q_auto,f_auto/v1756653324/G2_hyjpta.jpg",
+	"https://res.cloudinary.com/tomahrest/image/upload/c_scale,w_800,q_auto,f_auto/v1756653326/G3_zzdkld.jpg",
+	"https://res.cloudinary.com/tomahrest/image/upload/c_scale,w_800,q_auto,f_auto/v1756653328/G4_smrrfh.jpg",
+	"https://res.cloudinary.com/tomahrest/image/upload/c_scale,w_800,q_auto,f_auto/v1756653331/G5_yyy5pe.jpg",
+	"https://res.cloudinary.com/tomahrest/image/upload/c_scale,w_800,q_auto,f_auto/v1756653332/G6_yabnf0.jpg",
+	"https://res.cloudinary.com/tomahrest/image/upload/c_scale,w_800,q_auto,f_auto/v1756653334/G7_kzjxjz.jpg"
+];
+
+const teamImages = [
+	"https://res.cloudinary.com/tomahrest/image/upload/c_scale,w_600,q_auto,f_auto/v1756652940/staff2_szdluk.png",
+	"https://res.cloudinary.com/tomahrest/image/upload/c_scale,w_600,q_auto,f_auto/v1756652975/staff_ozkar2.jpg"
+];
+
+const storyImages = {
+	left: "https://res.cloudinary.com/tomahrest/image/upload/c_scale,w_600,q_auto,f_auto/v1756653182/img2_ydwtwb.jpg",
+	right: "https://res.cloudinary.com/tomahrest/image/upload/c_scale,w_600,q_auto,f_auto/v1756653181/img1_i76p9x.jpg"
+};
 
 const testimonials = [
-
-
 	{
 		img: rev1,
 		text_ar: "من أجمل المطاعم، الأكل في المدينة فعليًا تحفة جداً. شكرًا لمن صممه.",
@@ -63,13 +73,41 @@ const testimonials = [
 	},
 ];
 
+// Optimized Image Component with Shimmer Effect
+const OptimizedImage = ({ src, alt, className, style, containerClassName = "" }) => {
+	const [loaded, setLoaded] = useState(false);
+	const [error, setError] = useState(false);
+
+	return (
+		<div className={`relative overflow-hidden ${containerClassName}`}>
+			{!loaded && !error && (
+				<div 
+					className="absolute inset-0 animate-shimmer bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200"
+					style={{
+						backgroundSize: '200% 100%',
+						animation: 'shimmer 1.5s infinite'
+					}}
+				/>
+			)}
+			<img
+				src={src}
+				alt={alt}
+				className={`${className} ${loaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
+				style={style}
+				loading="lazy"
+				onLoad={() => setLoaded(true)}
+				onError={() => setError(true)}
+				decoding="async"
+			/>
+		</div>
+	);
+};
 
 const About = () => {
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [isVisible, setIsVisible] = useState({});
 	const { t, i18n } = useTranslation();
 
-	// Enhanced slider settings
 	const sliderSettings = {
 		dots: true,
 		infinite: true,
@@ -171,8 +209,18 @@ const About = () => {
 				background: 'linear-gradient(135deg, #f0f2f7 0%, #f8f9fc 100%)'
 			}}
 		>
-			{/* Custom CSS for dots */}
 			<style jsx>{`
+				@keyframes shimmer {
+					0% {
+						background-position: -200% 0;
+					}
+					100% {
+						background-position: 200% 0;
+					}
+				}
+				.animate-shimmer {
+					animation: shimmer 1.5s infinite;
+				}
 				.custom-dots {
 					bottom: -50px !important;
 				}
@@ -217,20 +265,19 @@ const About = () => {
 						}}></div>
 					</div>
 
-					{/* Hero Story Section grid */}
 					<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-12 lg:gap-20 items-center">
-						{/* Center Text Cards and Image for mobile */}
+						{/* Mobile Layout */}
 						<div className="flex flex-col lg:hidden">
 							<div className="mb-4 bg-white p-4 md:p-8 rounded-lg shadow-sm flex flex-col justify-center h-[220px] md:h-[250px]">
 								<h3 className="text-2xl font-semibold text-gray-800">{t("home.about.idea_section.heading")}</h3>
-								<p className="text-gray-600 mt-2 ">{t("home.about.idea_section.hijri")} — {t("home.about.idea_section.gregorian")}</p>
+								<p className="text-gray-600 mt-2">{t("home.about.idea_section.hijri")} — {t("home.about.idea_section.gregorian")}</p>
 							</div>
 							<div className="flex items-center justify-center my-2">
-								<img
-									src="https://res.cloudinary.com/tomahrest/image/upload/v1756653182/img2_ydwtwb.jpg"
+								<OptimizedImage
+									src={storyImages.left}
 									alt={t("about.story.image_alt_left")}
 									className="rounded-2xl shadow-2xl w-full max-w-xs h-48 object-cover story-img-symmetry"
-									loading="lazy"
+									containerClassName="w-full max-w-xs h-48"
 								/>
 							</div>
 							<div className="mb-4 bg-white p-4 md:p-8 rounded-lg shadow-sm flex flex-col justify-center h-[220px] md:h-[250px]">
@@ -238,25 +285,27 @@ const About = () => {
 								<p className="text-gray-600 mt-2">{t("home.about.opening_section.hijri")} — {t("home.about.opening_section.gregorian")}</p>
 							</div>
 						</div>
-						{/* Desktop layout: left image, center text, right image */}
+
+						{/* Desktop Layout */}
 						<div className="hidden lg:flex items-center justify-center animate-on-scroll order-2 lg:order-1" id="story-img-1">
 							<div className={`relative group transform transition-all duration-1000 ${isVisible["story-img-1"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
 								style={{ height: '500px', width: '100%' }}>
 								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{ background: 'linear-gradient(135deg, #673026 0%, #d97706 100%)' }}></div>
-								<img
-									src="https://res.cloudinary.com/tomahrest/image/upload/v1756653182/img2_ydwtwb.jpg"
+								<OptimizedImage
+									src={storyImages.left}
 									alt={t("about.story.image_alt_left")}
 									className="relative rounded-2xl shadow-2xl w-full h-full object-cover story-img-symmetry"
 									style={{ height: '100%' }}
-									loading="lazy"
+									containerClassName="h-full"
 								/>
 							</div>
 						</div>
+
 						<div className="hidden lg:flex flex-col justify-center h-[500px] animate-on-scroll order-1 lg:order-2" id="story-text">
 							<div className="flex flex-col justify-between h-full">
 								<div className="mb-8 bg-white p-8 rounded-lg shadow-sm flex flex-col justify-center h-[250px]">
 									<h3 className="text-2xl font-semibold text-gray-800">{t("home.about.idea_section.heading")}</h3>
-									<p className="text-gray-600 mt-2 ">{t("home.about.idea_section.hijri")} — {t("home.about.idea_section.gregorian")}</p>
+									<p className="text-gray-600 mt-2">{t("home.about.idea_section.hijri")} — {t("home.about.idea_section.gregorian")}</p>
 								</div>
 								<div className="mb-12 mt-8 bg-white p-8 rounded-lg shadow-sm flex flex-col justify-center h-[250px]">
 									<h3 className="text-2xl font-semibold text-gray-800">{t("home.about.opening_section.heading")}</h3>
@@ -264,17 +313,17 @@ const About = () => {
 								</div>
 							</div>
 						</div>
+
 						<div className="hidden lg:flex items-center justify-center animate-on-scroll order-3 lg:order-3 md:flex" id="story-img-2">
 							<div className={`relative group transform transition-all duration-1000 delay-500 ${isVisible["story-img-2"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
 								style={{ height: '500px', width: '100%' }}>
 								<div className="absolute -inset-1 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" style={{ background: 'linear-gradient(135deg, #7e845d 0%, #673026 100%)' }}></div>
-								<img
-									src="https://res.cloudinary.com/tomahrest/image/upload/v1756653181/img1_i76p9x.jpg"
+								<OptimizedImage
+									src={storyImages.right}
 									alt={t("about.story.image_alt_right")}
 									className="relative rounded-2xl shadow-2xl w-full h-full object-cover story-img-symmetry"
 									style={{ height: '100%' }}
-									              loading="lazy"
-
+									containerClassName="h-full"
 								/>
 							</div>
 						</div>
@@ -283,14 +332,14 @@ const About = () => {
 			</section>
 
 			{/* Why Visit Section */}
-			<section className="py-4 md:py-6 animate-on-scroll" >
+			<section className="py-4 md:py-6 animate-on-scroll">
 				<div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12">
 					<div className="text-center mb-16">
-						<h2 className="text-3xl md:text-5xl font-bold mb-8" >
+						<h2 className="text-3xl md:text-5xl font-bold mb-8">
 							{t("about.ambiance.title")}
 						</h2>
 						<div className="w-24 h-1 mx-auto rounded-full mb-10"></div>
-						<p className="max-w-4xl mx-auto text-lg md:text-xl leading-relaxed mt-4" >
+						<p className="max-w-4xl mx-auto text-lg md:text-xl leading-relaxed mt-4">
 							{t("about.ambiance.description")}
 						</p>
 					</div>
@@ -302,11 +351,11 @@ const About = () => {
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="animate-on-scroll" id="video-section">
 						<div className={`relative rounded-3xl overflow-hidden shadow-2xl group cursor-pointer transition-all duration-1000 ${isVisible["video-section"] ? "opacity-100 scale-100" : "opacity-0 scale-95"}`} onClick={() => setIsPlaying(true)}>
-							<img
+							<OptimizedImage
 								src={cover}
 								alt={t("about.video.cover_alt")}
 								className="w-full h-[50vh] md:h-[60vh] object-cover group-hover:scale-105 transition-transform duration-700"
-								loading="lazy"
+								containerClassName="w-full h-[50vh] md:h-[60vh]"
 							/>
 							<div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
 							<button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-6 md:p-8 rounded-full hover:bg-white/30 hover:scale-110 transition-all duration-300 border-2 border-white/30" aria-label={t("about.video.play_button")}>
@@ -342,6 +391,7 @@ const About = () => {
 				</div>
 			</section>
 
+			{/* Team Section */}
 			<section className="py-4 md:py-6 animate-on-scroll" id="team-section" style={{
 				background: 'linear-gradient(135deg, #f8f9fc 0%, rgba(166, 171, 139, 0.1) 100%)'
 			}}>
@@ -357,13 +407,13 @@ const About = () => {
 						{teamImages.map((image, index) => (
 							<div key={index} className={`transform transition-all duration-1000 ${isVisible["team-section"] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`} style={{ transitionDelay: `${index * 150}ms` }}>
 								<div className="relative overflow-hidden rounded-2xl shadow-xl group p-4" style={{ backgroundColor: '#f8f9fc' }}>
-									<img
+									<OptimizedImage
 										src={image}
 										alt={t("about.team.member_alt", { number: index + 1 })}
 										className="w-full h-72 md:h-80 object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-500"
-										loading="lazy"
+										containerClassName="w-full h-72 md:h-80"
 									/>
-									<div className="absolute inset-2 rounded-xlopacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+									<div className="absolute inset-2 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 								</div>
 							</div>
 						))}
@@ -385,11 +435,11 @@ const About = () => {
 						{visitorsPhotos.map((visitor, idx) => (
 							<div key={idx} className="px-4 flex flex-col items-center">
 								<div className="relative group rounded-2xl overflow-hidden shadow-xl p-4 h-[600px] flex items-center justify-center w-full" style={{ backgroundColor: '#f8f9fc' }}>
-									<img
+									<OptimizedImage
 										src={visitor.image}
 										alt={visitor.name}
 										className="w-full h-[500px] object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
-										loading="lazy"
+										containerClassName="w-full h-[500px]"
 									/>
 								</div>
 								<div className="w-full mt-8">
@@ -415,10 +465,11 @@ const About = () => {
 						{testimonials.map((testimonial, idx) => (
 							<div key={idx} className="px-3">
 								<div className="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center text-center h-full min-h-[340px] mb-8">
-									<img
+									<OptimizedImage
 										src={testimonial.img}
 										alt={testimonial.name}
 										className="w-20 h-20 rounded-full object-cover border-4 border-accent shadow mb-4"
+										containerClassName="w-20 h-20 rounded-full"
 									/>
 									<div className="mb-2">
 										{renderStars(testimonial.rating)}
@@ -435,15 +486,15 @@ const About = () => {
 					</Slider>
 				</div>
 			</section>
+
 			{/* Gallery Section */}
-			<section
-				style={{ backgroundColor: '#f8f9fc' }}>
-				<div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-8 ">
+			<section style={{ backgroundColor: '#f8f9fc' }}>
+				<div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-8">
 					<Slider {...gallerySliderSettings}>
 						{galleryImages.concat(galleryImages).map((img, index) => (
 							<div key={index} className="px-4 py-8">
 								<div className="flex items-center justify-center rounded-2xl overflow-hidden shadow-2xl group">
-									<img
+									<OptimizedImage
 										src={img}
 										alt={t("about.gallery.image_alt")}
 										className="h-full w-auto object-cover transform group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 rounded-2xl shadow-lg"
@@ -454,10 +505,6 @@ const About = () => {
 					</Slider>
 				</div>
 			</section>
-
-
-
-
 		</div>
 	);
 };
