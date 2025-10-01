@@ -143,7 +143,29 @@ const Payment = () => {
 				}
 			}
 
-			await new Promise((resolve) => setTimeout(resolve, 1000));
+			// Send order to backend which forwards to Keeta (Keeta-only)
+			const orderPayload = {
+				customer: { name: fullName, phone },
+				address: { text: address, city, postal_code: postalCode || undefined },
+				source: "website",
+				notes: deliveryInstructions || undefined,
+				items: cartItems.map((item) => ({
+					id: item.id,
+					quantity: item.quantity,
+					price: item.price,
+					name_en: item.name_en,
+					name_ar: item.name_ar,
+				})),
+			};
+			const resp = await fetch("/api/keeta/orders", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(orderPayload),
+			});
+			if (!resp.ok) {
+				const err = await resp.json().catch(() => ({}));
+				throw new Error(err?.error || "Failed to submit order");
+			}
 
 			alert(
 				t(

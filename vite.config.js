@@ -4,4 +4,16 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [tailwindcss(), react()],
+  server: {
+    proxy: {
+      "/api/keeta": {
+        target: "http://localhost:5174",
+        changeOrigin: true,
+      },
+      "/api/foodics": {
+        target: "http://localhost:5174",
+        changeOrigin: true,
+      },
+    },
+  },
 });
